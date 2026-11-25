@@ -1,6 +1,6 @@
 ---
 name: blueprints-from-tomorrow
-version: 0.2.0
+version: 1.0.0
 description: >
   Blueprints from Tomorrow – a time-travel role-playing game. The player travels
   into the past as themselves and must use what they really know about science,

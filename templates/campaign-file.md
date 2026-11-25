@@ -7,7 +7,7 @@ text.
 
 ```yaml
 campaign_file_version: 1
-skill_version: 0.2.0          # version of SKILL.md when the campaign started
+skill_version: 1.0.0          # version of SKILL.md when the campaign started
 campaign: florence-1490       # predefined campaign id, or "custom"
 era: europe-1490-florence     # era file used for the tech tree
 title: "Florence 1490"
