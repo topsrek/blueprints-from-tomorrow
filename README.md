@@ -5,126 +5,182 @@
   </picture>
 </h1>
 
-*A time-travel role-playing game that tests how much of our civilization you really
-understand.* Free, non-profit, open source. Runs directly in any AI chatbot or voice
-agent from plain static Markdown files — **no app, no account, no installation**.
+A text and voice role-playing game that runs inside an AI chatbot. You travel into the
+past as yourself and try to explain science, medicine, engineering or institutions well
+enough that people of that era can build or adopt them. The AI acts as game master,
+following the rules in [`SKILL.md`](SKILL.md), and uses a tech tree of 510
+technologies to judge what people know, what they believe, and what they can build
+with local means.
 
-You travel into the past **as yourself**, with whatever is in your pockets right now.
-Work your way up to scholars, craftsmen, engineers, and rulers, and try to explain
-hygiene, steam engines, lenses, statistics, or the rule of law well enough that people
-of the era can actually use or build it. People build **literally what you explain,
-mistakes included**. At the end: what did you change, and what did you get wrong?
+The game is plain static Markdown, with no app and no server-side code. Website:
+[blueprintsfromtomorrow.com](https://blueprintsfromtomorrow.com).
 
----
+## Playing
 
-## Play in 10 seconds
-
-### Option 1 — Any web-enabled AI chat or voice agent (recommended)
-
-Paste this into ChatGPT, Claude, Gemini, Perplexity, or any agent with web access:
+Tell any web-enabled AI chat or voice agent:
 
 ```text
-Let's play Blueprints from Tomorrow. Read https://blueprintsfromtomorrow.com/llms.txt
-and follow its instructions to start a campaign.
+Start a game of blueprintsfromtomorrow.com (read https://blueprintsfromtomorrow.com/llms.txt)
 ```
 
-*(German: „Lass uns Blueprints from Tomorrow spielen. Lies https://blueprintsfromtomorrow.com/llms.txt und folge den Anweisungen zum Start.“)*
+Add a place and year to skip the first question ("… in Florence 1490"). Offline, give
+the agent `SKILL.md`, `techtree/generated/<era>.md` and `campaigns/<campaign>.md`. To
+continue a saved game, paste your campaign file and say "continue".
 
-Once indexed, simply saying **"I want to play Blueprints from Tomorrow"** is enough:
-the agent finds `llms.txt`, loads `SKILL.md`, asks only two questions (where/when and
-difficulty), and fetches the small static Markdown files it needs on demand.
-
-### Option 2 — Skill-capable agent / local repository
-
-Install this repository as a skill (or give your chatbot `SKILL.md`,
-`techtree/generated/<era>.md`, and `campaigns/<campaign>.md`) and say:
-
-> **"Load Blueprints from Tomorrow"** *(or „Lade Blueprints from Tomorrow“)*
-
-To continue a saved game in a new chat, paste your campaign file and say **"continue"**.
-
-**No Python or scripts required to play.** Every generated Markdown file — including
-the 510 compact per-technology lookup files — is pre-built and committed directly to
-the repository so both web-fetching chatbots and local agents can read them statically.
+Included campaigns: Florence 1490, Florence 1347, Vienna 1683, Rome 46 BC and
+Baghdad 830. Any other place and year works through the generic tech tree.
 
 ---
 
-## Campaigns
-
-| Campaign | Era & Setting | Focus & Challenge | Files |
-|---|---|---|---|
-| **Florence 1490** | High Renaissance, Lorenzo de' Medici, Ficino, Savonarola | Core *Build* campaign: workshops, lenses, printing, plague, voyages of discovery | [campaign](campaigns/florence-1490.md) · [era index](techtree/generated/europe-1490-florence.md) |
-| **Florence 1347** | Eve of the Black Death, famine, no printing press | Pure hygiene & epidemic test with rotating two-month priors | [campaign](campaigns/florence-1347.md) · [era index](techtree/generated/europe-1347-florence.md) |
-| **Vienna 1683** | Ottoman siege, dysentery, counter-mining | Tight timeline, siege sanitation, and an era that already understands experiments | [campaign](campaigns/vienna-1683.md) · [era index](techtree/generated/europe-1683-vienna.md) |
-| **Rome 46 BC** | Caesar's 445-day calendar reform, Varro, Cicero | *Explain* campaign: huge infrastructure, slave economy, approaching Ides of March | [campaign](campaigns/rome-46bc.md) · [era index](techtree/generated/europe-46bc-rome.md) |
-| **Baghdad 830** | Abbasid Baghdad, Caliph al-Ma'mun, House of Wisdom | Ahead of medieval Europe: paper, algebra, hospitals, translations, looming Mihna | [campaign](campaigns/baghdad-830.md) · [era index](techtree/generated/islamic-830-baghdad.md) |
-
-You can also choose **any custom place and year** at campaign start.
-
----
-
-## How the 510-technology context works
-
-The tech tree covers **510 technologies across 17 categories** with 4 era dimensions
-(`knowledge`, `use`, `producibility`, `acceptance`), historical pitfalls, local hooks,
-and real literature sources. `build_techtree.py` pre-generates static Markdown so the
-GM gets rich world context upfront in **one file** and only fetches deep details on demand:
-
-1. **Predefined campaign:** `techtree/generated/<era>.md` (~32k tokens) — loaded once at campaign start; already contains worldview, people, events, quest hooks, and all 510 local statuses, beliefs, and materials (playable even without mid-game fetches, e.g. in voice mode).
-2. **Any custom time & culture:** `techtree/generated/all-techs.md` (~22k tokens) — loaded once at start; lists all 510 technologies with prerequisites and historical first-appearance dates across 12 world regions to prevent anachronisms.
-3. **Deep check & evaluation sources:** `techtree/generated/tech/<id>.md` (~2 KB per tech, linked via `catalog/<category>.md`) — fetched on demand for detailed `pitfalls` and primary literature `sources`.
-
-Mid-game saves encode `errors_for_evaluation` in **ROT13** so checking or pasting your
-save file does not spoil the final evaluation.
-
----
-
-## Repository layout
+## How it fits together
 
 ```text
-index.html                   static landing page (SEO, Open Graph, Schema.org, FAQ)
-llms.txt                     AI-agent bootstrap & file map (GEO / AEO)
-robots.txt / sitemap.xml     crawler & AI-search discovery
-favicon.svg / favicon.ico    site & browser icons (generated by scripts/build_logo.py)
-SKILL.md                     game-master rules (English; play in any language)
-modules/                     optional rules, loaded when needed
-campaigns/                   predefined campaigns
-templates/campaign-file.md   format of the campaign (save) file
-techtree/core.yaml           schema, categories, knowledge levels
-techtree/core/*.yaml         shared tech tree (510 entries in 17 category files)
-techtree/eras/*.yaml         status per era/region (knowledge, use, producibility, acceptance)
-techtree/generated/          pre-built static Markdown (era indices, era/category, tech/<id>.md, reference/)
-scripts/                     contributor build + campaign progress visualization
-assets/logo/                 logo SVGs — generated by scripts/build_logo.py
-assets/fonts/                Allo, the wordmark typeface (SIL OFL)
-docs/concept.md              original concept (German)
-docs/campaign-scenarios.md   assessment of further campaign scenarios (German)
-MIGRATIONS.md                step-by-step migration of campaign files between versions
+techtree/core.yaml          schema, 17 categories, 12 regions, knowledge levels
+techtree/core/*.yaml        the 510 technologies, one file per category    ─┐
+techtree/eras/*.yaml        status of every technology in one era & place  ─┤ scripts/build_techtree.py
+                                                                            ▼
+techtree/generated/         pre-built Markdown the game master reads (committed)
+  <era>.md                    era index, loaded once at campaign start (~32k tokens)
+  <era>/briefing.md           compact fallback for small context windows
+  <era>/<category>.md         era status per category, loaded on demand
+  all-techs.md                all techs + first appearances by region, for custom eras
+  catalog/<category>.md       per-category list linking to …
+  tech/<id>.md                one ~2 KB file per tech: explain, pitfalls, sources
+  reference/<category>.md     full per-category reference
+
+campaigns/*.md              premise, opening scene, arc, people, evaluation focus
+SKILL.md                    game-master rules (English; the AI plays in any language)
+modules/*.md                optional rules: voice mode, language barrier, social layer, content
+templates/campaign-file.md  save-file format
+
+index.html, scenarios/*.html, llms.txt, sitemap.xml, robots.txt   the website
+scripts/build_pages.py      generates scenarios/*.html from campaigns + era files
+assets/                     logo, era illustrations, Allo typeface
+docs/                       original concept and scenario assessment (German)
 ```
+
+Generated files are committed on purpose: chatbots fetch them over HTTP, and players
+never run any scripts.
 
 ---
 
-## Scripts (contributors & visualization)
+## Contributing
 
-Players never need to run these. Use them if you contribute to `techtree/` or want to
-visualize a finished campaign file:
+Pull requests are welcome, especially:
+
+- **Corrections** to the tech tree or era files: a wrong date, an anachronism, a
+  missing pitfall, a better source.
+- **New era files** for regions and periods the tree does not cover yet.
+- **New campaigns** built on an era file.
+- **Rule improvements** to `SKILL.md` or the modules, e.g. after a playtest where the
+  game master was too lenient or broke immersion.
+
+Playtest reports help too. Open an issue with the model you used, the campaign, and
+what went wrong. Paste the relevant part of the transcript if you can.
+
+### Setup
+
+Only contributors need this. You need Python 3; the commands below install the packages in `requirements.txt`.
 
 ```bash
 python -m venv .venv
 .venv/Scripts/pip install -r requirements.txt    # Linux/macOS: .venv/bin/pip
-python scripts/build_techtree.py                  # regenerate techtree/generated/
-python scripts/build_techtree.py --check          # validate ids, enums, and dependencies
-python scripts/visualize.py --era europe-1490-florence
-python scripts/visualize.py --era europe-1490-florence --category medicine
-python scripts/visualize.py my-campaign.md        # -> out/my-campaign.html (interactive) + .mmd
-python scripts/build_logo.py                      # regenerate assets/logo/*.svg + root favicons
+python scripts/build_techtree.py --check          # validate without writing files
 ```
 
-## Contributing
+### Editing a technology
 
-Pull requests welcome: new eras and regions, campaigns, and corrections to the tech
-tree (please add sources). After editing `techtree/`, run `python scripts/build_techtree.py`
-and commit the generated files.
+Entries live in `techtree/core/<category>.yaml`. The field reference is in the header
+of [`techtree/core.yaml`](techtree/core.yaml):
+
+| Field | Meaning |
+|---|---|
+| `id` | unique `snake_case` id; **never rename or remove** without a migration (see below) |
+| `name`, `category` | English name; one of the 17 category keys |
+| `requires` / `helps` | hard prerequisites / ids that make it easier or more convincing |
+| `explain` | the core idea the player must get across; the GM judges explanations against it |
+| `pitfalls` | typical mistakes when explaining or building it; these drive in-game failures |
+| `history` | first occurrences per region (`region: "year – note"`) |
+| `sources` | real literature for the final evaluation |
+
+### Adding or fixing an era
+
+An era file (`techtree/eras/<region>-<year>-<place>.yaml`) sets the status of each
+technology in one place and time:
+
+- `knowledge` is 0–4 (unknown → widespread). `use` is `none | wrong | partial | correct`.
+- `producibility` is `easy | medium | hard | very-hard | impossible`, with local means
+  within about a year. `acceptance` is `low | medium | high`.
+- `note` is what the world believes. `local` lists the people, places and materials
+  to connect to. `elsewhere` says where the technology already exists, which is useful
+  as quest material.
+- The top-level `worldview`, `people`, `events` and `quest_hooks` give the game master
+  its setting.
+
+Technologies the file leaves out default to knowledge 0 and use `none`, or to the
+file's `default:`. Use [`europe-1490-florence.yaml`](techtree/eras/europe-1490-florence.yaml)
+as the model.
+
+### Adding a campaign
+
+1. Write the era file and run `build_techtree.py`.
+2. Write `campaigns/<id>.md` with the same sections as
+   [`florence-1490.md`](campaigns/florence-1490.md): header with id, era guide and
+   start date, then Premise, Opening scene, Arc, hint examples, People, and Evaluation
+   focus.
+3. To list it on the website, add an entry to `SCENARIOS` in `scripts/build_pages.py`
+   and an illustration in `assets/eras/`, then run `build_pages.py`. Also add it to
+   the campaign list in `SKILL.md` §2, to `llms.txt`, and to `sitemap.xml`. Add an era
+   card to `index.html`, with its strings in all six languages. The maintainer can do
+   the website part if you only send the era file and campaign.
+
+### Sources and accuracy
+
+The content was drafted with AI help and fact-checked by a second model. Sources were
+checked for existence, not page by page, so careful corrections are among the most
+useful contributions. Please:
+
+- cite something a reader can find (book, paper, edition, or a primary source with its
+  location), not just a link to a summary;
+- keep era files to what people **in that place and year** could know. Use
+  `elsewhere` for knowledge that exists in other parts of the world;
+- note real uncertainty in the text ("probably", "c. 1490") instead of picking one
+  side silently.
+
+### Changing the rules or save format
+
+- `SKILL.md` carries the skill `version` in its front matter, and campaign files store
+  the version they were started with.
+- Renaming or removing a tech id, or changing the campaign-file format, is a breaking
+  change. Bump the version and add a step to [`MIGRATIONS.md`](MIGRATIONS.md).
+- Record notable changes in [`CHANGELOG.md`](CHANGELOG.md) under *Unreleased*.
+
+### Before opening a pull request
+
+```bash
+python scripts/build_techtree.py --check   # must print no PROBLEM lines
+python scripts/build_techtree.py           # regenerate techtree/generated/
+python scripts/build_pages.py              # if you touched campaigns or era files
+```
+
+Commit the source YAML/Markdown **and** the regenerated files together. If you are
+unsure about the facts in your change, play a few turns with your change loaded.
+
+### Other scripts
+
+```bash
+python scripts/visualize.py --era europe-1490-florence             # interactive tech-tree explorer -> out/
+python scripts/visualize.py --era europe-1490-florence --category medicine
+python scripts/visualize.py my-campaign.md                         # progress of a finished save file
+python scripts/build_logo.py                                       # assets/logo/*.svg + favicons
+python scripts/build_font.py                                       # web subset of the Allo typeface
+python scripts/deploy_cloudflare.py                                # maintainer only: deploy the site
+```
+
+## Contact
+
+Issues and pull requests on GitHub, or
+[hello@blueprintsfromtomorrow.com](mailto:hello@blueprintsfromtomorrow.com).
 
 ## License
 
@@ -132,4 +188,5 @@ and commit the generated files.
 - **Scripts & code** (`scripts/`, inline JS): [MIT](LICENSE)
 - **Allo typeface** (`assets/fonts/`): [SIL OFL 1.1](assets/fonts/OFL.txt)
 
-See [LICENSE](LICENSE) for full details.
+By contributing you agree that your contribution is published under these licenses.
+See [LICENSE](LICENSE) for details.
