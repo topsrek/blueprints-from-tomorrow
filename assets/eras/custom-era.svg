@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360" role="img" aria-label="Any place, any year architectural blueprint">
+  <defs>
+    <pattern id="g" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0V24" fill="none" stroke="#F3EFE4" stroke-opacity="0.08" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="640" height="360" fill="#0E2E69"/>
+  <rect width="640" height="360" fill="url(#g)"/>
+  <!-- Wireframe Armillary Globe (left-center) -->
+  <g stroke="#F3EFE4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="230" cy="180" r="108" stroke-width="2.4"/>
+    <ellipse cx="230" cy="180" rx="108" ry="36" stroke-width="1.6"/>
+    <ellipse cx="230" cy="180" rx="108" ry="74" stroke-opacity="0.45" stroke-width="1.2"/>
+    <ellipse cx="230" cy="180" rx="46" ry="108" stroke-width="1.6"/>
+    <ellipse cx="230" cy="180" rx="84" ry="108" stroke-opacity="0.45" stroke-width="1.2"/>
+    <line x1="122" y1="180" x2="338" y2="180" stroke-opacity="0.55" stroke-width="1.3"/>
+    <line x1="230" y1="72" x2="230" y2="288" stroke-opacity="0.55" stroke-width="1.3"/>
+    <!-- Tilted ecliptic ring -->
+    <ellipse cx="230" cy="180" rx="126" ry="26" transform="rotate(-24 230 180)" stroke="#F5B83D" stroke-width="2.2"/>
+  </g>
+  <!-- Hourglass & Compass Rose (right) -->
+  <g stroke="#F3EFE4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Hourglass -->
+    <line x1="444" y1="84" x2="544" y2="84" stroke-width="2.6"/>
+    <line x1="444" y1="276" x2="544" y2="276" stroke-width="2.6"/>
+    <path d="M456 84 C456 144 486 168 494 180 C486 192 456 216 456 276" stroke-width="2.2"/>
+    <path d="M532 84 C532 144 502 168 494 180 C502 192 532 216 532 276" stroke-width="2.2"/>
+    <!-- Amber sand stream & pile -->
+    <path d="M472 128 H516 C512 148 500 162 494 172 C488 162 476 148 472 128 Z" fill="#F5B83D" fill-opacity="0.28" stroke="#F5B83D" stroke-width="1.5"/>
+    <line x1="494" y1="180" x2="494" y2="246" stroke="#F5B83D" stroke-dasharray="3 4" stroke-width="2"/>
+    <path d="M466 276 Q494 242 522 276 Z" fill="#F5B83D" fill-opacity="0.35" stroke="#F5B83D" stroke-width="1.5"/>
+  </g>
+</svg>

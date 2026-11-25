@@ -1,0 +1,52 @@
+# Blueprints from Tomorrow – technology tree: shared skeleton for all regions.
+#
+# This file holds the schema, the categories and the knowledge levels. The entries
+# themselves live in techtree/core/<category>.yaml, one file per category. They
+# describe WHAT a technology or idea is, what it depends on and when/where it
+# appeared historically. The status of an entry in a given era and region lives in
+# techtree/eras/<era>.yaml. scripts/build_techtree.py merges everything into a
+# compact Markdown file for the model (techtree/generated/<era>.md).
+#
+# Fields of an entry
+#   id          unique snake_case id
+#   name        English name
+#   category    one of the keys in `categories`
+#   requires    ids that must be understood/available first (hard prerequisites)
+#   helps       ids that make THIS entry much easier or more convincing, but are
+#               not strictly required
+#   explain     the core idea a player must get across (used by the GM to judge
+#               explanations and in the evaluation)
+#   pitfalls    typical errors when explaining/building it
+#   history     first occurrences by region: {region: "year – note"}; region keys
+#               are listed in `regions`
+#   sources     literature for the evaluation ("further reading")
+
+schema_version: 2
+
+categories:
+  medicine: Medicine & hygiene
+  biology: Life sciences
+  chemistry: Chemistry
+  materials: Metallurgy & materials
+  physics: Physics, optics & astronomy
+  electricity: Electricity & electronics
+  computing: Computing, control & information theory
+  energy: Energy & engines
+  manufacturing: Tools, machines & manufacturing
+  math: Mathematics & measurement
+  ideas: Scientific method & philosophical ideas
+  agriculture: Agriculture & food
+  navigation: Navigation, transport & exploration
+  communication: Communication & information
+  institutions: Institutions, law & governance
+  economy: Economy & finance
+  military: Warfare, security & deterrence
+
+regions: [mesopotamia, egypt, india, china, east_asia, greece, rome, islamic, europe, americas, africa, global]
+
+knowledge_levels:
+  0: unknown
+  1: idea / rumour
+  2: described in theory
+  3: in use by craftsmen/specialists
+  4: widespread

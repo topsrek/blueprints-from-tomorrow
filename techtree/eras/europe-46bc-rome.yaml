@@ -1,0 +1,4169 @@
+# Blueprints from Tomorrow – era file: Rome, autumn 46 BC.
+#
+# Status of each entry from techtree/core/*.yaml in this era and region.
+#   knowledge      0 unknown · 1 idea/rumour · 2 described in theory · 3 used by
+#                  specialists · 4 widespread
+#   use            none | wrong | partial | correct   (is it used, and used right?)
+#   producibility  easy | medium | hard | very-hard | impossible  (with local means,
+#                  if someone explains it well)
+#   acceptance     low | medium | high  (how readily people adopt it)
+#   note           what the player should know / what the world believes
+#   local          people, places, materials to connect to
+#   elsewhere      where it already exists in 46 BC (quest material)
+# Entries not listed default to knowledge 0, use none.
+
+era: europe-46bc-rome
+title: Rome 46 BC
+region: City of Rome, Italy, Roman Republic
+year: 46 BC
+core_version: 2
+
+worldview: >
+  Rome is a city of perhaps 700,000 to a million people and the capital of the
+  Mediterranean, ruled in fact by one man: Caesar, dictator for ten years, back from
+  the civil war in Africa. The Republic's forms survive, the Senate, the assemblies,
+  the magistrates, and everyone wonders for how long. The gods are part of the
+  state: augurs and haruspices read birds and entrails before public business, and
+  prodigies are expiated. Educated Romans read Greek and choose among Stoics,
+  Epicureans (who teach atoms and natural causes) and Academic sceptics, without
+  experiment as a method. Medicine is Greek and practised mostly by Greek freedmen
+  and slaves; disease comes from bad air, imbalance or the gods. Engineering is
+  superb and empirical: aqueducts, sewers, roads, concrete, cranes. Labour is cheap
+  because much of it is enslaved, so nobody looks for machines to save it. Numbers
+  are Roman numerals, reckoned on the counting board; books are papyrus rolls copied
+  by hand.
+
+status:
+  # ---- Medicine & hygiene
+  contagion_theory:
+    knowledge: 1
+    use: none
+    producibility: medium
+    acceptance: low
+    note: Fevers come from marsh air, epidemics from gods. Lucretius writes of seeds of disease in the
+      air; Varro will write (37 BC) of invisible marsh creatures. Nobody acts on it.
+    local:
+    - Marcus Terentius Varro
+    - Lucretius, De rerum natura, book 6
+  bloodletting_harm:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Greek physicians bleed, purge and give emetics. The fashionable school of Asclepiades prefers
+      diet, wine, baths and massage, but still bleeds. Old Roman households trust cabbage and charms.
+    local:
+    - followers of Asclepiades of Bithynia in Rome
+    - Cato, De agri cultura 156-157 (cabbage as a cure-all)
+  epidemiology_mapping:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: The state counts citizens, not deaths or causes. Caesar's clerks have just recounted grain recipients
+      street by street through tenement landlords; the same method would work for the sick.
+    local:
+    - Caesar's recount of grain recipients by district (46 BC)
+    - undertakers at the grove of Libitina on the Esquiline
+  hand_hygiene:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: low
+    note: People clean themselves with oil and a strigil at the baths and rinse hands at table. No soap.
+      Physicians and midwives see no link between hands and fever.
+  boiled_water:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: The Hippocratic Airs, Waters, Places advises boiling some waters. Romans judge water by taste
+      and clarity and drink it mixed with wine. Fuel is dear for tenement dwellers.
+    local:
+    - Aqua Marcia (the best water)
+    - Tiber water and wells in the low quarters
+  water_filtration_chlorination:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: 'Four aqueducts: Appia, Anio Vetus, Marcia, Tepula. The Anio Vetus takes river water and runs
+      muddy after rain. Masons could build sand filter beds; chlorination is out of reach.'
+    local:
+    - Aqua Appia, Anio Vetus, Aqua Marcia, Aqua Tepula
+    - aediles and censors, who oversee the water
+  sanitation_sewerage:
+    knowledge: 4
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: The Cloaca Maxima and street drains were built to drain land and carry off rain; they empty into
+      the Tiber. Tenements use cesspits and chamber pots. Fullers collect urine.
+    local:
+    - Cloaca Maxima
+    - aediles (street cleaning)
+    - fullers' urine jars at street corners
+  food_hygiene:
+    knowledge: 1
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Aediles police the markets and bad smell is the test of food. Cookshops feed the tenement population.
+      Flies, cooks' hands and carriers are no one's concern.
+    local:
+    - Macellum (food market north of the Forum)
+    - aediles
+    - popinae (cookshops)
+  quarantine:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: low
+    note: An epidemic is a prodigy, answered by consulting the Sibylline books, processions and banquets
+      for the gods. Thucydides' remark that carers caught the Athenian plague is known to readers.
+    local:
+    - quindecimviri sacris faciundis (keepers of the Sibylline books)
+    - temple of Aesculapius on the Tiber Island
+  nursing_hospital_hygiene:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: No hospitals. The sick lie at home, tended by family or slaves; the poor sleep in the temple of
+      Aesculapius hoping for a dream. Legions have no fixed infirmaries yet.
+    local:
+    - temple of Aesculapius on the Tiber Island (founded 291 BC)
+    elsewhere:
+    - India, Ashoka's 3rd-century BC edicts on medical care (rumour at best)
+  cholera_waterborne:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Asiatic cholera is confined to India. Greek 'cholera' means any violent vomiting and flux. Typhoid
+      and dysentery are common, worst in army camps and late summer.
+  oral_rehydration:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: No sugar, but honey and salt in boiled water serve. Physicians give barley water or honey water,
+      and some deliberately withhold drink in fever.
+  plague_vectors:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: low
+    note: Bubonic plague is not in Italy; 'pestilentia' means any epidemic. Rats infest the granaries and
+      ships. The knowledge has no visible use here for six centuries.
+  typhus_lice:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Lice are ordinary, in camps and tenements alike. No epidemic of this period can be identified
+      as typhus. Baking or boiling clothes is cheap; the reason would be new.
+  malaria_mosquito:
+    knowledge: 1
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Tertian and quartan fevers return each late summer; Fever has a shrine. Blamed on marsh
+      air, so villas sit on hills. Caesar will plan draining the Pomptine marshes (44 BC).
+    local:
+    - Marcus Terentius Varro
+    - shrine of Febris on the Palatine
+    - Pomptine marshes and the Campagna
+    - conopeum (Egyptian-style gnat net)
+    elsewhere:
+    - Egypt, marsh dwellers sleeping under nets (Herodotus)
+  quinine:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: high
+    note: Cinchona grows only in the Andes. Quartan fever is met with diet, emetics, amulets and vows to
+      Febris.
+    elsewhere:
+    - Andean forests, source of cinchona bark
+  tuberculosis_control:
+    knowledge: 1
+    use: none
+    producibility: medium
+    acceptance: low
+    note: Phthisis is well described since Hippocrates and blamed on constitution and family. The Aristotelian
+      Problems ask why it passes to those nearby. Sea voyages and milk are prescribed.
+  parasitic_worms:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Flat and round worms are distinguished and thought to breed from gut decay. Pomegranate (Cato
+      126-127) and male fern are real remedies. Transmission by soil, pork and water is unknown.
+  scurvy_citrus:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Rare, since voyages are short and people eat greens; it appears in sieges. The citron is an exotic,
+      lemons and oranges absent. Cabbage and cress do the job.
+    elsewhere:
+    - Media and Persia, citron (Theophrastus' 'Median apple')
+  vitamins_deficiency:
+    knowledge: 1
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: 'Greek physicians give liver for night blindness without knowing why. No idea of a missing substance:
+      disease is excess, blockage or bad air. The poor live on dole wheat.'
+  variolation:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+    note: Smallpox is not clearly present in Italy; the first epidemic usually read as smallpox comes in
+      AD 165. No material to inoculate with, no fear to motivate it.
+  smallpox_vaccination:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+    note: No smallpox to fear and no known cowpox to use.
+  vaccines_attenuated:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  antitoxin_serum:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  wound_care:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Greek surgeons suture, splint, cauterise and dress with wine, vinegar, honey and resin; tying
+      vessels is in Alexandrian books. Pus is expected. Legions rely on comrades and a few physicians.
+    local:
+    - Greek surgeons attending Caesar's officers
+    - gladiator schools at Capua and Rome
+    elsewhere:
+    - Alexandria, surgical tradition
+  antiseptics:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Wine, vinegar, honey, pitch and verdigris go on wounds by tradition, not theory. Strong spirit
+      needs distillation first. Surgeons do not clean hands or instruments.
+  heat_sterilisation:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Bronze and iron instruments and linen can be boiled in any kitchen; cautery irons are heated anyway.
+      Nobody sees a reason to.
+  childbirth_care:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Midwives (obstetrices), often Greek freedwomen, deliver on a birthing chair. Herophilus wrote
+      on midwifery. Childbed fever is common; Cicero's daughter dies a month after giving birth in 45 BC.
+    local:
+    - obstetrices
+    - Tullia, daughter of Cicero
+  first_aid_resuscitation:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Not breathing means dead. Asclepiades was famous for noticing life in a man on his bier and proposed
+      opening the windpipe in choking. Revival looks like magic.
+  ether_anaesthesia:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: Needs both strong spirit and oil of vitriol, and neither exists. Surgeons give mandrake wine or
+      poppy juice and rely on speed and strong assistants.
+  opium_analgesia:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Poppy juice, mandrake and henbane are standard Greek drugs, dosed by guess. Compound antidotes
+      after Mithridates are in fashion. Willow bark is not used for fever or pain.
+    local:
+    - Greek drug sellers (pharmacopolae)
+    - Pompeius Lenaeus, translator of Mithridates' drug notes
+  blood_groups_transfusion:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+  anatomy_dissection:
+    knowledge: 2
+    use: none
+    producibility: medium
+    acceptance: low
+    note: Human dissection stopped in Alexandria two centuries ago; Herophilus' and Erasistratus' books
+      circulate. Opening a corpse offends Roman religion, and Empiricist physicians call anatomy useless.
+      Animals and wounds remain.
+    elsewhere:
+    - Alexandria, medical school and the books of Herophilus and Erasistratus
+  blood_circulation:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: low
+    note: 'After Erasistratus: veins carry blood, made in the liver, out to be consumed; arteries carry pneuma. The
+      arm-ligature demonstration of vein valves costs nothing.'
+  clinical_thermometer_stethoscope:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Pulse lore after Herophilus, who timed it with a water clock; Hippocratic texts listen to the
+      chest. A listening tube and percussion are easy. A thermometer needs blown glass tubes.
+    elsewhere:
+    - Alexandria, Herophilean physicians
+  dental_care:
+    knowledge: 1
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Tooth powders and toothpicks are used; Catullus mocked a Spaniard who rinsed with urine. Gold-wired
+      teeth are old (Twelve Tables). No sugar, so honey and bread starch are the culprits.
+  sulphonamides:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: medium
+  penicillin:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: medium
+
+  # ---- Life sciences
+  microorganisms:
+    knowledge: 1
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: 'Varro''s invisible marsh animals are a guess, not an observation. No lenses: glass is cast, coloured
+      and bubbly. A tiny clear bead of glass or rock crystal is the route.'
+    local:
+    - Marcus Terentius Varro
+    - gem engravers working rock crystal
+  spontaneous_generation_refuted:
+    knowledge: 0
+    use: wrong
+    producibility: easy
+    acceptance: medium
+    note: 'Aristotle and every farmer: maggots from rotting meat, eels from mud, bees from an ox carcass
+      (in Mago''s farming book too). The covered-jar experiment is cheap.'
+  fermentation_yeast:
+    knowledge: 0
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Must ferments by itself in the dolium; bread rises with kept leaven. It is called a boiling (fervere).
+      Showing that yeast is alive needs a microscope.
+  cell_theory:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+  viruses:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  taxonomy:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Aristotle's animal books and Theophrastus' plant books exist in Greek, as does Crateuas' illustrated
+      herbal. Romans name plants by use. No fixed species names or ranks.
+    local:
+    - Greek libraries of Roman nobles (that of the Luculli at Tusculum)
+    elsewhere:
+    - Athens and Alexandria, Peripatetic natural history
+  reproduction_fertilisation:
+    knowledge: 1
+    use: wrong
+    producibility: hard
+    acceptance: low
+    note: 'Two rival theories: Aristotle''s (male seed gives form, female only matter) and the Hippocratic
+      and Epicurean two-seed view. Egg and sperm cannot be shown without a microscope.'
+  heredity_genetics:
+    knowledge: 1
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Likeness to parents and grandparents is noticed (Lucretius book 4) and explained by mixed seed.
+      Counting pea crosses takes several seasons and a patient villa owner.
+  evolution_natural_selection:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Lucretius (book 5) has earth produce many creatures of which the unfit died out, but species do
+      not change. Epicureans may listen; Stoics see design and providence.
+    local:
+    - Lucretius, De rerum natura, book 5
+    - Epicurean circles in Rome and at Herculaneum
+  dna_structure:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  respiration_metabolism:
+    knowledge: 0
+    use: wrong
+    producibility: hard
+    acceptance: low
+    note: Breath cools the innate heat of the heart (Aristotle) or supplies pneuma to the arteries (Erasistratus).
+      A mouse and a lamp under a jar is a demonstration anyone can see.
+  photosynthesis_plant_nutrition:
+    knowledge: 0
+    use: wrong
+    producibility: hard
+    acceptance: low
+    note: Plants eat soil through their roots (Aristotle), so soil 'tires'. The weighed-pot willow experiment
+      is easy and takes years; the gas part needs chemistry that is absent.
+  nitrogen_fixation_biology:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Farmers know that lupins, beans and vetch 'dung the land' (Cato 37) and plough them in. Why is
+      unknown; nodules on the roots are visible to anyone who looks.
+    local:
+    - Cato, De agri cultura
+    - Mago's farming books in Latin and Greek
+  nervous_system_brain:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: low
+    note: Herophilus and Erasistratus traced nerves to the brain, and physicians follow them. Aristotelians,
+      Stoics and Epicureans (Lucretius) keep the mind in the chest. Electrical signalling is unreachable.
+    elsewhere:
+    - Alexandria, anatomical books of Herophilus and Erasistratus
+
+  # ---- Chemistry
+  soap:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Bodies are cleaned with oil and strigil, cloth with stale urine and fuller's earth. Tallow, olive
+      oil, wood ash and lime are cheap. Fullers and bath keepers are the buyers.
+    local:
+    - fullers (fullones)
+    - bath keepers (balneatores)
+    elsewhere:
+    - Gaul, a tallow-and-ash hair pomade (reported by later Roman writers)
+  distillation:
+    knowledge: 1
+    use: none
+    producibility: medium
+    acceptance: high
+    note: Aristotle notes that vapour from boiled sea water condenses fresh. No still exists. Coppersmiths
+      and potters can build pot, head and tube; tight joints and cooling are the craft problems.
+    local:
+    - perfumers of the Seplasia at Capua
+    - coppersmiths (aerarii)
+    - wine from Campania and Latium
+  sulphuric_acid:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Green and blue vitriol (shoemakers' black, chalcanthum) and alum are traded goods; no one has
+      distilled them. Needs retorts that survive red heat.
+  oxygen_combustion:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Fire is an element, or for Epicureans a swarm of fine atoms. A lamp dying under a jar is easily
+      shown. Isolating the gas needs mercury calx and blown glass.
+  nitric_acid:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+    note: Needs saltpetre, vitriol and a still, none of which exist here. Gold and silver are parted by
+      salt cementation instead.
+  saltpetre_production:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: 'Trap: Latin nitrum means natron (soda), not saltpetre. The white crust on stable and cellar walls
+      is unrecognised. Nitre beds need over a year; no known use creates demand.'
+  chemical_elements:
+    knowledge: 0
+    use: wrong
+    producibility: medium
+    acceptance: low
+    note: Four elements (Empedocles, Aristotle, the Stoics) or Epicurean atoms without chemistry. Goldsmiths
+      and the mint weigh well, but nobody weighs before and after burning.
+    local:
+    - mint at the temple of Juno Moneta
+    - goldsmiths and assayers
+  atomic_theory:
+    knowledge: 2
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: 'Atoms are respectable Epicurean philosophy: Lucretius'' poem is recent and Asclepiades built
+      his medicine on particles and pores. Nobody links atoms to fixed weight ratios; that needs pure substances.'
+    local:
+    - Lucretius, De rerum natura
+    - Philodemus at Herculaneum
+    - Roman Epicureans (Atticus, Cassius)
+  molecules_mole_concept:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+  periodic_table:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+    note: Seven metals, sulphur and carbon are known as substances, none as elements. A table from memory
+      cannot be checked.
+  gas_laws:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: Ctesibius' and Philo's books on pneumatics show that air is a body and can be compressed. No barometer
+      and no sealed glass tubes.
+    elsewhere:
+    - Alexandria, books of Ctesibius; Philo of Byzantium's Pneumatica
+  pneumatic_chemistry_gases:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Deadly vapours at volcanic vents near Puteoli and at Ampsanctus are known as breath of the underworld.
+      There is one air; kinds of air is a new thought.
+  acids_bases_ph:
+    knowledge: 1
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Vinegar is the only acid, natron and ash lye the alkalis; they are known to fizz together. Plant
+      juices that change colour (violets, red cabbage) are an easy demonstration.
+  hydrochloric_acid_aqua_regia:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+  alkali_soda:
+    knowledge: 4
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Natron (nitrum) comes from Egypt for glass, cleaning and medicine; wood-ash lye is a household
+      thing. Making lye caustic with quicklime is not practised.
+    elsewhere:
+    - Egypt, Wadi Natrun
+  lime_burning:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Cato (De agri cultura 38) gives the dimensions of a lime kiln. Lime burnt from limestone and travertine
+      is the basis of all building mortar.
+    local:
+    - lime burners (calcarii)
+    - Cato, De agri cultura 38
+  salt_production:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Sea salt from evaporation pans at the Tiber mouth, carried inland on the Via Salaria. Salt is
+      a state concern and cheap.
+    local:
+    - salt pans at Ostia
+    - Via Salaria
+  mordant_dyeing:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Dyers use alum and iron mordants with madder, weld, woad and shellfish purple. Indigo arrives
+      only as a costly Indian pigment. Caesar's new law restricts purple garments.
+    local:
+    - alum from Lipari
+    - dyers (infectores) and purple sellers (purpurarii)
+    elsewhere:
+    - Tyre, shellfish purple
+    - India, indigo and mordant-dyed cotton
+  chlorine_bleach:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: medium
+    note: Fullers whiten wool with burning sulphur and fuller's earth. Chlorine needs spirit of salt, which
+      needs oil of vitriol.
+  electrolysis:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Copper, iron, silver, lead, vinegar and brine exist, so a weak pile can be stacked; no metallic
+      zinc, no drawn wire. Twitching frog legs would be an omen.
+  organic_structure_theory:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  phosphorus_matches:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: Fire is carried as embers or struck with steel and flint. Sicilian sulphur is cheap, so sulphur-tipped
+      splints are easy; phosphorus from urine needs retorts at white heat.
+  rubber_vulcanisation:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: medium
+  synthetic_dyes:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: medium
+  nitroglycerin_dynamite:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  petroleum_refining:
+    knowledge: 1
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Bitumen and burning naphtha are known from Babylonia and the Dead Sea; an oily spring at Agrigentum
+      in Sicily feeds lamps. Olive oil is cheap. Needs a still.
+    elsewhere:
+    - Babylonia, naphtha springs
+    - Dead Sea, bitumen
+  polymers_plastics:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  ammonia_synthesis:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+
+  # ---- Metallurgy & materials
+  copper_bronze:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Copper from Cyprus, Spain and Etruria, tin from Spain and beyond Gaul. Lost-wax statues, vessels,
+      fittings and water valves are routine work.
+    local:
+    - bronze workshops of Capua
+    - Etruscan bronze founders
+  bloomery_iron:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Elba ore is smelted in bloomeries at Populonia; smiths forge blooms into tools and weapons. Iron
+      is never melted and stays dearer than a modern person expects.
+    local:
+    - Populonia and Elba
+    - Puteoli (iron working and trade)
+  steel_heat_treatment:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Smiths quench and judge by eye and file; results vary from blade to blade. Deliberate tempering
+      by colour and the role of carbon are unknown.
+    elsewhere:
+    - Noricum, steel of the Magdalensberg region
+    - Spain, Celtiberian sword smiths
+  cementation_steel:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: high
+    note: Good steel comes from good ore (Noricum, Spain), not from a process. Smiths harden edges in charcoal
+      without knowing why. Packing bars in charcoal in sealed clay boxes is new.
+    elsewhere:
+    - kingdom of Noricum (allied, trading through Aquileia)
+  blast_furnace_cast_iron:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: Iron that runs liquid is unknown and would be called spoiled. Needs a tall shaft, continuous strong
+      blast and refractory lining; water-driven bellows do not exist.
+    elsewhere:
+    - Han China, state ironworks casting iron tools
+  coke_iron:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+    note: Needs the blast furnace first. Italy has charcoal and almost no coal.
+  puddling_wrought_iron:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+    elsewhere:
+    - Han China, 'stir-frying' cast iron into wrought iron
+  crucible_steel:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: Needs crucibles and a furnace that hold steel-melting heat for hours; Roman crucibles are for
+      bronze and silver.
+    elsewhere:
+    - South India and Sri Lanka, crucible steel
+  bessemer_steel:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: medium
+  open_hearth_steel:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: medium
+  alloy_stainless_steel:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: medium
+  refractories_fireclay:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Bronze founders, glassworkers and potters make crucibles and kiln linings from tempered clay,
+      good to bronze and glass heat. Clays for steel heat must be found by trial.
+  zinc_brass:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: high
+    note: Brass (orichalcum) is made in Asia Minor by heating copper with calamine and is prized. Caesar's
+      prefect Clovius strikes brass coins in 45 BC. Metallic zinc is unknown.
+    elsewhere:
+    - Asia Minor (Phrygia, Bithynia), cementation brass
+  cupellation_assaying:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Silver is cupelled from lead ore in the Spanish mines; gold is parted from silver with salt; the
+      touchstone tests purity. Lead is the cheap by-product that fills Rome's pipes.
+    local:
+    - mint at the temple of Juno Moneta
+    - Spanish silver mines near Carthago Nova
+  mercury_amalgam:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Cinnabar from Sisapo in Spain is the costly red pigment, and quicksilver is roasted from it. Gilders
+      lay gold leaf, and quicksilver serves to gild bronze. Fumes are not feared.
+    elsewhere:
+    - Sisapo (Almaden), Spain
+  lead_hazard:
+    knowledge: 2
+    use: wrong
+    producibility: easy
+    acceptance: low
+    note: 'Nicander''s poem describes white-lead poisoning, yet lead is everywhere: pipes, pans, cosmetics.
+      Cato has must boiled to syrup ''in a copper or lead vessel''. The syrup sweetens and preserves wine.'
+    local:
+    - plumbarii (lead-pipe makers)
+    - Cato, De agri cultura 105 and 107
+    - wine growers and merchants
+  soldering_tinning:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Tin-lead solder joins lead pipes and bronze vessels; goldsmiths braze. Tinning copper cookware
+      is uncommon here.
+  fired_brick_ceramics:
+    knowledge: 4
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Roof tiles, amphorae and storage jars are fired by the million, and Arretium has just begun its
+      red-gloss tableware. Walls are tufa, rubble concrete and sun-dried brick, not fired brick.
+    local:
+    - potteries of Arretium
+  porcelain:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: medium
+    note: No known kaolin source and no kiln reaching 1300 degrees. Fine tableware is silver, glass or red-gloss
+      pottery.
+    elsewhere:
+    - Han China, high-fired glazed stoneware (true porcelain comes later)
+  glassmaking:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: 'Glass is a luxury: core-formed flasks and cast or slumped bowls, mostly eastern imports. Blowing
+      is just being tried on the Syro-Palestinian coast. An iron tube is the missing tool.'
+    local:
+    - imported Hellenistic cast bowls and mosaic glass
+    - eastern traders at Puteoli
+    elsewhere:
+    - Syro-Palestinian coast and Jerusalem, first blown glass
+    - Alexandria, luxury cast and mosaic glass
+  clear_glass:
+    knowledge: 3
+    use: partial
+    producibility: hard
+    acceptance: high
+    note: Colourless glass decolourised with antimony exists as cast luxury bowls, thick and seedy. Clear,
+      bubble-free glass fit for lenses needs better furnaces, purer sand and stirring.
+    elsewhere:
+    - eastern Mediterranean glasshouses
+  glass_mirrors:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: high
+    note: Mirrors are polished bronze or silver and a profitable trade. Glass mirrors need thin blown glass
+      first; tin, lead and mercury for the backing are available.
+  hydraulic_cement:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Lime with volcanic ash from Puteoli (pozzolana) sets under water and is standard for vaults, foundations
+      and harbour moles. Portland cement would add little except early strength.
+    local:
+    - Puteoli (pulvis Puteolanus)
+    - Theatre of Pompey (concrete vaults, 55 BC)
+    - Caesar's builders at the Forum Iulium
+  reinforced_concrete:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Builders trust mass and the arch; concrete in tension is not a concept. Hand-forged iron bar by
+      the ton is ruinously dear and rusts in lime-ash concrete.
+  paper:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Writing is on papyrus from Egypt, wax tablets and some parchment. Linen rags, hemp rope, mortars
+      and screens exist. Papyrus is adequate and its importers will not welcome a rival.
+    local:
+    - papyrus dealers and booksellers
+    - Atticus' copying slaves
+    elsewhere:
+    - Egypt, papyrus making in the Nile Delta
+    - Han China, coarse hemp paper used for wrapping
+  textile_fibres:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Wool and linen are spun by hand and woven on upright looms, largely in the household. Cotton and
+      silk arrive as rare cloth from the East.
+    elsewhere:
+    - India, cotton
+    - Cos, wild silk
+    - China, silk reaching Rome through Parthia
+  leather_tanning:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Vegetable tanning with oak bark and galls, alum tawing for fine skins. The army consumes huge
+      quantities for tents, shields and boots; tanners work across the Tiber.
+    local:
+    - tanners in Transtiberim
+  aluminium:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: medium
+  wood_tar_pitch:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Pitch from the Sila forest in Bruttium, let to contractors by the state, seals ships, wine jars
+      and roofs and is used in medicine.
+    local:
+    - Sila forest pitch works, Bruttium
+
+  # ---- Physics, optics & astronomy
+  lenses:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Burning crystals are a known curiosity (Aristophanes). Gem cutters polish rock crystal; glass
+      is cast or core-formed, tinted and bubbly. Nobody grinds a lens to see with.
+    local:
+    - gem engravers and rock-crystal workers
+    - Alpine rock crystal
+  spectacles:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: The rich have slaves read aloud and take dictation, which blunts demand. A gem cutter can grind
+      convex lenses from rock crystal; clear glass is the bottleneck.
+  refraction_optics:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: 'Euclid''s Optics: rays leave the eye. Epicureans (Lucretius, book 4) say thin films fly off things
+      into it. The bent oar is a stock puzzle; no angles are measured.'
+    local:
+    - Lucretius, De rerum natura (book 4)
+    - Euclid's Optics in Greek
+  camera_obscura:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: The Aristotelian Problems note crescent suns under trees during an eclipse. A dark room with a
+      small hole is an afternoon's work; nobody has made one.
+  microscope:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: A fused bead of very clear glass magnifies strongly, but glass here is tinted and bubbly and rock
+      crystal cannot be fused. Physicians would scoff until shown.
+  telescope:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: high
+    note: Needs two well-ground lenses of clear material; small rock-crystal ones are possible. No concave
+      lens exists anywhere. Generals, ship captains and astronomers would pay.
+  reflecting_telescope:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: medium
+    note: High-tin bronze mirrors polish brightly, but an accurately figured concave mirror plus an eyepiece
+      lens is beyond any workshop.
+  achromatic_lens:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  spectrum_colour:
+    knowledge: 1
+    use: none
+    producibility: medium
+    acceptance: low
+    note: 'Aristotle: colours are mixtures of light and dark, the rainbow a reflection from cloud. A natural
+      six-sided rock crystal serves as a prism.'
+  spectroscopy:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+  wave_nature_light_sound:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Pythagorean string ratios are school knowledge; Stoics compare sound to ripples in a pond. Light
+      as a wave is unheard of.
+  speed_of_light:
+    knowledge: 1
+    use: none
+    producibility: very-hard
+    acceptance: low
+    note: Empedocles said light takes time, Aristotle denied it. No measurement is possible without a telescope
+      and a good clock.
+  photography:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+    note: No mineral acids exist to dissolve silver.
+  lever_mechanics_statics:
+    knowledge: 3
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Archimedes' law of the lever is in Greek books; builders, artillerymen and steelyard makers work
+      by rule and experience. Architects and military engineers are the audience.
+    local:
+    - steelyards (staterae) in every market
+    - building contractors (redemptores)
+    - Caesar's military engineers (fabri)
+  buoyancy_hydrostatics:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Archimedes' On Floating Bodies exists in Greek, read by few. Shipwrights load by experience; nobody
+      assays coin or bullion by weighing in water.
+    local:
+    - mint at the temple of Juno Moneta
+    - money-changers (nummularii) who test coin by touch and sound
+  falling_bodies:
+    knowledge: 1
+    use: wrong
+    producibility: easy
+    acceptance: low
+    note: 'Aristotle: heavier falls faster. Lucretius (book 2) says all bodies would fall equally fast in
+      a void, air and water alone slowing them. Nobody drops two weights to see.'
+    local:
+    - Lucretius, De rerum natura (book 2)
+  laws_of_motion:
+    knowledge: 1
+    use: wrong
+    producibility: medium
+    acceptance: low
+    note: 'Aristotle: motion needs a mover, the air pushes a thrown stone on. Epicurean atoms move forever
+      through the void, a bridge to inertia.'
+  universal_gravitation:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+    note: Heavy things seek the centre of the cosmos (Aristotle, Stoics). Needs laws of motion, elliptical
+      orbits and algebra first.
+  strength_of_materials:
+    knowledge: 1
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Beams, arches and the new concrete vaults are sized by rule and experience. Catapult makers scale
+      every part from the spring-hole diameter by Philo's formula.
+    local:
+    - Caesar's artillery engineers
+  sundial_water_clock:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Hours are twelfths of daylight, long in summer, short in winter. Courts time speeches by water
+      clock. Rome's first public dial, booty from Catania, ran wrong for 99 years.
+    local:
+    - sundials by the Rostra in the Forum (Marcius Philippus' corrected dial, 164 BC)
+    - public water clock set up by Scipio Nasica (159 BC)
+    elsewhere:
+    - 'Athens: Tower of the Winds of Andronicus of Cyrrhus, sundials and a water clock'
+    - 'Alexandria: Ctesibius'' regulated water clock (c. 270 BC)'
+  mechanical_clock:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: Bronze gear trains exist in Greek planetary devices, but no escapement. Equal hours clash with
+      the seasonal hours everyone lives by.
+  pendulum_clock:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: medium
+    note: Needs a working escapement clock first. A bare pendulum for counting short times is easy and would
+      serve physicians and astronomers.
+  atmospheric_pressure:
+    knowledge: 1
+    use: wrong
+    producibility: hard
+    acceptance: low
+    note: 'Aristotelians deny any void; Epicureans and Strato''s followers accept it. Mercury is at hand
+      (Spanish cinnabar), but nobody can make a yard-long glass tube: glassblowing is only beginning in
+      Syria.'
+    elsewhere:
+    - 'Syria-Palestine: first blown glass tubes and bottles (c. 50 BC)'
+  air_pump_vacuum:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+    note: Ctesibian bronze pump cylinders are the starting point; leather seals, tight valves and a transparent
+      vessel are the obstacles.
+  thermometer_temperature:
+    knowledge: 1
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Philo of Byzantium's book shows air swelling when warmed, with a lead globe and a bent tube dipping
+      in water. A sealed, graduated glass tube cannot be made.
+  latent_specific_heat:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+  heat_energy_conservation:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+    note: Hot is one of four qualities or a fine fiery stuff. Atomists (Lucretius) speak of small fast particles,
+      a partial bridge.
+  weather_instruments:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Weather is read from star risings on peg calendars (parapegmata), birds and sky signs, as in Aratus.
+      Rain gauge and wind vane are easy, a barometer is not.
+    local:
+    - Cicero's Latin Aratus (Aratea)
+    - farmers' and sailors' star calendars
+    elsewhere:
+    - 'Athens: Tower of the Winds with a bronze Triton wind vane'
+  round_earth_size:
+    knowledge: 3
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Educated Romans accept a globe with climate zones (Cicero's Dream of Scipio). Eratosthenes' 252,000
+      stadia competes with smaller figures from Posidonius. Nobody has sailed around it.
+    local:
+    - Cicero, De re publica (book 6)
+    elsewhere:
+    - 'Alexandria: Eratosthenes'' Geography and measurement (c. 240 BC)'
+    - 'Rhodes: school of Posidonius (died c. 51 BC)'
+  seasons_axial_tilt:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Greek astronomy explains seasons by the Sun's tilted yearly circle around a resting Earth, obliquity
+      about 24 degrees (Eratosthenes). A tilted, moving Earth is the new part.
+  eclipse_prediction:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: 'The educated know the cause: Gallus explained the lunar eclipse before Pydna (168 BC). For soldiers
+      and plebs it is a prodigy. Prediction by cycles is Babylonian and Greek work.'
+    elsewhere:
+    - 'Babylon: astronomical diaries and saros-cycle prediction'
+    - 'Rhodes and Alexandria: Hipparchus'' lunar theory'
+  heliocentrism:
+    knowledge: 2
+    use: none
+    producibility: medium
+    acceptance: low
+    note: 'Aristarchus'' hypothesis is known through Archimedes'' Sand-Reckoner and rejected: no star shift
+      is seen, and Cleanthes the Stoic called it impious. Only Seleucus defended it.'
+    local:
+    - Greek copies of Archimedes' Sand-Reckoner
+  keplers_laws:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+    note: Apollonius' Conics describes the ellipse, but no planetary positions are accurate enough to need
+      it; circles on circles suffice.
+  astronomical_distances:
+    knowledge: 2
+    use: partial
+    producibility: hard
+    acceptance: medium
+    note: 'Aristarchus: Sun about 19 times farther than the Moon (far too near). Hipparchus: Moon about
+      60 Earth radii, nearly right. Stars sit on one sphere.'
+  comets_orbits:
+    knowledge: 1
+    use: wrong
+    producibility: very-hard
+    acceptance: low
+    note: 'Aristotle: comets are fires in the upper air. Romans see omens; the comet at Octavian''s games
+      for Caesar''s victories in July 44 BC will be read as his soul.'
+  tides:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Posidonius, observing at Gades, tied daily, monthly and yearly tides to the Moon and Sun. Caesar
+      lost ships to a full-moon tide in Britain in 55 BC.
+    local:
+    - Lucius Cornelius Balbus, Caesar's agent, a native of Gades
+  terrestrial_magnetism:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: That lodestone draws iron is well known (Lucretius, book 6); that it points north is not. Needs
+      the compass first.
+  deep_time_geology:
+    knowledge: 1
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Seashells found inland are taken as proof of former seas (Xenophanes, Eratosthenes). Aristotle's
+      world is eternal, the Stoics' burns and returns; no scripture fixes an age.
+  plate_tectonics:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+  stars_galaxies_cosmology:
+    knowledge: 1
+    use: none
+    producibility: very-hard
+    acceptance: low
+    note: Epicureans (Lucretius) teach infinitely many worlds; Democritus made the Milky Way a crowd of
+      faint stars. Stoics and Aristotelians keep one finite cosmos.
+  xrays:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  radioactivity:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  atomic_structure:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  quantum_mechanics:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  relativity:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  nuclear_fission:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+
+  # ---- Electricity & electronics
+  static_electricity:
+    knowledge: 2
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Rubbed amber drawing chaff is a curiosity classed with the lodestone. Amber, sulphur, wool, fur
+      and gold leaf are on sale; glass vessels are small and thick.
+  lightning_rod:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Lightning is Jupiter's sign. Augurs and Etruscan haruspices interpret every strike, and struck
+      ground is fenced off as sacred (bidental). A rod trespasses on their office.
+    local:
+    - college of augurs
+    - Etruscan haruspices with their lightning books
+  electric_battery:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: low
+    note: No metallic zinc; brass is made with calamine ore. Copper-iron or silver-iron piles in vinegar
+      or brine work weakly, and nobody sees a use.
+  practical_batteries:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+  electromagnetism:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+    note: 'No compass needle, no drawn wire, only weak zincless cells: every part must be invented first.'
+  ohms_law_circuits:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+  electric_telegraph:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: medium
+  submarine_cable:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  dynamo_electric_motor:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  electric_light:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: medium
+  alternating_current_grid:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  telephone:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  sound_recording:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+    note: A foil phonograph is purely mechanical, but it needs a true metal lead screw, which nobody here
+      can cut.
+  electromagnetic_waves_radio:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  crystal_detector:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  vacuum_tube:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  television_crt:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  radar:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  semiconductors_transistor:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  semiconductor_purification:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  solar_cell:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  mosfet:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  integrated_circuit:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  laser:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  optical_fibre:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+
+  # ---- Computing, control & information theory
+  algorithm_concept:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Euclid's procedure for the greatest common measure and Eratosthenes' sieve exist in Greek. Reckoning
+      is taught as hand practice on the board, not as written rules.
+  binary_numbers:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Needs place value first. Looks like a philosopher's game; Roman money and weights run in twelfths.
+  boolean_logic:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Stoic logic (Chrysippus) already treats 'and', 'or' and 'if' between whole statements, and Cicero
+      knows it. Turning it into calculation with symbols is new.
+    local:
+    - Cicero and the Stoic teachers in Roman households
+  logic_gates_switching:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  mechanical_calculator:
+    knowledge: 2
+    use: none
+    producibility: very-hard
+    acceptance: medium
+    note: Geared planetary models exist and Cicero describes them. Teeth are filed by hand as small triangles.
+      An adding machine with a carry is new and presupposes place-value numbers.
+    local:
+    - Archimedes' geared sphere, booty of Marcellus from Syracuse (212 BC), kept in his family's house
+      (Cicero, De re publica I); whether it survives in 46 BC is not recorded
+    elsewhere:
+    - 'Rhodes: Posidonius'' planetary sphere (Cicero heard him there on his journey of 79–77 BC)'
+    - Greek workshops that built the device lost off Antikythera c. 70-60 BC (at least 30 bronze gears)
+  punched_card_control:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Roman looms are upright and plain; figured silks arrive from the East as finished luxury cloth.
+      There is no drawloom to control.
+  programmable_computer:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  turing_machine_computability:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+  computer_memory:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  programming_languages_compilers:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  operating_system_time_sharing:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  information_theory:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+  sampling_pcm:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  error_correcting_codes:
+    knowledge: 1
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Books are copied by slaves from dictation and Cicero complains of faulty Latin copies. Counting
+      lines (stichometry) is the only check; check sums need place-value arithmetic.
+    local:
+    - Atticus' trained copyists
+  packet_switching_networks:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  feedback_control:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Ctesibius' float valve keeps a water clock's inflow steady; such clocks are rare luxuries in Rome.
+      The general idea of a self-correcting machine has not been drawn.
+    elsewhere:
+    - 'Alexandria: Ctesibius'' tradition of water clocks and pneumatic devices'
+  cryptography:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Caesar writes confidential letters with the alphabet shifted three places. Nobody counts letter
+      frequencies. A breaker or a better cipher interests him and his enemies.
+    local:
+    - Caesar
+    - Lucius Cornelius Balbus and Gaius Oppius, who run his affairs in Rome
+  public_key_cryptography:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+
+  # ---- Energy & engines
+  animal_power_gin:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Donkeys and slaves turn hourglass-shaped lava mills in the bakeries; men tread wheels for cranes
+      and drainage. Horses pull poorly in the throat-and-girth harness.
+    local:
+    - bakeries (pistrina) with donkey mills (mola asinaria, already in Cato)
+  water_wheel:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Rivers turning wheels with scoops are a familiar sight (Lucretius, book 5). A grain mill stood
+      at Mithridates' palace; none is attested at Rome. Bakers have donkeys and slaves.
+    local:
+    - Tiber and Anio
+    - Vitruvius, who will describe the geared mill in the 20s BC
+    elsewhere:
+    - 'Cabeira in Pontus: water mill at Mithridates'' palace, in Roman hands since the 60s BC (Strabo)'
+  windmill:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Unknown anywhere. Sailcloth, carpenters and right-angle gearing exist. Winds at Rome are weak
+      and fickle; coasts and hilltops suit better.
+  water_turbine:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+  crank_connecting_rod:
+    knowledge: 1
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: The rotary hand quern has an upright handle at its rim, a crank in all but name. Crank with connecting
+      rod and flywheel is built nowhere.
+    local:
+    - hand querns in every legionary tent group
+  piston_pump:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: high
+    note: Ctesibius' twin-cylinder bronze force pump is described in Greek mechanics; founders and turners
+      here could build one. Rome has no fire brigade, only buckets and private slave gangs.
+    local:
+    - bronze founders and turners
+    - the fire-prone tenements (insulae) of the Subura
+    elsewhere:
+    - 'Alexandria: Ctesibius'' pumps and water organ (3rd c. BC)'
+  hydraulic_ram:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: Lead pipe and bronze valves are at hand, but pipes are folded sheet with a soldered seam and burst
+      under water hammer. Hillside villas would want it.
+  charcoal_burning:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Charcoal feeds smiths, founders and house braziers; wood and charcoal come down the Tiber from
+      Apennine forests. Nobody collects the tar and vinegar from the smoke.
+  coal_mining:
+    knowledge: 1
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Theophrastus (On Stones) reports earthy coals burnt by smiths in Liguria and Elis. Central Italy
+      has no good seams; those of Gaul and Britain lie unworked.
+    elsewhere:
+    - 'Han China: coal burnt as fuel'
+  gas_lighting:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  argand_lamp:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: Olive-oil lamps of clay and bronze with a solid wick light every house. A tubular wick and bronze
+      burner are possible; a thin glass chimney is not.
+  oil_drilling:
+    knowledge: 1
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Bitumen and naphtha from natural seeps are known and traded as caulk, drug and curiosity. Wells
+      are dug, never drilled.
+    elsewhere:
+    - 'Han China, Sichuan: percussion-drilled brine wells'
+  steam_aeolipile:
+    knowledge: 2
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Bronze balls that blow steam from a pinhole are a curiosity used to explain wind; Vitruvius names
+      them about 25 BC. A spinning version is easy, a toy.
+  safety_valve_boiler:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: Bath boilers are open bronze cauldrons over a furnace. Riveted or soft-soldered sheet holds little
+      pressure; brazed seams and a weighted valve must be taught.
+    local:
+    - bath furnaces and hypocausts (Sergius Orata's raised-floor 'hanging' baths, before 91 BC)
+  savery_steam_pump:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+  atmospheric_engine:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+    note: 'Missing: the idea of air pressure, a true cylinder wider than a pump barrel, a sealed boiler,
+      and a motive. Mines are drained by slaves treading screws and wheels.'
+  separate_condenser:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  rotative_steam_engine:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  high_pressure_steam:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  steam_turbine:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  hot_air_engine:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  internal_combustion_engine:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  gas_turbine_jet:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  refrigeration:
+    knowledge: 2
+    use: partial
+    producibility: hard
+    acceptance: high
+    note: Snow kept in pits cools drinks, a Greek luxury; at Rome the trade is attested only from Seneca's
+      day. Freezing with snow and salt is unknown but easy.
+  nuclear_reactor:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+
+  # ---- Tools, machines & manufacturing
+  block_and_tackle:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Contractors lift multi-ton blocks with shear-legs, compound tackles and capstans, probably already
+      with the man-trodden great wheel. Caesar's forum and basilica are building sites now.
+    local:
+    - Forum Iulium and Basilica Iulia building sites
+    - building contractors (redemptores)
+  wheelbarrow:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Loads go in baskets, on two-man handbarrows or carts. One wheel under a handbarrow frees a man;
+      slave owners see little gain, legionaries digging camps might.
+    elsewhere:
+    - Han China (Sichuan), where it is just appearing
+  archimedes_screw:
+    knowledge: 3
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Wooden screws turned by treading drain Spanish silver mines and water the Nile delta. Diodorus,
+      writing in Rome, calls it the Egyptian screw and credits Archimedes.
+    local:
+    - Diodorus Siculus
+    elsewhere:
+    - 'Spain: mines of the south-east and the Sierra Morena'
+    - 'Egypt: Nile delta irrigation'
+  gears_gear_trains:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Wooden peg-and-lantern gears on water-lifting wheels; fine bronze wheels with hand-filed triangular
+      teeth in Greek astronomical devices. No theory of tooth form, no cutting engine.
+    elsewhere:
+    - 'Rhodes and Alexandria: instrument makers'
+  cam_camshaft:
+    knowledge: 2
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Cams move the figures of Alexandrian automata (Philo of Byzantium). No cam-lifted hammers or stamps
+      are in use.
+  screw_nut_bolt:
+    knowledge: 2
+    use: partial
+    producibility: hard
+    acceptance: medium
+    note: The screw is known from the water screw and Greek mechanics. Oil and wine presses still work by
+      lever and windlass, as in Cato. Threads are hand-carved; no bolts.
+  belt_drive:
+    knowledge: 1
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Cord drives exist only as the bow and strap that spin drills and lathes. An endless belt between
+      two wheels is new and easy.
+  ball_bearings:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Axles and pivots run in greased wood, iron or bronze sockets. Bronze balls can be cast and turned;
+      hardened steel balls cannot.
+  bellows_piston_blower:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: medium
+    note: Smiths and founders use paired leather bag bellows worked by a slave. A wooden box bellows with
+      a double-acting piston is unknown and plain carpentry.
+  trip_hammer_water_powered:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Needs water wheel and cam, both known in principle. Grain is pounded and ore crushed by hand;
+      fullers tread cloth in tubs.
+  lost_wax_casting:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Greek and Italian founders cast life-size hollow bronzes in sections by indirect lost wax and
+      join them. Founders make statues, fittings and pump parts, not machines.
+    local:
+    - bronze founders supplying statues for Caesar's forum and triumphs
+    - Arcesilaus, sculptor of the Venus Genetrix cult statue (material not recorded), famed for his clay
+      models
+  sand_loam_casting:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: 'Bronze is cast in clay and stone moulds. Iron is never cast: smiths forge spongy blooms, and
+      liquid iron is unknown west of China. No big bells exist.'
+    elsewhere:
+    - 'Han China: blast furnaces and cast iron in moulds'
+  wire_drawing:
+    knowledge: 1
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Gold and silver wire is twisted from strip and rolled smooth; iron for mail rings is hammered
+      rod. A hard steel draw plate with tapered holes is new.
+    local:
+    - goldsmiths
+    - mail (lorica hamata) makers for the legions
+  rolling_mill:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Sheet lead, bronze and gold are hammered or cast flat. Small rolls for lead or gold are makeable;
+      true iron rolls in a stiff frame are not.
+  boring_machine:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+    note: Pump barrels a few inches wide are cast and then turned or lapped by hand. Wooden pipes are augered.
+      No guided boring bar, and nothing to drive one.
+  lathe_screw_cutting:
+    knowledge: 1
+    use: partial
+    producibility: hard
+    acceptance: medium
+    note: Turners use bow and strap lathes that spin back and forth, tool held by hand, for wood, ivory,
+      bronze and soft stone. No continuous drive, slide rest or lead screw.
+    local:
+    - turners (tornatores)
+  precision_measurement:
+    knowledge: 2
+    use: partial
+    producibility: hard
+    acceptance: medium
+    note: Bronze foot rules in 12 unciae or 16 digits, compasses, calipers, squares; standard measures are
+      kept on the Capitol. Parts are fitted by trial, not gauged.
+    local:
+    - the Capitol, where standards are kept (the foot is called pes monetalis, after Juno Moneta)
+  machine_tools:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  interchangeable_parts:
+    knowledge: 1
+    use: partial
+    producibility: hard
+    acceptance: low
+    note: Army contracts order arms in bulk, sling bullets come from moulds and amphorae in rough standard
+      sizes, but every fitted part is finished by hand.
+  assembly_line:
+    knowledge: 1
+    use: partial
+    producibility: medium
+    acceptance: low
+    note: Large slave workshops (potteries, lamp makers, brickyards) already divide work into steps. No
+      machines and no interchangeable parts; with cheap slaves, owners see little reason.
+  sawmill:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Timber and marble are sawn by pairs of slaves with frame saws and sand. Needs a water wheel plus
+      crank and connecting rod, neither yet built.
+  spinning_wheel:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: All yarn is spun on spindle and distaff by women of every rank; wool-working is the badge of the
+      virtuous matron. Wheel, cord drive and spindle are carpenter's work.
+  spinning_machines:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+  treadle_loom:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Looms are upright and warp-weighted, the weaver standing. A horizontal frame loom with treadles
+      and heddle shafts is joinery, unknown west of China.
+    elsewhere:
+    - 'Han China: treadle looms for silk'
+  power_loom:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+  cotton_gin:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: low
+    note: Cotton is an exotic cloth from India and Upper Egypt. Nobody in Italy handles raw cotton; wool
+      and linen clothe Rome.
+  knitting_frame:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  sewing_machine:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+
+  # ---- Mathematics & measurement
+  zero_place_value:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Numerals are additive; an empty column on the counting board is the only 'nothing', never written.
+      Nihil is no number. Philosophers will ask how nothing can be a quantity.
+    local:
+    - bankers (argentarii) in the Forum
+    - clerks of the tax companies (publicani)
+    - public scribes of the treasury (aerarium)
+    elsewhere:
+    - 'Babylon (Parthian): astronomer-scribes write base-60 place value with a placeholder sign for an empty
+      place'
+    - 'Alexandria and Rhodes: Greek astronomers compute in Babylonian sixtieths'
+    - 'Han China: counting rods, decimal place value with a blank for zero'
+  arabic_numerals:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Sums are done with pebbles and on the fingers, then recorded in letters. Written column arithmetic
+      works on wax tablets; bookkeepers and tax farmers gain, and fear forgery.
+    local:
+    - wax tablets and stylus, erasable, ideal for written sums
+    - household ledgers (codex accepti et expensi)
+  abacus_counting_board:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Pebbles (calculi) on a board ruled in columns for I, X, C, M, with fives between and twelfths
+      beside; finger signs too. The bronze bead abacus is not yet attested.
+    local:
+    - schoolmasters who drill reckoning (calculatores)
+    - bankers' tables in the Forum
+  fractions_rule_of_three:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Fractions are twelfths of the as (unciae) and their parts, drilled in school; Greek reckoners
+      use unit fractions, astronomers sixtieths. A general numerator-over-denominator notation is missing.
+  decimal_fractions:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Needs place value first. Money, weights and inheritances run in twelfths, which divide by three
+      and four; tenths look clumsier to a Roman.
+  negative_numbers:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Receipts and outlays stand in separate columns of the ledger. A number less than nothing is absurd;
+      calling it a debt helps.
+    elsewhere:
+    - 'Han China: red and black counting rods for gain and loss (written up by the 1st c. AD)'
+  square_roots_irrationals:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Incommensurable lengths are classified in Euclid, book 10. Surveyors and architects use rough
+      rules. Digit-by-digit root extraction needs place value.
+  logarithms:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: Needs place value and decimal fractions, then months of table work by trained reckoners. Astronomers
+      in Alexandria gain most.
+  slide_rule:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+  symbolic_algebra:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: low
+    note: Problems are stated and solved in words or as geometry. Greek letters already serve as numerals,
+      which makes letters for unknowns confusing.
+  quadratic_cubic_equations:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: low
+    note: Quadratics are solved as geometry (application of areas, Euclid II and VI). Doubling the cube
+      is done with curves and instruments such as Eratosthenes' mesolabe, not by formula.
+  linear_equations_matrices:
+    knowledge: 1
+    use: partial
+    producibility: medium
+    acceptance: low
+    note: One-unknown problems are solved by trial values in the Egyptian manner. Systematic elimination
+      for several unknowns is unknown here.
+    elsewhere:
+    - 'Han China: elimination on the counting board (in the Nine Chapters by the 1st c. AD)'
+  complex_numbers:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+  prime_numbers_number_theory:
+    knowledge: 2
+    use: correct
+    producibility: easy
+    acceptance: low
+    note: Euclid VII-IX and Eratosthenes' sieve exist in Greek. Roman Pythagoreans care for the lore of
+      perfect and friendly numbers; nobody sees a use.
+  combinatorics_permutations:
+    knowledge: 1
+    use: partial
+    producibility: easy
+    acceptance: low
+    note: Chrysippus claimed over a million compound statements from ten simple ones; Hipparchus disputed
+      it with his own counts. No general rules, no triangle of coefficients.
+  compound_interest_exponential_growth:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Interest runs by the month; 1 per cent monthly (centesima) is the ceiling. In 50 BC Cicero fought
+      Brutus' agents over a Salamis loan at 48 per cent. No tables.
+    local:
+    - Titus Pomponius Atticus, financier
+    - bankers (argentarii) in the Forum
+    - the debt crisis and Caesar's debt-relief measures of 49-47 BC
+  geometry_proof:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: 'Euclid, Archimedes and Apollonius are read in Greek by a few. Cicero''s judgement: Romans confine
+      geometry to measuring and reckoning. No Latin Euclid exists.'
+    local:
+    - Greek tutors and libraries in great houses
+    - Varro, charged by Caesar with organising a public library
+    elsewhere:
+    - 'Alexandria: Museum and Library'
+    - 'Rhodes and Athens: schools'
+  pi_circle_measurement:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Archimedes' bounds 223/71 and 22/7 stand in his Measurement of a Circle. Craftsmen use 3 or 3
+      1/8; wheelwrights, pipe makers and vault builders would take a better rule.
+  trigonometry:
+    knowledge: 2
+    use: partial
+    producibility: hard
+    acceptance: medium
+    note: Hipparchus' table of chords belongs to Greek astronomy; nobody in Rome computes with it. Sines
+      and a dense table are months of work and want place-value arithmetic.
+    elsewhere:
+    - 'Alexandria and Rhodes: astronomers using Hipparchus'' chords'
+  coordinate_geometry:
+    knowledge: 1
+    use: partial
+    producibility: medium
+    acceptance: low
+    note: Astronomers fix stars and geographers places by two numbers; surveyors lay land on a grid from
+      cardo and decumanus. Plotting a curve from an equation is unknown.
+  non_euclidean_geometry:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Euclid's parallel postulate is already felt to want a proof (Posidonius redefined parallels as
+      equidistant). Geometry on the sphere is not seen as a rival geometry.
+  perspective_technical_drawing:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Wall painters of the current fashion open walls into deep colonnades with roughly converging lines,
+      no single vanishing point. Architects draw plans and elevations; scaled machine drawings are rare.
+    local:
+    - Second Style wall paintings in houses on the Palatine and in the villas around Vesuvius
+  surveying_triangulation:
+    knowledge: 4
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Surveyors lay out roads, camps and colony grids with groma and rods and level aqueducts with water
+      levels; Caesar is settling veterans now. Angles are not measured; no triangulation.
+    local:
+    - land surveyors (mensores) for Caesar's veteran colonies
+    - army camp surveyors
+    elsewhere:
+    - Greek astronomers' sighting tube and dioptra
+  solar_calendar_leap_years:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: 'Happening now: 46 BC runs 445 days. The new year of 365 1/4 days is 11 minutes too long, a day
+      in 128 years; Hipparchus'' shorter value is ignored.'
+    local:
+    - Caesar, pontifex maximus, who issues the edict
+    - Sosigenes, his astronomer (Pliny)
+    - Marcus Flavius, scribe named by Macrobius
+    - college of pontiffs, who lose control of intercalation
+    elsewhere:
+    - 'Egypt: 365-day civil year with no leap day; the Canopus decree of 238 BC ordering one was ignored'
+    - 'Babylon: 19-year cycle of intercalary months'
+  metric_system_units:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: low
+    note: Foot, pound and amphora are standard in Roman territory, divided in twelfths; the amphora is defined
+      as a cubic foot. Decimal units want decimal numerals and a dictator's fiat.
+    local:
+    - standard weights and measures on the Capitol
+  probability_statistics:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Dice and knucklebones are everywhere, but the outcome is Fortuna's, and lots are drawn to learn
+      the gods' will. Census rolls, grain-dole lists and sea loans offer data.
+    local:
+    - Caesar's street-by-street recount of grain recipients in 46 BC (320,000 cut to 150,000)
+    - lenders of sea loans (faenus nauticum)
+  bayes_theorem:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: low
+  normal_distribution_errors:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Astronomers pick the one observation they trust. Averaging repeated measurements is new and easy;
+      the theory behind it needs probability and calculus.
+  data_graphs:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Records are lists on wax tablets, papyrus rolls and whitened notice boards. Grain prices or Tiber
+      levels drawn as a line over time would be new.
+  calculus:
+    knowledge: 1
+    use: none
+    producibility: very-hard
+    acceptance: low
+    note: Archimedes' exhaustion proofs and his Method (weighing thin slices) exist in Greek, read by a
+      handful. No algebra, coordinates or place-value numbers to build on.
+  infinite_series_e:
+    knowledge: 1
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Zeno's paradoxes are a school topic; Archimedes summed 1 + 1/4 + 1/16 and so on in his Quadrature
+      of the Parabola. No general notion of a series.
+  differential_equations:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  fourier_series:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+
+  # ---- Scientific method & philosophical ideas
+  scientific_method:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Greek books hold observation and some experiment (Strato, Archimedes, Alexandrian physicians).
+      Romans prize utility and ancestral precedent; a public test reads as spectacle, not proof.
+    elsewhere:
+    - Alexandria, Museum
+  empiricism_over_authority:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Academic sceptics argue both sides and follow no master; Cicero says so openly. In medicine and
+      farming, ancestral custom and famous Greek names still decide.
+    local:
+    - Cicero
+  controlled_trial:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Owners of large slave households and army commanders could compare groups at will; nobody thinks
+      to. A single cure or a votive tablet counts as proof.
+    local:
+    - large slave households (familiae)
+    - the legions
+  placebo_blinding:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: low
+  correlation_causation_confounding:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Greek logic names the fallacies and Carneades' objections to divination are known. Omens, dreams
+      and remedies are still judged by remembered hits.
+  selection_bias_sampling:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: The Diagoras retort about the votive tablets of sailors who did not drown circulates in Greek;
+      Cicero retells it in 45 BC. Nobody applies it to remedies or omens.
+  measurement_quantification:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Standard weights, steelyards, surveyors' groma, sundials and water-clocks. Greek astronomy measures;
+      natural philosophy argues in words. Roman numerals make tables clumsy.
+    local:
+    - Sosigenes, Caesar's calendar astronomer
+    - land surveyors (mensores)
+    elsewhere:
+    - Alexandria and Rhodes, graduated instruments and star catalogues
+  mathematical_laws_of_nature:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Archimedes on the lever and floating bodies, Pythagorean string ratios and Hipparchus are in Greek
+      books. Romans treat mathematics as surveying and accounts.
+    elsewhere:
+    - Alexandria
+    - Rhodes
+  falsifiability:
+    knowledge: 1
+    use: none
+    producibility: medium
+    acceptance: low
+    note: 'Refutation by counterexample is courtroom and school routine. Augural rules cannot fail: an omen
+      that misleads means a flaw in the ritual.'
+  fallibilism_provisional_knowledge:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: The sceptical Academy teaches that nothing is certain and one follows the probable. Cicero professes
+      it; his Academica comes in 45 BC.
+    local:
+    - Cicero
+    elsewhere:
+    - Athens, the philosophical schools
+  bayesian_reasoning:
+    knowledge: 1
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Carneades' grades of plausibility are known through Cicero's teachers. No numbers attach to chance;
+      dice are for gaming, lots for the gods.
+  reproducibility_open_publication:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Books spread by private copying; Greek engineers published their catapult formulae. Craft recipes
+      stay inside workshops and slave households. Disclosure earns no priority or reward.
+    local:
+    - T. Pomponius Atticus and his copyists
+  cognitive_biases:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: 'Rhetoric teaches how to exploit them: appeals to fear, hope and party. Nobody treats them as
+      errors to guard against in one''s own judgement.'
+  formal_logic:
+    knowledge: 3
+    use: correct
+    producibility: easy
+    acceptance: medium
+    note: Stoic and Aristotelian logic is taught by Greek tutors in great houses. Latin terms are still
+      being coined; Cicero's Topica comes in 44 BC.
+    elsewhere:
+    - Athens
+    - Rhodes
+  occams_razor:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: 'Epicureans do the opposite on principle: for things in the sky every explanation the senses do
+      not contradict is kept (Lucretius V–VI).'
+  thought_experiment:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Lucretius' spear thrown from the edge of the universe is in circulation; Zeno's paradoxes and
+      Carneades' plank of two shipwrecked men are school pieces.
+  source_criticism:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Varro and Atticus (Liber annalis, c. 47 BC) sort chronology; Cicero's Brutus (46 BC) says family
+      funeral speeches falsified history. Priestly records and prodigy lists go unquestioned.
+    local:
+    - Varro
+    - Atticus
+    - Cornelius Nepos
+  informed_consent_research_ethics:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: low
+    note: Greek physicians know the Hippocratic oath. Slaves have no say in their treatment and are tortured
+      for evidence; condemned men are at the magistrate's disposal.
+  natural_causes:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Lucretius and Greek meteorology explain thunder, eclipses and plague without gods. The state still
+      expiates prodigies; one senator can hold both views.
+    local:
+    - Lucretius' De rerum natura (c. 55 BC)
+    - Varro
+    - Cicero
+  scepticism_superstition:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: low
+    note: Cicero is an augur and privately doubts divination (De divinatione, 44 BC). Auspices can stop
+      an assembly, so augury is constitutional machinery. Astrology is a rising fashion.
+    local:
+    - college of augurs
+    - Etruscan haruspices such as Spurinna
+    - Cicero
+    elsewhere:
+    - Babylon, omen astronomy and horoscopes
+  atomism:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: low
+    note: 'Epicurean doctrine, widely read: Lucretius in Latin, Philodemus and Siro on the Bay of Naples.
+      Opponents call it godless. Nobody can test it.'
+    local:
+    - Lucretius' De rerum natura
+    - Philodemus at Herculaneum
+    - Siro at Naples
+    - C. Cassius Longinus, recent Epicurean
+  universal_physical_laws:
+    knowledge: 2
+    use: none
+    producibility: medium
+    acceptance: low
+    note: Epicureans hold that sky and earth are the same atoms. Stoics and Aristotelians put a finer fire
+      or aether above, and most people think the stars divine.
+  mechanical_philosophy:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: low
+    note: Epicureans reject purposes in nature. Stoic providence is the respectable view and suits state
+      religion. Greek machines and planetaria are admired as marvels.
+    local:
+    - Archimedes' geared planetarium from Syracuse, kept by Marcellus' family; his star globe stood in
+      the temple of Virtus (Cicero, De re publica I)
+    elsewhere:
+    - Alexandria, the mechanics after Ctesibius
+    - Rhodes
+  idea_of_progress:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: low
+    note: 'Lucretius V tells how the arts advanced step by step, yet expects the world to decay. Romans
+      measure by ancestors: ''new things'' (res novae) means revolution.'
+  systematic_invention:
+    knowledge: 1
+    use: none
+    producibility: medium
+    acceptance: low
+    note: Alexandrian engineers found the catapult formula by royally funded trials; the account is in Greek.
+      Rome pays contractors and generals' engineers, not research. Slaves are cheap.
+    local:
+    - Caesar's engineers (his praefecti fabrum Balbus and Mamurra; Vitruvius served on artillery)
+    elsewhere:
+    - Alexandria
+  golden_rule_universal_ethics:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Greek maxims and Stoic duties to all mankind are known; Cicero's De officiis comes late in 44
+      BC. In practice duty follows rank, kin, patron and client.
+  human_equality_dignity:
+    knowledge: 2
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Stoics teach that all men share reason and one world-city. Rank, citizenship and slavery order
+      everything; yet freed slaves become citizens, which astonishes Greeks.
+  natural_rights:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: low
+    note: 'Cicero''s De re publica (51 BC) calls true law right reason in agreement with nature. Actual
+      rights are a citizen''s: appeal to the people, the tribune''s help.'
+    local:
+    - Cicero
+  social_contract:
+    knowledge: 2
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Epicureans call justice a compact not to harm; Lucretius V has men agree on magistrates and laws.
+      Cicero defines the commonwealth as a people joined by agreement on law.
+  freedom_of_speech_thought:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Libertas includes frank speech in Senate and public meetings. Under Caesar men speak with care;
+      Cicero's praise of Cato (46 BC) is answered by Caesar's Anticato, not by force.
+  religious_tolerance:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Foreign cults are admitted or suppressed by Senate decree (Bacchanalia 186 BC; Isis altars pulled
+      down in the 50s). Caesar confirms the Jews' worship. Cult is civic duty, belief private.
+  secular_state:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: 'Priesthoods are public offices held by politicians: Caesar is pontifex maximus, Cicero an augur.
+      There is no separate clergy to separate from.'
+  utilitarianism:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Epicurean reckoning of pleasure is for the individual, and Cicero attacks it (De finibus, 45 BC).
+      'Public advantage' is a familiar argument but means the citizen body.
+  abolition_of_torture:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Citizens are exempt from torture; a slave's testimony is valid only under it. Advocates such as
+      Cicero call such evidence worthless when it hurts their client.
+  positive_sum_cooperation:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Wealth means land and plunder, and conquest visibly pays. Senators may not own large ships (law
+      of 218 BC) and trade through freedmen and equites.
+  game_theory:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Caesar's clemency and his crossing of the Rubicon are commitment moves made by instinct. There
+      are no words for it.
+  tragedy_of_the_commons:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: 'Public land: legal limits on holdings and grazing were evaded by the rich, and the Gracchi died
+      over it. Aqueduct water is tapped illegally.'
+
+  # ---- Agriculture & food
+  three_field_system:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: low
+    note: Italy sows winter grain and fallows every other year; dry summers make a spring-sown third field
+      unreliable outside the Po plain. The gain lies north of the Alps.
+  legumes_green_manure:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Cato lists lupins, beans and vetch as crops that manure the land, and good farmers plough lupins
+      in. Absentee owners with slave gangs often skip it.
+    local:
+    - Cato, De agri cultura 37
+    - Mago's farming books (Latin translation by D. Silanus)
+  crop_rotation:
+    knowledge: 1
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Grain after beans is practised, but fallow remains the rule and fodder is scarce. Lucerne (medica)
+      and turnips are grown; red clover as a sown field crop is not.
+  manure_compost_night_soil:
+    knowledge: 4
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Dung heaps and pigeon dung are prized (Cato). The city's excrement mostly goes down the sewers
+      into the Tiber; only market gardens near the walls buy it.
+    local:
+    - market gardens around the city walls
+    - Cato, De agri cultura
+  liming_marling:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Varro saw Gauls near the Rhine dress fields with dug white earth. Italian soils on limestone and
+      volcanic ash seldom need it.
+    local:
+    - Marcus Terentius Varro
+    elsewhere:
+    - Transalpine Gaul, marling
+  mineral_fertiliser:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: low
+    note: Wood ash is used on fields. Bone meal and ash are within reach; guano, mined phosphate and potash
+      are not. The idea that plants eat dissolved minerals contradicts Aristotle.
+  terracing_soil_conservation:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Hillside vines and olives stand on dry-stone terraces. Grazing and felling strip the Apennine
+      slopes, and the Tiber silts and floods. Nobody connects the two.
+  heavy_plough:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: low
+    note: 'The Italian ard scratches light soil crosswise and suits it. A wheeled plough with coulter and
+      mouldboard pays only on heavy wet land: the Po plain and Gaul.'
+    elsewhere:
+    - Han China, cast-iron shares and mouldboards
+  horse_collar_harness:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Oxen plough and haul under the yoke, mules carry and draw carts; horses are for war and racing.
+      A saddler can make a padded collar in days.
+    elsewhere:
+    - Han China, breast-strap harness
+  seed_drill:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: low
+    note: Seed is broadcast by hand and ploughed in. Slave labour is cheap; saved seed grain is the argument,
+      since a large share of every wheat crop goes back as seed.
+    elsewhere:
+    - Han China, multi-tube seed drill
+    - Mesopotamia, plough with seed funnel
+  scythe_cradle:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Hay is mown with a short scythe; grain is cut with the sickle, often high on the stalk. A long
+      scythe with a cradle is smith's and carpenter's work.
+    elsewhere:
+    - Gaul, longer scythes
+  reaper_thresher:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Grain is trodden out by animals or a threshing sledge (tribulum) and winnowed in the wind. Harvest
+      gangs of slaves and hired men make owners indifferent to machines.
+    elsewhere:
+    - Han China, rotary winnowing fan
+  selective_breeding:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Stock owners choose rams, bulls and stallions by looks and pedigree, and prize Reate donkeys.
+      Seed corn is picked from the best ears. No records, no progeny testing.
+    local:
+    - Marcus Terentius Varro (stock farms at Reate)
+    - mule and donkey breeders of Reate
+  grafting_fruit_trees:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Cato describes cleft and bud grafting step by step. Lucullus brought the cherry from Pontus a
+      generation ago; new fruits are a nobleman's hobby.
+    local:
+    - Cato, De agri cultura 40-42
+    - gardens of Lucullus on the Pincian
+  irrigation_water_lifting:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Gardens are watered from channels and by the well sweep; Lucretius mentions river-turned wheels
+      with scoops. Archimedes' screw drains Spanish mines. Field crops rely on winter rain.
+    elsewhere:
+    - Egypt, screw, ox-driven wheel and shaduf
+  wet_rice_cultivation:
+    knowledge: 1
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Rice is known from Greek accounts of India and as an imported invalid's food. Seed would have
+      to come from the East; the Po marshes would suit it.
+    elsewhere:
+    - India
+    - China
+  windmill_drainage_land_reclamation:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: Romans drain by gravity with channels and tunnels (Alban Lake emissary, Etruscan cuniculi). Caesar
+      will plan to drain the Pomptine marshes and Fucine Lake (45–44 BC). Windmills are unknown.
+    local:
+    - Pomptine marshes
+    - Fucine Lake
+    - emissary of the Alban Lake
+  aquaculture_fish_ponds:
+    knowledge: 4
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Sea-water fish ponds are a rich man's craze and Lucrine oysters a business since Sergius Orata.
+      Hirrius lends Caesar thousands of morays, by weight, for the triumph banquets. Pure luxury.
+    local:
+    - Gaius Hirrius
+    - oyster beds of the Lucrine Lake
+    - villa fish ponds on the Bay of Naples
+  new_world_crops:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+    elsewhere:
+    - Americas
+  potato_cultivation:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+    elsewhere:
+    - Andes
+  maize_beans_squash_milpa:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+    elsewhere:
+    - Mesoamerica
+  nixtamalisation:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  cassava_detoxification:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  potato_blight_monoculture_risk:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  columbian_exchange:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+    note: The inhabited world ends at the Ocean. Greek geographers accept a sphere and speculate about other
+      landmasses; no ship here could make the crossing and return.
+  food_preservation:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Salted fish and fish sauce (garum) from Spain and the Black Sea, Cato's salted hams, dried figs,
+      raisins, olives in brine, smoked cheese, fruit in honey or boiled must.
+    local:
+    - Cato, De agri cultura 162 (salting hams)
+    - fish-sauce importers at Puteoli and Ostia
+  canning:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Small jars, cork, pitch and wax exist; glass jars are few and tinplate is absent. Boiling sealed
+      pottery is workable. Under-heated meat or beans in a sealed jar can kill.
+  pasteurisation:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Wine often turns to vinegar; growers answer with pitch, resin, salt water and boiled must. Gently
+      heating sealed jars fits their habits. Milk is drunk fresh or made into cheese.
+    local:
+    - wine growers of Latium and Campania
+  grain_storage_pest_control:
+    knowledge: 4
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: State and private warehouses hold the dole grain; floors are plastered with olive lees against
+      weevils (Cato 92). Losses to damp, heating, weevils and rats are large. Rye is rare.
+    local:
+    - warehouses of the Sulpicii Galbae (later Horrea Galbana) and the Tiber wharves below the Aventine
+    - Puteoli (grain ships unload)
+    - aediles in charge of the grain supply
+    elsewhere:
+    - Han China, 'ever-normal granary' price buffer (54 BC)
+    - Egypt, royal granaries at Alexandria
+  sea_fisheries_salt_cod:
+    knowledge: 3
+    use: partial
+    producibility: hard
+    acceptance: medium
+    note: Tuna and mackerel are trapped and salted on a large scale at Gades and in Sicily. Cod and herring
+      swim in northern seas no Roman fishing boat reaches.
+    elsewhere:
+    - Gades and the Spanish coast, salt-fish works
+  sugar_cane_beet:
+    knowledge: 1
+    use: none
+    producibility: very-hard
+    acceptance: high
+    note: Honey and boiled must are the sweeteners. Greeks report an Indian reed giving honey without bees.
+      Cane cuttings are a sea voyage beyond Egypt; garden beet holds too little sugar.
+    elsewhere:
+    - India, cane sugar boiled to solid lumps
+  sericulture:
+    knowledge: 1
+    use: none
+    producibility: very-hard
+    acceptance: high
+    note: Silk is the costliest cloth; awnings at Caesar's games are said to be of it. People think it grows
+      on trees. Silkworm eggs and white mulberry exist only in China.
+    elsewhere:
+    - Han China
+    - Cos, wild silk woven into thin cloth
+  beekeeping_movable_frame:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Honey is the only sweetener and wax a necessity; hives are cork bark, wicker, hollow logs or clay
+      tubes. The leader is called a king. Frames need boards cut true.
+    local:
+    - beekeepers of the Sabine country and Tarentum
+  coffee_tea_cacao:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: medium
+    elsewhere:
+    - Han China, tea
+    - Ethiopian highlands, wild coffee
+    - Mesoamerica, cacao
+  hybrid_maize:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  semi_dwarf_wheat_rice:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+
+  # ---- Navigation, transport & exploration
+  world_geography:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: The earth is a sphere of Eratosthenes' or Posidonius' size. The known world ends at Ocean, the
+      Ganges and Thule; the Seres are a rumour. Posidonius thought India reachable westward.
+    elsewhere:
+    - Alexandria, Eratosthenes' Geography in the library
+  wind_systems_ocean_currents:
+    knowledge: 1
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Etesian winds and the March–October sailing season are known. Greek pilots from Egypt cross to
+      India with the monsoon since Eudoxus of Cyzicus (c. 118 BC); few ships go.
+    elsewhere:
+    - Ptolemaic Egypt, Red Sea ports Berenice and Myos Hormos
+    - South Arabian and Indian sailors on the monsoon
+  magnetic_compass:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Lodestone attracting iron is described by Lucretius (book VI). That a floating needle points north
+      is unknown anywhere. Pilots use sun, stars, winds and landmarks and winter in port.
+    local:
+    - lodestone (magnes lapis), traded as a curiosity
+    - iron needles
+  magnetic_declination:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: low
+  dead_reckoning_log_line:
+    knowledge: 1
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Coast-pilot books (periploi) give distances in days' sail and stadia. No log, no sandglass, no
+      compass; a water-clock is useless on a moving deck.
+  latitude_astrolabe_quadrant:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Greek astronomers fix latitude on land by gnomon shadow and longest day (Pytheas at Massalia,
+      Hipparchus' zones). It is never done aboard ship.
+    local:
+    - Sosigenes
+    elsewhere:
+    - Alexandria and Rhodes, dioptra and armillary instruments
+  reflecting_octant_sextant:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+    note: Mirrors are polished bronze or silver, not flat glass; no finely divided arcs.
+  longitude_lunar_distances:
+    knowledge: 1
+    use: none
+    producibility: impossible
+    acceptance: low
+    note: Hipparchus proposed finding differences of longitude by timing one lunar eclipse in two places.
+      It is almost never done.
+  longitude_chronometer:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  map_projection_charts:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Eratosthenes' map with parallels and meridians and Crates' globe are known from books. Roman practice
+      is road itineraries and surveyors' land plans. Sailors carry no charts.
+    elsewhere:
+    - Alexandria
+    - Pergamon, Crates' globe (c. 150 BC)
+  sounding_lead_pilotage:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: A lead with a tallow-filled cup is standard gear; periploi list harbours, capes and distances.
+    local:
+    - pilots at Puteoli and Ostia
+  tides_tide_tables:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Posidonius at Gades tied the tides to the moon's daily course and phases. Caesar lost ships to
+      a spring tide in Britain in 55 BC. The Mediterranean barely has tides.
+    elsewhere:
+    - Gades (Cádiz), Atlantic tides observed
+  polynesian_wayfinding:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    elsewhere:
+    - Western Polynesia (Tonga, Samoa), settled by voyaging canoes
+  ship_design_caravel_carrack:
+    knowledge: 1
+    use: partial
+    producibility: hard
+    acceptance: medium
+    note: Hulls are built shell-first with mortise-and-tenon joints, steered by side oars, driven by one
+      square sail and a small foresail. Caesar described the Veneti's oak ocean ships with leather sails.
+    local:
+    - shipyards at Ostia, Puteoli and Brundisium
+    elsewhere:
+    - Brittany, the Veneti's heavy Atlantic ships (defeated 56 BC)
+  chinese_junk_treasure_ships:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+  watertight_bulkheads:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Shell-first hulls have no cross walls; amphorae are stacked in one open hold.
+  copper_sheathing_shipworm:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Merchant hulls are often sheathed in thin lead against shipworm. Copper sheet
+      would work but costs far more than lead, a by-product of silver mining.
+  ship_provisioning_long_voyages:
+    knowledge: 1
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Voyages hop from port to port within a season; crews eat grain, oil, wine and salt fish. Scurvy
+      has no occasion and no name.
+  steamship_screw_propeller:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  lighthouse_buoys:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: high
+    note: Caesar saw and described the Pharos in 48 BC. Ostia is an open river mouth with a sandbar; big
+      grain ships unload at Puteoli. Caesar will plan an Ostia harbour.
+    local:
+    - Ostia
+    - Puteoli, the main port for Rome
+    elsewhere:
+    - Alexandria, the Pharos
+  diving_bell:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Breath-hold divers (urinatores) salvage cargo and cut cables. The air-filled cauldron lowered
+      to divers is in the Aristotelian Problemata.
+  canal_locks:
+    knowledge: 1
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: 'Canals without locks exist: Marius'' cut at the Rhône mouth (102 BC), drainage tunnels. Caesar
+      will plan a Tiber–Tarracina canal and an Isthmus cut (45–44 BC). Pound locks exist nowhere.'
+    elsewhere:
+    - Han China, Lingqu canal with navigation weirs
+  paved_roads_macadam:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Via Appia to Brundisium, Flaminia, Aurelia, Aemilia, Domitia through Gaul. Built by magistrates
+      and the army. A city law (Heraclea tablet, date disputed) bans most daytime wagon traffic in Rome.
+  spoked_wheel_suspension_carriage:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Spoked wheels with iron tyres; the best carriages are Gallic types (raeda, essedum). No springs
+      or strap suspension. Throat-and-girth harness limits horses, so oxen and mules haul.
+  stirrup_saddle:
+    knowledge: 1
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Cavalry ride a four-horned Celtic saddle without stirrups; hooves are unshod. Saddlers and smiths
+      could make stirrups in days. The army is the buyer.
+    local:
+    - Caesar's Gallic and German auxiliary cavalry
+    elsewhere:
+    - India, toe-loop stirrups
+  arch_bridge_truss:
+    knowledge: 4
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: 'Stone arches cross the Tiber: Pons Aemilius (142 BC), Mulvius (109 BC), Fabricius (62 BC). The
+      army builds timber trestle bridges. No truss design, no suspension bridges.'
+    local:
+    - Pons Fabricius to the Tiber island
+    - Pons Sublicius, the old timber bridge
+  railway:
+    knowledge: 1
+    use: none
+    producibility: medium
+    acceptance: low
+    note: The Diolkos at Corinth and wheel-ruts cut into rock roads are the nearest things. A wooden wagonway
+      is carpenters' work; mines use slaves with baskets.
+    elsewhere:
+    - Isthmus of Corinth, the Diolkos trackway
+  steam_locomotive:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  bicycle:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: A wooden running-machine is wheelwright's work; chain, bearings and tyres are not. Paving stones
+      are rough.
+  automobile:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  hot_air_hydrogen_balloon:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: No paper, and silk is a rare import. Fine linen sized with glue might lift a small model. A flying
+      thing would be reported as a prodigy and expiated.
+  parachute:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: low
+    note: Linen sailcloth, cord and a wooden frame suffice. Nobody has a use for it.
+  glider_aeroplane:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+  jet_engine:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  rocket_spaceflight:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+
+  # ---- Communication & information
+  writing_invention:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+  alphabet_writing:
+    knowledge: 4
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Capitals and a cursive hand, words divided by points, no lower case. Many townsmen read notices
+      and scratch graffiti. Schooling is private and paid; most country people cannot read.
+  codex_book:
+    knowledge: 1
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Books are papyrus rolls. Wax-tablet codices and parchment notebooks serve for drafts and accounts;
+      Caesar sends despatches folded into pages. Nobody publishes literature that way.
+    local:
+    - Atticus' copyists
+    - papyrus imported from Egypt
+    - parchment (Pergamene skins)
+  woodblock_printing:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Stamps on bricks, amphorae, lead pipes and seals are everyday; nobody inks one onto a page. Papyrus
+      is ribbed and brittle, parchment dear, and slave copyists are cheap.
+  printing_press:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: Mint die-cutters could cut punches, and lead and tin are plentiful. Missing are paper, an oil-based
+      ink and the adjustable type mould. Presses work by lever and windlass.
+    local:
+    - die-engravers of the mint on the Arx
+  lithography_engraving:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Gem-cutters and die-engravers have the hand skill. Pictures in books are copied freehand and degrade
+      with each copy. There is no paper to print on.
+  postal_system:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: high
+    note: No state post. Letters travel with one's own slave couriers (tabellarii), friends, or the tax
+      companies' messengers. Caesar posts relay riders on campaign. Persian relays are known from Herodotus.
+    elsewhere:
+    - Ptolemaic Egypt, royal relay post
+    - Han China, post stations
+  newspapers_periodicals:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: 'Since Caesar''s consulship (59 BC) the doings of Senate and people are posted daily (acta diurna).
+      Copies go to the provinces by private letter.'
+    local:
+    - the Forum, where the acta are posted
+  scientific_journal:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Greek scholars publish by letter and preface to a named colleague, as Archimedes did. No periodical,
+      no printing.
+  encyclopedia_reference_works:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Varro's Antiquities (41 books; the part on religion dedicated to Caesar) is new, his De lingua
+      Latina in progress. Cato's handbook for his son is old. Nothing is alphabetical.
+    local:
+    - M. Terentius Varro
+  library_catalogue:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Callimachus' Pinakes are the model. Roman libraries are private and arranged by Greek experts
+      such as Tyrannion, with title tags glued to each roll.
+    local:
+    - Tyrannion of Amisus, grammarian in Rome
+    - libraries of Atticus, Cicero, Varro and the Luculli
+    elsewhere:
+    - Alexandria
+  pencil_steel_pen:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Reed pen with soot-and-gum ink on papyrus, which sponges off; stylus on wax; a lead disc for ruling
+      lines. No graphite, no iron-gall ink, no quill.
+  shorthand:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Tiro, Cicero's freedman secretary, uses a system of signs; clerks took down Cato's Senate speech
+      in 63 BC. Few are trained in it.
+    local:
+    - M. Tullius Tiro
+  typewriter:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+  copying_duplicating:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: No paper. A room of slave copyists writing to dictation is the duplicator, and it is cheap.
+  braille_tactile_writing:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Raised dots on wood, lead sheet or wax are feasible at once. The blind learn by ear and have others
+      read to them.
+  sign_languages:
+    knowledge: 1
+    use: partial
+    producibility: easy
+    acceptance: low
+    note: Deaf people sign within their households. Formal contracts are spoken question and answer, so
+      a deaf-mute cannot make them. Nobody teaches the deaf.
+  vernacular_translation:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Science and philosophy are Greek, read untranslated. Lucretius laments Latin's poverty; Cicero
+      builds a Latin philosophical vocabulary in 45–44 BC. Mago's Punic farming manual was translated by
+      Senate order.
+    local:
+    - Cicero
+    - Varro
+  signal_beacons_flag_codes:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: The army uses trumpets, standards, fire and smoke. Polybius describes a torch code spelling letters
+      from a five-by-five grid; no actual use of it is recorded.
+  optical_telegraph:
+    knowledge: 1
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Polybius' torch alphabet is the idea, in a book. Without telescopes stations must stand close.
+      The army and the grain supply would gain.
+  standard_time_zones:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+    note: Hours are twelfths of daylight, longer in summer. Each town reads its own sundial.
+
+  # ---- Institutions, law & governance
+  written_law_code:
+    knowledge: 4
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: The Twelve Tables (451–450 BC) are the base; law grows through statutes on bronze, the praetor's
+      yearly edict and jurists' opinions. Caesar plans a codification; it dies with him.
+    local:
+    - A. Ofilius
+    - C. Trebatius Testa
+    - Servius Sulpicius Rufus (governing Achaea)
+  rule_of_law:
+    knowledge: 3
+    use: partial
+    producibility: hard
+    acceptance: low
+    note: Polybius' mixed constitution is the republic's self-image, and Cicero wrote it up in De re publica.
+      In fact a dictator for ten years names magistrates, and armies decided it.
+  independent_judiciary_judicial_review:
+    knowledge: 2
+    use: partial
+    producibility: hard
+    acceptance: low
+    note: Standing jury courts and the tribune's veto exist; Caesar's law of 46 BC limits juries to senators
+      and equites. No court can annul a law; augurs can, on ritual grounds.
+  habeas_corpus_fair_trial:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: low
+    note: A citizen may appeal to the people and may not be flogged or tortured. The Catilinarians were
+      strangled untried in 63 BC. Slaves and provincials have none of it.
+  representative_government:
+    knowledge: 3
+    use: partial
+    producibility: hard
+    acceptance: low
+    note: Assemblies elect magistrates and vote laws in person at Rome, in voting groups weighted to the
+      rich. Italians, citizens since 89 BC, must travel there. Elected delegates are unknown here.
+    elsewhere:
+    - Lycian League, cities send delegates in proportion to size
+  sortition:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: low
+    note: The lot picks which unit votes first and assigns provinces and jurors; its result counts as a
+      divine sign. Athenian office by lot is known and thought mob rule.
+  citizen_assembly:
+    knowledge: 4
+    use: partial
+    producibility: easy
+    acceptance: low
+    note: Assemblies vote yes or no on a magistrate's bill without debate; speeches happen in meetings he
+      controls. Under Caesar they ratify what he proposes.
+    local:
+    - Comitium and Forum
+    - Campus Martius, the voting enclosure (Saepta)
+  secret_ballot:
+    knowledge: 4
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Written ballots on small waxed tablets since 139 BC, voters filing over narrow gangways. Cicero
+      thinks it cost the nobles their influence. The elections are now steered by Caesar.
+  peaceful_transfer_of_power:
+    knowledge: 3
+    use: wrong
+    producibility: hard
+    acceptance: low
+    note: Annual magistrates and term rules held for centuries, then Marius, Sulla, Caesar. Leaving office
+      can mean prosecution and exile, which is why Caesar crossed the Rubicon.
+  written_constitution:
+    knowledge: 1
+    use: none
+    producibility: hard
+    acceptance: low
+    note: The constitution is ancestral custom plus scattered statutes. Aristotle's collected constitutions
+      sit in Greek libraries. A single charter binding the assemblies themselves is unthought.
+  federalism_subsidiarity:
+    knowledge: 2
+    use: partial
+    producibility: hard
+    acceptance: low
+    note: Italian towns run their own affairs under Roman citizenship, and Caesar's municipal law (c. 45
+      BC) regulates their councils. Greek federal leagues are known; Rome dismantled them.
+  international_law_sovereignty:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Fetial rites, treaties on bronze on the Capitol, inviolable envoys, client kings. Rome recognises
+      no equal. Only Parthia, with the Euphrates as the accepted line, comes close.
+  property_rights_land_registry:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: 'Ownership is strong in law. There is no general land register: colonies are surveyed in grids
+      with bronze plans, the rest rests on witnesses. Civil-war confiscations make every title nervous.'
+    elsewhere:
+    - Ptolemaic Egypt, village land surveys and registers
+  commercial_law_contract_enforcement:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Good-faith contracts of sale, hire, partnership and mandate are enforced by the praetor; foreigners
+      have their own praetor. An action for fraud exists since Aquilius Gallus (c. 66 BC).
+  patents:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: low
+    note: No reward for invention. Craft knowledge sits with slaves and freedmen whose owner or patron takes
+      the profit. A monopoly would need Caesar's personal favour.
+  copyright:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: low
+    note: An author gains fame and patrons, not income. Once a text leaves Atticus' copyists anyone may
+      copy it.
+  standard_weights_measures:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Roman pound, foot, modius and amphora, checked by the aediles in the markets. Provinces keep their
+      own units.
+  census_vital_registration:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: The five-yearly census of citizens and property was last completed in 70 BC. In 46 Caesar counts
+      grain recipients street by street through landlords. Births and deaths are not registered.
+  public_accounts_audit:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: low
+    note: Quaestors keep the treasury in the temple of Saturn, with clerks and the archive on the Capitol
+      slope. Governors file accounts. No budget; Caesar seized the reserve in 49 BC.
+    local:
+    - aerarium in the temple of Saturn
+    - Tabularium (78 BC)
+  merit_civil_service:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Office comes by election, birth and patronage. The paperwork is done by magistrates' own slaves
+      and freedmen and a few salaried clerks (scribae).
+    elsewhere:
+    - Han China, Imperial Academy and examined candidates
+  universal_schooling:
+    knowledge: 1
+    use: partial
+    producibility: hard
+    acceptance: low
+    note: Fee-paying street schools teach letters and counting; grammar and rhetoric are for the rich, often
+      from Greek slaves or freedmen. Caesar grants citizenship to teachers settling in Rome.
+  university:
+    knowledge: 1
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: Young Romans finish in Athens, Rhodes or Mytilene under a chosen philosopher or rhetor; Cicero's
+      son goes to Athens in 45 BC. A school is a master and his circle.
+    elsewhere:
+    - Athens
+    - Rhodes
+  scientific_academy:
+    knowledge: 2
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: The Museum of Alexandria is known at first hand; Sosigenes comes from that world. In Rome learning
+      is private leisure in villas. Caesar's library plan under Varro is the opening.
+    elsewhere:
+    - Alexandria, Museum and library (damaged in the fire of 48 BC, extent disputed)
+  industrial_research_lab:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+  public_library_museum:
+    knowledge: 2
+    use: none
+    producibility: easy
+    acceptance: high
+    note: Rome has no public library. Caesar has charged Varro with collecting and ordering Greek and Latin
+      libraries; nothing is built when he dies. Pollio opens the first after 39 BC.
+    local:
+    - Varro
+    - Lucullus' library at Tusculum, open to scholars
+    - temples full of Greek statues and paintings taken as booty
+    elsewhere:
+    - Alexandria
+    - Pergamon
+  free_press:
+    knowledge: 1
+    use: partial
+    producibility: medium
+    acceptance: low
+    note: 'No printing and no licensing: anyone may have a pamphlet copied. The limits are defamation law,
+      the dictator''s displeasure and, from late 43 BC, the proscription lists.'
+  abolition_of_slavery:
+    knowledge: 1
+    use: none
+    producibility: very-hard
+    acceptance: low
+    note: Slaves are a large part of Italy's people and nobody proposes ending slavery. Manumission is common
+      and makes citizens. Caesar orders that a third of herdsmen be free-born men.
+  women_rights_suffrage:
+    knowledge: 2
+    use: partial
+    producibility: hard
+    acceptance: low
+    note: Women free of father's and husband's power own and bequeath property, formally through a guardian;
+      either spouse can divorce. No vote, no office. Servilia, Fulvia and Cleopatra wield power informally.
+  charitable_endowment_waqf:
+    knowledge: 1
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Rich men give games, buildings and handouts in their lifetime and bind heirs by will. The law
+      knows no perpetual foundation with its own legal person.
+  guilds_apprenticeship:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: low
+    note: Collegia are trade cult and burial clubs and served Clodius as street gangs. Caesar has dissolved
+      all but the ancient ones. Training means owning or hiring out skilled slaves.
+  public_health_board:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Aediles look after streets, markets, sewers and food; four aqueducts (Appia, Anio Vetus, Marcia,
+      Tepula) run on contracts. Against epidemics there are rites and the Sibylline books.
+  fire_brigade_police_building_codes:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: high
+    note: 'No fire brigade and no police: three junior magistrates with a few public slaves watch at night.
+      Tall timber-framed tenements burn and collapse; there is no height limit yet.'
+  social_insurance:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Free monthly grain for citizens in Rome since Clodius (58 BC); Caesar has just cut the list from
+      320,000 to 150,000 fixed places. Otherwise a patron's handouts and burial clubs.
+  trade_unions_collective_bargaining:
+    knowledge: 1
+    use: none
+    producibility: medium
+    acceptance: low
+    note: The plebeian secessions are civic legend. Free craftsmen compete with slaves and freedmen, and
+      associations are suspect as political gangs and newly banned.
+
+  # ---- Economy & finance
+  coinage:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Silver denarius of four sesterces, struck at 84 to the pound; Caesar strikes gold aurei in quantity
+      from his Gallic and treasury gold. Bronze small change is old and worn.
+    local:
+    - mint at the temple of Juno Moneta on the Arx
+  double_entry:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Every head of household keeps a daybook and a ledger of receipts and payments; bankers' books
+      are evidence in court. Single entry, Roman numerals, no capital account.
+  interest_loans_collateral:
+    knowledge: 4
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: 'The legal ceiling is 1% a month. Provincials paid far more: Brutus'' agents charged Salamis in
+      Cyprus 48%. Debt bondage is abolished; a bankrupt loses property and honour.'
+  banking_credit:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Argentarii at the Forum take deposits, pay on written order and finance auctions. Senators lend
+      through agents. Funds move between cities by book transfer (permutatio). No notes or traded bills.
+    local:
+    - bankers' stalls (tabernae argentariae) on the Forum
+    - T. Pomponius Atticus
+    elsewhere:
+    - Ptolemaic Egypt, royal banks with transfers between accounts
+  paper_money:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+    note: No paper. Large sums already pass as book debts (nomina), but money means silver and gold.
+  quantity_theory_inflation:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: low
+    note: In 49–47 BC coin vanished into hoards and land prices collapsed. Caesar had property valued at
+      pre-war prices and limited cash holdings to 60,000 sesterces. Nobody theorises it.
+  partnership_commenda:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: In a societas partners share profit and loss as agreed; it ends when a partner dies. Ventures
+      also run on sea loans and slaves trading with the master's capital (peculium).
+  joint_stock_company:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: low
+    note: Companies of publicani farm taxes and public contracts, with shares (partes) held by outside investors,
+      senators included through fronts. They outlast a partner's death. Ordinary trade has nothing like
+      it.
+    local:
+    - the equites who run the tax companies
+    - C. Rabirius Postumus, financier
+  insurance:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: A sea loan is cancelled if the ship is lost, at high interest. In 215 BC the state took the sea
+      risk for army contractors and was cheated. No premiums.
+  life_tables_annuities:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: The census records citizens' ages, but nobody tabulates deaths, and chance has no arithmetic.
+  public_debt_bonds:
+    knowledge: 2
+    use: none
+    producibility: hard
+    acceptance: low
+    note: The state borrowed from citizens in the Hannibalic war and repaid in instalments and land. Caesar
+      funds himself by booty, confiscated estates and 'loans' demanded from towns.
+  stock_exchange:
+    knowledge: 1
+    use: partial
+    producibility: hard
+    acceptance: low
+    note: Shares in the tax companies change hands informally around the Forum; Cicero mentions their high
+      price in 59 BC. No listed market.
+  central_bank:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: 'In the credit crisis the remedy was decree: debts settled in property at old valuations, interest
+      already paid deducted. Nobody lent into the panic.'
+  division_of_labour:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: medium
+    note: Large slave households and workshops specialise finely, and Xenophon's remark on city trades is
+      known. Practised, not theorised.
+  comparative_advantage_free_trade:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: low
+    note: Customs are low and for revenue. Italy's harbour dues, abolished in 60 BC, are restored by Caesar
+      on foreign goods. Grain supply is politics, not trade theory.
+  price_mechanism_supply_demand:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Grain rises when ships fail; hoarders get the blame and the state hands out grain. Cicero's De
+      officiis (44 BC) debates whether a seller must reveal that more ships come.
+  ever_normal_granary:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: high
+    note: Tax grain from Sicily, Sardinia and Africa feeds the dole and is stored in warehouses by the Tiber
+      wharf. It is distributed, not used to steady prices.
+    local:
+    - warehouses of the Sulpicii Galbae (later Horrea Galbana) near the Emporium
+    - Puteoli
+    elsewhere:
+    - Han China, ever-normal granaries (from 54 BC)
+  progressive_income_tax:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Citizens in Italy have paid no direct tax since 167 BC; the old tributum was a levy on census
+      property. Provinces pay tithes and fixed sums.
+  cooperatives_savings_banks:
+    knowledge: 1
+    use: partial
+    producibility: medium
+    acceptance: low
+    note: Burial clubs collect monthly dues and pay for funerals. Most clubs are banned just now.
+  economic_growth_productivity:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Wealth is land, slaves and booty; Caesar's Gallic gold lowered the price of gold in Italy. Saving
+      labour gains an owner little while captives are cheap.
+  national_accounts_gdp:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Census property classes and provincial tax totals are the only aggregates anyone has.
+  aggregate_demand_countercyclical_policy:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Caesar's building works, games, rent remission and veterans' bounties put money among the plebs,
+      as politics. The crisis is thought of as debt and scarce coin.
+
+  # ---- Warfare, security & deterrence
+  close_order_infantry:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: 'The cohort legion at its peak: Caesar''s veterans with pilum and short sword, hard drill, career
+      centurions. Caesar doubled the pay to 225 denarii a year.'
+  cavalry_chariot:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Rome's horse are Gallic, German, Spanish and Numidian auxiliaries. At Carrhae (53 BC) Parthian
+      horse archers and armoured lancers destroyed Crassus' army. Chariots are for races and triumphs.
+    elsewhere:
+    - Parthia, horse archers and cataphracts
+  crossbow_longbow:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Cretan and Syrian archers with composite bows, Balearic slingers. The Greek belly-bow is in the
+      artillery books; no hand crossbow is in service.
+    elsewhere:
+    - Han China, crossbow with bronze trigger as standard weapon
+    - Parthia, composite bow from horseback
+  torsion_artillery_trebuchet:
+    knowledge: 4
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Bolt-shooters (scorpiones) and stone-throwers with sinew springs go with the legions, built to
+      Greek formulae. The trebuchet is unknown here; army carpenters could build a traction one.
+    elsewhere:
+    - China, traction trebuchet
+  oared_galley_ram:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Quinqueremes, triremes and light liburnians, fighting by ram and boarding. Decimus Brutus beat
+      Massilia's fleet for Caesar in 49 BC.
+  incendiaries_greek_fire:
+    knowledge: 3
+    use: partial
+    producibility: hard
+    acceptance: medium
+    note: Fire arrows, pitch, sulphur, burning tow and fire-ships, which burned Caesarian squadrons in 48
+      BC. Naphtha is an eastern curiosity. No distilled fuel, no pump-and-nozzle weapon.
+  field_fortification:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: 'A ditched and palisaded camp every night. Alesia (52 BC): two rings of works with towers, pits
+      and stakes; Dyrrhachium (48 BC) on a larger scale.'
+  gunpowder:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: Sulphur from Sicily and charcoal are plentiful. Saltpetre is not told apart from other salts ('nitrum'
+      means soda). Incendiaries are pitch, sulphur and tow.
+  cannon_artillery:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: medium
+    note: Bronze founders cast large statues, so a barrel is not beyond them. Powder is the bottleneck.
+  ballistics_gunnery:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+  handguns_muskets:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+  pike_and_shot_drill:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+  socket_bayonet:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+  bastion_fortification:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Masons and concrete could build it, but without cannon it answers no threat. Walls are high curtains
+      with towers.
+  siegecraft_mining:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: 'Ramps, towers, rams, sheds, mines and counter-mines: Avaricum, Alesia, Massilia (49 BC). The
+      most practised siege engineers alive serve Caesar.'
+  naval_gunnery_line_of_battle:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  war_rockets:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+  standing_army_logistics:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Long-service legions are paid by their general and expect land from him. No fixed term, no pension
+      fund. Veterans mutinied in 47 BC over discharge and bounties.
+  mercenaries_citizen_militia:
+    knowledge: 4
+    use: wrong
+    producibility: medium
+    acceptance: low
+    note: 'Soldiers follow the commander who pays and settles them: Sulla, Pompey, Caesar. Everyone sees
+      the problem. The remedy on offer is one man holding every army.'
+  conscription_mass_army:
+    knowledge: 4
+    use: partial
+    producibility: easy
+    acceptance: low
+    note: The levy is in force and was used hard in the civil war; otherwise poor volunteers and provincials
+      fill the ranks. Italians hate it.
+  military_camp_hygiene:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Camps follow a fixed plan with latrines and a chosen water supply; the wounded are tended in tents
+      or lodged in towns. No hospitals, no medical corps.
+  military_engineering_roads_bridges:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Caesar's timber bridge over the Rhine in ten days (55 BC, again 53 BC). Legionaries build roads,
+      bridges and siege works under the praefecti fabrum.
+  strategy_theory:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Polybius, Xenophon and Greek tactical handbooks are read; Caesar's commentaries on the Gallic
+      war circulate. Generals learn on a kinsman's staff.
+    elsewhere:
+    - China, Sunzi's Art of War
+  general_staff_war_college:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: low
+    note: 'Legates and tribunes are senators and their sons, picked by favour. The staff is the general''s
+      household and friends: Oppius, Balbus, Hirtius.'
+  wargaming_operations_research:
+    knowledge: 1
+    use: none
+    producibility: medium
+    acceptance: low
+    note: Latrunculi, a board game of capture, is played. No map exercises and no counting of outcomes.
+  military_intelligence_codebreaking:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Caesar writes to confidants in a shift cipher (D for A) and uses scouts, prisoners and deserters
+      systematically. No codebreaking exists; letter counting would open his cipher.
+  rifling_minie_breechloader:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  smokeless_powder_high_explosive_shell:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  machine_gun:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  ironclad_warship:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  submarine_torpedo:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  tank_combined_arms:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+    note: Combining legions, archers, slingers and cavalry is ordinary practice; the engine is not.
+  military_aviation:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  chemical_weapons:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: low
+    note: Sulphur and pitch smoke against walls and tunnels is in Thucydides and the siege books; Sertorius
+      raised choking dust against cave-dwellers in Spain. Poison counts as un-Roman.
+  nuclear_weapons:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  security_dilemma_arms_race:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Thucydides is read. Romans frame each war as defence of allies; Carthage was destroyed on that
+      logic. Parthia since Carrhae is the one feared equal.
+  deterrence:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: 'Rome relies on certain retaliation and remembered sacks (Carthage, Corinth). Carrhae broke the
+      spell in the East: Crassus'' eagles are in Parthian hands; Caesar will prepare war for 44 BC.'
+  balance_of_power:
+    knowledge: 2
+    use: none
+    producibility: medium
+    acceptance: low
+    note: Polybius praised Hiero for not letting one power grow too great. Rome has since removed every
+      counterweight but Parthia; at home the balance died with Crassus and Julia.
+    elsewhere:
+    - Parthia under Orodes II, the only rival great power
+  collective_security_alliances:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Unequal treaties and client kings (Deiotarus of Galatia, Cleopatra, the Mauretanian kings) supply
+      troops and buffers. Allies have duties; Rome keeps its discretion.
+  arms_control:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: low
+    note: 'Imposed on the beaten: Carthage''s ten warships, Antiochus'' fleet and elephants. In December
+      50 BC the Senate voted 370 to 22 that Caesar and Pompey both disarm; it was blocked.'
+  laws_of_war:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: low
+    note: Just-war forms through the fetial priests; envoys are sacred. Caesar's clemency to citizens is
+      policy. In Gaul he sold whole peoples and cut off hands at Uxellodunum (51 BC).
+
+people:
+- name: Marcus Terentius Varro
+  role: scholar, former Pompeian officer pardoned by Caesar, charged with organising Rome's first public
+    library
+  knows: Roman antiquities, Latin language, farming and stock breeding, the liberal arts including medicine;
+    suspects that invisible animals from marshes cause disease
+  note: Aged about 70, in Rome and on his estates (Reate, Casinum). Proscribed by Antony in 43 BC, loses
+    his library but survives; writes De re rustica in 37 BC.
+- name: Themison of Laodicea
+  role: Greek physician, the best-known pupil of Asclepiades, founder of the Methodic school
+  knows: Asclepiades' medicine of particles and pores, treatment by diet, baths and regimen; said to be
+    the first to use leeches
+  note: Dates poorly known (c. 123–43 BC). Where he is in 46 BC is not recorded; he travelled widely
+    (Crete, Milan) and may never have practised in Rome. Reachable only by search and letter.
+- name: Antistius
+  role: physician in Caesar's circle
+  knows: wound surgery
+  note: Presumably in Rome in 46 BC. Known only from March 44 BC, when he examines Caesar's body and judges that of 23 wounds only
+    the second, in the chest, was fatal.
+- name: Alexio
+  role: Greek physician and friend of Cicero
+  knows: Greek clinical medicine
+  note: Practises in Rome in Cicero's circle. Dies suddenly in May 44 BC; Cicero mourns him as an excellent doctor.
+- name: Craterus
+  role: fashionable Greek physician in Rome
+  knows: Greek clinical medicine
+  note: In Rome. Treats Attica, the young daughter of Atticus, in 45 BC (Cicero's letters to Atticus).
+- name: Asclapo of Patrae
+  role: Greek physician in Achaea
+  knows: Greek clinical medicine
+  note: Nursed Cicero's secretary Tiro through an illness at Patrae; Cicero recommends him to the governor
+    Servius Sulpicius Rufus about now. A voyage away.
+- name: Pompeius Lenaeus
+  role: freedman of Pompey, grammarian and teacher in Rome
+  knows: Greek and Latin; translated the pharmacological notes of Mithridates VI into Latin at Pompey's
+    order
+  note: In Rome in 46 BC, teaching after Pompey's death and loyal to his patron's memory.
+- name: Philodemus of Gadara
+  role: Epicurean philosopher and poet, client of Calpurnius Piso (Caesar's father-in-law)
+  knows: Epicurean atomism, logic of inference from signs, a large Greek library
+  note: Lives on the Bay of Naples; his library was probably the one found at Herculaneum. Dies around 40-35 BC.
+- name: Diodorus Siculus
+  role: Greek historian from Agyrium in Sicily, working in Rome on his universal history
+  knows: Egypt (visited about 60-56 BC), mines of Spain and Egypt, bitumen of the Dead Sea, alum of Lipari,
+    geography from books
+  note: In Rome through these years, an observer without office or patron of note.
+- name: Gaius Hirrius
+  role: wealthy owner of sea-water fish ponds
+  knows: breeding and keeping morays in salt-water ponds
+  note: In or near Rome for the triumphs of 46 BC; where his ponds lie is not recorded. Lends Caesar morays for the triumphal banquets, by weight
+    rather than for sale (2,000 in Varro, 6,000 in Pliny).
+- name: Sosigenes
+  role: Astronomer who advised Caesar on the calendar
+  knows: 'Greek and Egyptian calendar astronomy: the 365 1/4-day year, risings and settings of stars;
+    Pliny also cites him on Mercury''s greatest distance from the Sun'
+  note: Known almost only from Pliny the Elder; 'of Alexandria' is a later inference from the reform's
+    Egyptian model. Presumably in Rome in 46 BC. Nothing is recorded of his later life.
+- name: Marcus Flavius
+  role: Scribe (scriba) who assisted Caesar in drawing up the new calendar
+  knows: The old pontifical calendar, the festival days and how the added days were placed so as not to
+    move them
+  note: Named only by Macrobius (Saturnalia 1.14). In Rome in 46 BC; nothing else is known of him.
+- name: Marcus Tullius Cicero
+  role: Consular, orator, writer on philosophy
+  knows: Translated Aratus' star poem into Latin; heard Posidonius on Rhodes; found Archimedes' tomb at
+    Syracuse as quaestor in 75 BC; describes Archimedes' and Posidonius' planetary spheres; Stoic logic
+  note: In Rome and at Tusculum in 46 BC, pardoned and politically idle; jokes that the stars now rise
+    by edict. Writes his philosophical works in 45-44 BC. Killed in the proscriptions, 7 December 43 BC.
+- name: Vitruvius
+  role: Military engineer serving under Caesar (artillery and siege machines)
+  knows: Cranes and tackles, catapult proportions, water clocks, sundials, pumps and water wheels as an
+    engineer meets them; reads Greek mechanics
+  note: Where he is in autumn 46 BC is not recorded, probably with the army. His ten books on architecture
+    are twenty years in the future.
+- name: Publius Nigidius Figulus
+  role: Senator, Pythagorean, astrologer and grammarian
+  knows: Two books on the celestial sphere (Greek and non-Greek constellations), Egyptian astrology, divination,
+    winds
+  note: A Pompeian, in exile and reachable only by letter; where is not recorded. Cicero fails to win
+    his pardon and he dies in exile in 45 BC.
+- name: Titus Pomponius Atticus
+  role: Eques, financier, Cicero's friend and publisher
+  knows: Lending at interest across Greece and Asia, bookkeeping, book production with trained slave copyists,
+    Roman chronology (his Liber annalis)
+  note: In Rome in 46 BC, on good terms with every party. Survives the proscriptions of 43 BC; dies in
+    32 BC.
+- name: Lucius Cornelius Balbus
+  role: Caesar's confidential agent in Rome, with Gaius Oppius; formerly his chief of engineers (praefectus
+    fabrum)
+  knows: Caesar's finances and correspondence, including the ciphered letters; a native of Gades on the
+    tidal Atlantic
+  note: In Rome in 46 BC; with Oppius the way to Caesar's ear while Caesar is in Spain. Sides with Octavian
+    after the murder; consul in 40 BC.
+- name: Gaius Oppius
+  role: eques, Caesar's confidential agent in Rome with Balbus
+  knows: Caesar's finances, correspondence (including the cipher) and intentions
+  note: In Rome in 46 BC, running Caesar's affairs with Balbus while Caesar is in Spain. Later wrote on
+    Caesar's life.
+- name: Marcus Tullius Tiro
+  role: Cicero's freedman secretary (freed 53 BC)
+  knows: shorthand, dictation, editing and archiving letters and speeches
+  note: With Cicero in Rome and at the villas. Outlives him and edits his papers.
+- name: Servius Sulpicius Rufus
+  role: consul of 51 BC, the foremost jurist of the day
+  knows: civil law treated as a system, the praetor's edict, legal opinions
+  note: Governs Achaea for Caesar in 46 BC, reachable by letter or at Athens. Dies early in 43 BC on a
+    Senate embassy to Antony at Mutina.
+- name: Aulus Ofilius
+  role: jurist of equestrian rank, pupil of Servius, close to Caesar
+  knows: civil law, the edict
+  note: In Rome. The obvious man for Caesar's planned codification. Stays an eques and out of office.
+- name: Gaius Trebatius Testa
+  role: jurist, protégé of Cicero, served on Caesar's staff in Gaul
+  knows: civil law, Caesar's circle
+  note: In Rome in 46 BC. Cicero dedicates the Topica to him in 44 BC. Lives on into Augustus' time.
+- name: Cratippus of Pergamon
+  role: Peripatetic philosopher
+  knows: Aristotelian philosophy, divination by dreams and frenzy (which he defends)
+  note: At Mytilene, then Athens. Cicero obtains Roman citizenship for him from Caesar; he teaches Cicero's
+    son in 45–44 BC.
+- name: Gaius Cassius Longinus
+  role: senator, pardoned Pompeian, saved the remnant of Crassus' army after Carrhae
+  knows: Parthian tactics and the Syrian frontier at first hand, naval command, Epicurean philosophy
+  note: In Italy in 46 BC (Rome, then Brundisium by January 45), pardoned; served Caesar against Pharnaces
+    in 47 but kept out of the African war. Praetor in 44 BC and a leader of the murder; by
+    43 BC he holds Syria with an army.
+
+events:
+- 'Every August to October (by the sun, not the drifting calendar): the fever season in Rome and the Campagna;
+  those who can leave for the hills.'
+- '46 BC Feb: the regular intercalary month of 23 days is inserted (Caesar as pontifex maximus), bringing
+  the year to 378 days.'
+- '46 BC Sep: Caesar''s four triumphs (Gaul, Egypt, Pontus, Africa) on four days, with games and public
+  feasts; awnings over the spectators are said to be silk, and Hirrius lends morays for the banquets. On
+  26 Sep, the last day, he dedicates the temple of Venus Genetrix and the unfinished Forum Iulium.'
+- '46 BC autumn: Caesar pardons M. Claudius Marcellus at the Senate''s plea; Cicero breaks his silence
+  with a speech of thanks (Pro Marcello).'
+- '46 BC: the free-grain list is recounted street by street through the landlords and cut from 320,000
+  to 150,000; juries limited to senators and equites; a sumptuary law (litters, purple, pearls, delicacies
+  seized in the market); all but the ancient collegia dissolved; citizenship for physicians and teachers
+  of the liberal arts in Rome.'
+- '46 BC, between November and December: two extra months totalling 67 days (intercalaris prior and posterior)
+  are inserted; the year has 445 days.'
+- '46 BC late: Caesar leaves for Spain. Lepidus, consul and master of horse, runs Rome with six or eight
+  prefects; Balbus and Oppius handle Caesar''s business.'
+- '46–44 BC: in Syria the Pompeian Q. Caecilius Bassus holds Apamea against Caesar''s generals and deals
+  with the Parthians.'
+- '45 BC 1 Jan: the Julian calendar begins: 365 days, an extra day in February every fourth year, ten
+  days spread over seven months. Told that Lyra rises tomorrow, Cicero answers: yes, by edict.'
+- '45 BC Jan–Feb: Cicero''s daughter Tullia gives birth to a son and dies about a month later at Tusculum.'
+- '45 BC: Caesar''s prefect Gaius Clovius issues coins of brass (orichalcum), a metal new to Roman coinage.
+  Nigidius Figulus dies in exile.'
+- '45 BC: Cicero writes the Hortensius, Academica, De finibus and Tusculan Disputations, and begins On
+  the Nature of the Gods, with Archimedes'' tomb and the planetary spheres of Archimedes and Posidonius.'
+- '45 BC 17 Mar: battle of Munda. Caesar returns in the autumn and triumphs over Spain.'
+- '45–44 BC: Caesar plans to drain the Pomptine marshes, let out the Fucine Lake, build a harbour at Ostia
+  and cut a canal through the Isthmus of Corinth.'
+- '45 BC 31 Dec: a consul dies on the last day of the year; Caesar has Caninius Rebilus elected consul
+  for the remaining hours.'
+- '44 BC Jan–Feb: tribunes Flavus and Marullus deposed; Caesar named dictator for life; 15 Feb he refuses
+  the diadem at the Lupercalia. Senate now about 900; colonies decreed at Carthage and Corinth; two aediles
+  (ceriales) created for the grain supply. Quintilis is renamed Iulius among his honours.'
+- '44 BC 15 Mar: Caesar is killed at a Senate meeting in Pompey''s theatre complex, three days before his
+  planned departure for the Parthian war; the physician Antistius examines the body. The pontiffs, counting
+  inclusively, will then add a leap day every third year until Augustus corrects it.'
+
+quest_hooks:
+- A senator's household is sick with colic, pallor and weak wrists; the cellar master sweetens the wine
+  with must boiled in lead pans
+- Varro wants proof of his invisible marsh animals and has no instrument to see them
+- Caesar will want the Pomptine marshes drained (44 BC); autumn fever empties every work camp there
+- 'The newly enfranchised Greek physicians quarrel over a noble patient: bleed him or bathe him'
+- A glass merchant from Sidon shows a thin bubble of glass on the end of a tube and asks what it is good
+  for
+- Grain rots and heats in the Tiber warehouses while the dole list has just been halved
+- A daughter of a great house lies in childbed fever days after the midwife left
+- A perfumer from Capua would pay well for a way to capture the 'spirit' of wine or roses
+- Veterans back from Africa have festering wounds and no physician who will touch them without a fee
+- A swordsmith wants to know why Noric blades hold an edge and his own do not
+- 'Get to Sosigenes or the scribe Flavius before the edict is final: the year is not 365 1/4 days but
+  about 11 minutes shorter. Offer the rule of dropping three leap days in four centuries, and say how
+  you know.'
+- The leap-year rule will be miscounted after Caesar's death, because Romans count inclusively. Have it
+  written unambiguously into the edict or carved on a public calendar, against pontiffs who resent losing
+  the calendar.
+- Teach a banker's slave clerk place-value numerals with a sign for the empty column, on wax tablets,
+  and race him against a master of the counting board in front of the Forum's money tables.
+- Sail to Rhodes or Alexandria to find an instrument maker who can file bronze gear wheels, and bring
+  back a geared planetary model, or a man able to build something new.
+- Have a bronze founder and a turner build Ctesibius' twin-cylinder force pump from the Greek description
+  and offer it for a city with no fire brigade and wooden tenements.
+- Build a water-driven grain mill on a stream outside the city. The gearing is the hard part; a bakery
+  owner with forty donkeys and slaves must be shown why he should care.
+- A steam engine is wanted by nobody and lacks air pressure, a true cylinder and a sealed boiler. Show
+  the weight of air with a pump and mercury first, and see who listens.
+- 'Varro has a commission and no plan: what should Rome''s first public library contain, how is it catalogued,
+  who may read, and can anything be copied faster than a slave writes?'
+- The acta diurna are posted on a board and copied by whoever cares. Regular copies for the towns of Italy
+  need a relay of riders that does not exist yet.
+- Caesar wants the civil law reduced to order. Ofilius and Trebatius can draft; whoever shapes the plan
+  decides what a citizen may claim against a magistrate.
+- Debtors and creditors both curse the settlement of 49 BC, and the bankers at the Forum hoard coin. Anyone
+  who can explain why coin disappeared has an audience among the equites.
+- Caesar will march on Parthia in March 44 BC. Cassius knows what the arrows did at Carrhae; the army's cavalry
+  rides without stirrups.
+- Cicero is an augur who does not believe in augury and is about to say so in a book. A stranger who predicts
+  something the augurs cannot will interest him and alarm the college.
+- A banker at Puteoli lends on ships bound for Alexandria and hears of Greek pilots who cross from the
+  Red Sea to India on one wind. Nobody in Rome has asked how.
+- Caesar's cipher is a fixed shift of the alphabet; counting letters breaks it. Telling Balbus is either
+  a great service or proof that the stranger reads Caesar's mail; Cicero would also love to know.
+- 'Ostia has no harbour and Caesar wants one. Moles in the sea, a light, dredging: the engineers are at
+  hand, the decision is his, and he leaves for Spain within weeks.'

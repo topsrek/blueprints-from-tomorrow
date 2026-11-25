@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360" role="img" aria-label="Florence 1490 architectural blueprint">
+  <defs>
+    <pattern id="g" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0V24" fill="none" stroke="#F3EFE4" stroke-opacity="0.08" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="640" height="360" fill="#0E2E69"/>
+  <rect width="640" height="360" fill="url(#g)"/>
+  <!-- Construction arcs & centerlines -->
+  <g stroke="#F3EFE4" stroke-opacity="0.22" fill="none" stroke-dasharray="5 5" stroke-width="1.2">
+    <line x1="250" y1="24" x2="250" y2="336"/>
+    <circle cx="250" cy="210" r="145"/>
+    <line x1="60" y1="296" x2="580" y2="296"/>
+  </g>
+  <!-- Brunelleschi's Duomo dome -->
+  <g stroke="#F3EFE4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Lantern -->
+    <path d="M244 64 L250 46 L256 64" stroke-width="2"/>
+    <circle cx="250" cy="40" r="5" stroke="#F5B83D" stroke-width="2.5"/>
+    <rect x="236" y="64" width="28" height="28" stroke-width="2"/>
+    <line x1="244" y1="64" x2="244" y2="92" stroke-width="1.3"/>
+    <line x1="256" y1="64" x2="256" y2="92" stroke-width="1.3"/>
+    <!-- Dome ribs -->
+    <path d="M132 212 C136 138 182 98 236 92" stroke-width="2.6"/>
+    <path d="M368 212 C364 138 318 98 264 92" stroke-width="2.6"/>
+    <path d="M178 212 C182 146 208 106 242 92" stroke-width="1.6"/>
+    <path d="M322 212 C318 146 292 106 258 92" stroke-width="1.6"/>
+    <path d="M250 92 V212" stroke-width="1.6"/>
+    <!-- Octagonal drum with oculi -->
+    <rect x="122" y="212" width="256" height="44" stroke-width="2.4"/>
+    <line x1="122" y1="222" x2="378" y2="222" stroke-width="1.3"/>
+    <circle cx="164" cy="239" r="10" stroke-width="1.8"/>
+    <circle cx="250" cy="239" r="10" stroke-width="1.8"/>
+    <circle cx="336" cy="239" r="10" stroke-width="1.8"/>
+    <!-- Base nave -->
+    <path d="M92 296 V256 H408 V296" stroke-width="2.4"/>
+    <path d="M108 296 V270 A16 16 0 0 1 140 270 V296" stroke-width="1.6"/>
+    <path d="M234 296 V270 A16 16 0 0 1 266 270 V296" stroke-width="1.6"/>
+    <path d="M360 296 V270 A16 16 0 0 1 392 270 V296" stroke-width="1.6"/>
+  </g>
+  <!-- Renaissance optical lens & dividers on right -->
+  <g stroke="#F3EFE4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="496" cy="148" r="54" stroke-width="2.2"/>
+    <circle cx="496" cy="148" r="44" stroke-opacity="0.45" stroke-width="1.2"/>
+    <!-- Light rays refracting through lens -->
+    <line x1="422" y1="128" x2="496" y2="128" stroke="#F5B83D" stroke-width="1.8"/>
+    <line x1="422" y1="168" x2="496" y2="168" stroke="#F5B83D" stroke-width="1.8"/>
+    <line x1="496" y1="128" x2="578" y2="148" stroke="#F5B83D" stroke-width="1.8"/>
+    <line x1="496" y1="168" x2="578" y2="148" stroke="#F5B83D" stroke-width="1.8"/>
+    <circle cx="578" cy="148" r="4" fill="#F5B83D" stroke="none"/>
+    <!-- Drafting dividers -->
+    <path d="M496 226 L466 296 M496 226 L526 296" stroke-width="2"/>
+    <circle cx="496" cy="222" r="6" stroke-width="2"/>
+    <path d="M475 272 A30 30 0 0 0 517 272" stroke-width="1.3" stroke-opacity="0.6"/>
+  </g>
+</svg>

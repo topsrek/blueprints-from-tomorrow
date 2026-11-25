@@ -1,0 +1,4683 @@
+# Blueprints from Tomorrow – era file: Florence / Tuscany, 1490.
+#
+# Status of each technology from techtree/core/ in this era and region.
+#   knowledge      0 unknown · 1 idea/rumour · 2 described in theory · 3 used by
+#                  specialists · 4 widespread
+#   use            none | wrong | partial | correct   (is it used, and used right?)
+#   producibility  easy | medium | hard | very-hard | impossible  (with local means,
+#                  within about a year if explained well)
+#   acceptance     low | medium | high  (how readily people adopt it)
+#   note           what the player should know / what the world believes
+#   local          people, places, materials to connect to
+#   elsewhere      where it already exists in 1490 (quest material)
+# Technologies not listed default to knowledge 0, use none.
+
+era: europe-1490-florence
+title: Florence 1490
+region: Tuscany, Italian peninsula
+year: 1490
+core_version: 2
+
+worldview: >
+  Medicine follows Galen and Avicenna: disease as imbalance of the four humours,
+  plague from corrupted air (miasma) and unfavourable planetary conjunctions.
+  Natural philosophy follows Aristotle (nature abhors a vacuum, four elements).
+  Neoplatonism is fashionable at the Medici court (Ficino). Astrology is
+  respected science. Workshops (botteghe), guilds, hospitals and the Studio at Pisa
+  all train specialists. Florence is a republic in name, ruled in practice by Lorenzo
+  de' Medici. Savonarola returns to San Marco in 1490.
+
+status:
+  # ---- Medicine & hygiene
+  contagion_theory:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: low
+    note: Ficino describes plague passing between people while also invoking corrupted air. Varro's account
+      of invisible creatures is in print. Neither identifies a specific organism.
+    local:
+    - Marsilio Ficino
+    - Antonio Benivieni
+  bloodletting_harm:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Patients expect bleeding, purging and cupping. Physicians prescribe bleeding and barbers perform
+      it, including when further blood loss can harm the patient.
+    local:
+    - Arte dei Medici e Speziali
+    - barbers who perform bloodletting
+  epidemiology_mapping:
+    knowledge: 1
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Surviving burial series start in 1385 for the Grascia and 1450 for the medical guild. The Grascia
+      records burial places and gravediggers.
+    local:
+    - Libri dei morti of the Grascia and of the Arte dei Medici e Speziali
+    elsewhere:
+    - Milan, surviving civic death register for 1452 with causes of death
+  hand_hygiene:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Handwashing before meals is familiar, and soap and basins are available. Routine cleaning between
+      patients to prevent transmission would require a change in practice.
+    local:
+    - Arte dei Medici e Speziali (guild of physicians and apothecaries)
+  boiled_water:
+    knowledge: 2
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Avicenna's Canon recommends boiling suspect water. Florence draws on wells and the Arno. Fuel
+      costs matter if households are to boil water routinely.
+    elsewhere:
+    - China, habitual tea drinking
+  water_filtration_chlorination:
+    knowledge: 1
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Venice uses sand-filtered rainwater cisterns. Tuscan masons could build a filter. Reliable chlorination
+      would require a chemical supply and controlled dosing.
+    elsewhere:
+    - Venice, rainwater cisterns that filter through a bed of sand
+  sanitation_sewerage:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Cesspits (pozzi neri) are emptied at night and sold to gardeners; they leak into the well water.
+      Dyers, tanners and butchers discharge into the Arno.
+    local:
+    - cesspit emptiers (votapozzi)
+    - Arno
+    - Ufficiali della Grascia
+  food_hygiene:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Market officers inspect meat and fish and condemn spoiled goods. Smell and visible decay guide
+      inspection.
+    local:
+    - Mercato Vecchio
+    - Ufficiali della Grascia
+    - butchers' guild (Beccai)
+  quarantine:
+    knowledge: 4
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Florence appoints officials during epidemics. Isolation and restrictions on travel are familiar
+      measures. Merchants have reason to contest a closure.
+    local:
+    - Florentine plague officials
+    - San Bastiano outside the walls (under construction)
+    elsewhere:
+    - Venice, island lazaretto
+    - Milan, health office
+    - Ragusa, isolation of arrivals
+  nursing_hospital_hygiene:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Santa Maria Nuova provides nursing, meals and clean linen, with separate accommodation for men
+      and women. Its staff and accounts offer a starting point for reform.
+    local:
+    - Ospedale di Santa Maria Nuova
+    - Ospedale degli Innocenti (foundlings)
+  cholera_waterborne:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Epidemic Asiatic cholera is outside contemporary Florentine experience. Summer diarrhoeal illnesses
+      are familiar, but chronicles seldom distinguish modern diagnoses.
+  oral_rehydration:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Salt is taxed and apothecaries sell costly sugar. Clean water and accurate proportions matter
+      more than costly drugs for replacing losses from diarrhoea.
+  plague_vectors:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Rats and fleas are everywhere and unremarkable. Dogs and cats are sometimes killed in epidemics
+      (wrong). Cloth and bedding are rightly suspected.
+  typhus_lice:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Lice are familiar, but their role in epidemic fever is unknown. Historical descriptions of camp
+      fevers do not always distinguish the infections involved.
+  malaria_mosquito:
+    knowledge: 1
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Marsh fevers (tertian, quartan) are blamed on bad air. Avoiding marshes in summer works for the
+      wrong reason. Drainage is costly; gauze nets are cheap.
+    local:
+    - Maremma
+    - Pisan plain
+    - Val di Chiana
+    - Padule di Fucecchio
+  quinine:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: high
+    note: Cinchona grows in the Andes. Florentine apothecaries have no source for its bark.
+    elsewhere:
+    - Andean forests, source of cinchona bark
+  tuberculosis_control:
+    knowledge: 2
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Avicenna's Canon, the standard textbook, lists phthisis as catching, but physicians treat it as
+      an inherited constitution. Families nurse the sick at home.
+  parasitic_worms:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Worms are seen and treated with wormseed and bitter herbs. They are thought to breed from rotting
+      humours; eggs, soil and undercooked pork are not suspected.
+    local:
+    - apothecaries (wormseed, santonica)
+  scurvy_citrus:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Preserved shipboard provisions can leave crews short of fresh food. Citrus is available in Mediterranean
+      ports and in Medici gardens.
+  vitamins_deficiency:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Disease from a missing food is an alien idea. Goitre is common in Alpine and Apennine valleys
+      and blamed on the water. Liver for night blindness is in ancient authors.
+  variolation:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Smallpox is familiar. Deliberate exposure entails severe disease and risks spreading an outbreak.
+      A dependable and acceptable local practice would be difficult to establish.
+  smallpox_vaccination:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: low
+    note: Smallpox is endemic, mostly a children's disease. Cowpox must be found on cattle in the contado;
+      finding it is a quest.
+  vaccines_attenuated:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  antitoxin_serum:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  wound_care:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Italian surgical traditions differ on pus and cautery. Theodoric recommended wine dressings. Celsus
+      on tying bleeding vessels was printed in Florence in 1478.
+    local:
+    - Surgeons at Santa Maria Nuova
+    - Florentine surgeons trained by apprenticeship or university study
+  antiseptics:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Wine, vinegar and sometimes aqua vitae are put on wounds without a theory. Strong spirit is easy
+      to make; chlorinated lime and carbolic acid are not.
+    local:
+    - apothecaries
+    - monastery stills
+  heat_sterilisation:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Boiling instruments and laundering linen are within a hospital's means. Systematic heat treatment
+      between patients would require fuel and a change in routine.
+  childbirth_care:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: low
+    note: Midwives and female relatives attend most births at home. Ancient texts describe turning a child
+      in difficult labour. Obstetric forceps are unavailable.
+    local:
+    - midwives (levatrici)
+    - Ospedale degli Innocenti
+  first_aid_resuscitation:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Bystanders lack a standard method for recognising cardiac arrest or resuscitating an apparently
+      lifeless casualty.
+  ether_anaesthesia:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Both ingredients (strong aqua vitae, oil of vitriol) are available to alchemists and apothecaries.
+      Dangerous near fire. Surgeons know the unreliable opium-mandrake sleeping sponge.
+    local:
+    - apothecaries
+    - alchemists
+  opium_analgesia:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Apothecaries stock opium, mostly inside theriac at unknown strength; mandrake and henbane too.
+      Willow bark is in Dioscorides but unused for fever. Dosing is guesswork.
+    local:
+    - apothecaries (speziali)
+    - Venice (theriac, opium imports from Egypt)
+  blood_groups_transfusion:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+    note: Blood is thought to be made in the liver and consumed. No hollow needles, no way to test compatibility;
+      an attempt will probably kill.
+  anatomy_dissection:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Florentine physicians sometimes seek family permission for an autopsy. Dissections also serve
+      medical teaching. Benivieni's case histories offer local examples.
+    local:
+    - Antonio Benivieni
+    - Santa Maria Nuova
+    - Studio at Pisa
+    elsewhere:
+    - Bologna and Padua, anatomy teaching
+    - Milan, Leonardo's skull drawings of 1489
+    - Rome, Florentine artist Antonio del Pollaiuolo
+  blood_circulation:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: low
+    note: 'Galen: blood ebbs and flows, passes through pores in the heart wall. The arm-ligature demonstration
+      of vein valves needs no equipment. Ibn al-Nafis is unknown here.'
+  clinical_thermometer_stethoscope:
+    knowledge: 1
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Physicians assess pulse by touch. In 1450 Cusanus proposed weighing water discharged during a
+      counted run of pulse beats. Glassworkers could attempt a thermometer.
+    local:
+    - glassblowers
+    - physicians' uroscopy
+  dental_care:
+    knowledge: 1
+    use: wrong
+    producibility: easy
+    acceptance: medium
+    note: Toothache is blamed on a tooth worm, treated with henbane smoke; barbers and fairground tooth-drawers
+      extract. Sugar is still a luxury, so decay is moderate.
+  sulphonamides:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: medium
+  penicillin:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: medium
+    note: Apothecaries have no way to identify penicillin or supply a preparation of predictable purity
+      and strength.
+
+  # ---- Life sciences
+  microorganisms:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Needs the single-lens microscope first. What is seen will be read as spontaneously generated worms,
+      a sign of putrefaction rather than its cause.
+  spontaneous_generation_refuted:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: 'Aristotle and everyone else: maggots come from rotting meat, eels from mud, bees from ox carcasses
+      (Virgil). Covered-jar experiment is cheap and convincing.'
+  fermentation_yeast:
+    knowledge: 0
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Bakers preserve sourdough and vintners work with fermenting must. They use living cultures without
+      recognising yeast as the organism responsible.
+    local:
+    - vintners
+    - bakers
+  cell_theory:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Bodies are made of humours and uniform parts (flesh, bone). Needs a good microscope and thin sections;
+      no practical use people can see.
+  viruses:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  taxonomy:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Plants are known through Dioscorides, Pliny and Theophrastus (Latin 1483); humanists argue about
+      which local herb matches which ancient name. Apothecaries substitute freely. No botanical garden yet.
+    local:
+    - apothecaries
+    - monastery herb gardens
+    - Medici villa gardens (Careggi)
+    elsewhere:
+    - Ferrara, Niccolò Leoniceno
+  reproduction_fertilisation:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: 'Aristotle: male seed gives form to menstrual blood; Galen: both sexes give seed. Mammal eggs
+      and sperm are invisible without a microscope. Touches theology (ensoulment).'
+  heredity_genetics:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: Farmers and breeders recognise inherited traits. Testing ratios across multiple generations takes
+      careful records. Annual crops limit the evidence a garden can yield in one year.
+  evolution_natural_selection:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: low
+    note: A breeder can show inherited variation and selection. Extending the argument to the origin of
+      species challenges familiar accounts of Creation.
+  dna_structure:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  respiration_metabolism:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: 'Galen: breathing cools the heart''s innate heat and feeds vital spirit. A mouse and a candle
+      under a bell jar both die: easy to show, hard to explain.'
+  photosynthesis_plant_nutrition:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: In 1450 Cusanus proposed weighing soil before and after growing plants and attributed their gain
+      to water. The role of carbon dioxide remains unknown.
+  nitrogen_fixation_biology:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: That lupins and beans 'fatten' the soil is read in Columella and Crescenzi and done by good farmers.
+      Why is unknown; the nodules are taken for a disease.
+    local:
+    - Pier de' Crescenzi's Ruralia commoda (Florence edition in Italian, 1478)
+  nervous_system_brain:
+    knowledge: 2
+    use: partial
+    producibility: hard
+    acceptance: medium
+    note: 'Galen''s view holds: brain and nerves, with animal spirits flowing through hollow nerves; faculties
+      sit in the ventricles. Aristotelians still favour the heart. Electrical signalling is unprovable here.'
+
+  # ---- Chemistry
+  soap:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Fine soaps from Venice, Savona and Castile are traded; used for laundry, wool scouring and baths,
+      not for medicine.
+  distillation:
+    knowledge: 3
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Aqua vitae is made by apothecaries and monasteries as a medicine. Strength is variable; repeated
+      distillation gives spirit that burns.
+    local:
+    - Taddeo Alderotti's writings
+    - monasteries
+    - Arte dei Medici e Speziali
+  sulphuric_acid:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Alchemists distil oil of vitriol from green vitriol in small, weak batches. Vitriol and sulphur
+      are local. Bulk production is unknown.
+    local:
+    - alchemists
+    - vitriol and sulphur from the Colline Metallifere and Volterra district
+  oxygen_combustion:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Fire is an element. Demonstration (candle under a glass over water) is easy, explaining it is
+      hard. Isolating the gas needs mercury calx or saltpetre and gas handling.
+  nitric_acid:
+    knowledge: 3
+    use: correct
+    producibility: medium
+    acceptance: high
+    note: Aqua fortis is distilled from saltpetre with vitriol or alum by goldsmiths and the mint to part
+      gold from silver. Glass and clay retorts break often.
+    local:
+    - Zecca (mint)
+    - goldsmiths of Por Santa Maria
+  saltpetre_production:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Saltpetre is scraped from stable and cellar walls or imported through Venice; purity varies. Planned
+      nitre beds are a German practice. Every state wants more powder.
+    local:
+    - gunpowder makers of the Signoria
+    elsewhere:
+    - Germany, nitre plantations
+    - India and the Levant, exports via Venice
+  chemical_elements:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: low
+    note: Four elements; metals grow from sulphur and mercury, so transmutation is plausible. Assayers have
+      good balances and already rely on weight in practice.
+    local:
+    - assayers of the Zecca
+  atomic_theory:
+    knowledge: 1
+    use: none
+    producibility: hard
+    acceptance: low
+    note: 'Lucretius is back in circulation (found 1417, printed 1473) and read by humanists. Atoms mean
+      Epicurus: godless and suspect. Proof by weight ratios needs pure reagents.'
+    local:
+    - humanists of the Medici circle
+  molecules_mole_concept:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+  periodic_table:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+    note: Only about a dozen of the elements are known as substances here, and none as elements. A table
+      from memory would be unverifiable.
+  gas_laws:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: Scholastics debate the weight of air. Measuring how pressure varies with volume needs a sealed
+      tube, mercury and a quantitative account of pressure.
+  pneumatic_chemistry_gases:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Different airs are not imagined; fumes are 'spirits'. Miners know choke-damp and fire-damp. Bladders,
+      glass flasks, a water trough and acids are all at hand.
+  acids_bases_ph:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Dyers know that lye and urine turn orchil purple and sour liquors redden it. The Rucellai fortune
+      comes from this lichen dye. No general concept of neutralising.
+    local:
+    - Rucellai family (oricello)
+    - dyers (tintori)
+  hydrochloric_acid_aqua_regia:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Aqua regia (aqua fortis with sal ammoniac) is known to alchemists and some goldsmiths for dissolving
+      gold. Spirit of salt by itself is not made.
+    local:
+    - goldsmiths
+    - alchemists
+  alkali_soda:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Soda ash from Syria and Egypt (allume catina) and Spain feeds glass and soap; wood-ash lye is
+      in every laundry. Soda and potash are not told apart.
+    elsewhere:
+    - Syria and Egypt, plant ash exports through Venice
+  lime_burning:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+  salt_production:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: State monopoly with a hated tax (gabella del sale). Brine is boiled at Volterra; sea salt comes
+      from coastal pans.
+    local:
+    - Volterra salt springs (moie)
+    - salt pans near Pisa and in the Maremma
+  mordant_dyeing:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Florentine dyers use alum with many dyes, including madder and kermes. Woad uses a vat process.
+      Control of alum helped provoke the 1472 sack of Volterra.
+    local:
+    - Arte della Lana
+    - Arte di Por Santa Maria (silk)
+    - Arte di Calimala
+    - alum of Tolfa and Volterra
+  chlorine_bleach:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: Linen is bleached with lye, sour milk and months of sun. Chlorine needs spirit of salt plus manganese,
+      which glassmakers stock as a decolouriser. The gas maims.
+  electrolysis:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: 'Needs a battery, and batteries are weak without zinc. Gilders would want plating: it replaces
+      deadly mercury gilding.'
+  organic_structure_theory:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  phosphorus_matches:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: Fire is struck with steel, flint and tinder; sulphur-tipped spills only take a flame from an ember.
+      Phosphorus from boiled-down urine is foul, slow and looks like sorcery.
+  rubber_vulcanisation:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: medium
+    elsewhere:
+    - Mesoamerica, rubber balls and waterproofing
+  synthetic_dyes:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: medium
+    note: No coal tar, no coal gas works. The dyers' guilds would see cheap purple as ruin or as a fortune.
+  nitroglycerin_dynamite:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: medium
+    note: Needs concentrated acids in quantity, glycerine (unrecognised in soap-boilers' waste lye) and
+      cooling. The likeliest result is a dead alchemist.
+  petroleum_refining:
+    knowledge: 2
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Francesco Ariosto described Montegibbio rock oil in a 1460 manuscript. It is traded as a medicine.
+      Olive oil and tallow supply ordinary lighting.
+    local:
+    - apothecaries (olio di sasso)
+    elsewhere:
+    - Montegibbio near Modena, oil seeps
+    - Baku, lamp oil
+  polymers_plastics:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: medium
+  ammonia_synthesis:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+
+  # ---- Metallurgy & materials
+  copper_bronze:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Florentine founders cast bells, guns and large statues by lost wax. Copper comes from Tuscan mines
+      and Germany; tin is imported from Cornwall via Flanders.
+    local:
+    - Bertoldo di Giovanni
+    - the late Verrocchio's workshop (Lorenzo di Credi)
+    - copper mines of Montecatini Val di Cecina and Massa Marittima
+  bloomery_iron:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Elba ore, owned by the Appiani lords of Piombino, is smelted with charcoal in water-powered ironworks
+      on the Maremma coast and in the Pistoia hills.
+    local:
+    - Elba (Rio mines)
+    - ferriere of the Maremma and Pistoia mountains
+    - Arte dei Fabbri
+  steel_heat_treatment:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Armourers and cutlers harden and temper by colour and by secret quenching recipes (urine, radish
+      juice). That carbon makes steel is unknown.
+    local:
+    - Arte dei Corazzai e Spadai (armourers and swordsmiths)
+    elsewhere:
+    - Milan, the leading armourers (Missaglia)
+  cementation_steel:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: high
+    note: Smiths case-harden files and tools in charcoal, horn and salt. Converting whole bars in sealed
+      chests is not done; good steel is bought from Brescia and Styria.
+    elsewhere:
+    - Brescia and Bergamo valleys, natural steel
+    - Styria
+  blast_furnace_cast_iron:
+    knowledge: 3
+    use: partial
+    producibility: hard
+    acceptance: medium
+    note: Brescian masters ran a casting furnace at Este-held Fornovolasco by 1480 with mixed results. Waterworks
+      continued in 1490. The rebuilt ducal furnace produced in 1497.
+    elsewhere:
+    - Brescia and Bergamo valleys
+    - Liège and the Rhineland
+    local:
+    - Fornovolasco ironworks, Este Garfagnana
+  coke_iron:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: medium
+    note: Tuscan ironworks depend on charcoal. A coke furnace would need suitable coking coal, a reliable
+      supply and experience running a blast furnace.
+    elsewhere:
+    - China, coal in iron smelting since the 11th c.
+  puddling_wrought_iron:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: medium
+    note: Lombard finers already convert pig iron with charcoal. Puddling would require a supply of pig
+      iron and a different furnace and fuel system.
+    elsewhere:
+    - Lombard valleys and Liège, charcoal finery forges
+  crucible_steel:
+    knowledge: 1
+    use: none
+    producibility: hard
+    acceptance: high
+    note: Watered 'Damascus' blades reach Italy through Venice and are admired; how they are made is a mystery.
+      Local crucibles and furnaces fail below the heat needed.
+    elsewhere:
+    - India and Persia, crucible steel ingots
+  bessemer_steel:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: medium
+  open_hearth_steel:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: medium
+  alloy_stainless_steel:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: medium
+    note: Chromium, nickel, tungsten and manganese are unknown as metals.
+  refractories_fireclay:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: high
+    note: Glassmakers and goldsmiths make their own pots and crucibles from selected clays; these limit
+      furnace heat. Finding a good fireclay is a prospecting job.
+    local:
+    - glass furnaces of the Valdelsa
+    - potters of Montelupo and Impruneta
+    elsewhere:
+    - Hesse (Großalmerode), the best crucibles in Europe
+  zinc_brass:
+    knowledge: 3
+    use: partial
+    producibility: hard
+    acceptance: high
+    note: Brass is made by heating copper with calamine, and mostly imported as sheet and wire. Nobody knows
+      calamine holds a metal; zinc boils away unless condensed in a closed retort.
+    elsewhere:
+    - Milan and Nuremberg, brass goods
+    - Zawar in India, metallic zinc
+  cupellation_assaying:
+    knowledge: 3
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: The mint guards the florin's fineness by touchstone, cupellation and parting with aqua fortis
+      or salt cementation. The most quantitative craft in the city.
+    local:
+    - Zecca (mint)
+    - goldsmiths' section of the Arte di Por Santa Maria
+    - silver-lead mines of the Colline Metallifere
+  mercury_amalgam:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Goldsmiths fire-gild bronze with gold amalgam and breathe the fumes. Mercury is not yet used to
+      win silver from ore. Quicksilver ointments treat skin diseases.
+    local:
+    - goldsmiths and gilders
+    - apothecaries (mercury)
+    elsewhere:
+    - Almadén (Spain)
+    - Idrija (found 1490)
+  lead_hazard:
+    knowledge: 2
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Vitruvius' warning is in print (c. 1486) and ignored. Lead white is the standard face paint and
+      pigment; lead glazes, pewter and litharge-sweetened wine are everyday.
+    local:
+    - potters
+    - painters' workshops
+    - apothecaries (biacca)
+  soldering_tinning:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Goldsmiths, plumbers and coppersmiths solder, braze with borax and tin copper pots. Tinplate is
+      imported from Germany.
+  fired_brick_ceramics:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Brick, tile and terracotta are a major local industry; tin-glazed maiolica and the Della Robbia
+      glazed sculpture are at their height.
+    local:
+    - Impruneta (brick, terracotta)
+    - Montelupo (maiolica)
+    - Andrea della Robbia's workshop
+  porcelain:
+    knowledge: 1
+    use: none
+    producibility: very-hard
+    acceptance: high
+    note: Chinese porcelain can be examined in the Medici collection. Sultan Qaitbay of Egypt sent Lorenzo
+      porcelain vases in 1487. Local potters lack the manufacturing recipe.
+    local:
+    - Medici collection in the Palazzo Medici
+    elsewhere:
+    - Jingdezhen (China)
+  glassmaking:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Tuscan glassmakers come from the Valdelsa and make drinking glasses, flasks and apothecary ware.
+      Fine work is bought from Murano.
+    local:
+    - glassmakers (bicchierai) of Gambassi and Montaione
+    - Florentine glass shops
+    elsewhere:
+    - Murano
+  clear_glass:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: high
+    note: Cristallo is Murano's secret (purified soda ash, quartz pebbles, manganese); Venice forbids its
+      masters to leave. Even cristallo has bubbles and streaks that limit lenses.
+    local:
+    - Florentine spectacle makers
+    elsewhere:
+    - Murano, Barovier workshop
+  glass_mirrors:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: high
+    note: Polished metal and small backed glass mirrors are available. Producing a large, flat, evenly backed
+      glass plate would challenge local makers.
+    elsewhere:
+    - Nuremberg, convex glass mirrors
+  hydraulic_cement:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Masons line cisterns with lime and crushed brick; Vitruvius and Alberti (printed Florence 1485)
+      describe pozzolana from Naples and Lazio. Burning true cement clinker is hard.
+    local:
+    - architects (Giuliano da Sangallo)
+    - Vitruvius and Alberti in print
+  reinforced_concrete:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: Iron tie rods and chains in masonry are familiar (Brunelleschi's dome). Iron is hand-forged and
+      dear; Roman-style concrete without iron is the realistic step.
+  paper:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Rag paper from water-powered mills is plentiful and feeds the presses. Rags are the bottleneck.
+    local:
+    - paper mills of Colle di Val d'Elsa
+    - Fabriano
+    - cartolai (stationers) of Florence
+  textile_fibres:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Merchant firms organise wool production across town and countryside. Spinners work by hand, and
+      water-powered fulling mills serve the cloth trade.
+    local:
+    - Arte della Lana
+    - fulling mills on the Arno
+    - wool from Spain and the Abruzzi
+  leather_tanning:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Tanners work by the Arno with oak bark, myrtle and sumac; alum-tawed white leather too. A stinking,
+      low-status trade.
+    local:
+    - tanners (conciatori) near Santa Croce
+    - Arte dei Cuoiai e Galigai
+  aluminium:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: medium
+    note: Alum is traded by the shipload, but nobody suspects a metal in it.
+  wood_tar_pitch:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Pitch for the galleys comes through Pisa.
+    local:
+    - Casentino and Apennine forests
+    - Maremma woods
+
+  # ---- Physics, optics & astronomy
+  lenses:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Florence is a centre of spectacle making; convex and concave lenses are sold. Clear glass (cristallo)
+      comes from Murano.
+    local:
+    - Florentine spectacle makers
+    - Murano glassmakers
+  spectacles:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Florentine makers export them by the hundred, graded by the buyer's age. Frames of bone, horn
+      or leather sit on the nose; no side arms.
+    local:
+    - Florentine spectacle makers
+  refraction_optics:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Perspectiva (Alhazen, Witelo, Pecham) is taught; Ptolemy's refraction tables are known, no sine
+      law. The eye's crystalline lens is held to be the seat of vision.
+    local:
+    - university of Pisa
+    - painters and perspectivists
+  camera_obscura:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Known from Alhazen and Pecham for watching eclipses. Nobody puts a lens in the hole or uses it
+      for drawing.
+    local:
+    - Toscanelli's gnomon hole in the dome of the Duomo (1475)
+  microscope:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: A single bead lens (Leeuwenhoek style) can be made by a glassblower; spectacle lenses are too
+      weak. The hard part is forming tiny lenses and good lighting.
+  telescope:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: high
+    note: Workshops stock weak convex lenses, but strong concave ones are rare and must be ordered. Lens
+      quality limits magnification to about 3-10x.
+    local:
+    - Florentine spectacle makers
+  reflecting_telescope:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: Concave burning mirrors and cast metal mirrors exist. Figuring and polishing a high-tin bronze
+      mirror accurately is the bottleneck.
+    local:
+    - bronze founders
+    - mirror makers
+  achromatic_lens:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: medium
+    note: Needs two glasses of different dispersion; lead glass is made only for imitation gems and enamel,
+      never in clear optical blanks.
+  spectrum_colour:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Colours are held to be white light weakened by darkness (Aristotle). Crystals and glass are known
+      to throw rainbow colours; a prism is easy to have made.
+    local:
+    - Murano glassmakers
+  spectroscopy:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Needs a good prism, a slit and a nearly colourless flame; a spirit lamp with strong aqua vitae
+      serves.
+  wave_nature_light_sound:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Vitruvius likens sound to water ripples; string ratios are taught as musica. Light as a wave is
+      unknown.
+    local:
+    - organ builders
+    - lute makers
+  speed_of_light:
+    knowledge: 2
+    use: none
+    producibility: very-hard
+    acceptance: low
+    note: Aristotle treats illumination as instantaneous. Alhazen argues that light takes time to travel.
+      A measurable astronomical delay requires a telescope and sustained observations.
+  photography:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: Goldsmiths can dissolve silver in aqua fortis. Fixing is the problem (no hypo; strong brine or
+      ammonia only partly works). Images made by light smell of sorcery.
+    local:
+    - goldsmiths
+    - apothecaries
+  lever_mechanics_statics:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Builders work by rule of thumb; the steelyard is everywhere. Theory (pseudo-Aristotle's Mechanica,
+      Jordanus, Archimedes) sits in manuscripts few craftsmen read.
+    local:
+    - Opera del Duomo
+    - Giuliano da Sangallo
+  buoyancy_hydrostatics:
+    knowledge: 2
+    use: none
+    producibility: easy
+    acceptance: high
+    note: The crown story is known from Vitruvius; On Floating Bodies exists only in rare Latin manuscripts.
+      Gold is assayed by touchstone and fire, not by density.
+    local:
+    - goldsmiths
+    - the Zecca (mint)
+  falling_bodies:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Aristotelian accounts relate speed to weight and the resisting medium. Scholars discuss uniformly
+      accelerated motion. Comparing actual falls would put competing claims to a test.
+  laws_of_motion:
+    knowledge: 1
+    use: none
+    producibility: medium
+    acceptance: low
+    note: 'Buridan''s impetus is taught: a thrown body carries an impressed force that fades. Rest is the
+      natural state; the heavens obey other rules.'
+  universal_gravitation:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+    note: Heavy things seek the centre of the world, which is the Earth. A force acting across empty space
+      sounds like astrology or magic.
+  strength_of_materials:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: high
+    note: Builders trust proportion rules and scale models, and assume a model's strength carries over to
+      full size. Loading wires and beams to breaking is cheap.
+    local:
+    - Opera del Duomo
+    - Leonardo da Vinci (in Milan)
+  sundial_water_clock:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: 'Italian hours: 24 equal hours counted from sunset, so noon shifts through the year.'
+  mechanical_clock:
+    knowledge: 3
+    use: correct
+    producibility: medium
+    acceptance: high
+    note: Weight-driven verge-and-foliot tower clocks, reset by sundial, drift a quarter hour a day. Spring-driven
+      chamber clocks are princely luxuries.
+    local:
+    - Lorenzo della Volpaia
+    - Palazzo della Signoria tower clock
+    - Duomo clock (24-hour dial painted by Uccello)
+  pendulum_clock:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: high
+    note: Clockmakers could attempt a pendulum regulator. At small swings its period depends chiefly on
+      length. The escapement must sustain the swing without disturbing it.
+    local:
+    - Lorenzo della Volpaia
+  atmospheric_pressure:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: low
+    note: Nature abhors a vacuum (Aristotle); air is thought weightless in its own place. Needs a long sealed
+      glass tube and mercury, which apothecaries sell.
+    local:
+    - apothecaries (mercury)
+    - Murano glassmakers
+    - mining and well engineers
+    elsewhere:
+    - Almaden (Spain) mercury mines
+    - Idrija, mercury found c. 1490
+  air_pump_vacuum:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: A void is impossible for Aristotelians. Needs a tightly fitted bronze syringe with leather packing
+      and valves, plus thick glass vessels.
+    local:
+    - bronze founders
+    - Murano glassmakers
+  thermometer_temperature:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Physicians judge fever by touch and pulse; Galenic pharmacy counts four degrees of hot and cold.
+      A sealed spirit tube is glassblower's work.
+    local:
+    - Murano glassmakers
+    - apothecaries (aqua vitae)
+  latent_specific_heat:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: low
+    note: Heat and cold are qualities, not quantities. Needs a thermometer first.
+  heat_energy_conservation:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Engineers seriously draw perpetual-motion wheels and self-driving mills. Heat is the element fire.
+  weather_instruments:
+    knowledge: 2
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Alberti described a wind-pressure plate. Cusanus proposed balancing dry wool against a fixed weight
+      to follow changes in humidity.
+  round_earth_size:
+    knowledge: 4
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Learned geography treats Earth as spherical. Estimates of its circumference and of Asia's eastward
+      extent differ, with large consequences for a westward voyage.
+    local:
+    - Toscanelli's papers and pupils
+    - Berlinghieri's printed Ptolemy (Florence 1482)
+  seasons_axial_tilt:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Taught correctly as the obliquity of the Sun's path (Sacrobosco), but with the Sun circling a
+      fixed Earth.
+    local:
+    - Toscanelli's gnomon in the Duomo
+  eclipse_prediction:
+    knowledge: 3
+    use: correct
+    producibility: medium
+    acceptance: high
+    note: Causes are understood. Predictions from the Alfonsine Tables and Regiomontanus' printed Ephemerides
+      can be off by an hour or more.
+    local:
+    - astrologers
+    - university of Pisa
+    elsewhere:
+    - Nuremberg, Regiomontanus' successors (Bernhard Walther)
+  heliocentrism:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Aristarchus is known to a few humanists through Archimedes and Plutarch. Copernicus, aged 17,
+      enters Krakow university in 1491. Absurd rather than heretical in 1490.
+  keplers_laws:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+    note: Astronomers have planetary tables, but testing elliptical orbits needs long, accurate observations
+      and extensive calculation. A drawn ellipse alone would establish little.
+  astronomical_distances:
+    knowledge: 2
+    use: partial
+    producibility: hard
+    acceptance: low
+    note: Ptolemy's lunar distance is fairly close. His solar distance is about twenty times too small.
+      The fixed stars belong to a sphere beyond Saturn.
+  comets_orbits:
+    knowledge: 1
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Comets are fiery vapours below the Moon and omens of deaths and wars. Toscanelli recorded positions
+      of several, including the comet of 1456.
+  tides:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: The link to the Moon is accepted and explained astrologically. Tuscan tides are too small to matter;
+      Venice and the Atlantic ports care.
+    elsewhere:
+    - Venice
+    - Atlantic ports of Portugal and Flanders
+  terrestrial_magnetism:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: The needle is thought to seek the Pole Star or a magnetic mountain. Peregrinus' letter on the
+      magnet circulates in manuscript.
+    local:
+    - Elba lodestone (Monte Calamita)
+    elsewhere:
+    - Nuremberg compass-sundial makers mark the needle's deviation
+  deep_time_geology:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Biblical chronologies count thousands of years. Tuscan shell beds offer evidence of former seas,
+      although scholars differ over how shells came to lie inland.
+    local:
+    - shell beds and fossil bones of the upper Valdarno
+  plate_tectonics:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+  stars_galaxies_cosmology:
+    knowledge: 1
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Cusanus wrote of a universe without centre and of other inhabited worlds; humanists know it as
+      speculation. The stars are lights on one sphere.
+  xrays:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  radioactivity:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  atomic_structure:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  quantum_mechanics:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  relativity:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  nuclear_fission:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+
+  # ---- Electricity & electronics
+  static_electricity:
+    knowledge: 2
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Rubbed amber drawing chaff is a curiosity from Pliny, lumped together with the lodestone. Sulphur,
+      glass, silk, tin foil and gold leaf are all on sale.
+    local:
+    - apothecaries (sulphur
+    - amber)
+    - goldbeaters (battiloro)
+  lightning_rod:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Lightning is a sign of God; church bells are rung against storms. A rod on a tower is cheap but
+      theologically suspicious.
+    local:
+    - the lantern of the Duomo (struck repeatedly; badly damaged 5 April 1492)
+  electric_battery:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Metallic zinc is unknown in Europe (only calamine, for brass). Copper-iron or silver-iron piles
+      in brine or vinegar work, but weakly.
+    local:
+    - coppersmiths
+    - goldsmiths
+    elsewhere:
+    - Zawar in India, metallic zinc
+  practical_batteries:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: Blue vitriol, oil of vitriol, lead and unglazed pots are available; zinc is not. A lead-acid cell
+      needs another current source to charge it.
+    local:
+    - apothecaries
+    - alchemists
+  electromagnetism:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: Compasses are common. Copper wire must be drawn and silk-wrapped by hand, and zincless cells give
+      little current.
+    local:
+    - goldsmiths (wire drawing)
+    - silk workers
+  ohms_law_circuits:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: medium
+  electric_telegraph:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: high
+    note: A line across a palace is conceivable; Florence to Pisa needs some 80 km of hand-drawn insulated
+      wire and far stronger cells.
+  submarine_cable:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: medium
+  dynamo_electric_motor:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: medium
+    note: Lodestones are weak; a useful machine needs electromagnets, soft iron and hundreds of metres of
+      insulated copper wire.
+  electric_light:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: high
+  alternating_current_grid:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: medium
+  telephone:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: medium
+  sound_recording:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: 'A tinfoil phonograph is purely mechanical: hand-cut screw, parchment diaphragm, needle, beaten
+      tin foil. A machine that speaks invites talk of demons.'
+    local:
+    - clockmakers
+    - tin-foil beaters
+    - instrument makers
+  electromagnetic_waves_radio:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  crystal_detector:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  vacuum_tube:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  television_crt:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  radar:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  semiconductors_transistor:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  semiconductor_purification:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  solar_cell:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  mosfet:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  integrated_circuit:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  laser:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  optical_fibre:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+
+  # ---- Computing, control & information theory
+  algorithm_concept:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Abacus masters teach explicit procedures through rules and worked examples. A pupil can follow
+      a calculation step by step and check the result.
+    local:
+    - abacus schools (botteghe d'abbaco)
+  binary_numbers:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Doubling and halving are taught as separate operations of arithmetic. Counting with two digits
+      looks like a pointless game.
+  boolean_logic:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Logic means Aristotle's syllogisms and Peter of Spain, argued in Latin words. Llull's combining
+      wheels are the nearest idea of mechanical reasoning.
+    local:
+    - Giovanni Pico della Mirandola (knows Llull's art)
+    - university of Pisa
+  logic_gates_switching:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+  mechanical_calculator:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: high
+    note: Clockmakers can cut the wheels; a reliable carry across several digits is the hard part. Merchants
+      would pay, abacus masters would sneer.
+    local:
+    - Lorenzo della Volpaia
+    - clockmakers
+  punched_card_control:
+    knowledge: 1
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: Pegged barrels drive clock chimes and automata. On silk drawlooms the pattern is tied in cords
+      and pulled by a drawboy.
+    local:
+    - Arte della Seta (silk guild)
+    - drawloom weavers
+    elsewhere:
+    - Low Countries, mechanical clock chimes
+  programmable_computer:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  turing_machine_computability:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: low
+    note: An abacus master can execute a transition table on a marked paper strip. Explaining universality
+      and the limits of calculation is the harder task.
+  computer_memory:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  programming_languages_compilers:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  operating_system_time_sharing:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  information_theory:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+  sampling_pcm:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  error_correcting_codes:
+    knowledge: 1
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Casting out nines lets abacus pupils detect some copying and calculation errors. The check neither
+      locates an error nor recovers the original number.
+    local:
+    - abacus schools
+    - merchant bookkeepers
+  packet_switching_networks:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  feedback_control:
+    knowledge: 1
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Hero's float valve is in the Pneumatica; millers let the shaking hopper feed grain by the stone's
+      speed. Furnaces are regulated by a watching apprentice.
+    local:
+    - millers
+    - alchemists' furnaces
+  cryptography:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Florentine chanceries use substitution and code lists. Alberti described a cipher disc around
+      1467. Its routine adoption in Florence is undocumented.
+    local:
+    - chancery of the Signoria
+    - Medici bank correspondents
+    elsewhere:
+    - Milan, Sforza chancery (Cicco Simonetta's rules for breaking ciphers, 1474)
+    - Venice
+    - papal curia
+  public_key_cryptography:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: An abacus master can demonstrate the arithmetic with small numbers. Key sizes suited to confidential
+      diplomatic traffic would make hand calculation impractical.
+
+  # ---- Energy & engines
+  animal_power_gin:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    local:
+    - memory and drawings of Brunelleschi's ox-hoist at the Duomo
+  water_wheel:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Arno mills power grain milling and fulling. Other Tuscan streams drive paper mills and ironworks.
+      Wheel performance depends on water supply, head and design.
+    local:
+    - Arno mills and weirs
+    - Arte della Lana fulling mills
+  windmill:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Windmills are known on the Tuscan coast. River-powered milling is more familiar inland. Coastal
+      millers offer a starting point for a wind-driven project.
+    elsewhere:
+    - Flanders and Holland
+    - Castile
+    - Aegean islands
+  water_turbine:
+    knowledge: 1
+    use: partial
+    producibility: hard
+    acceptance: medium
+    note: Hill mills use a horizontal wheel (ritrecine) struck by a jet, a crude turbine. Curved guide vanes
+      and a closed casing are unknown.
+    local:
+    - millwrights of the Apennine valleys
+  crank_connecting_rod:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Cranks turn grindstones and braces; engineers draw crank-and-rod pumps and saws with flywheels,
+      but few are built.
+    local:
+    - Francesco di Giorgio Martini (Siena)
+    - carpenters
+  piston_pump:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: high
+    note: Sienese engineers have drawn suction and force pumps since Taccola. Barrels are bored logs or
+      cast bronze with leather valves; mines still mostly bail.
+    local:
+    - Francesco di Giorgio Martini (Siena)
+    - bronze founders
+    - fountain masters
+  hydraulic_ram:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: high
+    note: Needs a strong lead or bronze pipe, two valves and an air vessel; pipes burst if the air cushion
+      is forgotten.
+    local:
+    - fountain masters
+    - plumbers (lead pipe)
+    - bronze founders
+  charcoal_burning:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Charcoal burners supply every forge and furnace; fuel is the limit on all metalwork.
+    local:
+    - charcoal burners of the Casentino and Mugello
+    - Casentino and Apennine forests
+    - Maremma woods
+  coal_mining:
+    knowledge: 2
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Tuscany has wood and only poor lignite; burning stones are known from travellers' reports and
+      distrusted for their smoke.
+    elsewhere:
+    - Liege
+    - Newcastle and London
+  gas_lighting:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: medium
+  argand_lamp:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: high
+    note: Olive-oil lamps with a solid wick are universal. Needs a woven tubular wick, a brass burner and
+      a thin glass chimney that survives the heat.
+    local:
+    - Murano glassmakers
+    - brass workers
+  oil_drilling:
+    knowledge: 1
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: Rock oil skimmed from seeps in the Apennines near Modena is sold as medicine. Wells are dug, not
+      drilled; salt comes from the sea and Volterra's springs.
+    local:
+    - Volterra salt works
+    elsewhere:
+    - Sichuan (China), percussion-drilled brine and gas wells
+    - Montegibbio near Modena, oil seeps
+  steam_aeolipile:
+    knowledge: 2
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Hero's Pneumatica circulates in Greek manuscripts, with no printed Latin version. Vitruvius describes
+      bronze aeolipiles blowing steam as a model of wind.
+    local:
+    - humanists of the Medici circle
+    - Leonardo da Vinci (in Milan)
+  safety_valve_boiler:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Coppersmiths make stills and cauldrons. A vessel and relief valve that withstand repeated pressurisation
+      present unfamiliar problems of sealing and reliability.
+    local:
+    - coppersmiths
+    - bronze founders
+  savery_steam_pump:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: Soldered copper vessels and pipes are makeable but seams fail under steam; lift is limited and
+      fuel use enormous.
+  atmospheric_engine:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: medium
+    note: 'Possible in principle: low-pressure boiler, cast bronze cylinder, leather packing under water.
+      Needs a patron with a flooded mine.'
+    local:
+    - Colline Metallifere (silver and copper mines)
+    - Tolfa alum mines (papal)
+    - bronze founders
+  separate_condenser:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: medium
+  rotative_steam_engine:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: medium
+  high_pressure_steam:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: medium
+  steam_turbine:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: medium
+  hot_air_engine:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: medium
+  internal_combustion_engine:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: medium
+  gas_turbine_jet:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  refrigeration:
+    knowledge: 1
+    use: partial
+    producibility: hard
+    acceptance: high
+    note: Winter snow is packed into pits and sold in summer. Freezing with salt and snow, or cooling with
+      saltpetre, is unknown but easy; a machine is not.
+    local:
+    - snow pits in the Apennines
+    - apothecaries (saltpetre)
+  nuclear_reactor:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+
+  # ---- Tools, machines & manufacturing
+  block_and_tackle:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Brunelleschi's reversible hoist and cranes for the dome are remembered and copied into engineers'
+      notebooks.
+    local:
+    - Opera del Duomo
+    - Giuliano da Sangallo
+    - Bonaccorso Ghiberti
+  wheelbarrow:
+    knowledge: 3
+    use: correct
+    producibility: easy
+    acceptance: high
+  archimedes_screw:
+    knowledge: 2
+    use: none
+    producibility: easy
+    acceptance: high
+    note: Revived on paper by Taccola and Francesco di Giorgio; actual drainage and irrigation mostly use
+      bucket wheels and chains of pots.
+    local:
+    - Francesco di Giorgio Martini (Siena)
+    - coopers and carpenters
+  gears_gear_trains:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Mills use wooden peg wheels and lantern pinions; clockmakers file brass and iron wheels by hand.
+      Nobody has a theory of tooth shape.
+    local:
+    - millwrights
+    - Lorenzo della Volpaia
+  cam_camshaft:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    local:
+    - fulling mills on the Arno
+    - paper mills at Colle di Val d'Elsa
+  screw_nut_bolt:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: high
+    note: Big wooden screws work oil, wine, cloth and printing presses. Metal screws are filed by hand for
+      armour and clocks; no nut fits another maker's bolt.
+    local:
+    - press makers
+    - armourers
+    - clockmakers
+  belt_drive:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Cord bands drive spinning wheels, lathes and gem cutters' wheels. Flat leather belts on shafting
+      and link chains for power are unknown.
+  ball_bearings:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: Axles run in greased wood, bronze or iron. Wooden rollers are easy; hard, truly round metal balls
+      of equal size are not.
+  bellows_piston_blower:
+    knowledge: 4
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Leather bellows, water-driven at ironworks, are standard. The wooden double-acting piston box
+      that blows on both strokes is unknown.
+    local:
+    - ironworks of the Tuscan coast and Pistoia hills
+    - bronze founders
+    elsewhere:
+    - China, double-acting box bellows
+  trip_hammer_water_powered:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    local:
+    - Gualchiere di Remole (the wool guild's fulling mills on the Arno)
+    - iron hammer mills (magli)
+    - paper mills at Colle di Val d'Elsa
+  lost_wax_casting:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Florence leads Europe in bronze casting; Verrocchio died in 1488, his workshop tradition is alive.
+    local:
+    - Bertoldo di Giovanni (Medici sculpture garden; dies 1491)
+    - bronze founders and goldsmiths
+    elsewhere:
+    - Milan, Leonardo's giant Sforza horse project
+  sand_loam_casting:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: high
+    note: Bells and cannon are cast in loam moulds built for one pour. Reusable flasks of damp sand and
+      thin-walled cast-iron pots are unknown.
+    local:
+    - bell founders
+    - cannon founders
+    - Bonaccorso Ghiberti
+  wire_drawing:
+    knowledge: 3
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Goldsmiths draw gold and silver wire for brocade thread through drawplates by hand. Iron wire
+      comes from Lombardy and Nuremberg.
+    local:
+    - goldsmiths
+    - gold thread makers of the silk guild
+    elsewhere:
+    - Nuremberg, water-powered wire mills
+  rolling_mill:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: Sheet metal and coin blanks are hammered. Small rolls for gold, lead or tin are makeable; true
+      cylindrical rolls and a stiff frame are the difficulty.
+    local:
+    - the Zecca (mint)
+    - goldsmiths
+    - goldbeaters
+  boring_machine:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: high
+    note: Bronze guns are cast around a core and at best reamed smooth. A rigid, guided boring bar that
+      makes a true cylinder is new.
+    local:
+    - bronze founders
+    - cannon founders
+    - Leonardo da Vinci (in Milan)
+  lathe_screw_cutting:
+    knowledge: 1
+    use: none
+    producibility: hard
+    acceptance: high
+    note: Turners use pole and bow lathes that spin back and forth, tool held by hand. A lead screw with
+      tool slide is drawn in one south German manuscript.
+    local:
+    - wood turners
+    - clockmakers
+    - pewterers
+    elsewhere:
+    - Upper Rhine and Nuremberg (the Housebook's screw-cutting lathe)
+  precision_measurement:
+    knowledge: 1
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Parts are fitted to each other by eye, dividers and callipers. Every city has its own braccio;
+      there are no gauges or flat reference plates.
+  machine_tools:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: medium
+  interchangeable_parts:
+    knowledge: 1
+    use: partial
+    producibility: hard
+    acceptance: low
+    note: Cast printing type demonstrates the value of common dimensions. Armourers and clockmakers still
+      fit most components individually.
+    local:
+    - type founders and printers
+    elsewhere:
+    - Venice Arsenal, standardisation of galley components
+  assembly_line:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: low
+    note: The wool trade already splits work into dozens of steps, but spread across homes and shops. Guild
+      statutes fix who may do what.
+    local:
+    - Arte della Lana
+    - Arte della Seta
+    elsewhere:
+    - Venice Arsenal, organised stages of ship construction and fitting out
+  sawmill:
+    knowledge: 3
+    use: correct
+    producibility: medium
+    acceptance: medium
+    note: Camaldoli's accounts record a water saw in 1442. Casentino timber also travels down the Arno by
+      raft. A millwright can inspect an operating local precedent.
+    local:
+    - Camaldoli sawmill in the Casentino
+    - Opera del Duomo forests
+    elsewhere:
+    - Venetian Alps and southern Germany, water-powered sawmills
+  spinning_wheel:
+    knowledge: 4
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Country women spin for the wool guild; the distaff is still preferred for strong warp yarn. The
+      flyer that spins and winds at once is brand new in Germany.
+    local:
+    - lanaioli (wool merchants) and their spinners in the contado
+    elsewhere:
+    - Southern Germany, drawings of flyer-and-bobbin spinning wheels (c. 1480)
+  spinning_machines:
+    knowledge: 3
+    use: partial
+    producibility: hard
+    acceptance: low
+    note: Silk is twisted on big circular throwing mills with hundreds of spindles. Nothing similar exists
+      for wool or cotton, whose spinning feeds thousands of households.
+    local:
+    - Florentine silk throwsters (hand-turned mills)
+    - Arte della Seta
+    elsewhere:
+    - Bologna, water-driven silk mills (a guarded secret)
+    - Lucca
+  treadle_loom:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    local:
+    - wool weavers
+    - silk drawloom weavers
+  power_loom:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: A flying shuttle is carpenter's work; a powered loom is far harder. Weavers are poor dependants
+      of the guild merchants and fear for their bread (Ciompi revolt, 1378).
+  cotton_gin:
+    knowledge: 1
+    use: none
+    producibility: medium
+    acceptance: low
+    note: Cotton arrives already cleaned, in bales from Syria and Cyprus via Venice, for Lombard fustian.
+      No one in Tuscany handles seed cotton.
+    elsewhere:
+    - India and the Levant, roller gins
+  knitting_frame:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: medium
+    note: Hose are cut and sewn from woven cloth; hand knitting on needles is known. A frame needs hundreds
+      of identical fine sprung hooks.
+  sewing_machine:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+
+  # ---- Mathematics & measurement
+  zero_place_value:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Roman numerals survive for dates, inscriptions and some formal totals, thought harder to falsify.
+  arabic_numerals:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Taught in abacus schools for merchants' sons. Fibonacci was from Pisa.
+    local:
+    - abacus schools
+    - Filippo Calandri
+  abacus_counting_board:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: low
+    note: In Italy 'abbaco' now means pen reckoning with numerals; counters on a lined board are northern
+      and old-fashioned. A bead frame is unknown.
+    elsewhere:
+    - Germany and France (reckoning counters)
+    - China (suanpan)
+  fractions_rule_of_three:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: 'The daily bread of commerce: exchange, alloying, partnership shares are all solved by the rule
+      of three.'
+    local:
+    - abacus schools
+    - Filippo Calandri
+  decimal_fractions:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: high
+    note: Florentine merchants favour common fractions and mixed units. Astronomers usually use sixtieths,
+      but Bianchini used decimal fractions in fifteenth-century Ferrara.
+    elsewhere:
+    - Ferrara, Giovanni Bianchini's astronomical tables
+    - Samarkand, al-Kashi's decimal fractions
+  negative_numbers:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: A negative answer is read as a debt or thrown out as absurd. Ledgers avoid them with separate
+      debit and credit sides.
+    elsewhere:
+    - Lyon, Nicolas Chuquet's manuscript (1484)
+    - India and China
+  square_roots_irrationals:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Abacus masters extract roots by hand and call the inexact ones deaf (radici sorde). Whether these
+      are numbers at all is doubted.
+  logarithms:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: high
+    note: 'Tables must be computed by hand: months of work for a team of abacus masters. Astrologers and
+      astronomers gain most; needs decimal fractions first.'
+    local:
+    - abacus masters
+  slide_rule:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: high
+    note: Needs a logarithm table first, then an instrument maker to engrave the scales on boxwood or brass.
+    local:
+    - makers of astrolabes and quadrants
+  symbolic_algebra:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Abacus writers use names and abbreviations for unknowns and powers. Several local manuscripts
+      handle more than one unknown. Notation varies from author to author.
+    local:
+    - Florentine abacus masters and their manuscripts
+    elsewhere:
+    - Leipzig, Widmann prints + and - (1489)
+  quadratic_cubic_equations:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: high
+    note: Abacus masters teach quadratic cases, and special cubics admit solutions. A general method for
+      the cubic is still missing.
+    local:
+    - Florentine abacus masters
+    - Piero della Francesca (Sansepolcro)
+    elsewhere:
+    - university of Bologna
+  linear_equations_matrices:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Abacus texts use false position and sometimes several unknowns. A systematic array of coefficients
+      would offer a general procedure for simultaneous equations.
+    elsewhere:
+    - China, fangcheng array method
+  complex_numbers:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Even negative roots are suspect; a root of a negative is an impossible case. No use until the
+      cubic is solved.
+  prime_numbers_number_theory:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: low
+    note: Euclid's books on numbers and Boethius are studied; perfect and amicable numbers attract Neoplatonists
+      for their meaning, not their use.
+  combinatorics_permutations:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Dice players know the throws are not equally common. Counting arrangements appears as puzzles;
+      Llull's combining art is known to Pico.
+  compound_interest_exponential_growth:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: medium
+    note: Bankers compound yearly (fare capo d'anno). Open interest is usury, so it hides in exchange rates
+      and 'gifts' on deposits.
+    local:
+    - Medici bank
+    - Monte delle Doti (state dowry fund)
+    - abacus schools
+  geometry_proof:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Euclid is in print in Latin (Venice 1482). Universities read the first books; craftsmen learn
+      recipes for areas and volumes without proof.
+    local:
+    - Piero della Francesca (Sansepolcro)
+    - abacus schools
+    - university of Pisa
+  pi_circle_measurement:
+    knowledge: 3
+    use: correct
+    producibility: easy
+    acceptance: medium
+    note: Craftsmen use 22/7 and many take it for exact. Squaring the circle is still thought possible.
+    elsewhere:
+    - Samarkand, al-Kashi's 16 decimals (1424)
+    - Kerala, Madhava's series
+  trigonometry:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Sine tables serve astronomers and astrologers only. Regiomontanus' book on triangles is still
+      unprinted; surveyors and gunners use shadow squares and similar triangles.
+    elsewhere:
+    - Nuremberg (Regiomontanus' papers), Augsburg (his Tabulae directionum with tangent table, printed 1490)
+  coordinate_geometry:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Ptolemy's maps use a grid of latitude and longitude; painters copy through squared veils; Oresme's
+      latitude of forms is in print. No one links curves to equations.
+    local:
+    - Berlinghieri's printed Ptolemy (Florence 1482)
+    - painters' workshops
+  non_euclidean_geometry:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+  perspective_technical_drawing:
+    knowledge: 4
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Florence invented painters' perspective. Machines are built from wooden models and sketchbook
+      views, not from measured plan-and-elevation drawings.
+    local:
+    - painters' workshops (Ghirlandaio
+    - Botticelli)
+    - Giuliano da Sangallo
+    - Piero della Francesca (Sansepolcro)
+  surveying_triangulation:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: high
+    note: Land is measured with rods and cords, levels taken with a plumb-line frame; Alberti described
+      surveying by bearings. No triangulated maps exist.
+    local:
+    - catasto (tax survey) officials
+    - river and fortification engineers
+  solar_calendar_leap_years:
+    knowledge: 4
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: The spring equinox falls roughly nine days before its conventional date of 21 March. Florence
+      numbers the new year from 25 March. Calendar reform requires agreement.
+    local:
+    - Toscanelli's gnomon in the Duomo
+  metric_system_units:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: low
+    note: Every city has its own braccio, libbra and staio, and guards them as a sign of sovereignty. Merchants
+      live with conversion handbooks.
+  probability_statistics:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Dice, insurance contracts, grain accounts and burial registers supply examples. Merchants already
+      distinguish risk by route, though they lack a formal calculus of probability.
+    local:
+    - Grain Office and burial registers
+    - marine insurers
+    - dice players
+    elsewhere:
+    - Milan, civic death registers
+  bayes_theorem:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: low
+  normal_distribution_errors:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: Astronomers compare observations and revise tables. Repeated readings of one angle offer a way
+      to introduce a distribution of errors.
+  data_graphs:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Prices, deaths and exchange rates are kept as lists and tables. Drawing them as a line over time
+      is new and needs only paper.
+  calculus:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Archimedes' method of exhaustion is known to a handful of scholars. Without symbolic algebra and
+      graphs there is no language for it.
+  infinite_series_e:
+    knowledge: 1
+    use: none
+    producibility: hard
+    acceptance: low
+  differential_equations:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+  fourier_series:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+
+  # ---- Scientific method & philosophical ideas
+  scientific_method:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Workshop trials, astronomical observations and medical case histories give investigators local
+      precedents. A repeatable test of a stated explanation is easier to show than to institutionalise.
+    local:
+    - botteghe (workshop trial and error)
+    - Leonardo da Vinci (Milan)
+  empiricism_over_authority:
+    knowledge: 1
+    use: partial
+    producibility: easy
+    acceptance: low
+    note: Poliziano compares manuscripts, while Benivieni investigates causes of death in bodies. Both offer
+      precedents for checking a received account against evidence.
+    local:
+    - Antonio Benivieni (autopsies)
+    - Angelo Poliziano
+  controlled_trial:
+    knowledge: 2
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Avicenna's Canon lays out conditions for testing a drug's effects. Santa Maria Nuova offers a
+      setting for comparing outcomes in similar patients.
+    local:
+    - Santa Maria Nuova hospital (many comparable patients)
+  placebo_blinding:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: low
+    note: That belief helps healing is accepted (imagination, faith, relics); deceiving a patient for a
+      test offends physicians.
+  correlation_causation_confounding:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Scholastic logic names the fallacy post hoc; astrology and miasma medicine ignore it daily.
+  selection_bias_sampling:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Humanists know Cicero's story of Diagoras and the votive tablets. Churches such as Santissima
+      Annunziata are full of ex-votos.
+    local:
+    - Santissima Annunziata (wax votive figures)
+  measurement_quantification:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Balances already guide assayers and merchants. Cusanus's De staticis experimentis (1450) proposes
+      extending weighing to medicine and natural philosophy.
+    local:
+    - abacus masters
+    - assayers of the Zecca (mint)
+  mathematical_laws_of_nature:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Accepted for music, optics, perspective and the heavens; Platonists like the idea. Earthly motion
+      is held to be qualitative (Aristotle).
+    local:
+    - Marsilio Ficino
+    - painters' perspective (Alberti, Piero della Francesca)
+  falsifiability:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: low
+    note: A physician's prognosis or an astrologer's forecast can be checked against events. Agreeing in
+      advance what observation would refute a claim is a further step.
+  fallibilism_provisional_knowledge:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Academic scepticism is known from Cicero; Sextus Empiricus exists in Greek manuscripts in Florence.
+      Doubt about doctrine is dangerous.
+    local:
+    - San Marco library
+    - Medici library (Greek manuscripts)
+  bayesian_reasoning:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Bankers and underwriters revise estimates when news of wars, pirates or defaults arrives. Numerical
+      probabilities and a general updating rule would be new.
+  reproducibility_open_publication:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Craftsmen protect valuable recipes, but printed technical books and circulating manuscripts already
+      share some procedures. Independent repetition could give a workshop claim wider credibility.
+  cognitive_biases:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: medium
+  formal_logic:
+    knowledge: 4
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Aristotelian syllogistic and fallacies are taught at every university (Peter of Spain). Humanists
+      mock it as hair-splitting. No symbolic logic.
+    local:
+    - Studio of Pisa and Florence
+    - Dominicans of San Marco and Santa Maria Novella
+  occams_razor:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Known to scholastics as a rule of the nominalists. Platonists multiply spirits, spheres and hidden
+      virtues freely.
+  thought_experiment:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Scholastics argue 'secundum imaginationem' (Buridan, Oresme); the conclusions count as exercises,
+      not as findings about nature.
+  source_criticism:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Valla challenged the Donation of Constantine in 1440. Poliziano's Miscellanea (1489) compares
+      variant readings. Both give humanists examples of testing a text's authority.
+    local:
+    - Angelo Poliziano
+    - Medici and San Marco libraries
+  informed_consent_research_ethics:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Hospitals and courts hold power over patients and prisoners. A requirement for voluntary, informed
+      participation in research would need explicit institutional backing.
+  natural_causes:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: low
+    note: Aristotle's Meteorology gives natural causes for comets, quakes and lightning, yet all are also
+      read as signs. Plague is God's punishment plus bad air.
+    local:
+    - Girolamo Savonarola (prophecy of the scourge)
+    - Lucretius readers
+  scepticism_superstition:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Astrology is court science (Ficino). Pico writes his attack on it in 1493–94. Malleus Maleficarum
+      appeared 1486; alchemists seek patrons.
+    local:
+    - Giovanni Pico della Mirandola
+    - Marsilio Ficino
+  atomism:
+    knowledge: 2
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Lucretius (found 1417, printed 1473) is read as poetry; atoms mean Epicurus, mortal souls and
+      impiety. Ficino burned his own early commentary.
+    local:
+    - Lucretius manuscripts in Florence
+    - Michele Marullo (poet, Lucretius scholar)
+  universal_physical_laws:
+    knowledge: 1
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Aristotelian teaching distinguishes the sublunary elements from the heavens. Cusanus questioned
+      the division. Comparing celestial and terrestrial motions would challenge it.
+  mechanical_philosophy:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Engineers think this way about machines; philosophers explain by forms, purposes and occult virtues.
+      Sounds Epicurean.
+  idea_of_progress:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: The ideal is recovering antiquity. Still, Florentines are proud of the dome, printing, compass
+      and guns; Alberti thought the moderns equal the ancients.
+  systematic_invention:
+    knowledge: 1
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Engineers build scale models and keep notebooks (Brunelleschi, Taccola, Francesco di Giorgio,
+      Leonardo) but work alone, in secret, for one patron.
+    local:
+    - Opera del Duomo (models)
+    - Francesco di Giorgio Martini (Siena)
+  golden_rule_universal_ethics:
+    knowledge: 4
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Matthew 7:12 supplies a familiar Christian formulation. Slavery, confessional divisions and unequal
+      civic standing complicate its application.
+  human_equality_dignity:
+    knowledge: 2
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Souls are equal before God, ranks on earth are natural. Pico's Oration (1486) praises human dignity.
+      Florentine households keep slaves.
+    local:
+    - Giovanni Pico della Mirandola
+  natural_rights:
+    knowledge: 2
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Canon lawyers distinguish natural law from enacted statutes. Local entitlements also depend on
+      status, citizenship and guild membership.
+  social_contract:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Republican tradition (Bruni) and Marsilius of Padua place authority in the citizens. Saying so
+      too loudly under the Medici is risky; welcome after 1494.
+    local:
+    - Bartolomeo Scala (chancellor)
+    - anti-Medici families
+  freedom_of_speech_thought:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Humanists enjoy wide licence in Latin among themselves. Pico's theses were condemned in 1487;
+      criticising the regime means exile.
+  religious_tolerance:
+    knowledge: 1
+    use: partial
+    producibility: easy
+    acceptance: low
+    note: Jews are tolerated as licensed moneylenders under Medici protection; friars preach against them.
+      Cusanus and Pico imagine concord of faiths. Heresy is a crime.
+  secular_state:
+    knowledge: 2
+    use: none
+    producibility: medium
+    acceptance: low
+    note: Dante's Monarchia and Marsilius argue it. Florence has fought popes (interdict 1478) but no one
+      separates faith from law.
+  utilitarianism:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: The 'common good' (bene comune) is standard civic rhetoric, but it means the city's honour and
+      peace, not a sum of everyone's welfare.
+  abolition_of_torture:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Judicial torture (the strappado, 'la corda') is ordinary legal procedure under Roman law; confession
+      is the queen of proofs.
+    local:
+    - Bargello
+    - Otto di Guardia
+  positive_sum_cooperation:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: 'Merchants live by it; Archbishop Antoninus (d. 1459) defended fair trade. Policy between cities
+      and guilds is zero-sum: bans, monopolies, tariffs.'
+  game_theory:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Italian diplomats and condottieri reason this way by instinct; no vocabulary for it.
+  tragedy_of_the_commons:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Village statutes regulate pasture, woods and water. Tuscan forest management and the Sienese pasture
+      office provide precedents for governing shared resources.
+    local:
+    - Camaldoli and Vallombrosa forests
+    - Sienese Dogana dei Paschi (Maremma pastures)
+
+  # ---- Agriculture & food
+  three_field_system:
+    knowledge: 2
+    use: none
+    producibility: medium
+    acceptance: low
+    note: A northern system built on summer rain. Tuscany's dry summers make spring-sown grain unreliable;
+      farms are small sharecropped holdings, not open fields.
+    elsewhere:
+    - France and Germany north of the Alps
+  legumes_green_manure:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Broad beans, lupins and vetch are grown and sometimes ploughed in, as Columella says. Sown clover
+      and lucerne meadows are not used; fodder is always short.
+    local:
+    - Pier de' Crescenzi's Ruralia commoda
+    - Columella in print (1472)
+  crop_rotation:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: low
+    note: Sharecroppers already alternate crops and fallow and grow grain among vines and olives. Continuous
+      rotations with fodder crops change what tenants and landlords can harvest.
+    elsewhere:
+    - Flanders and Brabant, fodder crops in place of fallow
+  manure_compost_night_soil:
+    knowledge: 4
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Dung is prized and scarce because farms keep few animals. City night soil goes to market gardens,
+      fresh and uncomposted (spreads worms and fluxes).
+    local:
+    - market gardens (orti) around the walls
+    - dovecotes for pigeon dung
+  liming_marling:
+    knowledge: 2
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Pliny's account of marling is read as a curiosity. Most Tuscan soils are limy already; sour soils
+      are few (chestnut hills).
+  mineral_fertiliser:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: Soil fertility is 'fatness' restored by dung and rest. Wood ash is used. Bone treated with oil
+      of vitriol is conceivable, but acid is made by the flask.
+  terracing_soil_conservation:
+    knowledge: 4
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Hill farms are terraced with dry-stone walls for vine and olive. Clearing of the Apennine slopes
+      for timber and pasture worsens the Arno floods.
+    local:
+    - hill farms of the contado
+    - Casentino forests
+  heavy_plough:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: low
+    note: Light ox-drawn ard and the spade (vanga) suit thin hill soils and small plots. Wheeled mouldboard
+      ploughs work the heavy Po plain and need bigger teams.
+    elsewhere:
+    - Lombardy and the Po valley
+  horse_collar_harness:
+    knowledge: 4
+    use: partial
+    producibility: easy
+    acceptance: low
+    note: Collar harness is familiar on cart horses. Farmers commonly plough with oxen and carry loads by
+      mule. Horse teams require suitable feed and capital.
+  seed_drill:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: low
+    note: Grain is broadcast by hand and harrowed in; yields are about four to six for one. A metering mechanism
+      is a job for a clockmaker, costly for a sharecropper.
+    elsewhere:
+    - China, multi-tube seed drill
+  scythe_cradle:
+    knowledge: 4
+    use: partial
+    producibility: easy
+    acceptance: low
+    note: Scythes mow hay; grain is cut with the sickle. Labour is cheap, plots small and terraced, and
+      gleaning rights belong to the poor.
+  reaper_thresher:
+    knowledge: 1
+    use: none
+    producibility: very-hard
+    acceptance: low
+    note: Pliny's Gaulish reaping cart is a literary curiosity. Threshing is by flail and treading animals
+      on the threshing floor (aia).
+  selective_breeding:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Princes breed horses and hounds with care; farmers follow Varro's rules of thumb. No written pedigrees
+      for farm stock, no progeny testing, best animals often sold.
+    local:
+    - Lorenzo's dairy farm at Poggio a Caiano (Cascine di Tavola)
+    - Chianina cattle of the Val di Chiana
+    elsewhere:
+    - Mantua, Gonzaga horse studs
+  grafting_fruit_trees:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+  irrigation_water_lifting:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: high
+    note: Tuscany relies on rain, wells and bucket wheels in gardens. The great irrigation and navigation
+      canals are Lombard. Mill owners defend their water rights.
+    elsewhere:
+    - Lombardy, Naviglio Grande and Martesana canals
+  wet_rice_cultivation:
+    knowledge: 2
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: A 1468 petition seeks water for proposed rice fields near Pisa. It establishes local knowledge
+      of the crop. Lombardy can supply seed and experience.
+    local:
+    - Pisan plain
+    elsewhere:
+    - Lombardy (Sforza estates)
+  windmill_drainage_land_reclamation:
+    knowledge: 1
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: Tuscan marshes are drained, if at all, by gravity ditches and by silting them up with river mud.
+      Windmills are rare here and the wind unreliable.
+    local:
+    - Val di Chiana
+    - Padule di Fucecchio
+    - Maremma
+    - Pisan plain
+    elsewhere:
+    - Holland, drainage windmills since 1408
+  aquaculture_fish_ponds:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Fast days create steady demand. Monasteries and villas keep stock ponds; lake and lagoon fisheries
+      are let to contractors. Managed carp polyculture is a central European art.
+    local:
+    - Padule di Fucecchio fishery
+    - Lake Trasimeno
+    - monastery fish ponds
+    elsewhere:
+    - Bohemia, great carp pond systems
+    - Comacchio lagoons, eel fishery
+  new_world_crops:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+    note: American food crops are unavailable in Florentine markets. Columbus's first voyage brings news
+      and specimens from the Caribbean in 1493.
+    elsewhere:
+    - Americas
+  potato_cultivation:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+    elsewhere:
+    - Andes
+  maize_beans_squash_milpa:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+    elsewhere:
+    - Mesoamerica
+  nixtamalisation:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+    note: No maize yet. Lime itself is everywhere; the knowledge matters once maize arrives.
+    elsewhere:
+    - Mesoamerica
+  cassava_detoxification:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+    elsewhere:
+    - Caribbean and South America
+  potato_blight_monoculture_risk:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  columbian_exchange:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: medium
+    note: Florentine merchants have contacts in Lisbon and Seville. Any warning about exchanges across the
+      Atlantic must compete with expectations of reaching Asia.
+    local:
+    - Amerigo Vespucci
+    - Florentine merchant houses in Seville and Lisbon
+  food_preservation:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Salted and air-dried pork, salt fish, cheese, dried figs, oil and vinegar pickles. Salt is taxed,
+      which limits curing by the poor.
+  canning:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Glass flasks, cork, wax and pitch exist; wide-mouthed strong jars must be ordered. Tinplate is
+      imported. Under-heated meat or beans in a sealed jar can kill.
+    local:
+    - glassmakers of the Valdelsa
+  pasteurisation:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Wine turning sour in summer is a real loss for every estate. Without a thermometer the heat must
+      be judged by hand or by time.
+    local:
+    - vintners (Arte dei Vinattieri)
+  grain_storage_pest_control:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: The commune buys and stores grain against famine; losses to weevils, damp and rats are heavy.
+      Wheat country, so ergot is rare here.
+    local:
+    - Ufficiali dell'Abbondanza
+    - Orsanmichele (former grain hall)
+  sea_fisheries_salt_cod:
+    knowledge: 3
+    use: partial
+    producibility: hard
+    acceptance: medium
+    note: Barrelled herring and salted tuna and anchovies are bought for Lent. Florence has little fishing
+      fleet of its own; the cod banks in the west are unknown.
+    elsewhere:
+    - Holland and the Baltic, herring
+    - Bergen, stockfish
+    - Bristol, voyages into the Atlantic
+    - Sicily, tuna traps
+  sugar_cane_beet:
+    knowledge: 3
+    use: partial
+    producibility: hard
+    acceptance: high
+    note: Apothecaries sell cane sugar from Sicily, Cyprus and Madeira. Commercial cane production faces
+      a colder climate in Tuscany. Beet is grown as a vegetable.
+    local:
+    - apothecaries (speziali)
+    elsewhere:
+    - Madeira and Sicily, cane sugar
+    - Venice, refining
+  sericulture:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Florence still imports raw silk, but has encouraged local production for decades. A 1441 planting
+      requirement promoted mulberry trees for silkworms.
+    local:
+    - Arte di Por Santa Maria (silk guild)
+    - mulberry plantings in the contado
+    elsewhere:
+    - Lucca
+    - Bologna, water-powered throwing mills
+    - Calabria and Spain, raw silk
+  beekeeping_movable_frame:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Beekeepers take comb from fixed hives, sometimes destroying the colony. Classical authors describe
+      a king bee. A joiner could try removable frames.
+  coffee_tea_cacao:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: medium
+    note: None is a customary Florentine drink. Mediterranean trade might connect a merchant to Yemeni coffee.
+      There is no Florentine supply of American cacao.
+    elsewhere:
+    - Yemen, Sufi coffee drinking
+    - China, tea
+    - Mesoamerica, cacao
+  hybrid_maize:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  semi_dwarf_wheat_rice:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+
+  # ---- Navigation, transport & exploration
+  world_geography:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Martellus draws southern Africa from reports of Dias. Florentine geographers know the Mediterranean
+      well. Maps still greatly exaggerate Asia's eastward extent.
+    local:
+    - Henricus Martellus (maps showing Dias's Cape)
+    - Francesco Berlinghieri
+    - Giorgio Antonio Vespucci
+    elsewhere:
+    - Lisbon, reports of Dias rounding southern Africa in 1488
+    - Indian Ocean ports, established monsoon routes
+  wind_systems_ocean_currents:
+    knowledge: 1
+    use: none
+    producibility: medium
+    acceptance: high
+    note: Mediterranean wind names are familiar in Tuscany. Portuguese Atlantic pilots use offshore return
+      routes. Indian Ocean pilots time voyages to the monsoons.
+    elsewhere:
+    - 'Lisbon and Lagos: pilots of the Guinea trade'
+    - 'Arab pilots: monsoon calendar'
+  magnetic_compass:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: A magnetic needle and wind-rose card are familiar to Mediterranean pilots. Explanations for the
+      needle's direction include attraction towards the celestial pole.
+    elsewhere:
+    - 'Genoa, Venice, Amalfi: compass makers'
+  magnetic_declination:
+    knowledge: 1
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Some compass-sundials mark a local offset. Columbus records the changing bearing of the needle
+      relative to Polaris in 1492. Pilots lack a chart of variation.
+    elsewhere:
+    - 'Nuremberg: sundial compasses marked with the offset'
+    - 'Flanders: ''corrected'' compasses'
+  dead_reckoning_log_line:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Pilots use compass, half-hour glass, chart and the toleta de marteloio; speed is guessed by eye.
+      The log line is unknown.
+    elsewhere:
+    - 'Venice, Genoa: pilots trained in the marteloio'
+  latitude_astrolabe_quadrant:
+    knowledge: 2
+    use: none
+    producibility: easy
+    acceptance: high
+    note: Tuscan astronomers measure altitudes. Portuguese pilots use Polaris, and José Vizinho observed
+      the noon Sun on the Guinea coast in 1485.
+    local:
+    - Lorenzo della Volpaia (instrument maker)
+    - Toscanelli's gnomon in the Duomo (1475)
+    - Regiomontanus' printed Ephemerides
+    elsewhere:
+    - Portugal, José Vizinho's observations
+    - Castile, Zacuto's astronomical tables composed in Salamanca
+    - Indian Ocean, stellar altitude navigation
+  reflecting_octant_sextant:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: medium
+    note: Polished metal mirrors are available. Precisely divided marine instruments are the obstacle.
+  longitude_lunar_distances:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: medium
+    note: Precisely divided marine instruments and accurate predictions of the Moon's position are the obstacles
+      to a useful longitude.
+  longitude_chronometer:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: high
+    note: Pilots estimate easting and westing by dead reckoning. Astronomers can compare eclipse times on
+      land. Existing clocks cannot keep reference time on an ocean passage.
+    local:
+    - Lorenzo della Volpaia (clocks)
+    - Regiomontanus' Ephemerides
+  map_projection_charts:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Florentine cartographers use Ptolemy's projections. Mediterranean pilots use portolan charts with
+      rhumb lines. The two traditions solve different problems.
+    local:
+    - Henricus Martellus
+    - Francesco Rosselli (engraved maps)
+    - Berlinghieri's Geographia (Florence 1482)
+    elsewhere:
+    - Genoa, Venice and Majorca, portolan chart makers
+  sounding_lead_pilotage:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Lead and line and written portolani (sailing directions) are everyday tools; the first printed
+      portolano appears in Venice in 1490.
+  tides_tide_tables:
+    knowledge: 2
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: The tidal range is small on much of the Tuscan coast. Venetian waters and Atlantic harbours offer
+      clearer examples of the relation to the Moon.
+    elsewhere:
+    - 'Atlantic ports (Lisbon, Bristol, Bruges): tide rules by the Moon''s age'
+  polynesian_wayfinding:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+  ship_design_caravel_carrack:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: high
+    note: Florence's state galley service has declined. Florentine merchants still hire freight space and
+      reach Atlantic ports. Iberian shipyards build caravels.
+    local:
+    - Pisa and Livorno (Porto Pisano)
+    - hired Genoese shipwrights
+    elsewhere:
+    - 'Portugal, Palos and Huelva: caravels'
+    - 'Genoa, Venice, Biscay: carracks (naos)'
+  chinese_junk_treasure_ships:
+    knowledge: 2
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: Marco Polo and Niccolò de' Conti describe large Asian ships. Their accounts give Italian readers
+      a comparison for local hulls.
+    elsewhere:
+    - China (the treasure fleets ended 1433)
+  watertight_bulkheads:
+    knowledge: 2
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Marco Polo describes Chinese ships divided into compartments to contain flooding. Tuscan shipwrights
+      can discuss the design from his account.
+    elsewhere:
+    - China
+  copper_sheathing_shipworm:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Shipworm is known in the Mediterranean; hulls are tarred and tallowed, sometimes given a sacrificial
+      plank layer. Copper sheet is costly.
+  ship_provisioning_long_voyages:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Biscuit, wine, salt fish, oil and cheese are familiar provisions. Longer passages strain water
+      storage and leave crews without fresh supplies.
+    elsewhere:
+    - 'Lisbon: victualling for Guinea and the Cape voyages'
+  steamship_screw_propeller:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: medium
+  lighthouse_buoys:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Livorno's Fanale marks the coast at night. The medieval Meloria tower has been destroyed. The
+      shoals remain a pilotage hazard.
+    local:
+    - Fanale of Livorno
+    elsewhere:
+    - 'Genoa: the Lanterna'
+  diving_bell:
+    knowledge: 2
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Aristotle describes trapped air underwater. At Nemi in 1446 Genoese divers attached ropes for
+      Alberti's unsuccessful salvage attempt, without a documented diving bell.
+    local:
+    - bell and cannon founders
+  canal_locks:
+    knowledge: 2
+    use: none
+    producibility: medium
+    acceptance: high
+    note: Alberti describes navigation locks in a work printed in Florence in 1485. The Milanese canals
+      offer working examples. The Arno presents problems of floods and silt.
+    elsewhere:
+    - Milan, Conca di Viarenna (1439)
+    - Lombardy, Bereguardo canal locks
+  paved_roads_macadam:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: City streets are stone-paved; country roads are mule tracks kept by local communities. Goods go
+      by pack mule and river. Roman method is admired, unaffordable.
+    local:
+    - Ufficiali di Torre (roads and bridges office)
+  spoked_wheel_suspension_carriage:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Spoked wheels, iron tyres and pivoting fore-axles exist on carts. People ride or use litters;
+      hung coaches are a novelty of northern Italian courts.
+    elsewhere:
+    - 'Hungary: the kocsi coach'
+    - 'Ferrara and Milan: court carriages'
+  stirrup_saddle:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+  arch_bridge_truss:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: high
+    note: The Ponte Vecchio demonstrates shallow segmental stone arches. Roof carpenters know triangulated
+      timber framing. A long timber bridge would need suitable joints and abutments.
+    local:
+    - Ponte Vecchio (1345)
+    - Giuliano da Sangallo
+  railway:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: A quarry could try a short timber wagonway. Cartwrights and carpenters have the necessary skills.
+      Iron rails would be expensive.
+  steam_locomotive:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: medium
+  bicycle:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: A wooden running-machine is cartwright's work; chain, bearings and tyres are not. Roads are bad.
+  automobile:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: medium
+  hot_air_hydrogen_balloon:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Paper, linen, silk and varnish are at hand. That hot air is lighter is not a concept; flight invites
+      talk of sorcery, but also spectacle for a feast.
+    local:
+    - silk weavers (Arte della Seta)
+    - festival engineers of the San Giovanni feast
+  parachute:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Leonardo drew a pyramidal canopy in Milan around 1485. An earlier Italian manuscript also depicts
+      a parachute. Neither drawing documents a successful descent.
+  glider_aeroplane:
+    knowledge: 1
+    use: none
+    producibility: very-hard
+    acceptance: low
+    note: Leonardo studies bird flight and flapping machines in Milan. Everyone assumes flight means beating
+      wings.
+  jet_engine:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: medium
+  rocket_spaceflight:
+    knowledge: 1
+    use: none
+    producibility: impossible
+    acceptance: low
+    note: Powder rockets are fireworks. The heavens are crystalline spheres; travelling there is theology
+      or satire.
+
+  # ---- Communication & information
+  writing_invention:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+  alphabet_writing:
+    knowledge: 4
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: 'Florence is unusually literate: most merchants'' and artisans'' sons read and write Tuscan. Peasants
+      and most women do not.'
+  codex_book:
+    knowledge: 4
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Books have leaf numbers at best; page numbers, title pages and alphabetical indexes are rare in
+      print. An easy improvement for printers.
+    local:
+    - Vespasiano da Bisticci (retired bookseller)
+    - cartolai (stationers)
+  woodblock_printing:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Used for playing cards, saints' images, cloth patterns and book illustration; Florentine woodcut
+      books begin about 1490. Whole-page text blocks are a northern habit.
+    elsewhere:
+    - Germany and the Netherlands, block books
+    - China and Korea, extensive woodblock printing
+  printing_press:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Florence has had presses since 1471 and printed the first Greek Homer (1488). Venice dominates
+      the trade. Pamphlets spread ideas fast, and accusations too.
+    local:
+    - Antonio Miscomini
+    - Bartolomeo de' Libri
+    - Lorenzo Morgiani
+    elsewhere:
+    - 'Venice: the largest printing centre in Europe'
+  lithography_engraving:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: high
+    note: Woodcut and copper engraving flourish (goldsmiths' craft); used for devotional images and maps,
+      hardly for technical drawings. Etching on paper and lithography are unknown.
+    local:
+    - Francesco Rosselli
+    - goldsmiths (niello work)
+    elsewhere:
+    - Rome, Antonio del Pollaiuolo
+    - Mantua, Mantegna
+    - Upper Rhine, Schongauer
+  postal_system:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: high
+    note: Merchant guild couriers (scarsella) leave on fixed days for Lyon, Bruges, Rome, Venice; princes
+      run relay riders. Nothing is open to the public at a fixed price.
+    local:
+    - Mercanzia and merchant companies' couriers
+    elsewhere:
+    - 'Milan: Sforza relay post'
+    - '1490: the Tassis family starts Maximilian''s Innsbruck–Netherlands relay'
+  newspapers_periodicals:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: News travels in merchants' letters and ambassadors' dispatches, copied and passed on. A regular
+      printed sheet is new; rulers will want to control it.
+    local:
+    - printers
+    - bankers' correspondence networks
+  scientific_journal:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: low
+    note: Humanists exchange Latin letters, some printed. A periodical would require a printer, a continuing
+      supply of reports and readers willing to support it.
+  encyclopedia_reference_works:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: high
+    note: 'Pliny (in Landino''s Italian, 1476), Isidore and Vincent of Beauvais are the reference works:
+      unverified, not alphabetical, and silent on workshop practice.'
+    local:
+    - Cristoforo Landino
+    - printers
+  library_catalogue:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Libraries have inventories by desk and subject, with books chained to benches. Slips, shelf marks
+      per volume and author indexes are new.
+    local:
+    - San Marco library
+    - Medici library
+    elsewhere:
+    - 'Rome: Vatican Library inventories (Platina, 1475–81)'
+  pencil_steel_pen:
+    knowledge: 1
+    use: none
+    producibility: medium
+    acceptance: high
+    note: Artists draw with silverpoint, lead stylus, chalk and charcoal; everyone writes with quill and
+      iron-gall ink. Graphite is not known as a material.
+    local:
+    - painters' workshops
+    - goldsmiths (could cut metal nibs)
+  shorthand:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: high
+    note: Humanists have heard of Cicero's Tironian notes. Notaries use heavy abbreviation; sermons are
+      reconstructed from hurried notes.
+    local:
+    - Arte dei Giudici e Notai
+    - listeners taking down Savonarola's sermons
+  typewriter:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+  copying_duplicating:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: high
+    note: Every merchant letter is copied by hand into a copy-book by a clerk. Lampblack, wax, oil and thin
+      paper exist.
+    local:
+    - merchant-banking houses
+    - chancery of the Signoria
+  braille_tactile_writing:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: The blind live as beggars or singers.
+  sign_languages:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: The deaf are held unteachable. Monks know sign lists for hours of silence.
+  vernacular_translation:
+    knowledge: 4
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Tuscan is a literary language (Dante; Landino's Pliny; printed Italian Bible, 1471). Medicine,
+      law, theology and university teaching stay Latin; Greek science is being translated into Latin.
+    local:
+    - Cristoforo Landino
+    - abacus-school textbooks
+  signal_beacons_flag_codes:
+    knowledge: 4
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Fortresses and coast towers pass pre-agreed alarms by fire, smoke and bells. No code for arbitrary
+      messages.
+  optical_telegraph:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: high
+    note: Signal fires and towers exist for war. A coded semaphore line between Florence and Pisa would
+      be militarily valuable; without telescopes the stations must stand close.
+  standard_time_zones:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: low
+    note: Town clocks follow local time. Pisa and Florence could agree on a common reference and compare
+      readings periodically. Keeping clocks synchronized would take continuing work.
+
+  # ---- Institutions, law & governance
+  written_law_code:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: City statutes (1415 redaction) plus Roman and canon law, in Latin, known to lawyers and notaries
+      rather than citizens.
+    local:
+    - the Florentine Pandects (6th-century Digest manuscript in the Palazzo della Signoria)
+    - Arte dei Giudici e Notai
+  rule_of_law:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: low
+    note: Republican institutions (Signoria, councils) exist but are controlled by the Medici through patronage.
+      Ideas of the mixed constitution are discussed by humanists.
+  independent_judiciary_judicial_review:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: low
+    note: Judges (podestà) are hired foreigners on short terms and audited on leaving, to keep them impartial.
+      Political cases go to the Otto di Guardia, which obeys the regime.
+    local:
+    - Podestà (Bargello)
+    - Otto di Guardia
+  habeas_corpus_fair_trial:
+    knowledge: 1
+    use: none
+    producibility: medium
+    acceptance: low
+    note: 'Procedure is inquisitorial: secret denunciations in boxes (tamburi), detention at the magistrates''
+      will, torture to confess, exile without trial.'
+    elsewhere:
+    - 'England: jury trial and the writ'
+  representative_government:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Florentine councils vote on laws and taxes. Eligibility is restricted, and the Medici influence
+      appointments. The Council of Seventy, created in 1480, concentrates power.
+    elsewhere:
+    - 'Venice: Great Council'
+    - 'England: Parliament'
+    - 'Castile and Aragon: Cortes'
+  sortition:
+    knowledge: 4
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: The Signoria has two-month terms. The regime controls the electoral purses and can substitute
+      selection by hand for a draw.
+    local:
+    - Palazzo della Signoria
+    - accoppiatori
+  citizen_assembly:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: A parlamento of citizens in the piazza is called only to approve emergency commissions (balìe);
+      ordinary laws pass through restricted councils.
+    local:
+    - Palazzo della Signoria
+  secret_ballot:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Councils vote with black and white beans; secrecy is imperfect and votes are watched.
+    elsewhere:
+    - 'Venice: elaborate secret balloting for the Doge and offices'
+  peaceful_transfer_of_power:
+    knowledge: 2
+    use: partial
+    producibility: hard
+    acceptance: low
+    note: Civic offices rotate regularly. Medici influence passed within the family in 1464 and 1469. The
+      Pazzi attack of 1478 failed to displace Lorenzo.
+  written_constitution:
+    knowledge: 1
+    use: none
+    producibility: medium
+    acceptance: low
+    note: Statutes describe the offices, but any special commission (balìa) called by a staged assembly
+      can suspend them.
+  federalism_subsidiarity:
+    knowledge: 1
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Florence rules Pisa, Arezzo, Pistoia and Volterra as subjects, and they resent it. Italy's states
+      ally but would never share sovereignty.
+    elsewhere:
+    - Swiss Confederation
+    - Hanseatic League
+  international_law_sovereignty:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Resident ambassadors and written leagues are Italian inventions of this century. The Pope claims
+      to arbitrate between kings, also over newly found lands.
+    local:
+    - Florentine chancery (Bartolomeo Scala)
+    - Otto di Pratica (foreign affairs)
+    elsewhere:
+    - 'Rome: papal bulls dividing discoveries (Aeterni regis 1481)'
+  property_rights_land_registry:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Property is secured by notaries' deeds and listed in tax declarations (catasto, 1427 onward).
+      No surveyed public register; exiles' property is confiscated.
+    local:
+    - Catasto officials
+    - notarial archives
+  commercial_law_contract_enforcement:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Florence's merchant court, notaries and account books as legal proof are among the best in Europe.
+    local:
+    - Tribunale della Mercanzia
+    - Arte dei Giudici e Notai
+  patents:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Venice has a patent statute since 1474. Florence grants occasional privileges (Brunelleschi got
+      one for a boat in 1421). Guilds dislike monopolies held by outsiders.
+    elsewhere:
+    - 'Venice: patent statute of 1474'
+  copyright:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Printers reprint freely. Venice has begun granting single privileges (to an author, Sabellico,
+      in 1486); Florence grants none.
+    elsewhere:
+    - 'Venice: printing privileges'
+  standard_weights_measures:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Each city has its own braccio, pound and bushel, checked by guild and commune within its walls.
+      Merchants convert with handbooks. A common system threatens local privileges.
+    local:
+    - guild inspectors
+    - Zecca (mint) assayers
+    - merchant handbooks (pratiche di mercatura)
+  census_vital_registration:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: The catasto lists households. San Giovanni's baptism registers survive from November 1450. The
+      Grascia and the physicians' guild keep separate death registers.
+    local:
+    - Baptistery of San Giovanni registers
+    - Libri dei morti
+    - Catasto
+  public_accounts_audit:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: low
+    note: Officials are audited on leaving office and the public debt has double-entry books. The Medici
+      regime moves public money for its own needs unseen.
+    local:
+    - Ufficiali del Monte
+    - Camera del Comune
+  merit_civil_service:
+    knowledge: 1
+    use: partial
+    producibility: medium
+    acceptance: low
+    note: Learning and writing skill matter for chancery appointments. Eligibility, patronage and selection
+      by lot shape other offices.
+    local:
+    - Bartolomeo Scala (chancellor, a miller's son)
+    elsewhere:
+    - 'China: examination system'
+  universal_schooling:
+    knowledge: 2
+    use: partial
+    producibility: hard
+    acceptance: medium
+    note: Reading masters and abacus schools serve urban families who can pay. Girls also learn at home
+      or in convents. Access varies by wealth and location.
+    local:
+    - abacus schools
+    - grammar masters
+  university:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Lorenzo moved law, medicine and theology to Pisa in 1473; Florence keeps the humanities (Greek,
+      rhetoric). Teaching is commentary on set texts.
+    local:
+    - Studio of Pisa
+    - Studio fiorentino (Poliziano, Chalcondyles until 1491)
+    elsewhere:
+    - Padua and Bologna (medicine, law)
+  scientific_academy:
+    knowledge: 1
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Ficino's correspondents and pupils exchange texts and discuss Plato. They offer contacts for a
+      learned society, though there is no chartered Florentine Platonic academy.
+    local:
+    - Marsilio Ficino and his correspondents
+  industrial_research_lab:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Large workshops and the wool guild have money and skilled men but invest in proven work. A patron
+      could fund a standing workshop of inventors.
+    local:
+    - Arte della Lana
+    - Opera del Duomo
+    elsewhere:
+    - 'Venice: the Arsenal'
+  public_library_museum:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: San Marco's library admits scholars and lends access to Greek and Latin manuscripts. Young sculptors
+      can study antiquities in the Medici garden.
+    local:
+    - San Marco library
+    - Medici sculpture garden near San Marco
+    - Medici private library
+    elsewhere:
+    - 'Rome: Vatican Library; Capitoline bronzes (1471)'
+    - 'Cesena: Malatestiana'
+  free_press:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Printing is barely regulated yet. Innocent VIII's bull of 1487 demands prior censorship by bishops;
+      it is little enforced. Rulers punish afterwards.
+  abolition_of_slavery:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Enslaved people work in Florentine households. Notarial records and merchants' links with Iberia
+      offer evidence of the trade. Legal status varies with origin and circumstances.
+    local:
+    - slave-owning households
+    - Ospedale degli Innocenti (many foundlings are slaves' children)
+  women_rights_suffrage:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Women have dowry and inheritance claims and can make wills. Statutes favour male heirs, and women
+      are excluded from political office.
+    local:
+    - Alessandra Scala (Greek scholar)
+    - Monte delle Doti
+    elsewhere:
+    - 'Venice: Cassandra Fedele'
+  charitable_endowment_waqf:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Hospitals, foundling home and confraternities live on endowed farms and houses; founding one earns
+      salvation and honour.
+    local:
+    - Ospedale degli Innocenti
+    - Santa Maria Nuova
+    - Misericordia
+    - Buonomini di San Martino
+  guilds_apprenticeship:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Seven major and fourteen minor guilds control training, quality and entry, and political rights.
+      They block outsiders, new methods and women; wool workers may not organise.
+    local:
+    - Arte della Lana
+    - Arte di Calimala
+    - Arte della Seta
+    - Arte dei Medici e Speziali
+  public_health_board:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Florence appoints temporary plague officials in epidemics; Milan and (since the 1480s) Venice
+      have permanent offices. A permanent Florentine office would be a real advance.
+    local:
+    - Signoria
+    - temporary plague officials
+    elsewhere:
+    - 'Milan: permanent health office'
+    - 'Venice: Provveditori alla Sanità'
+  fire_brigade_police_building_codes:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: The Otto di Guardia and their constables keep order, a night curfew holds, and the commune keeps
+      a small fire watch. The city is stone and tile; no pumps.
+    local:
+    - Otto di Guardia
+    - Ufficiali di Torre
+  social_insurance:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Guilds and confraternities aid sick members and widows; the state dowry fund is a savings scheme
+      for fathers. Nothing is compulsory or covers labourers.
+    local:
+    - Monte delle Doti
+    - confraternities
+    - Buonomini di San Martino (the 'shamed poor')
+  trade_unions_collective_bargaining:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Cloth workers are forbidden to assemble; the Ciompi rising of 1378 is the ruling class's nightmare.
+      Proposing this is sedition.
+
+  # ---- Economy & finance
+  coinage:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: 'The gold florin (since 1252) is Europe''s standard coin, hammer-struck. Wages are paid in debased
+      silver and copper, big trade in gold: a standing grievance.'
+    local:
+    - Zecca (mint) beside the Palazzo della Signoria
+  double_entry:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Florentine merchant houses and some public offices keep double-entry books. Practice varies among
+      small shops. Pacioli's printed exposition appears in Venice in 1494.
+    local:
+    - Medici bank
+    - Florentine merchant ledgers
+  interest_loans_collateral:
+    knowledge: 4
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Open interest is the sin of usury, so bankers hide it in exchange rates and 'gifts' on deposits.
+      Licensed Jewish pawnbrokers serve the poor at high rates.
+    local:
+    - Jewish loan banks (licensed since 1437)
+    - Arte del Cambio
+  banking_credit:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Florentine firms use deposits, book transfers and bills of exchange. The Medici bank has lost
+      its northern branches. Other merchant houses still offer international credit.
+    local:
+    - Medici bank
+    - Strozzi, Gondi and Capponi houses
+    - Mercato Nuovo (bankers' tables)
+  paper_money:
+    knowledge: 1
+    use: none
+    producibility: medium
+    acceptance: low
+    note: Read of in Marco Polo as a marvel of the Khan. Florentines trust gold and book credit with known
+      names; a note from the commune would be distrusted.
+    elsewhere:
+    - China (Ming notes by now nearly worthless)
+  quantity_theory_inflation:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Oresme's tract on debasement is known; the mint knows bad coin drives out good. That more money
+      raises all prices is not a stated idea.
+  partnership_commenda:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Trading companies are partnerships renewed every few years; limited partnership (accomandita)
+      has been legal in Florence since 1408.
+  joint_stock_company:
+    knowledge: 2
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Florentine trading partnerships are often renewed for fixed terms. Limited partners already exist.
+      Transferable Monte credits and Genoa's San Giorgio offer comparisons for pooled capital.
+    elsewhere:
+    - 'Genoa: Casa di San Giorgio, maone'
+  insurance:
+    knowledge: 4
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Brokers circulate marine policies among underwriters. Route, wartime danger and reported piracy
+      affect premiums. A Florentine broker can compare prices for similar voyages.
+    local:
+    - insurance brokers at the Mercato Nuovo
+    elsewhere:
+    - 'Genoa, Barcelona: insurance ordinances'
+  life_tables_annuities:
+    knowledge: 1
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: The Monte delle Doti prices marriage payments contingent on survival. Its ledgers and the death
+      registers provide evidence for constructing a local survival table.
+    local:
+    - Monte delle Doti ledgers
+    - Baptistery registers
+    - Libri dei morti
+  public_debt_bonds:
+    knowledge: 4
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: The Monte Comune (1340s) consolidates forced loans into transferable interest-bearing credits.
+      Interest is often cut or delayed, so credits trade far below face value.
+    local:
+    - Monte Comune
+    - Ufficiali del Monte
+    elsewhere:
+    - 'Venice: Monte Vecchio and Nuovo'
+    - 'Genoa: San Giorgio'
+  stock_exchange:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Brokers trade Monte credits, exchange and insurance at the Mercato Nuovo, without fixed rules
+      or published prices.
+    local:
+    - Mercato Nuovo
+    elsewhere:
+    - Bruges, merchants' bourse
+    - Antwerp, commercial fairs
+    - Lyon, exchange fairs
+  central_bank:
+    knowledge: 1
+    use: none
+    producibility: hard
+    acceptance: low
+    note: No standing lender of last resort exists. Emergency support depends on patrons and public funds.
+      The Monte manages public debt.
+    elsewhere:
+    - 'Barcelona: Taula de Canvi (public deposit bank, 1401)'
+    - 'Genoa: Casa di San Giorgio'
+  division_of_labour:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Wool cloth passes through some two dozen specialised trades under a merchant's direction (putting-out).
+      Practised, never theorised, and not centralised under one roof.
+    local:
+    - Arte della Lana
+    - Arte della Seta
+    elsewhere:
+    - 'Venice Arsenal: galleys fitted out in sequence'
+  comparative_advantage_free_trade:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: low
+    note: 'Policy is protection: foreign cloth is banned, subject towns may not compete with Florentine
+      guilds, raw wool and alum routes are fought over.'
+  price_mechanism_supply_demand:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Merchants and moral theologians (Antoninus) know prices follow scarcity. In dearth the city fixes
+      bread prices and hunts hoarders.
+    local:
+    - Grascia and Abbondanza (provisions offices)
+  ever_normal_granary:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: high
+    note: The Abbondanza purchases grain and sells it in times of dearth. Financing and maintaining a regular
+      reserve would build on familiar civic provisioning.
+    local:
+    - Ufficiali dell'Abbondanza
+    - Orsanmichele (former grain hall)
+    elsewhere:
+    - 'Venice: public grain stores'
+    - 'China: ever-normal granaries'
+  progressive_income_tax:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: low
+    note: Florence's catasto assesses household wealth. A graduated scale adopted in 1480 applies in the
+      1481 assessment. This differs from a tax on annual earnings.
+    local:
+    - Catasto officials
+    - Monte
+  cooperatives_savings_banks:
+    knowledge: 2
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Franciscans found cheap public pawn banks (Monte di Pietà) across Italy; Florence has refused
+      one so far (it comes in 1495–96).
+    elsewhere:
+    - Perugia, Siena and Bologna, charitable pawn banks
+  economic_growth_productivity:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Wealth means treasure, land and the city's share of a fixed trade. That output per head could
+      keep rising is unimagined.
+  national_accounts_gdp:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: 'Raw material exists: tax declarations, customs (gabelle) books, chroniclers'' counts of shops
+      and looms. Households fear any count as a new tax.'
+    local:
+    - Catasto records
+    - gabelle offices
+    - Benedetto Dei's lists of Florentine firms
+  aggregate_demand_countercyclical_policy:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Money is coin and the commune is always in debt. Building work to employ the poor is understood
+      as charity.
+
+  # ---- Warfare, security & deterrence
+  close_order_infantry:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Italian foot are skirmishers and garrison troops. Swiss pike squares beat Burgundy in 1476–77
+      and are for hire; Vegetius is read as literature.
+    elsewhere:
+    - Swiss cantons
+    - Maximilian's Landsknechte
+    - 'Spain: infantry of the Granada war'
+  cavalry_chariot:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: The armoured man-at-arms with his 'lance' of attendants is the core of every Italian army; Venice
+      adds Balkan light horse (stradiots).
+  crossbow_longbow:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Steel crossbows are the standard missile weapon of foot and mounted troops, giving ground slowly
+      to handguns.
+    elsewhere:
+    - 'England: longbow'
+    - 'Ottomans: composite bow'
+  torsion_artillery_trebuchet:
+    knowledge: 3
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Trebuchets have just gone out of use in favour of guns. Ancient torsion engines are known from
+      Vitruvius and Valturio's printed De re militari.
+  oared_galley_ram:
+    knowledge: 4
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Galleys rule Mediterranean war (boarding, a gun in the bow; no rams). Florence has let its own
+      galleys lapse and relies on hired ships.
+    local:
+    - Pisa arsenal (run down)
+    - Livorno
+    elsewhere:
+    - Venice Arsenal
+    - Genoa
+    - Naples and the Ottomans
+  incendiaries_greek_fire:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Fire pots and fire lances are used in sieges and at sea. Byzantine Greek fire is a lost legend.
+    elsewhere:
+    - 'Modena hills: natural rock oil'
+  field_fortification:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Ditches, fortified camps and siege trenches are familiar to Italian forces. Levied labourers help
+      construct earthworks.
+    elsewhere:
+    - Bohemia, Hussite wagon forts
+  gunpowder:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: 'Made routinely; grained powder is used for handguns. Saltpetre is the bottleneck: scraped locally
+      and imported through Venice.'
+    local:
+    - powder makers of the commune
+    - apothecaries
+  cannon_artillery:
+    knowledge: 4
+    use: partial
+    producibility: medium
+    acceptance: high
+    note: Italian states rely on huge slow bombards throwing stone. France has lighter bronze guns with
+      iron shot on horse-drawn wheeled carriages; Italy sees them in 1494.
+    local:
+    - Florentine bronze founders
+    - artillery of the Signoria
+    elsewhere:
+    - 'France: royal artillery'
+    - Burgundy and Germany
+    - Ottomans
+  ballistics_gunnery:
+    knowledge: 1
+    use: none
+    producibility: medium
+    acceptance: high
+    note: Gunners aim by experience and guard their rules. Theory says a shot flies straight until its impetus
+      is spent, then drops.
+  handguns_muskets:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: high
+    note: Matchlock handguns (schioppetti, archibugi) serve in sieges and garrisons, in small companies.
+      No wheel-lock or flintlock exists yet.
+    elsewhere:
+    - 'Milan: large handgunner companies'
+    - 'Brescia valleys and south Germany: gunmaking'
+  pike_and_shot_drill:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Handgunners fire individually from cover. Drill by word of command needs men kept under pay all
+      year, which Florence refuses.
+  socket_bayonet:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Handguns are too few and too heavy for this to matter yet.
+  bastion_fortification:
+    knowledge: 3
+    use: partial
+    producibility: hard
+    acceptance: medium
+    note: 'Tuscany is where the transition is happening: low thick round towers, scarped walls, the first
+      angled bastions. Full systems come after the shock of 1494.'
+    local:
+    - Giuliano da Sangallo (Poggio Imperiale, from 1488)
+    - Sarzana citadel
+    - Volterra fortress
+    - Francesco di Giorgio Martini (Siena)
+    elsewhere:
+    - 'Marche: Francesco di Giorgio''s fortresses (San Leo, Sassocorvaro)'
+    - Ostia fortress (1480s)
+  siegecraft_mining:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: 'Sieges are slow: blockade, bombards, timber-propped mines. Gunpowder mines are discussed by engineers
+      (tried by the Genoese at Sarzanello, 1487) but not mastered.'
+    local:
+    - Francesco di Giorgio Martini (Siena)
+  naval_gunnery_line_of_battle:
+    knowledge: 1
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: Ships carry light guns on rails and castles to kill men before boarding. No gunports, no ship-killing
+      guns.
+    elsewhere:
+    - 'Portugal: João II tests heavy guns low in caravels'
+  war_rockets:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: low
+    note: Rockets are festival fireworks and appear in engineers' picture books; soldiers think them toys.
+    local:
+    - fireworks of the San Giovanni feast
+    elsewhere:
+    - 'India and China: war rockets'
+  standing_army_logistics:
+    knowledge: 2
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Florence contracts with professional soldiers. Other Italian states retain captains for long periods,
+      and France maintains permanent companies.
+    elsewhere:
+    - 'France: compagnies d''ordonnance'
+    - Venice
+    - 'Ottomans: Janissaries'
+  mercenaries_citizen_militia:
+    knowledge: 4
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Florence relies heavily on condottieri supervised by civilian commissioners. Humanist praise of
+      citizen militias gives advocates an argument for a different system.
+    local:
+    - Otto di Pratica
+    - Niccolò Machiavelli (not yet in office)
+  conscription_mass_army:
+    knowledge: 1
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Peasants of the contado are levied as pioneers and labourers only. Arming subjects is thought
+      dangerous.
+  military_camp_hygiene:
+    knowledge: 2
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Vegetius advises clean water and moving camp; in practice siege camps rot. Camp fevers are blamed
+      on air.
+    elsewhere:
+    - Castilian siege armies in the Granada war, reports of camp fever
+  military_engineering_roads_bridges:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: high
+    note: Engineers are hired one by one, architects doubling as fortress and siege experts; labour is levied
+      peasants. No permanent corps.
+    local:
+    - Giuliano da Sangallo
+    - Francesco di Giorgio Martini (Siena)
+    - Leonardo da Vinci (Milan)
+  strategy_theory:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Vegetius, Frontinus and Caesar are printed and quoted. Italian wars aim at manoeuvre, ransom and
+      negotiated peace, not destruction.
+    local:
+    - humanist chancery
+    - Valturio's De re militari (printed 1472)
+  general_staff_war_college:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Civilian magistrates supervise captains and their households. There is no permanent professional
+      staff college.
+    local:
+    - Otto di Pratica
+    - Dieci di Balìa when appointed in wartime
+  wargaming_operations_research:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Chess is the only war game. Counting what actually worked would appeal to merchant commissioners.
+  military_intelligence_codebreaking:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Diplomats send ciphered reports and Italian chanceries study intercepted messages. Alberti's cipher
+      disc exists in manuscript.
+    local:
+    - Florentine chancery
+    - Medici bank correspondents
+    elsewhere:
+    - 'Milan and Venice: cipher secretaries'
+  rifling_minie_breechloader:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: Some small cannon load at the breech with removable chambers and leak badly. Spin-stabilising
+      is known only from fletched crossbow bolts.
+  smokeless_powder_high_explosive_shell:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: high
+  machine_gun:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: high
+    note: Multi-barrel 'organ guns' exist and engineers sketch more.
+  ironclad_warship:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: medium
+  submarine_torpedo:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  tank_combined_arms:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: medium
+    note: Engineers' books show covered war carts (Valturio, Leonardo); none has been built.
+  military_aviation:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: medium
+  chemical_weapons:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: low
+    note: Stinking smoke is an accepted trick in mines and breaches. Poison is thought dishonourable and
+      a matter for assassins.
+  nuclear_weapons:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  security_dilemma_arms_race:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Lived daily by the five Italian powers and described in dispatches, never as a general principle.
+  deterrence:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Leagues and hired captains are kept to discourage attack; the threat fails against France, which
+      Italians think too distant to come.
+  balance_of_power:
+    knowledge: 3
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: 'Lorenzo''s policy: keep Milan, Venice, Naples, the Pope and Florence in equilibrium. It depends
+      on him personally and breaks within two years of his death.'
+    local:
+    - Lorenzo de' Medici
+    - Florentine ambassadors
+  collective_security_alliances:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: The Italian League (1455) pledged all five powers against any aggressor and outside invader. It
+      is a dead letter by 1490.
+  arms_control:
+    knowledge: 1
+    use: none
+    producibility: medium
+    acceptance: low
+    note: Treaties fix how many troops allies must keep, never limits. The old church ban on crossbows is
+      a joke.
+  laws_of_war:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Condottieri spare and ransom each other, but a town taken by storm may be sacked (Volterra, 1472).
+      French and Swiss kill garrisons; that will shock Italy in 1494.
+    local:
+    - memory of the sack of Volterra (1472)
+
+people:
+- name: Lorenzo de' Medici ("il Magnifico")
+  role: de-facto ruler of Florence, patron, poet; in poor health (gout)
+  knows: humanist learning, politics, banking
+  note: Dies April 1492.
+- name: Marsilio Ficino
+  role: Florentine priest, physician and translator of Plato, at the centre of a circle of humanists
+  knows: Plato, astrology, Galenic medicine; wrote a treatise on plague (Consiglio contro la pestilenza)
+- name: Giovanni Pico della Mirandola
+  role: philosopher, prodigy, Medici circle
+- name: Angelo Poliziano
+  role: humanist, tutor of Lorenzo's children
+- name: Girolamo Savonarola
+  role: Dominican friar returning to San Marco in 1490
+  note: His preaching attracts a growing following. He becomes prior in 1491.
+- name: Antonio Benivieni
+  role: Florentine physician, early pioneer of autopsies to find causes of death
+- name: Leonardo da Vinci
+  role: engineer and artist at the Sforza court in Milan
+  knows: hydraulics, mechanics, casting, anatomy
+  note: Not in Florence – access requires travel to Milan.
+- name: Michelangelo Buonarroti
+  role: teenage sculptor living in the Medici household (from c. 1490)
+- name: Luca Pacioli
+  role: Franciscan mathematician from Sansepolcro, probably lecturing in Naples during the 1489–90 academic
+    year
+- name: Amerigo Vespucci
+  role: Oversees household and estate business in Tuscany for Lorenzo di Pierfrancesco de' Medici
+- name: Pier Leoni da Spoleto
+  role: Physician formerly at Pisa, in Rome in July and at Padua by November 1490
+  knows: Galenic medicine and astrological prognosis, with links to Ficino and Poliziano
+  note: Returns to treat Lorenzo in Florence by February 1492.
+- name: Niccolò Leoniceno
+  role: physician and humanist, professor at Ferrara
+  knows: Greek medical and botanical texts; checks Pliny and Avicenna against Dioscorides and Galen
+  note: His criticism of medical errors in Pliny appears in Ferrara in 1492.
+- name: Alessandro Benedetti
+  role: Physician from the Venetian territories with experience in Greece
+  knows: Plague, surgery and anatomy
+  note: His plague treatise appears in Venice in 1493. His whereabouts in 1490 and the claimed Padua
+    chair are uncertain.
+- name: Luca Landucci
+  role: apothecary with a shop at the Canto de' Tornaquinci; keeps a diary of city events
+  knows: drugs, spices, sugar, wax, prices, city gossip
+  note: His diary records prices and political and religious events in Florence.
+- name: Bertoldo di Giovanni
+  role: sculptor, bronze caster and medallist; keeper of the Medici sculpture garden at San Marco
+  knows: lost-wax casting, alloys, chasing; pupil of Donatello
+  note: Dies at Poggio a Caiano in December 1491.
+- name: Andrea della Robbia
+  role: head of the family workshop for tin-glazed terracotta sculpture (Via Guelfa)
+  knows: clays, kilns, tin and lead glazes, pigments; recipes kept in the family
+- name: Bernardo Rucellai
+  role: patrician, humanist, Lorenzo's brother-in-law
+  knows: classical learning, politics; family fortune built on the orchil dye trade
+- name: Francesco di Giorgio Martini
+  role: Sienese architect and military engineer, serving Siena and the dukes of Urbino and Calabria
+  knows: pumps, mills, cranes, fortification, gunpowder mines; his illustrated treatises circulate in
+    manuscript
+  note: Consulted in Milan in 1490, he travels with Leonardo to Pavia in June to advise on the cathedral.
+- name: Lorenzo della Volpaia
+  role: Florentine clockmaker and instrument maker
+  knows: gear trains, tower and chamber clocks, astronomical instruments
+  note: Designs planetary clocks for Medici patrons.
+- name: Giuliano da Sangallo
+  role: Florentine architect, woodworker and military engineer, favoured by Lorenzo de' Medici
+  knows: building machines, fortification, ancient architecture, timber and models
+  note: Builds the villa at Poggio a Caiano. A route to Lorenzo for anything concerning building.
+- name: Bonaccorso Ghiberti
+  role: Florentine bronze founder and engineer, grandson of Lorenzo Ghiberti
+  knows: bell and gun founding; keeps a notebook (Zibaldone) with drawings of Brunelleschi's hoists
+- name: Filippo Calandri
+  role: Florentine abacus master
+  knows: commercial arithmetic, long division, rule of three
+  note: His printed arithmetic (Florence, 1 January 1491 Florentine style, i.e. 1492) is dedicated to
+    the young Giuliano de' Medici.
+- name: Piero della Francesca
+  role: Painter and mathematician in Borgo San Sepolcro
+  knows: perspective, Euclid, Archimedes, the regular solids, abacus arithmetic
+  note: Dies 12 October 1492. Luca Pacioli comes from the same town.
+- name: Domenico Maria Novara
+  role: professor of astronomy at Bologna, issues yearly astrological forecasts
+  knows: Ptolemy, observation, tables; doubts some of Ptolemy's values
+  note: Copernicus studies with him in Bologna from 1496.
+- name: Franchino Gaffurio
+  role: choirmaster of Milan cathedral and music theorist
+  knows: string ratios, tuning, Pythagorean and Boethian theory of sound
+- name: Henricus Martellus Germanus
+  role: German mapmaker working in Florence (c. 1480–96)
+  knows: Ptolemy's maps, portolan charts; his world maps of c. 1489–91 already show Africa's southern
+    tip from Portuguese reports of Dias
+  note: His maps show that reports of Portuguese discoveries already circulate in Florence.
+- name: Francesco Rosselli
+  role: Florentine miniaturist, engraver and map seller
+  knows: copper engraving, printing of maps, the map trade
+  note: His engraved maps and prints offer a Florentine route to reproducing a new chart.
+- name: Giorgio Antonio Vespucci
+  role: humanist cleric and teacher, uncle and tutor of Amerigo; close to Ficino and to San Marco
+  knows: Latin and Greek, cosmography, owns and copies manuscripts
+  note: Way into the Vespucci family and to Lorenzo di Pierfrancesco.
+- name: Lorenzo di Pierfrancesco de' Medici
+  role: head of the junior Medici branch, rich, on poor terms with Lorenzo il Magnifico's line; employer
+    of Amerigo Vespucci
+  knows: trade with Spain, patronage (Botticelli)
+  note: His household has business connections in Seville through the Niccolini.
+- name: Giannotto (Juanoto) Berardi
+  role: Florentine merchant in Seville, active in the slave trade and linked to Marchionni in Lisbon
+  knows: Castilian court finance, fitting out ships in Andalusia
+  note: Vespucci is documented with him in 1492. Berardi finances Columbus and supplies later voyages,
+    then dies in 1495.
+- name: Bartolomeo Marchionni
+  role: Florentine merchant-banker in Lisbon, among the richest men in Portugal
+  knows: Atlantic commerce, including the trade in enslaved Africans, and credit to the Portuguese crown
+  note: Helped finance the overland mission of Pêro da Covilhã and Afonso de Paiva, who departed in
+    1487.
+- name: Cristoforo Colombo (Columbus)
+  role: Genoese mariner seeking Castilian royal support for a westward voyage to Asia
+  knows: Atlantic navigation and the westward-route proposal associated with Toscanelli
+  note: He puts Japan much too close to the Canaries. Some reconstructions give about 2,400 nautical
+    miles. Royal approval comes in April 1492.
+- name: João II of Portugal
+  role: King of Portugal, patron of voyages along the African coast
+  knows: Reports from Dias's expedition and astronomical observations commissioned from José Vizinho
+  note: He had declined Columbus's westward proposal in the 1480s.
+- name: José Vizinho
+  role: Physician and astronomer in Portuguese royal service
+  knows: Solar altitudes on the Guinea coast, which he observed for João II in 1485
+- name: Bartolomeu Dias
+  role: Portuguese captain, returned to Lisbon in December 1488 after rounding the Cape
+  knows: The passage around southern Africa and part of its Indian Ocean coast
+  note: Vasco da Gama's fleet sails for India in 1497.
+- name: Abraham Zacuto
+  role: Jewish astronomer in Castile, under the patronage of Juan de Zúñiga
+  knows: astronomical tables including the sun's declination (his Hebrew tables of the 1470s)
+  note: Documented in Lisbon in 1493 after the expulsion. José Vizinho's Latin version of his tables
+    is printed at Leiria in 1496.
+- name: Martin Behaim
+  role: Nuremberg merchant who lived in Lisbon and the Azores; back in Nuremberg 1490–93
+  knows: Atlantic merchant routes and reports of Portuguese exploration
+  note: Nuremberg commissions his terrestrial globe around 1492. No American mainland appears on it.
+- name: Bartolomeo Scala
+  role: chancellor of Florence
+  knows: diplomacy, law, the workings of every council
+- name: Niccolò Machiavelli
+  role: young Florentine of 21 from a modest lawyer's family, without office
+  knows: Latin historians
+  note: His documented Florentine government service begins in 1498.
+
+events:
+- '1488 Dec (background): Dias returns to Lisbon after rounding southern Africa. News reaches mapmakers
+  in Florence.'
+- '1490: Regiomontanus'' Tabulae directionum (with a tangent table) printed at Augsburg'
+- '1490 Jun: Leonardo and Francesco di Giorgio Martini travel together from Milan to Pavia to advise
+  on the cathedral'
+- '1490 Aug: After returning to Florence, Savonarola begins a series of sermons at San Marco.'
+- '1490: Mercury is discovered at Idrija in Carniola. Almadén is already an established source.'
+- 'c. 1490: Columbus continues seeking Castilian backing. Advisers examining the proposed westward route
+  doubt its feasibility.'
+- '1490: Maximilian I hires the Tassis family to run a relay post from Innsbruck to the Netherlands'
+- '1490: the first printed portolano (sailing directions) appears in Venice'
+- 'c. 1490–91: Pêro da Covilhã returns to Cairo with information on Indian Ocean trade. Whether his
+  report reached João II is uncertain.'
+- '1491: The illustrated Fasciculus medicinae appears in Venice. An expanded Italian edition follows
+  in 1494.'
+- '1491 Nov–1492 Mar: Amerigo Vespucci moves from Florence to Seville. He is a witness there on 10 March
+  1492.'
+- '1491 Dec: Bertoldo di Giovanni dies at Poggio a Caiano'
+- '1492 Jan 1: Filippo Calandri''s illustrated arithmetic is printed in Florence, with worked examples
+  of long division.'
+- '1492 Jan 2: Granada surrenders to Castile; Apr 17: the Capitulations of Santa Fe grant Columbus his
+  voyage'
+- '1492 Apr 5: lightning strikes the lantern of the Duomo and marble crashes down, three days before
+  Lorenzo''s death; taken as an omen'
+- '1492 Apr 8: Lorenzo de'' Medici dies at Careggi. His son Piero succeeds him.'
+- '1492 Apr 9: Pier Leoni is found dead in a well near Careggi. Contemporary accounts disagree about
+  the circumstances.'
+- '1492: Niccolò Leoniceno prints his attack on Pliny''s errors in medicine (Ferrara); a public quarrel
+  among humanists follows'
+- '1492 Mar–Jul: Jews are expelled from Spain; many skilled refugees reach Portugal and Italy'
+- 'c. 1492: Behaim and Nuremberg craftsmen make a terrestrial globe for the city council.'
+- '1492 Jul–Aug: Innocent VIII dies and Alexander VI is elected. A hostile rumour about three boys''
+  blood later becomes a transfusion legend.'
+- '1492 Aug 3: Columbus sails from Palos with three ships; Oct 12: landfall in the Bahamas'
+- '1492 Sep: At sea Columbus records a change in the compass bearing of Polaris.'
+- '1492 Oct 12: Piero della Francesca dies in Sansepolcro'
+- '1493 Mar–Oct: Columbus returns via Lisbon to Palos with captives. His letter appears in Barcelona,
+  in Latin in Rome, and in Italian verse in Rome and Florence.'
+- '1493 May: Alexander VI''s Inter caetera grants the Castilian monarchs a claim to lands west of an
+  Atlantic line, subject to exceptions for existing Christian rulers.'
+- '1493 Sep: Columbus''s second fleet of seventeen ships sails from Cádiz.'
+- '1493 Nov: Leonardo''s full-size clay model of the Sforza horse is shown in Milan; in 1494 its bronze
+  goes to Ferrara for cannon'
+- '1494 Jun: Castile and Portugal agree at Tordesillas on a demarcation line 370 leagues west of the
+  Cape Verde islands.'
+- '1494 Sep–Nov: Charles VIII crosses the Alps with a mobile siege train; the Florentine fortress of
+  Fivizzano is stormed and its garrison killed; Piero de'' Medici hands over Sarzana, Pietrasanta, Pisa
+  and Livorno'
+- '1494 Nov: Pacioli''s Summa appears in Venice. It discusses cubic equations and gives a disputed rule
+  for dividing stakes in an interrupted game.'
+- '1494 Nov–Dec: Pisa rebels, the Medici are expelled and Charles VIII enters Florence. A new Great
+  Council is established in December.'
+- '1494–95: A major outbreak of the disease later called syphilis is associated with the Naples campaign.'
+- 'Recurring: plague outbreaks (the city still remembers 1478–79)'
+- 'Recurring: floods of the Arno, bad harvests, grain shortages'
+- 'Every summer: tertian and quartan fevers in the Pisan plain and Maremma; fluxes in the city'
+
+quest_hooks:
+- Lorenzo's gout and pain – relief brings access to the Medici court
+- A plague outbreak in a poor quarter (San Frediano, Santo Spirito)
+- Mine owners need water pumped from deep shafts
+- The Signoria wants faster news from Pisa and Livorno
+- A glassblower or spectacle maker looking for a new product
+- Merchants who want easier calculation and better accounts
+- Making the trip to Milan to meet Leonardo
+- Midwives in one parish report several deaths after childbirth. A physician at Santa Maria Nuova offers
+  to compare their accounts.
+- A dyer of the Arte della Lana wants a bleach or colour nobody else has
+- A gilder with trembling hands and loose teeth, and a workshop full of mercury fumes
+- Lorenzo's model farm at Poggio a Caiano is open to new crops, stock and methods
+- A landlord's wine turns to vinegar every August
+- Fetching a glassmaker from Murano, or brass and crucibles from the German lands
+- A Pisan landowner wants water for a rice field. Neighbours on the marshy plain already complain of
+  summer fevers.
+- The chancery suspects that Milan reads its ciphered letters and wants a cipher nobody can break
+- A Florentine clockmaker wants to compare a new regulator with Lorenzo della Volpaia's work.
+- An abacus master posts a public challenge with a cubic equation and a purse for the solver
+- The Opera del Duomo wants to protect the lantern after yet another lightning strike
+- The mint has tested a suspect payment by touchstone. Can weighing the coins in water give the assayers
+  a second check?
+- A gun founder's bombard has burst and killed its crew; the Signoria wants an account of what happened
+- A silk merchant wants to know how Bologna's water-driven throwing mills work
+- An astrologer needs tedious multiplications of sines done faster for the next year's almanac
+- A Florentine house with partners in Lisbon and Seville wants to know what a westward voyage to the
+  spice markets would cost.
+- A reader of Toscanelli's westward proposal asks the player to check how far apart the Canaries and
+  Japan really are.
+- Martellus's map shows Africa's southern tip. A visitor asks how much of the new coastline can be trusted.
+- A merchant can book passage from Livorno on a Genoese ship. Winds and scheduled stops will determine
+  when the player reaches Iberia.
+- A Florentine banker in Lisbon offers introductions to merchants who have heard Dias's report.
+- A Portuguese pilot wants an easier way to take an altitude on a rolling deck and check the result
+  against observations ashore.
+- A crew returning from Guinea reports swollen gums after a long passage. The victualler wants provisions
+  that will keep.
+- The Otto di Pratica hear rumours of the French king's guns and ask whether Sarzana's new walls would stand
+- A broker at the Mercato Nuovo wants to price insurance on an untried route.
+- Rival physicians or guild officers challenge the player over a treatment, a lost possession or an
+  accusation of sorcery.

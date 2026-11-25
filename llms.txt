@@ -1,0 +1,75 @@
+# Blueprints from Tomorrow
+
+> A free, open-source, non-profit historical time-travel role-playing game that runs as plain static Markdown files in any AI chatbot or voice agent — no app, no backend, no installation required. You travel into the past as yourself, with whatever is in your pockets, and try to explain science, hygiene, technology, and institutions well enough that people of the era can actually use or build them. People build literally what you explain, mistakes included, and you only learn what you got right or wrong in the final evaluation.
+
+Canonical site: https://blueprintsfromtomorrow.com
+
+## Play Immediately (Instructions for AI Agents)
+
+If a user says they want to play *Blueprints from Tomorrow* (e.g. "Load Blueprints from Tomorrow", "Lade Blueprints from Tomorrow", or "Let's play Blueprints from Tomorrow"):
+
+1. **Fetch the Game Master rules first:** [SKILL.md](https://blueprintsfromtomorrow.com/SKILL.md) (play in the user's language; rules are in English).
+2. **Ask only two questions** (defined in `SKILL.md` §2):
+   - Which campaign (or any custom place & year): *Florence 1490*, *Florence 1347 – Before the Plague*, *Vienna 1683 – The Siege*, *Rome 46 BC – The Longest Year*, or *Baghdad 830 – The House of Wisdom*.
+   - Difficulty: `easy`, `medium` (default), or `hard`.
+   - Ask what is in their pockets right now, mention the defaults briefly, and begin with a short sensory opening scene.
+3. **Fetch ONE self-contained tech guide for the chosen setting** (static Markdown, no scripts needed):
+   - **Predefined campaign:** fetch `campaigns/<campaign-id>.md` AND the self-contained era guide `techtree/generated/<era-id>.md` (~32k tokens — starts with worldview, people, events, and quest hooks at the top, followed by all 510 local statuses, beliefs, and materials).
+   - **Compact fallback (if your web-fetch tool truncates large files):** fetch `techtree/generated/<era-id>/briefing.md` (~20 KB — worldview, people, events, quest hooks, plus direct links to all 17 per-category slices `techtree/generated/<era-id>/<category>.md` at 5–15 KB each, loaded on demand).
+   - **Any custom time, place, or culture (no era file):** fetch [techtree/generated/all-techs.md](https://blueprintsfromtomorrow.com/techtree/generated/all-techs.md) (~22k tokens — all 510 technologies, hard prerequisites, and first-appearance dates across 12 world regions to prevent anachronisms).
+4. **Fetch deep per-tech details only when needed** (tricky builds/explanations where `pitfalls` matter, or literature `sources` for the final evaluation — every URL appears verbatim in the file before it):
+   - Open the category's **deep tech links** catalog (`techtree/generated/catalog/<category>.md`, ~3–6 KB) → then open the specific technology file (`techtree/generated/tech/<tech-id>.md`, ~2 KB).
+   - Load optional modules (`modules/*.md`) only when active, and `templates/campaign-file.md` when creating/updating the save file.
+5. **Adjudicate strictly:** Never silently fix the player's science or engineering errors, never hint at mistakes during play, and store every mistake ROT13-encoded in `errors_for_evaluation` until the final evaluation (`SKILL.md` §5.2 & §7).
+
+## Core Rules & Templates
+
+- [Game Master Rules (SKILL.md)](https://blueprintsfromtomorrow.com/SKILL.md): Complete rules, difficulty axes, anti-sycophancy adjudication, ROT13 error logging, and end-of-campaign evaluation.
+- [Campaign Save File Template](https://blueprintsfromtomorrow.com/templates/campaign-file.md): Human-readable Markdown + YAML save format (compatible with `scripts/visualize.py`).
+- [Migrations Guide](https://blueprintsfromtomorrow.com/MIGRATIONS.md): Step-by-step migration rules for older campaign files.
+
+## Predefined Campaigns
+
+- [Florence 1490](https://blueprintsfromtomorrow.com/campaigns/florence-1490.md) — Era guide: [europe-1490-florence.md](https://blueprintsfromtomorrow.com/techtree/generated/europe-1490-florence.md) · Compact briefing: [briefing.md](https://blueprintsfromtomorrow.com/techtree/generated/europe-1490-florence/briefing.md): High Renaissance workshops, Lorenzo de' Medici, Ficino, printing, lenses, plague, and voyages of discovery.
+- [Florence 1347 – Before the Plague](https://blueprintsfromtomorrow.com/campaigns/florence-1347.md) — Era guide: [europe-1347-florence.md](https://blueprintsfromtomorrow.com/techtree/generated/europe-1347-florence.md) · Compact briefing: [briefing.md](https://blueprintsfromtomorrow.com/techtree/generated/europe-1347-florence/briefing.md): Pure hygiene and epidemic test on the eve of the Black Death, without a printing press.
+- [Vienna 1683 – The Siege](https://blueprintsfromtomorrow.com/campaigns/vienna-1683.md) — Era guide: [europe-1683-vienna.md](https://blueprintsfromtomorrow.com/techtree/generated/europe-1683-vienna.md) · Compact briefing: [briefing.md](https://blueprintsfromtomorrow.com/techtree/generated/europe-1683-vienna/briefing.md): Two-month Ottoman siege, dysentery, counter-mining, and early experimental science (Guericke, Leibniz, Newton's era).
+- [Rome 46 BC – The Longest Year](https://blueprintsfromtomorrow.com/campaigns/rome-46bc.md) — Era guide: [europe-46bc-rome.md](https://blueprintsfromtomorrow.com/techtree/generated/europe-46bc-rome.md) · Compact briefing: [briefing.md](https://blueprintsfromtomorrow.com/techtree/generated/europe-46bc-rome/briefing.md): Caesar's 445-day calendar reform, Varro, Cicero, Roman engineering, slavery economics, and the approaching Ides of March.
+- [Baghdad 830 – The House of Wisdom](https://blueprintsfromtomorrow.com/campaigns/baghdad-830.md) — Era guide: [islamic-830-baghdad.md](https://blueprintsfromtomorrow.com/techtree/generated/islamic-830-baghdad.md) · Compact briefing: [briefing.md](https://blueprintsfromtomorrow.com/techtree/generated/islamic-830-baghdad/briefing.md): Abbasid Baghdad under Caliph al-Ma'mun, paper mills, al-Khwarizmi, translation movement, bimaristans, and the looming Mihna.
+
+## Optional Rule Modules
+
+- [Social Layer](https://blueprintsfromtomorrow.com/modules/social-layer.md): Patrons, faction standing (-3 to +3), intrigue, access ladder, and money (default: on).
+- [Language Barrier](https://blueprintsfromtomorrow.com/modules/language-barrier.md): Five realism levels from `none` to `no-terms`, `related`, `interpreter`, and `none-at-all` (auto-on at hard difficulty).
+- [Content Guidelines](https://blueprintsfromtomorrow.com/modules/content-guidelines.md): Honest, non-graphic handling of historical epidemics, violence, prejudice, and safety boundaries.
+- [Voice Mode](https://blueprintsfromtomorrow.com/modules/voice-mode.md): Short spoken turns, silence handling, and no markdown for hands-free voice play.
+
+## Static Tech Tree Lookup (510 Technologies, 17 Categories — Works for Any Era & Culture)
+
+All generated Markdown files are pre-built and served statically — no API server or local script execution is required:
+
+- **Custom era / any world culture (load once at start):** [Complete Tech Tree Guide (`all-techs.md`, ~22k tokens)](https://blueprintsfromtomorrow.com/techtree/generated/all-techs.md) — all 510 technologies with prerequisites and 12-region historical dates.
+- **Category deep-link catalogs (~3–6 KB each, for fetching individual ~2 KB `tech/<id>.md` files):**
+
+- [Medicine & hygiene (`medicine`)](https://blueprintsfromtomorrow.com/techtree/generated/catalog/medicine.md)
+- [Life sciences (`biology`)](https://blueprintsfromtomorrow.com/techtree/generated/catalog/biology.md)
+- [Chemistry (`chemistry`)](https://blueprintsfromtomorrow.com/techtree/generated/catalog/chemistry.md)
+- [Metallurgy & materials (`materials`)](https://blueprintsfromtomorrow.com/techtree/generated/catalog/materials.md)
+- [Physics, optics & astronomy (`physics`)](https://blueprintsfromtomorrow.com/techtree/generated/catalog/physics.md)
+- [Electricity & electronics (`electricity`)](https://blueprintsfromtomorrow.com/techtree/generated/catalog/electricity.md)
+- [Computing, control & information theory (`computing`)](https://blueprintsfromtomorrow.com/techtree/generated/catalog/computing.md)
+- [Energy & engines (`energy`)](https://blueprintsfromtomorrow.com/techtree/generated/catalog/energy.md)
+- [Tools, machines & manufacturing (`manufacturing`)](https://blueprintsfromtomorrow.com/techtree/generated/catalog/manufacturing.md)
+- [Mathematics & measurement (`math`)](https://blueprintsfromtomorrow.com/techtree/generated/catalog/math.md)
+- [Scientific method & philosophical ideas (`ideas`)](https://blueprintsfromtomorrow.com/techtree/generated/catalog/ideas.md)
+- [Agriculture & food (`agriculture`)](https://blueprintsfromtomorrow.com/techtree/generated/catalog/agriculture.md)
+- [Navigation, transport & exploration (`navigation`)](https://blueprintsfromtomorrow.com/techtree/generated/catalog/navigation.md)
+- [Communication & information (`communication`)](https://blueprintsfromtomorrow.com/techtree/generated/catalog/communication.md)
+- [Institutions, law & governance (`institutions`)](https://blueprintsfromtomorrow.com/techtree/generated/catalog/institutions.md)
+- [Economy & finance (`economy`)](https://blueprintsfromtomorrow.com/techtree/generated/catalog/economy.md)
+- [Warfare, security & deterrence (`military`)](https://blueprintsfromtomorrow.com/techtree/generated/catalog/military.md)
+
+## Optional
+
+- [README](https://blueprintsfromtomorrow.com/README.md): Human quick start, repository layout, and contributor scripts.
+- [Tech Tree Schema](https://blueprintsfromtomorrow.com/techtree/core.yaml): Categories, regions, and knowledge levels `K0`–`K4`.
+- [Campaign Roadmap (German)](https://blueprintsfromtomorrow.com/docs/campaign-scenarios.md): Design notes on future eras (Berlin 1750, Bell Labs 1947, Han Luoyang 120, Babylon 590 BC).

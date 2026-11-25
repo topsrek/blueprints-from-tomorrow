@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Florence 1347 – Before the Plague — Blueprints from Tomorrow</title>
+  <meta name="description" content="Florence 1347 – Before the Plague — Eve of the Black Death · Hygiene &amp; Trust Test. The same city as in *Florence 1490*, 143 years earlier and without a printing press. Florence is worn out: the harvest of 1346 failed and thousands died in">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0F3577">
+  <link rel="canonical" href="https://blueprintsfromtomorrow.com/scenarios/florence-1347.html">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Florence 1347 – Before the Plague — Blueprints from Tomorrow">
+  <meta property="og:description" content="Florence 1347 – Before the Plague — Eve of the Black Death · Hygiene &amp; Trust Test. The same city as in *Florence 1490*, 143 years earlier and without a printing press. Florence is worn out: the harvest of 1346 failed and thousands died in">
+  <meta property="og:url" content="https://blueprintsfromtomorrow.com/scenarios/florence-1347.html">
+  <meta property="og:image" content="https://blueprintsfromtomorrow.com/assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <style>
+    @font-face {
+      font-family: "Allo";
+      src: url("../assets/fonts/allo-web.woff2") format("woff2");
+      font-weight: 400 800;
+      font-style: normal;
+      font-display: swap;
+    }
+    :root {
+      --bg-deep: #0b2554;
+      --bg-mid: #133c84;
+      --bg-card: rgba(8, 24, 58, 0.56);
+      --ink: #f3efe4;
+      --ink-soft: rgba(243, 239, 228, 0.78);
+      --ink-faint: rgba(243, 239, 228, 0.54);
+      --line: rgba(243, 239, 228, 0.18);
+      --line-strong: rgba(243, 239, 228, 0.42);
+      --grid: rgba(243, 239, 228, 0.055);
+      --amber: #f5b83d;
+      --gutter: 20px;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Allo", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: 1.0625rem;
+      line-height: 1.58;
+      color: var(--ink);
+      background-color: var(--bg-deep);
+      background-image:
+        linear-gradient(to right, var(--grid) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--grid) 1px, transparent 1px),
+        linear-gradient(155deg, #0a224d 0%, var(--bg-mid) 52%, #0d2b63 100%);
+      background-size: 40px 40px, 40px 40px, 100% 100%;
+      background-attachment: fixed;
+      -webkit-font-smoothing: antialiased;
+      overflow-wrap: break-word;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: var(--ink); text-underline-offset: 0.2em; text-decoration-color: rgba(243,239,228,0.42); }
+    a:hover { color: var(--amber); text-decoration-color: var(--amber); }
+    :focus-visible { outline: 3px solid var(--amber); outline-offset: 3px; border-radius: 6px; }
+    .wrap { width: 100%; max-width: 1020px; margin: 0 auto; padding: 0 var(--gutter); }
+    @media (min-width: 720px) { :root { --gutter: 36px; } }
+
+    header { padding: 28px 0 44px; }
+    @media (min-width: 720px) { header { padding: 40px 0 56px; } }
+    .topbar {
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 14px 20px;
+    }
+    .back-link {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 0.98rem; text-decoration: none; min-height: 44px;
+    }
+    .genre-badge {
+      font-size: 0.9rem; font-weight: 750; letter-spacing: 0.02em; line-height: 1.3;
+      padding: 8px 16px; border-radius: 6px;
+      border: 1.5px solid var(--line-strong); background: var(--bg-card);
+      font-variation-settings: "ROND" 10;
+      max-width: 100%;
+    }
+
+    .hero-grid {
+      margin-top: 32px;
+      display: grid; gap: 28px; align-items: center;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 820px) {
+      .hero-grid { grid-template-columns: 1.1fr 0.9fr; gap: 40px; margin-top: 44px; }
+    }
+    .hero-grid > * { min-width: 0; }
+    .kicker {
+      margin: 0 0 10px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.86rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+      color: var(--amber);
+    }
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(2rem, 5.4vw, 3.35rem);
+      line-height: 1.09; font-weight: 800; letter-spacing: 0.015em;
+      font-variation-settings: "ROND" 8;
+      text-wrap: balance;
+    }
+    .hero-sub { margin: 0; font-size: 1.12rem; color: var(--ink-soft); }
+    .hero-art {
+      border-radius: 14px; overflow: hidden;
+      border: 1.5px solid var(--line-strong);
+      background: #0d2c66;
+    }
+
+    .start-strip {
+      margin-top: 32px;
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 16px 22px;
+      padding: 18px 22px; border-radius: 8px;
+      background: rgba(7, 21, 52, 0.74);
+      border: 1.5px solid var(--line-strong);
+    }
+    .start-left { display: flex; align-items: center; gap: 16px; min-width: 0; flex: 1 1 300px; }
+    .voice-btn {
+      flex: none; width: 52px; height: 52px; border-radius: 50%;
+      background: var(--ink); color: var(--bg-deep);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .voice-btn svg { width: 28px; height: 28px; }
+    .start-label { margin: 0 0 2px; font-size: 0.94rem; font-weight: 600; color: var(--ink-soft); font-variation-settings: "ROND" 10; }
+    .start-prompt {
+      margin: 0; font-size: clamp(1.08rem, 2.4vw, 1.45rem);
+      line-height: 1.24; font-weight: 800; letter-spacing: 0.012em;
+      font-variation-settings: "ROND" 8;
+      overflow-wrap: anywhere;
+    }
+    .start-prompt .domain { color: var(--amber); }
+    .copy-btn {
+      font: inherit; font-size: 0.96rem; font-weight: 750;
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      min-height: 46px; padding: 0 20px; border-radius: 6px;
+      border: 1.5px solid var(--amber); cursor: pointer;
+      background: var(--amber); color: #0a224d;
+      font-variation-settings: "ROND" 10;
+      transition: filter 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+      white-space: nowrap;
+    }
+    .copy-btn:hover { filter: brightness(1.08); }
+    .copy-btn.done { background: transparent; color: var(--amber); border-color: var(--amber); filter: none; }
+    .copy-btn svg { width: 17px; height: 17px; flex: none; }
+    @media (max-width: 639px) { .copy-btn { width: 100%; } }
+
+    section { padding: 44px 0; border-top: 1px solid var(--line); }
+    @media (min-width: 720px) { section { padding: 56px 0; } }
+    h2 {
+      margin: 0 0 18px;
+      font-size: clamp(1.4rem, 3.2vw, 1.85rem);
+      font-weight: 800;
+    }
+    .prose { max-width: 68ch; color: var(--ink-soft); }
+    .prose p { margin: 0 0 14px; }
+    .prose p:last-child { margin-bottom: 0; }
+    .prose strong { color: var(--ink); }
+
+    .two-col {
+      display: grid; gap: 28px 36px; grid-template-columns: 1fr;
+    }
+    @media (min-width: 760px) { .two-col { grid-template-columns: 1fr 1fr; } }
+
+    .col-block { padding-top: 14px; border-top: 1.5px solid var(--line-strong); }
+    .col-block h3 { margin: 0 0 12px; font-size: 1.08rem; font-weight: 750; color: var(--ink); }
+    .col-block .count { color: var(--amber); font-weight: 700; font-size: 0.9rem; margin-left: 6px; }
+
+    ul.clean {
+      margin: 0; padding: 0; list-style: none;
+      display: grid; gap: 10px;
+    }
+    ul.clean li {
+      padding-left: 16px; position: relative;
+      font-size: 0.96rem; color: var(--ink-soft);
+    }
+    ul.clean li::before {
+      content: "·"; position: absolute; left: 0; top: 0;
+      color: var(--amber); font-weight: 800;
+    }
+    ul.clean li strong { color: var(--ink); }
+
+    .people-grid {
+      display: grid; gap: 16px 28px; grid-template-columns: 1fr;
+    }
+    @media (min-width: 680px) { .people-grid { grid-template-columns: repeat(2, 1fr); } }
+    .person {
+      padding-top: 12px; border-top: 1px solid var(--line);
+    }
+    .person-name { margin: 0 0 3px; font-size: 1.02rem; font-weight: 750; color: var(--ink); }
+    .person-role { margin: 0; font-size: 0.92rem; color: var(--ink-soft); line-height: 1.45; }
+
+    .other-scenarios {
+      display: flex; flex-wrap: wrap; gap: 10px 18px;
+      font-weight: 650; font-size: 0.96rem;
+    }
+    .other-scenarios a { display: inline-flex; align-items: center; min-height: 40px; }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 24px 0 40px;
+      font-size: 0.88rem; color: var(--ink-faint);
+    }
+    .foot-inner {
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 10px 24px;
+    }
+    .foot-inner nav { display: flex; flex-wrap: wrap; gap: 0 18px; }
+    .foot-inner nav a {
+      display: inline-flex; align-items: center; min-height: 40px;
+      color: var(--ink-soft); font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.84rem;
+    }
+</style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="topbar">
+        <a class="back-link" href="../index.html">← Blueprints from Tomorrow</a>
+        <span class="genre-badge">Free Single-Player AI Role-Playing Game</span>
+      </div>
+
+      <div class="hero-grid">
+        <div>
+          <p class="kicker">Tuscany, Italian peninsula · Year 1347 · Start: 15 October 1347</p>
+          <h1>Florence 1347 – Before the Plague</h1>
+          <p class="hero-sub">Eve of the Black Death · Hygiene &amp; Trust Test</p>
+        </div>
+        <div class="hero-art">
+          <img src="../assets/eras/florence-1347.svg" alt="Blueprint illustration of Florence 1347 – Before the Plague" width="640" height="360">
+        </div>
+      </div>
+
+      <div class="start-strip">
+        <div class="start-left">
+          <div class="voice-btn" aria-hidden="true"><svg viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="14" width="4.5" height="10" rx="2.25" fill="currentColor"/><rect x="10" y="8" width="4.5" height="22" rx="2.25" fill="currentColor"/><rect x="17" y="4" width="4.5" height="30" rx="2.25" fill="currentColor"/><rect x="24" y="10" width="4.5" height="18" rx="2.25" fill="currentColor"/><rect x="31" y="15" width="4.5" height="8" rx="2.25" fill="currentColor"/></svg></div>
+          <div>
+            <p class="start-label">Play this scenario in ChatGPT, Claude or Gemini (best in voice mode):</p>
+            <p class="start-prompt">“Start a game of <span class="domain">blueprintsfromtomorrow.com</span> in Florence 1347”</p>
+          </div>
+        </div>
+        <button class="copy-btn" id="copyBtn" type="button" data-prompt="Start a game of blueprintsfromtomorrow.com in Florence 1347 (read https://blueprintsfromtomorrow.com/llms.txt)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+          <span id="copyLabel">Copy</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="wrap">
+        <h2>Why this era?</h2>
+        <div class="prose">
+          <p>The same city as in <em>Florence 1490</em>, 143 years earlier and without a printing press. Florence is worn out: the harvest of 1346 failed and thousands died in the famine of spring 1347, and the great banks of the Bardi and Peruzzi have collapsed. In the same weeks, far to the south, Genoese galleys from the Black Sea put in at Messina with dying crews. By spring the sickness will be in Florence, and by autumn about half the city will be dead.</p>
+          <p>This is the game&#x27;s hygiene and epidemic test in its purest form. The player knows what is coming and when. Nobody else does, and nobody has a reason to believe a stranger.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>How people think here</h2>
+        <div class="prose">
+          <p>Medicine follows Galen and Avicenna as taught at Bologna, Padua and Montpellier: disease is an imbalance of the four humours; pestilence comes from corrupted air (miasma) stirred up by planetary conjunctions, earthquakes and God&#x27;s anger at sin. Natural philosophy is scholastic Aristotle. Astrology is respected science. There is no printing: knowledge travels by sermon, council decree, notary, letter and copyist, and most people cannot read Latin. Florence is a guild republic of perhaps 90,000 to 100,000 people, governed since 1343 by priors drawn by lot from the guilds, shaken by the collapse of the Bardi and Peruzzi banks and by the famine of 1346–47. The pope sits at Avignon. Practical knowledge lives in workshops and guilds; merchants reckon with Arabic numerals in abacus schools but keep formal ledgers in Roman numerals.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>Technologies in Florence 1347</h2>
+        <div class="two-col">
+          <div class="col-block">
+            <h3>Already in use <span class="count">(134 of 510)</span></h3>
+            <ul class="clean">
+              <li><strong>Legumes and green manure</strong></li>
+            <li><strong>Manure, compost and night soil</strong></li>
+            <li><strong>Terracing and soil conservation</strong></li>
+            <li><strong>Heavy mouldboard plough</strong></li>
+            <li><strong>Horse collar and breast-strap harness</strong></li>
+            <li><strong>Scythe and grain cradle</strong></li>
+            <li><strong>Selective breeding of plants and animals</strong></li>
+            <li><strong>Grafting of fruit trees and vines</strong></li>
+            <li><strong>Irrigation and water lifting (canal, qanat, shaduf, noria)</strong></li>
+            <li><strong>Fish ponds and carp polyculture</strong></li>
+            </ul>
+          </div>
+          <div class="col-block">
+            <h3>Unknown &amp; buildable locally <span class="count">(61 opportunities)</span></h3>
+            <ul class="clean">
+              <li><strong>Seed drill</strong></li>
+            <li><strong>Canning (heat-preserving in sealed containers)</strong></li>
+            <li><strong>Pasteurisation</strong></li>
+            <li><strong>Movable-frame beehive</strong></li>
+            <li><strong>Microorganisms (living things too small to see)</strong></li>
+            <li><strong>Life comes only from life (spontaneous generation refuted)</strong></li>
+            <li><strong>Fermentation is the work of living yeast</strong></li>
+            <li><strong>Evolution by natural selection</strong></li>
+            <li><strong>Chemical elements and conservation of mass</strong></li>
+            <li><strong>Collecting and telling apart gases (hydrogen, fixed air)</strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>People you may encounter</h2>
+        <div class="people-grid">
+          <div class="person"><p class="person-name">Gentile da Foligno</p><p class="person-role">Professor of medicine at Perugia, the most respected physician in central Italy</p></div>
+          <div class="person"><p class="person-name">Tommaso del Garbo</p><p class="person-role">Florentine physician, son of the physician Dino del Garbo; professor at Perugia and Bologna</p></div>
+          <div class="person"><p class="person-name">Giovanni Villani</p><p class="person-role">Merchant, former mint and grain official, chronicler</p></div>
+          <div class="person"><p class="person-name">Matteo Villani</p><p class="person-role">Giovanni&#x27;s brother, merchant</p></div>
+          <div class="person"><p class="person-name">Giovanni Boccaccio</p><p class="person-role">Writer, son of the merchant Boccaccino di Chellino</p></div>
+          <div class="person"><p class="person-name">Guy de Chauliac</p><p class="person-role">Surgeon and physician to Pope Clement VI</p></div>
+          <div class="person"><p class="person-name">Angelo Acciaiuoli</p><p class="person-role">Dominican, bishop of Florence (1342–1355)</p></div>
+          <div class="person"><p class="person-name">Francesco Balducci Pegolotti</p><p class="person-role">Former factor of the Bardi company, author of the merchant handbook Pratica della mercatura</p></div>
+          <div class="person"><p class="person-name">Paolo dell&#x27;Abbaco (Paolo Dagomari)</p><p class="person-role">abacus master, astronomer and astrologer</p></div>
+          <div class="person"><p class="person-name">Jacopo Dondi</p><p class="person-role">physician and astronomer in Padua</p></div>
+          <div class="person"><p class="person-name">Giovanni Dondi</p><p class="person-role">student of medicine and astronomy, Jacopo&#x27;s son</p></div>
+          <div class="person"><p class="person-name">Jean Buridan</p><p class="person-role">master of arts at the university of Paris</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>Significant events around this time</h2>
+        <ul class="clean">
+          <li>1346 Jan: the Bardi company fails (January 1345 in Florentine reckoning), after the Peruzzi (1343); credit and employment in the city collapse.</li>
+          <li>1346: plague breaks out in the Mongol army besieging Genoese Caffa in the Crimea.</li>
+          <li>1346 Mar: the Franciscan inquisitor Piero dell&#x27;Aquila, collecting a cardinal&#x27;s debt from the failed Acciaiuoli, has citizens seized; a crowd frees one. He excommunicates the priors and lays an interdict; the commune curbs his powers and the clergy&#x27;s armed retinues.</li>
+          <li>1346 Aug 26: Crécy. English archers and dismounted men-at-arms defeat French cavalry and Genoese crossbowmen; Villani reports English bombards.</li>
+          <li>1346 Sep–1347 Aug: Edward III besieges Calais for eleven months; it surrenders from hunger.</li>
+          <li>1346 autumn: harvest fails across Tuscany after months of rain.</li>
+          <li>1347 Feb: Genoa founds the Maona of Chios, repaying the shipowners of its 1346 fleet with shares in the island&#x27;s revenues.</li>
+          <li>1347 Apr: William of Ockham dies at Munich.</li>
+          <li>1347 mid-Apr: famine at its worst. The commune bakes bread in its own ovens and rations it by ticket, two loaves a mouth; Villani counts 94,000 mouths.</li>
+          <li>1347 May 20: Cola di Rienzo seizes power in Rome as tribune; he abdicates and flees on Dec 15.</li>
+          <li>1347 summer: sickness follows the famine; Villani reports more than 4,000 dead in Florence, mostly women and children.</li>
+          <li>1347 Aug: the commune issues a new, worse silver coin, the guelfo of five soldi; a comet is seen, which Villani records as a sign.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>Explore other scenarios</h2>
+        <div class="other-scenarios">
+          <a href="florence-1490.html">Florence 1490</a>
+          <a href="vienna-1683.html">Vienna 1683 – The Siege</a>
+          <a href="rome-46bc.html">Rome 46 BC – The Longest Year</a>
+          <a href="baghdad-830.html">Baghdad 830 – The House of Wisdom</a>
+          <a href="custom.html">Any place, any year</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot-inner">
+      <span><a href="../index.html">← Back to home</a> · Made by <a href="https://topsrek.top" rel="noopener">@topsrek</a> in Austria</span>
+      <nav aria-label="Raw agent files">
+        <a href="https://github.com/topsrek/blueprints-from-tomorrow" rel="noopener">GitHub</a>
+        <a href="../campaigns/florence-1347.md">campaigns/florence-1347.md</a>
+        <a href="../techtree/generated/europe-1347-florence.md">era guide (.md)</a>
+        <a href="../techtree/generated/europe-1347-florence/briefing.md">briefing (.md)</a>
+        <a href="../llms.txt">llms.txt</a>
+      </nav>
+    </div>
+  </footer>
+  
+  <script>
+    (function () {
+      var btn = document.getElementById("copyBtn");
+      var label = document.getElementById("copyLabel");
+      var text = btn.getAttribute("data-prompt");
+      var timer;
+      function done(ok) {
+        clearTimeout(timer);
+        if (ok) {
+          btn.classList.add("done");
+          label.textContent = "Copied!";
+          timer = setTimeout(function () { btn.classList.remove("done"); label.textContent = "Copy"; }, 1800);
+        }
+      }
+      btn.addEventListener("click", function () {
+        if (navigator.clipboard && window.isSecureContext) {
+          navigator.clipboard.writeText(text).then(function () { done(true); }, function () { done(false); });
+        } else {
+          var ta = document.createElement("textarea");
+          ta.value = text; ta.style.position = "fixed"; ta.style.opacity = "0";
+          document.body.appendChild(ta); ta.select();
+          var ok = false; try { ok = document.execCommand("copy"); } catch (e) {}
+          document.body.removeChild(ta); done(ok);
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

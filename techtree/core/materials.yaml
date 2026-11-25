@@ -1,0 +1,867 @@
+technologies:
+
+  - id: copper_bronze
+    name: Copper smelting and bronze
+    category: materials
+    requires: [charcoal_burning]
+    helps: [bellows_piston_blower, lost_wax_casting, refractories_fireclay]
+    explain: >
+      Green and blue copper ores (malachite, azurite) heated with charcoal in a
+      small clay furnace under a forced blast give up metallic copper, which melts
+      at 1085 °C; sulphide ores must first be roasted in the open to burn off the
+      sulphur. Copper alone is soft and casts badly. About one part tin to nine of
+      copper gives bronze, which melts lower, fills moulds and is much harder;
+      more tin (20 % and above) gives brittle bell and mirror metal. Hammering
+      hardens copper and bronze, and heating to redness softens them again,
+      whether they are quenched or not.
+    pitfalls:
+      - "Expecting quenching to harden bronze as it does steel; it does the opposite or nothing."
+      - "Damp moulds or damp charge: molten metal on water explodes."
+      - "Tin ore is rare (Cornwall, the Erzgebirge, Afghanistan, Malaya, Bolivia); most regions must trade for it."
+      - "Arsenical copper ores give a good early bronze but the fumes cripple the smiths."
+      - "Thinking a campfire is enough; without a blast and an enclosed furnace the ore will not reduce."
+    history:
+      mesopotamia: "c. 8000 BC – hammered native copper in Anatolia (Çayönü); c. 5000 BC smelting in Anatolia and Iran; c. 3000 BC tin bronze in Mesopotamia"
+      europe: "c. 5000 BC – smelting at Belovode (Serbia), among the oldest known; c. 2200 BC tin bronze widespread"
+      egypt: "c. 4000 BC copper tools; arsenical copper through the Old Kingdom; tin bronze common from c. 2000 BC"
+      india: "c. 2600 BC – Harappan copper and bronze, including lost-wax figures"
+      china: "c. 2800 BC – earliest bronze knife (Majiayao); c. 1700 BC Erlitou and then Shang piece-mould casting of ritual vessels"
+      americas: "c. 4000 BC or earlier – hammered native copper around the Great Lakes; Andean smelting in the 1st millennium BC, arsenical bronze by c. AD 300, tin bronze c. AD 700"
+      africa: "c. 800–400 BC – copper smelting at Akjoujt (Mauritania) and in Niger (older Niger dates disputed); 9th c. AD lost-wax bronzes of Igbo-Ukwu"
+    sources:
+      - "R. F. Tylecote, A History of Metallurgy (1976)"
+      - "Miljana Radivojević et al., On the origins of extractive metallurgy: new evidence from Europe, Journal of Archaeological Science 37 (2010)"
+
+  - id: bloomery_iron
+    name: Bloomery iron (wrought iron, forging, carburising)
+    category: materials
+    requires: [charcoal_burning]
+    helps: [bellows_piston_blower, copper_bronze, refractories_fireclay]
+    explain: >
+      Iron ore (bog ore, red or brown ironstone), roasted and broken small, is
+      charged in layers with charcoal into a clay shaft furnace about a metre high
+      and blown for hours at 1100–1300 °C. The iron never melts (that needs
+      1538 °C); it forms a spongy lump, the bloom, soaked in liquid slag. The bloom
+      is pulled out white-hot and hammered to squeeze out the slag and weld it
+      solid. The result is soft, tough wrought iron with almost no carbon, which
+      can be forged and welded but not hardened. Packed in charcoal and held at a
+      bright red heat for hours it takes up carbon at the surface and becomes
+      steel.
+    pitfalls:
+      - "Trying to melt and pour the iron as with bronze; in a bloomery it stays solid."
+      - "Too much blast or too tall a furnace makes brittle cast iron instead; too little heat leaves the ore unreduced."
+      - "Ore with much sulphur or phosphorus gives iron that cracks when hot or when cold."
+      - "Expecting quenching to harden wrought iron; without carbon nothing happens."
+      - "Underestimating the labour: roughly 10 kg of charcoal and a day's work for a kilogram of iron."
+    history:
+      egypt: "c. 3200 BC – beads of hammered meteoritic iron (Gerzeh); smelted iron common only after c. 600 BC"
+      mesopotamia: "c. 2000–1200 BC – occasional smelted iron in Anatolia; the 'Hittite monopoly' is a legend; general use after c. 1200 BC"
+      india: "c. 1200 BC – iron in the Ganges plain and the south; dates as early as 1800 BC are claimed and disputed"
+      greece: "c. 1050 BC – iron replaces bronze for tools and weapons"
+      china: "c. 9th–8th c. BC – bloomery iron; cast iron follows within a few centuries and dominates"
+      africa: "c. 500 BC – Nok (Nigeria), Meroe and the Great Lakes; an independent invention and dates before 1000 BC are debated"
+      europe: "c. 800 BC – Hallstatt culture; the bloomery stays in use until the 18th–19th c. (Catalan forge)"
+      americas: "Inuit cold-worked meteoritic iron from Cape York; around AD 1000 Norse settlers smelted bog iron at L’Anse aux Meadows in Newfoundland"
+    sources:
+      - "R. F. Tylecote, A History of Metallurgy (1976)"
+      - "Radomír Pleiner, Iron in Archaeology: The European Bloomery Smelters (2000)"
+      - "Vagn Fabritius Buchwald, Iron and Steel in Ancient Times (2005)"
+
+  - id: steel_heat_treatment
+    name: Hardening and tempering steel
+    category: materials
+    requires: [bloomery_iron]
+    explain: >
+      Medium- and high-carbon steels can be hardened by quenching. Heat the piece
+      evenly into its austenitising range, which depends on composition. Loss of
+      magnetic attraction near 770 °C is a rough guide, not a test of readiness, and plunge it into water or oil: it becomes
+      glass-hard and brittle. Then polish a patch and reheat gently, watching the
+      colour of the film that forms: pale straw (about 230 °C) for razors and
+      cutting tools, brown-purple (260–280 °C) for axes and chisels, blue (about
+      300 °C) for springs and saws; quench again at the right colour. Slow cooling
+      from red heat makes steel soft for filing.
+    pitfalls:
+      - "Skipping the tempering; the tool snaps or chips at the first blow."
+      - "Believing the secret is in the quenching liquid (urine, blood, special springs); what matters is carbon content, temperature and speed."
+      - "Overheating to white, sparkling heat burns the steel and ruins it for good."
+      - "Expecting wrought iron to harden like tool steel; it contains too little carbon. Cast irons need heat treatments appropriate to their microstructure."
+      - "Quenching thin or uneven pieces carelessly; they warp and crack. Oil is gentler than water."
+    history:
+      mesopotamia: "c. 1100 BC – quench-hardened steel tools in Cyprus and the Levant"
+      greece: "c. 700 BC – the Odyssey (9.391) compares a hissing eye to a smith quenching an axe"
+      india: "by c. 500 BC – hardened steel tools and blades"
+      china: "by c. 3rd–2nd c. BC – quench-hardening of steel swords under the Qin and Han"
+      rome: "1st c. AD – Pliny notes that the water and oil used in quenching affect the result"
+      europe: "c. 1120 Theophilus describes hardening files; 1722 Réaumur studies steel fractures; 1863 Sorby sees the structure under the microscope"
+    sources:
+      - "Cyril Stanley Smith, A History of Metallography (1960)"
+      - "Theophilus, De diversis artibus (c. 1120; tr. Hawthorne & Smith, On Divers Arts, 1963)"
+
+  - id: cementation_steel
+    name: Cementation (blister) steel and case hardening
+    category: materials
+    requires: [bloomery_iron, charcoal_burning]
+    helps: [refractories_fireclay, steel_heat_treatment]
+    explain: >
+      Carbon soaks slowly into solid red-hot iron. For case hardening, pack
+      finished iron parts in charcoal dust (with horn or leather scraps) in a
+      sealed clay box and keep at orange heat for some hours: the skin becomes
+      steel a millimetre deep and can be quenched hard over a tough core. For bar
+      steel, pack wrought iron bars in charcoal in a sealed stone chest and fire at
+      about 1050–1100 °C for five to seven days; the bars come out blistered and
+      steely throughout, though unevenly, and are bundled, welded and forged to
+      shear steel.
+    pitfalls:
+      - "Letting air into the chest; the charcoal burns away and the iron scales instead of carburising."
+      - "Too long or too hot gives cast-iron-like, unforgeable bars."
+      - "Expecting uniform steel; the outside holds more carbon than the core until it is forged or melted."
+      - "Phosphoric or slaggy iron gives bad steel; Sheffield depended on pure Swedish bar iron."
+    history:
+      mesopotamia: "c. 1200–1000 BC – carburised iron tools in the Levant and Cyprus"
+      china: "c. 5th–6th c. AD – co-fusion steel (wrought iron soaked in molten cast iron), attributed to Qiwu Huaiwen; a different route to the same end"
+      islamic: "9th–11th c. – al-Kindi and al-Biruni classify irons and steels and describe making steel in crucibles"
+      europe: "c. 1120 Theophilus case-hardens files; cementation furnaces at Prague (1574) and Nuremberg (1601); 1614 English patent; 1722 Réaumur publishes the process"
+    sources:
+      - "René-Antoine Ferchault de Réaumur, L'art de convertir le fer forgé en acier (1722)"
+      - "K. C. Barraclough, Steelmaking Before Bessemer (1984)"
+
+  - id: blast_furnace_cast_iron
+    name: Blast furnace and cast iron
+    category: materials
+    requires: [charcoal_burning, bellows_piston_blower]
+    helps: [water_wheel, refractories_fireclay, lime_burning, bloomery_iron]
+    explain: >
+      In a tall furnace (4 m and more) with a strong, continuous blast, the reduced
+      iron stays long enough among glowing charcoal to take up 3–4.5 % carbon. That
+      lowers its melting point to about 1150–1200 °C, so it collects as a liquid
+      under the slag and can be tapped every few hours while ore, fuel and
+      limestone flux are fed in at the top for months. Cast iron can be poured into
+      pots, pipes, cannon and machine parts, but it is brittle and cannot be
+      forged. To make bar iron, the carbon must be burnt out again in a second
+      hearth (fining).
+    pitfalls:
+      - "Treating cast iron like wrought iron; it shatters under the hammer and breaks under tension or shock."
+      - "A furnace that goes cold freezes solid and must be broken up; the campaign needs uninterrupted fuel, ore and blowing power."
+      - "Damp moulds or a wet tapping floor cause steam explosions."
+      - "Choosing the flux without considering the ore and fuel ash; some charges are self-fluxing, while others give a stiff slag without added flux."
+      - "White iron (cooled fast) is too hard to machine; grey iron needs slow cooling and silicon."
+    history:
+      china: "c. 5th c. BC – cast iron tools and moulds (isolated pieces earlier); 117 BC Han state iron monopoly with large furnaces; AD 31 Du Shi's water-powered blowers"
+      europe: "c. 1150–1350 – Lapphyttan (Sweden) and the Märkisches Sauerland; 15th c. Walloon and Rhineland furnaces with finery forges; 1496 first English furnace (Weald)"
+      islamic: "11th c. – al-Biruni describes liquid 'dus' (cast iron) as an ingredient of crucible steel; no large blast-furnace industry is documented"
+      africa: "tall natural-draught furnaces in West and East Africa sometimes produced high-carbon iron; not a casting industry"
+    sources:
+      - "Donald B. Wagner, Science and Civilisation in China, vol. 5 part 11: Ferrous Metallurgy (2008)"
+      - "R. F. Tylecote, A History of Metallurgy (1976)"
+
+  - id: coke_iron
+    name: Smelting iron with coke
+    category: materials
+    requires: [blast_furnace_cast_iron]
+    helps: [coal_mining, atmospheric_engine, refractories_fireclay]
+    explain: >
+      Raw coal spoils iron with sulphur and cakes in the furnace. Baked without air
+      for a day or two in heaps or ovens, a suitable caking coal loses its tar and
+      gas and part of its sulphur and becomes coke: hard, porous, nearly pure
+      carbon. Coke carries a taller burden than charcoal, so furnaces can be much
+      bigger, and it frees ironmaking from the forest. It needs a stronger blast
+      (blowing cylinders driven by water or steam), more limestone to carry off the
+      sulphur, and from 1828 a preheated blast that cut fuel use by about two
+      thirds.
+    pitfalls:
+      - "Assuming any coal will do; many coals do not coke or hold too much sulphur, which makes the iron crack when forged hot."
+      - "Using charcoal-sized bellows; coke will not burn hot enough without a harder blast."
+      - "Saying Darby's 1709 success changed the industry at once; early coke pig was sold mainly for castings; widespread use for bar iron came later."
+      - "Coke ovens and coal gas contain carbon monoxide; men died sleeping beside warm ovens."
+    history:
+      china: "11th c. – Song ironworks in the north use coal on a large scale; coke is probable but the evidence is thin. Coal-fired crucible smelting is documented later"
+      europe: "1709 – Abraham Darby, Coalbrookdale; general in Britain only from the 1750s; 1784 puddling makes coke pig into bar iron; 1828 Neilson's hot blast"
+      americas: "1830s–1850s – anthracite and then coke furnaces in Pennsylvania"
+      india: "1875 – first lasting coke blast furnace at Kulti (Bengal)"
+    sources:
+      - "Arthur Raistrick, Dynasty of Iron Founders: The Darbys and Coalbrookdale (1953)"
+      - "Robert Hartwell, A Revolution in the Chinese Iron and Coal Industries during the Northern Sung, 960–1126 A.D., Journal of Asian Studies 21 (1962)"
+      - "Joel Mokyr, The Lever of Riches (1990)"
+
+  - id: puddling_wrought_iron
+    name: Puddling and rolling (wrought iron from pig iron with coal)
+    category: materials
+    requires: [blast_furnace_cast_iron]
+    helps: [coke_iron, refractories_fireclay, trip_hammer_water_powered]
+    explain: >
+      Pig iron is melted on the hearth of a reverberatory furnace, where the coal
+      burns in a separate grate and only the flame sweeps over the metal, so the
+      fuel's sulphur stays out. The puddler stirs the bath with an iron bar; air
+      and iron-oxide slag burn out the carbon, and because purer iron melts
+      higher, the bath stiffens into pasty lumps. These are gathered into balls of
+      about 40 kg, hammered to expel slag, and passed through grooved rolls into
+      bars. One furnace gives a few tonnes a week of forgeable iron without
+      charcoal.
+    pitfalls:
+      - "Mixing fuel and metal as in a blast furnace; coal's sulphur ruins the iron."
+      - "A sand hearth wastes half the iron as slag; a bed of iron oxide (Hall's 'wet puddling') is far better."
+      - "Calling the product steel; it is fibrous wrought iron, soft and slag-streaked."
+      - "Thinking it can be scaled up freely; each heat depends on one man's strength and judgement, which is why Bessemer's process replaced it."
+    history:
+      china: "c. 1st c. BC – Han ironworkers 'stir-fry' (chao) molten cast iron in open hearths to make wrought iron"
+      europe: "15th c. finery forge with charcoal; 1766 Cranage brothers and 1783 Peter Onions anticipate parts of it; 1783–1784 Henry Cort's patents for grooved rolls and puddling; c. 1830 Joseph Hall's wet puddling"
+      americas: "a 2023 claim that Cort took the process from Black metalworkers in Jamaica has been examined and rejected by several historians; treat it as unsupported"
+    sources:
+      - "Donald B. Wagner, Science and Civilisation in China, vol. 5 part 11: Ferrous Metallurgy (2008)"
+      - "R. F. Tylecote, A History of Metallurgy (1976)"
+
+  - id: crucible_steel
+    name: Crucible steel (wootz, Huntsman's cast steel)
+    category: materials
+    requires: [bloomery_iron, refractories_fireclay]
+    helps: [cementation_steel, coke_iron, bellows_piston_blower]
+    explain: >
+      Steel becomes uniform and free of slag only if it is fully melted. In the
+      Indian method, small pieces of wrought iron are sealed in a clay crucible
+      with charcoal or wood and leaves and fired for many hours in a strongly
+      blown furnace until the iron has taken up 1–1.8 % carbon and melted to a
+      small cake (wootz). Huntsman's method melts broken blister steel in
+      fire-clay crucibles in a coke-fired draught furnace at about 1600 °C and
+      pours it into an iron mould. The ingot is forged at a moderate red heat into
+      blades, springs and tools.
+    pitfalls:
+      - "Ordinary pottery crucibles slump long before steel melts; the refractory clay is the real secret."
+      - "Forging high-carbon wootz at a bright yellow heat makes it crumble; it must be worked at dull red."
+      - "Believing Damascus patterns come from folding; the classic watered blades are forged from a single crucible ingot, and the pattern depends on trace elements in the ore."
+      - "Thinking the quantities are large; a crucible gives one or two kilograms (later 15–25 kg)."
+    history:
+      india: "c. 300 BC or earlier – crucible steel in South India and Sri Lanka (Kodumanal, Mel-siruvalur); exported for two thousand years"
+      islamic: "9th–11th c. – crucible steel at Merv and in Central Asia; al-Kindi and al-Biruni describe it; 'Damascus' blades forged from Indian and Persian ingots"
+      china: "co-fusion steel from the 5th–6th c. AD serves similar uses; true crucible steel is not the main tradition"
+      europe: "8th–11th c. some Viking-age 'Ulfberht' swords appear to use imported crucible steel (debated); c. 1740 Benjamin Huntsman, Sheffield"
+    sources:
+      - "Sharada Srinivasan & Srinivasa Ranganathan, India's Legendary Wootz Steel: An Advanced Material of the Ancient World (2004)"
+      - "J. D. Verhoeven, A. H. Pendray & W. E. Dauksch, The Key Role of Impurities in Ancient Damascus Steel Blades, JOM 50 (1998)"
+      - "K. C. Barraclough, Steelmaking Before Bessemer (1984)"
+
+  - id: bessemer_steel
+    name: Bessemer steel (cheap bulk steel)
+    category: materials
+    requires: [blast_furnace_cast_iron, refractories_fireclay]
+    helps: [coke_iron, high_pressure_steam, railway]
+    explain: >
+      Cold air blown through molten pig iron in a pear-shaped, tilting vessel burns
+      out the silicon, manganese and carbon, and this burning itself supplies the
+      heat: no fuel is needed and the metal gets hotter, not colder. Ten to twenty
+      tonnes become steel in about twenty minutes instead of days. The blow is
+      stopped when the flame drops, and a manganese-rich iron (spiegeleisen) is
+      added to remove dissolved oxygen and set the carbon. With an ordinary
+      silica lining the iron must be free of phosphorus; a lining of burnt
+      dolomite with added lime (Thomas, 1879) takes the phosphorus into the slag.
+    pitfalls:
+      - "Leaving out the manganese addition; the steel is full of oxygen and crumbles in forging. Bessemer's first licensees all failed on this."
+      - "Using phosphoric pig iron in an acid-lined converter; the steel is brittle when cold. Most European ores are phosphoric."
+      - "Blowing too long burns the iron itself; the end point is judged in seconds by the flame."
+      - "Saying it gave the first steel; it gave the first cheap steel in bulk."
+      - "Air-blown steel holds nitrogen and can be brittle, one reason the open hearth overtook it."
+    history:
+      europe: "1856 – Bessemer's paper at Cheltenham and Robert Mushet's manganese addition; 1858 Göransson makes it work in Sweden; 1878–1879 Thomas and Gilchrist's basic lining opens phosphoric ores"
+      americas: "1847–1857 – William Kelly's air-blowing experiments in Kentucky; his priority claim won a US patent but his contribution is disputed"
+      east_asia: "1901 – Yawata works (Japan); an older claim of a Japanese or Chinese air-refining forerunner rests on thin evidence"
+    sources:
+      - "Henry Bessemer, Sir Henry Bessemer, F.R.S.: An Autobiography (1905)"
+      - "Thomas J. Misa, A Nation of Steel: The Making of Modern America, 1865–1925 (1995)"
+
+  - id: open_hearth_steel
+    name: Open-hearth steel (Siemens-Martin) and the regenerative furnace
+    category: materials
+    requires: [blast_furnace_cast_iron, refractories_fireclay]
+    helps: [gas_lighting, coke_iron, bessemer_steel]
+    explain: >
+      A furnace gets much hotter if its waste gases preheat the incoming air and
+      fuel gas. The hot exhaust is led through chambers stacked with firebrick;
+      every twenty minutes or so the flow is reversed, so the air and gas now
+      enter through the glowing bricks. This reaches about 1650 °C, enough to keep
+      mild steel liquid on a shallow hearth. Pig iron is melted together with
+      scrap or iron ore over eight to twelve hours, which leaves time to take
+      samples and adjust the composition, and scrap can be reused.
+    pitfalls:
+      - "Without silica bricks for the roof the furnace melts itself."
+      - "Forgetting the reversal; without it the regenerators do nothing."
+      - "Assuming faster is better; its advantage over Bessemer is control and the use of scrap, not speed."
+      - "Producer gas is rich in carbon monoxide; leaks in flues and valves kill."
+    history:
+      europe: "1856 – Friedrich and Wilhelm Siemens patent the regenerative furnace (first used for glass); 1864–1865 Pierre-Émile Martin makes steel in it at Sireuil; from the 1880s with a basic lining; the dominant steel process from c. 1900 to the 1960s"
+      americas: "1868 – first American open hearth (Trenton); 1890s Carnegie converts to it"
+    sources:
+      - "Thomas J. Misa, A Nation of Steel: The Making of Modern America, 1865–1925 (1995)"
+      - "K. C. Barraclough, Steelmaking 1850–1900 (1990)"
+
+  - id: alloy_stainless_steel
+    name: Alloy, tool and stainless steels
+    category: materials
+    requires: []
+    helps: [crucible_steel, open_hearth_steel, electrolysis, lathe_screw_cutting]
+    explain: >
+      Small additions of other metals change steel greatly. About 12 % manganese
+      gives a steel that hardens under blows (rail crossings, crusher jaws).
+      Tungsten with chromium gives tool steel that keeps its edge at red heat and
+      so cuts metal several times faster. Stainless steels contain at least about 10.5 % chromium and resist corrosion, because an invisible, self-healing chromium oxide film
+      forms; 18 % chromium with 8 % nickel is the tough, formable kind. Chromium
+      and nickel also give the strong steels needed for armour, engines and
+      high-pressure vessels.
+    pitfalls:
+      - "Judging corrosion resistance from chromium alone; composition, surface condition and the environment all affect the protective film."
+      - "Heat-treating high-speed steel like carbon steel; it must be quenched from near white heat (about 1250 °C) and tempered near 550 °C."
+      - "Stainless is not rust-proof in sea water or hot salt and acid; chlorides pit it."
+      - "The ores (chromite, wolframite, nickel) and ways to reduce them must exist first."
+    history:
+      india: "c. AD 400 – the Delhi iron pillar resists rust through its high phosphorus content and dry climate, not through alloying"
+      europe: "1819–1822 Faraday and Stodart, Berthier: experimental alloy steels; 1868 Mushet's self-hardening tungsten steel; 1882 Hadfield's manganese steel; 1912 Strauss and Maurer (Krupp), chromium-nickel stainless; 1913 Harry Brearley (Sheffield), chromium stainless cutlery steel"
+      americas: "1898–1900 – Taylor and White's high-speed steel (Bethlehem); 1911–1912 Elwood Haynes's stainless alloys"
+    sources:
+      - "Harold M. Cobb, The History of Stainless Steel (2010)"
+      - "Thomas J. Misa, A Nation of Steel: The Making of Modern America, 1865–1925 (1995)"
+
+  - id: refractories_fireclay
+    name: Refractories (fireclay, crucibles, furnace linings)
+    category: materials
+    requires: [fired_brick_ceramics]
+    explain: >
+      Every hot process is limited by what the furnace and crucible are made of.
+      Common red clay softens near 1100 °C. Pale fireclays rich in alumina and poor
+      in iron, lime and alkali (often found under coal seams) stand 1500 °C and
+      more, mixed with a third or more of crushed, already-fired clay (grog) so
+      they do not shrink and crack. Crucibles gain from added graphite or charcoal
+      dust. Silica bricks serve for the hottest furnace roofs; burnt dolomite or
+      magnesite for linings that must resist limy slags. Dry everything for weeks
+      and heat it slowly the first time.
+    pitfalls:
+      - "Building a steel or glass furnace of ordinary brick; it melts or slags away in one firing."
+      - "Firing a damp lining or crucible; trapped steam bursts it, with molten metal inside."
+      - "Matching lining and slag wrongly: limy slags eat silica bricks, sandy slags eat dolomite."
+      - "Reusing a cracked crucible; a failed pot of molten metal maims."
+    history:
+      mesopotamia: "c. 5000 BC – tempered clay crucibles and tuyères for copper"
+      india: "c. 300 BC – rice-husk-tempered crucibles for wootz that survive steel-melting heat"
+      china: "c. 1500 BC onwards – kaolin-rich kiln furniture and furnace linings for bronze, iron and high-fired ceramics"
+      europe: "12th–18th c. – Hessian crucibles from Großalmerode, traded across Europe; graphite crucibles from Passau; 1822 silica (Dinas) brick in Wales; 1879 basic dolomite lining of Thomas and Gilchrist"
+    sources:
+      - "Marcos Martinón-Torres, Thilo Rehren & Ian C. Freestone, Mullite and the mystery of Hessian wares, Nature 444 (2006)"
+      - "R. F. Tylecote, A History of Metallurgy (1976)"
+
+  - id: zinc_brass
+    name: Brass and metallic zinc
+    category: materials
+    requires: [copper_bronze]
+    helps: [refractories_fireclay, distillation]
+    explain: >
+      Zinc boils at 907 °C, below the temperature at which charcoal reduces its
+      ore, so in an ordinary furnace it leaves as vapour and burns to white smoke.
+      Brass is therefore made without ever seeing zinc: heat small pieces of copper
+      with roasted, ground calamine (zinc ore) and charcoal in a closed crucible at
+      about 900–950 °C for many hours, and the zinc vapour soaks into the copper
+      up to about 28–30 %; then raise the heat to melt and pour. To win the metal
+      itself, heat the ore and charcoal in sealed clay retorts whose necks point
+      downward into a cooler chamber, where the vapour condenses to drops.
+    pitfalls:
+      - "Smelting zinc ore like copper or lead ore; all the metal is lost up the chimney."
+      - "Raising the crucible to copper's melting point too early; the zinc escapes before it is absorbed."
+      - "Breathing the white zinc fumes gives 'brass-founders' ague' (a day of fever and chills)."
+      - "Confusing calamine with other white earths; test whether it turns copper golden."
+      - "Expecting brass to quench-harden; it hardens only by hammering."
+    history:
+      mesopotamia: "3rd–2nd millennium BC – occasional brass objects, probably accidental; 8th–7th c. BC deliberate cementation brass in Anatolia (Gordion)"
+      rome: "c. 23 BC – Augustus's coinage reform uses orichalcum (brass) for sestertii and dupondii"
+      india: "c. 9th c. AD – zinc distilled by downward condensation at Zawar (Rajasthan), on an industrial scale by the 12th–16th c.; described in the Rasaratnakara and Rasarnava"
+      china: "16th c. – zinc smelting under the Ming; exported to Europe as 'tutenag' in the 17th c."
+      islamic: "9th–12th c. – cementation brass (shabah) a major craft; tutty (zinc oxide) collected from furnaces"
+      europe: "medieval cementation brass at Dinant and Aachen; 1738 William Champion's patent for zinc distillation (Bristol); 1746 Marggraf describes the metal"
+      africa: "9th–15th c. AD – leaded brass and bronze castings at Igbo-Ukwu, Ife and Benin"
+    sources:
+      - "P. T. Craddock (ed.), 2000 Years of Zinc and Brass (1990)"
+      - "R. F. Tylecote, A History of Metallurgy (1976)"
+
+  - id: cupellation_assaying
+    name: Cupellation, parting and assaying of silver and gold
+    category: materials
+    requires: []
+    helps: [bellows_piston_blower, nitric_acid, copper_bronze]
+    explain: >
+      Silver is mostly won from lead ores. The silver-bearing lead is melted in a
+      shallow dish of bone ash or wood ash under a blast of air at about 900–1000 °C:
+      the lead burns to litharge, which is absorbed by the ash or skimmed off, and
+      a bright bead of silver (with any gold) is left. Gold is parted from silver
+      by baking thin sheets with salt and brick dust for days, or by dissolving the
+      silver out with nitric acid. Done on a carefully weighed sample, the same
+      steps tell how much precious metal an ore or a coin contains.
+    pitfalls:
+      - "Lead and litharge fumes poison the refiner; this was among the unhealthiest of old trades."
+      - "A dish of ordinary clay does not absorb litharge; it needs bone ash or leached wood ash."
+      - "Nitric acid parting fails if the alloy is more than about a quarter gold; silver must be added first (three parts to one)."
+      - "Judging gold by colour or by a touchstone alone, which clever alloys can cheat."
+    history:
+      mesopotamia: "c. 3300 BC – litharge cakes from cupellation at Habuba Kabira (Syria); c. 550 BC gold and silver parted by salt cementation at Sardis for Croesus's coinage"
+      greece: "5th c. BC – the Laurion mines and cupellation finance Athens"
+      india: "c. 300 BC – the Arthashastra describes state assayers and touchstone tests"
+      china: "by the Han – cupellation of silver; alchemical texts describe it"
+      americas: "c. AD 60–120 – silver refining from lead ores at Lake Titicaca, long before the Inca"
+      europe: "Roman Rio Tinto and medieval Freiberg and Kutná Hora; c. 14th–15th c. parting with nitric acid; 1556 Agricola and 1574 Ercker give full procedures"
+    sources:
+      - "Georgius Agricola, De re metallica (1556; tr. H. C. Hoover & L. H. Hoover, 1912)"
+      - "Lazarus Ercker, Treatise on Ores and Assaying (1574; tr. A. G. Sisco & C. S. Smith, 1951)"
+      - "Andrew Ramage & Paul Craddock, King Croesus' Gold: Excavations at Sardis and the History of Gold Refining (2000)"
+
+  - id: mercury_amalgam
+    name: Mercury and amalgamation of gold and silver
+    category: materials
+    requires: []
+    helps: [distillation, salt_production]
+    explain: >
+      Red cinnabar roasted at about 600 °C gives mercury vapour, which condenses to
+      the liquid metal on a cool surface. Mercury wets and dissolves gold and
+      silver. Crushed gold ore or river sand is worked over mercury, the pasty
+      amalgam is squeezed through leather and then heated in a closed retort, so
+      the mercury distils off to be used again and the gold stays. For low-grade
+      silver ore (patio process), the ground ore is spread wet in a yard and mixed
+      with salt, roasted copper pyrites and mercury, trodden for weeks, washed, and
+      the amalgam retorted. Gold amalgam brushed on to metal and heated gives fire
+      gilding.
+    pitfalls:
+      - "Mercury vapour has no smell and destroys nerves and kidneys; heating amalgam in the open poisons the worker and the household. Always distil in a closed retort outdoors."
+      - "It is not safe at room temperature either; spilt mercury in a warm room poisons slowly."
+      - "Mercury was long used as a medicine; it causes loosened teeth, tremor and madness rather than cure."
+      - "Expecting it to work on all ores; sulphide silver ores need salt and a copper salt, and some gold is too fine or coated to amalgamate."
+      - "Losing the mercury; it is dear, and about as much is lost as silver is won."
+    history:
+      china: "c. 2nd millennium BC cinnabar as pigment; 210 BC rivers of mercury reported in the tomb of Qin Shi Huang; amalgam gilding by the Warring States period"
+      greece: "c. 300 BC – Theophrastus describes obtaining quicksilver from cinnabar"
+      rome: "1st c. BC–1st c. AD – Vitruvius and Pliny describe recovering gold with mercury and fire gilding; mines at Almadén"
+      islamic: "10th–12th c. – amalgamation of gold ores described (al-Hamdani, al-Biruni); Almadén worked under the caliphate"
+      americas: "cinnabar used as pigment in the pre-Columbian Andes and Mesoamerica; 1554 Bartolomé de Medina's patio process at Pachuca; 1570s adopted at Potosí with mercury from Huancavelica"
+      europe: "medieval fire gilding (Theophilus); 1540 Biringuccio describes amalgamating silver ore; 1887 the cyanide process begins to replace mercury"
+    sources:
+      - "Vitruvius, De architectura VII.8"
+      - "Vannoccio Biringuccio, De la pirotechnia (1540)"
+      - "Nicholas A. Robins, Mercury, Mining, and Empire: The Human and Ecological Cost of Colonial Silver Mining in the Andes (2011)"
+
+  - id: lead_hazard
+    name: Lead is a cumulative poison
+    category: materials
+    requires: []
+    helps: [epidemiology_mapping, controlled_trial]
+    explain: >
+      Lead taken in small amounts over months builds up in the body and causes
+      colic, constipation, pallor, gout, palsy of the wrists, miscarriage, and in
+      children lasting damage to the mind. The worst sources are those that put it
+      in food and drink: wine or must boiled down or sweetened in lead pans or
+      with litharge ('sugar of lead' tastes sweet), cider and rum made in leaded
+      equipment, lead-glazed and pewter vessels holding sour foods, white lead in
+      paint and face powder. Lead pipes are most dangerous with soft or acid
+      water. The proof is in comparison: the colic follows the leaded drink, not
+      the district or the weather.
+    pitfalls:
+      - "Saying lead pipes poisoned Rome and caused its fall; hard water scaled the pipes, the boiled-down grape syrup was the bigger source, and most historians reject the 'fall of Rome' thesis."
+      - "Assuming a poison must act quickly; lead works over months, which is why it went unnoticed."
+      - "Forgetting the makers: smelters, potters, painters and plumbers suffered most."
+      - "Offering no substitute; say what to use instead (tinned copper, glass, stoneware, clay or wooden pipes)."
+    history:
+      greece: "2nd c. BC – Nicander describes poisoning by white lead and litharge"
+      rome: "c. 25 BC – Vitruvius advises clay pipes because lead workers are pallid; Pliny and Columella recommend lead pans for grape syrup all the same"
+      china: "lead and mercury elixirs poisoned alchemists and several Tang emperors (9th c.); white lead cosmetics in use from the Han"
+      islamic: "10th–11th c. – Ibn Sina describes lead colic"
+      europe: "1696 – Eberhard Gockel (Ulm) traces a colic epidemic to wine sweetened with litharge; 1700 Ramazzini on the diseases of potters and painters; 1767 George Baker proves Devonshire colic comes from lead in cider presses"
+      americas: "1786 Franklin's letter on lead; 1923 leaded petrol introduced, phased out from the 1970s"
+    sources:
+      - "Vitruvius, De architectura VIII.6"
+      - "George Baker, An Essay Concerning the Cause of the Endemial Colic of Devonshire (1767)"
+      - "Jerome O. Nriagu, Lead and Lead Poisoning in Antiquity (1983)"
+
+  - id: soldering_tinning
+    name: Soldering, brazing and tinning
+    category: materials
+    requires: []
+    helps: [copper_bronze, zinc_brass]
+    explain: >
+      Metals are joined by a second metal that melts lower and wets both. Soft
+      solder is tin with lead (the eutectic, about 63 % tin and 37 % lead by mass, melts at 183 °C; one tin to
+      two lead stays pasty for wiping pipe joints); for hard joints use brass
+      filings with borax at a bright red heat. The surfaces must be scraped bright
+      and covered with a flux that keeps air off: tallow or rosin, sal ammoniac,
+      or zinc dissolved in spirit of salt. Copper cooking vessels are tinned inside
+      by wiping molten tin over the fluxed, heated metal, and thin iron sheet
+      dipped in molten tin gives tinplate.
+    pitfalls:
+      - "Dirty or oxidised metal: the solder balls up and the joint only looks sound."
+      - "Lead-bearing solder inside vessels and cans for food or drink poisons; use pure tin there."
+      - "Acid flux left on the work corrodes it; wash it off. Rosin is the safe flux for fine work."
+      - "Heating the solder instead of the work; the joint must be hot enough to melt the solder itself."
+      - "Untinned copper and brass pots give verdigris with sour food."
+    history:
+      mesopotamia: "c. 2500 BC – soldered gold and silver work in the royal graves of Ur"
+      egypt: "by c. 1400 BC – tin-lead and silver solders on jewellery and vessels"
+      rome: "1st c. AD – Pliny describes tin-lead solders for pipes and the tinning of copper vessels, which he credits to the Gauls"
+      china: "by c. 5th c. BC – soldered joins on bronzes; tin-lead solders"
+      europe: "c. 1120 Theophilus gives solder and flux recipes; 14th c. tinplate made at Wunsiedel (Upper Franconia); 1720s–1730s rolled tinplate at Pontypool (Wales)"
+    sources:
+      - "Pliny the Elder, Naturalis historia XXXIV.160–162"
+      - "Theophilus, De diversis artibus (c. 1120; tr. Hawthorne & Smith, On Divers Arts, 1963)"
+      - "W. E. Minchinton, The British Tinplate Industry: A History (1957)"
+
+  - id: fired_brick_ceramics
+    name: Pottery, kilns and fired brick
+    category: materials
+    requires: []
+    helps: [charcoal_burning]
+    explain: >
+      Clay shaped wet and dried is still mud, but heated above about 600 °C it
+      changes for good into a hard, water-resistant ceramic. Mix the clay with a
+      fifth or more of sand, crushed shell or old potsherds so it shrinks evenly,
+      dry it completely in the shade, then fire slowly: an open bonfire reaches
+      600–800 °C, and a kiln with a separate firebox, a perforated floor and a
+      covered chamber reaches 900–1100 °C with far less fuel. Earthenware stays
+      porous unless glazed; stoneware fired at 1200–1300 °C is dense. Fired bricks
+      (length, width and thickness about 4:2:1) outlast sun-dried ones by
+      centuries.
+    pitfalls:
+      - "Firing ware that is not bone dry, or heating too fast: steam bursts it."
+      - "Pure, fat clay without temper cracks in drying; pebbles of limestone in the clay burn to lime and split the pot weeks later."
+      - "Lead glazes on vessels for wine, vinegar, fruit or cider poison the user."
+      - "Cooling the kiln quickly or opening it early cracks the whole load."
+      - "Underestimating fuel; a brick kiln eats several tonnes of wood for each firing."
+    history:
+      china: "c. 18,000 BC – oldest known pottery (Xianrendong); kilns reach 1200 °C by the Shang; fired brick widespread from the Warring States period"
+      east_asia: "c. 14,000 BC – Jomon pottery in Japan"
+      europe: "c. 26,000 BC – fired clay figurines at Dolní Věstonice, long before pots; pottery from c. 6500 BC"
+      africa: "c. 9400 BC – pottery at Ounjougou (Mali), an independent invention"
+      mesopotamia: "c. 7000 BC pottery; c. 4000–3500 BC potter's wheel; c. 3100 BC fired brick at Uruk; 9th c. AD tin-opacified glaze at Basra"
+      india: "c. 2600 BC – standardised fired bricks in the Indus cities"
+      americas: "c. 5500 BC – pottery in the lower Amazon (Taperinha), independent of the Old World"
+      egypt: "c. 4000 BC – glazed faience; fired brick rare before the Roman period"
+    sources:
+      - "Prudence M. Rice, Pottery Analysis: A Sourcebook (1987)"
+      - "Xiaohong Wu et al., Early Pottery at 20,000 Years Ago in Xianrendong Cave, China, Science 336 (2012)"
+      - "James W. P. Campbell & Will Pryce, Brick: A World History (2003)"
+
+  - id: porcelain
+    name: Porcelain
+    category: materials
+    requires: [fired_brick_ceramics]
+    helps: [refractories_fireclay]
+    explain: >
+      A traditional Jingdezhen hard-paste porcelain body combines kaolin, a white clay that does
+      not melt, and china stone (a feldspar-rich rock, ground fine), which melts
+      and binds it. Roughly equal parts are shaped, usually glazed with china stone
+      mixed with lime or ash, and fired at 1280–1400 °C in a kiln that can hold
+      that heat for a day, with a smoky, air-starved flame at the peak so that
+      traces of iron do not turn it yellow. The body becomes white, dense, ringing
+      and translucent where thin. The ware is stacked in fireclay boxes (saggars)
+      to keep off ash and flame.
+    pitfalls:
+      - "Confusing ceramic bodies: some European soft-paste porcelains use glass frit, while bone china uses calcined bone ash with clay and a flux. Their firing behaviour differs from hard paste."
+      - "Believing the old tales that it is made from eggshells or shells buried for a century."
+      - "A common pottery kiln stops near 1000–1100 °C; porcelain needs a different kiln and firebricks."
+      - "Any iron in the clay or water spots the ware; kaolin deposits must be sought (Saxony, Cornwall, Limoges)."
+    history:
+      china: "c. 1600 BC high-fired 'proto-porcelain'; c. 2nd c. AD Eastern Han porcelain in Zhejiang; c. 600 white porcelain (Xing ware); from c. 1000 Jingdezhen; 14th c. blue-and-white"
+      east_asia: "c. 10th c. Korea (celadon, then white porcelain); 1616 Arita, Japan, by tradition founded by Korean potters"
+      islamic: "9th c. tin-glazed imitations in Iraq; 11th–12th c. stonepaste (fritware) bodies in Egypt and Iran"
+      europe: "1575–1587 Medici soft-paste porcelain, Florence; 1708 Tschirnhaus and Böttger make hard-paste porcelain in Saxony, Meissen factory 1710; 1712 and 1722 letters of Père d'Entrecolles describe Jingdezhen"
+    sources:
+      - "Rose Kerr & Nigel Wood, Science and Civilisation in China, vol. 5 part 12: Ceramic Technology (2004)"
+      - "Janet Gleeson, The Arcanum: The Extraordinary True Story (1998)"
+
+  - id: glassmaking
+    name: Glassmaking and glassblowing
+    category: materials
+    requires: []
+    helps: [alkali_soda, lime_burning, refractories_fireclay, charcoal_burning]
+    explain: >
+      A typical soda-lime glass contains three main oxides, supplied by sand or crushed quartz (about 65–70 %), an alkali
+      that makes it melt (soda or plant ash, about 15–20 %) and lime (about 10 %)
+      that makes it stand up to water. Roast the mixed batch for hours at dull red
+      heat (fritting), then melt it in fireclay pots at 1100–1300 °C until the
+      bubbles rise out. A gather taken on the end of an iron tube about 1.3 m long
+      can be blown, swung and shaped while it stays orange-hot. Finished pieces
+      must cool slowly over many hours in a chamber at about 500 °C, or they
+      shatter later. Broken glass added to the batch helps it melt.
+    pitfalls:
+      - "Sand alone will not melt in any wood-fired furnace (it needs about 1700 °C)."
+      - "Leaving out the lime gives a glass that clouds, weeps and finally dissolves in water."
+      - "Skipping the slow cooling; the piece cracks hours or days later, sometimes violently."
+      - "Ordinary sand contains iron and gives green or brown glass."
+      - "Pots that fail in the furnace; glassmaking stands or falls with the fireclay."
+    history:
+      mesopotamia: "c. 2500 BC – first glass beads; c. 1500 BC core-formed vessels; c. 50 BC glassblowing invented on the Syro-Palestinian coast"
+      egypt: "c. 1500 BC – glass vessels and ingots (Amarna, Qantir); earlier faience"
+      india: "c. 1000 BC – glass beads; large bead industries by the last centuries BC"
+      china: "c. 5th–4th c. BC – lead-barium glass, a separate recipe; blown glass arrives with imports in the Han period"
+      rome: "1st c. AD – blown vessels cheap and common; window panes"
+      islamic: "8th–14th c. – plant-ash glass, cutting, lustre painting, enamelled and gilded glass in Syria and Egypt"
+      africa: "11th–15th c. – glass made from local materials at Ile-Ife (Nigeria)"
+      europe: "medieval potash 'forest glass'; 1291 Venetian furnaces moved to Murano; 1612 Neri prints the first book of glass recipes"
+    sources:
+      - "Antonio Neri, L'arte vetraria (1612)"
+      - "Theophilus, De diversis artibus (c. 1120; tr. Hawthorne & Smith, On Divers Arts, 1963)"
+      - "Julian Henderson, Ancient Glass: An Interdisciplinary Exploration (2013)"
+
+  - id: clear_glass
+    name: Colourless and optical glass (cristallo, lead crystal, plate)
+    category: materials
+    requires: [glassmaking]
+    helps: [alkali_soda, refractories_fireclay, lenses]
+    explain: >
+      Glass is green because of iron in the sand and dirty because of the ash.
+      Venetian cristallo used crushed white quartz pebbles instead of sand,
+      plant ash that was dissolved, filtered and recrystallised to a white salt
+      (with some lime put back), and a pinch of manganese ore, whose faint purple
+      cancels the last green. Lead glass (about one third red lead) is heavier,
+      more brilliant and bends light more strongly. For lenses the melt must also
+      be free of streaks and bubbles, which is achieved by stirring it with a
+      fireclay rod while it cools; a crown glass lens paired with a lead glass
+      lens removes colour fringes.
+    pitfalls:
+      - "Too much manganese turns the glass pink or purple; sunlight later does the same."
+      - "Over-purified ash loses its lime and the glass slowly crizzles and decays, as Ravenscroft's first lead-free batches did."
+      - "A clear-looking glass may still be full of streaks that ruin a lens; hold it against a sharp edge of light to check."
+      - "Lead glass must be melted in covered pots away from smoke or it turns black."
+      - "Polished plate takes weeks of grinding with sand and emery; blown window glass is never flat."
+    history:
+      rome: "1st c. AD – glass decolourised with antimony or manganese, prized above gold cups according to Pliny"
+      islamic: "9th–10th c. – clear cut glass in Iraq and Iran; rock crystal carving in Fatimid Egypt"
+      china: "lead glasses known from the Warring States; clear optical glass arrives with Jesuit workshops in the 1690s"
+      europe: "c. 1450 Angelo Barovier's cristallo (Murano); 1674–1676 Ravenscroft's lead crystal; 1688 cast plate glass at Saint-Gobain; 1758 Dollond's achromatic lens; c. 1805 Guinand's stirring; 1884 Schott's Jena glass; 1959 float glass (Pilkington)"
+    sources:
+      - "Antonio Neri, L'arte vetraria (1612)"
+      - "W. Patrick McCray, Glassmaking in Renaissance Venice: The Fragile Craft (1999)"
+
+  - id: glass_mirrors
+    name: Glass mirrors (tin amalgam and silvering)
+    category: materials
+    requires: [glassmaking]
+    helps: [clear_glass, mercury_amalgam, nitric_acid]
+    explain: >
+      A flat, clear glass plate backed with bright metal gives a far better image
+      than polished bronze. The old method: smooth a sheet of tin foil on a level
+      stone table, flood it with mercury, slide the cleaned glass across so no air
+      is trapped, weight it, and tilt the table over some weeks to drain the
+      surplus; a tin amalgam layer stays on the glass. The modern method deposits
+      real silver: a solution of silver nitrate in ammonia, mixed with a reducing
+      sugar or tartrate, coats clean glass in minutes; a coat of varnish or copper
+      protects it.
+    pitfalls:
+      - "Mercury mirror workers suffered tremor, lost teeth and early death; the method needs ventilation and is best avoided."
+      - "Ammonia-silver solution that is kept or allowed to dry forms a compound that explodes at a touch; mix it fresh and wash the remains away at once."
+      - "Any grease on the glass leaves bare patches; clean with nitric acid or lye and pure water."
+      - "Wavy or greenish glass gives a distorted, dark image whatever the coating."
+      - "Pouring molten metal on cold glass cracks it; early lead-backed mirrors were made on thin, hot, blown bulbs and are small and convex."
+    history:
+      mesopotamia: "c. 6000 BC – polished obsidian mirrors at Çatalhöyük; from c. 3000 BC polished copper and bronze"
+      egypt: "from c. 2900 BC – polished copper and bronze hand mirrors"
+      china: "c. 2000 BC bronze mirrors (Qijia culture); high-tin mirrors a major craft from the Warring States to the Tang"
+      americas: "c. 1000 BC – Olmec concave mirrors of polished magnetite and ilmenite; later pyrite and obsidian"
+      rome: "1st–3rd c. AD – small convex glass mirrors backed with lead"
+      europe: "13th–15th c. convex lead-backed glass mirrors (Nuremberg); 1507 Venetian privilege for flat tin-amalgam mirrors (dal Gallo brothers); 1835 Liebig observes silver deposition, industrial after 1856; 1857 Foucault's silvered telescope mirror; 1930s vacuum-deposited aluminium"
+    sources:
+      - "Sabine Melchior-Bonnet, The Mirror: A History (2001)"
+      - "Per Hadsund, The Tin-Mercury Mirror: Its Manufacturing Technique and Deterioration Processes, Studies in Conservation 38 (1993)"
+
+  - id: hydraulic_cement
+    name: Hydraulic lime, Roman concrete and Portland cement
+    category: materials
+    requires: [lime_burning]
+    helps: [fired_brick_ceramics, coke_iron]
+    explain: >
+      Lime mortar that contains reactive silica and alumina hardens by reaction
+      with water, even under water. Vitruvius specifies two parts volcanic ash (pozzolana) to one of lime for
+      harbour work. His three-to-one ratio for ordinary mortar refers to pit sand; finely crushed
+      brick or tile serves where there is no volcano. The same effect comes from
+      burning limestone that naturally contains clay. Portland cement is made by
+      grinding limestone and clay together (about four to one), burning the mix
+      until it begins to fuse at about 1450 °C, and grinding the clinker fine with
+      a few per cent of gypsum. Concrete is cement, sand and gravel at about
+      1:2:4 with as little water as will work, kept damp for a week.
+    pitfalls:
+      - "Saying it 'dries'; it sets by taking up water and is ruined if it dries out or freezes while young."
+      - "Too much water makes weak, porous concrete."
+      - "Any grey powder will not do: ordinary sand or ash is inert, and the pozzolan must be tested with lime under water."
+      - "Burning at lime-kiln heat gives only weak hydraulic lime; true cement needs near-white heat and hard grinding."
+      - "The myth that the Roman recipe was lost and is stronger than modern concrete; it is durable but much weaker and slower."
+    history:
+      greece: "c. 500–300 BC – lime with volcanic earth from Thera or crushed tile in cisterns (Kameiros, Rhodes)"
+      rome: "c. 200 BC – pozzolana concrete in Campania; c. 20 BC Vitruvius and the harbour of Caesarea; c. AD 126 the Pantheon dome"
+      india: "ancient to Mughal – lime with brick dust (surkhi) for tanks and waterworks"
+      islamic: "medieval – lime with ash and crushed brick (sarooj) for cisterns, baths and bridges in Iran"
+      europe: "1756–1759 Smeaton finds that clayey limestone gives hydraulic lime (Eddystone); 1796 Parker's 'Roman cement'; 1818 Vicat's artificial hydraulic lime; 1824 Aspdin's Portland cement patent; c. 1845 Isaac Johnson burns it to clinker, the modern product"
+    sources:
+      - "Vitruvius, De architectura II.6 and V.12"
+      - "John Smeaton, A Narrative of the Building and a Description of the Construction of the Edystone Lighthouse with Stone (1791)"
+      - "Marie D. Jackson et al., Phillipsite and Al-tobermorite mineral cements produced through low-temperature water-rock reactions in Roman marine concrete, American Mineralogist 102 (2017)"
+
+  - id: reinforced_concrete
+    name: Reinforced concrete
+    category: materials
+    requires: [hydraulic_cement]
+    helps: [puddling_wrought_iron, bessemer_steel, wire_drawing]
+    explain: >
+      Concrete resists crushing well but tears apart under a tenth of that load in
+      tension. A beam bends so that its underside is stretched, so iron or steel
+      rods are cast into the stretched side: near the bottom in the middle of a
+      span, near the top over supports and in cantilevers, with hooked ends and
+      thin stirrups around them. It works because cement grips the rough bars,
+      their thermal expansion rates are similar, and alkaline concrete passivates the
+      steel. The cover needed depends on exposure; cracks, carbonation and chlorides
+      can break down that protection.
+    pitfalls:
+      - "Putting the bars in the middle or on the wrong side; the beam cracks and falls as if unreinforced."
+      - "Sea sand, sea water or salt in the mix rusts the bars, and the rust bursts the concrete."
+      - "Too little cover, or porous concrete, has the same result after some years."
+      - "Removing the formwork and props too early; give it weeks, not days."
+      - "Assuming Roman concrete was reinforced; it works in compression only (arches, vaults, domes)."
+    history:
+      europe: "1848 Lambot's wire-reinforced boat; 1853 Coignet's iron-and-concrete house; 1854 Wilkinson's English patent for reinforced floors; 1867 Monier's patent (flower tubs, then pipes and bridges); 1892 Hennebique's system of beams and stirrups; 1928 Freyssinet's prestressed concrete"
+      americas: "1884 Ransome's twisted bar; 1903 Ingalls Building, Cincinnati, the first reinforced-concrete tall building"
+    sources:
+      - "Peter Collins, Concrete: The Vision of a New Architecture (1959)"
+      - "Robert Courland, Concrete Planet (2011)"
+
+  - id: paper
+    name: Papermaking
+    category: materials
+    requires: []
+    helps: [textile_fibres, trip_hammer_water_powered, water_wheel, lime_burning]
+    explain: >
+      Paper is a felt of separated plant fibres. Take old linen or hemp rags (or
+      the inner bark of mulberry), rot them for some weeks, boil with lime or ash
+      lye and beat them in water for hours until they form a milky pulp of single
+      fibres. Dip a flat sieve (a frame strung with fine wire or bamboo) into the
+      vat, lift it level and shake it; turn the wet sheet out on a woollen felt,
+      stack, press hard, and hang to dry. Dipping the sheets in thin animal glue
+      or starch keeps ink from spreading. Water-driven stamp mills do the beating.
+    pitfalls:
+      - "Confusing it with papyrus (strips laid crosswise) or parchment (skin); neither is paper."
+      - "Sawdust or straw mashed in water gives no paper; wood needs grinding or cooking in chemicals, known only from the 1840s."
+      - "Unsized sheets blot; under-beaten pulp gives lumpy, weak sheets."
+      - "Iron in the water or the stampers leaves rust spots."
+      - "Forgetting that rags run short once paper is in demand; the supply of fibre is the limit."
+    history:
+      china: "2nd c. BC – hemp paper fragments (Fangmatan, Baqiao); AD 105 Cai Lun reports an improved process to the court, the traditional but not the true date of invention"
+      east_asia: "c. 3rd–4th c. Korea and Vietnam; AD 610 by tradition brought to Japan by the monk Damjing"
+      islamic: "8th c. – paper mills at Samarkand (the story of prisoners taken at Talas in 751 is a later legend) and 794–795 Baghdad; rag paper with starch sizing"
+      india: "known from the 7th–8th c.; common from the 13th c. under the Delhi sultanate"
+      americas: "by c. AD 300 – Maya and later Aztec amate, a beaten bark sheet, made independently; not true paper"
+      europe: "11th–12th c. Spain (Xàtiva) and Sicily; c. 1270 Fabriano introduces water-powered stampers, gelatine sizing and watermarks; 1798 Robert's paper machine; 1844 Keller's ground-wood pulp"
+    sources:
+      - "Tsien Tsuen-Hsuin, Science and Civilisation in China, vol. 5 part 1: Paper and Printing (1985)"
+      - "Jonathan M. Bloom, Paper Before Print: The History and Impact of Paper in the Islamic World (2001)"
+      - "Dard Hunter, Papermaking: The History and Technique of an Ancient Craft (1943)"
+
+  - id: textile_fibres
+    name: Preparing textile fibres (wool, flax, cotton, silk)
+    category: materials
+    requires: []
+    helps: [sericulture, soap, cotton_gin]
+    explain: >
+      Every fibre must be cleaned, freed and aligned before spinning. Wool is
+      washed of grease, then carded (short, fluffy yarn) or combed (long, smooth
+      yarn); woven wool cloth is pounded in water with fuller's earth or stale
+      urine to felt and thicken it. Flax stems are rotted in water or dew for one
+      to three weeks (retting), dried, broken, scraped and drawn through combs.
+      Cotton is seeded, beaten open and carded; its short hairs need a fast
+      spindle. Silk is unwound as one continuous thread from cocoons floating in
+      hot water, several together. Twist is what turns loose fibre into strong
+      yarn.
+    pitfalls:
+      - "Over-retting flax rots the fibre itself; under-retting leaves it stuck to the stem."
+      - "Letting the silk moth hatch cuts the thread; the cocoons must be stifled by heat first."
+      - "Expecting European spinners used to wool to spin cotton fine and strong; warp-quality cotton yarn was an Indian skill."
+      - "Retting ponds foul drinking water and fish streams."
+      - "Raw wool and hides can carry anthrax ('woolsorters' disease')."
+    history:
+      mesopotamia: "7th millennium BC woven oak-bast textiles at Çatalhöyük in Anatolia; c. 4000–3000 BC woolly sheep and a large wool industry"
+      egypt: "c. 5000 BC – linen; very fine linen weaving by the Old Kingdom"
+      india: "c. 5500–5000 BC cotton fibres at Mehrgarh; cotton cloth at Mohenjo-daro c. 2500 BC"
+      americas: "c. 5000–4000 BC – cotton independently domesticated in Peru and, as another species, in Mexico; camelid wool in the Andes"
+      china: "c. 3600–2700 BC – silk (cut cocoon at Xiyin, fabric at Qianshanyang); hemp and ramie older"
+      africa: "by c. 1st c. AD – cotton grown and woven in Nubia (Meroe); raffia and bark cloth elsewhere"
+      europe: "Neolithic flax and later wool; c. AD 552 silkworm eggs reach Byzantium; cotton via Islamic Sicily and Spain from the 9th–12th c."
+    sources:
+      - "E. J. W. Barber, Prehistoric Textiles: The Development of Cloth in the Neolithic and Bronze Ages (1991)"
+      - "Antoinette Rast-Eicher, Sabine Karg & Lise Bender Jørgensen, The use of local fibres for textiles at Neolithic Çatalhöyük, Antiquity 95 (2021)"
+      - "Sven Beckert, Empire of Cotton: A Global History (2014)"
+
+  - id: leather_tanning
+    name: Tanning leather
+    category: materials
+    requires: []
+    helps: [lime_burning]
+    explain: >
+      A raw hide rots when wet and turns to horn when dry; tanning makes it
+      permanent. Soak the hide for a week or two in lime water until the hair
+      slips, scrape hair and flesh off, wash the lime out again (traditionally
+      with a ferment of dung or bran), then lay the hides in pits with ground oak
+      bark and water, moving them into stronger liquor over six to eighteen
+      months. Finally work in oil or tallow. Quick alternatives are alum with salt
+      (white, soft leather that is not waterproof), smoking with brains or fat,
+      and from the 1880s chromium salts, which tan in a day.
+    pitfalls:
+      - "Putting hides straight into strong bark liquor; the surface tans hard and seals the inside raw."
+      - "Leaving lime in the hide; the leather turns brittle."
+      - "Hides carry anthrax; tanners and wool workers died of it."
+      - "Tannery waste poisons wells and streams; site it downstream and downwind."
+      - "Mistaking alum-tawed skin for true leather; it reverts to rawhide when soaked."
+    history:
+      mesopotamia: "c. 3500 BC – a leather shoe from Areni-1 (Armenia); cuneiform recipes use alum, gall nuts and fat"
+      europe: "c. 3300 BC – Ötzi's fat- and smoke-treated clothing; Roman military tanneries; 1858 Knapp describes chrome tanning"
+      egypt: "c. 1450 BC – leather workshop scenes in the tomb of Rekhmire; vegetable tanning becomes general in the Graeco-Roman period"
+      india: "ancient – tanning with myrobalan and babul bark"
+      islamic: "8th–12th c. – fine goat leathers of Córdoba and Morocco (cordovan, morocco)"
+      americas: "ancient – brain and smoke tanning of deer and bison hides; 1884 Augustus Schultz's chrome tanning patent"
+    sources:
+      - "R. Reed, Ancient Skins, Parchments and Leathers (1972)"
+      - "Ron Pinhasi et al., First Direct Evidence of Chalcolithic Footwear from the Near Eastern Highlands, PLoS ONE 5 (2010)"
+
+  - id: aluminium
+    name: Aluminium
+    category: materials
+    requires: []
+    helps: [electrolysis, dynamo_electric_motor, alkali_soda, water_turbine]
+    explain: >
+      Aluminium is the commonest metal in the earth's crust (in every clay), but
+      it holds oxygen so tightly that charcoal cannot reduce it in any ordinary
+      furnace. The first metal was made by chemical reduction of aluminium chloride.
+      Bulk production uses electrolysis: pure
+      alumina, extracted from bauxite with hot caustic soda, is dissolved in molten
+      cryolite at about 950–980 °C in a carbon-lined steel cell, and a very large
+      current at a few volts deposits liquid aluminium on the floor while the
+      carbon anodes burn away. It takes about 15 kWh for each kilogram, so the
+      works stand beside cheap water power. The metal is a third the weight of
+      steel and does not rust through.
+    pitfalls:
+      - "Electrolysing a solution in water; only hydrogen comes off."
+      - "Confusing laboratory and factory scale: Hall obtained small samples with batteries; continuous bulk production needs a large, cheap current supply."
+      - "Trying to smelt clay or bauxite with charcoal."
+      - "Pure aluminium is soft; aircraft and structures need alloys (duralumin, with about 4 % copper, hardens by ageing after solution treatment and quenching)."
+      - "The tale of a Roman who showed Tiberius an unbreakable metal from clay, and the 'aluminium' belt from a 3rd-century Chinese tomb, are not evidence of ancient aluminium."
+    history:
+      europe: "1825 Ørsted and 1827 Wöhler isolate it chemically; 1854 Deville's sodium process makes it a luxury metal; 1886 Paul Héroult's electrolytic process; 1887–1888 Bayer process for alumina; 1906–1909 Wilm's duralumin"
+      americas: "1886 – Charles Martin Hall, independently of Héroult; 1888 Pittsburgh Reduction Company (later Alcoa)"
+    sources:
+      - "Joseph W. Richards, Aluminium: Its History, Occurrence, Properties, Metallurgy and Applications (1887)"
+      - "Mimi Sheller, Aluminum Dreams: The Making of Light Modernity (2014)"
+
+  - id: wood_tar_pitch
+    name: Wood tar and pitch
+    category: materials
+    requires: []
+    helps: [charcoal_burning]
+    explain: >
+      Wood heated with almost no air does not burn but chars, and the water and
+      tarry vapours are driven off. Resinous wood charred in a sloping pit or kiln
+      runs out tar, which boils down to pitch for ships, ropes and barrels.
+    pitfalls:
+      - "Too much air turns the whole stack to ash."
+      - "Drinking the watery distillate; it contains wood spirit (methanol), which blinds."
+    history:
+      europe: "c. 200,000 years ago – birch tar survives on stone tools at Campitello, Italy; the finds show adhesive use but do not identify the production method; 17th–18th c. Swedish 'Stockholm tar' supplies Europe's navies"
+      greece: "c. 300 BC – Theophrastus describes Macedonian pitch burning"
+    sources:
+      - "Theophrastus, Enquiry into Plants IX.3"
+      - "Paul Peter Anthony Mazza et al., A new Palaeolithic discovery: tar-hafted stone tools in a European Mid-Pleistocene bone-bearing bed, Journal of Archaeological Science 33 (2006)"
+      - "Lewis Dartnell, The Knowledge: How to Rebuild Our World from Scratch (2014)"
+

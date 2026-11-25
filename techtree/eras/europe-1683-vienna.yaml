@@ -1,0 +1,4734 @@
+# Blueprints from Tomorrow – era file: Vienna / Lower Austria, June 1683.
+#
+# Status of each entry from techtree/core/*.yaml in this era and region.
+#   knowledge      0 unknown · 1 idea/rumour · 2 described in theory · 3 used by
+#                  specialists · 4 widespread
+#   use            none | wrong | partial | correct   (is it used, and used right?)
+#   producibility  easy | medium | hard | very-hard | impossible  (with local means,
+#                  if someone explains it well; the city is cut off from 14 July to
+#                  12 September 1683)
+#   acceptance     low | medium | high  (how readily people adopt it)
+#   note           what the player should know / what the world believes
+#   local          people, places, materials to connect to
+#   elsewhere      where it already exists in 1683 (quest material)
+# Entries not listed default to knowledge 0, use none.
+
+era: europe-1683-vienna
+title: Vienna 1683
+region: Vienna, Lower Austria, Habsburg monarchy
+year: 1683
+core_version: 2
+
+worldview: >
+  Vienna is the residence of Emperor Leopold I and a city of the Counter-Reformation:
+  the university is run by the Jesuits, books are censored, the Jews were expelled in
+  1670 and Protestants are barely tolerated. Learned medicine is still Galenic, with
+  chemical remedies and the circulation of the blood accepted by some; plague (the
+  city lost many thousands in 1679) is explained by corrupted air, contagion through
+  goods and persons, and God's punishment for sin. Astronomy is taught after Tycho,
+  not Copernicus. The new experimental philosophy of London, Paris and the Dutch
+  towns (air pump, barometer, microscope, pendulum clock) is known here from Latin
+  books and Jesuit compendia rather than practised. Craft knowledge is strong:
+  gun founders, clockmakers, apothecaries, miners from the Habsburg lands. In June
+  1683 an Ottoman army is marching on the city, whose fortifications have been
+  neglected.
+
+status:
+  # ---- Medicine & hygiene
+  contagion_theory:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: low
+    note: Sorbait recognised an infection in 1678 and was not believed. Plague rules treat goods and people
+      as catching, yet bad air and God's wrath remain the stated causes.
+    local:
+    - Paul de Sorbait
+    - Pest-Ordnung (1680, Sorbait's revision of Mannagetta's ordinance)
+    - Kircher's Scrutinium pestis (Rome 1658) in Jesuit libraries
+    elsewhere:
+    - 'Delft: Leeuwenhoek sees animalcules but links none to disease'
+  bloodletting_harm:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Physicians prescribe bleeding, purges and emetics, also for plague and dysentery patients; barber-surgeons
+      carry it out. Van Helmont's printed attack on bleeding is read as Paracelsian polemic.
+    local:
+    - medical faculty of the university
+    - Bader and Wundärzte (barber-surgeons)
+  epidemiology_mapping:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: The city records deaths with a cause after inspection of each corpse, but nobody tabulates them
+      by street, well or parish.
+    local:
+    - Totenbeschauprotokolle (death-inspection registers)
+    - parish burial registers
+    elsewhere:
+    - 'London: Graunt''s Observations on the Bills of Mortality (1662)'
+  hand_hygiene:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Washing hands is table manners. Surgeons, Feldschere and midwives go from one patient to the next
+      without washing; soap and lye are at hand.
+  boiled_water:
+    knowledge: 1
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Wine and beer are the daily drink. Water comes mostly from house wells sunk near cesspits. The
+      Ottomans cut a suburban conduit on 18 July; firewood runs short.
+    local:
+    - house wells (Hausbrunnen)
+    - Hernalser Wasserleitung (1565)
+    - Siebenbrunner Hofwasserleitung (1553) to the Hofburg
+    - fountain on the Neuer Markt
+  water_filtration_chlorination:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: A sand filter bed is ordinary masonry and gravel work, but nobody sees a reason for it. Chlorination
+      is out of reach.
+  sanitation_sewerage:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Old drains (Mörungen) and cesspits empty into the Danube arm, the Wien, the Als and the Ottakringer
+      Bach; no network. In the siege refuse and carcasses stay inside the walls.
+    local:
+    - Unterkammeramt (maintains the Mörungen)
+    - cesspits (Senkgruben) in house yards
+  food_hygiene:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: low
+    note: Spoiled meat is judged by smell and market inspection. Flies and cooks' hands are not suspected;
+      the Ruhr is blamed on bad air, unripe fruit and poor food.
+  quarantine:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: In 1679 gatherings went on until July and closures came too late. The lazaretto lies outside the
+      walls on the Als, among the suburbs burned on 13 July.
+    local:
+    - Pestlazarett St. Johannes in der Siechenals (run by the Bürgerspital)
+    - Bäckenhäusel on the Währinger Straße
+    - Sorbait as Generalinquisitor in plague matters (1679)
+    elsewhere:
+    - 'Venice and Ragusa: permanent lazarettos and health magistracies'
+  nursing_hospital_hygiene:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Hospitals are houses of charity for the poor, old and sick, with beds shared. During the siege
+      Bishop Kollonitsch sets up emergency hospitals in monasteries.
+    local:
+    - Bürgerspital (former convent of St. Clara)
+    - Barmherzige Brüder in the Leopoldstadt (lost to the Ottomans in mid-July)
+    - Leopold Karl von Kollonitsch
+  cholera_waterborne:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Cholera is unknown in Europe. The same reasoning applies to the rote Ruhr, which breaks out around
+      8 August and is not connected with wells or latrines.
+  oral_rehydration:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Ruhr patients get rhubarb purges, astringents, opiates and bleeding. Salt, honey and clean boiled
+      water exist in the city; sugar is an apothecary's ware and dear.
+    local:
+    - apothecaries
+    - Starhemberg, ill with dysentery 11–20 August
+  plague_vectors:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: low
+    note: The plague of 1679 is explained by corrupted air, infected goods and sin. Rats and fleas are not
+      suspected. Infected bedding is burned or buried, which helps by accident.
+    local:
+    - Paul de Sorbait
+    - Pestsäule vowed by Leopold I on the Graben (1679)
+  typhus_lice:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Camp fever is known to imperial army physicians as the Hungarian disease (morbus Hungaricus) and
+      blamed on air, water and food. Lice are ordinary. Epidemic follows the siege in autumn.
+  malaria_mosquito:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: low
+    note: Tertian and quartan fevers are common along the Danube wetlands and in Hungary and are blamed
+      on marsh air. Avoiding marshes is the only defence.
+  quinine:
+    knowledge: 3
+    use: partial
+    producibility: hard
+    acceptance: medium
+    note: 'Jesuits'' bark comes through the Society and Italian drug trade: dear, often adulterated, dosed
+      too low. Galenists distrust it. None can be bought once the city is cut off.'
+    local:
+    - Jesuit college and its apothecary
+    - city apothecaries
+    elsewhere:
+    - 'Rome: Jesuit distribution since the 1640s'
+    - 'London and Paris: Talbor''s remedy, the recipe published in 1682'
+  tuberculosis_control:
+    knowledge: 2
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Fracastoro's listing of phthisis among contagions is in print, but physicians treat consumption
+      as an inherited constitution with catarrh falling on the lungs.
+  parasitic_worms:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Worms are seen and treated with wormseed and bitter herbs, but held to arise from putrid humours
+      in the gut. Itch mites and trichinae are unknown.
+    elsewhere:
+    - 'Florence: Redi, whose book on animals living inside animals appears in 1684'
+  scurvy_citrus:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Scharbock is a named disease of garrisons and winter; scurvy grass, cress and sauerkraut are the
+      accepted remedies. Lemons come from Italy and are a luxury.
+    local:
+    - apothecaries (Löffelkraut preparations)
+    - noble and monastery orangeries
+  vitamins_deficiency:
+    knowledge: 1
+    use: none
+    producibility: medium
+    acceptance: low
+    note: Goitre and cretinism are familiar from the Alpine valleys of Styria and Carinthia and blamed on
+      water. Rickets is in print (Glisson 1650). Nobody thinks a food can lack something.
+  variolation:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Smallpox (Blattern) is endemic; it killed Leopold's elder brother Ferdinand IV in 1654. Giving
+      it on purpose would be judged tempting God, and a death would be the inoculator's.
+    elsewhere:
+    - 'China: nasal insufflation'
+    - folk practice in parts of the Ottoman lands and Africa, not yet reported in Europe
+  smallpox_vaccination:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: low
+    note: Cowpox would have to be found on a dairy herd and recognised, with no way to send to anyone for
+      it.
+  vaccines_attenuated:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  antitoxin_serum:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  wound_care:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Feldschere tie vessels and amputate after Paré, but probe shot wounds with fingers, close them
+      early and welcome pus. The engineer Rimpler dies of an arm wound of 25 July.
+    local:
+    - regimental Feldschere
+    - guild of Bader and Wundärzte
+    - emergency hospitals in monasteries
+    elsewhere:
+    - 'Halberstadt: Purmann, Der rechte und wahrhafftige Feldscher (1680)'
+    - 'Ulm: Scultetus, Armamentarium chirurgicum (1655)'
+  antiseptics:
+    knowledge: 1
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Wine, vinegar, brandy and turpentine go on wounds by habit, not by rule. Against plague, rooms
+      and letters are smoked with juniper and sulphur and washed with vinegar.
+  heat_sterilisation:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Instruments are wiped, lint (Charpie) is plucked from old linen by any hands. Boiling them would
+      cost only firewood, scarce in the siege.
+  childbirth_care:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Births belong to sworn midwives; a surgeon is called only to extract a dead child with hooks.
+      The forceps is a family secret in England.
+    elsewhere:
+    - 'London: Chamberlen family''s forceps'
+    - 'Paris: Mauriceau''s treatise (1668)'
+    - 'Berlin: Justine Siegemund, court midwife'
+  first_aid_resuscitation:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: low
+    note: The drowned and suffocated are taken for dead. The wounded are carried from the bastions by comrades
+      without any sorting by urgency.
+  ether_anaesthesia:
+    knowledge: 1
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: Apothecaries have oil of vitriol and spirit of wine, and Cordus's sweet oil of vitriol is in print.
+      Nobody inhales it. Amputations are done fast, on brandy and opium.
+  opium_analgesia:
+    knowledge: 4
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Opium is in theriac and in laudanum pills at every apothecary, of uncertain strength; stocks are
+      finite in the siege. Willow bark is not used against fever or pain.
+    elsewhere:
+    - 'London: Sydenham''s liquid laudanum'
+  blood_groups_transfusion:
+    knowledge: 2
+    use: none
+    producibility: very-hard
+    acceptance: low
+    note: The lamb's-blood transfusions of the 1660s and the Paris ban are known from journals. Without
+      blood groups any attempt is a lottery.
+    elsewhere:
+    - Purmann, army surgeon, tried lamb's blood on men 1668–1678 and gave it up
+  anatomy_dissection:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Vesalian anatomy is taught from books; dissections at the university are rare. Ambitious physicians
+      train at Padua, as Sorbait did (doctorate 1652).
+    local:
+    - Paul de Sorbait, professor of anatomy and practice since 1666
+    elsewhere:
+    - Padua, Leiden, Paris, Bologna (Malpighi)
+  blood_circulation:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: 'A student of Sorbait defended the circulation at Vienna in 1669. It is accepted in theory and
+      changes nothing in practice: bleeding goes on.'
+    local:
+    - Paul de Sorbait
+  clinical_thermometer_stethoscope:
+    knowledge: 1
+    use: none
+    producibility: medium
+    acceptance: low
+    note: Diagnosis is by pulse quality, urine glass and the patient's account. Sealed spirit thermometers
+      exist as philosophical instruments without a fixed scale.
+    elsewhere:
+    - 'Florence: sealed spirit thermometers of the Accademia del Cimento'
+    - 'Padua: Santorio''s printed methods'
+  dental_care:
+    knowledge: 1
+    use: wrong
+    producibility: easy
+    acceptance: medium
+    note: Toothache is blamed on the tooth worm and humours; teeth are pulled by barbers and market tooth-drawers.
+      Sugar is a growing court fashion.
+    elsewhere:
+    - 'Delft: Leeuwenhoek''s letter on animalcules in tooth scrapings, 17 September 1683'
+  sulphonamides:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  penicillin:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: medium
+
+  # ---- Life sciences
+  microorganisms:
+    knowledge: 2
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Leeuwenhoek's letters reach scholars through the Philosophical Transactions and learned journals.
+      Nobody in Vienna has repeated them; he keeps his lens-making secret. A fused glass bead would do.
+    local:
+    - Jesuit college (Kircher's claim of worms in plague blood)
+    - spectacle makers
+    - Sorbait, member of the Leopoldina
+    elsewhere:
+    - 'Delft: Leeuwenhoek'
+    - 'London: Royal Society, Hooke'
+  spontaneous_generation_refuted:
+    knowledge: 2
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Redi's covered-jar experiment (1668) is in print, but Aristotle and the Jesuit Kircher teach that
+      vermin arise from decay. The test costs meat, jars and gauze.
+    elsewhere:
+    - 'Florence: Francesco Redi'
+  fermentation_yeast:
+    knowledge: 1
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Brewers and bakers pass on yeast as a substance and vintners rely on the must itself. Fermentation
+      is explained as an inner motion of particles.
+    local:
+    - Bürgerspital brewery (holds the city's beer monopoly)
+    - vintners of the suburbs and Lower Austria
+    elsewhere:
+    - 'Delft: Leeuwenhoek describes yeast globules in 1680'
+  cell_theory:
+    knowledge: 1
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Hooke's cork 'cells' and the plant anatomy of Malpighi and Grew are curiosities in books; nobody
+      thinks of them as units of life.
+    elsewhere:
+    - 'London: Hooke, Grew'
+    - 'Bologna: Malpighi'
+  viruses:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  taxonomy:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Plants are known from herbals and Bauhin's Pinax, ordered for the apothecary. Clusius described
+      the Austrian and Pannonian flora while in Vienna (1573–1588).
+    local:
+    - medical faculty (botany taught with medicine)
+    - apothecaries' herb gardens
+    elsewhere:
+    - 'England: John Ray'
+    - Leiden and Padua botanical gardens
+  reproduction_fertilisation:
+    knowledge: 2
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Harvey's 'everything from the egg', de Graaf's follicles and Leeuwenhoek's seed animalcules are
+      in print and feed a quarrel over preformation. Teaching still follows Aristotle and Galen.
+  heredity_genetics:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: Breeders and gardeners know that like begets like. Counting ratios over generations of peas takes
+      several summers and a garden outside a besieged city.
+  evolution_natural_selection:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Species are fixed since Creation; fossils are sports of nature or relics of the Flood. Saying
+      otherwise in a Jesuit university town invites a charge of impiety.
+  dna_structure:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  respiration_metabolism:
+    knowledge: 2
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: 'The air-pump deaths of animals and Lower''s reddening of blood by air are known from books. The
+      usual doctrine: breathing cools the heart and vents sooty vapours.'
+    elsewhere:
+    - 'London and Oxford: Boyle, Hooke, Lower; Mayow''s Tractatus (1674)'
+  photosynthesis_plant_nutrition:
+    knowledge: 1
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Van Helmont's willow is read as proof that plants are made of water. Farmers hold that plants
+      eat the fat of the soil.
+  nitrogen_fixation_biology:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: That peas, beans and vetch leave land in better heart is farmers' and Columella's knowledge. Nobody
+      has looked at the root nodules.
+  nervous_system_brain:
+    knowledge: 2
+    use: partial
+    producibility: hard
+    acceptance: medium
+    note: Willis's anatomy of the brain (1664) is on the shelves. Nerves are thought to carry animal spirits;
+      epilepsy and melancholy may still be read as possession.
+
+  # ---- Chemistry
+  soap:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Soap boilers make soft tallow-and-potash soap for laundry; hard Venetian soap is imported. In
+      the siege tallow is wanted for candles.
+    local:
+    - Seifensieder (soap boilers, also chandlers)
+  distillation:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    local:
+    - apothecaries
+    - brandy distillers (Branntweiner)
+    - monastery pharmacies
+  sulphuric_acid:
+    knowledge: 3
+    use: correct
+    producibility: medium
+    acceptance: high
+    note: Oil of vitriol is distilled in small glass retorts from green vitriol or made under a glass bell
+      from burning sulphur. Quantities are ounces, not barrels.
+    local:
+    - apothecaries
+    - imperial mint
+    - vitriol from the Hungarian mining towns
+  oxygen_combustion:
+    knowledge: 1
+    use: none
+    producibility: hard
+    acceptance: low
+    note: 'The learned account is Becher''s: bodies burn by losing a fatty earth (terra pinguis). Becher
+      served Leopold I in Vienna in the 1670s and died in 1682.'
+    elsewhere:
+    - 'Oxford: Mayow''s nitro-aerial spirit (1674), little noticed'
+  nitric_acid:
+    knowledge: 3
+    use: correct
+    producibility: medium
+    acceptance: high
+    note: Scheidewasser is routine for parting gold from silver. It competes with gunpowder for saltpetre,
+      which the arsenal claims first in a siege.
+    local:
+    - imperial mint
+    - goldsmiths and assayers
+  saltpetre_production:
+    knowledge: 3
+    use: correct
+    producibility: medium
+    acceptance: high
+    note: Privileged saltpetre men scrape stables, cellars and old walls and refine with wood ash. Beds
+      take a year or more to ripen. A powder store burns on 31 August.
+    local:
+    - Saliterer (saltpetre men)
+    - imperial and civic arsenals
+  chemical_elements:
+    knowledge: 1
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Chymists reason with salt, sulphur and mercury, the schools with four elements. Boyle's Sceptical
+      Chymist exists in Latin. Nobody weighs everything before and after.
+  atomic_theory:
+    knowledge: 1
+    use: none
+    producibility: very-hard
+    acceptance: low
+    note: Gassendi's and Boyle's corpuscles are known. Jesuit censors watch atomism because of the Eucharist.
+      Proof by combining weights needs purer reagents and better balances than exist.
+  molecules_mole_concept:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  periodic_table:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+  gas_laws:
+    knowledge: 2
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Guericke showed his pump at Regensburg in 1654, and the Jesuit Schott printed the experiments.
+      Boyle's and Mariotte's rule is in books; nobody here has built a pump.
+    elsewhere:
+    - 'Hamburg: Otto von Guericke (dies 1686)'
+    - 'London: Boyle, Hooke'
+    - 'Paris: Mariotte, Huygens, Papin''s work'
+  pneumatic_chemistry_gases:
+    knowledge: 1
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Van Helmont's word 'gas' is known; airs are thought to be one air more or less tainted. Vintners
+      know that fermenting cellars kill and test them with a candle.
+  acids_bases_ph:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Apothecaries know that acids fizz with alkalis, and syrup of violets changing colour is in Boyle
+      (1664). Physicians of the new school explain all disease by acid and alkali.
+  hydrochloric_acid_aqua_regia:
+    knowledge: 3
+    use: correct
+    producibility: medium
+    acceptance: high
+    note: Spirit of salt is made by Glauber's method from salt and oil of vitriol; aqua regia from aqua
+      fortis and sal ammoniac dissolves gold for assayers and gilders.
+    local:
+    - apothecaries
+    - imperial mint
+    - goldsmiths
+  alkali_soda:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Potash is leached from wood ash of the surrounding forests; soda ash comes through Venice. The
+      two are not told apart as substances.
+  lime_burning:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Kilns and limestone lie outside the walls toward the Wienerwald. During the siege repairs to the
+      bastions use stored lime, earth, timber and woolsacks.
+  salt_production:
+    knowledge: 4
+    use: correct
+    producibility: hard
+    acceptance: high
+    note: No brine near Vienna. Salt is a sovereign monopoly and comes down the Danube from the Salzkammergut;
+      the besieged city lives on its stock.
+    local:
+    - Salzamt and the landing on the Salzgries
+    elsewhere:
+    - Hallstatt, Ischl, Aussee, Hallein, Hall in Tirol
+  mordant_dyeing:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Dyers work with alum, madder and woad; indigo and cochineal are bought through Venice and the
+      Dutch.
+  chlorine_bleach:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: Spirit of salt at the apothecary and the glassmakers' Braunstein are both obtainable; nobody has
+      heated them together. Plague goods are smoked with sulphur and juniper instead.
+  electrolysis:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: medium
+    note: No current source exists; metallic zinc is an Asian rarity. Gilders use mercury amalgam.
+  organic_structure_theory:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  phosphorus_matches:
+    knowledge: 2
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: The cold fire from urine has been shown at German courts and described by Kunckel (1678); the
+      recipe is a traded secret. It needs barrels of urine and fierce fire.
+    elsewhere:
+    - 'Hamburg: Hennig Brand'
+    - 'Potsdam and Berlin: Johann Kunckel'
+    - 'London: Boyle'
+    - 'Hanover: Leibniz, who dealt with Brand'
+  rubber_vulcanisation:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: medium
+  synthetic_dyes:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: medium
+  nitroglycerin_dynamite:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: medium
+    note: The acids exist only weak and by the ounce, and glycerine is unrecognised in the soap boiler's
+      waste lye. Miners and the arsenal would want it at once.
+  petroleum_refining:
+    knowledge: 1
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: Rock oil is an apothecary's remedy sold in small flasks. Lamps burn tallow, rape oil and wax.
+    elsewhere:
+    - 'Galicia and Modena: natural seeps'
+  polymers_plastics:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: medium
+  ammonia_synthesis:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+
+  # ---- Metallurgy & materials
+  copper_bronze:
+    knowledge: 4
+    use: correct
+    producibility: medium
+    acceptance: high
+    note: Founders cast guns and bells in the city. Copper comes from Upper Hungary, where Thököly's uprising
+      disturbs supply, and from Tyrol; tin is imported.
+    local:
+    - imperial arsenal and gun foundry
+    - bell founders
+    elsewhere:
+    - Neusohl (Banská Bystrica)
+    - Schwaz
+  bloomery_iron:
+    knowledge: 4
+    use: correct
+    producibility: medium
+    acceptance: high
+    note: Bar iron and steel arrive from the Styrian Erzberg through Steyr. City smiths forge; they do not
+      smelt. Stock in the arsenal must last the siege.
+    local:
+    - smiths, locksmiths, armourers
+    - imperial and civic arsenals
+    elsewhere:
+    - Eisenerz and Vordernberg (Innerberger Hauptgewerkschaft, 1625)
+    - Steyr
+  steel_heat_treatment:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Smiths harden and temper by colour and guard their quenching recipes. No theory of carbon.
+  cementation_steel:
+    knowledge: 3
+    use: correct
+    producibility: medium
+    acceptance: high
+    note: Armourers and file cutters case-harden in bone and horn charcoal. Styrian natural steel is cheap
+      and good enough that cementation furnaces are not wanted.
+    elsewhere:
+    - 'Nuremberg: cementation furnaces'
+  blast_furnace_cast_iron:
+    knowledge: 3
+    use: correct
+    producibility: hard
+    acceptance: high
+    note: Cast-iron shot and bomb shells are bought in from the Alpine ironworks. None can be cast inside
+      the walls; the garrison collects spent Ottoman balls.
+    elsewhere:
+    - Carinthian and Styrian ironworks
+    - Walloon and Swedish furnaces for iron guns
+  coke_iron:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+    note: No coal is mined near Vienna and charcoal from the Alpine forests is plentiful, so nobody has
+      a motive.
+  puddling_wrought_iron:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: medium
+  crucible_steel:
+    knowledge: 1
+    use: none
+    producibility: hard
+    acceptance: high
+    note: Damascus blades on Ottoman sabres are admired and not understood. Graphite crucibles from the
+      Passau area come down the Danube, but no furnace here reaches the heat.
+    elsewhere:
+    - 'Persia and India: wootz ingots'
+    - 'Obernzell near Passau: graphite crucibles'
+  bessemer_steel:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: medium
+  open_hearth_steel:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: medium
+  alloy_stainless_steel:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: medium
+  refractories_fireclay:
+    knowledge: 3
+    use: correct
+    producibility: medium
+    acceptance: high
+    note: The mint, assayers and founders buy Passau graphite crucibles and Hessian crucibles. Local potters'
+      clay does not stand a steel-melting heat.
+    elsewhere:
+    - Obernzell near Passau
+    - Großalmerode (Hesse)
+  zinc_brass:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: high
+    note: Brass is made by cementing copper with calamine and mostly bought as sheet and wire from Nuremberg.
+      Zinc as a metal is a curiosity from the Indies trade.
+  cupellation_assaying:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Assaying after Ercker is court routine. During the siege Kollonitsch has church plate and confiscated
+      silver coined to pay the troops.
+    local:
+    - imperial mint in Vienna
+    - Leopold Karl von Kollonitsch
+    elsewhere:
+    - Kremnitz and Schemnitz (Lower Hungarian mining towns)
+  mercury_amalgam:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Mercury from Idria is a Habsburg monopoly. Gilders fire-gild with amalgam and physicians salivate
+      syphilis patients with it; tremor and loose teeth count as part of trade or cure.
+    elsewhere:
+    - Idria (Carniola)
+  lead_hazard:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Lead glazes, pewter and lead water pipes are everyday. Sour wine is sweetened with litharge in
+      the German lands; the colic it causes is blamed on the wine's acidity.
+    local:
+    - vintners and wine taverns
+    - potters (lead glaze)
+    - pewterers
+  soldering_tinning:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+  fired_brick_ceramics:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: The bastions are brick-faced earth. Brick kilns lie in the suburbs outside the walls, so siege repairs
+      use rubble, timber, earth and gabions.
+    local:
+    - suburban brick kilns (Laimgrube, Ziegelofengrund)
+    - Hafner (potters and stove makers)
+  porcelain:
+    knowledge: 1
+    use: none
+    producibility: very-hard
+    acceptance: high
+    note: Chinese porcelain is a court treasure and its making a mystery; many think it is a kind of glass
+      or shell paste. Kaolin and kiln heat are both lacking.
+    local:
+    - Habaner faience from western and Upper Hungary (the Habaner left Moravia in 1622) as the local fine ware
+    elsewhere:
+    - Jingdezhen
+    - 'Delft: tin-glazed imitations'
+    - 'Saxony: Tschirnhaus experimenting with burning mirrors and lenses'
+  glassmaking:
+    knowledge: 4
+    use: correct
+    producibility: medium
+    acceptance: high
+    note: Green potash forest glass comes from huts in Bohemia and the northern forests; glaziers and lamp
+      workers in the city only rework it.
+  clear_glass:
+    knowledge: 3
+    use: partial
+    producibility: hard
+    acceptance: high
+    note: Venetian cristallo is imported; Bohemian huts are just learning a clear potash-chalk glass for
+      engraving. Glass free of streaks for lenses is luck.
+    elsewhere:
+    - Murano
+    - 'London: Ravenscroft''s lead crystal (1674–1676)'
+    - 'Potsdam: Kunckel, Ars Vitraria Experimentalis (1679)'
+  glass_mirrors:
+    knowledge: 3
+    use: correct
+    producibility: hard
+    acceptance: high
+    note: Flat tin-amalgam mirrors come from Venice and Nuremberg at high prices. Tin foil and Idrian mercury
+      are available; flat clear plate is the bottleneck.
+  hydraulic_cement:
+    knowledge: 2
+    use: partial
+    producibility: hard
+    acceptance: medium
+    note: Builders read of pozzolana in Vitruvius and add crushed brick to lime for cisterns and wells.
+      That clayey limestone burns to a water-setting lime is not understood.
+    elsewhere:
+    - 'Dutch waterworks: trass from the Rhine'
+  reinforced_concrete:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: medium
+  paper:
+    knowledge: 4
+    use: correct
+    producibility: medium
+    acceptance: high
+    note: Rag paper comes from water-powered mills in Lower Austria and from abroad. The city's presses
+      print orders and newssheets through the siege on stock in hand.
+  textile_fibres:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Linen and wool are local; cotton and raw silk come through Venice and the Levant trade. Old linen
+      is the only source of bandages and lint.
+  leather_tanning:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Tanners work by the watercourses of the suburbs, such as the Weißgerber quarter, all burned on
+      13 July. Bark tanning takes many months.
+  aluminium:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: medium
+  wood_tar_pitch:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Pitch from the black pine woods south of Vienna is boiled for barrels and boats, and in the siege
+      for pitch wreaths and fire pots thrown from the walls.
+
+  # ---- Physics, optics & astronomy
+  lenses:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Spectacle makers grind ordinary lenses. Clear, streak-free glass and long-focus objectives are
+      the bottleneck; the best come from Rome and Augsburg.
+    local:
+    - Vienna spectacle makers
+    - Bohemian and Venetian glass on the market
+    elsewhere:
+    - 'Rome: Giuseppe Campani, Eustachio Divini'
+    - 'Augsburg: optical workshops in the tradition of Johann Wiesel'
+    - 'The Hague: Christiaan and Constantijn Huygens'
+  spectacles:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+  refraction_optics:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Kepler's Dioptrice and the sine law are in the Jesuit mathematicians' books. Lens makers work
+      by trial; nobody computes a lens before grinding it.
+    local:
+    - Jesuit professors of mathematics at the university
+    - Kepler's Dioptrice (1611), written in Prague as imperial mathematician
+  camera_obscura:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Known from Scheiner and Kircher as a way to watch sunspots and eclipses and as a painter's aid.
+      Portable box versions are described in books.
+    local:
+    - Kircher, Ars magna lucis et umbrae (1646, 2nd ed. 1671)
+  microscope:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Compound 'flea glasses' are cabinet curiosities. Kircher claimed to see 'worms' in plague blood
+      (1658). Leeuwenhoek's tiny single lens and its method are unknown here.
+    local:
+    - Kircher, Scrutinium pestis (1658), read after the plague of 1679
+    - physicians of the medical faculty
+    elsewhere:
+    - 'Delft: Leeuwenhoek, single-lens microscopes, method kept secret'
+    - 'London: Hooke, Micrographia (1665)'
+    - 'Rome: Campani and Divini'
+    - 'Augsburg: instrument makers'
+  telescope:
+    knowledge: 3
+    use: correct
+    producibility: medium
+    acceptance: high
+    note: 'Officers carry draw-tube spyglasses; a lookout watches from St Stephen''s tower. Astronomical
+      use is rare: Vienna has no observatory and no maker of long objectives.'
+    local:
+    - lookout in the tower of St Stephen's
+    - Jesuit college and university
+    elsewhere:
+    - 'Rome: Campani''s long telescopes'
+    - 'Paris Observatory: Cassini'
+    - 'Danzig: Hevelius'
+    - 'Augsburg: telescope makers'
+    - 'The Hague: Huygens''s aerial telescope (published 1684)'
+  reflecting_telescope:
+    knowledge: 1
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: Newton's small reflector (1668, reported 1672) is hearsay. Bell founders can cast speculum metal;
+      figuring and polishing the mirror, which also tarnishes, is the difficulty.
+    local:
+    - bell and gun founders (tin-rich bronze)
+    elsewhere:
+    - 'Cambridge and London: Newton, Royal Society'
+  achromatic_lens:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: medium
+    note: Coloured fringes are fought with very long focal lengths. No dense lead glass of optical quality
+      exists here; Ravenscroft's lead crystal is new in London.
+    elsewhere:
+    - 'London: George Ravenscroft''s lead glass (1670s), not yet used for optics'
+  spectrum_colour:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Colours are held to be white light weakened or mixed with darkness (Aristotle, Kircher). Newton's
+      1672 paper is disputed even in London. Glass prisms are sold as toys.
+    local:
+    - Marcus Marci's prism experiments, Thaumantias (Prague 1648)
+    elsewhere:
+    - 'Cambridge: Newton'
+  spectroscopy:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+  wave_nature_light_sound:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Sound as motion of air is accepted (bell in a vacuum, in Schott). Light is a quality or Cartesian
+      pressure; Grimaldi's diffraction (1665) is known, Huygens's waves are unpublished.
+    local:
+    - Kircher, Musurgia (1650) and Phonurgia nova (1673)
+    elsewhere:
+    - 'The Hague: Huygens, wave theory presented in Paris 1678, printed 1690'
+  speed_of_light:
+    knowledge: 1
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Rømer's delay of Jupiter's moon (Paris 1676) is contested by Cassini himself. Cartesians and scholastics
+      hold light to be instantaneous.
+    elsewhere:
+    - 'Paris Observatory: Rømer until 1681, then Copenhagen'
+  photography:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: Apothecaries sell silver dissolved in aqua fortis (lunar caustic) and know it blackens skin; the
+      cause is put down to air or heat. No fixing agent is known.
+    local:
+    - apothecaries
+    - mint assayers (aqua fortis, silver)
+  lever_mechanics_statics:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+  buoyancy_hydrostatics:
+    knowledge: 3
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Archimedes, Stevin and Pascal are in the textbooks; assayers and brewers use the balance and floats.
+      A press built on Pascal's principle does not exist.
+    local:
+    - mint assayers
+    - Schott, Mechanica hydraulico-pneumatica (1657)
+  falling_bodies:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Galileo's law of fall was confirmed by the Jesuit Riccioli (1651) and is taught. Gunners still
+      lay pieces by quadrant and experience tables; air resistance is ignored.
+    local:
+    - imperial gunners (Büchsenmeister) of the arsenal
+    elsewhere:
+    - 'Paris: Blondel, L''art de jetter les bombes (1683)'
+  laws_of_motion:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: The university teaches Aristotelian motion with impetus. Descartes's inertia is known but his
+      works are on the Index (1663). Force equals mass times acceleration is stated nowhere.
+    elsewhere:
+    - 'Cambridge: Newton (unpublished until 1687)'
+    - 'The Hague: Huygens, laws of collision and centrifugal force'
+  universal_gravitation:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Weight is a tendency towards the Earth's centre; planets move by vortices or angels. Hooke has
+      guessed an inverse-square pull; Newton has the proof in a drawer.
+    elsewhere:
+    - 'London: Hooke, Halley, Wren discuss the inverse square (1684)'
+    - 'Cambridge: Newton'
+  strength_of_materials:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Master builders and fortress engineers size beams, vaults and gun carriages by rules of proportion.
+      Galileo's beam theory (1638) is read by few; nobody tests samples.
+    local:
+    - fortress engineers
+    - master masons and carpenters
+    elsewhere:
+    - 'London: Hooke''s law of the spring (1678)'
+    - 'Paris: Mariotte''s bending and pipe-bursting tests'
+  sundial_water_clock:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+  mechanical_clock:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Tower clocks, table clocks and watches are made in town. The spiral balance spring for watches
+      (Huygens 1675) is only just arriving from Paris and London.
+    local:
+    - Vienna clockmakers
+    - tower clock of St Stephen's
+    elsewhere:
+    - 'Augsburg: the leading German clock and automaton trade'
+    - 'London: Thomas Tompion'
+    - 'Paris: Isaac Thuret'
+  pendulum_clock:
+    knowledge: 3
+    use: correct
+    producibility: medium
+    acceptance: high
+    note: Pendulum clocks have reached German and Austrian workshops since the 1660s, mostly with verge
+      escapement and short pendulum. Anchor escapement and seconds pendulum are English novelties.
+    local:
+    - Vienna clockmakers
+    elsewhere:
+    - 'The Hague: Huygens'
+    - 'London: anchor escapement, long-case clocks'
+    - Augsburg
+    - 'Sobieski''s court: the Jesuit clockmaker Adam Kochański'
+  atmospheric_pressure:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Torricelli's tube and Guericke's shows are known from Schott's books. Many Jesuit philosophers
+      still deny a true void and speak of subtle matter. Mercury is plentiful.
+    local:
+    - mercury from the imperial mine at Idrija
+    - glassmakers for tubes
+    - Schott, Mechanica hydraulico-pneumatica (1657), Technica curiosa (1664)
+    elsewhere:
+    - 'Hamburg: Otto von Guericke (aged 80)'
+    - 'London: Boyle'
+    - 'Florence: Viviani, Torricelli''s pupil'
+  air_pump_vacuum:
+    knowledge: 2
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Guericke showed his pump to the Imperial Diet at Regensburg in 1654; it went to the Würzburg Jesuits.
+      Brass founders can cast a barrel; seals and valves are the craft.
+    local:
+    - arsenal brass founders
+    - coppersmiths (hemispheres)
+    - Guericke, Experimenta nova Magdeburgica (1672)
+    elsewhere:
+    - 'Hamburg: Guericke'
+    - 'London: Boyle and Hooke''s pump with glass receiver'
+    - 'Würzburg Jesuit college: Guericke''s Regensburg pump'
+    - 'Altdorf: J. C. Sturm''s experimental college'
+  thermometer_temperature:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Sealed Florentine spirit thermometers are known; each maker's degrees differ and no fixed points
+      are agreed. Physicians judge fever by hand and pulse.
+    local:
+    - glassblowers
+    - apothecaries (spirit of wine)
+    - Idrija mercury
+    elsewhere:
+    - 'Florence: Medici instruments; their observer network (1654–1667) had a station at Innsbruck'
+    - 'London: Boyle, Hooke'
+  latent_specific_heat:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Heat and temperature are not told apart; without comparable thermometers nobody can measure either.
+  heat_energy_conservation:
+    knowledge: 1
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Fire is an element or a subtle matter; Bacon's and Boyle's 'heat is motion' is a minority view.
+      Court alchemists and projectors still sell perpetual motion.
+  weather_instruments:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Printed calendars forecast weather from the stars. Guericke's water barometer with a floating
+      manikin and his storm warning of 1660 are in his book; nobody here keeps daily readings.
+    local:
+    - Vienna calendar printers
+    - Guericke, Experimenta nova (1672)
+    elsewhere:
+    - 'London: Hooke''s wheel barometer and weather journal scheme'
+  round_earth_size:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Picard's degree measured with telescopic sights (1669–1670) is known from French books; maps here
+      still use older, rougher values.
+    elsewhere:
+    - 'Paris: Académie, Picard''s measurement'
+  seasons_axial_tilt:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+  eclipse_prediction:
+    knowledge: 3
+    use: correct
+    producibility: medium
+    acceptance: high
+    note: Calendar makers compute eclipses from the Rudolphine Tables. Educated people know the cause; the
+      street still reads an eclipse as a sign of war.
+    local:
+    - Kepler's Rudolphine Tables (1627), dedicated to the emperor
+    - Jesuit mathematicians
+    - calendar makers
+  heliocentrism:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: low
+    note: Copernicus is on the Index since 1616; it may be used as a calculating hypothesis only. The Jesuits
+      teach Tycho's system after Riccioli. Arguing it as truth risks a denunciation.
+    local:
+    - Jesuit faculty of philosophy
+    - Riccioli, Almagestum novum (1651)
+    elsewhere:
+    - 'Protestant universities, Holland, England: taught openly'
+  keplers_laws:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Kepler served three emperors and his tables are in use, so the ellipse is accepted as a computing
+      device. The area law is often replaced by easier approximations.
+    local:
+    - Rudolphine Tables
+    - Kepler's years in Prague and Linz as imperial mathematician
+  astronomical_distances:
+    knowledge: 2
+    use: partial
+    producibility: hard
+    acceptance: medium
+    note: The Moon's distance is known; for the Sun old values twenty times too small still circulate. Cassini
+      and Richer's Mars parallax (1672) is recent Paris news.
+    elsewhere:
+    - 'Paris Observatory: Cassini'
+  comets_orbits:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: The great comet of 1680 and that of 1682 were preached as heralds of the Turk. Scholars accept
+      comets are beyond the Moon; a returning orbit is nobody's idea yet.
+    local:
+    - comet pamphlets and sermons of 1680–1682
+    elsewhere:
+    - 'Plauen: Dörffel''s parabola for the comet of 1680 (1681)'
+    - 'London: Halley observed the comet of 1682'
+    - 'Danzig: Hevelius, Cometographia (1668)'
+  tides:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: An inland city knows tides from books only. The Moon's influence is accepted as a fact; Galileo's
+      sloshing theory and Descartes's vortex pressure compete as causes.
+  terrestrial_magnetism:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Gilbert's Earth-magnet is known through Kircher's Magnes. Mine surveyors work with the compass
+      and know declination, less that it changes over the years.
+    local:
+    - Kircher, Magnes (1641)
+    - mine surveyors (Markscheider) of Schemnitz and Idrija
+  deep_time_geology:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: low
+    note: The world is under 6,000 years old by Scripture. Fossils are sports of nature or relics of the
+      Flood (Kircher). Steno's strata (1669) are barely known. Theologians will object.
+    local:
+    - Kircher, Mundus subterraneus (1665)
+    - miners' knowledge of veins and strata
+    elsewhere:
+    - 'Florence: Steno''s Prodromus (1669)'
+  plate_tectonics:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+  stars_galaxies_cosmology:
+    knowledge: 2
+    use: partial
+    producibility: hard
+    acceptance: low
+    note: That the Milky Way is stars is known since Galileo. Stars as suns with worlds is Bruno's heresy
+      and Descartes's vortices; a firm sphere of fixed stars is still taught.
+  xrays:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  radioactivity:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  atomic_structure:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  quantum_mechanics:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  relativity:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  nuclear_fission:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+
+  # ---- Electricity & electronics
+  static_electricity:
+    knowledge: 2
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Gilbert's 'electrics' and Guericke's rubbed sulphur globe (attraction, repulsion, crackling glow)
+      are in print as curiosities. No conduction, no two kinds of charge, no storage jar.
+    local:
+    - apothecaries (sulphur, amber, resin)
+    - glassmakers
+    - goldbeaters (foil)
+    - Guericke, Experimenta nova (1672), book IV
+    elsewhere:
+    - 'Hamburg: Guericke'
+    - 'London: Boyle repeated the globe experiments (1672–1673)'
+  lightning_rod:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Lightning is a sulphurous exhalation or God's hand; bells are rung against storms. A rod on a
+      church invites the charge of tempting Providence. Any smith can make it.
+    local:
+    - spire of St Stephen's
+    - powder magazines in the bastions
+  electric_battery:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: Copper and silver are plentiful, but zinc metal is a rare East India import (tutenag, 'spelter')
+      via Amsterdam. Brass is made with calamine, never with the metal.
+    local:
+    - mint and coppersmiths
+    - brass founders (calamine)
+    - apothecaries (vitriol, salt)
+  practical_batteries:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: medium
+  electromagnetism:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: Electric and magnetic attraction are held to be separate since Gilbert. Wire drawers supply copper
+      and iron wire; silk for insulation is at hand. It waits on the battery.
+  ohms_law_circuits:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: medium
+  electric_telegraph:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: high
+    note: A besieged commander who signals the relief army with rockets from St Stephen's would pay anything
+      for it. A year is not enough to get from battery to working line.
+  submarine_cable:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: medium
+  dynamo_electric_motor:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: medium
+  electric_light:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: high
+  alternating_current_grid:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: medium
+  telephone:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: medium
+  sound_recording:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: 'Needs no electricity: a clockmaker''s screw, a foil-wrapped cylinder and a membrane. The nearest
+      ideas are Kircher''s speaking tubes and talking statues. A voice from a machine smells of sorcery.'
+    local:
+    - clock and instrument makers
+    - tin and lead foil beaters
+    - Kircher, Phonurgia nova (1673)
+  electromagnetic_waves_radio:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  crystal_detector:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  vacuum_tube:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  television_crt:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  radar:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  semiconductors_transistor:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  semiconductor_purification:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  solar_cell:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  mosfet:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  integrated_circuit:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  laser:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  optical_fibre:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+
+  # ---- Computing, control & information theory
+  algorithm_concept:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Reckoning books, the Easter computus and gunners' tables are step-by-step rules. Nobody treats
+      a procedure as an object to be compared, proved or handed to a machine.
+    local:
+    - reckoning masters
+    - Hofkammer clerks
+    - Jesuit mathematics lessons
+  binary_numbers:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Caramuel printed number systems to other bases, binary included (1670). Leibniz's binary manuscript
+      of 1679 is unpublished. It looks like a game with no use.
+    elsewhere:
+    - 'Hanover: Leibniz'
+  boolean_logic:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: low
+    note: The Jesuit faculty drills Aristotelian syllogisms in Latin. Reasoning by calculation is Leibniz's
+      private dream and Lull's combinatory wheels; schoolmen will see no need for it.
+    local:
+    - Jesuit professors of logic
+    - Kircher, Ars magna sciendi (1669), dedicated to Leopold I
+    elsewhere:
+    - 'Hanover: Leibniz''s unpublished logical calculus'
+  logic_gates_switching:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+  mechanical_calculator:
+    knowledge: 2
+    use: none
+    producibility: hard
+    acceptance: high
+    note: Napier's rods are known through Schott's Organum mathematicum, the chest Kircher devised in 1661
+      for Archduke Karl Joseph. Pascal's adder is a rarity; Leibniz's four-function machine is unfinished.
+    local:
+    - Schott, Organum mathematicum (1668)
+    - Vienna and Augsburg clockmakers
+    - Hofkammer and war-chest accounts as customers
+    elsewhere:
+    - 'Hanover: Leibniz, stepped reckoner (model shown in London 1673)'
+    - 'Paris: surviving Pascal machines'
+    - 'London: Samuel Morland''s machines'
+  punched_card_control:
+    knowledge: 1
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: The pinned barrel that plays a carillon or automaton organ is familiar, and Kircher prints how
+      to pin a tune. Exchangeable cards steering a loom are unknown.
+    local:
+    - Kircher, Musurgia universalis (1650)
+    - Augsburg automaton makers
+  programmable_computer:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  turing_machine_computability:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: low
+    note: 'A pen-and-paper idea with no audience: the question ''what can a rule-following clerk compute
+      at all'' has not been asked. Leibniz would understand it at once.'
+    elsewhere:
+    - 'Hanover: Leibniz'
+  computer_memory:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  programming_languages_compilers:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  operating_system_time_sharing:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  information_theory:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+  sampling_pcm:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  error_correcting_codes:
+    knowledge: 1
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Clerks check sums by casting out nines; important dispatches go in duplicate by different messengers.
+      A code that repairs its own garbled letters is unknown.
+    local:
+    - chancery clerks
+    - siege couriers through the Ottoman lines
+  packet_switching_networks:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  feedback_control:
+    knowledge: 1
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Millers' hoppers that feed by the stone's speed, float valves and Drebbel's self-regulating furnace
+      are known as separate tricks, with no general idea behind them.
+    local:
+    - millers
+    - alchemists' and assayers' furnaces
+  cryptography:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Court and field chanceries use number ciphers with code lists; siege letters go out enciphered.
+      Keyword ciphers are thought unbreakable. A captured courier yields the text, rarely the key.
+    local:
+    - Hofkanzlei and Hofkriegsrat cipher clerks
+    - Kircher, Polygraphia nova (1663)
+    - Schott, Schola steganographica (1665)
+    elsewhere:
+    - 'Oxford: John Wallis, the best codebreaker alive'
+    - 'Versailles: the Rossignol family'
+  public_key_cryptography:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Fermat's little theorem is in print but nobody can multiply and test large primes fast enough
+      by hand to make it practical.
+
+  # ---- Energy & engines
+  animal_power_gin:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Once the Danube and Wien river mills are lost to the besiegers, horse and hand mills inside the
+      walls must grind the city's grain.
+    local:
+    - horse whims (Göpel) at the Schemnitz mines
+  water_wheel:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Ship mills moored in the Danube arms and mills on the Wien river grind for the city; all lie outside
+      the walls. Alpine valleys drive hammers and saws.
+    local:
+    - Danube ship mills
+    - mills on the Wien river
+    - Styrian and Lower Austrian hammer works
+  windmill:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Known, but water is cheap here and windmills are few. Leibniz is at this moment trying to pump
+      the Harz mines with windmills, against the miners' resistance.
+    elsewhere:
+    - 'Holland: drainage and sawing mills'
+    - 'Harz (Clausthal): Leibniz''s windmill pumps, 1680–1685'
+  water_turbine:
+    knowledge: 1
+    use: partial
+    producibility: hard
+    acceptance: medium
+    note: Small horizontal-wheel mills turn in Alpine brooks. Nobody thinks of an enclosed wheel running
+      full of water under pressure, and nobody can calculate one.
+    local:
+    - horizontal 'Stock' or 'Floder' mills in Alpine valleys
+  crank_connecting_rod:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+  piston_pump:
+    knowledge: 3
+    use: correct
+    producibility: medium
+    acceptance: high
+    note: Mine pumps in tiers worked by water-wheel rod engines, well pumps and fire syringes. Barrels are
+      bored wood or cast bronze. The fire hose is a new Dutch invention.
+    local:
+    - Schemnitz and Idrija mine pumps
+    - city fire syringes
+    - arsenal founders
+    elsewhere:
+    - 'Amsterdam: Jan van der Heyden''s fire engine with hoses (1672)'
+    - 'Nuremberg: Hans Hautsch''s fire engine'
+    - 'Marly: the great Seine pumping machine, building 1681–1684'
+  hydraulic_ram:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: high
+    note: Unknown. Bronze founders and plumbers of lead and wooden pipes can make one; the valves must stand
+      constant hammering.
+    local:
+    - bronze founders
+    - well and pipe masters (Brunnenmeister)
+  charcoal_burning:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    local:
+    - charcoal burners of the Wienerwald
+  coal_mining:
+    knowledge: 2
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Wood and charcoal heat the city and the ironworks; mineral coal is neither dug nor wanted here,
+      and its smoke is thought unhealthy.
+    elsewhere:
+    - Liège and Newcastle coalfields
+    - London burns sea coal
+  gas_lighting:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: medium
+  argand_lamp:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: high
+    note: Light comes from tallow candles, wax for the rich, and flat-wick oil lamps; the streets are unlit.
+      Brass workers and glassmakers can make the hollow wick and chimney.
+    local:
+    - brass workers (Gürtler)
+    - glassmakers
+  oil_drilling:
+    knowledge: 1
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: Rock oil skimmed from seeps is an apothecary's remedy. Deep boring is unknown; brine comes from
+      mined salt (Hallstatt, Hallein), not from drilled wells.
+    local:
+    - apothecaries (petroleum as medicine)
+  steam_aeolipile:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Hero's ball and Branca's steam jet on a wheel are stock items in Kircher and Schott; copper fire-blowers
+      exist. It is a cabinet toy, not a source of work.
+    local:
+    - coppersmiths
+    - Jesuit physics lessons
+  safety_valve_boiler:
+    knowledge: 1
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Papin's 'digester' with weighted safety valve (London 1679, printed 1681) is a rumour from the
+      journals. Gun founders can cast the vessel; sealing lid and valve seat is the work.
+    local:
+    - bronze and gun founders
+    - coppersmiths
+    elsewhere:
+    - 'Venice: Denis Papin, 1681–1684'
+    - 'London: Royal Society'
+  savery_steam_pump:
+    knowledge: 1
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: Books show steam pushing water from a vessel (della Porta, de Caus). No working engine exists
+      anywhere. Soldered copper vessels burst; deep mines would be the customer.
+    local:
+    - Schemnitz mine administration
+    - coppersmiths
+  atmospheric_engine:
+    knowledge: 1
+    use: none
+    producibility: very-hard
+    acceptance: medium
+    note: Guericke's piston that outpulls a gang of men is in print; the vacuum comes from a pump or gunpowder.
+      Condensing steam under the piston is nobody's idea yet (Papin, 1690).
+    local:
+    - gun founders (brass cylinder, reamed like a cannon)
+    - Schemnitz and Idrija mines as users
+    elsewhere:
+    - 'The Hague: Huygens (gunpowder cylinder, 1673)'
+    - 'Venice: Papin'
+  separate_condenser:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: medium
+  rotative_steam_engine:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: medium
+  high_pressure_steam:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: medium
+  steam_turbine:
+    knowledge: 1
+    use: none
+    producibility: impossible
+    acceptance: medium
+  hot_air_engine:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: medium
+  internal_combustion_engine:
+    knowledge: 1
+    use: none
+    producibility: impossible
+    acceptance: medium
+    note: Huygens and Papin's gunpowder cylinder lifts a weight once and leaves much air inside. A cannon
+      is the only working 'engine' of this kind.
+    elsewhere:
+    - 'Paris, then The Hague: Huygens'
+  gas_turbine_jet:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  refrigeration:
+    knowledge: 2
+    use: partial
+    producibility: hard
+    acceptance: high
+    note: Winter ice is kept in pits for court and inns. Cooling with saltpetre and freezing with ice and
+      salt are known tricks; making cold without ice is not.
+    local:
+    - ice pits and cellars
+    - court confectioners
+    - saltpetre boilers
+  nuclear_reactor:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+
+  # ---- Tools, machines & manufacturing
+  block_and_tackle:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+  wheelbarrow:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+  archimedes_screw:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: In every book of machines and used now and then to drain building pits and ditches; mines prefer
+      piston pumps and bucket chains.
+  gears_gear_trains:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Millwrights build wooden cog and lantern gearing, clockmakers cut brass wheels, increasingly on
+      dividing engines. Tooth shape is by eye; no theory is in print.
+    local:
+    - millwrights
+    - Vienna clockmakers
+    elsewhere:
+    - 'London and Paris: wheel-cutting engines'
+  cam_camshaft:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+  screw_nut_bolt:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: high
+    note: Locksmiths, gunsmiths and instrument makers cut screws with plates and taps, each workshop to
+      its own thread. A nut fits only its own bolt.
+    local:
+    - gunsmiths and locksmiths
+    - arsenal workshops
+  belt_drive:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+  ball_bearings:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: Axles run in greased bronze or wood. Round, equal, hard balls cannot be made except one by one.
+  bellows_piston_blower:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Water-driven leather and wooden box bellows blow the furnaces and forges of Styria. The Chinese
+      double-acting piston box is unknown.
+    local:
+    - ironworks at the Styrian Erzberg
+  trip_hammer_water_powered:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    local:
+    - hammer works of the Eisenwurzen (Ybbs and Enns valleys)
+    - stamp mills at Schemnitz
+  lost_wax_casting:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    local:
+    - bell and gun founders
+    - goldsmiths
+  sand_loam_casting:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Bronze guns, mortars and bells are cast in loam over a core. Iron is cast only as shot, bombs,
+      stove plates; nobody casts iron thin or to size.
+    local:
+    - imperial gun founders (Stückgießer)
+    - imperial and civic arsenals
+    - bell founders
+  wire_drawing:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+  rolling_mill:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Mints roll coin strip, the Hall mint even strikes between engraved rollers; glaziers roll window
+      lead. Bar iron is hammered, not rolled or slit, in the Austrian works.
+    local:
+    - Vienna mint
+    - mint at Hall in Tyrol (roller coining since c. 1567–1571)
+    elsewhere:
+    - 'Liège region and England: slitting mills for nail rod'
+  boring_machine:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: high
+    note: Guns are cast hollow and reamed smooth by horse or water power; the bore follows the casting and
+      is neither straight nor round to a steam engine's needs.
+    local:
+    - imperial gun foundry and arsenal
+  lathe_screw_cutting:
+    knowledge: 2
+    use: partial
+    producibility: hard
+    acceptance: high
+    note: Turners work wood, ivory and brass on pole and wheel lathes with hand-held tools; Besson's screw
+      lathe is a picture in a book. No slide rest, no lead screw.
+    local:
+    - turners (Drechsler)
+    - clock and instrument makers
+  precision_measurement:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Instrument makers divide scales with transversals; the vernier is in books. Workshops fit part
+      to part by eye and file. Gunners gauge shot with ring calibres.
+    local:
+    - arsenal shot gauges
+    - mint weights and assay balances
+    elsewhere:
+    - 'Paris Observatory: screw micrometer and telescopic sights (Auzout, Picard)'
+  machine_tools:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: medium
+  interchangeable_parts:
+    knowledge: 1
+    use: partial
+    producibility: hard
+    acceptance: low
+    note: Shot is cast to calibre, but imperial guns come in many calibres and every musket lock is fitted
+      by hand. Guild masters see gauges as an insult to skill.
+    local:
+    - imperial arsenal
+    - gunsmiths
+  assembly_line:
+    knowledge: 1
+    use: partial
+    producibility: medium
+    acceptance: low
+    note: Guild rules limit journeymen per master and forbid mixing trades. Becher's state 'Kunst- und Werkhaus'
+      on the Tabor tried large workshops; the guilds fought it.
+    local:
+    - Becher's Werkhaus on the Tabor (burned in the 1683 war)
+    - arsenal workshops, outside guild control
+    elsewhere:
+    - Venice Arsenal
+    - 'France: Colbert''s royal manufactories'
+  sawmill:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+  spinning_wheel:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+  spinning_machines:
+    knowledge: 2
+    use: partial
+    producibility: hard
+    acceptance: low
+    note: Water-driven Italian silk-throwing mills are known; Becher's Werkhaus had a silk manufactory.
+      Wool and flax are spun by hand in cottages; spinners' wages are what the poor live on.
+    elsewhere:
+    - 'Bologna and Piedmont: silk-throwing mills'
+  treadle_loom:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+  power_loom:
+    knowledge: 2
+    use: none
+    producibility: hard
+    acceptance: low
+    note: The ribbon 'mill' loom weaving many ribbons at once is known and hated; German towns forbid it;
+      an imperial ban follows in 1685. Ribbon and trimming makers (Posamentierer) would riot.
+    elsewhere:
+    - 'Leiden, Danzig, Basel: ribbon engine looms'
+  cotton_gin:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: low
+    note: Cotton reaches Vienna as Levant yarn and cloth through Venice and Hungary; nobody here has raw
+      seed cotton to clean.
+  knitting_frame:
+    knowledge: 1
+    use: none
+    producibility: very-hard
+    acceptance: medium
+    note: Stockings are hand-knitted. Lee's frame, with some two thousand parts, works in England and France,
+      which guard it; nobody here has seen one.
+    elsewhere:
+    - 'London and Nottinghamshire: framework knitters'
+    - 'France: frames since Colbert''s time'
+  sewing_machine:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+
+  # ---- Mathematics & measurement
+  zero_place_value:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+  arabic_numerals:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+  abacus_counting_board:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: low
+    note: Reckoning 'on the lines' with counters lingers in some toll and estate offices and in old textbooks;
+      pen reckoning has won. A bead frame is unknown.
+  fractions_rule_of_three:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+  decimal_fractions:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Astronomers, engineers and users of logarithm tables write decimals, in several notations. Money,
+      weights and measures are not decimal, so merchants keep common fractions.
+  negative_numbers:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Algebraists calculate with them and bookkeepers think in debts, but textbooks still call negative
+      roots 'false' and avoid them as answers.
+  square_roots_irrationals:
+    knowledge: 3
+    use: correct
+    producibility: easy
+    acceptance: high
+  logarithms:
+    knowledge: 3
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Kepler adopted them for the Rudolphine Tables and Bürgi's own table was printed at Prague in 1620.
+      Astronomers and a few engineers use Vlacq's tables; merchants and gunners do not.
+    local:
+    - Jesuit mathematicians
+    - printed tables (Vlacq, Kepler) in college and court libraries
+  slide_rule:
+    knowledge: 1
+    use: none
+    producibility: medium
+    acceptance: high
+    note: An English instrument, almost unknown in the German lands. Engineers here use the sector (proportional
+      compass) instead. An instrument maker can engrave one from a log table.
+    local:
+    - instrument makers
+    - fortress engineers and gunners as users
+    elsewhere:
+    - 'England: Gunter''s line, Oughtred''s sliding rules, gaugers'' rules'
+  symbolic_algebra:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Descartes's notation is the learned standard, though his books are on the Index. Jesuit teaching
+      still leans on Clavius's older cossic style.
+    local:
+    - Jesuit professors of mathematics
+  quadratic_cubic_equations:
+    knowledge: 3
+    use: correct
+    producibility: easy
+    acceptance: high
+  linear_equations_matrices:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Small systems are solved by substitution or the rule of false position; there is no general elimination
+      scheme and no notation for the array of coefficients.
+  complex_numbers:
+    knowledge: 2
+    use: none
+    producibility: medium
+    acceptance: low
+    note: Bombelli's rules are known to algebraists as a trick for the cubic; the quantities are called
+      impossible or imaginary. No picture of them as points in a plane.
+  prime_numbers_number_theory:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: low
+    note: Euclid's results are taught. Fermat's theorems circulated in letters without proofs (his works
+      were printed in 1679) and are thought pretty but useless.
+  combinatorics_permutations:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: 'Counting combinations is fashionable through the Lullian art: Kircher''s Ars magna sciendi is
+      dedicated to Leopold I. Pascal''s triangle treatise (1665) is rare here.'
+    local:
+    - Kircher, Ars magna sciendi (1669)
+    elsewhere:
+    - 'Hanover: Leibniz, De arte combinatoria (1666)'
+  compound_interest_exponential_growth:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: medium
+    note: Court financiers and the Hofkammer reckon interest on war loans from printed tables. Nobody applies
+      the same growth law to population or plague deaths.
+    local:
+    - Hofkammer
+    elsewhere:
+    - 'Basel: Jakob Bernoulli studies continuous compounding (1683)'
+  geometry_proof:
+    knowledge: 3
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Euclid in Clavius's edition is the core of Jesuit mathematics teaching; fortification is taught
+      as applied geometry to young nobles.
+    local:
+    - Jesuit college and university
+    - fortress engineers
+  pi_circle_measurement:
+    knowledge: 3
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Craftsmen use 22/7, mathematicians van Ceulen's 35 places. Leibniz's series for a quarter of pi
+      was printed in the Leipzig Acta in 1682.
+    elsewhere:
+    - 'Leipzig: Acta Eruditorum (since 1682)'
+  trigonometry:
+    knowledge: 3
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Tables of sines, tangents and their logarithms are standard for astronomers, surveyors and fortress
+      engineers; a siege engineer computes trench angles with them.
+    local:
+    - fortress engineers (Georg Rimpler, Daniel Suttinger)
+  coordinate_geometry:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Descartes's Geometria in van Schooten's Latin edition is known to a few mathematicians. Curves
+      are still mostly treated in the Greek manner; no negative axes, no plotted data.
+    elsewhere:
+    - 'Leiden: van Schooten''s school'
+    - Paris
+  non_euclidean_geometry:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+  perspective_technical_drawing:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Court theatre sets, fortress plans and bird's-eye city views show full command of perspective.
+      Machines are drawn as pictures, not as dimensioned views a stranger could build from.
+    local:
+    - Lodovico Ottavio Burnacini, court theatre engineer
+    - fortress engineers' plans
+  surveying_triangulation:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Engineers survey fortress and siege works with plane table, chain and graduated circle. Country
+      maps are compiled from itineraries and sightings, not from a measured triangle net.
+    local:
+    - Georg Matthäus Vischer's map of Lower Austria (1670)
+    - Daniel Suttinger, military engineer (Leander Anguissola, in the estates' service at Brünn, comes only in 1684)
+    - mine surveyors
+    elsewhere:
+    - 'France: Picard''s triangulation with telescopic sights'
+  solar_calendar_leap_years:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Vienna uses the Gregorian calendar. Protestant Germany, England and Sweden are ten days behind,
+      so letters from Guericke, Leibniz or London carry old-style or double dates.
+  metric_system_units:
+    knowledge: 1
+    use: none
+    producibility: medium
+    acceptance: low
+    note: Klafter, Schuh, Elle, Eimer, Metzen and Pfund differ from town to town and are not decimal. Changing
+      measures touches tolls and rents; estates and guilds will resist.
+    elsewhere:
+    - 'Lyon: Mouton''s decimal measure from the Earth (1670)'
+    - 'London: Wilkins (1668)'
+  probability_statistics:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Huygens's tract on dice games (1657) is known to few. The city has recorded its dead since 1648,
+      but nobody has counted them as Graunt did in London.
+    local:
+    - Vienna death-inspection registers (Totenbeschauprotokolle)
+    - physicians after the plague of 1679
+    elsewhere:
+    - 'London: Graunt and Petty'
+    - 'The Hague: Huygens; Hudde and de Witt on annuities'
+  bayes_theorem:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: low
+  normal_distribution_errors:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: Astronomers repeat observations and pick the one they trust or a rough middle. No theory of error;
+      gunners blame every miss on powder or wind.
+  data_graphs:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Numbers are shown in tables only. A line of daily deaths, powder stock or flour against the calendar
+      would be new and readable by any officer.
+  calculus:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Indivisibles and the centre-of-gravity rules of the Jesuit Guldin, who taught in Vienna and Graz,
+      are known. Leibniz prints his differential calculus in October 1684; Newton's is unpublished.
+    local:
+    - Guldin, Centrobaryca (Vienna 1635–1641)
+    elsewhere:
+    - 'Hanover: Leibniz'
+    - 'Cambridge: Newton'
+    - 'Leipzig: Acta Eruditorum'
+    - 'Kieslingswalde near Görlitz: Tschirnhaus'
+  infinite_series_e:
+    knowledge: 1
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Mercator's logarithm series (1668) and Leibniz's series for pi (1682) are in print for those who
+      get the journals; they are admired as curiosities, not used.
+    elsewhere:
+    - 'Hanover: Leibniz'
+    - 'Basel: Jakob Bernoulli'
+    - 'Cambridge: Newton''s binomial series, unpublished'
+  differential_equations:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+  fourier_series:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+
+  # ---- Scientific method & philosophical ideas
+  scientific_method:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Bacon, Galileo and Boyle are read. Jesuit professors show experiments but fit them into Aristotle.
+      Nobody in Vienna publishes trials for others to repeat.
+    local:
+    - Jesuit college and university (mathematics and physics chairs)
+    - Wilhelm von Schröder, Fellow of the Royal Society since 1662
+    elsewhere:
+    - 'London: Royal Society (1660)'
+    - 'Paris: Académie des sciences (1666)'
+    - 'Leipzig: Acta Eruditorum (1682)'
+  empiricism_over_authority:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: low
+    note: Philosophy and theology are Jesuit faculties bound to Aristotle and Aquinas; medicine cites Galen
+      and Hippocrates. Craftsmen, gunners and miners trust what works.
+    local:
+    - Paul de Sorbait (medical faculty)
+    - gunners and fireworkers of the arsenal
+    elsewhere:
+    - 'London: Royal Society motto ''Nullius in verba'''
+  controlled_trial:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Van Helmont's printed challenge (1648) to divide patients by lot between two treatments is known
+      to physicians; nobody has done it.
+    local:
+    - Bürgerspital
+    - military hospitals of the garrison
+  placebo_blinding:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Cures are credited to the remedy, the saint or the physician's standing. Hiding from a patient
+      what he receives would look like fraud.
+  correlation_causation_confounding:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: The comets of 1680 and 1682 are widely read as warnings of the Turkish war. 'After it, therefore
+      because of it' is taught as a fallacy but not applied.
+  selection_bias_sampling:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Votive tablets at pilgrimage churches such as Mariazell show only those who were saved. Bacon
+      made this point in print in 1620.
+  measurement_quantification:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Surveyors, gunners, assayers and the mint measure carefully. Barometer and thermometer are known
+      from books and court cabinets, without agreed scales.
+    local:
+    - Vienna mint and assay office
+    - Daniel Suttinger (military engineer and surveyor)
+    - Georg Matthäus Vischer (map of Lower Austria, 1670)
+    elsewhere:
+    - 'London, Paris, Florence: instrument makers, barometers, thermometers'
+  mathematical_laws_of_nature:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Kepler was imperial mathematician in Prague and Linz, yet Copernicus and Galileo's Dialogue are
+      on the Index. Jesuits teach Tycho's system and treat mathematics as calculation.
+    elsewhere:
+    - 'Cambridge: Newton (Principia appears 1687)'
+    - 'Paris and The Hague: Huygens'
+    - 'Hanover: Leibniz'
+  falsifiability:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Disputations are won by argument from texts. Astrology and alchemy explain every failure afterwards.
+  fallibilism_provisional_knowledge:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Jesuits treat astronomical systems as hypotheses that save the appearances. Doctrine is certain;
+      open doubt about it is dangerous.
+  bayesian_reasoning:
+    knowledge: 1
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Huygens' tract on games of chance (1657) and the Port-Royal Logic (1662) are in print. Nobody
+      in Vienna works on chance.
+    elsewhere:
+    - 'Paris and the Netherlands: Pascal''s heirs, Huygens'
+    - 'Hanover: Leibniz'
+    - 'Basel: Jakob Bernoulli'
+  reproducibility_open_publication:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Court alchemists sell secrets to Leopold I; Wenzel Seyler's 'transmuted' medal of 1677 was accepted.
+      Physicians can send observations to the Miscellanea curiosa.
+    local:
+    - Academia Naturae Curiosorum (imperial recognition 1677), journal Miscellanea curiosa
+    elsewhere:
+    - 'London: Philosophical Transactions (1665)'
+    - 'Paris: Journal des sçavans (1665)'
+  cognitive_biases:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Bacon's four idols are in print. Preachers describe self-deception as a moral fault, not as an
+      error that can be measured.
+  formal_logic:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Aristotelian logic opens the Jesuit philosophy course; disputations in syllogisms are a public
+      exercise.
+    local:
+    - University of Vienna, philosophy faculty (Jesuit since 1623)
+  occams_razor:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: The maxim is taught, with Ockham as a suspect nominalist. It is not turned against angels, demons
+      or occult qualities.
+  thought_experiment:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Scholastic cases and Galileo's falling bodies are known forms of argument.
+  source_criticism:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Peter Lambeck (died 1680) described the court library's manuscripts critically. Mabillon's method
+      for testing charters appeared in Paris in 1681. Doubting monastery charters or saints' lives offends
+      their owners.
+    local:
+    - Hofbibliothek and its manuscript commentaries by Lambeck
+    - monastery archives (Schotten, Klosterneuburg, Melk)
+    elsewhere:
+    - 'Paris: Jean Mabillon, De re diplomatica (1681)'
+    - 'Antwerp: Bollandists'
+  informed_consent_research_ethics:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Physicians try remedies on hospital poor, soldiers and prisoners without asking. Anatomies use
+      executed criminals.
+  natural_causes:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: low
+    note: Plague and dysentery are miasma and God's punishment together; processions answer both. Comets
+      are omens. Bayle's attack on comet fear (1682) is a Protestant book.
+    local:
+    - Pest-Ordnung of 1679/80 (Paul de Sorbait)
+    elsewhere:
+    - 'Rotterdam: Pierre Bayle'
+    - 'London: Halley observes the comet of 1682'
+  scepticism_superstition:
+    knowledge: 2
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Leopold I patronises alchemists. Astrological calendars sell. Sorcery is a capital crime in the
+      Ferdinandea of 1656; the Jesuit Spee's Cautio criminalis (1631) is known.
+    elsewhere:
+    - 'Salzburg: mass sorcery trials of beggar boys (from 1675)'
+    - 'Dutch Republic: open scepticism (Balthasar Bekker, 1691)'
+  atomism:
+    knowledge: 2
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Gassendi and Boyle are known. Jesuit teachers reject atoms because they are held to conflict with
+      transubstantiation; Descartes has been on the Index since 1663.
+    elsewhere:
+    - 'England: Boyle''s corpuscular chemistry'
+    - 'France: Gassendists'
+  universal_physical_laws:
+    knowledge: 2
+    use: none
+    producibility: medium
+    acceptance: low
+    note: Schools teach a stationary earth and a separate heaven; Descartes' vortices are the known rival.
+      Gravitation as one law is unpublished.
+    elsewhere:
+    - 'Cambridge: Newton'
+    - 'London: Hooke, Halley, Wren discuss the inverse-square law (1684)'
+  mechanical_philosophy:
+    knowledge: 2
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Cartesian mechanism is read privately and taught nowhere in Vienna. Substantial forms and final
+      causes are the official physics.
+    elsewhere:
+    - 'Leiden and Utrecht: Cartesian universities'
+    - 'London: Boyle'
+  idea_of_progress:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Cameralists promise wealth from new manufactures; Bacon's programme is known. The pulpit explains
+      the Turk as punishment for sins, to be met with penance.
+    local:
+    - Wilhelm von Schröder
+    - Philipp Wilhelm von Hörnigk
+  systematic_invention:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Becher's Kunst- und Werkhaus on the Tabor (1676) was to test and teach new trades; Schröder ran
+      it from 1677. Closed in 1681, it burns in 1683.
+    local:
+    - Kunst- und Werkhaus am Tabor
+    elsewhere:
+    - 'Paris: Académie and royal manufactures (Gobelins)'
+    - 'London: Royal Society''s histories of trades'
+  golden_rule_universal_ethics:
+    knowledge: 4
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Preached as the Gospel rule. In practice it stops at heretics, Jews and Turks.
+  human_equality_dignity:
+    knowledge: 2
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Society is ranked by estate; peasants owe labour service (Robot). Equality exists before God.
+      Turkish captives are kept as servants, and Tatars carry off Christians as slaves.
+  natural_rights:
+    knowledge: 2
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Jurists know natural law from Suárez and Grotius; Pufendorf (1672) is a Protestant author. It
+      binds rulers in conscience only. Locke has published nothing on it.
+    elsewhere:
+    - 'Dutch Republic and England: Grotius, Hobbes, Pufendorf in print'
+  social_contract:
+    knowledge: 2
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Hobbes is read as a defence of absolute rule. Hungarian rebels under Thököly invoke the nobles'
+      old right of resistance, abolished by Vienna in 1687.
+  freedom_of_speech_thought:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Every book needs approval by the Jesuit-run university censors and the bishop; Protestant books
+      are confiscated at the gates.
+    elsewhere:
+    - 'Dutch Republic: the freest presses in Europe'
+    - 'England: Milton''s Areopagitica (1644)'
+  religious_tolerance:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: low
+    note: The Jews were expelled in 1670 and their quarter renamed Leopoldstadt. Protestants worship only
+      in envoys' chapels (Danish, Swedish, Brandenburg, Dutch); Protestant wholesalers and Reich officials
+      are tolerated.
+    local:
+    - embassy chapels
+    - Niederlagsverwandte (privileged, partly Protestant wholesalers)
+    - Samuel Oppenheimer's household, by personal privilege
+    elsewhere:
+    - 'Transylvania: four received religions'
+    - Dutch Republic
+    - Brandenburg (Edict of Potsdam, 1685)
+  secular_state:
+    knowledge: 1
+    use: none
+    producibility: hard
+    acceptance: low
+    note: The dynasty's legitimacy rests on Catholic piety (Pietas Austriaca). The Counter-Reformation in
+      the hereditary lands is state policy; the war is preached as a crusade.
+  utilitarianism:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Cameralists argue from the 'common good' and the ruler's revenue. Morals are taught as divine
+      law and Jesuit casuistry.
+  abolition_of_torture:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: low
+    note: The Ferdinandea (1656) regulates torture as the regular way to a confession in Lower Austria.
+      Spee's objections concern witch trials only.
+    local:
+    - Stadtgericht and its executioner
+    - Constitutio Criminalis Ferdinandea (1656)
+  positive_sum_cooperation:
+    knowledge: 1
+    use: wrong
+    producibility: easy
+    acceptance: low
+    note: 'Trade is seen as a contest for a fixed stock of silver: one land''s gain is another''s loss.
+      Hörnigk (1684) demands buying nothing abroad that can be made at home.'
+  game_theory:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Diplomats reason about commitment and betrayal case by case (Sobieski, Louis XIV, the Reich princes)
+      without any general theory.
+  tragedy_of_the_commons:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Village customals (Banntaidinge) ration pasture, wood and water. The imperial forest office guards
+      the Wienerwald. No general statement of the problem exists.
+    local:
+    - Lower Austrian Banntaidinge
+    - Waldamt (forest office) for the Wienerwald
+
+  # ---- Agriculture & food
+  three_field_system:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Villages of the Marchfeld, Tullnerfeld and Weinviertel farm in three fields under their lords.
+      Tatar raiders burn much of the countryside in July 1683.
+  legumes_green_manure:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Peas, beans, lentils and vetch are sown for food and fodder, seldom ploughed in. Sown clover is
+      hardly known.
+    elsewhere:
+    - 'Flanders, Brabant and Lombardy: sown clover'
+  crop_rotation:
+    knowledge: 1
+    use: none
+    producibility: medium
+    acceptance: low
+    note: The fallow is common pasture by village custom, so one farmer cannot sow it. A landlord could
+      on his own demesne.
+    local:
+    - Hohberg's Georgica curiosa (Nuremberg 1682), the new handbook of Austrian estate farming
+    elsewhere:
+    - Flanders and Brabant; described for the English by Weston (1650)
+  manure_compost_night_soil:
+    knowledge: 4
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Stable dung goes to vineyards and gardens around the city; cesspit contents are a nuisance, not
+      a ware. In the siege neither can be carted out.
+  liming_marling:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Known from the Roman authors and Hohberg. Much of the land round Vienna is chalky loess that does
+      not need it.
+  mineral_fertiliser:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Ash and bone are used by custom without theory. Saltpetre earth goes to the powder mills, not
+      the fields.
+  terracing_soil_conservation:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    local:
+    - dry-stone vineyard terraces of the Wachau
+  heavy_plough:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+  horse_collar_harness:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+  seed_drill:
+    knowledge: 2
+    use: none
+    producibility: medium
+    acceptance: low
+    note: Sowing machines appear in Italian books and patents (Torello, Venice 1566); none is used here.
+      Seed is broadcast by hand; labour is cheap, seed dear.
+  scythe_cradle:
+    knowledge: 4
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Austrian scythes are an export ware, used for hay. Bread grain is cut with the sickle to save
+      the ears; a cradle on the scythe is not used.
+    elsewhere:
+    - scythe smiths of Kirchdorf-Micheldorf and Waidhofen an der Ybbs
+  reaper_thresher:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: medium
+  selective_breeding:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Court studs breed horses by pedigree; peasants' cattle and sheep mate on the common pasture. Results
+      take years.
+    elsewhere:
+    - imperial studs at Lipica (1580) and Kladrub (1579)
+  grafting_fruit_trees:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+  irrigation_water_lifting:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Rain suffices for field crops. Gardens are watered from wells with buckets and windlasses, and
+      mill races are common.
+  wet_rice_cultivation:
+    knowledge: 2
+    use: none
+    producibility: very-hard
+    acceptance: low
+    note: Rice is bought from Lombardy through Venice as a food for the well-off and for fast days. Nobody
+      grows it north of the Alps.
+  windmill_drainage_land_reclamation:
+    knowledge: 2
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: Dutch polders are known from travellers and engineers' books. The Danube floodplain is left as
+      hunting ground, pasture and firewood; mills here are water mills and ship mills.
+    elsewhere:
+    - 'Holland: Beemster polder (1612)'
+  aquaculture_fish_ponds:
+    knowledge: 4
+    use: correct
+    producibility: medium
+    acceptance: high
+    note: Carp for the many fast days comes live from the ponds of southern Bohemia and the Waldviertel.
+      None reaches the city during the siege.
+    elsewhere:
+    - Wittingau (Třeboň) pond systems
+  new_world_crops:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Beans and pumpkins are ordinary and tobacco is smoked everywhere. Maize (Türkischer Weizen, Kukuruz)
+      is grown in Hungary and the south, not round Vienna. Tomato and potato are rarities.
+  potato_cultivation:
+    knowledge: 2
+    use: none
+    producibility: medium
+    acceptance: low
+    note: Clusius had tubers in Vienna in 1588, and Abbot Plautz of Seitenstetten printed potato recipes
+      at Linz in 1621. It remains a curiosity of monastery and noble gardens.
+    local:
+    - Stift Seitenstetten (Lower Austria)
+    - noble and monastery gardens
+    elsewhere:
+    - 'Ireland: a field crop'
+  maize_beans_squash_milpa:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: low
+    note: All three plants are available as seed, but maize is sown alone like a grain.
+  nixtamalisation:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Maize is ground and boiled as porridge. Where it is only one food among several no harm shows,
+      so nobody sees a reason to steep it in lime.
+  cassava_detoxification:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  potato_blight_monoculture_risk:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  columbian_exchange:
+    knowledge: 2
+    use: partial
+    producibility: very-hard
+    acceptance: medium
+    note: 'Scholars know which plants came from the Indies and argue whether the French disease did. Common
+      names credit the Turks instead: Türkischer Weizen.'
+  food_preservation:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Salt meat, smoked bacon, sauerkraut, dried fruit, biscuit and wine fill the cellars. The city
+      has no serious supply failure in the siege; fresh meat and prices are the trouble.
+    local:
+    - Oberkämmerer Daniel Fockhy and Jakob Daniel Tepser, who oversee the distribution of provisions
+  canning:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Glass bottles, corks, wax and kettles exist; tinplate canisters do not. A spoiled or burst bottle
+      would end the trial.
+  pasteurisation:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Vintners sulphur their casks and know that wine turns in summer. Heating it gently on purpose
+      would seem to ruin it.
+  grain_storage_pest_control:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Grain lies in lofts and magazines and is turned with shovels against heat and weevils. Ergot in
+      rye is milled along; the Paris findings of the 1670s are unknown.
+    local:
+    - city and court granaries
+    - bakers and mills (ship mills on the Danube lie outside the walls)
+  sea_fisheries_salt_cod:
+    knowledge: 3
+    use: partial
+    producibility: impossible
+    acceptance: high
+    note: Stockfish and barrelled herring are bought for Lent through the German trading towns. Vienna is
+      far from any sea.
+  sugar_cane_beet:
+    knowledge: 3
+    use: partial
+    producibility: hard
+    acceptance: high
+    note: Cane sugar is sold by apothecaries and confectioners as loaves from Venice, Hamburg and Amsterdam.
+      That beet holds the same sugar is unknown; honey is the common sweetener.
+  sericulture:
+    knowledge: 2
+    use: partial
+    producibility: hard
+    acceptance: medium
+    note: Becher's Werkhaus on the Tabor housed a silk manufactory in the 1670s; it failed against guild
+      opposition and burns in 1683. Raw silk is bought from Italy.
+    elsewhere:
+    - Lombardy, Veneto, Lyon
+  beekeeping_movable_frame:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Bees are kept in straw skeps and log hives and often killed with sulphur at harvest. Wax is in
+      heavy demand for church candles.
+  coffee_tea_cacao:
+    knowledge: 2
+    use: partial
+    producibility: hard
+    acceptance: high
+    note: Coffee is known from Ottoman embassies and Armenian merchants. No public coffee house exists until
+      Johannes Diodato's privilege of 17 January 1685; Kolschitzky as founder is a later legend.
+    local:
+    - Armenian merchants
+    - Johannes Diodato (Armenian merchant and imperial courier)
+    elsewhere:
+    - coffee houses in Venice, London, Oxford, Paris, Hamburg
+    - the Ottoman camp, where the captive Marsigli serves as coffee cook
+  hybrid_maize:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  semi_dwarf_wheat_rice:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+
+  # ---- Navigation, transport & exploration
+  world_geography:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Dutch atlases and Jesuit reports from China and America are in court and monastery libraries.
+      Australia's east, the north Pacific and the interiors are blank. Vienna has no overseas trade.
+    local:
+    - Hofbibliothek (Blaeu atlases)
+    - Jesuit college (mission letters)
+    elsewhere:
+    - 'Amsterdam: map publishers'
+    - 'Paris: Cassini''s world map at the Observatoire'
+  wind_systems_ocean_currents:
+    knowledge: 2
+    use: none
+    producibility: impossible
+    acceptance: medium
+    note: Known from voyage accounts only; irrelevant to a Danube city. Halley's chart of the trade winds
+      appears in 1686.
+    elsewhere:
+    - Dutch, English, Portuguese and Spanish pilots
+  magnetic_compass:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Used by surveyors and mine surveyors, and for setting sundials.
+    local:
+    - instrument makers and compass-sundial makers
+    - mine surveyors of the Lower Hungarian mining towns
+  magnetic_declination:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Surveyors correct for declination. That it drifts over the years is in print (Gellibrand, 1635)
+      but local values are rarely re-measured.
+    elsewhere:
+    - 'London and Paris: regular measurements'
+  dead_reckoning_log_line:
+    knowledge: 2
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: A seaman's method known from books. Danube boatmen steer by landmarks and by knowledge of the
+      channel.
+  latitude_astrolabe_quadrant:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Jesuit mathematicians and surveyors take the latitude with quadrants; gunners use a quadrant for
+      elevation.
+    local:
+    - Jesuit college, mathematics professors
+  reflecting_octant_sextant:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: Hooke showed a reflecting instrument in London in 1666; nothing came of it. Good flat mirrors
+      and a finely divided arc are the bottleneck.
+    elsewhere:
+    - 'London: Hooke''s proposal (1666)'
+  longitude_lunar_distances:
+    knowledge: 1
+    use: none
+    producibility: very-hard
+    acceptance: medium
+    note: Proposed in books since 1514. The Moon's motion is not known well enough. On land, longitude is
+      being found from Jupiter's moons.
+    elsewhere:
+    - 'Greenwich: Flamsteed''s observatory (1675)'
+    - 'Paris: Cassini''s tables of Jupiter''s moons (1668)'
+  longitude_chronometer:
+    knowledge: 1
+    use: none
+    producibility: very-hard
+    acceptance: medium
+    note: The idea is in print. Huygens' sea trials of pendulum and spring clocks failed in rough water.
+    elsewhere:
+    - 'The Hague and Paris: Huygens'
+    - 'London: Hooke, Tompion'
+  map_projection_charts:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: 'Mercator''s projection is known from atlases. Local work is land survey: Vischer''s map of Lower
+      Austria and the engineers'' plans of the fortress.'
+    local:
+    - Georg Matthäus Vischer (Lower Austria 1670, Topographia 1672)
+    - Daniel Suttinger (plans of Vienna)
+    elsewhere:
+    - 'Amsterdam: sea charts'
+  sounding_lead_pilotage:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Danube pilots sound with poles and know the shifting gravel bars and the Strudengau rapids by
+      heart; nothing is charted.
+    local:
+    - Danube boatmasters (Schiffmeister) and pilots (Nauführer)
+  tides_tide_tables:
+    knowledge: 2
+    use: none
+    producibility: impossible
+    acceptance: medium
+    note: Book knowledge. Galileo's and Descartes' explanations compete; none is right. No tide within many
+      days' travel.
+    elsewhere:
+    - 'English and Dutch ports: tide tables'
+  polynesian_wayfinding:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  ship_design_caravel_carrack:
+    knowledge: 2
+    use: none
+    producibility: very-hard
+    acceptance: medium
+    note: Sea-going ships are known from prints. Danube craft are flat-bottomed plank boats (Zillen, Plätten),
+      floated down and often broken up for timber; upstream they are towed by horse teams.
+    local:
+    - boatbuilders and Schiffmeister on the Danube arm (Rossau, Leopoldstadt)
+    elsewhere:
+    - Dutch, English, French and Venetian yards
+  chinese_junk_treasure_ships:
+    knowledge: 1
+    use: none
+    producibility: impossible
+    acceptance: medium
+    note: Junks appear in Jesuit books on China (Martini 1655, Kircher 1667). Zheng He's voyages are unknown
+      in Europe.
+  watertight_bulkheads:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: River boats are open and cheap, often used for one trip. Boatbuilders see no reason to divide
+      a hull.
+  copper_sheathing_shipworm:
+    knowledge: 1
+    use: none
+    producibility: medium
+    acceptance: low
+    note: No shipworm in fresh water. Copper comes from Neusohl in Upper Hungary and is a war material.
+    elsewhere:
+    - 'Sea powers: lead or sacrificial wood sheathing'
+  ship_provisioning_long_voyages:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: 'The local form of the problem is the siege: flour, salt meat and wine are stored. Scurvy and
+      dysentery are blamed on bad air and salt food.'
+    local:
+    - city provision office and imperial Proviantamt
+  steamship_screw_propeller:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: medium
+  lighthouse_buoys:
+    knowledge: 2
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Known from Italian and Dutch ports. The Danube channel is unmarked; boats do not travel at night.
+  diving_bell:
+    knowledge: 2
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Described in the Jesuit Schott's Technica curiosa (1664). No one in Vienna has built one; river
+      salvage uses hooks and divers.
+    elsewhere:
+    - 'Stockholm: guns raised from the Vasa by diving bell (1660s)'
+  canal_locks:
+    knowledge: 2
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: Pound locks are known from Italy, the Netherlands and France. The unregulated, braided Danube
+      and the lack of money prevent any project.
+    elsewhere:
+    - 'France: Canal du Midi (opened 1681)'
+    - 'Brandenburg: Friedrich-Wilhelm Canal (1668)'
+    - Lombardy and the Netherlands
+  paved_roads_macadam:
+    knowledge: 2
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: City streets are partly cobbled. Country roads are unmade tracks kept up by local labour service,
+      deep mud in rain; heavy guns and supplies go by river.
+  spoked_wheel_suspension_carriage:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Coaches hang on leather straps; steel springs are not yet used. The court and nobility fled in
+      such coaches on 7 July.
+    local:
+    - wheelwrights, coachbuilders and saddlers
+  stirrup_saddle:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+  arch_bridge_truss:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: high
+    note: The Danube arms are crossed by long timber pile bridges, rebuilt after every flood and ice run.
+      They are broken up as the Ottomans arrive. Armies cross on boat bridges.
+    local:
+    - Schlagbrücke to Leopoldstadt
+    - Tabor bridges over the main river
+  railway:
+    knowledge: 2
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Miners push small trucks (Hunte) on wooden plank ways underground. Nobody thinks of it for roads.
+    elsewhere:
+    - Lower Hungarian and Tyrolean mines
+    - 'Newcastle coalfield: horse-drawn wooden waggonways'
+  steam_locomotive:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: medium
+  bicycle:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: A wooden running machine could be built by a wheelwright. The streets and roads give it no use.
+  automobile:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: medium
+  hot_air_hydrogen_balloon:
+    knowledge: 1
+    use: none
+    producibility: hard
+    acceptance: low
+    note: The Jesuit Lana de Terzi printed a design for a ship lifted by evacuated copper globes (1670).
+      It cannot work. Nobody has tried hot air.
+    local:
+    - paper makers, silk and linen merchants
+  parachute:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Veranzio's Machinae novae (c. 1615) shows a man hanging under a framed sail. It is seen as a curiosity.
+  glider_aeroplane:
+    knowledge: 1
+    use: none
+    producibility: very-hard
+    acceptance: low
+    note: Flying is imagined as flapping wings. Borelli (1680) showed that human muscle is too weak for
+      it.
+  jet_engine:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: medium
+  rocket_spaceflight:
+    knowledge: 1
+    use: none
+    producibility: impossible
+    acceptance: low
+    note: Fireworkers know multi-stage powder rockets from Siemienowicz (1650). Travel to the Moon is satire
+      (Cyrano, Godwin).
+
+  # ---- Communication & information
+  writing_invention:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+  alphabet_writing:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Most burghers, craft masters and merchants read German in blackletter and Kurrent hand; Latin
+      is the language of learning. Country people mostly cannot read.
+  codex_book:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    local:
+    - bookbinders and booksellers
+    - Hofbibliothek
+    - monastery libraries
+  woodblock_printing:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Used for calendars, playing cards, devotional prints and book ornaments.
+  printing_press:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: A few privileged presses work under censorship; Johann van Ghelen, university printer since 1678,
+      has five. Most scholarly books come from Frankfurt, Nuremberg, Leipzig and the Netherlands.
+    local:
+    - Johann van Ghelen
+    - the Cosmerovius printing house (court printers)
+    - Leopold Voigt (university printer)
+    elsewhere:
+    - Frankfurt and Leipzig book fairs
+    - Amsterdam
+  lithography_engraving:
+    knowledge: 3
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Copper engraving and etching serve maps, siege plans, portraits and theses. Mezzotint (1642) is
+      known from prints. Lithography is unknown.
+    local:
+    - engravers working for the court and the printers
+    - Daniel Suttinger's siege plans
+    elsewhere:
+    - 'Augsburg and Nuremberg: the main print publishers'
+  postal_system:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: The Counts Paar hold the hereditary court post (since 1624), with fixed post days and public rates;
+      the Taxis run the Reich post. The siege cuts it off.
+    local:
+    - Hofpostamt of the Paar family
+    - post routes to Linz, Prague, Graz, Pressburg, Venice
+  newspapers_periodicals:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: A censored weekly German Ordinari-Zeitung has appeared since the 1620s; van Ghelen holds the privilege
+      (1678) for Latin and Italian papers. News is foreign and military, without comment.
+    local:
+    - Johann van Ghelen (Latin and Italian newspapers)
+    - Cosmerovius press (Ordinari Reichs-Zeitung)
+    elsewhere:
+    - 'Nuremberg, Frankfurt, Hamburg, Amsterdam: denser, freer newspapers'
+    - Wiennerisches Diarium only from 1703
+  scientific_journal:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Journals arrive by post and through booksellers months late. No learned journal is edited in Vienna;
+      physicians can publish in the Miscellanea curiosa.
+    elsewhere:
+    - 'London: Philosophical Transactions'
+    - 'Paris: Journal des sçavans'
+    - 'Leipzig: Acta Eruditorum (Otto Mencke, 1682)'
+  encyclopedia_reference_works:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: high
+    note: Latin compendia (Alsted 1630) and Moréri's French dictionary (1674) are in libraries. No German
+      alphabetical encyclopedia exists.
+    local:
+    - Hofbibliothek
+    - Jesuit college library
+  library_catalogue:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Lambeck (prefect 1663–1680) printed eight volumes of commentaries on the court library but no
+      complete catalogue. Shelf lists by size and subject are usual.
+    local:
+    - Hofbibliothek
+    elsewhere:
+    - 'Oxford: Bodleian printed catalogue (1674)'
+    - 'Wolfenbüttel: ducal library'
+  pencil_steel_pen:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Writing is done with goose quill and iron-gall ink. Wood-cased graphite pencils come from Nuremberg
+      and are used by engineers and artists. Metal pens are rare curiosities.
+    elsewhere:
+    - 'Nuremberg: pencil makers'
+    - 'Borrowdale, England: the graphite mine'
+  shorthand:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Scholars know of ancient Tironian notes. Chancery clerks use abbreviations only. No German system
+      exists.
+    elsewhere:
+    - 'England: printed shorthand systems (Shelton, Rich) in common use'
+  typewriter:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: medium
+  copying_duplicating:
+    knowledge: 1
+    use: none
+    producibility: medium
+    acceptance: high
+    note: Every copy of a dispatch or order is written out by clerks. The chanceries would welcome anything
+      faster.
+    local:
+    - Hofkanzlei, Hofkriegsrat and Hofkammer chanceries
+  braille_tactile_writing:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Lana de Terzi's Prodromo (1670) sketches a touch-readable code for the blind; it stayed on paper.
+      Blind people live by begging or music.
+  sign_languages:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Deaf people use home signs and are often held incapable in law. Bonet's Spanish manual alphabet
+      (1620) is known to few. No teacher works in Vienna.
+    elsewhere:
+    - 'Spain: Bonet''s method'
+    - 'England: Wallis and Holder teach deaf pupils'
+  vernacular_translation:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Sermons, ordinances, calendars and gunnery books are German; university teaching and science are
+      Latin; the court speaks Italian and Spanish. Luther's Bible is forbidden.
+    local:
+    - Abraham a Sancta Clara (German preacher, in Graz in 1683)
+  signal_beacons_flag_codes:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Chains of warning fires (Kreidfeuer) on hills and castles announce Turkish raids; bells sound
+      the alarm. From 27 August rockets from St Stephen's tower signal to the relief army.
+    local:
+    - St Stephen's tower (observation post and rocket signals)
+    - Kreidfeuer stations in Lower Austria and Styria
+  optical_telegraph:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: high
+    note: Signals carry one pre-agreed meaning. Spelling out messages with telescope and code is unknown;
+      Hooke lectures on it in London in 1684.
+    local:
+    - spectacle and telescope makers
+    - St Stephen's tower, Kahlenberg, Bisamberg in line of sight
+    elsewhere:
+    - 'London: Robert Hooke (1684)'
+  standard_time_zones:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Each town keeps its own time by sundial and tower clock. Nothing moves fast enough for the difference
+      to matter.
+
+  # ---- Institutions, law & governance
+  written_law_code:
+    knowledge: 4
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Criminal law is codified in the Ferdinandea (1656). Civil law is custom, Roman law and separate
+      ordinances; drafts of a Lower Austrian Landrecht were never enacted.
+    local:
+    - Constitutio Criminalis Ferdinandea
+    - Tractatus de juribus incorporalibus (1679)
+    - police ordinances
+  rule_of_law:
+    knowledge: 2
+    use: partial
+    producibility: hard
+    acceptance: low
+    note: The emperor respects the estates' privileges in practice, but he is the source of law and can
+      dispense from it. In the siege Starhemberg rules by martial law.
+    elsewhere:
+    - 'England: Parliament against Stuart prerogative'
+    - Dutch Republic
+  independent_judiciary_judicial_review:
+    knowledge: 1
+    use: none
+    producibility: hard
+    acceptance: low
+    note: 'Courts are the ruler''s: city court, Lower Austrian government, Reichshofrat. Judges are removable
+      and appeals end with the emperor.'
+    local:
+    - Reichshofrat (imperial aulic council, sits in Vienna)
+    - Stadt- und Landgericht
+  habeas_corpus_fair_trial:
+    knowledge: 1
+    use: none
+    producibility: medium
+    acceptance: low
+    note: Trials are inquisitorial, secret and written; the accused has little defence and confession may
+      be forced. Nobles and university members have their own courts.
+    elsewhere:
+    - 'England: Habeas Corpus Act (1679), jury trial'
+  representative_government:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: low
+    note: The Lower Austrian estates (prelates, lords, knights, towns) meet in the Landhaus and vote the
+      taxes the court demands; their real power was broken after 1620. Peasants are not represented.
+    local:
+    - Landhaus in the Herrengasse
+    - the estates' Landmarschall and Verordnete
+    - Vienna's inner and outer council
+    elsewhere:
+    - 'England: Parliament'
+    - 'Poland: Sejm'
+    - 'Regensburg: permanent Reichstag since 1663'
+  sortition:
+    knowledge: 2
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Known from Venice and from ancient authors. Office here follows birth, co-option and the ruler's
+      confirmation.
+    elsewhere:
+    - 'Venice: lot and ballot in electing the doge'
+  citizen_assembly:
+    knowledge: 2
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Known from Athens in school texts and from Swiss Landsgemeinden. In Vienna it would be called
+      sedition.
+    elsewhere:
+    - Swiss rural cantons
+  secret_ballot:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Monasteries elect abbots and the university its officers by written or secret vote under canon
+      and statute law. City offices are filled under the government's supervision.
+    local:
+    - Schottenstift and other chapters
+    - university nations and faculties
+  peaceful_transfer_of_power:
+    knowledge: 2
+    use: partial
+    producibility: hard
+    acceptance: low
+    note: Succession is hereditary in the lands and elective in the Empire (Leopold was elected in 1658)
+      and in Poland. Opposition to the ruler is treason.
+  written_constitution:
+    knowledge: 2
+    use: partial
+    producibility: hard
+    acceptance: low
+    note: The Empire has fundamental laws (Golden Bull, electoral capitulations, Westphalia); Bohemia has
+      the Renewed Land Ordinance of 1627. Each land holds its own privileges.
+  federalism_subsidiarity:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: The monarchy is a union of lands under one ruler, each with its estates and law. The Empire is
+      a federation of princes; its Circles send troops to relieve Vienna.
+    elsewhere:
+    - Swiss Confederation
+    - United Provinces
+  international_law_sovereignty:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Resident ambassadors, treaties and Grotius are standard. The Peace of Vasvár (1664) with the Porte
+      runs twenty years; Caprara's embassy to renew it failed in 1682.
+    local:
+    - papal nuncio Francesco Buonvisi
+    - Reichshofkanzlei and Hofkanzlei
+    - Georg Christoph von Kunitz, imperial resident, carried along in the Ottoman camp
+  property_rights_land_registry:
+    knowledge: 4
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: City houses and their burdens are entered in land books kept since the 14th century. Noble estates
+      are listed for tax in the estates' Gültbuch. Peasants hold land from lords.
+    local:
+    - Vienna Grundbuch
+    - Lower Austrian Gültbuch (Landhaus)
+  commercial_law_contract_enforcement:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: high
+    note: Contracts and bills are enforced by city and government courts, slowly. No merchant court or bill-of-exchange
+      code exists; privileged wholesalers have their own status.
+    local:
+    - Niederlagsverwandte
+    - public notaries
+    elsewhere:
+    - 'Leipzig, Frankfurt, Bolzano: fair courts and exchange ordinances'
+  patents:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: The emperor grants individual privileges for books, manufactures and inventions as favours, often
+      to courtiers. No general rule rewards the first inventor.
+    elsewhere:
+    - Venice (1474)
+    - 'England: Statute of Monopolies (1624)'
+  copyright:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Imperial printing privileges protect the printer for some years, not the author. Reprinting across
+      borders is normal.
+  standard_weights_measures:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Vienna has its own ell, fathom (Klafter), Metzen and Eimer, checked by the city; two iron ells
+      hang at St Stephen's. Every land and many towns differ.
+    local:
+    - iron ells at St Stephen's main door
+    - city weighing house
+  census_vital_registration:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Parishes keep baptism, marriage and burial books. City coroners record every death with a cause
+      (Totenbeschauprotokolle, kept since 1648). Nobody has counted the living.
+    local:
+    - Totenbeschauprotokolle
+    - parish registers of St Stephen's, St Michael's, the Schotten
+    elsewhere:
+    - 'London: Bills of Mortality, analysed by Graunt (1662)'
+  public_accounts_audit:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: low
+    note: The Hofkammer has a court audit office but no budget and no overview of debts. Its president Sinzendorf
+      was convicted of embezzlement in 1680. The estates audit their own treasury.
+    local:
+    - Hofkammer and Hofbuchhalterei
+    - estates' treasury in the Landhaus
+  merit_civil_service:
+    knowledge: 1
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Offices go by birth, patronage, purchase of expectancies and conversion; a law degree helps. Jesuits
+      report China's examinations.
+  universal_schooling:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Parish and German schools teach reading, catechism and sums for a fee; the Jesuits run free Latin
+      schools for boys. Nothing is compulsory. Country children mostly get none.
+    local:
+    - Jesuit grammar schools
+    - city school at St Stephen's
+    - Ursuline convent school for girls (nuns in Vienna since 1660, school house from 1666)
+    elsewhere:
+    - 'Gotha: compulsory schooling under the Schulmethodus (1642)'
+  university:
+    knowledge: 4
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Founded 1365. Since 1623 philosophy and theology belong to the Jesuits and the university is joined
+      to their college. Law and medicine are secular. Students form armed companies.
+    local:
+    - University of Vienna and Jesuit college (Universitätsviertel)
+    - Paul de Sorbait, professor of medicine, rector 1668
+    elsewhere:
+    - 'Leiden, Padua, Altdorf, Jena: newer science and medicine'
+  scientific_academy:
+    knowledge: 2
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: None in Vienna. The emperor is patron of the physicians' Academia Naturae Curiosorum, which has
+      no seat. Founding one needs court favour and must not offend the Jesuits.
+    local:
+    - Wilhelm von Schröder FRS
+    - Leopold I, a learned patron and composer
+    elsewhere:
+    - 'London: Royal Society'
+    - 'Paris: Académie des sciences'
+    - 'Hanover: Leibniz, who later lobbies for a Vienna academy'
+  industrial_research_lab:
+    knowledge: 1
+    use: partial
+    producibility: hard
+    acceptance: medium
+    note: The Kunst- und Werkhaus on the Tabor (1676) had a chemical laboratory and workshops for majolica,
+      silk and wool. It lies outside the walls and burns in 1683.
+    local:
+    - Kunst- und Werkhaus am Tabor
+    - court apothecary and court alchemists
+  public_library_museum:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: The court library admits scholars by favour; the imperial treasury and art chamber are shown to
+      visitors of rank. Nothing is open to the public.
+    local:
+    - Hofbibliothek
+    - imperial Schatzkammer and Kunstkammer in the Hofburg
+    elsewhere:
+    - 'Oxford: Ashmolean Museum opens in 1683'
+    - 'Milan: Ambrosiana'
+    - 'Oxford: Bodleian'
+  free_press:
+    knowledge: 1
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Pre-censorship lies with the university (in effect the Jesuits) and the bishop; printers hold
+      revocable privileges. Uncensored print is smuggled from the Reich cities and Holland.
+    elsewhere:
+    - Dutch Republic
+    - England (licensing lapses 1679–1685 and ends 1695)
+  abolition_of_slavery:
+    knowledge: 1
+    use: none
+    producibility: hard
+    acceptance: low
+    note: On the Turkish frontier both sides enslave and ransom captives. In 1683 Tatar raiders carry off
+      tens of thousands from Lower Austria. Peasants are hereditary subjects owing Robot.
+    local:
+    - Trinitarians (ransoming of captives; in Vienna only from 1689)
+    - Leopold's Robot patent for Bohemia (1680)
+  women_rights_suffrage:
+    knowledge: 1
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Wives are under their husband's guardianship. Widows may continue a workshop or printing house,
+      noblewomen manage estates, and convents give some women learning.
+  charitable_endowment_waqf:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Monasteries, the Bürgerspital, masses, student stipends and dowry funds live from perpetual endowments.
+      Much land is in the dead hand of the Church.
+    local:
+    - Bürgerspital
+    - Schottenstift
+    - Hofspital
+    - student bursaries of the university
+  guilds_apprenticeship:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Guilds control mastership and numbers. Court-exempt craftsmen (Hofbefreite) and unlicensed workers
+      (Störer) compete with them. Guild members serve in the citizen companies on the walls.
+    local:
+    - Vienna craft guilds
+    - Hofbefreite craftsmen
+    - privileged wholesalers (Niederleger)
+  public_health_board:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: The plague of 1679 was denied for months. Plague ordinances, a magister sanitatis, pest house
+      and coroners exist; action starts only when an epidemic is declared.
+    local:
+    - Paul de Sorbait (plague inquisitor 1679, Pest-Ordnung)
+    - medical faculty
+    - Lazarett pest house (outside the walls)
+    elsewhere:
+    - 'Venice, Milan, Florence: permanent health magistracies'
+  fire_brigade_police_building_codes:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Fire ordinances oblige householders and guilds to bring buckets, ladders and hooks; tower watchmen
+      give the alarm. The Stadtguardia keeps the gates and the Rumorwache (1646) the streets.
+    local:
+    - Stadtguardia (main guard on Petersplatz)
+    - Rumorwache
+    - watchman on St Stephen's tower
+    - Unterkammeramt (city works office)
+    elsewhere:
+    - 'Amsterdam: Jan van der Heyden''s fire hoses (1672)'
+  social_insurance:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Help comes from the Bürgerspital, confraternities, guild chests and alms; begging is licensed.
+      During the siege Bishop Kollonitsch organises care for the wounded, refugees and orphans.
+    local:
+    - Bürgerspital
+    - Bishop Leopold Karl von Kollonitsch
+    - guild and confraternity chests
+  trade_unions_collective_bargaining:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: low
+    note: Journeymen have brotherhoods with hostels and sick chests, and use boycotts and walk-outs. Authorities
+      treat these as conspiracy and punish them.
+    local:
+    - journeymen's hostels (Herbergen)
+
+  # ---- Economy & finance
+  coinage:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Accounts run in Gulden of 60 Kreuzer; Reichstaler and ducats are the big coins. Small silver has
+      been debased under Leopold. Church silver is seized for coin in the siege.
+    local:
+    - Vienna mint
+    - assayers and goldsmiths
+    - silver and gold from Kremnitz and Schemnitz (Lower Hungary)
+  double_entry:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Wholesale merchants keep Italian double-entry books. The Hofkammer and the estates use charge-and-discharge
+      accounts, which hide the total debt.
+    local:
+    - Niederlagsverwandte
+    - Hofbuchhalterei
+  interest_loans_collateral:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: medium
+    note: Interest of 5 to 6 percent is lawful and usual; the crown pays far more through discounts. Since
+      the 1670 expulsion small pawn credit is scarce.
+    local:
+    - Samuel Oppenheimer
+    - monasteries and endowments as lenders
+    - estates' credit
+  banking_credit:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: 'No public bank: the Banco del Giro comes in 1703 and the Wiener Stadtbank in 1706. Wholesalers
+      and court factors move money by bills on Nuremberg, Augsburg, Venice and Amsterdam.'
+    local:
+    - Samuel Oppenheimer (court factor)
+    - Niederlagsverwandte
+    elsewhere:
+    - Amsterdam Wisselbank (1609)
+    - Hamburg Bank (1619)
+    - Venice Banco del Giro
+    - Nuremberg Banco Publico (1621)
+  paper_money:
+    knowledge: 1
+    use: none
+    producibility: medium
+    acceptance: low
+    note: The Stockholm notes of 1661 collapsed within years. After the coin debasement of the 1620s people
+      trust only metal. The Hofkammer pays suppliers in assignments on future revenue.
+    elsewhere:
+    - 'Stockholm: Palmstruch''s notes (1661–1664)'
+    - 'London: goldsmiths'' notes'
+  quantity_theory_inflation:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: The Kipper und Wipper debasement of the 1620s is remembered as fraud by coiners. Bodin's link
+      between American silver and prices is known to jurists.
+  partnership_commenda:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Merchant houses, mining shares (Kuxe) and army supply contracts are run as partnerships.
+  joint_stock_company:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: low
+    note: The privileged Oriental Company (1667) trades ironware and cloth down the Danube to the Ottoman
+      lands, with court shareholders; it does poorly and the war ends it.
+    local:
+    - Orientalische Handelskompanie (1667)
+    elsewhere:
+    - 'Amsterdam: VOC (1602)'
+    - 'London: East India Company'
+  insurance:
+    knowledge: 2
+    use: none
+    producibility: medium
+    acceptance: low
+    note: Marine insurance is known from Venice and Amsterdam. In Vienna fire victims get alms and tax relief.
+      Insuring lives would look like wagering on death.
+    elsewhere:
+    - 'London: Barbon''s Fire Office (1681)'
+    - 'Hamburg: fire fund (1676)'
+    - 'Amsterdam: marine insurance'
+  life_tables_annuities:
+    knowledge: 1
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Life annuities are sold at flat rates regardless of age. The Vienna death registers since 1648
+      would allow a table; nobody has used them.
+    local:
+    - Totenbeschauprotokolle
+    elsewhere:
+    - 'London: Graunt (1662)'
+    - 'The Hague: Johan de Witt''s annuity valuation (1671)'
+    - 'Hanover: Leibniz''s essays on annuities (c. 1680–83)'
+  public_debt_bonds:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: low
+    note: The crown borrows by pledging tolls, mines and domains, through advances from court factors and
+      loans guaranteed by the estates. Payments are late; its paper sells at steep discounts.
+    local:
+    - Hofkammer
+    - Lower Austrian estates' obligations
+    - Samuel Oppenheimer
+    elsewhere:
+    - 'Holland: funded provincial debt at about 4 percent'
+    - Genoa, Venice
+  stock_exchange:
+    knowledge: 1
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Merchants know the Amsterdam bourse from correspondents. Vienna has nothing to trade in one; its
+      exchange opens in 1771.
+    elsewhere:
+    - 'Amsterdam: share trading in VOC stock, with futures and options'
+  central_bank:
+    knowledge: 1
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Public deposit banks abroad are known to cameralists. A bank under the Hofkammer would not be
+      trusted; the Stadtbank of 1706 is placed under the city for that reason.
+    elsewhere:
+    - 'Stockholm: Riksens Ständers Bank (1668)'
+    - Amsterdam Wisselbank
+  division_of_labour:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Trades are finely divided by guild rules. Dividing one product into many simple tasks under one
+      roof is the manufactory idea of Becher and Schröder; guilds oppose it.
+    local:
+    - Kunst- und Werkhaus am Tabor
+    elsewhere:
+    - 'Holland and England: shipyards, cloth works'
+    - 'France: Colbert''s royal manufactures'
+  comparative_advantage_free_trade:
+    knowledge: 1
+    use: wrong
+    producibility: easy
+    acceptance: low
+    note: Policy aims at import bans, home manufactures and keeping coin in the land. Hörnigk states it
+      in nine rules in 1684. Tolls divide every province from the next.
+    local:
+    - Philipp Wilhelm von Hörnigk
+    - Wilhelm von Schröder
+  price_mechanism_supply_demand:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: low
+    note: Bread, meat and wine have official prices; dearness is blamed on hoarders. Siege prices are fixed
+      on 1 August, the order is repeated almost daily, and a black market grows.
+    local:
+    - city market office
+    - bakers' and butchers' guilds
+  ever_normal_granary:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: high
+    note: The city and the army keep grain and flour magazines, filled in haste before the siege. Stocks
+      last the two months; fresh meat and vegetables run out.
+    local:
+    - imperial Proviantamt
+    - city grain stores
+    - Bürgerspital stores and monastery cellars
+  progressive_income_tax:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: low
+    note: Taxes are the land Kontribution voted by the estates and passed on to peasants, excises on drink
+      and meat, and occasional graded poll and wealth levies for Turkish wars.
+    elsewhere:
+    - 'Holland: excises and property levies'
+  cooperatives_savings_banks:
+    knowledge: 1
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Miners' and guild chests pool dues for sickness and burial. No place takes small savings at interest;
+      a public pawn office opens in 1707.
+    elsewhere:
+    - 'Italy: Monti di Pietà'
+  economic_growth_productivity:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Cameralists equate strength with population, employment and coin kept at home. Becher called consumption
+      the soul of trade. Wealth through cheaper production is not their idea.
+    local:
+    - Wilhelm von Schröder
+    - Philipp Wilhelm von Hörnigk
+    elsewhere:
+    - 'London: William Petty, John Locke'
+  national_accounts_gdp:
+    knowledge: 1
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: From 1673 Becher and Hörnigk compiled trade statistics of the Austrian and Bohemian lands. Petty's
+      political arithmetic circulates in manuscript in England.
+    local:
+    - Philipp Wilhelm von Hörnigk
+    - toll and excise registers of the Hofkammer
+    elsewhere:
+    - 'London and Dublin: William Petty'
+  aggregate_demand_countercyclical_policy:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Cameralists condemn hoarding and praise circulation of money, but the treasury is empty and in
+      arrears. Spending is war spending.
+
+  # ---- Warfare, security & deterrence
+  close_order_infantry:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Imperial foot regiments are drilled in the Dutch and Swedish manner. Janissaries fight in looser
+      order with great individual skill, and are formidable in trenches and breaches.
+  cavalry_chariot:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Imperial cuirassiers, dragoons and Croats face Ottoman sipahis and Tatar light horse, who devastate
+      Lower Austria. The Polish winged hussars charge with lances on 12 September.
+    local:
+    - Duke Charles of Lorraine's cavalry north of the Danube
+  crossbow_longbow:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: low
+    note: European armies have given up bows; crossbows survive in shooting clubs. Tatars and Ottoman horsemen
+      still use the composite bow, and arrows fall in the city.
+  torsion_artillery_trebuchet:
+    knowledge: 2
+    use: none
+    producibility: medium
+    acceptance: low
+    note: Known from Vegetius and Lipsius as antiquities. Mortars throwing bombs and stones do this work
+      on both sides.
+  oared_galley_ram:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: low
+    note: On the Danube both sides use armed oared boats (Tschaiken). The Ottomans control the river arms
+      at Vienna and bridge them. Galleys are Venice's and the Sultan's business.
+    local:
+    - Tschaikisten boatmen of Komorn and Raab
+    elsewhere:
+    - 'Venice: Arsenal and galley fleet'
+  incendiaries_greek_fire:
+    knowledge: 3
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Fireworkers make pitch wreaths, fire-balls, storm barrels and hand grenades to defend ditch and
+      breach. Ottoman bombs and fire-arrows threaten roofs. 'Greek fire' is a legend.
+    local:
+    - arsenal fireworkers (Feuerwerker)
+    - pitch, sulphur and saltpetre stocks
+  field_fortification:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Ottoman sappers dig covered approach trenches faster than any western army. Kara Mustafa leaves
+      his camp without lines against a relief army, which decides the battle of 12 September.
+  gunpowder:
+    knowledge: 4
+    use: correct
+    producibility: medium
+    acceptance: high
+    note: The garrison fights on stored powder; a fire at the Schottenstift
+      on 14 July nearly reaches the magazine. Saltpetre is the limit.
+    local:
+    - imperial arsenal near the Schottenstift
+    - saltpetre boilers
+    - apothecaries (sulphur)
+  cannon_artillery:
+    knowledge: 4
+    use: correct
+    producibility: medium
+    acceptance: high
+    note: The walls carry bronze and iron pieces from the imperial and civic arsenals, 130 to 300 by different
+      counts. The Ottomans bring mostly light guns and rely on mines.
+    local:
+    - Kaiserliches Zeughaus
+    - Bürgerliches Zeughaus Am Hof
+    - bell and gun founders
+  ballistics_gunnery:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Gunners lay by quadrant, rules of thumb and trial shots. Galileo's parabola is in books; no one
+      corrects for air. Mortar fire with fused bombs is the specialists' art.
+    local:
+    - Büchsenmeister and Feuerwerker of the arsenal
+    - Michael Mieth (imperial artillery officer, Artilleriae recentior praxis, 1683)
+    elsewhere:
+    - 'Paris: Blondel, L''art de jetter les bombes (1683)'
+    - 'England: Robert Anderson (1674)'
+  handguns_muskets:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: The matchlock musket is the standard arm; flintlocks are spreading with dragoons, grenadiers and
+      hunters. Janissary muskets are long, heavy and accurate.
+    local:
+    - gunsmiths of Vienna and Wiener Neustadt
+    - civic arsenal Am Hof
+    elsewhere:
+    - 'Suhl, Ferlach, Brescia: gun-making centres'
+  pike_and_shot_drill:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Imperial battalions mix pikes with a growing majority of muskets and fire by ranks, following
+      Montecuccoli. Against Turkish horse they carry portable spiked barriers.
+    local:
+    - Montecuccoli's regulations and writings (he died in 1680)
+  socket_bayonet:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Plug bayonets pushed into the muzzle are known from French troops; they stop the musket firing.
+      A blade on a sleeve round the barrel is unknown here. Pikes remain.
+    local:
+    - Vienna cutlers and gunsmiths
+    elsewhere:
+    - 'France: plug bayonets issued since 1671; Vauban''s socket design adopted 1688–89'
+  bastion_fortification:
+    knowledge: 4
+    use: partial
+    producibility: hard
+    acceptance: high
+    note: 'Bastions were built from the 1540s after the siege of 1529; ravelins were finished by 1672. By
+      1682 they were neglected: weak counterscarp, no countermines at the Burg bastion.'
+    local:
+    - Georg Rimpler (chief engineer since 1682)
+    - Daniel Suttinger
+    - Burgbastei, Löwelbastei and the Burg ravelin
+    - Count Ernst Rüdiger von Starhemberg
+    elsewhere:
+    - 'France: Vauban''s fortresses (Lille, Strasbourg from 1681)'
+    - 'Dutch Republic: Menno van Coehoorn'
+  siegecraft_mining:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: high
+    note: Ottoman miners, practised at Candia (1648–1669), are the best in Europe. The city has few; Rimpler
+      recruits some from Tyrol, the Netherlands and Lorraine. Listeners watch water tubs for ripples.
+    local:
+    - Georg Rimpler (wounded 25 July, dies 2–3 August)
+    - cellars along the Löwelbastei as listening posts
+    - miners recruited from Tyrol and Lorraine
+    elsewhere:
+    - 'France: Vauban''s parallels (Maastricht 1673)'
+    - Ottoman lagımcı miner corps
+  naval_gunnery_line_of_battle:
+    knowledge: 2
+    use: none
+    producibility: impossible
+    acceptance: low
+    note: Read about in news of the Anglo-Dutch wars. The Habsburg lands have no sea fleet.
+    elsewhere:
+    - 'England, Dutch Republic, France: battle fleets'
+  war_rockets:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Fireworkers make rockets for court festivals and signals; Siemienowicz's artillery book (1650,
+      German 1676) is their manual. As a weapon they are thought too inaccurate.
+    local:
+    - arsenal Feuerwerker
+    - signal rockets from St Stephen's tower
+  standing_army_logistics:
+    knowledge: 3
+    use: partial
+    producibility: hard
+    acceptance: medium
+    note: The emperor has kept permanent regiments since 1649, run by the Hofkriegsrat. Pay is months in
+      arrears; supply depends on contractors and on what the estates vote.
+    local:
+    - Hofkriegsrat (president Margrave Hermann of Baden)
+    - Generalkriegskommissariat
+    - Samuel Oppenheimer (army contractor)
+    elsewhere:
+    - 'France: Louvois'' magazines and intendants'
+  mercenaries_citizen_militia:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: 'About 11,000 regular troops enter on 10–13 July. About 5,000 citizens and volunteers join them:
+      eight burgher companies under the mayor, students, court servants, merchants and guild companies.'
+    local:
+    - Mayor Johann Andreas von Liebenberg (colonel of the citizen militia)
+    - university companies (Paul de Sorbait)
+    - Stadtguardia
+  conscription_mass_army:
+    knowledge: 2
+    use: partial
+    producibility: hard
+    acceptance: low
+    note: The estates can call up every thirtieth or tenth man for local defence, poorly armed. Regiments
+      recruit by bounty. On 26 August every man in the city is called up.
+  military_camp_hygiene:
+    knowledge: 2
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: '''Red dysentery'' spreads from early August; Starhemberg is ill 11–20 August. Rubbish, carcasses
+      and shallow graves are blamed for bad air; wells and latrines are not suspected.'
+    local:
+    - Bürgerspital and convent hospitals
+    - Bishop Kollonitsch
+    - Paul de Sorbait
+  military_engineering_roads_bridges:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: high
+    note: The emperor has no engineer corps; engineers are hired foreigners, labour is pressed peasants
+      and townspeople. The relief army crosses the Danube on boat bridges at Tulln.
+    local:
+    - Georg Rimpler
+    - Daniel Suttinger
+    - city carpenters and masons
+    elsewhere:
+    - 'France: Vauban''s engineers'
+  strategy_theory:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Montecuccoli, victor of St Gotthard (1664), wrote the leading treatises on war against the Turks;
+      they circulate in manuscript among officers. Vegetius and Lipsius are school authors.
+    local:
+    - Charles of Lorraine
+    - Hofkriegsrat
+  general_staff_war_college:
+    knowledge: 1
+    use: none
+    producibility: hard
+    acceptance: low
+    note: The Hofkriegsrat (1556) is a slow administrative council. Command goes by rank and birth; plans
+      are made in councils of war, as at Stetteldorf on 4 September.
+  wargaming_operations_research:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Officers play chess; Weickhmann's enlarged 'king's game' (Ulm, 1664) is a curiosity. Counting
+      shots, losses or mine results to choose tactics is not done.
+  military_intelligence_codebreaking:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Couriers in Turkish dress cross the lines (Kolschitzky, 13–17 August; Michaelowitz). Dispatches
+      are ciphered with simple substitution and code lists. Both sides question prisoners and deserters.
+    local:
+    - Georg Franz Kolschitzky
+    - Georg Michaelowitz
+    - Hofkriegsrat chancery ciphers
+    - resident Kunitz's secret letters from the Ottoman camp
+    elsewhere:
+    - 'England: John Wallis breaks ciphers'
+    - 'France: the Rossignols'' Great Cipher'
+  rifling_minie_breechloader:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Hunters and marksmen use rifled guns loaded with patched balls, accurate but slow. They are used
+      for sharpshooting from the walls, not as an army weapon.
+    local:
+    - court huntsmen and foresters
+    - Vienna gunsmiths
+    elsewhere:
+    - 'Tyrol and Salzburg: marksmen''s companies'
+  smokeless_powder_high_explosive_shell:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: high
+  machine_gun:
+    knowledge: 1
+    use: none
+    producibility: impossible
+    acceptance: medium
+    note: Arsenals hold 'organ guns' with many barrels fired in one salvo, slow to reload and little valued.
+    local:
+    - civic arsenal Am Hof
+  ironclad_warship:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  submarine_torpedo:
+    knowledge: 1
+    use: none
+    producibility: very-hard
+    acceptance: low
+    note: Drebbel's rowed underwater boat on the Thames (c. 1620) is known from books such as Schott's.
+      Floating powder barges against bridges are known practice.
+  tank_combined_arms:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+    note: Hussite war wagons are remembered from history. No engine exists.
+  military_aviation:
+    knowledge: 1
+    use: none
+    producibility: impossible
+    acceptance: low
+    note: Lana de Terzi (1670) warned that an airship could drop fire on cities and fleets. Observation
+      is done from St Stephen's tower.
+  chemical_weapons:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: low
+    note: Fireworkers' books give stink-pots and smoke-balls with sulphur and arsenic, used to clear mine
+      galleries. France and the Empire agreed in 1675 at Strasbourg not to use poisoned bullets.
+    local:
+    - arsenal Feuerwerker
+    - apothecaries (arsenic, sulphur)
+  nuclear_weapons:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  security_dilemma_arms_race:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: 'Felt but not named: every fortress built in Hungary is read by the other side as preparation
+      for attack. Vienna sees the French and the Turkish threat as one encirclement.'
+  deterrence:
+    knowledge: 2
+    use: partial
+    producibility: hard
+    acceptance: medium
+    note: The frontier fortresses (Raab, Komorn) and the Vasvár peace were meant to hold the Porte. In 1683
+      the Ottomans bypass Raab and march straight on Vienna.
+  balance_of_power:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Imperial diplomacy argues that Europe must unite against French 'universal monarchy', as Lisola
+      wrote in 1667. Louis XIV counts on the Turks to hold the emperor in the east.
+    local:
+    - Hofkanzlei
+    - Spanish and papal envoys at court
+    elsewhere:
+    - 'The Hague: William of Orange'
+    - Versailles
+  collective_security_alliances:
+    knowledge: 3
+    use: correct
+    producibility: medium
+    acceptance: high
+    note: 'Leopold I and Jan III Sobieski ally on 31 March 1683 with papal backing: each aids the other
+      if Vienna or Kraków is attacked. Bavaria, Saxony and Reich Circles join.'
+    local:
+    - nuncio Francesco Buonvisi
+    - Capuchin Marco d'Aviano (papal legate with the army)
+    elsewhere:
+    - 'Linz, 5 March 1684: Holy League of the emperor, Poland and Venice'
+  arms_control:
+    knowledge: 1
+    use: partial
+    producibility: medium
+    acceptance: low
+    note: Treaties sometimes forbid building or require razing named fortresses, as Vasvár did on the Hungarian
+      border. Both sides broke such clauses.
+    elsewhere:
+    - Strasbourg agreement on poisoned bullets (1675)
+  laws_of_war:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: low
+    note: 'Among Christian armies, custom and Grotius govern quarter, capitulation and ransom. In this war
+      neither side keeps them: Perchtoldsdorf''s people are killed after surrendering; captives are enslaved.'
+
+people:
+- name: Paul de Sorbait
+  role: professor of anatomy and medical practice at the university, physician to the Empress Dowager
+    Eleonore, Generalinquisitor in plague matters in 1679
+  knows: Galenic and newer medicine, plague management, anatomy (doctorate Padua 1652); member of the
+    Leopoldina since 1672
+  note: In Vienna. Aged 59, stays through the siege as Oberstwachtmeister of the academic legion and
+    later commands its 3rd company. Dies 1691.
+- name: Leopold Karl von Kollonitsch
+  role: Bishop of Wiener Neustadt since 1670, former Knight of Malta who fought at Candia (1651) and the
+    Dardanelles (1655)
+  knows: siege experience, raising money, organising care
+  note: Comes from Wiener Neustadt into the besieged city, pays the troops, sets up emergency hospitals in
+    monasteries, and after the relief cares for about 500 orphans at Mailberg.
+- name: Abraham a Sancta Clara
+  role: Discalced Augustinian, imperial court preacher since 1677, author of Mercks Wienn (1680) on the
+    plague
+  knows: preaching, the plague year 1679 from inside Vienna, popular opinion
+  note: Not in Vienna. Transferred to Graz in 1682 and preaches there in 1683; publishes Auff, auff, ihr
+    Christen against the Turks that year.
+- name: Johann Andreas von Liebenberg
+  role: Mayor of Vienna since 1679
+  knows: city administration, the citizen companies, provisioning
+  note: In Vienna; directs the citizens' fortification work and militia. Falls ill in August, with Daniel
+    Fockhy as his deputy, and dies of dysentery on 9 September 1683.
+- name: Antonie van Leeuwenhoek
+  role: draper and municipal official at Delft, Fellow of the Royal Society since 1680
+  knows: single-lens microscopes; animalcules in water (1674–1676), spermatozoa (1677), bacteria from
+    teeth (letter of 17 September 1683)
+  note: In Delft. Reachable only by letter, writes Dutch only, and shows visitors his lesser lenses.
+- name: Francesco Redi
+  role: chief physician to the Medici court in Florence
+  knows: experiments against spontaneous generation (1668), parasites (book of 1684), viper venom
+  note: In Florence; reachable by letter through Italian and Jesuit channels.
+- name: Matthäus Gottfried Purmann
+  role: surgeon at Halberstadt, plague surgeon there in 1680
+  knows: field surgery (Der rechte und wahrhafftige Feldscher, 1680), plague buboes, failed lamb's-blood
+    transfusions
+  note: At Halberstadt in 1683; moves to Breslau in 1685.
+- name: Johann Kunckel
+  role: chymist and glassmaker to the Elector of Brandenburg at Potsdam
+  knows: phosphorus, gold ruby glass, glass recipes (Ars Vitraria Experimentalis, 1679)
+  note: At Potsdam and Berlin; reachable by letter or a journey of several weeks; guards his recipes.
+- name: Wolf Helmhard von Hohberg
+  role: Lower Austrian nobleman and writer on estate farming, Protestant exile at Regensburg
+  knows: Austrian agriculture, vineyards, ponds and household economy (Georgica curiosa, 1682)
+  note: Lives at Regensburg, up the Danube, since 1664; dies there in 1688.
+- name: Luigi Ferdinando Marsigli
+  role: Bolognese nobleman, engineer officer in imperial service, naturalist
+  knows: Ottoman army and customs, fortification, coffee, the currents of the Bosporus (book of 1681)
+  note: Wounded and captured on the Raab in early July 1683, sold to a pasha and made to brew coffee in
+    the Ottoman camp before Vienna; freed in 1684.
+- name: Gottfried Wilhelm Leibniz
+  role: court councillor and librarian of the Duke of Brunswick-Lüneburg at Hanover
+  knows: calculus (unpublished until 1684), binary arithmetic, calculating machine, logic, mining machinery
+  note: In 1683 in Hanover and the Harz mines, building windmill pumps. Sought the post of imperial librarian
+    in Vienna after Lambeck's death (1680). Reachable by letter.
+- name: Otto von Guericke
+  role: former mayor of Magdeburg, inventor of the air pump
+  knows: air pump, vacuum and air-pressure experiments, sulphur globe, weather glass
+  note: Aged 80, living with his son in Hamburg since 1681; dies there in May 1686. Showed his experiments
+    at the Regensburg Diet in 1654.
+- name: Christiaan Huygens
+  role: mathematician and instrument maker
+  knows: pendulum clock, balance spring, lens grinding, mechanics, probability, wave theory of light
+  note: Back in The Hague since 1681, grinding long telescope lenses with his brother; publishes the tubeless
+    'aerial' telescope in 1684.
+- name: Denis Papin
+  role: French Huguenot physician and experimenter, former assistant of Huygens and Boyle
+  knows: air pump, steam digester with safety valve, gunpowder cylinder
+  note: In Venice 1681–1684 directing experiments for a scientific academy; returns to the Royal Society
+    in London in 1684.
+- name: Adam Adamandy Kochański SJ
+  role: Jesuit mathematician, clockmaker, chaplain and librarian at the court of Jan III Sobieski
+  knows: clocks and balance springs, geometry (approximation of pi, 1685), magnetism
+  note: In Poland, in Sobieski's service since 1680; corresponds with Leibniz and Hevelius. Earlier taught
+    at Jesuit colleges in the Empire and Bohemia.
+- name: Johannes Hevelius
+  role: brewer, councillor and astronomer in Danzig
+  knows: star positions, lunar maps, comets, large instruments with open sights
+  note: In Danzig, rebuilding after the fire of 1679 destroyed his observatory. Friend of Sobieski; in 1684
+    names the constellation 'Sobieski's Shield' for the relief of Vienna.
+- name: Georg Rimpler
+  role: Saxon-born fortress engineer, imperial lieutenant-colonel and chief of engineers since 1682
+  knows: fortification, mining and counter-mining, siege geometry
+  note: In Vienna, directing fortification and countermines; foresaw the attack between Burg and Löwel
+    bastions. Wounded in the left arm on 25 July 1683, dies in the night of 2–3 August.
+- name: Christoph von Börner
+  role: colonel commanding the artillery of the defence
+  knows: gunnery, gun founding, powder, arsenal stores
+  note: In Vienna throughout the siege. Controls the people a player needs for anything cast in bronze
+    or bored.
+- name: Daniel Suttinger
+  role: imperial captain and engineer
+  knows: surveying, fortress plans, perspective city views
+  note: In Vienna during the siege; afterwards draws the best-known plans of the city and the Ottoman
+    siege works.
+- name: Count Ernst Rüdiger von Starhemberg
+  role: city commandant of Vienna, commander of the defence
+  knows: infantry command, fortress defence
+  note: In Vienna throughout. Refuses the summons to surrender; ill with dysentery 11–20 August.
+- name: Count Zdenko Kaspar Kaplirs
+  role: vice-president of the Hofkriegsrat, chairman of the college of deputies governing Vienna after
+    the court leaves
+  knows: administration, supply
+  note: In Vienna throughout, aged 72; heads the civil government and supply beside Starhemberg. Made field
+    marshal in late 1683.
+- name: Duke Charles V of Lorraine
+  role: commander of the imperial field army, brother-in-law of Leopold I
+  knows: field command
+  note: Outside the city north of the Danube; reachable only by courier across the lines.
+- name: Jan III Sobieski
+  role: king of Poland, ally by the treaty dated 31 March 1683
+  knows: war against Ottomans and Tatars, cavalry
+  note: In Poland until August; commands the relief army on 12 September.
+- name: Samuel Oppenheimer
+  role: court factor and army contractor from Heidelberg, imperial war factor since 1679
+  knows: credit, bills of exchange, army supply
+  note: Lives in Vienna since 1674 by personal privilege although Jews were expelled in 1670.
+- name: Wilhelm von Schröder
+  role: cameralist in imperial service, Fellow of the Royal Society (1662), took over the Kunst- und Werkhaus
+    in 1677 (closed 1681)
+  knows: English science and manufactures, state finance
+  note: In imperial service; where he spends the siege is not recorded. The Werkhaus burns in 1683. Publishes
+    the Fürstliche Schatz- und Rentkammer in 1686; dies 1688.
+- name: Philipp Wilhelm von Hörnigk
+  role: jurist and cameralist, brother-in-law of the late Johann Joachim Becher
+  knows: trade statistics of the hereditary lands (with Becher from 1673), public law
+  note: In imperial service around Vienna; whereabouts during the siege not recorded. Was secretary to the
+    envoy Count Lamberg in Berlin (1680); writes 'Österreich über alles, wann es nur will' (1684).
+- name: Johann van Ghelen
+  role: university printer since 1678, holder of the privilege for Latin and Italian newspapers (1678),
+    five presses
+  knows: printing, news trade
+  note: In Vienna; takes part in the defence and writes an account of the siege that his firm spreads in
+    Italy. Prints Abraham a Sancta Clara's Auff, auff, ihr Christen.
+- name: Georg Franz Kolschitzky
+  role: interpreter and trader who knows Turkish
+  knows: Ottoman language and customs
+  note: In Vienna. Crosses the Ottoman lines as courier with his servant Michaelowitz on 13 August, returns
+    on the 17th. His founding the first coffee house is legend.
+- name: Marco d'Aviano
+  role: Capuchin preacher, papal legate with the relief army
+  knows: preaching; trusted adviser of Leopold I
+  note: Outside the city; joins the relief army and mediates between Sobieski and Charles of Lorraine at
+    the council of war of 4 September.
+
+events:
+- '1679: Great plague in Vienna; the court leaves, Sorbait is made Generalinquisitor, Leopold I vows a
+  column on the Graben. Modern estimates of the dead start at about 12,000; contemporaries claimed far
+  more (background).'
+- '1680: Sorbait''s Pest-Ordnung and Abraham a Sancta Clara''s Mercks Wienn are printed (background).'
+- '1680–1682 (background): the great comet of 1680–1681 and the comet of 1682 (later Halley''s) are read
+  in Vienna as omens of war.'
+- '1682 (background): Imre Thököly, with Ottoman backing, holds Upper Hungary; Caprara''s embassy to prolong
+  the Peace of Vasvár fails.'
+- '1682 (background): Acta Eruditorum, the first German learned journal, begins at Leipzig; Leibniz prints
+  his series for pi in it.'
+- '1683: Jakob Bernoulli in Basel studies compound interest reckoned ever more often (the limit later
+  called e).'
+- '1683: Blondel''s L''art de jetter les bombes, on gunnery by Galileo''s parabola, appears in Paris.'
+- '1683 Jan 26: defensive alliance of Leopold I with Elector Max Emanuel of Bavaria.'
+- '1683 Mar 31: alliance of Leopold I and Jan III Sobieski, dated 31 March (signed at Warsaw on 1 April),
+  with papal backing: each helps if Vienna or Kraków is besieged. Days later the Ottoman army leaves
+  Adrianople.'
+- '1683 Jul 7: cavalry clash at Petronell; that evening the emperor and court leave Vienna for Linz and
+  Passau.'
+- '1683 Jul 9: Leopold appoints a college of deputies under Kaplirs to govern Vienna.'
+- '1683 Jul 10–13: about 11,000 imperial troops enter the city; some 5,000 citizens and volunteers join
+  them.'
+- '1683 Jul 13: Starhemberg has the suburbs burned, except the Leopoldstadt, including the plague lazaretto
+  on the Als, the tanners'' and gardeners'' quarters, mills and workshops.'
+- '1683 Jul 14: the Ottoman army closes round Vienna; a fire at the Schottenstift''s farm threatens the
+  powder magazine. No instruments, books, mercury or letters come in until 12 September.'
+- '1683 Jul 18: The Ottomans find and cut a water conduit running into the city from the suburbs.'
+- '1683 Jul 23 and 25: first Ottoman mines at the Burg ravelin and the Löwelbastei.'
+- '1683 Jul 25: the chief engineer Georg Rimpler is wounded in a sortie; his arm wound festers and he
+  dies in the night of 2–3 August.'
+- '1683 Aug 1: Food prices are fixed by decree; the decree has to be repeated almost daily and is extended
+  to medicines.'
+- '1683 c. Aug 8: The rote Ruhr (dysentery) breaks out in the city; Starhemberg is ill from 11 to 20 August.'
+- '1683 Aug 13–17: Kolschitzky carries messages to Charles of Lorraine and returns.'
+- '1683 Aug 27: first rocket signals at night from St Stephen''s tower to the relief army; more follow
+  on later nights.'
+- '1683 Aug 31: A hit behind the Löwelbastei sets a munitions store on fire and much of the powder reserve
+  is lost.'
+- '1683 Sep 1–2: the ruined Burg ravelin is lost.'
+- '1683 Sep 3: Food runs short; sorties at the Schottentor bring in 22 oxen.'
+- '1683 Sep 4: a mine breaches the Burgbastei; the breach is sealed overnight. The same day the allied
+  commanders hold their council of war at Stetteldorf near Tulln.'
+- '1683 Sep 9: Mayor Liebenberg dies of dysentery after weeks of illness.'
+- '1683 Sep 12: the relief army under Sobieski and Charles of Lorraine attacks from the Kahlenberg; the
+  Ottoman army flees and the siege is raised.'
+- '1683 Sep: Louis XIV sends troops into the Spanish Netherlands.'
+- '1683 Sep 17: Leeuwenhoek writes from Delft to the Royal Society about animalcules in scrapings from
+  teeth.'
+- '1683 Oct 9: allied victory at Párkány; Oct 27: Gran (Esztergom) surrenders.'
+- '1683 autumn: A typhus-like epidemic after the siege kills many residents.'
+- '1683 Dec 25: Kara Mustafa is strangled at Belgrade on the Sultan''s order.'
+- '1684: Hevelius in Danzig names the constellation Scutum Sobiescianum.'
+- '1684: Hörnigk''s ''Österreich über alles, wann es nur will'' appears anonymously.'
+- '1684: Papin leaves Venice for London; Huygens publishes Astroscopia compendiaria on the tubeless telescope.'
+- '1684 Mar 5: Holy League of the emperor, Poland and Venice signed at Linz under papal patronage.'
+- '1684 Aug: Halley visits Newton in Cambridge and learns he has derived the planetary ellipse from an
+  inverse-square force.'
+- '1684 Aug 15: Truce of Regensburg leaves Louis XIV his annexations, including Strasbourg, for twenty
+  years.'
+- '1684 Oct: Leibniz''s Nova methodus pro maximis et minimis, the first printed calculus, appears in the
+  Acta Eruditorum.'
+- '1685 Jan 17 (outlook): Johannes Diodato receives the first privilege to serve coffee publicly in Vienna.'
+
+quest_hooks:
+- Sorbait was not believed in 1678; he may listen to someone who explains how a sickness travels, and
+  he has the standing to issue an order
+- The Ruhr begins in August and fills the hospitals. Which wells stand next to which cesspits, and who
+  can order water boiled when firewood is short?
+- The death-inspection registers name each dead person's house and illness; put on a plan of the city,
+  or drawn as a line through the siege weeks, they show the command what dysentery is doing
+- Kollonitsch's emergency hospitals in the monasteries need rules for wounds, linen and latrines, and
+  he can enforce them
+- A wounded officer's arm is festering and the Feldscher wants to probe it again
+- A spectacle maker and a scholar who has read of Leeuwenhoek's animalcules but never seen one
+- Refuse, dung and dead horses cannot leave the walls; someone must decide where they go
+- An abbot's garden with a strange tuber from the Indies that nobody eats
+- Vintners sweeten sour wine with litharge, and a household has the colic
+- After the relief, lice-ridden soldiers and refugees crowd the city and a new fever begins
+- 'A barometer in a week: Idrija mercury from an apothecary, a yard of glass tube, and a Jesuit professor
+  who denies the void must be shown the column.'
+- Starhemberg's lookout on St Stephen's has a poor spyglass; a better objective, or a second lens arrangement,
+  earns a hearing with the command.
+- 'The artillery colonel wants bombs to land where they are aimed: range tables from the parabola, corrected
+  by trial shots, against the gunners'' rules of thumb.'
+- Listening posts in cellars and water tubs detect Ottoman miners under the Burg bastion, which has no
+  countermine galleries; the engineers need to fix direction and distance of the digging.
+- 'Starhemberg''s dispatches to Charles of Lorraine risk capture with every courier, and the rockets from
+  the tower can only say "we still hold out": devise a cipher the clerks can use at speed, or a signal
+  code that carries numbers and days.'
+- 'After the relief: write to Leibniz in Hanover or Guericke in Hamburg; a letter with one true new result
+  (a series, a pump design) opens the republic of letters.'
+- The Hofkammer drowns in war accounts; a clockmaker could build an adding machine if someone explains
+  the tens carry.
+- The Schemnitz mines are flooding beyond what horses and water wheels can lift; the mine office will
+  listen to anyone with a credible fire engine, but a year is short.
+- Powder is running short after the magazine fire; new powder needs saltpetre, sulphur and a mill inside the walls
+- Fixed prices have emptied the market stalls and filled the black market; the deputies ask what to do
+- The Hofkammer cannot pay the garrison; Oppenheimer will advance money if someone can show him it will
+  be repaid
+- A printer's privilege and the Jesuit censors stand between the player and any printed sheet
+- Schröder, a Fellow of the Royal Society whose Werkhaus closed in 1681 and burns in the siege, looks
+  for a project the emperor will fund
+- After the relief, Hörnigk collects figures for a book on how Austria could supply itself

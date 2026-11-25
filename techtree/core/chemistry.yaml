@@ -1,0 +1,754 @@
+technologies:
+
+  - id: soap
+    name: Soap
+    category: chemistry
+    requires: []
+    helps: [alkali_soda, lime_burning]
+    explain: >
+      Fat or oil boiled for hours with lye gives soap. Lye is made by letting water
+      seep through hardwood ash; it becomes far stronger (caustic) if the ash is
+      mixed with about a tenth of slaked lime. A floating egg was a rough density test; dissolved salts also float it, so it
+      cannot establish how much caustic alkali is available to react. Potash lye gives soft soap;
+      throwing salt into the hot mass, or using soda lye, gives hard bars. Many fats need roughly one part pure caustic soda to seven parts fat by mass;
+      the actual amount depends on the fat and the strength of the lye.
+    pitfalls:
+      - "Too much lye: the soap burns the skin. Check free alkali by titration. Tasting can burn the mouth and curing cannot correct a substantial excess."
+      - "Lye splashes blind and burn; never boil it in aluminium, tin or lead vessels."
+      - "Thinking soap kills germs. It mainly lifts grease and dirt (and the germs in them) so that water carries them off."
+      - "Using softwood ash or rain-leached ash, which holds too little potash."
+    history:
+      mesopotamia: "late 3rd millennium BC – Mesopotamian textile workers used oils and alkaline materials in cleaning wool; identifying a particular ancient mixture as finished soap is harder"
+      egypt: "c. 1550 BC – Ebers Papyrus mixes fats with alkaline salts for skin treatment"
+      rome: "1st c. AD – Pliny describes sapo of tallow and ashes as a Gaulish hair pomade; soap for washing the body is attested from the 2nd c. AD (Galen)"
+      islamic: "7th–10th c. – hard olive-oil soap made with soda ash and lime in Aleppo and Nablus; al-Razi gives recipes"
+      europe: "12th–15th c. – hard soap works in Castile, Marseille, Venice, Savona; 1791 Leblanc soda makes it cheap"
+    sources:
+      - "Pliny the Elder, Naturalis historia XXVIII.191"
+      - "F. W. Gibbs, The History of the Manufacture of Soap, Annals of Science 4 (1939)"
+      - "Lewis Dartnell, The Knowledge: How to Rebuild Our World from Scratch (2014)"
+
+  - id: distillation
+    name: Distillation of strong alcohol (aqua vitae)
+    category: chemistry
+    requires: []
+    helps: [fermentation_yeast, glassmaking, thermometer_temperature]
+    explain: >
+      Alcohol boils at 78 °C, water at 100 °C, so the first vapour from gently
+      heated wine is richer in alcohol. Lead the vapour from a closed pot (cucurbit
+      and still-head) through a long tube or coil that runs through cold water, and
+      collect the drops. Wine of 10–13 % gives about 30–40 % on the first run and
+      60–70 % on the second; ordinary distillation at atmospheric pressure approaches an azeotrope of about
+      96 % ethanol by mass. A flame test cannot reliably measure alcohol strength. For disinfecting, 60–80 % works
+      best.
+    pitfalls:
+      - "Heating too hard: everything boils over together and nothing is separated."
+      - "A blocked or sealed still bursts; the vapour and the spirit catch fire at an open flame."
+      - "Lead or lead-soldered still-heads and coils poison the spirit; use copper, glass or glazed ware."
+      - "Believing distillation creates alcohol. It only concentrates what fermentation made."
+      - "Thinking pure alcohol disinfects best; about 70 % kills more reliably than 95 %."
+    history:
+      mesopotamia: "c. 1200 BC – perfumers' texts (Tapputi) describe extraction and sublimation vessels; true distillation is uncertain"
+      egypt: "1st–3rd c. AD – Alexandrian alchemists (Maria the Jewess, Zosimos) describe the still-head with receiver (ambix)"
+      india: "c. 150 BC–AD 150 – pottery stills from Taxila and Shaikhan Dheri are argued to be for alcohol (Allchin); disputed"
+      china: "12th–13th c. – distilled liquor certain under the Jin and Yuan; an Eastern Han bronze still is known but its use is disputed"
+      islamic: "9th c. – al-Kindi distils perfumes and mentions distilled wine; al-Razi describes the apparatus"
+      europe: "12th c. – aqua ardens at Salerno; c. 1280 Taddeo Alderotti describes aqua vitae and a water-cooled coil"
+    sources:
+      - "R. J. Forbes, A Short History of the Art of Distillation (1948)"
+      - "Hieronymus Brunschwig, Liber de arte distillandi de simplicibus (1500)"
+
+  - id: sulphuric_acid
+    name: Sulphuric acid (oil of vitriol)
+    category: chemistry
+    requires: [distillation]
+    helps: [saltpetre_production, glassmaking]
+    explain: >
+      Green vitriol (iron sulphate, from weathered pyrites) first dried, then heated
+      to red heat in a clay retort, gives off white fumes that condense to a heavy,
+      oily, corrosive acid. The cheaper way: burn sulphur with about one eighth its
+      weight of saltpetre over a little water inside a closed vessel, first a glass
+      bell, from 1746 a lead-lined room (lead resists the acid), and boil the weak
+      acid down in glass. It is the key to nitric and hydrochloric acid, soda,
+      ether and fertiliser, so cheap sulphuric acid opens the whole of chemistry.
+    pitfalls:
+      - "Pouring water into the strong acid: it boils explosively and spits. Always add the acid slowly to the water."
+      - "The acid chars skin, cloth and wood at once; the fumes of burning sulphur damage the lungs."
+      - "Confusing the vitriols: green is iron, blue is copper, white is zinc."
+      - "Using iron or copper vessels for the dilute acid; they dissolve. Glass, stoneware and lead hold it."
+    history:
+      islamic: "8th–10th c. – vitriols and their distillates handled by Jabirian authors and al-Razi; that they isolated the acid is often claimed but disputed"
+      india: "c. 12th–16th c. – alchemical texts describe distilling vitriols and alum; isolation of the acid is uncertain"
+      europe: "c. 1300 – distillates of vitriol in pseudo-Geber and Vincent of Beauvais; 16th c. clear recipes (Cordus, Libavius); 1746 Roebuck's lead chamber; 1831 Phillips patents the contact process, industrial from the 1890s"
+    sources:
+      - "Vladimír Karpenko & John A. Norris, Vitriol in the History of Chemistry, Chemické listy 96 (2002)"
+      - "Archibald Clow & Nan L. Clow, The Chemical Revolution (1952)"
+
+  - id: oxygen_combustion
+    name: Oxygen and combustion
+    category: chemistry
+    requires: []
+    helps: [pneumatic_chemistry_gases, saltpetre_production, measurement_quantification]
+    explain: >
+      Air is a mixture; about one fifth of it (oxygen) feeds fire, rusting and
+      breathing, most of the remainder is nitrogen, with about 1 % argon and smaller amounts of other gases. Burning is combination with oxygen,
+      not the escape of a fire substance (phlogiston): metals gain weight when they
+      are calcined, and in a sealed vessel the total weight does not change. The
+      convincing demonstrations are weighing tin or lead before and after roasting,
+      and heating red calx of mercury or saltpetre to collect a gas in which a
+      glowing splint bursts into flame.
+    pitfalls:
+      - "Saying air 'is' oxygen, or that fire uses up all the air; four fifths remain."
+      - "The candle under a jar over water is a poor proof: the water rises mostly because the heated air cools, and the candle goes out long before the oxygen is gone."
+      - "Claiming that things lose weight when they burn. Ash is lighter only because gases escape."
+      - "Pure oxygen makes oil, grease and cloth burn violently."
+    history:
+      china: "8th c. – a text attributed to Mao Hua on a 'yin' component of air was reported by Klaproth in 1810; the source is lost and the claim is doubtful"
+      europe: "1604 – Sendivogius, an 'aerial nitre' as food of life; 1674 Mayow; 1771–1774 Scheele and Priestley isolate the gas; 1775–1789 Lavoisier explains combustion and names oxygen"
+    sources:
+      - "Antoine-Laurent Lavoisier, Traité élémentaire de chimie (1789)"
+      - "Joseph Priestley, Experiments and Observations on Different Kinds of Air (1774–1777)"
+      - "Steven Johnson, The Invention of Air (2008)"
+
+  - id: nitric_acid
+    name: Nitric acid (aqua fortis)
+    category: chemistry
+    requires: [distillation, saltpetre_production]
+    helps: [sulphuric_acid, glassmaking]
+    explain: >
+      Saltpetre distilled with dried green vitriol and alum (roughly equal weights)
+      in a clay or glass retort gives red fumes that condense to a fuming acid;
+      saltpetre with oil of vitriol (Glauber) gives it stronger and cleaner. It
+      dissolves silver, copper and mercury but not gold, so it parts gold from
+      silver and tests coins. It is also the gateway to explosives, dyes and
+      nitrate fertiliser.
+    pitfalls:
+      - "The red-brown fumes are poisonous; the lungs can fill with fluid hours after an exposure that seemed mild. Work outdoors or under a draught."
+      - "Strong acid on straw, sawdust, turpentine or cloth can start fires."
+      - "Expecting it to dissolve gold; that needs aqua regia."
+      - "Stains skin yellow and burns deep; iron and copper vessels are destroyed."
+    history:
+      islamic: "8th–10th c. – attributed to Jabir ibn Hayyan in older literature; no clear recipe is known in authentic Arabic texts, so the attribution is disputed"
+      europe: "c. 1300 – first clear recipe in pseudo-Geber, De inventione veritatis; 15th–16th c. routine in assay offices and mints; 1648 Glauber's method with oil of vitriol; 1902 Ostwald process from ammonia"
+      india: "16th c. – mineral acids described in alchemical texts; used for parting in Mughal mints"
+    sources:
+      - "William R. Newman, The Summa Perfectionis of Pseudo-Geber (1991)"
+      - "Robert P. Multhauf, The Origins of Chemistry (1966)"
+      - "Vannoccio Biringuccio, De la pirotechnia (1540)"
+
+  - id: saltpetre_production
+    name: Saltpetre from nitre beds
+    category: chemistry
+    requires: []
+    helps: [alkali_soda, lime_burning]
+    explain: >
+      Saltpetre (potassium nitrate) forms where dung, urine and rotting matter decay
+      in airy, limy earth kept dry from rain: stable floors, cellars, dovecotes. A
+      nitre bed is a roofed heap of earth, manure, straw, lime rubble and wood ash,
+      watered with urine and turned for one to two years. The earth is then leached
+      with water, the liquor run through wood ash (which turns the lime nitrate into
+      true saltpetre), boiled down and skimmed, and left to cool. Saltpetre is about
+      ten times more soluble hot than cold, so it crystallises as needles on
+      cooling while common salt drops out during the boiling.
+    pitfalls:
+      - "Skipping the wood ash: the product is calcium nitrate, which draws damp and ruins gunpowder."
+      - "Letting rain wash the bed; nitrate is very soluble and is simply lost."
+      - "Expecting quick results; the bacteria need many months, warmth and air."
+      - "Mistaking common salt, soda or alum efflorescence for saltpetre. Appearance and taste cannot establish identity; tasting deposits risks poisoning."
+    history:
+      china: "c. AD 500 – Tao Hongjing tells saltpetre from other salts by its violet flame; purified and used in alchemy, then in gunpowder by the 9th c."
+      india: "by c. 14th c. produced from village earths; 17th–18th c. Bihar and Bengal are the world's main exporters"
+      islamic: "c. 1240 – Ibn al-Baytar calls it 'snow of China'; c. 1280 Hasan al-Rammah describes purification with wood ash"
+      europe: "late 14th c. – nitre plantations in Germany (Frankfurt 1388); 1540 Biringuccio and 1574 Ercker describe the process; 1770s French and Prussian nitre beds on a state scale"
+      americas: "from the 1830s – Chilean nitrate (sodium nitrate) from the Atacama replaces nitre beds"
+    sources:
+      - "Vannoccio Biringuccio, De la pirotechnia (1540)"
+      - "David Cressy, Saltpeter: The Mother of Gunpowder (2013)"
+      - "Joseph Needham et al., Science and Civilisation in China, vol. 5 part 7: Military Technology; The Gunpowder Epic (1986)"
+
+  - id: chemical_elements
+    name: Chemical elements and conservation of mass
+    category: chemistry
+    requires: []
+    helps: [oxygen_combustion, pneumatic_chemistry_gases, measurement_quantification]
+    explain: >
+      Earth, water, air and fire are not elements. An element is a substance that
+      no chemical operation can split further: gold, iron, copper, lead, tin,
+      mercury, sulphur, carbon, and the gases oxygen, hydrogen and nitrogen. Water
+      is a compound of hydrogen and oxygen; air is a mixture. In every reaction the
+      total weight of what goes in equals the total weight of what comes out,
+      provided the gases are caught and weighed too, so the balance is the
+      chemist's main instrument. Elements do not turn into one another, which is
+      why base metals cannot be made into gold.
+    pitfalls:
+      - "Listing as elements things that are compounds or mixtures (water, air, salt, lime, steel, bronze)."
+      - "Forgetting the gases when weighing, which seems to disprove conservation."
+      - "Mocking alchemists as fools. Their apparatus and many of their substances are real and useful; only transmutation fails."
+      - "Calling heat and light elements, as Lavoisier's own list still did."
+    history:
+      greece: "5th–4th c. BC – four elements of Empedocles and Aristotle, the theory to be replaced"
+      china: "from c. 4th c. BC – five phases (wuxing); a scheme of processes rather than of substances"
+      india: "from c. 6th c. BC – five great elements (mahabhuta) in several schools"
+      islamic: "8th–10th c. – sulphur-mercury theory of metals in the Jabirian corpus; c. 1025 Ibn Sina argues against transmutation"
+      europe: "1661 – Boyle criticises the old elements; 1756 Lomonosov and 1770s Lavoisier establish conservation of weight; 1789 Lavoisier's list of 33 simple substances"
+    sources:
+      - "Antoine-Laurent Lavoisier, Traité élémentaire de chimie (1789)"
+      - "Robert Boyle, The Sceptical Chymist (1661)"
+      - "William H. Brock, The Fontana History of Chemistry (1992)"
+
+  - id: atomic_theory
+    name: Atomic theory and fixed proportions
+    category: chemistry
+    requires: [chemical_elements]
+    helps: [atomism, gas_laws]
+    explain: >
+      Dalton treated atoms of each element as having one characteristic mass.
+      Isotopes explain why atoms of the same element can differ in mass, and a compound forms when atoms join in small whole-number ratios. That is why
+      a pure compound always has the same composition by weight (ordinary water contains about 8 parts oxygen to 1 part hydrogen by mass), and why two elements that form several
+      compounds do so in simple multiples (carbon takes exactly twice as much
+      oxygen in fixed air as in the poisonous gas from glowing charcoal). Relative
+      atomic weights can therefore be measured with a balance, taking hydrogen as 1.
+    pitfalls:
+      - "Presenting Greek atomism as the same thing. It was a philosophical idea without weights or experiments."
+      - "Saying atoms are indivisible; later work found parts inside them, but chemistry does not divide them."
+      - "Dalton's own error of assuming the simplest formula (water as HO), which gives wrong atomic weights."
+      - "Claiming atoms were seen; until the 20th century the evidence was indirect, and many chemists treated them as a useful fiction."
+    history:
+      greece: "5th c. BC – Leucippus and Democritus, philosophical atomism"
+      india: "c. 2nd c. BC – Vaisheshika school (Kanada) teaches indivisible particles; philosophical"
+      islamic: "9th–11th c. – atomism of the kalam theologians; philosophical"
+      europe: "1794–1799 Proust, law of definite proportions; 1803–1808 Dalton's atomic theory and first table of atomic weights; 1905–1909 Einstein and Perrin on Brownian motion settle the reality of atoms"
+    sources:
+      - "John Dalton, A New System of Chemical Philosophy (1808)"
+      - "Alan J. Rocke, Chemical Atomism in the Nineteenth Century: From Dalton to Cannizzaro (1984)"
+
+  - id: molecules_mole_concept
+    name: Molecules, Avogadro's hypothesis and chemical formulae
+    category: chemistry
+    requires: [atomic_theory, gas_laws]
+    explain: >
+      Equal volumes of ideal gases at the same temperature and pressure hold equal
+      numbers of particles. Since two volumes of hydrogen and one of oxygen give
+      two volumes of steam, the particles of these gases must be pairs of atoms
+      (H2, O2) and water is H2O. Gas densities give relative molecular masses; composition across several compounds
+      helps infer atomic masses. A mole counts exactly 6.02214076 × 10²³ specified
+      particles. Two moles of hydrogen molecules react with one mole of oxygen molecules.
+    pitfalls:
+      - "Writing water as HO and oxygen's weight as 8, the confusion that lasted fifty years."
+      - "Assuming the gaseous elements are single atoms."
+      - "Mixing up atoms and molecules, or weight ratios and volume ratios."
+    history:
+      europe: "1808 – Gay-Lussac, gases combine in simple volume ratios; 1811 Avogadro's hypothesis, ignored for decades; 1858–1860 Cannizzaro's Sunto and the Karlsruhe congress win acceptance; 1865 Loschmidt estimates the size of molecules"
+    sources:
+      - "Stanislao Cannizzaro, Sunto di un corso di filosofia chimica (1858)"
+      - "Alan J. Rocke, Chemical Atomism in the Nineteenth Century: From Dalton to Cannizzaro (1984)"
+
+  - id: periodic_table
+    name: Periodic table of the elements
+    category: chemistry
+    requires: [atomic_theory]
+    helps: [molecules_mole_concept, spectrum_colour, atomic_structure]
+    explain: >
+      When the elements are listed in order of atomic weight, similar properties
+      recur at regular intervals, so they can be set out in rows and columns in
+      which each column is a family (lithium, sodium, potassium; chlorine, bromine,
+      iodine). Gaps in the table are undiscovered elements whose properties can be
+      predicted from their neighbours. The true ordering principle is the number of
+      positive charges in the nucleus, not the weight.
+    pitfalls:
+      - "Saying Mendeleev alone found it; Newlands, Lothar Meyer and others had versions, and his distinction is the bold predictions."
+      - "Ordering strictly by weight; a few pairs (tellurium and iodine) must be swapped."
+      - "Trying it with wrong atomic weights from before Cannizzaro; the pattern does not appear."
+      - "Forgetting that the whole column of noble gases was unknown until the 1890s."
+    history:
+      europe: "1817–1829 Döbereiner's triads; 1865 Newlands' octaves; 1869 Mendeleev and 1870 Lothar Meyer publish periodic systems; gallium (1875), scandium (1879) and germanium (1886) confirm the predictions; 1913 Moseley orders the elements by atomic number"
+    sources:
+      - "Eric R. Scerri, The Periodic Table: Its Story and Its Significance (2007)"
+      - "J. W. van Spronsen, The Periodic System of Chemical Elements: A History of the First Hundred Years (1969)"
+
+  - id: gas_laws
+    name: Gas laws (pressure, volume, temperature)
+    category: chemistry
+    requires: [atmospheric_pressure]
+    helps: [air_pump_vacuum, thermometer_temperature]
+    explain: >
+      Air is springy. At constant temperature, halving the volume of a trapped gas
+      doubles its pressure (pressure times volume stays constant). At constant
+      pressure a gas expands by 1/273 of its volume at 0 °C for every degree, to a good approximation for dilute gases, which points to an absolute zero at about −273 °C. The
+      demonstration is a J-shaped glass tube closed at the short end: pour mercury
+      into the long arm and measure how the trapped air shrinks as the column
+      grows; 76 cm of extra mercury halves it.
+    pitfalls:
+      - "Forgetting that the outside air pressure adds to the mercury column."
+      - "Not waiting for the gas to cool after compressing it; compression heats it and spoils the reading."
+      - "Applying the laws to steam that is condensing or to very high pressures."
+      - "Crediting Boyle alone: Power and Towneley found the relation first, Hooke built the apparatus, and Mariotte found it independently."
+    history:
+      europe: "1661–1662 Boyle (with Hooke; Power and Towneley's data); 1676 Mariotte; 1702 Amontons, pressure and temperature; 1787 Charles (unpublished) and 1802 Gay-Lussac, expansion with heat; 1834 Clapeyron combines them; 1848 Kelvin's absolute scale"
+    sources:
+      - "Robert Boyle, A Defence of the Doctrine Touching the Spring and Weight of the Air (1662)"
+      - "Steven Shapin & Simon Schaffer, Leviathan and the Air-Pump (1985)"
+
+  - id: pneumatic_chemistry_gases
+    name: Collecting and telling apart gases (hydrogen, fixed air)
+    category: chemistry
+    requires: []
+    helps: [atmospheric_pressure, glassmaking, sulphuric_acid]
+    explain: >
+      There are many different 'airs', and they can be caught by leading a tube
+      from the reaction vessel under a jar filled with water and inverted in a tub.
+      Chalk or limestone with any acid, or fermenting must, gives a heavy gas
+      (carbon dioxide) that puts out flames, turns limewater milky and can be
+      poured like water. Iron or zinc in dilute sulphuric or hydrochloric acid
+      gives a gas fourteen times lighter than air (hydrogen) that burns to pure
+      water, which shows water is a compound. Density and characteristic reactions distinguish gases; smelling an unknown gas can injure the observer.
+    pitfalls:
+      - "Hydrogen mixed with air explodes at anything from 4 to 75 %; never light the gas at the generator, and test a small sample first."
+      - "Carbon dioxide collects unseen in cellars, wells and fermenting vats and suffocates; a burning candle cannot establish that the air is safe to breathe."
+      - "Glowing charcoal in a closed room gives carbon monoxide, which is odourless and kills."
+      - "Collecting soluble gases (ammonia, hydrogen chloride) over water; they dissolve. They need mercury or dry collection."
+    history:
+      europe: "c. 1640 – van Helmont coins 'gas' and describes gas sylvestre; 1727 Hales's pneumatic trough; 1754–1756 Black, fixed air; 1766 Cavendish, inflammable air; 1772 Priestley collects soluble gases over mercury; 1781–1784 Cavendish and Lavoisier, water is hydrogen plus oxygen"
+      china: "by c. 2nd c. BC – natural gas from Sichuan brine wells piped in bamboo and burnt to boil salt; a practical use without a theory of gases"
+    sources:
+      - "Stephen Hales, Vegetable Staticks (1727)"
+      - "Henry Cavendish, Three Papers, Containing Experiments on Factitious Air, Philosophical Transactions 56 (1766)"
+      - "Joseph Black, Experiments upon Magnesia Alba, Quicklime, and Some Other Alcaline Substances (1756)"
+
+  - id: acids_bases_ph
+    name: Acids, alkalis and indicators
+    category: chemistry
+    requires: []
+    helps: [alkali_soda, lime_burning]
+    explain: >
+      Acids (vinegar, lemon juice, the mineral acids) taste sour, make chalk fizz
+      and dissolve many metals; alkalis (ash lye, soda, lime water, ammonia) feel
+      soapy and attack fats. They destroy each other's properties, giving a salt
+      and water, and the amounts needed are always in the same proportion.
+      Plant juices show which is which: syrup of violets or red cabbage water
+      turns red with acid and green with alkali, litmus red and blue. With one solution of known concentration, the volume needed to reach a suitable
+      indicator endpoint gives the concentration of the other. pH measures acidity on a
+      logarithmic scale: a fall of one unit means ten times the hydrogen-ion activity.
+    pitfalls:
+      - "Thinking only acids burn; strong alkalis destroy skin and especially eyes more insidiously."
+      - "Neutralising a burn on the skin with the opposite chemical; rinse with much water instead."
+      - "Lavoisier's error that every acid contains oxygen. Hydrochloric acid has none; the common ingredient is hydrogen."
+      - "Equating 'strong' with 'concentrated', or judging an acid by taste."
+    history:
+      mesopotamia: "3rd millennium BC – vinegar and plant-ash alkali used in cleaning and dyeing"
+      islamic: "8th–10th c. – alkalis (al-qali) and sharp waters classified by Jabirian authors and al-Razi"
+      europe: "c. 1300 – litmus from lichens (Arnald of Villanova); 1664 Boyle uses plant colours as indicators; 1750s Rouelle defines a base; 1810 Davy shows muriatic acid holds no oxygen; 1884 Arrhenius; 1909 Sørensen's pH scale; 1923 Brønsted and Lowry"
+    sources:
+      - "Robert Boyle, Experiments and Considerations Touching Colours (1664)"
+      - "William H. Brock, The Fontana History of Chemistry (1992)"
+
+  - id: hydrochloric_acid_aqua_regia
+    name: Hydrochloric acid and aqua regia
+    category: chemistry
+    requires: [distillation]
+    helps: [sulphuric_acid, nitric_acid, salt_production]
+    explain: >
+      Common salt heated with oil of vitriol in a retort gives a choking gas that
+      dissolves greedily in water to form spirit of salt (hydrochloric acid); the
+      residue is Glauber's salt. It dissolves iron, zinc and tin, cleans metal for
+      tinning and soldering, and is the same acid as in the stomach. One part
+      nitric acid with three parts hydrochloric acid (or nitric acid with sal
+      ammoniac dissolved in it) is aqua regia, the only common liquid that
+      dissolves gold and platinum.
+    pitfalls:
+      - "The gas attacks eyes and lungs and rusts every iron tool in the room."
+      - "Mixing it with bleaching powder or pyrolusite releases chlorine."
+      - "Aqua regia cannot be stored in a stoppered bottle; it gives off gas and bursts it. Mix it fresh."
+      - "Expecting aqua regia to dissolve silver well; a crust of silver chloride stops the attack."
+    history:
+      islamic: "9th–10th c. – sal ammoniac and corrosive mixtures with salt and vitriol in al-Razi; isolation of the acid itself is disputed"
+      europe: "c. 1300 – aqua regia from nitric acid and sal ammoniac in pseudo-Geber; c. 1600 spirit of salt described by Libavius and in the Basil Valentine texts; 1648 Glauber's method from salt and oil of vitriol; 1772 Priestley collects the gas"
+    sources:
+      - "Johann Rudolf Glauber, Furni novi philosophici (1646–1649)"
+      - "Robert P. Multhauf, The Origins of Chemistry (1966)"
+
+  - id: alkali_soda
+    name: Alkalis (potash, soda, caustic lye)
+    category: chemistry
+    requires: []
+    helps: [lime_burning, sulphuric_acid, salt_production]
+    explain: >
+      Potash is got by leaching wood ash with water and boiling the liquor dry in an
+      iron pot (about 1 kg from 500–1000 kg of wood); soda comes from natron lakes
+      or from the ash of salt-marsh plants (barilla), and the two are different
+      substances. Either becomes caustic, and far stronger, when its solution is
+      stirred with slaked lime and poured off the chalk that settles. Leblanc's
+      route makes soda from salt: salt and sulphuric acid give salt cake, which is
+      roasted with limestone and coal and then leached. Solvay's route passes
+      ammonia and carbon dioxide into brine. Alkali is needed for soap, glass,
+      paper, bleaching and dyeing.
+    pitfalls:
+      - "Caustic lye destroys eyes and skin; aluminium, tin and zinc vessels dissolve in it."
+      - "Treating potash and soda as the same; potash gives soft soap and a different glass."
+      - "Leblanc works vent hydrochloric acid gas and leave stinking sulphide waste that ruined whole districts."
+      - "Believing sea salt and water alone give soda; salt must be chemically converted."
+    history:
+      egypt: "from c. 3000 BC – natron from Wadi Natrun for mummification, cleaning, faience and glass"
+      mesopotamia: "from c. 2500 BC – plant ash alkali for soap, dyeing and glass"
+      china: "by Han times – plant ash lye and natural soda (jian) for degumming silk, dyeing and food"
+      islamic: "8th–13th c. – plant ash (al-qali, hence 'alkali') from Syria supplies glass and soap makers; causticising with lime described"
+      europe: "medieval – potash from forest ash; 1736 Duhamel distinguishes soda from potash; 1791 Leblanc process; 1861–1865 Solvay process; 1890s electrolytic caustic soda"
+      americas: "1790 – the first United States patent is for a potash process (Samuel Hopkins)"
+    sources:
+      - "Archibald Clow & Nan L. Clow, The Chemical Revolution (1952)"
+      - "L. F. Haber, The Chemical Industry during the Nineteenth Century (1958)"
+
+  - id: lime_burning
+    name: Lime burning and lime mortar
+    category: chemistry
+    requires: []
+    helps: [fired_brick_ceramics]
+    explain: >
+      Limestone, chalk or shells held at a bright red heat (about 900 °C) for a day
+      or more lose 44 % of their weight as gas and become quicklime. Quicklime
+      takes up water with violent heat and falls to slaked lime, which is kept as a
+      putty under water. One part lime putty to about three parts sharp sand makes
+      mortar; it hardens slowly by taking carbon dioxide back from the air and
+      turning to limestone again. Lime also makes lye caustic, loosens hair from
+      hides, sweetens sour soil, whitewashes and disinfects.
+    pitfalls:
+      - "Quicklime burns skin and blinds; slaking a large heap can boil over and set wood alight. Wet quicklime in a ship or cart can start a fire."
+      - "Underburnt cores stay stone; overburnt lime slakes late and pops out of the plaster."
+      - "Ordinary lime mortar does not set under water or in thick, airless masses."
+      - "Using sea sand or dirty, loamy sand; the mortar stays weak and damp."
+      - "Burning gypsum is a different, much cooler process (about 150 °C) and gives plaster, not lime."
+    history:
+      mesopotamia: "c. 7500 BC – lime plaster floors and statues in the Levant ('Ain Ghazal); c. 2500 BC lime kilns in Mesopotamia"
+      egypt: "pharaonic building used mainly gypsum plaster; lime mortar becomes common under the Ptolemies"
+      india: "c. 2600 BC – lime and gypsum plaster at Indus cities"
+      china: "c. 3rd millennium BC – lime-plastered floors; by c. 5th c. AD sticky-rice lime mortar"
+      greece: "by c. 1500 BC – lime plaster in Minoan and Mycenaean building"
+      rome: "c. 160 BC – Cato describes a lime kiln; Vitruvius gives mortar proportions"
+      americas: "c. 1000 BC onwards – Maya burn limestone for plaster, stucco and for treating maize"
+    sources:
+      - "Cato the Elder, De agri cultura 38"
+      - "Vitruvius, De architectura II.5"
+      - "Norman Davey, A History of Building Materials (1961)"
+
+  - id: salt_production
+    name: Salt making (sea salt, brine boiling, rock salt)
+    category: chemistry
+    requires: []
+    explain: >
+      Sea water holds about 3.5 % salt. Let it evaporate in a chain of shallow clay
+      pans: gypsum settles first, common salt crystallises once the brine is about
+      ten times concentrated, and the bitter mother liquor that remains must be
+      drained off. Stronger inland brines from springs or wells are boiled in wide
+      pans; rock salt is mined or dissolved underground. Salt preserves meat, fish
+      and vegetables (dry salting or a brine strong enough to float an egg), and is
+      the raw material for soda, hydrochloric acid and chlorine.
+    pitfalls:
+      - "Evaporating to dryness: the magnesium salts make the product bitter, damp and purgative."
+      - "Boiling brine in lead pans, which contaminates the salt."
+      - "Underestimating fuel; boiling weak brine takes many times the salt's weight in wood. Concentrate it first by sun and wind."
+      - "Salt does not prevent goitre unless it carries iodine; inland rock salt usually has none."
+    history:
+      europe: "c. 6000 BC – brine boiling in pottery at Poiana Slatinei (Romania); from c. 1500 BC salt mining at Hallstatt; 16th c. graduation towers concentrate weak brine"
+      china: "c. 2000 BC – salt works at Zhongba; c. 250 BC Li Bing's brine wells in Sichuan; 11th c. percussion-drilled wells over 100 m deep; 1835 a well passes 1000 m"
+      mesopotamia: "3rd millennium BC – salt gathered from marshes and traded"
+      egypt: "from Old Kingdom – salt and natron from desert lakes; salted fish"
+      africa: "medieval – caravans carried Taghaza salt to West African markets; Taoudenni succeeded Taghaza in the late 16th c."
+      americas: "c. 1000 BC onwards – Maya coastal salt works; Andean brine pans at Maras"
+      india: "ancient – sea salt pans in Gujarat and salt from the Punjab Salt Range"
+    sources:
+      - "Robert P. Multhauf, Neptune's Gift: A History of Common Salt (1978)"
+      - "Mark Kurlansky, Salt: A World History (2002)"
+
+  - id: mordant_dyeing
+    name: Dyeing with mordants and vat dyes
+    category: chemistry
+    requires: []
+    helps: [textile_fibres, alkali_soda, acids_bases_ph]
+    explain: >
+      Most plant dyes wash out unless the fibre is first treated with a mordant, a
+      metal salt that binds dye to fibre. Simmer wool for an hour with alum (about a
+      quarter of the wool's weight, often with a little tartar), then in the dye
+      bath: madder root gives red, weld yellow; iron salts sadden colours towards
+      black. Indigo and woad work differently: the blue is insoluble, so it is
+      made soluble in a warm alkaline, fermenting vat (stale urine or lime with
+      bran), the cloth comes out yellow-green and turns blue in the air. Wool and
+      silk take dyes easily; linen and cotton are much harder.
+    pitfalls:
+      - "Dyeing without a mordant, or on greasy, unscoured wool; the colour runs."
+      - "Boiling madder; above about 70 °C the red turns brown."
+      - "Stirring air into the indigo vat, which spoils it."
+      - "Too much iron or alum makes fibres brittle; alum polluted with iron dulls every colour."
+      - "Expecting one recipe for all fibres; cotton needs tannin and oil treatments (Turkey red took weeks)."
+    history:
+      india: "c. 2000 BC – madder-dyed, mordanted cotton at Mohenjo-daro; India is the classical home of indigo and of printed, mordant-dyed cottons"
+      americas: "c. 4000 BC – indigo-dyed cotton at Huaca Prieta, Peru, the oldest known; cochineal red in Peru and Mexico from the 1st millennium BC"
+      egypt: "c. 2000 BC – madder and indigotin on linen; Pliny describes Egyptian mordant dyeing in the 1st c. AD"
+      mesopotamia: "c. 1500 BC – shellfish purple on the Levantine coast (earlier in Minoan Crete); alum in cuneiform dye recipes"
+      china: "by c. 1000 BC – indigo, madder and gardenia on silk; mordants named in Zhou texts"
+      europe: "medieval woad, madder, kermes; 1462 alum found at Tolfa and made a papal monopoly; 1548 Rosetti's Plictho, the first printed dye book"
+    sources:
+      - "Gioanventura Rosetti, Plictho de l'arte de' tentori (1548)"
+      - "Dominique Cardon, Natural Dyes: Sources, Tradition, Technology and Science (2007)"
+      - "Jeffrey C. Splitstoser et al., Early pre-Hispanic use of indigo blue in Peru, Science Advances 2 (2016)"
+
+  - id: chlorine_bleach
+    name: Chlorine, bleaching powder and disinfection
+    category: chemistry
+    requires: []
+    helps: [hydrochloric_acid_aqua_regia, lime_burning, electrolysis, alkali_soda]
+    explain: >
+      Hydrochloric acid warmed with black manganese ore (pyrolusite) gives a heavy
+      yellow-green gas, chlorine. Passed over trays of slaked lime it is absorbed
+      to a dry bleaching powder that can be stored and shipped; passed into cold
+      potash or soda lye it gives a bleaching liquor. These whiten linen, cotton
+      and paper pulp in hours instead of months on the grass, remove the smell of
+      decay, and kill disease agents on hands, in wards and in water. For drinking water, effectiveness depends on clarity, pH, contact time and the
+      free chlorine remaining afterwards; smell cannot establish a safe residual.
+    pitfalls:
+      - "Chlorine gas is a lung poison and was a weapon in 1915; an open window or outdoor work does not reliably protect workers or bystanders."
+      - "Mixing bleach with acids (or vinegar) releases chlorine; with ammonia or urine it gives other poisonous gases."
+      - "Bleach left too long or too strong rots cloth; rinse treated fibres thoroughly. Adding acid to residual bleach releases toxic gas."
+      - "Bleaching powder loses strength in damp and warmth; wool and silk are destroyed by it."
+      - "Overdosing drinking water, or thinking it clears muddy water; filter or settle first."
+    history:
+      europe: "1774 – Scheele isolates the gas; 1785 Berthollet bleaches with it; 1789 eau de Javel; 1799 Tennant's bleaching powder (Glasgow); 1820s Labarraque disinfects with it; 1847 Semmelweis uses chlorinated lime for hand washing; 1810 Davy shows it is an element"
+      global: "1897 Maidstone and 1908 Jersey City – first chlorination of public water supplies; 1890s chlorine by electrolysis of brine"
+    sources:
+      - "Archibald Clow & Nan L. Clow, The Chemical Revolution (1952)"
+      - "L. F. Haber, The Chemical Industry during the Nineteenth Century (1958)"
+
+  - id: electrolysis
+    name: Electrolysis and electroplating
+    category: chemistry
+    requires: []
+    helps: [electric_battery, dynamo_electric_motor, acids_bases_ph]
+    explain: >
+      A direct-current source supplies two electrodes. Current passed through a liquid that conducts splits the
+      dissolved or molten substance. Two wires from a battery dipped in water with
+      a little acid give hydrogen at the negative wire and half that volume of
+      oxygen at the positive one. In blue vitriol solution, copper plates out on
+      the negative pole, which is how objects are plated and copper is refined.
+      Molten (not dissolved) potash, soda or salt yield the metals potassium and
+      sodium. The amount deposited is exactly proportional to the quantity of
+      electricity passed.
+    pitfalls:
+      - "Pure water barely conducts; nothing happens without some acid, alkali or salt."
+      - "Trying to win sodium, potassium or aluminium from a water solution; only hydrogen comes off. The compound must be melted."
+      - "Collecting both gases in one vessel gives an explosive mixture."
+      - "Brine gives chlorine at the positive pole. Sodium and potassium metal catch fire or explode on water."
+      - "Plating on greasy metal, or with too strong a current, gives a powdery coat that rubs off."
+    history:
+      europe: "1800 – Nicholson and Carlisle split water weeks after Volta's letter; 1807 Davy isolates potassium and sodium; 1833–1834 Faraday's laws; 1838–1840 Jacobi's electrotyping and the Elkingtons' silver plating; 1886 Hall-Héroult aluminium; 1890s chlorine and caustic soda from brine"
+      mesopotamia: "the 'Baghdad battery' (Parthian or Sasanian jars) is often claimed as evidence of ancient plating; there is no evidence it was a cell, and ancient gilding was done with mercury"
+    sources:
+      - "Humphry Davy, The Bakerian Lecture: On Some New Phenomena of Chemical Changes Produced by Electricity, Philosophical Transactions 98 (1808)"
+      - "Michael Faraday, Experimental Researches in Electricity, vol. 1 (1839)"
+      - "David Knight, Humphry Davy: Science and Power (1992)"
+
+  - id: organic_structure_theory
+    name: Organic chemistry and molecular structure
+    category: chemistry
+    requires: [molecules_mole_concept]
+    helps: [distillation]
+    explain: >
+      The substances of living things are built mainly of carbon, hydrogen, oxygen
+      and nitrogen and obey the same laws as minerals; no life force is needed to
+      make them. Each carbon atom forms four bonds and carbon atoms link into
+      chains and rings, so a substance is defined not just by which atoms it
+      contains but by how they are connected: two substances with the same
+      composition can differ (isomers). Benzene is a ring of six carbons. Drawing
+      the structure lets the chemist plan how to build a wanted molecule step by
+      step.
+    pitfalls:
+      - "The legend that Wöhler's urea of 1828 ended vitalism overnight; the change took decades."
+      - "Treating formulae as pictures of flat things; carbon with four single bonds is approximately tetrahedral; double-bonded carbon is usually planar."
+      - "Taking Kekulé's dream of the snake as history; he told it 25 years later."
+      - "'Organic' here means carbon chemistry, not natural or wholesome."
+    history:
+      europe: "1828 Wöhler makes urea; 1831 Liebig's combustion analysis; 1858 Kekulé and Couper, tetravalent carbon and chains; 1861 Butlerov, 'chemical structure'; 1865 Kekulé's benzene ring; 1874 van 't Hoff and Le Bel, tetrahedral carbon"
+    sources:
+      - "Alan J. Rocke, Image and Reality: Kekulé, Kopp, and the Scientific Imagination (2010)"
+      - "William H. Brock, The Fontana History of Chemistry (1992)"
+
+  - id: phosphorus_matches
+    name: Phosphorus and friction matches
+    category: chemistry
+    requires: []
+    helps: [sulphuric_acid, distillation, chlorine_bleach]
+    explain: >
+      Phosphorus was first made by boiling stale urine down to a paste and heating
+      it white-hot in a retort whose neck dips under water, where a waxy solid that
+      glows in the dark collects; later from bone ash treated with sulphuric acid
+      and heated with charcoal. A match needs a fuel, an oxygen-giving salt and a
+      binder: the safe design puts potassium chlorate, sulphur or antimony sulphide
+      and glue on the stick, and red phosphorus with powdered glass on the box, so
+      that fire starts only when the two meet. Red phosphorus is made by heating
+      the white form to about 250 °C without air.
+    pitfalls:
+      - "White phosphorus ignites in air near 30 °C, causes deep burns and is lethal at about a tenth of a gram; keep and cut it under water."
+      - "White-phosphorus match heads gave workers 'phossy jaw' (rotting jawbone) and poisoned children; use red phosphorus."
+      - "Grinding potassium chlorate together with sulphur or phosphorus: the mixture explodes from friction. Mix wet, never in a mortar."
+      - "Thinking a match is just sulphur on a stick; sulphur spills only carry a flame from an existing ember."
+    history:
+      china: "AD 577 – sulphur-tipped pine sticks used by court ladies of Northern Qi; described c. 950 by Tao Gu. They need an ember and are not friction matches"
+      europe: "1669 – Hennig Brand (Hamburg) from urine; 1769–1771 Gahn and Scheele from bone; 1826 John Walker's friction match (no phosphorus); 1830–1831 Sauria's white-phosphorus match; 1844 Pasch and 1855 Lundström, safety match; 1845 Schrötter (Vienna), red phosphorus; 1906 Berne Convention bans white-phosphorus matches"
+    sources:
+      - "John Emsley, The Shocking History of Phosphorus (2000)"
+      - "M. F. Crass, A History of the Match Industry, Journal of Chemical Education 18 (1941)"
+
+  - id: rubber_vulcanisation
+    name: Rubber and vulcanisation
+    category: chemistry
+    requires: []
+    explain: >
+      The milky sap of certain tropical trees (Hevea in the Amazon, Castilla in
+      Mesoamerica) dries to an elastic, waterproof gum, but raw rubber turns
+      sticky in heat and brittle in cold. Kneading in a few per cent of sulphur
+      (about 3–8 parts per 100) and heating at 140–160 °C for some hours links the
+      long molecules, giving a tough material that keeps its spring from frost to
+      boiling water. About 30 % sulphur gives hard ebonite. Uses include hoses,
+      seals, tyres, waterproof cloth and electrical insulation.
+    pitfalls:
+      - "Selling or using uncured rubber goods; they melt in summer, as Goodyear's early ventures showed."
+      - "Looking for rubber trees in Europe or temperate Asia; Hevea is native to tropical South America; African trees and vines also yield natural rubber."
+      - "Overheating: it scorches and stinks, and the fumes are noxious."
+      - "Oil, fat and sunlight slowly destroy natural rubber."
+    history:
+      americas: "c. 1600 BC – Olmec and later Mesoamerican peoples cure Castilla latex with morning-glory juice for a range of goods; 1839 Goodyear develops sulphur vulcanisation in the United States (US patent 1844)"
+      europe: "1736 La Condamine sends samples; 1770 Priestley notes it rubs out pencil; 1823 Macintosh's waterproof cloth;  1843 Hancock's English patent; 1888 Dunlop's pneumatic tyre"
+      east_asia: "1876–1877 – Hevea seeds taken via Kew to Ceylon and Malaya; plantations dominate after 1910"
+    sources:
+      - "Dorothy Hosler, Sandra L. Burkett & Michael J. Tarkanian, Prehistoric Polymers: Rubber Processing in Ancient Mesoamerica, Science 284 (1999)"
+      - "Charles Slack, Noble Obsession (2002)"
+
+  - id: synthetic_dyes
+    name: Synthetic dyes and coal-tar chemistry
+    category: chemistry
+    requires: [nitric_acid, sulphuric_acid, distillation]
+    helps: [gas_lighting, coke_iron, organic_structure_theory, mordant_dyeing]
+    explain: >
+      The black tar left over from making coke and coal gas is a store of ring
+      compounds. Distilling it gives benzene; nitric with sulphuric acid turns that
+      into nitrobenzene, and iron filings with acid reduce this to aniline.
+      Oxidising impure aniline gave Perkin a purple that dyes silk fast, and
+      systematic variation then produced every colour, including the natural dyes
+      alizarin and indigo. The same chemistry and the same firms later gave drugs
+      (aspirin, Salvarsan, the sulphonamides), photographic chemicals and
+      explosives.
+    pitfalls:
+      - "Telling it as luck alone; the lesson is that research on a waste product pays, once structure theory guides it."
+      - "Benzene, aniline and several dye intermediates are poisons; dye workers later suffered bladder cancer."
+      - "Nitration runs away if not cooled; nitro compounds can explode."
+      - "Overlooking the composition of commercial aniline: related compounds in Perkin’s starting material contributed to the mauveine mixture."
+    history:
+      europe: "1834 Runge finds aniline and phenol in coal tar; 1856 Perkin's mauve (London); 1859 magenta; 1868–1869 Graebe and Liebermann synthesise alizarin; 1880 Baeyer synthesises indigo, sold by BASF from 1897; 1909 Ehrlich's Salvarsan"
+      india: "after 1897 – synthetic indigo destroys the Bengal and Bihar indigo plantations within two decades"
+    sources:
+      - "Simon Garfield, Mauve: How One Man Invented a Colour That Changed the World (2000)"
+      - "Anthony S. Travis, The Rainbow Makers: The Origins of the Synthetic Dyestuffs Industry in Western Europe (1993)"
+
+  - id: nitroglycerin_dynamite
+    name: Nitroglycerin and dynamite
+    category: chemistry
+    requires: [nitric_acid, sulphuric_acid]
+    helps: [soap, gunpowder]
+    explain: >
+      Nitroglycerin is a shock-sensitive liquid whose detonation sends a shock wave
+      through rock. Early civil engineers used it for blasting, but transport and
+      handling caused fatal accidents. Nobel’s dynamite held the liquid in an
+      absorbent solid. This made it easier to transport and place, though it
+      remained a hazardous explosive. The blasting cap was a separate invention. It made tunnels, mines, canals and harbours far
+      cheaper to build.
+    pitfalls:
+      - "This is the entry where a mistake kills the maker: the reaction heats itself and explodes if it is not kept cold, and traces of acid left in the oil make it decompose later."
+      - "Carrying or storing the liquid; whole factories, ships and Nobel's own brother were lost that way."
+      - "Thawing frozen dynamite by a fire; old sticks that 'sweat' oil are as dangerous as the liquid."
+      - "Thinking a flame or fuse alone will set it off reliably; it needs a detonator."
+      - "Handling it gives violent headaches; the same substance in tiny doses relieves angina."
+    history:
+      europe: "1846 Schönbein's guncotton; 1847 Sobrero makes nitroglycerin (Turin) and warns against using it; 1863–1865 Nobel's detonator; 1867 dynamite; 1875 blasting gelatine"
+      americas: "1866–1869 – nitroglycerin used on the Central Pacific Railroad and the Hoosac Tunnel"
+    sources:
+      - "G. I. Brown, The Big Bang: A History of Explosives (1998)"
+      - "Kenne Fant, Alfred Nobel: A Biography (1993)"
+
+  - id: petroleum_refining
+    name: Petroleum refining (lamp oil, petrol)
+    category: chemistry
+    requires: [distillation]
+    helps: [oil_drilling, thermometer_temperature, sulphuric_acid]
+    explain: >
+      Crude rock oil is a mixture that is separated by distilling and collecting
+      the fractions by boiling range: light spirit (petrol, up to about 150–200 °C),
+      lamp oil or kerosene (about 150–300 °C), heavier gas and lubricating oils,
+      and a residue of wax and asphalt. Kerosene washed with sulphuric acid and
+      then lye burns bright and clean in a wick lamp with a glass chimney, far
+      cheaper than whale oil or candles. The light spirit, at first a dangerous
+      waste, is the fuel of the petrol engine; heating heavy fractions under
+      pressure cracks them into more of it.
+    pitfalls:
+      - "Leaving light spirit in lamp oil: the lamp explodes. Lamp oil must not give off flammable vapour below about 40 °C."
+      - "Distilling over an open fire with leaky joints; the vapours are heavier than air, creep along the floor and ignite."
+      - "Thinking crude oil burns well in lamps as it is; it smokes, stinks and clogs."
+      - "Expecting oil everywhere; before drilling, supply comes from seeps (Baku, Galicia, Burma, Pennsylvania)."
+    history:
+      mesopotamia: "from c. 3000 BC – bitumen from seeps (Hit) for mortar, waterproofing and boats"
+      china: "by c. 1st c. BC natural gas and some oil from Sichuan wells; 1088 Shen Kuo names 'rock oil' and makes ink from its soot"
+      islamic: "9th–10th c. – al-Razi describes distilling naft into a light lamp oil; Baku's oil is exploited and exported"
+      europe: "1850 Young's paraffin oil (Scotland); 1853 Łukasiewicz's kerosene lamp (Lemberg)"
+      americas: "1840s–1850s Gesner develops kerosene in Canada and the United States; 1859 Drake's well, Pennsylvania; 1913 Burton thermal cracking; 1937 Houdry catalytic cracking"
+    sources:
+      - "R. J. Forbes, Studies in Early Petroleum History (1958)"
+      - "Daniel Yergin, The Prize: The Epic Quest for Oil, Money and Power (1991)"
+
+  - id: polymers_plastics
+    name: Plastics and synthetic polymers
+    category: chemistry
+    requires: []
+    helps: [nitric_acid, sulphuric_acid, organic_structure_theory, synthetic_dyes, rubber_vulcanisation]
+    explain: >
+      Plastics are made of very long chain molecules built from small units. The
+      first were modified natural ones: cotton treated with nitric and sulphuric
+      acids, kneaded with camphor, gives celluloid, mouldable when warm (combs,
+      film). Bakelite was the first fully synthetic one: phenol and formaldehyde
+      heated together and then cured under heat and pressure set to a hard resin
+      that never melts again, an ideal electrical insulator. Once chemists accepted
+      that these are true giant molecules, they could design new ones on purpose:
+      nylon, polythene, PVC, synthetic rubber.
+    pitfalls:
+      - "Celluloid is close kin to guncotton and burns fiercely; film stock caused cinema and archive fires."
+      - "The old belief that such materials are clumps of small molecules; they are single chains of thousands of units."
+      - "Confusing plastics that soften on heating (celluloid, polythene) with those that set for good (Bakelite)."
+      - "Assuming plastics need oil; the early ones started from cotton, coal tar, wood spirit and milk."
+    history:
+      americas: "c. 1600 BC – Mesoamerican rubber, an early deliberately processed natural polymer; 1869–1870 Hyatt's celluloid; 1907 Baekeland's Bakelite; 1935 Carothers's nylon (DuPont)"
+      europe: "1846 Schönbein's nitrocellulose; 1862 Parkes shows Parkesine; 1920 Staudinger proposes macromolecules; 1933 polythene found at ICI; 1930s PVC, polystyrene and synthetic rubber in Germany"
+      east_asia: "ancient – lacquer from the lacquer tree, a natural setting resin, at Kakinoshima in Japan about 9,000 years ago and in Neolithic China"
+    sources:
+      - "Jeffrey L. Meikle, American Plastic: A Cultural History (1995)"
+      - "Yasu Furukawa, Inventing Polymer Science: Staudinger, Carothers, and the Emergence of Macromolecular Chemistry (1998)"
+
+  - id: ammonia_synthesis
+    name: Ammonia synthesis (Haber-Bosch)
+    category: chemistry
+    requires: [pneumatic_chemistry_gases, gas_laws]
+    helps: [refrigeration, coke_iron]
+    explain: >
+      Nitrogen from the air and purified hydrogen (historically obtained from water gas)
+      combine to ammonia when pressed to about 200 atmospheres and passed over an
+      iron catalyst at 400–500 °C. Only some 15 % reacts on each pass, so the
+      ammonia is condensed out by cooling and the remaining gas is sent round
+      again. Ammonia is turned into fertiliser salts or oxidised over platinum to nitric oxide, which is oxidised further and absorbed in water to make nitric acid. This removes the limit that manure, legumes and Chilean nitrate
+      set on harvests, and also frees explosives from imported nitrate.
+    pitfalls:
+      - "Thinking the idea is the hard part. The reaction was known; the obstacle is large vessels and pumps for hot hydrogen at 200 atmospheres."
+      - "Hot hydrogen under pressure makes carbon steel brittle and bursts it; Bosch needed a soft-iron liner inside a vented steel shell."
+      - "Raising the temperature to speed it up lowers the yield; higher pressure favours ammonia at equilibrium. A catalyst speeds the approach to equilibrium without shifting it."
+      - "Traces of sulphur or carbon monoxide in the gas kill the catalyst."
+      - "It is not a pre-industrial project: it needs compressors, alloy steels, gas purification and instrument control."
+    history:
+      europe: "1774 Priestley isolates ammonia gas; 1898 Crookes warns of a coming nitrogen shortage; 1902 Ostwald's ammonia-to-nitric-acid process; 1909 Haber and Le Rossignol's laboratory apparatus (Karlsruhe); 1910 Mittasch's iron catalyst; 1913 Bosch's plant at Oppau (BASF)"
+      global: "by the late 20th c. roughly half the nitrogen in human food comes from this process"
+    sources:
+      - "Vaclav Smil, Enriching the Earth: Fritz Haber, Carl Bosch, and the Transformation of World Food Production (2001)"
+      - "Thomas Hager, The Alchemy of Air (2008)"

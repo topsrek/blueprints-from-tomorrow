@@ -1,0 +1,958 @@
+# Blueprints from Tomorrow – technology tree fragment: Mathematics & measurement.
+# Schema: see the header of techtree/core.yaml.
+
+technologies:
+
+  # ------------------------------------------------------- numbers and reckoning
+  - id: zero_place_value
+    name: Zero and positional notation
+    category: math
+    requires: []
+    helps: [abacus_counting_board]
+    explain: >
+      In positional notation the same sign is worth more the further left it stands
+      (in base ten: units, tens, hundreds), so a handful of signs can write any whole
+      number. In an unruled string of digits an empty place needs a marker to distinguish
+      25, 205 and 250; this placeholder is the first job of zero. The second and
+      deeper step is to treat zero as a number in its own right, the result of taking
+      a quantity from itself, with rules: a + 0 = a, a - 0 = a, a x 0 = 0, a - a = 0,
+      and division by zero is not allowed. The convincing demonstration is to show that
+      the written columns are simply a picture of a counting board, with the zero sign
+      standing for an empty column, and then to add or multiply two large numbers on
+      paper faster than a clerk can with counters, leaving a record that can be checked.
+    pitfalls:
+      - "Saying 'India invented zero' without distinction. A placeholder arose independently in Mesopotamia and Mesoamerica and as an empty space on the Chinese rod board; the Indian step was zero as a number with arithmetic rules, written as one digit among ten."
+      - "Treating the Babylonian sign as a true zero. It ordinarily marked an empty position within a numeral. Context often fixed the overall scale, so the same signs could represent 1, 60 or 3600."
+      - "Giving division by zero a value. Brahmagupta said 0/0 = 0 and Bhaskara II called a/0 infinite; both lead to contradictions (zero times any proposed quotient is zero, so a non-zero dividend has no quotient and 0/0 has no unique quotient). It is undefined."
+      - "Claiming the Church forbade zero or that Romans could not calculate. Roman clerks could calculate with counters. The Florentine guild rule governed how its members recorded debts and credits. The statute gives no reason for the restriction."
+      - "Assuming a year zero. The AD/BC count goes from 1 BC straight to AD 1, because it was devised in Latin Europe without a zero."
+    history:
+      mesopotamia: "c. 2000 BC – sexagesimal place value on clay with no zero, an empty place is a gap or left to context; a tablet from Kish uses hook-shaped placeholder marks (possibly as early as 700 BC); from c. 400–300 BC (late Persian and Seleucid astronomy) a double-wedge sign marks empty middle places, usually leaving the overall scale to context"
+      egypt: "c. 1740 BC – the sign nfr marks a zero balance in palace accounts (Papyrus Boulaq 18) and the base level on building sites; numerals are additive, no place value"
+      greece: "c. AD 150 – Ptolemy's Almagest writes a small circle for an empty place in sexagesimal fractions, taken over with Babylonian astronomy; everyday Greek alphabetic numerals have no zero"
+      rome: "no zero and no written place value, the abacus simply has empty columns; AD 525 Dionysius Exiguus uses a word for zero in his Easter table"
+      americas: "by 36–32 BC – Long Count dates on Epi-Olmec monuments (Chiapa de Corzo Stela 2, Tres Zapotes Stela C) use a base-20 place system (third place 18 x 20) with named calendar units. Explicit Maya zeros appear in the date 8.16.0.0.0 on Uaxactun Stelae 18 and 19, AD 357; independent of the Old World"
+      india: "AD 458 – Lokavibhaga, decimal place value with the word shunya (void); 499 Aryabhata; 628 Brahmagupta gives rules for zero as a number; Bakhshali manuscript writes zero as a dot (radiocarbon dates apply to the birch bark, while the date of the writing remains disputed). The Gwalior temple inscription of 876 includes a written zero"
+      global: "AD 683 – the Khmer inscription K-127 at Sambor in present-day Cambodia records the year 605 of the Shaka era with a dot for zero"
+      china: "c. 4th c. BC – counting rods use decimal place value with an empty space for zero; an Indian calendar translated in 718 and preserved in the Kaiyuan zhanjing describes digits with a dot zero but not adopted; 1247 round zero sign in print (Qin Jiushao, Shushu jiuzhang)"
+      islamic: "c. 825 – al-Khwarizmi's book on Indian reckoning (survives only in Latin, Dixit Algorizmi); c. 952 al-Uqlidisi, early surviving Arabic treatise on Indian arithmetic; zero is called sifr (empty), the root of both 'cipher' and 'zero'"
+      europe: "976 – Codex Vigilanus (Spain) shows the nine digits; c. 990 Gerbert's abacus counters carry digits but need no zero; 12th c. Latin translations of al-Khwarizmi; 1202 Fibonacci writes Liber abaci (revised 1228), teaching the nine digits and zephirum. In 1299 the Florentine Arte del Cambio requires members to write ledger credits and debits out in letters; general use in commerce only in the 15th–16th c."
+    sources:
+      - "Brahmagupta, Brahmasphutasiddhanta (628), ch. 18; tr. H. T. Colebrooke, Algebra, with Arithmetic and Mensuration, from the Sanscrit of Brahmegupta and Bhascara (1817)"
+      - "Giulia Camerani Marri (ed.), Statuti dell’Arte del Cambio di Firenze (1299–1316) (1955), pp. 72–73"
+      - "Robert Kaplan, The Nothing That Is: A Natural History of Zero (1999)"
+      - "Kim Plofker, Mathematics in India (2009)"
+
+  - id: arabic_numerals
+    name: Hindu-Arabic numerals and written arithmetic
+    category: math
+    requires: [zero_place_value]
+    helps: [paper, abacus_counting_board]
+    explain: >
+      Ten signs, 1 to 9 and 0, written in decimal place value, replace both the
+      numerals used for recording and the counters used for calculating. The real gain
+      is the set of written procedures: add and subtract in columns from the right with
+      carrying and borrowing, multiply by one digit at a time and shift each partial
+      product one place left, divide by long division, and check a result by casting
+      out nines. A multiplication table up to 9 x 9 speeds the work. Casting out nines
+      catches some errors but misses transposed digits. Because every step stays on the
+      page, a second person can audit
+      the sum, which a cleared abacus never allows.
+    pitfalls:
+      - "Calling them an Arab invention. The digits and methods are Indian; Arabic-writing scholars transmitted and improved them, and Europe took the western Arabic letter forms."
+      - "Expecting instant acceptance. Fibonacci's book appeared in 1202, yet Roman numerals and counter reckoning dominated European accounts into the 16th century."
+      - "Teaching the digits but not the algorithms and the multiplication table; the signs alone are no faster than Roman numerals."
+      - "Forgetting that the shapes varied. Medieval 4, 5 and 7 look unlike ours, and the same digit can take different forms in different manuscripts."
+    history:
+      mesopotamia: "c. 2000 BC – place value in base 60 with only two signs (1 and 10) repeated; multiplication and reciprocal tables on clay; not decimal and without zero"
+      rome: "Roman numerals are additive and serve for recording; abacuses and fingers are attested aids to reckoning"
+      india: "3rd c. BC – Brahmi signs for 1 to 9 without place value (Ashoka's time); by the 5th–7th c. AD the decimal place-value system with zero, worked on a dust board"
+      china: "rod numerals are already decimal and positional (c. 4th c. BC); Indian digits known c. 718 but ignored; European-style written arithmetic introduced in 1613 (Tongwen suanzhi, Li Zhizao and Matteo Ricci)"
+      islamic: "c. 825 – al-Khwarizmi on Indian reckoning; c. 952 al-Uqlidisi adapts the dust-board methods to pen and paper; the western (ghubar) digit forms of the Maghreb and al-Andalus become the European ones"
+      europe: "976 Codex Vigilanus; 1202 Fibonacci, Liber abaci (Pisa); c. 1230 Sacrobosco's Algorismus for universities; abbaco schools in Italian towns from the late 13th c.; 1478 Treviso Arithmetic, an early European printed commercial arithmetic; Roman numerals displaced in the 15th–16th c."
+    sources:
+      - "Leonardo of Pisa (Fibonacci), Liber abaci (1202, revised 1228); tr. L. E. Sigler, Fibonacci's Liber Abaci (2002)"
+      - "Stephen Chrisomalis, Numerical Notation: A Comparative History (2010)"
+      - "Keith Devlin, The Man of Numbers: Fibonacci's Arithmetic Revolution (2011)"
+
+  - id: abacus_counting_board
+    name: Abacus and counting board
+    category: math
+    requires: []
+    explain: >
+      A board with columns for units, tens, hundreds and so on, on which numbers are
+      laid out with pebbles, counters, rods or sliding beads; it is place value in
+      physical form, and an empty column is the zero. Usually a counter in an upper
+      zone counts five, so no column ever holds more than four or five pieces. Adding
+      is pushing counters together and carrying one to the next column when a column
+      is full; multiplying is repeated shifted addition. A table with chalk lines and a
+      bag of pebbles is enough, and a trained operator is as fast as a pen reckoner.
+    pitfalls:
+      - "Assuming the Chinese bead abacus (suanpan) is ancient. Han mathematicians used counting rods on a board; the bead frame is securely attested only from about the 13th–14th c. and became general under the Ming."
+      - "Believing Greeks and Romans calculated by writing their numerals. Counters provided one practical way to calculate, alongside finger reckoning."
+      - "Overlooking the weakness that matters to merchants and courts. The board keeps no record of the steps, so an error or a fraud cannot be traced."
+      - "Thinking the abacus is slow. In a staged contest in Tokyo in 1946 a soroban expert beat an electric desk calculator in most rounds."
+    history:
+      mesopotamia: "c. 3500 BC – clay counting tokens in sealed envelopes for accounts; a Sumerian counting board is conjectured, none survives"
+      greece: "c. 300 BC – the Salamis tablet, a marble counting board; c. 330 BC the Darius Vase shows a treasurer using one"
+      rome: "1st c. AD – surviving bronze hand abacuses with sliding beads in grooves (four below, one above); pebbles (calculi) on a lined board are the everyday tool"
+      china: "c. 4th c. BC – counting rods on a board, decimal and positional; a ball-arithmetic device is mentioned in the Shushu jiyi (attributed to Xu Yue, c. AD 190, authenticity disputed); suanpan common by the 14th–16th c.; 1592 Cheng Dawei, Suanfa tongzong"
+      east_asia: "c. 16th c. – the soroban reaches Japan from China and is later reduced to one upper and four lower beads"
+      americas: "15th–16th c. – Inca yupana counting board and decimal knotted cords (quipu), described by Guaman Poma c. 1615"
+      europe: "c. 990 – Gerbert of Aurillac's abacus with numbered counters; 12th c. the English Exchequer is named after its chequered counting cloth; reckoning 'on the lines' with jetons lasts into the 17th c."
+    sources:
+      - "Karl Menninger, Number Words and Number Symbols: A Cultural History of Numbers (1969)"
+      - "Lam Lay Yong & Ang Tian Se, Fleeting Footsteps: Tracing the Conception of Arithmetic and Algebra in Ancient China (1992)"
+
+  - id: fractions_rule_of_three
+    name: Common fractions and the rule of three
+    category: math
+    requires: []
+    helps: [arabic_numerals]
+    explain: >
+      A fraction is a number written as numerator over denominator; to add fractions
+      bring them to a common denominator, to multiply them multiply tops and bottoms,
+      to divide by a non-zero fraction multiply by its reciprocal, and reduce by the greatest common divisor
+      (found by repeated subtraction for positive integers, Euclid's algorithm). The rule of three solves
+      every proportion problem of trade: if a things cost b, then c things cost
+      b x c / a (multiply first, divide last). With it one converts currencies, weights
+      and measures, shares profits and mixes alloys.
+    pitfalls:
+      - "Adding numerators and denominators separately (1/2 + 1/3 is 5/6, not 2/5)."
+      - "Applying direct proportion to an inverse relation (more workers need less time, not more)."
+      - "Assuming every culture wrote general fractions. Egyptians used almost only unit fractions, Romans twelfths, Babylonians sexagesimal places."
+      - "Dividing before multiplying in the rule of three and losing accuracy through rounding."
+    history:
+      mesopotamia: "c. 2000–1800 BC – sexagesimal fractions and tables of reciprocals; division is multiplication by the reciprocal"
+      egypt: "c. 1550 BC – Rhind papyrus (copy of a text c. 1850 BC), sums of unit fractions and a table for 2/n"
+      greece: "c. 370 BC – Eudoxus' theory of proportion (Euclid, Elements V); c. 300 BC Euclid's algorithm (Elements VII)"
+      rome: "duodecimal fractions of the as (uncia = 1/12), used for money, weights and inheritances"
+      china: "c. 1st c. AD – Nine Chapters, ch. 1 full arithmetic of common fractions with reduction by mutual subtraction, ch. 2 rule of three (jin you)"
+      india: "499 – Aryabhata states the rule of three (trairashika); fractions written numerator above denominator without a bar (Bakhshali manuscript, Brahmagupta 628)"
+      islamic: "12th c. – al-Hassar (Maghreb) writes the horizontal fraction bar"
+      europe: "1202 – Fibonacci uses the fraction bar; 14th–16th c. the rule of three is the 'golden rule' of the abbaco schools and printed arithmetics"
+    sources:
+      - "Gay Robins & Charles Shute, The Rhind Mathematical Papyrus: An Ancient Egyptian Text (1987)"
+      - "Frank J. Swetz, Capitalism and Arithmetic: The New Math of the 15th Century (1987)"
+      - "Shen Kangshen, John N. Crossley & Anthony W.-C. Lun, The Nine Chapters on the Mathematical Art: Companion and Commentary (1999)"
+
+  - id: decimal_fractions
+    name: Decimal fractions
+    category: math
+    requires: []
+    helps: [zero_place_value, arabic_numerals, fractions_rule_of_three]
+    explain: >
+      Continue place value to the right of the units: tenths, hundredths, thousandths,
+      separated by a mark, so 3 1/4 becomes 3.25. Then fractions are added, multiplied
+      and divided by exactly the same rules as whole numbers, with only the position of
+      the mark to keep track of (in a product, count the decimal places of both
+      factors). Any fraction can be turned into a decimal by long division, and
+      measurements can be given to whatever precision the instrument allows.
+    pitfalls:
+      - "Crediting Stevin with the decimal point. He wrote circled place indices; Bianchini used a decimal point in the 1440s, and Clavius and Napier later used a point."
+      - "Expecting every fraction to terminate. 1/3 = 0.333... repeats for ever, so results must be rounded deliberately."
+      - "Writing more digits than the measurement justifies (false precision)."
+      - "Forgetting that decimals only pay off fully once money, weights and measures are decimal too."
+    history:
+      mesopotamia: "c. 2000 BC – the same idea in base 60, sexagesimal fractions written like whole numbers"
+      china: "3rd c. AD – Liu Hui carries square roots into decimal places using decimal units of measure; 13th c. Qin Jiushao and Yang Hui write decimal fractions in rod numerals"
+      islamic: "c. 952 – al-Uqlidisi (Damascus) uses decimal fractions with a separating mark; 1172 al-Samaw'al; 1427 al-Kashi, Miftah al-hisab, systematic theory"
+      europe: "1440s – Giovanni Bianchini uses a decimal point in astronomical tables. Stevin promotes decimal fractions and measures in 1585. Clavius uses a point in 1593 and Napier discusses decimal separation in 1617"
+    sources:
+      - "Simon Stevin, De Thiende (1585)"
+      - "Glen Van Brummelen, Decimal fractional numeration and the decimal point in 15th-century Italy, Historia Mathematica (2024)"
+      - "Al-Uqlidisi, The Arithmetic of Al-Uqlidisi, tr. A. S. Saidan (1978)"
+
+  - id: negative_numbers
+    name: Negative numbers
+    category: math
+    requires: []
+    helps: [zero_place_value, double_entry]
+    explain: >
+      Numbers continue below zero: a debt is a negative fortune, a position left of the
+      starting mark has negative displacement when right is positive. The rules are that
+      subtracting a negative is adding, a negative times a positive is negative, and a
+      negative times a negative is positive. With them every subtraction has an answer,
+      one formula covers cases that needed several, and equations may have negative
+      solutions that mean something (a loss, the opposite direction). A number line drawn
+      through zero, or a ledger of credits and debts, makes the idea concrete.
+    pitfalls:
+      - "Stating that minus times minus gives minus, or being unable to justify the rule (cancelling a debt three times over is a gain)."
+      - "Assuming educated Europeans accepted them early. Cardano called them fictitious in 1545 and respected mathematicians still rejected them around 1800."
+      - "Confusing the minus sign of subtraction with the sign of a negative number."
+      - "Taking square roots of negative numbers as if they were ordinary numbers."
+    history:
+      china: "c. 1st c. AD – Nine Chapters, ch. 8, rules for positive and negative (red and black rods) in elimination; AD 263 Liu Hui's commentary"
+      india: "628 – Brahmagupta gives the rules for 'fortunes' and 'debts', including products and negative roots"
+      greece: "c. AD 250 – Diophantus calls an equation with a negative solution absurd"
+      islamic: "10th c. – Abu'l-Wafa uses a negative result as a debt; algebraists generally avoid negative solutions; 12th c. al-Samaw'al states the sign rules"
+      europe: "1225 – Fibonacci reads a negative solution as a debt (Flos); 1545 Cardano uses but distrusts them; full acceptance in the 18th–19th c. (Euler's Algebra, 1770)"
+    sources:
+      - "Shen Kangshen, John N. Crossley & Anthony W.-C. Lun, The Nine Chapters on the Mathematical Art: Companion and Commentary (1999)"
+      - "Kim Plofker, Mathematics in India (2009)"
+      - "Leonhard Euler, Vollstaendige Anleitung zur Algebra (1770)"
+
+  - id: square_roots_irrationals
+    name: Square roots and irrational numbers
+    category: math
+    requires: []
+    helps: [zero_place_value, geometry_proof]
+    explain: >
+      The square root of N is found to any accuracy by a simple loop: start with a
+      positive guess g for positive N, then take the average of g and N/g as the new
+      guess; for 2, starting at 1.5, two rounds give about 1.414216. Some roots never come
+      out exactly: if the diagonal of a unit square were a fraction p/q in lowest terms,
+      then p x p = 2 x q x q would force both p and q to be even, a contradiction. So
+      there are lengths that no ratio of whole numbers expresses, and they must be
+      represented exactly by symbols such as √2, or approximately by finite decimals.
+    pitfalls:
+      - "Treating an approximation such as 1.414 or 17/12 as the exact value."
+      - "Repeating as fact the story that Hippasus was drowned for revealing the secret; it is a late legend."
+      - "Believing a long enough decimal expansion will eventually end or repeat."
+      - "Forgetting that a positive number has two square roots, one positive and one negative."
+    history:
+      mesopotamia: "c. 1800–1600 BC – tablet YBC 7289 gives the diagonal of a square as 1;24,51,10 (1.414213), without recording how the approximation was obtained"
+      india: "c. 800–500 BC – Sulbasutras give 577/408 for the root of 2; AD 499 Aryabhata's digit-by-digit square and cube root procedure"
+      greece: "5th c. BC – incommensurability discovered among the Pythagoreans; c. 300 BC classified in Euclid, Elements X"
+      china: "c. 1st c. AD – Nine Chapters, ch. 4, square and cube root extraction on the rod board"
+      islamic: "c. 1070 – Omar Khayyam treats irrational ratios as numbers; 1427 al-Kashi extracts higher roots"
+      europe: "1585 – Stevin argues that irrationals are numbers like any other; 1872 Dedekind gives the rigorous definition of real numbers"
+    sources:
+      - "David Fowler & Eleanor Robson, Square Root Approximations in Old Babylonian Mathematics: YBC 7289 in Context, Historia Mathematica 25 (1998)"
+      - "Euclid, Elements, Book X; tr. T. L. Heath, The Thirteen Books of Euclid's Elements (1908)"
+
+  - id: logarithms
+    name: Logarithms
+    category: math
+    requires: []
+    helps: [decimal_fractions]
+    explain: >
+      Write every positive number as a power of ten; the exponent is its logarithm. Since
+      powers multiply by adding exponents, log(a x b) = log a + log b, a table of
+      logarithms turns multiplication into addition, division into subtraction and
+      roots into division by 2 or 3. A table can be started from coincidences: 2 to
+      the 10th is 1024, close to 10 cubed, so log 2 is about 0.3 (0.30103 to five decimal places);
+      also log 3 = 0.47712 and log 7 = 0.84510, and all other values follow from
+      products and careful interpolation. For astronomers and navigators this cuts
+      hours of multiplication to minutes.
+    pitfalls:
+      - "Thinking the logarithm of a sum is the sum of the logarithms."
+      - "Calling Napier's original logarithms natural logarithms. His 1614 table has a different definition; base 10 came from Briggs in 1617–1624 and base e later."
+      - "Underestimating the labour. A usable table needs thousands of values to 5–7 places and must be printed without errors."
+      - "Reading between table entries without interpolation."
+    history:
+      islamic: "c. 1000 – Ibn Yunus (Cairo) uses a product-to-sum rule for cosines, the basis of later prosthaphaeresis"
+      europe: "1544 – Stifel compares arithmetic and geometric sequences; 1580s prosthaphaeresis (trigonometric product formulas) at Tycho's observatory; 1614 John Napier, Mirifici logarithmorum canonis descriptio; 1620 Jost Buergi independently; 1624 Henry Briggs, Arithmetica logarithmica (base 10)"
+      china: "1653 – logarithm tables introduced by the Jesuit Smogulecki and Xue Fengzuo"
+    sources:
+      - "John Napier, Mirifici logarithmorum canonis descriptio (1614)"
+      - "Eli Maor, e: The Story of a Number (1994)"
+
+  - id: slide_rule
+    name: Slide rule
+    category: math
+    requires: [logarithms]
+    explain: >
+      Two rulers marked so that each number sits at a distance proportional to its
+      logarithm; sliding one along the other adds lengths and therefore multiplies
+      numbers. On a 25 cm scale from 1 to 10, the 2 stands at 7.53 cm, the 3 at
+      11.93 cm, the 5 at 17.47 cm and the 10 at 25 cm. To multiply 2 by 3, set the 1
+      of the sliding scale against 2 on the fixed scale and read the answer under 3.
+      It gives three significant figures at a glance, enough for engineering and
+      gunnery.
+    pitfalls:
+      - "Dividing the scale evenly like a ruler instead of logarithmically."
+      - "Expecting it to add or subtract, or to give exact answers; it gives about three digits."
+      - "Losing track of the decimal point, which the user must place by a rough estimate."
+    history:
+      europe: "1620 – Edmund Gunter's logarithmic scale used with dividers; c. 1622–1632 William Oughtred slides two scales (circular rule printed 1632, straight 1633; Richard Delamain printed a circular rule in 1630 and disputed priority); c. 1850 Amédée Mannheim's standard layout with cursor"
+      global: "c. 1880–1975 – standard tool of engineers until the electronic pocket calculator"
+    sources:
+      - "Florian Cajori, A History of the Logarithmic Slide Rule and Allied Instruments (1909)"
+
+  # ------------------------------------------------------------------- algebra
+  - id: symbolic_algebra
+    name: Symbolic algebra
+    category: math
+    requires: []
+    helps: [arabic_numerals, negative_numbers, printing_press]
+    explain: >
+      Give the unknown a letter and write the problem as an equation, a balance that
+      stays true if the same thing is done to both sides. 'A number and its third make
+      20' becomes x + x/3 = 20, and mechanical steps give x = 15. Letters can also
+      stand for the known quantities, so one solved equation is a formula for every
+      case of that kind. The signs must be introduced and agreed first: + and - for
+      add and subtract, = for equality, a raised number for a power, brackets for
+      grouping.
+    pitfalls:
+      - "Assuming al-Khwarizmi wrote equations with symbols. His algebra is entirely in words, and algebra as a method is much older than its notation."
+      - "Using modern signs without defining them; Widmann printed + and − in 1489, while Recorde introduced = in 1557."
+      - "Dividing both sides by an expression that may be zero, or losing a solution when taking square roots."
+      - "Confusing the letter as one definite unknown with the letter as a variable that takes many values."
+    history:
+      mesopotamia: "c. 1800 BC – problems for an unknown 'length' and 'width' solved by fixed procedures, in words"
+      greece: "c. AD 250 – Diophantus, Arithmetica, abbreviations for the unknown and its powers"
+      india: "628 – Brahmagupta abbreviates unknowns by the initial syllables of colour names and marks negatives with a dot"
+      islamic: "c. 820 – al-Khwarizmi, al-jabr wa'l-muqabala, rhetorical; 15th c. al-Qalasadi (Maghreb) uses short symbols"
+      china: "1248 – Li Ye, Ceyuan haijing, the tian yuan method writes polynomials positionally on the rod board"
+      europe: "1489 Widmann prints + and -; 1557 Recorde's = sign; 1591 Viete uses letters for both unknowns and given quantities; 1637 Descartes' x, y, z and exponents, essentially modern notation"
+    sources:
+      - "Al-Khwarizmi, The Algebra of Mohammed ben Musa, tr. Frederic Rosen (1831)"
+      - "Florian Cajori, A History of Mathematical Notations (1928)"
+
+  - id: quadratic_cubic_equations
+    name: Solving quadratic and cubic equations
+    category: math
+    requires: []
+    helps: [symbolic_algebra, negative_numbers, square_roots_irrationals, complex_numbers]
+    explain: >
+      A quadratic is solved by completing the square: for x squared plus 10x equal to
+      39, add 25 to both sides to get (x + 5) squared = 64, so x = 3 (and x = -13). In
+      general a x^2 + b x + c = 0 has x = (-b plus or minus the root of b^2 - 4ac)
+      divided by 2a. The cubic x^3 + p x = q is solved by Cardano's formula, x = the
+      cube root of (q/2 + R) plus the cube root of (q/2 - R), with R the square root of
+      q^2/4 + p^3/27. There is a formula for the fourth degree. For degree five and above, some equations
+      are solvable in radicals, but no radical formula covers every case. Numerical
+      refinement gives approximations.
+    pitfalls:
+      - "Giving only one root of a quadratic or rejecting the negative one."
+      - "Crediting Cardano with the cubic. Scipione del Ferro found it about 1515 and Tartaglia again in 1535; Cardano published it in 1545."
+      - "Promising a general formula for the fifth degree; Abel proved in 1824 that none exists."
+      - "Stopping when the cubic formula asks for the root of a negative number, although the equation has three real solutions (the irreducible case)."
+    history:
+      mesopotamia: "c. 1800 BC – Old Babylonian tablets (BM 13901) solve quadratics by a cut-and-paste completion of the square"
+      greece: "c. 300 BC – geometric equivalents in Euclid, Elements II and VI"
+      china: "c. 1st c. AD – Nine Chapters, ch. 9, quadratics via root extraction; c. 626 Wang Xiaotong solves cubics numerically; 1247 Qin Jiushao solves equations up to the tenth degree by a Horner-type method"
+      india: "628 – Brahmagupta gives the general rule for one root; 1150 Bhaskara II accepts two roots"
+      islamic: "c. 820 – al-Khwarizmi's six standard types with geometric proofs; c. 1070 Omar Khayyam solves cubics by intersecting conic sections"
+      europe: "c. 1515 del Ferro, 1535 Tartaglia, 1545 Cardano, Ars magna (cubic, and Ferrari's quartic); 1799 Ruffini and 1824 Abel, no general quintic formula; 1832 Galois explains why"
+    sources:
+      - "Girolamo Cardano, Ars magna (1545); tr. T. Richard Witmer, The Great Art or the Rules of Algebra (1968)"
+      - "Jens Hoyrup, Lengths, Widths, Surfaces: A Portrait of Old Babylonian Algebra and Its Kin (2002)"
+
+  - id: linear_equations_matrices
+    name: Systems of linear equations (elimination and matrices)
+    category: math
+    requires: []
+    helps: [negative_numbers, abacus_counting_board, symbolic_algebra]
+    explain: >
+      Several unknowns tied by several conditions are found by elimination: write the
+      coefficients in a rectangular array, multiply rows and subtract them from each
+      other until each row has one unknown fewer, then substitute back. The classic
+      Chinese problem: 3 bundles of good, 2 of medium and 1 of poor grain give 39
+      measures; 2, 3 and 1 give 34; 1, 2 and 3 give 26; elimination yields 9 1/4,
+      4 1/4 and 2 3/4 measures per bundle. Treating the array itself as an object (a
+      matrix) with its own multiplication later organises geometry, mechanics and
+      statistics.
+    pitfalls:
+      - "Calling the method Gauss's invention. It is in the Chinese Nine Chapters about 1,800 years before him."
+      - "Expecting a unique answer when there are fewer independent conditions than unknowns, or when two conditions contradict each other."
+      - "Avoiding negative intermediate values, which the method cannot do without."
+      - "Assuming matrix multiplication is commutative (A times B is generally not B times A)."
+    history:
+      mesopotamia: "c. 1800 BC – two-unknown problems solved by substitution"
+      china: "c. 1st c. AD – Nine Chapters, ch. 8 (fangcheng), elimination on the counting board with positive and negative rods"
+      india: "628 – Brahmagupta treats several unknowns with colour names"
+      east_asia: "1683 – Seki Takakazu (Japan) uses determinants"
+      europe: "1693 Leibniz on determinants (unpublished); 1707 Newton, Arithmetica universalis, elimination; 1750 Cramer's rule; 1809–1810 Gauss's notation for least-squares systems; 1858 Cayley, algebra of matrices"
+    sources:
+      - "Roger Hart, The Chinese Roots of Linear Algebra (2011)"
+      - "Joseph F. Grcar, How Ordinary Elimination Became Gaussian Elimination, Historia Mathematica 38 (2011)"
+
+  - id: complex_numbers
+    name: Complex numbers
+    category: math
+    requires: [negative_numbers, symbolic_algebra]
+    helps: [quadratic_cubic_equations, coordinate_geometry]
+    explain: >
+      Introduce a new number i with i x i = -1 and calculate with a + b i by the ordinary
+      rules. Such numbers are not nonsense: each is a point in a plane (a steps east, b
+      steps north), adding them is adding arrows, and multiplying them multiplies lengths
+      and adds angles, so multiplying by i is a quarter turn. With them every non-constant
+      polynomial of degree n has exactly n complex roots when repeated roots are counted
+      with multiplicity, and Euler's formula e^(ix) = cos x + i sin x ties exponentials to
+      trigonometry. They became the working language of oscillations, alternating current
+      and waves.
+    pitfalls:
+      - "Using the rule root(a) x root(b) = root(a x b) for negative numbers, which gives root(-1) x root(-1) = 1 instead of -1."
+      - "Presenting them as 'imaginary' in the sense of unreal; without the picture of the plane, 18th-century mathematicians used them with a bad conscience."
+      - "Claiming they were invented to solve x^2 = -1. They forced themselves on Cardano and Bombelli through the cubic, where real solutions appear only by passing through them."
+    history:
+      europe: "1545 – Cardano calculates with roots of negatives and calls it useless; 1572 Bombelli gives the rules; 1637 Descartes coins 'imaginary'; 1748 Euler's formula; 1777 Euler writes i; 1799 Wessel and 1806 Argand, the plane picture; 1831 Gauss makes it standard; 1799–1816 Gauss's proofs of the fundamental theorem of algebra"
+    sources:
+      - "Rafael Bombelli, L'Algebra (1572)"
+      - "Paul J. Nahin, An Imaginary Tale: The Story of the Square Root of Minus One (1998)"
+
+  - id: prime_numbers_number_theory
+    name: Prime numbers and number theory
+    category: math
+    requires: []
+    helps: [geometry_proof, symbolic_algebra]
+    explain: >
+      A prime is an integer greater than one with just two positive divisors. Every
+      integer greater than one factors uniquely into primes, apart from their order. There
+      are infinitely many: multiply any finite list of primes and add 1, and the result
+      has a prime factor that is not on the list. The sieve finds them (write the numbers,
+      strike out multiples of 2, 3, 5 and so on). Arithmetic of remainders gives strong
+      tools, such as Fermat's little theorem (a^(p-1) leaves remainder 1 on division by a
+      prime p provided p does not divide a), which in the 20th century became the basis of
+      public-key ciphers.
+    pitfalls:
+      - "Saying that the product of the first primes plus 1 is itself always prime (2 x 3 x 5 x 7 x 11 x 13 + 1 = 30031 = 59 x 509)."
+      - "Offering a simple formula that yields only primes. Fermat's numbers 2^(2^n) + 1 fail at n = 5, as Euler showed in 1732 (divisible by 641)."
+      - "Counting 1 as a prime, which breaks unique factorisation."
+      - "Stating famous open problems (Goldbach, twin primes) as proven facts; Fermat's Last Theorem was proved only in 1995."
+    history:
+      greece: "c. 300 BC – Euclid, Elements VII–IX, the algorithm for the greatest common divisor and the infinity of primes; c. 240 BC sieve of Eratosthenes"
+      china: "c. 3rd–5th c. AD – Sunzi suanjing, the remainder problem; 1247 Qin Jiushao's general method (Chinese remainder theorem)"
+      india: "499 – Aryabhata's kuttaka for linear equations in whole numbers; 628 Brahmagupta and 1150 Bhaskara II solve Pell-type equations"
+      islamic: "9th c. – Thabit ibn Qurra's rule for amicable numbers; c. 1000 Ibn al-Haytham states what is now Wilson's theorem; c. 1300 al-Farisi on factorisation"
+      europe: "1640 Fermat's little theorem; 1736–1763 Euler's proofs and generalisation; 1737 Euler's product for the zeta function; 1801 Gauss, Disquisitiones arithmeticae; 1896 prime number theorem; 1977 RSA cipher"
+    sources:
+      - "Euclid, Elements, Books VII–IX; tr. T. L. Heath, The Thirteen Books of Euclid's Elements (1908)"
+      - "Andre Weil, Number Theory: An Approach through History from Hammurapi to Legendre (1984)"
+
+  - id: combinatorics_permutations
+    name: Combinatorics (permutations, combinations, Pascal's triangle)
+    category: math
+    requires: []
+    helps: [symbolic_algebra]
+    explain: >
+      Counting arrangements without listing them. n different things can be put in order
+      in n! = n x (n-1) x ... x 1 ways (5 things: 120). The number of ways to choose k of
+      n when order does not matter is n! / (k! (n-k)!), so 3 of 6 can be chosen in 20
+      ways. These numbers form the arithmetical triangle, in which the outer entries are
+      ones and each interior entry is the sum of the two above it, and they are also the
+      coefficients of (a + b)^n. This is the tool for odds in games, lotteries, codes and
+      locks.
+    pitfalls:
+      - "Confusing arrangements (order matters) with selections (order does not)."
+      - "Calling the triangle Pascal's discovery. It was known in India, Persia and China centuries earlier; Pascal gave the systematic theory and the link to chance."
+      - "Underestimating growth. 20! is already about 2.4 x 10^18, so trying all cases quickly becomes impossible."
+    history:
+      india: "c. 3rd–2nd c. BC – Pingala counts poetic metres of long and short syllables; Sushruta Samhita counts 63 combinations of six tastes; c. 850 Mahavira gives the general formula for combinations; 10th c. Halayudha describes the triangle"
+      china: "c. 1050 – Jia Xian's triangle, preserved by Yang Hui (1261); 1303 Zhu Shijie"
+      greece: "2nd c. BC – Hipparchus counts compound propositions (reported by Plutarch)"
+      islamic: "8th c. – al-Khalil counts possible Arabic words; c. 1000 al-Karaji's triangle of binomial coefficients; c. 1200 Ibn Mun'im (Marrakesh)"
+      europe: "1321 – Levi ben Gerson proves the formulas for permutations and combinations; 1654 Pascal, Traite du triangle arithmetique (printed 1665); 1666 Leibniz; 1713 Jakob Bernoulli, Ars conjectandi"
+    sources:
+      - "Blaise Pascal, Traite du triangle arithmetique (1665)"
+      - "A. W. F. Edwards, Pascal's Arithmetical Triangle (1987)"
+      - "Robin Wilson & John J. Watkins (eds), Combinatorics: Ancient and Modern (2013)"
+
+  - id: compound_interest_exponential_growth
+    name: Compound interest and exponential growth
+    category: math
+    requires: [fractions_rule_of_three]
+    helps: [decimal_fractions, logarithms]
+    explain: >
+      When growth is a fixed share of what is already there, the amount is multiplied
+      by the same factor in each period: a sum P at rate r becomes P x (1 + r)^n after
+      n periods. Such growth doubles in equal times, roughly 72 divided by the rate in
+      per cent (5 per cent doubles in about 14 years, 20 per cent in under 4), and
+      always overtakes any steady addition in the end. The same law governs debts,
+      populations with enough food, epidemics in their early phase and, in reverse,
+      discounting a future payment to its present value.
+    pitfalls:
+      - "Calculating simple interest (the same amount each year) where interest is itself charged interest."
+      - "Trusting the rule of 72 at very high rates or over a few periods."
+      - "Extrapolating an exponential for ever; real growth meets limits (food, the susceptible population, the debtor's ruin)."
+      - "Ignoring the law of the place. Compound interest was restricted under Roman law, and taking interest at all was condemned as usury in medieval Christian and Islamic law."
+    history:
+      mesopotamia: "c. 2400 BC – Enmetena of Lagash claims a barley debt swollen by compound interest; c. 1800 BC school tablets ask how long a loan takes to double (customary rates 20 per cent on silver, 33 1/3 per cent on barley)"
+      rome: "1st c. BC – a legal maximum of 12 per cent a year (centesima) and limits on interest upon interest (anatocismus), attested in Cicero's letters"
+      china: "c. 1st c. AD – Nine Chapters, ch. 7, problems of daily doubling and halving growth"
+      islamic: "1256 – Ibn Khallikan records the chessboard story of doubled grains of wheat"
+      europe: "1202 – Fibonacci, problems of compound interest; 1494 Pacioli states the rule of 72; 1558 Trenchant and 1582 Stevin print interest tables; 1683 Jakob Bernoulli studies continuous compounding; 1798 Malthus on population"
+    sources:
+      - "Leonardo of Pisa (Fibonacci), Liber abaci (1202, revised 1228); tr. L. E. Sigler, Fibonacci's Liber Abaci (2002)"
+      - "Sidney Homer, A History of Interest Rates (1963)"
+      - "Thomas Robert Malthus, An Essay on the Principle of Population (1798)"
+
+  # ------------------------------------------------------------------ geometry
+  - id: geometry_proof
+    name: Deductive geometry and proof (Euclid, Pythagoras)
+    category: math
+    requires: []
+    helps: [formal_logic]
+    explain: >
+      Start from a few stated definitions and axioms and derive every further
+      statement by steps that anyone can check, so that a result is certain for all
+      cases and not just for the examples measured. The model result is the theorem of
+      Pythagoras: in a right-angled triangle the squares on the two short sides
+      together equal the square on the long side (3-4-5, 5-12-13). It can be proved by
+      placing four copies of the triangle inside a square of side a + b in two ways.
+      Useful basics follow the same way: the angles of a triangle sum to two right
+      angles, and similar triangles have proportional sides, which lets one measure
+      what cannot be reached.
+    pitfalls:
+      - "Crediting Pythagoras with discovering the theorem. Babylonian scribes used it a thousand years before him; no proof by Pythagoras himself survives."
+      - "Stating as fact that Egyptian rope-stretchers laid out right angles with a 3-4-5 knotted rope; no Egyptian source says so."
+      - "Offering many measured examples as a proof."
+      - "Treating Euclid's parallel postulate as provable from the others, which wasted two thousand years of effort."
+    history:
+      mesopotamia: "c. 1800 BC – Plimpton 322 lists Pythagorean triples and YBC 7289 uses the diagonal rule; procedures, no stated proofs"
+      egypt: "c. 1550 BC – Rhind papyrus, rules for areas and pyramid slopes; no proofs"
+      india: "c. 800–500 BC – Baudhayana Sulbasutra states the diagonal rule for altar construction"
+      greece: "6th c. BC – proof is attributed to Thales and the Pythagoreans; c. 300 BC Euclid, Elements, the axiomatic model"
+      china: "c. 1st c. BC–1st c. AD – Zhoubi suanjing, the gougu (3-4-5) rule; 3rd c. AD Zhao Shuang's and Liu Hui's dissection proofs; 1607 Ricci and Xu Guangqi translate Elements I–VI"
+      islamic: "c. 800 – al-Hajjaj translates the Elements into Arabic; 9th c. Thabit ibn Qurra revises and extends them"
+      europe: "c. 1120s – Adelard of Bath translates the Elements from Arabic into Latin; 1482 first printed edition (Ratdolt, Venice)"
+    sources:
+      - "Euclid, Elements; tr. T. L. Heath, The Thirteen Books of Euclid's Elements (1908)"
+      - "Eleanor Robson, Mathematics in Ancient Iraq: A Social History (2008)"
+
+  - id: pi_circle_measurement
+    name: Pi and the measurement of the circle
+    category: math
+    requires: []
+    helps: [geometry_proof, square_roots_irrationals, decimal_fractions]
+    explain: >
+      The circumference of every circle is the same multiple of its diameter, about
+      3.1416, and the area is that number times the radius squared (cut the disc into
+      thin wedges and rearrange them into a near-rectangle of sides r and half the
+      circumference). The number can be trapped between the perimeters of polygons
+      drawn inside and outside the circle; doubling from the hexagon to 96 sides gives
+      Archimedes' bounds 3 10/71 and 3 1/7. For practice 22/7 is good to 1 part in
+      2,500 and 355/113 to 1 in 10 million. The number is not a fraction and its
+      decimals never repeat.
+    pitfalls:
+      - "Taking 22/7 or 3.14 as the exact value."
+      - "Believing the circle can be squared with ruler and compasses; this was proved impossible in 1882."
+      - "Using the diameter where the formula wants the radius (area is pi r^2, not pi d^2)."
+      - "Giving pi = 3 as 'the ancient value' everywhere; Babylonian and Egyptian scribes already had better ones."
+    history:
+      mesopotamia: "c. 1900–1600 BC – 3 in everyday rules, 3 1/8 on a tablet from Susa"
+      egypt: "c. 1550 BC – Rhind papyrus, area of a circle as the square on 8/9 of the diameter (equivalent to 3.16)"
+      greece: "c. 250 BC – Archimedes, Measurement of a Circle, 223/71 < pi < 22/7; c. AD 150 Ptolemy 3;8,30 (3.1417)"
+      china: "AD 263 – Liu Hui 3.1416 by polygons; c. 480 Zu Chongzhi 3.1415926 < pi < 3.1415927 and the fraction 355/113"
+      india: "499 – Aryabhata 3.1416, called approximate; c. 1400 Madhava's infinite series, 11 decimals"
+      islamic: "1424 – al-Kashi (Samarkand), 16 decimals"
+      europe: "1593 Viete's infinite product; 1596–1610 Ludolph van Ceulen, 35 decimals; 1706 Machin 100 decimals and William Jones uses the letter pi (spread by Euler); 1761 Lambert proves irrationality; 1882 Lindemann proves transcendence"
+    sources:
+      - "Archimedes, Measurement of a Circle; in T. L. Heath, The Works of Archimedes (1897)"
+      - "Petr Beckmann, A History of Pi (1970)"
+
+  - id: trigonometry
+    name: Trigonometry
+    category: math
+    requires: [geometry_proof]
+    helps: [decimal_fractions, pi_circle_measurement, logarithms]
+    explain: >
+      In a right-angled triangle the ratios of the sides depend only on the angle:
+      sine is opposite over hypotenuse, cosine adjacent over hypotenuse, tangent
+      opposite over adjacent (sin 30 degrees = 1/2, tan 45 degrees = 1). A table of
+      these ratios for every angle turns angle measurements into distances: the height
+      above the observer’s eye is the horizontal distance times the tangent of the angle of elevation.
+      For any triangle the sides are in proportion to the sines of the opposite angles
+      (law of sines), so one measured side and two angles give the rest. That is the
+      basis of surveying, astronomy, navigation and gunnery.
+    pitfalls:
+      - "Assuming old tables hold ratios. Ptolemy tabulated chords and Indian and Islamic tables give the sine as a length in a circle of radius 60 or 3438, not of radius 1."
+      - "Mixing units of angle (degrees with minutes, versus radians)."
+      - "Using plane formulas for large triangles on the globe or the sky, which need spherical trigonometry."
+      - "Presenting the Babylonian tablet Plimpton 322 as a trigonometric table; that reading is a minority view."
+    history:
+      mesopotamia: "c. 500 BC onward – the circle of 360 degrees with sexagesimal subdivision comes from Babylonian astronomy; no angle functions"
+      greece: "c. 140 BC – Hipparchus' table of chords; c. AD 100 Menelaus' spherical theorems; c. AD 150 Ptolemy's chord table in half-degree steps (Almagest I)"
+      india: "c. 400–500 – the half-chord (jya) replaces the chord; 499 Aryabhata's sine table in steps of 3 3/4 degrees"
+      china: "c. 725 – Yi Xing's table of gnomon shadows is read by some as a tangent table; 13th c. Guo Shoujing develops arc calculations for spherical astronomy. European trigonometric tables enter the Jesuit calendar reform in the 17th c."
+      islamic: "10th c. – Abu'l-Wafa, tangent and all six functions, law of sines (also claimed for Abu Nasr Mansur and al-Khujandi); c. 1260 Nasir al-Din al-Tusi makes trigonometry a subject of its own"
+      europe: "1464 – Regiomontanus, De triangulis (printed 1533); 1595 Pitiscus coins the word; 1596 Rheticus' great tables (Opus palatinum)"
+    sources:
+      - "Ptolemy, Almagest; tr. G. J. Toomer, Ptolemy's Almagest (1984)"
+      - "Glen Van Brummelen, The Mathematics of the Heavens and the Earth: The Early History of Trigonometry (2009)"
+
+  - id: coordinate_geometry
+    name: Coordinate geometry and graphs of functions
+    category: math
+    requires: [symbolic_algebra]
+    helps: [negative_numbers, geometry_proof]
+    explain: >
+      Draw two number lines at right angles; every point of the plane is then a pair
+      of numbers (x across, y up), and many equations in x and y trace curves:
+      y = 2x + 1 is a straight line, x^2 + y^2 = 25 a circle of radius 5, y = x^2 a
+      parabola. Geometric problems become algebra (where two curves meet is where both
+      equations hold) and algebraic relations become pictures. Plotting one quantity
+      against another, for instance distance against time, shows a law at a glance.
+    pitfalls:
+      - "Assuming Descartes drew the modern pair of perpendicular axes with negative values. He used a single base line and positive lengths; the full system grew over the following century."
+      - "Forgetting Fermat, who had the method at the same time."
+      - "Mixing up the order of the two coordinates or using unequal scales without saying so."
+    history:
+      greece: "c. 200 BC – Apollonius describes conic sections by relations to reference lines; c. AD 150 Ptolemy's Geography locates places by latitude and longitude"
+      china: "3rd c. AD – Pei Xiu's principles of map-making with a rectangular grid"
+      islamic: "c. 1070 – Omar Khayyam links cubic equations with intersecting conics"
+      europe: "c. 1350 – Nicole Oresme plots a quality against time or distance ('latitude of forms'); 1637 Descartes, La Geometrie; c. 1636 Fermat's Isagoge (printed 1679); negative coordinates and both axes standard by the 18th c."
+    sources:
+      - "Rene Descartes, La Geometrie (1637)"
+      - "Carl B. Boyer, History of Analytic Geometry (1956)"
+
+  - id: non_euclidean_geometry
+    name: Non-Euclidean geometry
+    category: math
+    requires: [geometry_proof]
+    helps: [trigonometry, round_earth_size]
+    explain: >
+      Euclid's parallel postulate (through a point outside a line there is exactly one
+      parallel) cannot be proved from his other axioms; replacing it gives geometries
+      that are just as consistent. On a sphere, where 'lines' are great circles, there
+      are no parallels and the angles of a triangle add up to more than 180 degrees: a
+      triangle from the pole to two points on the equator a quarter-circle apart has
+      three right angles. In hyperbolic geometry there are many parallels and the
+      angle sum is below 180 degrees. Which geometry holds for physical space is
+      therefore a question for measurement, not for pure reason.
+    pitfalls:
+      - "Saying Euclid was wrong. His geometry is consistent; it is one of several."
+      - "Thinking the surface of a sphere was unknown territory. Spherical geometry is ancient; the new step was to see it and the hyperbolic case as rivals to Euclid's axioms."
+      - "Expecting a quick hearing. Gauss kept his results private for fear of ridicule and the idea was accepted only after 1868."
+    history:
+      greece: "c. 300 BC – Euclid states the parallel postulate as an assumption; c. AD 100 Menelaus, Sphaerica, geometry of spherical triangles; 5th c. Proclus records failed proofs"
+      islamic: "c. 1000–1250 – Ibn al-Haytham, Omar Khayyam (1077) and Nasir al-Din al-Tusi attempt proofs and study the quadrilateral later named after Saccheri"
+      europe: "1733 Saccheri and 1766 Lambert derive hyperbolic theorems while trying to refute them; 1829 Lobachevsky and 1832 Janos Bolyai publish the new geometry; 1854 Riemann's general theory of curved space; 1868 Beltrami proves consistency; 1915 Einstein uses curved space-time for gravity"
+    sources:
+      - "Nikolai Lobachevsky, Geometrische Untersuchungen zur Theorie der Parallellinien (1840)"
+      - "Jeremy Gray, Ideas of Space: Euclidean, Non-Euclidean, and Relativistic (1979)"
+
+  - id: perspective_technical_drawing
+    name: Linear perspective and technical drawing
+    category: math
+    requires: []
+    helps: [geometry_proof, camera_obscura, paper]
+    explain: >
+      A picture is a flat cut through the cone of sight between eye and object. Fix
+      the eye point; draw the horizon at eye level; all lines running straight away
+      from the viewer meet in one vanishing point on it, and equal depths shrink
+      according to a geometric construction, not by a fixed fraction. Tracing a scene
+      on a pane of glass or through a squared veil proves the rules. For building
+      things the opposite kind of drawing is needed: plan, front and side views
+      without perspective, lined up with each other, to a stated scale and with
+      dimensions, so that a craftsman who has never seen the object can make it.
+    pitfalls:
+      - "Shrinking successive depths by a fixed ratio such as two thirds, the workshop rule Alberti himself rejected."
+      - "Using perspective views as working drawings. They cannot be measured; workshops need scaled plan and elevation."
+      - "Saying ancient and medieval artists 'could not draw in perspective' out of ignorance; Roman wall painters and Chinese painters used other consistent systems for other purposes."
+      - "Putting every vanishing point on the horizon. Parallel horizontal lines receding in depth meet there, while inclined lines can vanish above or below it."
+    history:
+      mesopotamia: "c. 2120 BC – statue of Gudea of Lagash with a scaled temple plan and a ruler on his lap"
+      egypt: "c. 1150 BC – Turin papyrus map of the gold mines; square grids to transfer figures; plans and elevations on papyrus and ostraca"
+      greece: "5th c. BC – stage painting with depth (Agatharchus, reported by Vitruvius); c. 300 BC Euclid's Optics, the geometry of the visual cone"
+      rome: "c. 25 BC – Vitruvius names plan, elevation and perspective view (ichnographia, orthographia, scaenographia)"
+      china: "1103 – Yingzao fashi, state building manual with plans, sections and joinery drawings; painters use parallel projection; European perspective introduced by Jesuits (1729 Nian Xiyao, Shixue)"
+      islamic: "c. 1020 – Ibn al-Haytham's Optics, the theory of vision on which Renaissance perspective is built"
+      europe: "c. 1415–1425 – Brunelleschi's demonstration panels in Florence; 1435 Alberti, De pictura, first written method; c. 1474 Piero della Francesca; 1525 Duerer; 1799 Monge publishes descriptive geometry, the basis of engineering drawing"
+    sources:
+      - "Leon Battista Alberti, De pictura (1435)"
+      - "Martin Kemp, The Science of Art: Optical Themes in Western Art from Brunelleschi to Seurat (1990)"
+      - "Peter Jeffrey Booker, A History of Engineering Drawing (1963)"
+
+  # ------------------------------------------------------------- measurement
+  - id: surveying_triangulation
+    name: Surveying, levelling and triangulation
+    category: math
+    requires: []
+    helps: [geometry_proof, trigonometry, telescope, logarithms, magnetic_compass]
+    explain: >
+      Land is measured with a chain or rods for distance, a sighting device for
+      straight lines and angles, and a level (a water trough or plumb line) for
+      height. Triangulation avoids measuring long distances on the ground: measure one
+      baseline very carefully, sight a distant point from both ends, and the two
+      angles fix the triangle; each new side serves as the baseline of the next
+      triangle. The work can be done by calculation with sine tables or drawn directly
+      to scale on a plane table. Errors are caught by measuring all three angles and
+      closing the chain of triangles on a second measured line.
+    pitfalls:
+      - "Measuring along the slope and using it as horizontal distance."
+      - "Choosing long thin triangles, in which a small error of angle becomes a large error of position."
+      - "Trusting a single measurement of the baseline; every later distance inherits its error."
+      - "Relying on the compass needle for angles without allowing for declination and nearby iron."
+    history:
+      mesopotamia: "c. 2100 BC – field plans with measured sides and computed areas on Ur III tablets"
+      egypt: "from the 3rd millennium BC – rope-stretchers remeasure fields after the Nile flood; pyramids are levelled and oriented to a fraction of a degree"
+      greece: "c. 530 BC – Eupalinos' tunnel on Samos is dug from both ends and meets; 1st c. AD Hero of Alexandria, Dioptra, a sighting instrument for angles and levelling"
+      rome: "from the 4th–3rd c. BC – surveyors (agrimensores) lay out roads, aqueducts and land grids with groma and chorobates"
+      china: "AD 263 – Liu Hui, Haidao suanjing, heights and distances by double sightings; 3rd c. Pei Xiu's rules for scale maps"
+      islamic: "c. 1020 – al-Biruni derives the Earth's radius from the dip of the horizon seen from a mountain at Nandana"
+      europe: "1533 – Gemma Frisius describes triangulation; 1551–1571 plane table and theodolite (Foullon, Digges); 1615–1617 Snellius triangulates a meridian arc; 1620 Gunter's chain; 1669–1670 Picard with telescopic sights; 1744–1793 the Cassini survey of France"
+    sources:
+      - "Gemma Frisius, Libellus de locorum describendorum ratione (1533)"
+      - "M. J. T. Lewis, Surveying Instruments of Greece and Rome (2001)"
+
+  - id: solar_calendar_leap_years
+    name: Solar calendar with leap years
+    category: math
+    requires: []
+    helps: [sundial_water_clock, fractions_rule_of_three]
+    explain: >
+      The year of the seasons is about 365.2422 days, not a whole number and not a
+      whole number of moons (12 lunar months are only 354 days). A calendar of 365
+      days drifts by a day every four years; adding a leap day every fourth year
+      (average 365.25) still drifts by one day in about 128 years. The Gregorian rule
+      repairs this by dropping three leap days in 400 years: century years are leap
+      years only if divisible by 400, which leaves an error of one day in roughly
+      3,000 years. The length of the year can be measured by counting the days between
+      equal noon shadows of a tall gnomon over many years.
+    pitfalls:
+      - "Stating the year as exactly 365 1/4 days."
+      - "Forgetting the century rule (1700, 1800 and 1900 were not leap years; 1600 and 2000 were)."
+      - "Assuming the reform was adopted at once. Catholic states changed in 1582, Protestant Germany in 1700, Britain in 1752, Russia in 1918, so dates differ by 10 to 13 days between countries."
+      - "Expecting people to accept losing days calmly; rents, wages, saints' days and Easter are all tied to the calendar, and a reform needs the authority that controls it."
+    history:
+      egypt: "3rd millennium BC – civil year of 365 days with no leap day, drifting through the seasons; 238 BC Canopus decree tries to add a leap day and is ignored"
+      mesopotamia: "lunisolar calendar with a 13th month added by royal order when needed; a regular 19-year cycle (7 extra months) from about 500 BC"
+      greece: "432 BC – Meton's 19-year cycle; 2nd c. BC Hipparchus measures the year as slightly less than 365 1/4 days"
+      rome: "46–45 BC – Julius Caesar, advised by Sosigenes of Alexandria, introduces the 365-day year with a leap day every fourth year; misapplied every third year at first and running regularly from c. AD 8"
+      china: "lunisolar calendar with intercalary months and 24 solar terms; year of 365 1/4 days in use by the Warring States; 104 BC Taichu reform; 1281 Guo Shoujing's Shoushi calendar uses 365.2425 days"
+      india: "c. 5th c. AD – Surya Siddhanta, solar year tied to the stars (365.2588 days), so the seasons slowly drift"
+      islamic: "the religious calendar is purely lunar (354 days); 1079 Jalali solar calendar of Isfahan (Omar Khayyam among its astronomers), very accurate"
+      americas: "Maya haab and Aztec xiuhpohualli, each of 365 days without leap days, running alongside a 260-day count"
+      europe: "725 – Bede notes the drift of the equinox; 1582 Gregorian reform (10 days dropped, new century rule)"
+    sources:
+      - "E. G. Richards, Mapping Time: The Calendar and Its History (1998)"
+      - "Bonnie Blackburn & Leofranc Holford-Strevens, The Oxford Companion to the Year (1999)"
+
+  - id: metric_system_units
+    name: Decimal, coherent system of units (metric system)
+    category: math
+    requires: [decimal_fractions]
+    helps: [standard_weights_measures, surveying_triangulation, pendulum_clock]
+    explain: >
+      One unit for each kind of quantity, multiples and parts only in steps of ten,
+      and the units tied to each other and to something in nature that anyone can
+      measure again. The metre was defined as one ten-millionth of the distance from
+      pole to equator; a cube of one tenth of a metre is the litre, and a litre of pure
+      water near 4 °C has a mass of about one kilogram. A handy natural check is that a
+      pendulum beating
+      seconds is 0.994 m long. Conversions then need no tables, and a standard that is
+      lost can be recreated.
+    pitfalls:
+      - "Thinking the hard part is the idea. The hard part is law, enforcement and distributing verified copies; France itself retreated in 1812 and made the system compulsory only in 1840."
+      - "Believing the metre really is one ten-millionth of the quadrant. The 1799 standard is about 0.2 mm short, and the bar, not the Earth, became the definition."
+      - "Trying to decimalise time and angles as well; the Revolutionary 10-hour day failed within two years."
+      - "Confusing mass and weight when defining the kilogram."
+    history:
+      mesopotamia: "c. 2100 BC – royal standard weights and measures in a sexagesimal system (shekel, mina, talent) under Ur-Nammu and Shulgi"
+      egypt: "c. 2700 BC – royal cubit of about 52.4 cm kept as a master rod"
+      india: "c. 2600 BC – Indus cities use uniform graded stone weights"
+      china: "221 BC – Qin unifies weights and measures by law; AD 9 Wang Mang's bronze standard measure; length units are divided decimally"
+      rome: "standard foot, pound and measures kept in temples and market halls across the empire"
+      europe: "1585 Stevin calls for decimal measures; 1668 Wilkins and 1670 Mouton propose decimal systems based on nature; 1791–1799 French survey from Dunkirk to Barcelona and the first metre and kilogram; 1875 Metre Convention"
+      global: "1960 – International System of Units (SI)"
+    sources:
+      - "Ken Alder, The Measure of All Things: The Seven-Year Odyssey and Hidden Error That Transformed the World (2002)"
+      - "Simon Stevin, De Thiende (1585)"
+
+  # -------------------------------------------------------- chance and data
+  - id: probability_statistics
+    name: Probability and statistics
+    category: math
+    requires: [fractions_rule_of_three]
+    helps: [arabic_numerals, combinatorics_permutations, census_vital_registration]
+    explain: >
+      Chance obeys arithmetic. If all outcomes are equally likely, the probability of
+      an event is the number of favourable cases divided by all cases; probabilities
+      of independent events multiply; the fair price of a gamble is each gain times
+      its probability, added up. In a long series the observed frequency settles near
+      the probability (law of large numbers), which is why insurers and casinos can
+      plan. The same thinking applied to society means counting cases systematically
+      (deaths by week, place, age and cause; outcomes with and without a remedy) and
+      comparing rates, not impressions.
+    pitfalls:
+      - "The gambler's fallacy, that a number is 'due' after a run of misses; dice have no memory."
+      - "Adding probabilities that should not be added (four throws of a die do not give 4/6 for a six, but 1 - (5/6)^4 = 0.52)."
+      - "Comparing raw counts and not rates (more deaths in the larger parish does not mean it is less healthy)."
+      - "Drawing conclusions from a handful of cases, or reading a cause into every association."
+    history:
+      rome: "c. AD 220 – Ulpian's table of annuity values by age, a rough schedule of life expectancy; dice and lots are universal but no calculus of chances exists"
+      india: "early centuries AD – the Nala story in the Mahabharata links skill at dice with estimating a tree's leaves from a sample; no theory"
+      islamic: "9th c. – al-Kindi breaks ciphers by counting letter frequencies, an early statistical inference"
+      europe: "c. 1564 – Cardano, Liber de ludo aleae (printed 1663); 1654 Pascal and Fermat's letters; 1657 Huygens; 1662 Graunt analyses the London bills of mortality; 1713 Jakob Bernoulli, law of large numbers; 1718 de Moivre, Doctrine of Chances"
+    sources:
+      - "John Graunt, Natural and Political Observations Made upon the Bills of Mortality (1662)"
+      - "Ian Hacking, The Emergence of Probability (1975)"
+
+  - id: bayes_theorem
+    name: Bayes' theorem (updating belief by evidence)
+    category: math
+    requires: [probability_statistics]
+    explain: >
+      How strongly evidence supports a hypothesis depends on how much more likely
+      that evidence is if the hypothesis is true than if it is false, and on how
+      plausible the hypothesis was beforehand. Counting cases shows it: if 1 person in
+      1,000 has a disease and a test catches 99 per cent of the sick but also flags 5
+      per cent of the healthy, then of 1,000 people about 51 test positive and only 1
+      is sick, so a positive result means a chance of about 2 per cent. Each new piece
+      of evidence updates the previous estimate in the same way.
+    pitfalls:
+      - "Confusing the probability of the evidence given the hypothesis with the probability of the hypothesis given the evidence."
+      - "Ignoring the base rate (how common the thing is in the first place)."
+      - "Giving a hypothesis a prior probability of exactly 0 or 1, after which no evidence can change it."
+    history:
+      europe: "1763 – Thomas Bayes's essay, published after his death by Richard Price; 1774 Laplace finds the rule independently and develops it; out of favour c. 1900–1950, then revived (wartime codebreaking, later computing)"
+    sources:
+      - "Thomas Bayes, An Essay towards Solving a Problem in the Doctrine of Chances, Philosophical Transactions 53 (1763)"
+      - "Sharon Bertsch McGrayne, The Theory That Would Not Die (2011)"
+
+  - id: normal_distribution_errors
+    name: Errors of measurement, the bell curve and least squares
+    category: math
+    requires: [probability_statistics]
+    helps: [calculus, data_graphs, linear_equations_matrices]
+    explain: >
+      When many small independent effects contribute to a reading, their combined error
+      can be approximately normal: a symmetric bell-shaped curve, with
+      about two thirds of readings within one standard deviation and 95 per cent
+      within two. For independent readings of equal variance, take the mean. Its standard
+      error shrinks with the square root of the number of readings, so four times the work
+      halves the error. To fit a line or an orbit to many imperfect observations,
+      choose the one that makes the sum of the squared deviations smallest. Always
+      state a result together with its uncertainty.
+    pitfalls:
+      - "Believing averaging cures everything. It reduces random scatter, not a systematic error such as a wrong scale or a biased sample."
+      - "Expecting ten times the readings to give ten times the accuracy; it gives about three times."
+      - "Assuming every quantity is bell-shaped. Incomes, city sizes and disasters are not, and extreme cases are far more frequent there."
+      - "Discarding the readings that do not fit the expected answer."
+    history:
+      greece: "2nd c. BC–2nd c. AD – Hipparchus and Ptolemy usually select one observation judged best; they do not combine many"
+      islamic: "10th–11th c. – astronomers such as al-Biruni discuss observational error and take the middle of discordant values"
+      europe: "c. 1580s – Tycho Brahe repeats and combines observations; 1733 de Moivre finds the bell curve as the limit of coin tossing; 1755 Simpson argues for the mean; 1805 Legendre publishes least squares; 1809 Gauss links it to the error curve; 1810 Laplace, central limit theorem; 1835 Quetelet applies the curve to human data"
+    sources:
+      - "Carl Friedrich Gauss, Theoria motus corporum coelestium (1809)"
+      - "Stephen M. Stigler, The History of Statistics: The Measurement of Uncertainty before 1900 (1986)"
+
+  - id: data_graphs
+    name: Graphs of data (line, bar and pie charts)
+    category: math
+    requires: []
+    helps: [coordinate_geometry, decimal_fractions, paper]
+    explain: >
+      Turn a table of numbers into a picture: mark time or one measured quantity along
+      a horizontal scale and the other up a vertical scale, put a point for each pair
+      and join the points, or draw bars whose lengths are the amounts. Trends, turning
+      points, outliers and comparisons that are invisible in columns of figures are
+      seen at once, also by people who do not read tables. The scales must be labelled
+      with units and should start where the comparison is honest.
+    pitfalls:
+      - "Cutting off or stretching the vertical scale so that a small change looks dramatic."
+      - "Leaving out scales, units or the source of the figures."
+      - "Joining points with a line where there is nothing in between (separate categories)."
+      - "Assuming the idea is obvious. Before about 1800 learned readers trusted tables and regarded pictures of numbers as unserious."
+    history:
+      china: "1137 – the stone map Yu ji tu uses a regular square grid as a scale; a cartographic precursor, not a data graph"
+      europe: "c. 10th–11th c. – an isolated manuscript diagram plots planetary positions on a grid; c. 1350 Oresme draws theoretical quantities as figures; 1686 Halley plots air pressure against height; 1765 Priestley's timeline chart; 1760s–1770s Lambert graphs experimental data; 1786 William Playfair's line and bar charts, 1801 his pie chart; 1854 Snow's cholera map; 1858 Nightingale's diagrams of army mortality; 1869 Minard's chart of Napoleon's Russian campaign"
+    sources:
+      - "William Playfair, The Commercial and Political Atlas (1786)"
+      - "Edward R. Tufte, The Visual Display of Quantitative Information (1983)"
+      - "Michael Friendly & Howard Wainer, A History of Data Visualization and Graphic Communication (2021)"
+
+  # ------------------------------------------------------------------ analysis
+  - id: calculus
+    name: Calculus (differentiation and integration)
+    category: math
+    requires: [symbolic_algebra, coordinate_geometry]
+    explain: >
+      Two operations on a varying quantity. The derivative is its rate of change at an
+      instant, the slope of its graph, found as the limit of change in y over change
+      in x for ever smaller steps; for y = x^n it is n x^(n-1). The integral is the
+      accumulated total, the area under the graph, found as the limit of sums of thin
+      strips. The key discovery is that the two are inverse to each other, so areas
+      are computed by undoing differentiation. Example: a body that has fallen
+      4.9 t^2 metres after t seconds has speed 9.8 t; with this one tool tangents,
+      maxima, areas, volumes, orbits and rates of all kinds are calculated.
+    pitfalls:
+      - "Arguing with 'infinitely small quantities' that are both zero and not zero; Berkeley attacked this in 1734 and the sound foundation is the limit (Cauchy 1821, Weierstrass)."
+      - "Taking sides for Newton or Leibniz as the sole inventor. They worked independently; the notation we use (dx, the integral sign) is Leibniz's."
+      - "Forgetting the constant of integration or the units of a rate."
+      - "Thinking nothing existed before 1665. Archimedes, Chinese, Indian and Arabic mathematicians and Cavalieri and Fermat had found particular areas, volumes and tangents; what was new was the general method and the inverse relation."
+    history:
+      greece: "c. 250 BC – Archimedes finds areas and volumes by exhaustion and, in The Method, by weighing thin slices"
+      china: "AD 263 Liu Hui reduces the sphere problem to a comparison of slices. Around AD 500 Zu Geng completes the argument (the principle later named after Cavalieri)"
+      islamic: "c. 1000 – Ibn al-Haytham sums fourth powers to find the volume of a paraboloid"
+      india: "c. 1400 – Madhava and the Kerala school find power series for sine, cosine and arctangent"
+      east_asia: "c. 1680s – Seki Takakazu's school in Japan develops the 'circle principle' for arcs and volumes"
+      europe: "1635 Cavalieri's indivisibles; 1630s Fermat's maxima and tangents; 1665–1666 Newton's fluxions (printed much later); 1684 Leibniz's first paper; 1687 Newton's Principia; 1748–1770 Euler's textbooks; 1821 Cauchy's limits"
+    sources:
+      - "Gottfried Wilhelm Leibniz, Nova methodus pro maximis et minimis, Acta Eruditorum (1684)"
+      - "Carl B. Boyer, The History of the Calculus and Its Conceptual Development (1959)"
+
+  - id: infinite_series_e
+    name: Infinite series and the number e
+    category: math
+    requires: [symbolic_algebra]
+    helps: [calculus, compound_interest_exponential_growth, decimal_fractions]
+    explain: >
+      A sum of infinitely many terms can have a finite value: 1/2 + 1/4 + 1/8 + ... comes
+      as close to 1 as one likes. Others grow without bound although the terms shrink,
+      such as 1 + 1/2 + 1/3 + 1/4 + ..., so a series may be used only when its partial
+      sums settle on a limit. Series can be used to calculate functions. With x in
+      radians, sin x = x - x^3/6 + x^5/120 - ..., and the number e = 1 + 1 + 1/2 + 1/6 +
+      1/24 + ... = 2.71828..., the limit of (1 + 1/n)^n, which is what one unit becomes
+      under continuous compound interest at 100 per cent. The function e^x is its own rate
+      of change, which makes e the natural base for logarithms and for every law of growth
+      and decay.
+    pitfalls:
+      - "Assuming a series converges because its terms tend to zero (the harmonic series diverges)."
+      - "Rearranging or regrouping terms freely. 1 - 1 + 1 - 1 + ... has partial sums alternating between 1 and 0, so it has no ordinary sum. Averaging those partial sums gives 1/2 by a different summation rule; Euler's free use of divergent series produced both triumphs and paradoxes."
+      - "Crediting European mathematicians with the first series for sine and arctangent; the Kerala school had them about 250 years earlier."
+      - "Giving e as a rounded fraction; it is irrational and transcendental."
+    history:
+      greece: "c. 450 BC – Zeno's paradoxes; c. 250 BC Archimedes sums 1 + 1/4 + 1/16 + ... to 4/3"
+      india: "c. 1400 – Madhava's series for sine, cosine and arctangent with correction terms, known through Nilakantha (1501) and Jyesthadeva (c. 1530)"
+      europe: "c. 1350 Oresme proves the harmonic series diverges; 1665–1671 Newton's binomial series and Gregory's series; 1668 Mercator's series for the logarithm; 1683 Jakob Bernoulli meets e in compound interest; 1715 Taylor series; 1735 Euler shows that the inverse squares sum to pi^2/6; 1748 Euler, Introductio in analysin infinitorum; 1821 Cauchy defines convergence; 1873 Hermite proves e transcendental"
+    sources:
+      - "Leonhard Euler, Introductio in analysin infinitorum (1748)"
+      - "Eli Maor, e: The Story of a Number (1994)"
+      - "William Dunham, Euler: The Master of Us All (1999)"
+
+  - id: differential_equations
+    name: Differential equations
+    category: math
+    requires: [calculus]
+    helps: [laws_of_motion, infinite_series_e]
+    explain: >
+      Many laws of nature do not say what a quantity is but how fast it changes; a
+      differential equation states such a law, and solving it gives the whole course
+      of events from the starting conditions. If the rate of change is proportional to
+      the amount (dy/dt = k y), the solution is exponential growth or decay; if the
+      acceleration is proportional to the displacement and opposed to it (a spring, a
+      pendulum for small swings), the solution is a sine oscillation. Where no formula
+      exists the solution is computed step by step: take the present state, use the
+      equation to find the rate, advance a short time, repeat.
+    pitfalls:
+      - "Expecting a neat formula for every equation; most real problems (three bodies under gravity, fluid flow) need numerical or approximate solutions."
+      - "Leaving out the starting conditions, without which the solution is not determined."
+      - "Taking steps that are too large in a numerical solution, so that errors grow and the result is nonsense."
+      - "Assuming exact prediction for ever. Some simple equations are so sensitive to the starting values that long-term forecasts fail (chaos)."
+    history:
+      europe: "1671–1687 Newton states and solves problems of motion; 1690s Leibniz and the Bernoullis (catenary 1691, brachistochrone 1696); 1739–1743 Euler solves linear equations with constant coefficients; 1747 d'Alembert's wave equation; 1757 Euler's equations of fluid flow; 1768 Euler's step-by-step numerical method; 1822 Fourier's heat equation; 1865 Maxwell's field equations; 1890 Poincare finds chaotic motion"
+      global: "1940s – large systems solved numerically by electronic computers"
+    sources:
+      - "Leonhard Euler, Institutiones calculi integralis, vol. 1 (1768)"
+      - "Morris Kline, Mathematical Thought from Ancient to Modern Times (1972)"
+
+  - id: fourier_series
+    name: Fourier series (any periodic signal is a sum of sine waves)
+    category: math
+    requires: [calculus, trigonometry]
+    helps: [differential_equations, complex_numbers, wave_nature_light_sound]
+    explain: >
+      A piecewise smooth periodic signal can be expanded in a mean value and sine and
+      cosine terms at integer multiples of its fundamental frequency. Averaging the signal
+      against each harmonic gives its coefficient. A square wave alternating between +1
+      and -1 has series (4/pi)(sin x + sin 3x / 3 + sin 5x / 5 + ...), which converges to
+      the midpoint at each jump. A
+      vibrating string shows it: the fundamental tone and its overtones sound
+      together. The method solves the equations of heat and waves term by term, and it
+      is the language of spectra, filters and bandwidth in telephone and radio
+      engineering.
+    pitfalls:
+      - "Believing, with Euler and Lagrange, that sums of smooth sines can only represent smooth curves; they can represent curves with corners and jumps."
+      - "Expecting a perfect fit at a jump. A finite sum overshoots by about 9 per cent of the jump near the discontinuity however many terms are taken (Gibbs phenomenon)."
+      - "Assuming the series converges for every conceivable function without conditions."
+    history:
+      greece: "c. AD 150 – Ptolemy builds planetary motion from circles carried on circles, in hindsight a sum of periodic terms"
+      europe: "1747–1753 – d'Alembert, Euler and Daniel Bernoulli dispute the vibrating string, Bernoulli claiming every motion is a sum of simple tones; 1807 Fourier's memoir on heat (rejected at first); 1822 Fourier, Theorie analytique de la chaleur; 1829 Dirichlet proves when the series converges"
+      global: "1965 – fast Fourier transform (Cooley and Tukey) makes spectrum analysis routine on computers"
+    sources:
+      - "Joseph Fourier, Theorie analytique de la chaleur (1822)"
+      - "Morris Kline, Mathematical Thought from Ancient to Modern Times (1972)"

@@ -1,0 +1,1025 @@
+# Blueprints from Tomorrow – tech tree fragment: Agriculture & food
+# Schema: see header of techtree/core.yaml
+
+technologies:
+
+  # ------------------------------------------------------------ soil and rotation
+  - id: three_field_system
+    name: Three-field rotation
+    category: agriculture
+    requires: []
+    helps: [heavy_plough, horse_collar_harness, legumes_green_manure]
+    explain: >
+      Divide the arable land into three parts: one sown in autumn with wheat or rye,
+      one sown in spring with oats, barley, peas or beans, one left fallow and grazed;
+      rotate every year. Compared with the two-field system (half the land fallow)
+      two thirds of the land bear a crop each year, the work and the harvest risk are
+      spread over two seasons, and the spring field gives oats for horses and legumes
+      that restore the soil. It needs enough summer rain for spring crops, so it suits
+      northern Europe better than the dry Mediterranean.
+    pitfalls:
+      - "Expecting it to work in dry-summer climates such as Tuscany or Greece, where spring-sown crops fail and two-field rotation persisted for good reason"
+      - "Thinking the fallow is idle land: it is ploughed several times to kill weeds and is manured by grazing stock"
+      - "Forgetting that open-field villages rotate in common; one farmer cannot change the system alone"
+      - "Claiming a sudden Carolingian 'invention'; the spread was slow and regional (8th to 13th century)"
+    history:
+      rome: "1st c. AD – two-field rotation with fallow is the Mediterranean norm (Columella, Pliny)"
+      europe: "late 8th c. – White dates early documentary evidence from Carolingian lands to 763; the timing of adoption on individual estates is less certain; general in northern Europe only by the 12th–13th c."
+      china: "by 6th c. AD – multi-year rotations of cereals and legumes without fallow described in the Qimin yaoshu"
+    sources:
+      - "Lynn White Jr., Medieval Technology and Social Change (1962)"
+      - "Adriaan Verhulst, The Carolingian Economy (2002)"
+      - "Georges Duby, Rural Economy and Country Life in the Medieval West (1968)"
+
+  - id: legumes_green_manure
+    name: Legumes and green manure
+    category: agriculture
+    requires: []
+    helps: [nitrogen_fixation_biology]
+    explain: >
+      Peas, beans, vetch, lupins, clover and lucerne (alfalfa) enrich the soil instead
+      of exhausting it, because bacteria in the nodules on their roots take nitrogen
+      from the air. Grow a legume before a cereal, or sow it and plough it in green
+      before it sets seed (green manure); the following grain crop yields markedly
+      more. Clover and lucerne also give the best hay, so more animals and more dung.
+      Demonstration: two strips side by side, one after beans or clover, one after
+      grain, both then sown with wheat.
+    pitfalls:
+      - "Saying legumes 'draw fertility from the deep soil'; the gain is nitrogen from the air, fixed in the root nodules"
+      - "Harvesting the whole plant, roots and all, and expecting the full benefit; most of the nitrogen leaves with the seed and hay unless residues or dung return to the field"
+      - "Sowing clover too often on the same land (clover sickness); leave at least four to six years between clover crops"
+      - "Expecting legumes to replace phosphate, potash or lime; on sour soil clover hardly grows at all"
+    history:
+      mesopotamia: "c. 8000–7000 BC – lentil, pea, chickpea and bitter vetch among the founder crops of the Fertile Crescent"
+      china: "1st c. BC – Fan Shengzhi shu recommends beans; c. 540 AD Qimin yaoshu ranks green manures (mung bean first) and describes ploughing them in"
+      rome: "c. 160 BC – Cato lists lupins, beans and vetch as crops that manure the land; 1st c. AD Columella describes ploughing in lupins"
+      americas: "by c. 1000 BC – beans grown with maize in Mesoamerica"
+      islamic: "10th–12th c. – lucerne (alfalfa) fodder growing in al-Andalus (Ibn al-Awwam)"
+      europe: "16th c. – sown clover in Lombardy and Flanders (Tarello, Ricordo d'agricoltura, 1567); 1838 Boussingault shows legumes gain nitrogen; 1886–88 Hellriegel and Wilfarth trace it to root-nodule bacteria"
+    sources:
+      - "Columella, De re rustica II.10–15"
+      - "Mauro Ambrosoli, The Wild and the Sown: Botany and Agriculture in Western Europe, 1350–1850 (1997)"
+      - "Francesca Bray, Science and Civilisation in China, vol. 6 part 2: Agriculture (1984)"
+
+  - id: crop_rotation
+    name: Four-course rotation with clover and turnips
+    category: agriculture
+    requires: [legumes_green_manure]
+    helps: [seed_drill, selective_breeding, nitrogen_fixation_biology]
+    explain: >
+      Replace the fallow year with fodder crops: wheat, then turnips, then barley
+      undersown with clover, then a year of clover (the Norfolk four-course). Turnips
+      grown in rows are hoed, which cleans the land of weeds as a fallow would, and
+      feed sheep and cattle through the winter; clover fixes nitrogen and gives hay.
+      More fodder means more animals, more dung and therefore more grain from the
+      same land, with no field ever idle. It needs enclosed or commonly agreed fields,
+      because stock grazing the stubble would eat the clover and turnips.
+    pitfalls:
+      - "Crediting 'Turnip' Townshend or Jethro Tull with inventing it; it grew out of Flemish practice over two centuries"
+      - "Trying it on an open common field without agreement on grazing rights"
+      - "Expecting results in one season; soil nitrogen and herds build up over several rotations"
+      - "Turnips on heavy wet clay or in hot dry summers (they fail); in the south use lucerne, sainfoin or beans instead"
+      - "Clover returning every fourth year for decades leads to clover sickness; vary the legume"
+    history:
+      rome: "1st c. BC–1st c. AD – cereal and legume alternation recommended (Virgil, Georgics I; Columella)"
+      china: "c. 540 AD – Qimin yaoshu gives rotation tables of cereals, legumes and vegetables"
+      europe: "14th–16th c. – fodder crops replace fallow in Flanders and Brabant; 1650 Richard Weston describes it for English readers; early 18th c. Norfolk four-course; general in England c. 1750–1850"
+    sources:
+      - "Richard Weston, A Discours of Husbandrie Used in Brabant and Flanders (1650)"
+      - "Mark Overton, Agricultural Revolution in England: The Transformation of the Agrarian Economy 1500–1850 (1996)"
+
+  - id: manure_compost_night_soil
+    name: Manure, compost and night soil
+    category: agriculture
+    requires: []
+    helps: [sanitation_sewerage, contagion_theory]
+    explain: >
+      What a harvest takes from the soil must be returned. Collect animal dung with
+      the urine-soaked straw, kitchen and crop waste, pile them moist and airy in
+      heaps of at least a cubic metre, mixing strawy (carbon-rich) with wet green or
+      dung (nitrogen-rich) material, and turn the heap; it heats to 55–65 °C, which
+      kills most parasites and weed seeds, and becomes dark crumbly compost in a few
+      months. Keep the heap covered or on a hard floor so rain does not wash the
+      goodness away. Human excreta need separate treatment that destroys persistent
+      worm eggs throughout the material. A warm centre or a crumbly appearance cannot
+      verify this.
+    pitfalls:
+      - "Spreading fresh human excrement on vegetables that are eaten raw; this spreads worms, typhoid, cholera and dysentery"
+      - "A heap that is too wet and airless rots cold and stinking and loses its nitrogen"
+      - "Leaving dung in the rain and sun for months; most of the nitrogen and potash is lost"
+      - "Thinking wood ash and dung are the same thing; ash gives potash and lime but no nitrogen, and mixed with fresh dung it drives ammonia off"
+    history:
+      mesopotamia: "3rd millennium BC – manuring of fields inferred from sherd scatters around Near Eastern towns"
+      china: "by c. 3rd c. BC – systematic collection of human and animal waste; 1149 Chen Fu's Nongshu describes compost houses and 'the soil can be kept ever new'"
+      rome: "c. 160 BC – Cato on dung heaps; 1st c. AD Columella ranks dungs (pigeon first) and describes covered pits"
+      islamic: "12th c. – Ibn al-Awwam (Seville) devotes a book to manures and composts"
+      americas: "pre-Columbian – Amazonian terra preta (charcoal, refuse and bone); guano and fish on the Peruvian coast"
+      europe: "medieval – town dung sold to gardens; Flanders famous for urban night soil by the 16th c.; 1840 Liebig's mineral theory explains what manure supplies"
+    sources:
+      - "F. H. King, Farmers of Forty Centuries (1911)"
+      - "Columella, De re rustica II.14"
+      - "Francesca Bray, Science and Civilisation in China, vol. 6 part 2: Agriculture (1984)"
+
+  - id: liming_marling
+    name: Liming and marling of sour soils
+    category: agriculture
+    requires: []
+    helps: [lime_burning, acids_bases_ph]
+    explain: >
+      Rain-washed, sandy and heath soils turn sour (acid): sorrel, heather and moss
+      thrive, clover and barley fail. Spreading ground chalk, limestone, marl (limy
+      clay) or slaked lime, a few tonnes per hectare every several years, neutralises
+      the acid, lets clover and beans grow and makes dung work better. Test the
+      material: real marl or chalk fizzes in strong vinegar.
+    pitfalls:
+      - "Treating lime as a fertiliser; it unlocks nutrients but supplies almost none, hence 'lime and lime without manure makes both farm and farmer poor'"
+      - "Liming soil that is already chalky, which locks up iron and manganese and harms the crop"
+      - "Mixing quicklime or fresh slaked lime with dung, which drives the nitrogen off as ammonia"
+      - "Handling quicklime carelessly; it burns skin and eyes and heats violently with water"
+    history:
+      rome: "1st c. AD – Pliny describes marling by the Gauls and Britons, with different marls for different soils (Natural History XVII); Varro saw it on the Rhine"
+      europe: "13th c. – marl pits common in England and northern France; 18th c. liming general with cheap coal-burnt lime; 1909 Sørensen defines pH"
+      china: "by Song – lime applied to acid paddy soils in the south"
+    sources:
+      - "Pliny the Elder, Naturalis historia XVII.42–48"
+      - "E. John Russell, Soil Conditions and Plant Growth (1912)"
+
+  - id: mineral_fertiliser
+    name: Mineral fertiliser (guano, phosphate, potash, nitrate)
+    category: agriculture
+    requires: []
+    helps: [sulphuric_acid, photosynthesis_plant_nutrition, ammonia_synthesis]
+    explain: >
+      Plants build their bodies from air and water but need a few mineral nutrients
+      from the soil, above all nitrogen, phosphorus and potassium; the scarcest one
+      limits the yield (law of the minimum). These can be supplied from outside the
+      farm: nitrogen from seabird guano or Chilean nitrate, phosphorus from bones or
+      rock phosphate made soluble with sulphuric acid (superphosphate, roughly equal
+      weights of ground bone or rock and acid), potassium from wood ash or potash
+      salts. Demonstration: plots with and without each nutrient, as at Rothamsted.
+    pitfalls:
+      - "Liebig's own error: he thought plants get enough nitrogen from the air and only minerals need replacing; cereals need added nitrogen"
+      - "Overdosing: too much nitrogen makes cereals fall over (lodging) and scorches seedlings"
+      - "Believing that humus is the food of plants (the old humus theory)"
+      - "Using raw ground rock phosphate on neutral or limy soil; it is almost insoluble until treated with acid"
+      - "Forgetting that guano and nitrate deposits are finite; Peru's guano was largely exhausted within forty years"
+    history:
+      americas: "pre-Columbian – coastal Peruvians and the Inca manure with seabird guano and protect the bird islands; 1830s Chilean nitrate exported"
+      china: "by Ming – bone ash, oil-seed cakes and lime sold as fertilisers"
+      europe: "1804 Humboldt brings guano samples; 1828 Sprengel and 1840 Liebig state the mineral theory; 1842 Lawes patents superphosphate; 1843 Rothamsted experiments begin; 1840s guano boom; 1861 Stassfurt potash mined; 1913 synthetic ammonia"
+    sources:
+      - "Justus Liebig, Organic Chemistry in its Applications to Agriculture and Physiology (1840)"
+      - "Gregory T. Cushman, Guano and the Opening of the Pacific World (2013)"
+      - "Vaclav Smil, Enriching the Earth (2001)"
+
+  - id: terracing_soil_conservation
+    name: Terracing and soil conservation
+    category: agriculture
+    requires: []
+    helps: [surveying_triangulation]
+    explain: >
+      Ploughed soil on a slope washes away far faster than nature makes it (about a
+      millimetre a year lost against a few hundredths formed), so hill farming ruins
+      itself within generations unless the slope is broken. Build dry-stone walls
+      along the contour, leaning slightly into the hill, fill behind with rubble for
+      drainage and soil on top, and lead surplus water off in lined channels. Where
+      there are no terraces, plough along the contour, keep the ground covered and
+      leave the steepest land in wood or pasture.
+    pitfalls:
+      - "Ploughing straight up and down the slope, which turns every furrow into a gully"
+      - "Building terraces and then not maintaining them; one burst wall takes the ones below with it"
+      - "Clearing the forest on the hills above a town and being surprised by floods and silted harbours"
+      - "Walls without drainage; the trapped water pushes them over"
+    history:
+      mesopotamia: "c. 3000 BC – Bronze Age terraces in the Levant and Yemen highlands (dates approximate)"
+      americas: "from c. 2000 BC in the Andes; 15th c. Inca state terraces with stone-lined drains (Pisac, Moray); 1935 the United States establishes the Soil Conservation Service after severe erosion"
+      china: "terraced fields named (titian) in 12th-c. texts; loess and southern rice terraces older"
+      east_asia: "Ifugao rice terraces (Philippines) – traditionally 2,000 years old; recent archaeology suggests after c. 1600 (disputed)"
+      greece: "4th c. BC – Plato (Critias 111) describes Attica's hills as stripped of soil"
+      europe: "medieval and early modern – Mediterranean terraces for vines and olives"
+    sources:
+      - "David R. Montgomery, Dirt: The Erosion of Civilizations (2007)"
+      - "R. A. Donkin, Agricultural Terracing in the Aboriginal New World (1979)"
+
+  # ------------------------------------------------------------ implements and traction
+  - id: heavy_plough
+    name: Heavy mouldboard plough
+    category: agriculture
+    requires: []
+    helps: [bloomery_iron, horse_collar_harness, blast_furnace_cast_iron]
+    explain: >
+      Three working parts on a strong frame: an iron knife (coulter) cuts the sod
+      vertically, an iron share cuts it horizontally, and a curved board (mouldboard)
+      behind the share turns the slice over to one side, burying weeds and stubble.
+      Unlike the light scratch plough (ard) it can work heavy wet clay in one pass
+      and, by throwing the soil into ridges, drains it. It is hard to pull (teams of
+      four to eight oxen in early medieval Europe) and hard to turn, so fields become
+      long strips; a well-curved iron mouldboard, as in China, cuts the draught to one
+      or two animals.
+    pitfalls:
+      - "Recommending it for light, dry Mediterranean soils, where deep turning dries the ground and the ard is the better tool"
+      - "A flat or badly shaped mouldboard that pushes soil instead of turning it and doubles the draught"
+      - "Ignoring the cost of the team; peasants had to pool oxen, which shaped the whole village"
+      - "Calling it a medieval invention out of nothing; Roman and Chinese precursors existed"
+    history:
+      china: "c. 3rd c. BC – cast-iron shares; by 1st c. BC curved cast-iron mouldboards in the Han state iron works"
+      rome: "1st c. AD – Pliny mentions a wheeled plough with coulter in Raetia (Natural History XVIII.172)"
+      europe: "6th–10th c. – heavy plough spreads on the clay lands north of the Alps (chronology disputed); 1730 Rotherham plough with curved iron-clad mouldboard, possibly after Dutch and Chinese models"
+      americas: "1837 – John Deere makes a steel plough in Illinois"
+      india: "ards with iron shares from c. 1000 BC; mouldboard ploughs only in the colonial period"
+    sources:
+      - "Lynn White Jr., Medieval Technology and Social Change (1962)"
+      - "Francesca Bray, Science and Civilisation in China, vol. 6 part 2: Agriculture (1984)"
+      - "Thomas B. Andersen, Peter S. Jensen & Christian V. Skovsgaard, The heavy plow and the agricultural revolution in Medieval Europe, Journal of Development Economics 118 (2016)"
+
+  - id: horse_collar_harness
+    name: Horse collar and breast-strap harness
+    category: agriculture
+    requires: []
+    helps: []
+    explain: >
+      A horse pulls best from its shoulders and chest. The collar is a rigid, padded
+      oval frame fitted to the individual horse that rests on the shoulders and leaves
+      the windpipe free; the traces run back from wooden or metal bars (hames) on the
+      collar at about mid-height to a swingletree. A well-harnessed horse typically
+      walks faster than an ox, which matters for ploughing in short weather windows
+      and for road haulage. An ox yoke or a strap round the neck wastes much of the
+      horse's strength.
+    pitfalls:
+      - "Repeating that the ancient harness 'strangled' horses and made them nearly useless; Spruytte's reconstructions showed this was much overstated"
+      - "A badly fitting collar, which galls the shoulders and lames the horse within days"
+      - "Forgetting the costs: horses need oats and shoes and are worth little as meat, so oxen stayed the cheaper choice in much of Europe"
+      - "Attaching the traces too high or too low, so that the collar rides up onto the throat"
+    history:
+      china: "c. 4th–3rd c. BC – breast-strap harness; c. 5th–6th c. AD – collar harness (Dunhuang murals, as read by Needham)"
+      rome: "antiquity – yoke with neck and girth straps for horses and mules; adequate for light vehicles"
+      europe: "c. 8th c. – breast-strap; c. 9th–10th c. – padded collar; horses plough commonly only from the 12th c."
+    sources:
+      - "Joseph Needham & Wang Ling, Science and Civilisation in China, vol. 4 part 2: Mechanical Engineering (1965)"
+      - "J. Spruytte, Early Harness Systems (1983)"
+      - "John Langdon, Horses, Oxen and Technological Innovation (1986)"
+
+  - id: seed_drill
+    name: Seed drill
+    category: agriculture
+    requires: []
+    helps: [gears_gear_trains]
+    explain: >
+      Instead of scattering seed by hand, a drill drops it at an even rate into
+      straight furrows of even depth (2–5 cm) and covers it: a hopper feeds a
+      notched or grooved roller turned by the ground wheel, which meters the seed
+      into tubes ending just behind small coulters. This saves a third or more of the
+      seed, gives even germination, and the straight rows can be hoed between, by
+      hand or horse, to kill weeds. The simplest form is a funnel and tube fixed
+      behind a light plough, fed by hand.
+    pitfalls:
+      - "Tull's theory was wrong: he held that finely broken earth itself feeds plants and manure is unnecessary"
+      - "Using it on a rough, stony or cloddy seedbed, where the coulters ride up and the tubes block"
+      - "A metering roller that crushes or bridges the seed; each crop needs its own notch size"
+      - "Expecting fast adoption; in England drills became general only a century after Tull"
+    history:
+      mesopotamia: "by c. 2000 BC – plough with seed funnel shown on seals; the Sumerian 'Farmer's Instructions' (c. 1700 BC) prescribe seed depth and spacing"
+      china: "c. 1st c. BC – multi-tube seed drill (lou) with iron shares, attributed to Zhao Guo (c. 85 BC)"
+      india: "seed-tube ploughs traditional and old; first dates uncertain"
+      europe: "1566 – Camillo Torello's Venetian patent; c. 1701 Jethro Tull's drill, published 1731–33; general use from the early 19th c."
+    sources:
+      - "Jethro Tull, The Horse-Hoeing Husbandry (1733)"
+      - "Francesca Bray, Science and Civilisation in China, vol. 6 part 2: Agriculture (1984)"
+
+  - id: scythe_cradle
+    name: Scythe and grain cradle
+    category: agriculture
+    requires: [bloomery_iron]
+    explain: >
+      A long, slightly curved blade (60–90 cm) on a shaft about as tall as the mower
+      with two handgrips, swung in a flat arc close to the ground so that it slices
+      rather than chops. The edge is hammered thin on a small anvil (peening) and
+      touched up with a whetstone every few minutes. One man mows about 0.4 hectare
+      of hay a day. With a cradle, a light frame of wooden fingers above the blade
+      that catches the stalks and lays them in a neat row, he cuts three to four
+      times as much grain as with a sickle.
+    pitfalls:
+      - "Hacking with the point instead of sliding the whole edge through the crop"
+      - "Confusing blade types: thin continental blades can be peened; thicker hardened blades are ground and whetted"
+      - "Mowing dead-ripe grain, which shatters and sheds seed; scythe-cut cereals are cut a little earlier"
+      - "Overlooking why the sickle lasted: it allowed selective cutting of ripe heads and suited small plots; a cradle scythe also needed space and workers to bind the cut grain"
+    history:
+      europe: "c. 500–200 BC – short scythes in Celtic (La Tène) Europe; early Middle Ages – long hay scythe general; 14th–15th c. – cereals mown in Flanders (Hainault scythe); 18th–19th c. – scythe replaces sickle for grain"
+      rome: "1st c. AD – Pliny distinguishes the short Italian and the long Gallic scythe (Natural History XVIII.261)"
+      americas: "c. 1780–1840 – the cradle scythe is the standard grain harvester in North America"
+      china: "sickles and a push-scythe with basket for buckwheat (Wang Zhen, Nongshu, 1313)"
+    sources:
+      - "E. J. T. Collins, Harvest Technology and Labour Supply in Britain, 1790–1870, Economic History Review 22 (1969)"
+      - "K. D. White, Agricultural Implements of the Roman World (1967)"
+
+  - id: reaper_thresher
+    name: Mechanical reaper and threshing machine
+    category: agriculture
+    requires: []
+    helps: [scythe_cradle, gears_gear_trains, blast_furnace_cast_iron]
+    explain: >
+      Reaper: a horse walks beside the standing crop and pulls a frame whose ground
+      wheel drives, through gears and a crank, a toothed knife sliding to and fro
+      through fixed pointed fingers; the fingers hold the stalks while the knife
+      shears them, a turning reel pushes them onto a platform, and a man rakes them
+      off for binding. It cuts 4–6 hectares a day against about one for a man with a
+      cradle scythe. Thresher: a fast-turning drum with beater bars rubs the ears
+      against a curved grating, then sieves and a crank-driven fan blow the chaff
+      from the grain.
+    pitfalls:
+      - "A knife without fixed fingers only pushes the stalks over; the cut is a scissor action"
+      - "Pulling from directly in front, so the horses trample the crop; the draught must be offset"
+      - "Machines that break down in the few days of harvest are worse than none; spare knives and a smith are part of the system"
+      - "Ignoring the labourers who lose their winter threshing work; the Swing riots of 1830 destroyed hundreds of machines"
+    history:
+      rome: "1st c. AD – vallus, an ox-pushed comb that strips the ears, on the big estates of Gaul (Pliny, Natural History XVIII.296; reliefs at Buzenol and Trier)"
+      china: "by 1st c. BC–2nd c. AD – crank-driven rotary winnowing fan (Han tomb models)"
+      europe: "1786 – Andrew Meikle's threshing machine (Scotland); 1826–28 Patrick Bell's reaper"
+      americas: "1831 – Cyrus McCormick demonstrates his reaper (patent 1834); 1833 Obed Hussey; 1836 Moore and Hascall combine harvester; 1878 Appleby twine binder"
+    sources:
+      - "K. D. White, Roman Farming (1970)"
+      - "Siegfried Giedion, Mechanization Takes Command (1948)"
+
+  - id: selective_breeding
+    name: Selective breeding of plants and animals
+    category: agriculture
+    requires: []
+    helps: [heredity_genetics]
+    explain: >
+      Offspring resemble their parents, so a breed can be shifted in a chosen
+      direction by letting only the best individuals reproduce, generation after
+      generation. Decide on a measurable aim (wool weight, milk, early ripening),
+      keep written records of parents and offspring, judge a sire by the performance
+      of his progeny rather than his looks, keep the chosen stock apart, and cull the
+      rest. For crops, save seed from the best plants in the field, not from the heap.
+      Bakewell changed English sheep and cattle within one lifetime this way.
+    pitfalls:
+      - "Selling or eating the best animals and breeding from what is left"
+      - "Believing that traits acquired in life (a docked tail, a trained skill) are inherited"
+      - "Close inbreeding without culling: it fixes the wanted trait but also weakness and infertility"
+      - "Selecting for appearance or a single trait; Bakewell's fat sheep had poor wool and fertility"
+      - "Expecting quick results in animals with long generations"
+    history:
+      mesopotamia: "c. 9500–8000 BC – domestication of wheat, barley, sheep and goats; date palms hand-pollinated by c. 2000 BC"
+      americas: "c. 7000 BC – maize bred from teosinte in south-west Mexico; thousands of potato landraces in the Andes"
+      china: "silkworm, rice and goldfish varieties selected over millennia; early-ripening rices promoted under the Song"
+      rome: "1st c. BC–1st c. AD – Varro and Columella give rules for choosing rams, bulls and seed"
+      islamic: "medieval – recorded pedigrees of Arabian horses"
+      europe: "c. 1760–1795 – Robert Bakewell at Dishley (in-and-in breeding, progeny testing, ram letting); 1791 General Stud Book; 1859 Darwin builds on breeders' experience"
+    sources:
+      - "Charles Darwin, The Variation of Animals and Plants under Domestication (1868)"
+      - "Roger J. Wood & Vítězslav Orel, Genetic Prehistory in Selective Breeding: A Prelude to Mendel (2001)"
+
+  - id: grafting_fruit_trees
+    name: Grafting of fruit trees and vines
+    category: agriculture
+    requires: []
+    explain: >
+      Apples, pears, stone fruit, citrus and vines do not come true from seed; a
+      good variety is multiplied by joining a twig of it (scion) onto a rooted young
+      plant of the same or a closely related kind (rootstock). Cut both cleanly so
+      that the green layer just under the bark (cambium) of one lies against that of
+      the other, bind tightly and seal with wax or clay against drying; do it in late
+      winter with dormant scions, or set single buds in summer. The rootstock decides
+      vigour and resistance to soil pests, the scion decides the fruit.
+    pitfalls:
+      - "Believing any tree can be grafted on any other (ancient authors claimed vines on elms); only close relatives unite"
+      - "Missing the cambium contact or letting the cut dry out before binding"
+      - "Thinking the graft blends the two plants; scion and stock each keep their own nature"
+      - "Planting pips of a good apple and expecting the same fruit"
+      - "Moving rooted vines or soil between continents; this brought phylloxera to Europe"
+    history:
+      mesopotamia: "c. 1800 BC – a Mari tablet may refer to vine grafting (disputed)"
+      china: "by 1st millennium BC; detailed instructions in the Qimin yaoshu (c. 540 AD)"
+      greece: "c. 424 BC – mentioned in the Hippocratic 'On the Nature of the Child'; c. 300 BC Theophrastus explains it"
+      rome: "c. 160 BC – Cato gives step-by-step cleft and bud grafting (De agri cultura 40–42)"
+      europe: "1870s–1880s – European vines saved from phylloxera by grafting onto American rootstocks"
+    sources:
+      - "Cato, De agri cultura 40–42"
+      - "Ken Mudge, Jules Janick, Steven Scofield & Eliezer E. Goldschmidt, A History of Grafting, Horticultural Reviews 35 (2009)"
+
+  # ------------------------------------------------------------ water
+  - id: irrigation_water_lifting
+    name: Irrigation and water lifting (canal, qanat, shaduf, noria)
+    category: agriculture
+    requires: []
+    helps: [archimedes_screw, piston_pump, surveying_triangulation, water_wheel]
+    explain: >
+      Lead water to the fields by gravity where possible: a canal taken off a river
+      upstream and run along the contour with a fall of only about one in a few
+      thousand. Where water lies lower, lift it: the shaduf (a counterweighted pole
+      with a bucket, lifts 2–3 m), the animal-driven geared pot wheel (saqiya, lifts
+      10 m and more), the noria (a large wheel with pots turned by the current), the
+      screw and the chain pump. A qanat is a gently sloping tunnel (about 1 in 1,000)
+      dug back from the fields into the foot of a hill until it taps groundwater,
+      with a vertical shaft every 20–50 m for digging and air. Irrigated land must
+      also be drained, or evaporating water leaves salt behind.
+    pitfalls:
+      - "Irrigating without drainage: the water table rises, salt crusts the surface and wheat, then barley, fails; salinity reduced yields in parts of southern Mesopotamia; its wider historical role is debated"
+      - "A canal that is too steep scours its bed, too flat silts up; levelling is the hard part"
+      - "Standing water breeds malaria mosquitoes and, in Africa and Asia, the snails that carry bilharzia"
+      - "Forgetting water law: upstream users can ruin downstream ones, so shares and turns must be fixed and enforced"
+    history:
+      mesopotamia: "c. 6000 BC – canals at Choga Mami; c. 2300 BC shaduf on an Akkadian seal; qanats in neighbouring Iran and Urartu from c. 800–700 BC"
+      egypt: "c. 3000 BC – basin irrigation with the Nile flood; shaduf by c. 1500 BC; saqiya in the 3rd–2nd c. BC"
+      india: "c. 2600 BC – wells and reservoirs of the Indus cities (Dholavira); Grand Anicut on the Kaveri, traditionally 2nd c. AD"
+      china: "256 BC – Dujiangyan (Li Bing); 246 BC Zhengguo canal; square-pallet chain pump by the 1st–2nd c. AD"
+      greece: "3rd c. BC – screw, force pump and compartmented wheel in Hellenistic Egypt"
+      islamic: "8th–12th c. – qanat, noria and saqiya spread from Iran to Spain; great norias of Hama"
+      americas: "by c. 3400 BC – canals in the Zaña valley, Peru; c. 600–1450 AD Hohokam canal networks in Arizona"
+    sources:
+      - "John Peter Oleson, Greek and Roman Mechanical Water-Lifting Devices: The History of a Technology (1984)"
+      - "Thorkild Jacobsen & Robert M. Adams, Salt and Silt in Ancient Mesopotamian Agriculture, Science 128 (1958)"
+
+  - id: wet_rice_cultivation
+    name: Wet rice (paddy) cultivation
+    category: agriculture
+    requires: []
+    helps: [irrigation_water_lifting, terracing_soil_conservation]
+    explain: >
+      Rice is grown in dead-level fields enclosed by low banks and kept under 5–10 cm
+      of water. Raise seedlings thickly in a small nursery bed for three to five
+      weeks, then transplant them in rows about a hand's span apart into the puddled
+      field; drain two weeks before harvest. The standing water drowns weeds, evens
+      out temperature and carries nutrients, and organisms living in it fix nitrogen,
+      so the same field can bear rice every year for centuries if nutrients removed at
+      harvest are replaced. Quick-ripening varieties allow two crops a year or rice
+      followed by wheat.
+    pitfalls:
+      - "Fields that are not exactly level, so that part is dry and part drowned"
+      - "Paddies close to towns: they breed malaria mosquitoes (Italian and Spanish cities banned them near the walls)"
+      - "Living mainly on polished white rice, which causes beriberi; polishing removes the thiamine-rich bran and germ after the husk has been removed"
+      - "Trying rice where the summer is cool or water short; it needs warmth and steady water for months"
+    history:
+      china: "c. 7000–5000 BC – rice domesticated on the Yangtze; c. 4000 BC paddy fields (Caoxieshan, Tianluoshan); transplanting described by the 2nd c. AD; 1012 early-ripening Champa rice distributed by Emperor Zhenzong"
+      india: "c. 2000 BC – rice farming in the Ganges plain (earlier dates debated)"
+      east_asia: "c. 1000–300 BC – paddy rice reaches Korea and Japan"
+      africa: "c. 1000 BC – African rice (Oryza glaberrima) domesticated on the inland Niger"
+      islamic: "8th–10th c. – rice spreads to Egypt, Sicily and Spain"
+      europe: "1470s – rice fields in the Po valley (letter of Galeazzo Maria Sforza, 1475)"
+      americas: "1690s – rice in Carolina, drawing on West African growers' skills"
+    sources:
+      - "Francesca Bray, The Rice Economies: Technology and Development in Asian Societies (1986)"
+      - "Judith A. Carney, Black Rice: The African Origins of Rice Cultivation in the Americas (2001)"
+
+  - id: windmill_drainage_land_reclamation
+    name: Polders – land reclamation with dikes and wind pumps
+    category: agriculture
+    requires: [windmill]
+    helps: [archimedes_screw, surveying_triangulation]
+    explain: >
+      Surround marsh or a shallow lake with a ring dike and a ring canal, cut a grid
+      of ditches inside, and let windmills lift the water from the ditches into the
+      ring canal, from which it runs to river or sea through sluices at low water. A
+      scoop wheel lifts only about 1.5 m, so deep lakes need two to four mills in
+      series, each lifting into the basin of the next; a mill driving an Archimedes
+      screw lifts 4–5 m. The Beemster (7,200 ha, 3.5 m below sea level) took 43 mills
+      and four years. It requires lasting arrangements for shared maintenance; Dutch
+      water boards collected levies for the dikes and mills.
+    pitfalls:
+      - "Drained peat shrinks and oxidises: the land sinks by metres over the centuries, so drainage becomes ever harder (Holme Fen has sunk about 4 m since 1851)"
+      - "One neglected stretch of dike floods everyone; without compulsory shared upkeep the polder fails"
+      - "No wind, no pumping: storage basins are needed for calm, wet weeks"
+      - "Draining coastal marsh without sea sluices that close at high tide"
+    history:
+      china: "Tang–Song – diked polder fields (weitian) in the Yangtze delta, drained by treadle chain pumps"
+      europe: "11th–13th c. – Dutch and Flemish dikes, sluices and water boards (Rijnland charter 1255); 1407–08 first documented drainage windmills near Alkmaar; 1533 Achtermeer, first lake pumped dry; 1607–12 Beemster (Leeghwater); 1630s–1650s Vermuyden drains the English Fens; 1849–52 Haarlemmermeer drained by steam"
+    sources:
+      - "G. P. van de Ven (ed.), Man-Made Lowlands: History of Water Management and Land Reclamation in the Netherlands (1993)"
+      - "H. C. Darby, The Draining of the Fens (1940)"
+
+  - id: aquaculture_fish_ponds
+    name: Fish ponds and carp polyculture
+    category: agriculture
+    requires: []
+    explain: >
+      Dig shallow ponds (1–2 m) with an inlet and a sluice at the lowest point so
+      they can be drained completely, stock them with young carp, and manure the
+      water so that it turns green: the fish live on the small life that grows in
+      it. Keep separate spawning, nursery and fattening ponds, fish them out by
+      draining in autumn every two or three years, and let the bed lie dry or crop
+      it between. Chinese practice stocks several carps together that eat different
+      things (grass carp cut grass, silver carp green water, bighead carp tiny
+      animals, common carp the bottom), which multiplies the yield without feed.
+    pitfalls:
+      - "Overstocking or over-manuring: on warm still nights the water loses its air and all the fish die at once"
+      - "A pond that cannot be drained cannot be harvested or cleared of pike and disease"
+      - "Eating freshwater fish raw; it carries liver flukes and tapeworm"
+      - "Expecting sea fish such as herring or cod to live and breed in ponds"
+    history:
+      egypt: "c. 2000–1500 BC – tomb paintings of tilapia in garden ponds"
+      china: "1st millennium BC – carp ponds; a short treatise is attributed to Fan Li (5th c. BC, probably written later); Tang (618–907) – polyculture of several carp species"
+      rome: "c. 95 BC – Sergius Orata's oyster beds; 1st c. BC–1st c. AD sea-water piscinae (Varro, Columella)"
+      europe: "11th–13th c. – carp ponds spread west from the Danube; 15th–16th c. great pond systems of Bohemia; 1547 Dubravius, De piscinis"
+    sources:
+      - "Richard C. Hoffmann, Economic Development and Aquatic Ecosystems in Medieval Europe, American Historical Review 101 (1996)"
+      - "Eugene K. Balon, Origin and domestication of the wild carp, Cyprinus carpio: from Roman gourmets to the swimming flowers, Aquaculture 129 (1995)"
+
+  # ------------------------------------------------------------ New World crops
+  - id: new_world_crops
+    name: Crops of the Americas (potato, maize and others)
+    category: agriculture
+    requires: []
+    helps: [world_geography, wind_systems_ocean_currents]
+    explain: >
+      Across the Atlantic grow food plants unknown in the Old World that out-yield
+      its grains. Maize (Mexico to the Caribbean) returns 100 seeds or more for one
+      sown, against 4–6 for European wheat. The potato (high Andes of Peru and
+      Bolivia) gives two to three times the calories of grain per field and grows in
+      cool, wet, poor land. Others: sweet potato and cassava (tropical lowlands),
+      common and runner beans, squashes and pumpkins, tomato, chilli and sweet
+      pepper, peanut, sunflower, pineapple, cacao, vanilla, plus tobacco, rubber and
+      the fever-bark tree (cinchona). In 1490 none of these is in Europe; what must
+      be brought is seed or tubers and the growers' knowledge of how to prepare them.
+    pitfalls:
+      - "Bringing the plant without the preparation: maize as a staple without lime treatment causes pellagra, bitter cassava without processing poisons"
+      - "Expecting instant acceptance; the potato took two centuries to become a field crop in Europe and was suspected as a poisonous nightshade"
+      - "Looking for potatoes where Columbus landed; they grew in the Andes, first seen by Spaniards in the 1530s"
+      - "Believing tomatoes, chillies or maize were always part of Italian, Indian or African cooking"
+      - "Praising tobacco as a medicine, as 16th-century doctors did"
+    history:
+      americas: "c. 7000 BC – maize from teosinte (Balsas valley, Mexico); c. 8000–5000 BC potato around Lake Titicaca; squash, beans, cassava and sweet potato have separate domestication histories"
+      europe: "1493 – Columbus brings maize and chilli; 1540s tomato and beans in Italy (Mattioli 1544); c. 1570 potato in Spain (Canary Islands 1567, Seville 1573); maize a field crop in northern Italy and the Balkans from the 16th–17th c., potato in the 18th c."
+      africa: "16th c. – maize and cassava brought by the Portuguese (cassava in Kongo by c. 1558)"
+      china: "16th c. – peanut, maize and (1590s, from Luzon) sweet potato; they feed the Qing population growth"
+      india: "16th c. – chilli, then maize, potato and tobacco via the Portuguese"
+      global: "c. 1000–1200 AD – the sweet potato reaches Polynesia from South America before Columbus"
+    sources:
+      - "Alfred W. Crosby, The Columbian Exchange: Biological and Cultural Consequences of 1492 (1972)"
+      - "Charles C. Mann, 1493: Uncovering the New World Columbus Created (2011)"
+      - "Redcliffe N. Salaman, The History and Social Influence of the Potato (1949)"
+
+  - id: potato_cultivation
+    name: Growing and storing potatoes
+    category: agriculture
+    requires: []
+    explain: >
+      To keep a variety true to type, propagate it from tubers: set whole small tubers
+      or pieces with one or two eyes about 10 cm deep and 30 cm apart in rows 70 cm
+      apart, after the last frost. As the shoots grow, draw earth up around them twice
+      so that the new tubers form in the dark. Lift them when the tops have died down,
+      dry them for a few hours and store them dark, cool and frost-free; keep the best
+      for next year's planting. Do not grow them on the same ground more often than
+      one year in three or four.
+    pitfalls:
+      - "Eating the green parts: leaves, berries, sprouts and tubers turned green by light contain solanine and cause poisoning"
+      - "Andean potatoes form tubers only when days are short; in the long European summer the first imports cropped late and poorly until adapted types were selected"
+      - "Planting tubers saved from sick plants, which carries disease from year to year"
+      - "Relying on one variety for a whole population (see potato blight)"
+      - "Storing them in the light or where they freeze"
+    history:
+      americas: "c. 8000–5000 BC – domesticated in the Andes; freeze-dried chuño stored for years by the Inca state"
+      europe: "1567 – shipped from the Canary Islands; 1573 bought by a Seville hospital; 1588 described by Clusius; 17th c. a field crop in Ireland; 1756 Frederick II's potato orders in Prussia; 1770s–1780s Parmentier promotes it in France"
+      china: "17th c. – introduced, a hill crop by the 18th c."
+      india: "early 17th c. – brought by the Portuguese"
+    sources:
+      - "Redcliffe N. Salaman, The History and Social Influence of the Potato (1949)"
+      - "John Reader, Propitious Esculent: The Potato in World History (2008)"
+
+  - id: maize_beans_squash_milpa
+    name: Maize, beans and squash grown together (milpa)
+    category: agriculture
+    requires: []
+    helps: [nixtamalisation, legumes_green_manure]
+    explain: >
+      A milpa is a maize field whose companion crops vary by community. In one
+      maize–bean–squash system, sow maize in warm soil, four or five seeds to a mound,
+      mounds a pace apart, in a block and not a single row because the wind must carry
+      pollen from the tassels to the silks. When the maize is a hand high, sow
+      climbing beans at its foot and squash between the mounds: the maize carries the
+      beans, the beans fix nitrogen for their own growth and return some in their
+      residues, the squash leaves shade out weeds and hold moisture. Eaten together,
+      beans supply lysine, an amino acid in short supply in maize protein. Dry the
+      ears well before storing; keep the best ears for seed.
+    pitfalls:
+      - "Living on maize alone without lime treatment (pellagra)"
+      - "Sowing in cold soil or a single long row; the seed rots or the ears set few grains"
+      - "Damp storage: mouldy maize is poisonous"
+      - "Expecting tropical varieties to ripen in a northern summer; quick 'flint' types are needed"
+    history:
+      americas: "c. 8000 BC squash (Guilá Naquitz, Oaxaca); c. 7000 BC maize in the Balsas region; common beans domesticated separately; the 'three sisters' reach eastern North America by c. 1000–1300 AD"
+      europe: "1493 – maize seed brought by Columbus; 16th c. grown in Spain, Portugal and the Veneto, usually without beans or lime"
+      africa: "16th c. – maize spreads along the coasts with Portuguese trade"
+    sources:
+      - "Arturo Warman, Corn and Capitalism: How a Botanical Bastard Grew to Global Dominance (2003)"
+      - "Charles C. Mann, 1491: New Revelations of the Americas Before Columbus (2005)"
+
+  - id: nixtamalisation
+    name: Nixtamalisation (lime treatment of maize)
+    category: agriculture
+    requires: []
+    helps: [lime_burning, vitamins_deficiency]
+    explain: >
+      Simmer dry maize kernels for half an hour to an hour in water with slaked lime
+      (about 1 part lime to 100 parts maize by weight) or strong wood-ash lye, leave
+      it to steep overnight, then wash and rub off the loosened skins and grind the
+      kernels wet. The alkali frees the niacin that is locked up in maize, improves
+      the protein and makes a dough that holds together. People whose diet is
+      dominated by untreated maize and supplies little other niacin or tryptophan are
+      at risk of pellagra: rough dark skin where the sun falls, diarrhoea, madness and
+      death.
+    pitfalls:
+      - "Bringing maize to Europe or Africa without this step, as actually happened; pellagra became endemic in some communities with monotonous maize-based diets"
+      - "Using quicklime straight or far too much lime; it burns and makes the food inedible"
+      - "Explaining pellagra as spoiled maize or an infection, the standard medical view until the 1910s"
+      - "Skipping the wash; excess lime must be rinsed off"
+    history:
+      americas: "c. 1500–1200 BC – inferred from lime-soaking equipment on the Pacific coast of Guatemala; chemical traces only from Classic Maya sites; widely used by the Spanish arrival; 1937 Elvehjem and colleagues identify nicotinic acid through work on canine black tongue in the United States"
+      europe: "1735 – Casal describes pellagra ('mal de la rosa') in Asturias; 18th–19th c. endemic in northern Italy"
+      africa: "20th c. – pellagra outbreaks among maize-dependent populations"
+    sources:
+      - "S. H. Katz, M. L. Hediger & L. A. Valleroy, Traditional Maize Processing Techniques in the New World, Science 184 (1974)"
+      - "Daphne A. Roe, A Plague of Corn: The Social History of Pellagra (1973)"
+
+  - id: cassava_detoxification
+    name: Cassava and its detoxification
+    category: agriculture
+    requires: []
+    explain: >
+      Cassava (manioc) is a tropical shrub grown from stem cuttings whose starchy
+      roots yield heavily on poor soil, survive drought and keep in the ground for a
+      year or two until needed. All varieties contain varying amounts of compounds that release
+      prussic acid (cyanide). Traditional processing of high-cyanide roots combines
+      several stages such as peeling, grating, fermenting, pressing and roasting.
+      Breaking up the tissue allows the compounds to break down; liquid removal
+      and heating help carry the cyanide away. The variety and the full process
+      matter. Neither taste nor a fixed soaking time establishes safety.
+    pitfalls:
+      - "Eating bitter cassava merely boiled, or shortening the processing in a famine: acute cyanide poisoning or lasting paralysis of the legs (konzo)"
+      - "Assuming bitter and sweet kinds can be told apart by looking"
+      - "Drinking the press liquid or reusing soaking water; both may contain cyanide"
+      - "Living on cassava alone; it is almost pure starch with very little protein"
+    history:
+      americas: "c. 8000–6000 BC – domesticated on the south-western rim of Amazonia; staple of the Taíno, who gave Columbus cassava bread in 1492"
+      africa: "c. 1558 – introduced to Kongo by the Portuguese; spreads inland with the processing methods in the 17th–19th c."
+      india: "17th–19th c. – introduced to south India and Southeast Asia"
+    sources:
+      - "William O. Jones, Manioc in Africa (1959)"
+      - "Charles C. Mann, 1493: Uncovering the New World Columbus Created (2011)"
+
+  - id: potato_blight_monoculture_risk
+    name: Potato blight and the risk of monoculture
+    category: agriculture
+    requires: [potato_cultivation]
+    helps: [microorganisms, contagion_theory]
+    explain: >
+      A whole people living on one crop of one variety can lose everything in one
+      season. Potato blight is caused by a water mould (an oomycete) whose spores blow
+      from plant to plant in cool wet weather; leaves blacken within days and the
+      tubers rot in the ground or in store. In Ireland in 1845–52, where many poor
+      households depended on susceptible potatoes, particularly the Lumper, about a
+      million died and more than a million emigrated. Defences: several crops and
+      several varieties, healthy seed tubers, earthing up, cutting off the tops at the
+      first black spots, and spraying the leaves before infection with Bordeaux
+      mixture (1 kg copper sulphate and 1 kg slaked lime in 100 litres of water).
+    pitfalls:
+      - "Blaming wet weather, bad air or 'degeneration' of the plant, as most experts did in 1845; the cause is a parasite"
+      - "Spraying after the leaves are black; copper only protects healthy leaves"
+      - "Treating the famine as a purely natural disaster; grain was exported from Ireland throughout and relief policy decided who died"
+      - "Leaving diseased tubers and tops in heaps beside the field"
+    history:
+      americas: "origin in central Mexico or the Andes (disputed); 1843 outbreaks in the eastern United States"
+      europe: "1845 – appears in Belgium in June, Ireland by September; 1846 M. J. Berkeley argues a fungus is the cause; 1861–63 de Bary proves it; 1882–85 Millardet's Bordeaux mixture"
+    sources:
+      - "Cormac Ó Gráda, Black '47 and Beyond: The Great Irish Famine in History, Economy, and Memory (1999)"
+      - "E. C. Large, The Advance of the Fungi (1940)"
+
+  - id: columbian_exchange
+    name: The Columbian exchange (plants, animals and diseases across the Atlantic)
+    category: agriculture
+    requires: []
+    helps: [new_world_crops, contagion_theory, variolation, quarantine]
+    explain: >
+      Sustained Atlantic traffic after 1492 carried American crops such as maize,
+      potatoes and cassava eastwards. Wheat, sugar cane, livestock and European
+      honey bees travelled westwards. Diseases crossed on different voyages:
+      smallpox was recorded on Hispaniola in 1518 and in Mexico in 1520. Many
+      communities had little prior immunity, and epidemics spread along existing
+      networks, sometimes ahead of Europeans. Deaths varied greatly by region.
+      War, displacement, enslavement and hunger compounded the losses.
+    pitfalls:
+      - "Explaining the collapse of American populations by massacre alone, or by disease alone; epidemics struck peoples also hit by war, enslavement, forced labour and famine"
+      - "Thinking the die-off was planned germ warfare; it was overwhelmingly unintended (deliberate cases are rare and late)"
+      - "Assuming it can be prevented by good intentions; only keeping the sick ashore, quarantine and later inoculation reduce it"
+      - "Stating as settled that syphilis came from America in 1493; the evidence favours it but is still debated"
+      - "Releasing pigs, goats and rabbits on islands as a food store; they strip them bare"
+    history:
+      americas: "1493 – Columbus's second voyage lands horses, cattle, pigs, wheat and sugar cane on Hispaniola; 1518–20 first smallpox epidemic from Hispaniola to Mexico; 1640s yellow fever arrives with the slave trade"
+      europe: "1493 – maize; 1495 syphilis epidemic at the siege of Naples; 16th–18th c. American crops raise population"
+      africa: "16th c. – maize and cassava; the plantation system drives the Atlantic slave trade (about 12.5 million people embarked, 1501–1867)"
+      china: "16th c. – maize, sweet potato and peanut open the hills to farming"
+    sources:
+      - "Alfred W. Crosby, The Columbian Exchange: Biological and Cultural Consequences of 1492 (1972)"
+      - "Alfred W. Crosby, Ecological Imperialism: The Biological Expansion of Europe, 900–1900 (1986)"
+      - "Charles C. Mann, 1493: Uncovering the New World Columbus Created (2011)"
+
+  # ------------------------------------------------------------ food keeping and processing
+  - id: food_preservation
+    name: Food preservation (salting, drying, smoking, pickling)
+    category: agriculture
+    requires: []
+    helps: [microorganisms]
+    explain: >
+      Food spoils because tiny living things grow in it; they need water, warmth and
+      mild conditions. So take the water away (dry in sun and wind, or pack fish and
+      meat in a quarter to a third of their weight of dry salt, or in brine of a measured
+      strength appropriate to the food), make it sour (vinegar, or let shredded cabbage ferment
+      under its own juice with 2 % salt to sauerkraut), smoke it after salting, boil
+      fruit with its weight of sugar, or keep perishable food cold. Properly salted
+      and dried fish and meat keep for a year or more; sauerkraut keeps through the
+      winter and still protects against scurvy.
+    pitfalls:
+      - "Too little salt, or meat sealed airtight without enough salt or acid: botulism, a deadly poison that cannot be seen or smelt (the name comes from sausage)"
+      - "Smoking without first salting or drying; smoke alone does not preserve for long"
+      - "Believing salt meat, biscuit and dried peas are a complete diet; they hold no vitamin C and crews get scurvy"
+      - "Salting in warm weather before the meat has cooled, so that it rots from the bone outward"
+    history:
+      mesopotamia: "3rd millennium BC – dried and salted fish and meat in ration lists"
+      egypt: "c. 2500 BC – salted and dried fish and fowl in tomb scenes"
+      china: "by Zhou–Han – fermented bean and fish pastes (jiang), salted vegetables"
+      rome: "c. 160 BC – Cato's recipe for salting hams; garum fish sauce an industry by the 1st c. AD"
+      europe: "from c. 1100 – stockfish trade from Lofoten; 14th c. Dutch barrel-cured herring"
+      americas: "pre-Columbian – freeze-dried potato (chuño) and dried llama meat (charqui) in the Andes; pemmican on the northern plains"
+    sources:
+      - "Mark Kurlansky, Salt: A World History (2002)"
+      - "Sue Shephard, Pickled, Potted and Canned: The Story of Food Preserving (2000)"
+
+  - id: canning
+    name: Canning (heat-preserving in sealed containers)
+    category: agriculture
+    requires: [food_preservation]
+    helps: [glassmaking, heat_sterilisation, microorganisms, safety_valve_boiler]
+    explain: >
+      Heat must reach the coldest part of the food for long enough, and a sound seal
+      prevents contamination afterwards. Appert used corked bottles; modern preserving
+      jars vent during processing and seal as they cool. A tested boiling-water
+      process is suitable for sufficiently acidic foods. Tomatoes may need added acid
+      even when they taste sour. Low-acid foods above pH 4.6, including meat, beans
+      and most vegetables, need a tested pressure-canning process. Use the specified
+      recipe, jar size, packing method, time and altitude adjustment; reaching a
+      particular temperature alone is insufficient.
+    pitfalls:
+      - "Boiling low-acid food (meat, beans, vegetables) at 100 °C only: the spores of botulism survive and the poison kills"
+      - "Tasting suspect food: botulinum toxin can be present even when the jar is sealed and the food looks and smells normal"
+      - "Large cans heated too briefly stay raw in the middle and rot (the Royal Navy scandal of 1852)"
+      - "Sealing cans with lead solder on the inside"
+      - "Appert's own explanation, that excluding air preserves; unheated sealed food spoils"
+    history:
+      europe: "c. 1795–1810 – Nicolas Appert develops bottling and wins the French government's 12,000 francs (1810); 1810 Peter Durand's English patent for tin canisters; 1812–13 Donkin and Hall's cannery supplies the Royal Navy; 1860s Pasteur explains why it works"
+      americas: "1874 – pressure retort (Shriver, Baltimore); 1895–97 Prescott and Underwood work out safe heating times"
+    sources:
+      - "Nicolas Appert, L'art de conserver, pendant plusieurs années, toutes les substances animales et végétales (1810)"
+      - "Sue Shephard, Pickled, Potted and Canned: The Story of Food Preserving (2000)"
+      - "US Department of Agriculture, Complete Guide to Home Canning (2015 revision)"
+
+  - id: pasteurisation
+    name: Pasteurisation
+    category: agriculture
+    requires: []
+    helps: [thermometer_temperature, microorganisms, fermentation_yeast]
+    explain: >
+      Gentle heating, well below boiling, kills most of the germs that spoil drinks or
+      cause disease without changing the taste much. Wine and beer: 55–60 °C for a few
+      minutes in the closed bottle or cask. Milk: 63 °C for 30 minutes, or 72 °C for
+      15 seconds, then cool quickly and keep clean and cool. Raw milk carries
+      tuberculosis, brucellosis, typhoid and diphtheria; heating it sharply reduces
+      infant deaths. Measure the temperature throughout the milk and time the hold
+      from when the whole batch reaches it. Steam or bubbles alone cannot verify
+      pasteurisation.
+    pitfalls:
+      - "Thinking pasteurised means sterile; surviving germs grow again, so the milk still needs cold and clean vessels"
+      - "Pouring heated milk back into the unwashed pail"
+      - "Heating wine too hot, which spoils it"
+      - "Believing milk sours because of thunder or bad air"
+    history:
+      china: "1117 – the Beishan jiujing (Zhu Gong) describes heating sealed jars of wine to keep them"
+      east_asia: "by the 1560s – heating of sake (hi-ire) recorded in the Tamon-in diary, Nara"
+      europe: "1768 Spallanzani shows heated sealed broths do not spoil; 1864–66 Pasteur heats wine; 1886 Soxhlet proposes heating milk for infants; from c. 1890 commercial milk pasteurisation (Denmark, Germany, New York)"
+    sources:
+      - "Louis Pasteur, Études sur le vin (1866)"
+      - "Patrice Debré, Louis Pasteur (1998)"
+
+  - id: grain_storage_pest_control
+    name: Grain storage and protection from pests and ergot
+    category: agriculture
+    requires: []
+    explain: >
+      Grain keeps for years if it is dry (a kernel should crack between the teeth, not
+      dent), cool, and shut away from rats, birds and weevils. Either store it airy in
+      a granary raised on posts or stones with overhanging caps that rats cannot pass,
+      and turn it; or the opposite, seal it airtight in a clay-lined pit or jar, where
+      the grain uses up the air and insects suffocate. Clean out all old grain before
+      the new harvest comes in. Rye with black, horn-shaped spurs among the grains
+      carries ergot: segregate the lot. Visible sorting can reduce contamination but
+      cannot certify its safety. Contaminated flour can cause burning pains, gangrene
+      and convulsions.
+    pitfalls:
+      - "Storing grain damp: it heats, moulds and can catch fire by itself; mouldy grain and nuts are poisonous even when they look only slightly spoiled"
+      - "Climbing into a sealed pit or silo just opened; the air in it suffocates"
+      - "Topping up an infested bin with the new harvest"
+      - "Taking ergot poisoning (St Anthony's fire) for a plague or bewitchment"
+      - "Open flames in a dusty mill or granary; flour dust in air explodes"
+    history:
+      mesopotamia: "c. 9000 BC – raised-floor granaries in the Levant (Dhra', Jordan) before full domestication; state granaries in Sumer"
+      egypt: "c. 5000 BC – basket-lined silos in the Fayum; later large state granaries"
+      india: "c. 2500 BC – large 'granaries' at Harappa and Mohenjo-daro (identification disputed)"
+      china: "54 BC – 'ever-normal granary' (Geng Shouchang): the state buys grain in good years and sells in bad to steady prices"
+      americas: "15th c. – Inca storehouses (qollqa) on windy hillsides, ventilated through floor channels"
+      europe: "Iron Age – sealed storage pits (tested at Butser); 1670s Thuillier and Dodart link ergot in rye to the disease"
+    sources:
+      - "Peter J. Reynolds, Iron Age Farm: The Butser Experiment (1979)"
+      - "Mary Kilbourne Matossian, Poisons of the Past: Molds, Epidemics, and History (1989)"
+
+  - id: sea_fisheries_salt_cod
+    name: Sea fisheries – stockfish, salt cod and cured herring
+    category: agriculture
+    requires: [food_preservation]
+    helps: [ship_design_caravel_carrack]
+    explain: >
+      Cod has almost no fat, so split, lightly salted and dried on racks or rocks it
+      becomes hard as wood and keeps for years even in the tropics: the ideal food
+      for ships, armies and fast days. In cold dry air (northern Norway, Iceland) it
+      dries without any salt (stockfish). Fat fish such as herring must be gutted
+      and packed in barrels of brine within a day of the catch. The richest cod
+      grounds in the world are the shallow banks off Newfoundland, about 45–50°N and
+      some 1,800 nautical miles west of Ireland.
+    pitfalls:
+      - "Trying to air-dry fat fish; herring and mackerel turn rancid unless salted in brine or smoked"
+      - "Drying cod in a warm, damp climate without enough salt"
+      - "Asserting that Basque or Bristol fishermen worked the Newfoundland banks before 1492; there is no good evidence, though Bristol ships searched the western ocean from 1480"
+      - "Assuming the sea is inexhaustible; the Newfoundland cod stock collapsed in 1992"
+    history:
+      europe: "from c. 1100 – Lofoten stockfish traded through Bergen; 14th c. Dutch herring cure (attributed to Willem Beukelszoon, legendary); 1480–81 Bristol voyages in search of the 'Isle of Brasil'; 1497 John Cabot reports seas full of cod; from c. 1502 Portuguese, Norman, Breton and Basque boats fish off Newfoundland"
+      americas: "indigenous coastal fisheries for millennia; from the 16th c. salt cod feeds the Atlantic world"
+      east_asia: "dried and fermented fish products central to coastal diets since antiquity"
+    sources:
+      - "Mark Kurlansky, Cod: A Biography of the Fish That Changed the World (1997)"
+      - "Brian Fagan, Fish on Friday: Feasting, Fasting, and the Discovery of the New World (2006)"
+
+  # ------------------------------------------------------------ special crops and husbandry
+  - id: sugar_cane_beet
+    name: Sugar from cane and from beet
+    category: agriculture
+    requires: []
+    helps: [lime_burning]
+    explain: >
+      Sugar cane is a giant tropical grass grown from stem cuttings; its juice holds
+      10–15 % sugar. Crush the cane between rollers within a day of cutting, clear
+      the juice with a little lime and skimming while heating, boil it down through
+      a row of pans until it grains, and let the dark syrup (molasses) drain from the
+      crystals in clay cones. The same sugar is in the white beet of temperate
+      Europe: slice the roots, soak the sugar out in hot water, purify with lime and
+      boil down. Selection raised beet from under 2 % sugar to over 15 %, so cold
+      countries can make their own.
+    pitfalls:
+      - "Cane cut and left lying for days loses its sugar; mill and field must work in step"
+      - "Expecting cane to grow in Europe beyond the frost-free southern fringe (Sicily, Andalusia, Madeira)"
+      - "Promoting cane plantations without seeing where they lead: they consumed forests for fuel and were the main engine of the Atlantic slave trade"
+      - "Scorching the syrup or adding too much lime during clarification; crystals form when the syrup becomes supersaturated"
+    history:
+      global: "c. 8000 BC – cane domesticated in New Guinea"
+      india: "by c. 500 BC – cane juice boiled to solid sugar (Sanskrit sarkara); crystal sugar refined by the Gupta period (c. 350 AD)"
+      china: "647 – Tang Taizong sends a mission to India to learn sugar boiling"
+      islamic: "7th–10th c. – cane and refining spread from Persia to Egypt, the Levant, Cyprus, Sicily and Spain"
+      europe: "1420s–1450s – Portuguese plantations on Madeira; 1480s Canaries and São Tomé with enslaved labour; 1747 Marggraf finds sugar in beet; 1801–02 Achard's beet factory at Cunern, Silesia; 1811 Napoleon orders beet growing"
+      americas: "1493 – Columbus brings cane to Hispaniola; first mills c. 1516; Brazil from the 1530s"
+    sources:
+      - "Sidney W. Mintz, Sweetness and Power: The Place of Sugar in Modern History (1985)"
+      - "J. H. Galloway, The Sugar Cane Industry: An Historical Geography from its Origins to 1914 (1989)"
+
+  - id: sericulture
+    name: Sericulture (silk raising)
+    category: agriculture
+    requires: []
+    helps: [textile_fibres]
+    explain: >
+      Silkworm eggs are kept cool over winter and hatched when the white mulberry
+      comes into leaf. The caterpillars eat only fresh, dry mulberry leaves, on clean
+      trays in a warm, airy room, for about four weeks and four moults, then spin
+      cocoons on twigs or straw. Kill the pupae by steam or oven heat before the
+      emerging moths soften and break through the cocoons, float the cocoons in nearly
+      boiling water to soften the gum, catch the ends and reel five to eight filaments
+      together onto a turning reel; one cocoon gives several hundred metres of
+      unbroken thread. Let some moths emerge and lay eggs for next year.
+    pitfalls:
+      - "Wet, dusty or wilted leaves and crowded, dirty trays: disease can kill the whole brood in days"
+      - "Letting the adult moths emerge, which breaks the thread into short lengths fit only for spun silk"
+      - "Starting with worms before the trees: mulberries need several years' growth, and about 200 kg of leaves go into a kilogram of raw silk"
+      - "Assuming all mulberry foliage gives the same yield; white mulberry is widely preferred, but silkworms also eat other mulberry species"
+      - "Breeding from sick moths (pébrine passes through the eggs)"
+    history:
+      china: "c. 3600–2700 BC – earliest silk finds (Qingtai, Qianshanyang); a state secret for millennia"
+      india: "c. 2450–2000 BC – wild silk in the Indus cities; mulberry silk later via Khotan"
+      east_asia: "by c. 3rd c. AD – sericulture in Korea and Japan"
+      rome: "c. 552 – silkworm eggs smuggled to Constantinople under Justinian (Procopius)"
+      islamic: "7th–10th c. – silk raising spreads from Persia and Syria to Sicily and al-Andalus"
+      europe: "12th c. Sicily; 13th c. Lucca; water-powered silk-throwing mills at Bologna from the 14th c.; 15th c. Florence and Venice order mulberries planted; 1718–21 Lombe's mill at Derby; 1865–70 Pasteur shows how to select healthy eggs"
+    sources:
+      - "Dieter Kuhn, Science and Civilisation in China, vol. 5 part 9: Textile Technology: Spinning and Reeling (1988)"
+      - "Luca Molà, The Silk Industry of Renaissance Venice (2000)"
+
+  - id: beekeeping_movable_frame
+    name: Movable-frame beehive
+    category: agriculture
+    requires: []
+    explain: >
+      Bees keep open a passage of 6–9 mm (the 'bee space'): narrower gaps they glue
+      shut, wider ones they fill with comb. Hang rectangular wooden frames in a box so
+      that this working passage remains between the finished comb faces and between
+      comb and box, and every comb can be lifted out, inspected and put back; honey is
+      taken from an upper box and the colony lives on, instead of being killed with
+      sulphur as in straw skeps. The simplest version is a trough covered by wooden
+      bars 32–35 mm wide laid edge to edge, with sloping sides so the combs are not
+      fixed to the walls. Smoke calms the bees.
+    pitfalls:
+      - "Wrong spacing: frames get glued solid or bridged with wild comb and cannot be moved"
+      - "Taking too much honey in autumn; a colony needs 15–20 kg to survive a northern winter"
+      - "Calling the large bee the 'king'; she is a female, the mother of the hive"
+      - "Moving combs between sick and healthy hives, which spreads foulbrood"
+      - "Giving honey to infants under one year (botulism risk)"
+    history:
+      egypt: "c. 2400 BC – horizontal clay hives in the sun temple of Nyuserre; c. 900 BC a large apiary at Tel Rehov in the Levant"
+      greece: "1682 – George Wheler publishes his account of Greek basket hives with movable top bars; continuity from antiquity is uncertain"
+      china: "by c. 2nd c. AD – the eastern honey bee kept in log and wall hives"
+      americas: "pre-Columbian – Maya keep stingless bees in log hives; 1622 European honey bee brought to Virginia; 1851 L. L. Langstroth applies the bee space (patent 1852)"
+      europe: "1609 Butler shows the 'king' is a queen; 1789–92 Huber's leaf hive; 1838 Dzierzon's movable bars; 1865 Hruschka's honey extractor"
+    sources:
+      - "L. L. Langstroth, Langstroth on the Hive and the Honey-Bee: A Bee Keeper's Manual (1853)"
+      - "Eva Crane, The World History of Beekeeping and Honey Hunting (1999)"
+
+  - id: coffee_tea_cacao
+    name: Coffee, tea and cacao
+    category: agriculture
+    requires: []
+    helps: [boiled_water, new_world_crops]
+    explain: >
+      Tea comes from Camellia sinensis. Heating the fresh leaves early limits
+      oxidation and produces green tea; allowing bruised leaves to oxidise before
+      drying produces black tea. Coffee uses the roasted seeds of a shrub native to
+      the Ethiopian highlands. Cacao uses fermented, roasted and ground seeds of a
+      tropical American tree; historical preparations included cold and frothed
+      drinks. All three contain stimulants. Their preparation and trade differed: tea
+      tolerated cooler growing conditions than cacao, and coffee houses and tea houses
+      became meeting places for merchants and news.
+    pitfalls:
+      - "Brewing unroasted coffee beans, or assuming tea and cacao require the same climate"
+      - "Thinking green and black tea come from different plants"
+      - "Repeating that Kolschitzky opened Vienna's first coffee house with beans left by the Turks in 1683; the first licence went to the Armenian Johannes Diodato in 1685"
+      - "In 1490 looking for coffee in Constantinople or cacao in Asia; coffee is then drunk only in Yemen and Ethiopia, cacao is already known in tropical South America as well as Mesoamerica"
+    history:
+      china: "tea drunk by the 1st c. BC (Wang Bao's contract, 59 BC); c. 760–780 Lu Yu's Classic of Tea"
+      east_asia: "9th c. tea in Japan; 1191 Eisai reintroduces it with Zen"
+      africa: "coffee wild in south-west Ethiopia; chewed and brewed there before export"
+      islamic: "c. 1450 – Sufis in Yemen drink coffee to stay awake; 1511 debate and ban at Mecca; 1550s coffee houses in Constantinople"
+      americas: "c. 3300 BC – cacao used in the upper Amazon (Ecuador); by c. 1900 BC in Mesoamerica; cacao beans serve as money among the Aztecs"
+      europe: "1520s–1544 cacao reaches Spain; 1610 tea shipped by the Dutch; c. 1645 coffee house in Venice, 1650 Oxford, 1652 London, 1685 Vienna"
+    sources:
+      - "Ralph S. Hattox, Coffee and Coffeehouses: The Origins of a Social Beverage in the Medieval Near East (1985)"
+      - "Sophie D. Coe & Michael D. Coe, The True History of Chocolate (1996)"
+      - "Victor H. Mair & Erling Hoh, The True History of Tea (2009)"
+
+  # ------------------------------------------------------------ twentieth century
+  - id: hybrid_maize
+    name: Hybrid maize (hybrid vigour, seed bought anew each year)
+    category: agriculture
+    requires: [selective_breeding]
+    helps: [heredity_genetics, mineral_fertiliser]
+    explain: >
+      Breeders cross selected inbred maize lines to produce a uniform first
+      generation, often more vigorous than either parent. The gain depends on the
+      cross and growing conditions. In the next generation traits segregate and
+      average performance often falls. Seed producers therefore repeat the parental
+      cross, preventing unwanted pollen from fertilising the seed-parent rows, and
+      farmers obtain fresh seed for each crop instead of saving their own.
+    pitfalls:
+      - "Saving and resowing seed from hybrid maize; the crop is uneven and yields drop"
+      - "Overlooking shared susceptibility across varieties: in 1970 many US maize hybrids carried the same male-sterile cytoplasm, and southern corn leaf blight destroyed about 15 % of the crop"
+      - "Confusing hybrids with the semi-dwarf wheats and rices, which are true-breeding varieties"
+    history:
+      europe: "1760s – Kölreuter notes hybrid vigour in tobacco; 1876 Darwin's experiments on cross- and self-fertilisation"
+      americas: "1908 – G. H. Shull describes inbred lines and hybrid vigour in maize; 1918 D. F. Jones's double cross makes seed cheap; 1930s–1940s hybrid maize covers the US corn belt"
+      china: "1973 – hybrid rice (Yuan Longping)"
+    sources:
+      - "Deborah Fitzgerald, The Business of Breeding: Hybrid Corn in Illinois, 1890–1940 (1990)"
+
+  - id: semi_dwarf_wheat_rice
+    name: Semi-dwarf wheat and rice (Green Revolution)
+    category: agriculture
+    requires: [selective_breeding]
+    helps: [heredity_genetics, mineral_fertiliser, ammonia_synthesis, irrigation_water_lifting]
+    explain: >
+      Semi-dwarf wheat and rice have shorter stems that resist lodging under heavy
+      ears, especially with ample nitrogen and water. This is a different principle
+      from hybrid maize: the varieties are stable, so farmers can save seed from
+      them. Rust resistance was also important in the Mexican wheat programme.
+    pitfalls:
+      - "Expecting the seed to work alone; without fertiliser and water the short varieties yield little more than the old ones"
+      - "Calling the dwarf wheats hybrids; they are true-breeding varieties whose seed can be saved"
+      - "Ignoring the side effects: falling water tables, salt, pesticide use and gains that go first to farmers with capital"
+    history:
+      americas: "1944 – Borlaug starts wheat breeding in Mexico, semi-dwarf varieties released 1961–64"
+      east_asia: "1935 – semi-dwarf wheat Norin 10 released in Japan (Gonjiro Inazuka); 1966 IRRI releases IR8 in the Philippines, bred from Indonesian Peta and Taiwanese Dee-geo-woo-gen"
+      india: "1965–68 – Mexican dwarf wheats adopted in Punjab (Swaminathan); India self-sufficient in cereals by the 1970s"
+    sources:
+      - "Norman E. Borlaug, The Green Revolution, Peace, and Humanity (Nobel Lecture, 1970)"
+      - "Leon Hesser, The Man Who Fed the World (2006)"

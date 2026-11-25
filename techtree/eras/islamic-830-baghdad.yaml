@@ -1,0 +1,4443 @@
+# Blueprints from Tomorrow – era file: Baghdad, AD 830 (AH 214–215).
+#
+# Status of each entry from techtree/core/*.yaml in this era and region.
+#   knowledge      0 unknown · 1 idea/rumour · 2 described in theory · 3 used by
+#                  specialists · 4 widespread
+#   use            none | wrong | partial | correct   (is it used, and used right?)
+#   producibility  easy | medium | hard | very-hard | impossible  (with local means,
+#                  if someone explains it well)
+#   acceptance     low | medium | high  (how readily people adopt it)
+#   note           what the player should know / what the world believes
+#   local          people, places, materials to connect to
+#   elsewhere      where it already exists in 830 (quest material)
+# Entries not listed default to knowledge 0, use none.
+
+era: islamic-830-baghdad
+title: Baghdad 830
+region: Baghdad, Iraq, Abbasid Caliphate
+year: AD 830
+core_version: 2
+
+worldview: >
+  Baghdad, the City of Peace, is not yet seventy years old and is the largest city
+  west of China, with several hundred thousand people (estimates vary widely). It
+  is still repairing the damage of the siege of 812–813, when al-Ma'mun's armies
+  took it from his brother al-Amin. Al-Ma'mun has ruled from here since 819 and
+  spends these years on campaign against Byzantium. God is one and the Quran is
+  His word; whether that word is created or eternal is the question the caliph has
+  made a matter of state. He favours the rational theologians of the Mu'tazila
+  against the traditionists, and in 833 he will make every judge swear to it.
+  Learning is prized, and patrons pay for it. Greek books in philosophy, medicine,
+  mathematics and astronomy are being turned into Arabic, mostly through Syriac and
+  mostly by Christian scholars, beside Persian and Indian works. Aristotle, Galen,
+  Euclid and Ptolemy are authorities to be understood and reconciled, not tested;
+  nobody yet expects an experiment to overrule them. Astrology is a learned
+  profession. Medicine is Galenic and in the hands of Nestorian Christian
+  physicians. Paper is made in the city and is replacing papyrus in the offices,
+  but every book is copied by hand. Indian numerals with a sign for zero are known
+  to a few astronomers and are not yet used by clerks. Christians, Jews and
+  Zoroastrians live under protection and pay the poll tax. Slavery is everywhere,
+  from household servants and singing girls to the Turkish soldiers that the
+  caliph's brother is buying.
+
+status:
+  # ---- Medicine & hygiene
+  contagion_theory:
+    knowledge: 1
+    use: none
+    producibility: medium
+    acceptance: low
+    note: Disease comes from humoral imbalance, corrupt air (waba') and God's decree. Two sayings of the
+      Prophet pull against each other, 'there is no contagion' and 'flee from the leper as you flee from
+      a lion', and scholars argue over how to reconcile them. Nobody proposes living agents.
+    local:
+    - hadith scholars such as Ahmad ibn Hanbal
+    - court physicians Yuhanna ibn Masawayh and Bukhtishu ibn Jibril
+  bloodletting_harm:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Venesection (fasd) and cupping (hijama) are routine, recommended in prophetic tradition and
+      in Galen alike; barbers cup in the markets, court physicians bleed the caliph by the calendar and
+      the stars. Questioning it attacks both religion and medicine.
+    local:
+    - cuppers and barbers in the Karkh markets
+    - Yuhanna ibn Masawayh
+    - Salmawayh ibn Bunan
+  epidemiology_mapping:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: The diwans survey land, count taxpayers and pay rolls of soldiers by name, but nobody records
+      deaths or causes. The method exists; the question does not. Mosque imams and washers of the dead
+      know who died where.
+    local:
+    - diwan al-kharaj (land tax office) and diwan al-jund (army pay rolls)
+    - washers of the dead and gravediggers at the cemeteries of Quraysh and Bab al-Harb
+  hand_hygiene:
+    knowledge: 1
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Ritual ablution (wudu') before each of five daily prayers makes hand and face washing a habit
+      of every Muslim; hands are washed before and after meals, often with ushnan (saltwort ash). Nobody
+      links hands to fever, and physicians and midwives do not wash between patients.
+    local:
+    - ablution basins at the Friday mosques
+    - ushnan sellers
+  boiled_water:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Galenic and Hippocratic texts rank waters and advise boiling bad ones; the rich cool water in
+      porous jars and ice is carried to the palaces. Most people drink Tigris and canal water brought
+      by water carriers. Fuel is dear in a city without forests.
+    local:
+    - water carriers (saqqa'un) drawing from the Tigris
+    - Airs, Waters, Places in Syriac and early Arabic versions
+  water_filtration_chlorination:
+    knowledge: 1
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Water from the Tigris and the canals from the Euphrates is muddy; households let it settle in
+      large unglazed jars, which also cool it by sweating. Sand filter beds are buildable by canal engineers;
+      chlorination is out of reach.
+    local:
+    - Nahr Isa and the Sarat canal
+    - potters of porous water jars
+  sanitation_sewerage:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Islamic purity law is strict about excrement and urine, and houses have latrines over cesspits;
+      the better quarters have covered drains to the canals. Waste still ends in the canals and the Tigris
+      that the city drinks.
+    local:
+    - cesspit cleaners
+    - jurists on purity (tahara)
+  food_hygiene:
+    knowledge: 1
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Ritual slaughter drains blood, pork and carrion are forbidden, and the market inspector (sahib
+      al-suq or muhtasib) checks weights and spoiled goods. Flies, cooks' hands and carriers are no one's
+      concern.
+    local:
+    - market inspector of Karkh
+    - cookshops and harisa sellers
+  quarantine:
+    knowledge: 1
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: A saying of the Prophet orders that one should not enter a land where plague (ta'un) is, nor
+      flee from it, and Umar is said to have turned back from plague-struck Syria in 639. It is read as
+      trust in God rather than isolation, and the great plague waves ended in Iraq around 749.
+    local:
+    - hadith scholars
+    - the story of Umar and the plague of Amwas
+  nursing_hospital_hygiene:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: high
+    note: Baghdad has a bimaristan from Harun al-Rashid's reign, probably founded by the Barmakid vizier
+      Yahya ibn Khalid; the story of Jibril ibn Bukhtishu founding it is doubted. Physicians are salaried
+      and the sick are fed, but there is no idea of cleaning between patients or separating fevers.
+    local:
+    - the bimaristan of Baghdad
+    - Bukhtishu ibn Jibril
+    - Gondeshapur in Khuzistan, the physicians' home tradition
+  cholera_waterborne:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Asiatic cholera stays in Bengal. Arabic hayda is any violent flux; dysentery and summer diarrhoea
+      kill children every year in the hot months.
+    elsewhere:
+    - Bengal, where cholera is endemic
+  oral_rehydration:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Cane sugar from Khuzistan and salt are both in every market, and physicians already prescribe
+      syrups (sharab) and barley water. The right proportions and the reason would be new.
+    local:
+    - sugar refiners of Khuzistan (Ahwaz, Tustar)
+    - druggists (attarun) of the Karkh market
+  plague_vectors:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: low
+    note: The Justinianic plague returned to Iraq and Syria many times until about 749 and is remembered
+      by name (ta'un). It has gone; rats and fleas are ordinary. The knowledge has no visible use here
+      for five centuries.
+  typhus_lice:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Lice are ordinary among soldiers, prisoners and the poor. Camp fevers on the Byzantine frontier
+      are blamed on bad air and fatigue. Washing and baking clothes is cheap; the reason would be new.
+  malaria_mosquito:
+    knowledge: 1
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Tertian and quartan fevers are well described by Galen and rife in the marshes of southern Iraq
+      around Basra and Wasit, blamed on the air of stagnant water. People sleep on roofs and under nets
+      against gnats, for comfort, not for fever.
+    local:
+    - the Batiha marshes between Wasit and Basra
+    - al-Jahiz, a Basran with sharp eyes for insects
+  quinine:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: high
+    note: Cinchona grows only in the Andes. Fevers are treated with diet, bleeding, syrups and astrological
+      timing.
+    elsewhere:
+    - Andean forests, source of cinchona bark
+  tuberculosis_control:
+    knowledge: 1
+    use: none
+    producibility: medium
+    acceptance: low
+    note: Consumption (sill) is known from the Greek books and blamed on ulcerated lungs and constitution;
+      that it passes to those nearby is not discussed. Milk and sugar diets are prescribed.
+  parasitic_worms:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Physicians distinguish long, round and small worms (Greek tradition) and think they breed from
+      corrupt humours. Remedies like pomegranate root and male fern work. The guinea worm (al-irq al-madani)
+      is known from Hijaz; transmission by water and soil is unknown.
+  scurvy_citrus:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Rare on land; Indian Ocean voyages hop between ports and seldom run long enough. The citron
+      (utrujj) is grown, while the sour orange and lemon only become common in Iraq in the following century.
+      Dates and fresh greens protect most people.
+    elsewhere:
+    - India, home of the sour orange and lemon
+  vitamins_deficiency:
+    knowledge: 1
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Liver for night blindness is in the Greek books. Disease is excess, blockage or bad air, never
+      a missing substance. The poor of Baghdad live on bread and dates and suffer in famine years.
+  variolation:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Smallpox (judari) and measles (hasba) are known childhood killers, but no one inoculates. Material
+      exists in every outbreak; the idea of deliberately giving a mild case would horrify physicians and
+      jurists alike.
+  smallpox_vaccination:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+    note: Smallpox is present, but cowpox is not known or looked for; the dairy herds of the Sawad are
+      water buffalo, cattle, sheep and goats.
+  vaccines_attenuated:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  antitoxin_serum:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  wound_care:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Surgeons (jarrahun) suture, splint, cauterise and dress wounds with wine, vinegar, oils and
+      honey after Galen and Paul of Aegina, known through Syriac. Cautery (kayy) is the great remedy.
+      The armies on the Byzantine frontier take physicians, never enough.
+    local:
+    - jarrahun attached to the caliph's army
+    - Bukhtishu ibn Jibril
+  antiseptics:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Wine, vinegar and honey on wounds and boiling oil or cautery are used for other reasons. Strong
+      spirit is not yet made in quantity; pitch, alum and vitriol are at hand.
+  heat_sterilisation:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Cautery irons are heated for burning, not for cleanliness. Instruments are wiped and reused;
+      pus is expected and called laudable.
+  childbirth_care:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Midwives (qawabil) deliver on birthing stools; male physicians give advice from Galen and Soranus
+      but rarely attend. No forceps. Childbed fever is common and blamed on retained humours.
+    local:
+    - midwives of the harem and the city quarters
+  first_aid_resuscitation:
+    knowledge: 1
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Bleeding is stopped by pressure, cautery and styptics; drowning victims are turned and shaken.
+      Chest compression and mouth-to-mouth breathing are unknown.
+  ether_anaesthesia:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: medium
+    note: Surgeons dull pain with opium, henbane and mandrake, risky and uneven. Ether needs strong sulphuric
+      acid and strong spirit, neither made here.
+  opium_analgesia:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Opium (afyun) is a staple of the druggists, known from Dioscorides and Galen and compounded
+      into theriac (tiryaq), which the caliph's physicians prepare with ceremony. Doses are by eye; overdose
+      is known to kill. Willow is used for fever in Dioscorides.
+    local:
+    - Yuhanna ibn Masawayh, a compounder of drugs
+    - theriac makers of the court
+  blood_groups_transfusion:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  anatomy_dissection:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: low
+    note: Anatomy is Galen's, read in Syriac and early Arabic summaries. Human dissection is unthinkable
+      to jurists. Yuhanna ibn Masawayh is later reported to dissect apes, one sent from Nubia to the court
+      in 836.
+    local:
+    - Yuhanna ibn Masawayh
+    - Hunayn ibn Ishaq, a young man hunting for Greek copies of Galen
+  blood_circulation:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: low
+    note: Galen's model rules. Venous blood is made in the liver and consumed by the body, some seeps
+      through invisible pores in the heart's septum, and the arteries carry vital spirit. A ligature on
+      an arm would already show the flow.
+  clinical_thermometer_stethoscope:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: high
+    note: Physicians take the pulse after Galen's many kinds and inspect urine in a flask (tafsira). Temperature
+      is judged by hand and nobody counts beats against a clock; a pulse watch is the water clock.
+  dental_care:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: The miswak chewing stick (arak twig) is used several times a day as prophetic practice. Tooth
+      worms are blamed for decay; sugar is a luxury of the rich, and their teeth show it. Extraction is
+      the barber's job.
+    local:
+    - miswak sellers at the mosque gates
+  sulphonamides:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: medium
+  penicillin:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: medium
+    note: Moulds grow on bread and dates in every house. Growing, extracting and dosing them is beyond
+      any workshop here.
+  # ---- Life sciences
+  microorganisms:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: There are no lenses of any kind, only burning mirrors in Greek books and rock crystal. Without
+      a microscope there is nothing to show.
+  spontaneous_generation_refuted:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Everyone, from Aristotle's readers to the date farmers, knows that worms come from rot and flies
+      from dung. A covered jar beside an open one is an easy experiment no one has thought to make.
+  fermentation_yeast:
+    knowledge: 0
+    use: partial
+    producibility: hard
+    acceptance: medium
+    note: Wine is forbidden but drunk at court and in the Christian monasteries; jurists debate which
+      date drinks (nabidh) are lawful once they ferment. Bakers keep leaven, cooks make vinegar and murri.
+      Yeast as a living thing needs a microscope.
+    local:
+    - Christian monasteries around Baghdad, praised by later poets for their wine
+    - Hanafi jurists on nabidh
+  cell_theory:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  viruses:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  taxonomy:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Aristotle's books on animals are known in an early Arabic version, and Dioscorides' herbal circulates
+      in Syriac. Philologists collect the names of camels, horses and plants from Bedouin informants.
+      Order is by use or alphabet, not by kinship.
+    local:
+    - philologists of Basra and Kufa
+    - druggists' herbals
+    - al-Jahiz
+  reproduction_fertilisation:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Every date farmer pollinates female palms by hand with male flowers, so plant sex is common
+      knowledge. For humans Galen's two seeds compete with Aristotle's form and matter. The egg is unknown.
+    local:
+    - date growers of the Sawad and Basra
+  heredity_genetics:
+    knowledge: 1
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Arabs keep pedigrees of horses and camels as carefully as of tribes; Hisham ibn al-Kalbi (d.
+      c. 820) wrote on the genealogies of horses. Breeders select by eye and lineage; no discrete factors,
+      no ratios.
+    local:
+    - horse breeders of the caliph's stables
+  evolution_natural_selection:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Species are fixed by God's creation. Al-Jahiz, alive and writing, notices how animals compete
+      for food and adapt to places; his Book of Animals comes around 847. Modern claims that he had a
+      theory of evolution are overstated.
+    local:
+    - al-Jahiz
+  dna_structure:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  respiration_metabolism:
+    knowledge: 1
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Galen teaches that breath cools the innate heat of the heart and feeds the vital spirit; a lamp
+      in a closed jar goes out, and nobody connects the two.
+  photosynthesis_plant_nutrition:
+    knowledge: 0
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Plants are thought to draw their food from soil and water. Farmers of the Sawad manure with
+      dung and pigeon droppings and know that saline water kills crops.
+  nitrogen_fixation_biology:
+    knowledge: 0
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Broad beans, lentils, chickpeas and clover are grown; that they restore a field is known from
+      Greek and Persian farm lore, without reason.
+  nervous_system_brain:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Galen's doctrine is standard among the court physicians. The brain makes psychic spirit and
+      sends it through hollow nerves; the eye sends out a visual spirit. Aristotle's heart-centred view
+      survives among philosophers.
+    local:
+    - Yuhanna ibn Masawayh
+    - Hunayn ibn Ishaq, later the author of Ten Treatises on the Eye
+  # ---- Chemistry
+  soap:
+    knowledge: 3
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Soap (sabun) from oil and alkali is made in Syria and sold in Baghdad; many still wash with
+      ushnan ash, clay and potash. Recipes vary by workshop and the strength of the lye is guesswork.
+    local:
+    - soap from Syria (later famous at Aleppo and Nablus)
+    - ushnan sellers
+  distillation:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: The alembic (al-anbiq, from Greek ambix) distils rosewater and scents on an industrial scale;
+      al-Kindi will write a book of perfume recipes and distillations. Spirit from wine is at most a curiosity,
+      and wine is forbidden.
+    local:
+    - rosewater distillers (rosewater from Fars and Jur)
+    - al-Kindi
+    - perfumers' market
+  sulphuric_acid:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Green and blue vitriols (zaj) are sold by druggists and dyers. Distilling them gives a sharp
+      water, but no one has isolated the acid; the Jabirian writings that are often cited for this are
+      later and disputed.
+    local:
+    - druggists and dyers (vitriol, alum)
+  oxygen_combustion:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: low
+    note: Fire is an element; things burn because they contain fire. A candle under an inverted jar going
+      out is in Philo's Greek Pneumatics, read as the air being consumed.
+  nitric_acid:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: Needs saltpetre, which is unknown here. Alchemists dissolve metals only with mercury and with
+      sharp salts.
+  saltpetre_production:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Saltpetre is not known by name; 'snow of China' is a 13th-century term. Efflorescences on old
+      walls and dung heaps are taken for ordinary salts. Chinese alchemists already purify it.
+    elsewhere:
+    - Tang China, alchemists' saltpetre
+  chemical_elements:
+    knowledge: 1
+    use: wrong
+    producibility: medium
+    acceptance: low
+    note: Four elements and four qualities, after Aristotle and Galen. The Book of the Secret of Creation
+      attributed to Apollonius (Balinus), possibly composed under al-Ma'mun, teaches that metals are made
+      of sulphur and mercury, the basis of later alchemy. Transmutation is believed possible.
+    local:
+    - alchemists and the Sirr al-khaliqa
+    - al-Kindi, a sceptic of transmutation
+  atomic_theory:
+    knowledge: 2
+    use: wrong
+    producibility: medium
+    acceptance: medium
+    note: The theologian Abu al-Hudhayl teaches that bodies are made of indivisible parts that God recreates
+      every instant; his nephew and pupil al-Nazzam denies atoms and says bodies are infinitely divisible.
+      A theological argument, nothing chemical.
+    local:
+    - Abu al-Hudhayl al-Allaf
+    - al-Nazzam
+  molecules_mole_concept:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  periodic_table:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  gas_laws:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: Philo and Hero describe air expanding in heated vessels in their Greek pneumatics. Without a
+      pump or sealed tube nothing can be measured.
+  pneumatic_chemistry_gases:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: All gases are air or smoke. Marsh gas bubbles in the Batiha and fumes at the naphtha springs
+      are noticed, never collected.
+  acids_bases_ph:
+    knowledge: 1
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Vinegar, sour juices, vitriols and alum are sharp; qili and ushnan are their opposite and used
+      to wash and to make glass. No indicator; dyers judge by colour change of their vats.
+    local:
+    - dyers and glassmakers
+  hydrochloric_acid_aqua_regia:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: Sal ammoniac (nushadir) comes from Central Asian volcanic vents and is prized by alchemists
+      and metalworkers. Isolating an acid from salt and vitriol is not done.
+    elsewhere:
+    - Central Asia (Ustrushana, the Buttam mountains), sal ammoniac
+  alkali_soda:
+    knowledge: 3
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Plant ash (qili, from saltworts of the desert edge) feeds glassmakers and soap boilers and gives
+      English 'alkali' later. Lye is made by leaching ash, sometimes sharpened with lime.
+    local:
+    - ushnan and qili burners
+    - glass workshops of Raqqa and Iraq
+  lime_burning:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Baghdad is built of sun-dried and fired brick laid in gypsum plaster (juss), burnt in kilns
+      along the Tigris; lime is burnt too. Juss is cheap and fast but weak in wet places.
+    local:
+    - juss burners and brickmakers
+  salt_production:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Salt comes from salt flats and marshes of lower Iraq and from rock salt. Salt water creeping
+      into the Sawad's fields is a growing problem.
+    local:
+    - salt flats near Basra
+  mordant_dyeing:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Dyers use alum mordants with madder, kermes, saffron and henna, and vat indigo from India. Tiraz
+      workshops weave official inscribed textiles for the caliph. Recipes are workshop secrets.
+    local:
+    - tiraz workshops
+    - dyers' market
+  chlorine_bleach:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: Linen is bleached by sun, ash lye and sour milk. Chlorine needs an acid from salt.
+  electrolysis:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: No current, no zinc. The 'Baghdad battery' jars dug up near Ctesiphon are Parthian or Sasanian,
+      of unknown purpose; an electrical use is a modern speculation.
+  organic_structure_theory:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  phosphorus_matches:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: high
+    note: Fire is made with flint, steel and tinder, or carried as embers. Phosphorus is unknown.
+  rubber_vulcanisation:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: medium
+    note: Rubber trees grow only in the Americas.
+    elsewhere:
+    - Central and South America, latex
+  synthetic_dyes:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: medium
+  nitroglycerin_dynamite:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  petroleum_refining:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: high
+    note: Bitumen (qir) from Hit on the Euphrates waterproofs boats, roofs and baths; naphtha (naft) from
+      springs in Iraq, Khuzistan and Baku feeds lamps and the army's fire troops. Distilling a light white
+      naphtha is described by al-Razi around 900.
+    local:
+    - bitumen wells of Hit
+    - naffatun (naphtha troops)
+    elsewhere:
+    - Baku, naphtha springs
+  polymers_plastics:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: medium
+  ammonia_synthesis:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: medium
+  # ---- Metallurgy & materials
+  copper_bronze:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Copper comes from Iran, Oman and Cyprus; braziers in the markets cast and hammer bronze lamps,
+      basins, mortars and coin blanks. Iraq itself has no ore, no timber and little fuel.
+    local:
+    - coppersmiths' market
+    - the mint (dar al-darb)
+  bloomery_iron:
+    knowledge: 4
+    use: correct
+    producibility: medium
+    acceptance: high
+    note: Iron comes from Iran and the Caucasus as blooms and bars; Baghdad smiths forge it into tools
+      and arms. Nailed horseshoes are first clearly attested only around 900. Smelting in Iraq is rare for lack of ore and wood.
+    local:
+    - smiths of the Karkh and Bab al-Taq markets
+  steel_heat_treatment:
+    knowledge: 3
+    use: correct
+    producibility: medium
+    acceptance: high
+    note: Swordsmiths quench and temper by eye and colour, with secret quenching liquids. Results vary
+      between workshops and are passed father to son.
+    local:
+    - armourers of the caliph's arsenal
+  cementation_steel:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: high
+    note: Smiths harden iron by heating it packed in charcoal and organic matter. Al-Kindi later classifies
+      irons and steels for al-Mu'tasim; the theory is that iron is 'cooked'.
+    local:
+    - al-Kindi
+  blast_furnace_cast_iron:
+    knowledge: 1
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: Cast iron is known as an ingredient of crucible steel (dus), not as a product. No large furnaces,
+      little fuel and no water power for bellows in Iraq.
+    elsewhere:
+    - Tang China, cast-iron industry
+  coke_iron:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+    note: There is no coal near Baghdad; fuel is reeds, dung, date-palm wood and charcoal brought downriver.
+  puddling_wrought_iron:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+    elsewhere:
+    - China, cast iron stirred into wrought iron (chao)
+  crucible_steel:
+    knowledge: 3
+    use: correct
+    producibility: hard
+    acceptance: high
+    note: Indian (hindi) and Khurasani crucible steels (fuladh) reach Baghdad as ingots and blades; crucible
+      steel is made at Merv. The watered pattern is admired; how carbon content matters is unknown. Baghdad
+      smiths forge imported cakes rather than melt their own.
+    local:
+    - sword dealers of Baghdad
+    - al-Kindi, who will write on swords
+    elsewhere:
+    - South India and Sri Lanka, crucible steel ingots
+    - Merv, crucible steel workshops
+  bessemer_steel:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: medium
+  open_hearth_steel:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: medium
+  alloy_stainless_steel:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: medium
+  refractories_fireclay:
+    knowledge: 3
+    use: correct
+    producibility: medium
+    acceptance: high
+    note: Potters, glassmakers and goldsmiths have good clays and crucibles; Persian and Indian steelmakers
+      know crucibles that survive steel-melting heat. Iraq's alluvial clays are fine for brick, less for
+      refractories.
+  zinc_brass:
+    knowledge: 3
+    use: correct
+    producibility: medium
+    acceptance: high
+    note: Brass (shabah) is made by cementing copper with tutty (zinc oxide condensed in
+      ore furnaces in Iran). Metallic zinc is unknown here; when India began distilling it is debated.
+    local:
+    - brassworkers of Baghdad and Basra
+    elsewhere:
+    - Zawar, Rajasthan (early zinc distillation)
+  cupellation_assaying:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: The mints refine silver by cupellation and test gold on the touchstone; money changers (sarrafun)
+      weigh and assay every coin. Al-Ma'mun reformed coin inscriptions in the 820s; silver comes from
+      the mines of the Hindu Kush (Panjshir, praised by 10th-century writers) and Transoxiana.
+    local:
+    - the mint of Madinat al-Salam
+    - money changers of Karkh
+  mercury_amalgam:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: high
+    note: Quicksilver (zi'baq) is a staple of alchemists and gilders; gilding by amalgam fumes poisons
+      workers slowly. Sources are cinnabar mines in Spain and Iran.
+    elsewhere:
+    - Spain (Almadén), cinnabar
+  lead_hazard:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Dioscorides warns that white lead and litharge are poisons when swallowed, yet they go into
+      ointments, cosmetics (isfidaj) and glazes. Lead colic among painters and potters is not yet linked
+      to their trade.
+  soldering_tinning:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Coppersmiths tin cooking pots and solder joints; tin is imported from far away (Southeast Asia
+      via the sea route, or the west).
+  fired_brick_ceramics:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Mesopotamia is a land of brick, sun-dried for walls and fired for foundations, baths and palaces.
+      Potters glaze in green, yellow and turquoise. Fuel shortage keeps fired brick dear.
+    local:
+    - brick kilns along the Tigris
+  porcelain:
+    knowledge: 1
+    use: none
+    producibility: very-hard
+    acceptance: high
+    note: Tang white wares and stonewares arrive by sea at Basra and are the envy of the court. Iraqi
+      potters imitate them with tin-opacified white glaze on yellow clay, a new invention of these decades,
+      because they lack kaolin and kiln heat.
+    local:
+    - potters of Basra
+    elsewhere:
+    - Tang China, white porcelain (Xing ware) and Changsha ware
+  glassmaking:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Blown and moulded glass of plant ash and sand is made in Iraq, Syria and at Raqqa; bottles,
+      lamps, inkwells and vessels for perfumers and physicians. Window glass is rare.
+    local:
+    - glass workshops of Raqqa
+    - glassblowers of Baghdad
+  clear_glass:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: high
+    note: Colourless glass is cut on the wheel in Iraq and Iran, imitating rock crystal. Clarity and evenness
+      are not enough for lenses, and no one asks for lenses.
+  glass_mirrors:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: high
+    note: Mirrors are polished bronze or steel. Metal-backed glass mirrors would be a luxury item tomorrow.
+  hydraulic_cement:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: high
+    note: Bitumen seals baths, cisterns and canal walls as it has since Sumer. In Iran lime with ash (sarooj)
+      makes a water-resistant mortar for cisterns. Roman concrete is not known.
+    local:
+    - bitumen from Hit
+  reinforced_concrete:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+  paper:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Paper has been made in Baghdad since about 794–795; tradition credits the Barmakids, and the
+      story of Chinese prisoners at Talas is a later legend. The diwans are moving from papyrus and parchment
+      to paper, and the copyists' market (Suq al-Warraqin) has over a hundred shops later in the century.
+    local:
+    - paper makers of Baghdad
+    - Suq al-Warraqin
+    - Samarkand paper, the finest
+  textile_fibres:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Linen from Egypt, cotton from Khurasan and Iraq, silk and brocade from Khuzistan and Iran, wool
+      everywhere. Textiles are the empire's great industry and the caliph's tiraz workshops weave robes
+      of honour.
+    local:
+    - tiraz workshops
+    - cloth market of Karkh
+  leather_tanning:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Tanners use acacia pods (qaraz), pomegranate rind and gall nuts; Ta'if and Yemen are famous
+      for leather. Tanneries sit at the edge of town for their smell.
+  aluminium:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: medium
+    note: Alum (shabb) is a common mordant; the metal in it is out of reach.
+  wood_tar_pitch:
+    knowledge: 3
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Iraq caulks its river boats with bitumen instead of pine tar; sea-going sewn dhows are greased
+      with fish or shark oil. Wood is scarce and dear.
+    local:
+    - boatbuilders of Basra and the Tigris
+  # ---- Physics, optics & astronomy
+  lenses:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Burning glasses and burning mirrors are known from Greek books and the curiosity trade. Rock
+      crystal is cut superbly in Basra and Iraq, glass is clearer than Rome's but still greenish. Nobody
+      grinds a lens to see with.
+    local:
+    - rock-crystal cutters of Basra
+    - glassmakers of Baghdad and Raqqa
+  spectacles:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: high
+    note: Old scholars and copyists lose their near sight and have pupils read aloud. A crystal cutter
+      could grind convex lenses; the frame is the easy part. Ibn Masawayh's eye book has no remedy for
+      it.
+    local:
+    - Yuhanna ibn Masawayh (Disorders of the Eye)
+    - copyists of the Suq al-Warraqin
+  refraction_optics:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Euclid's Optics is being read in Arabic; rays leave the eye. Galen's eye anatomy puts sight
+      in the crystalline humour. Ptolemy's refraction tables are not yet in Arabic. Al-Kindi will write
+      on optics in Euclid's manner.
+    local:
+    - Ya'qub ibn Ishaq al-Kindi
+    - Yuhanna ibn Masawayh
+  camera_obscura:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: The crescent images of an eclipsed sun under leaves are a Greek curiosity. A dark room with
+      a pinhole is an afternoon's work, and al-Ma'mun's astronomers would use it to watch eclipses safely.
+  microscope:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: A fused bead of clear glass or a ground crystal sphere magnifies strongly; the glass here is
+      good enough to try. Physicians would want proof that anything they saw mattered.
+  telescope:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: high
+    note: Needs a convex objective and a concave eyepiece of clear material; rock crystal can be ground
+      but no one has made a concave lens. Astronomers at Shammasiyya and generals on the frontier would
+      pay.
+    local:
+    - Sanad ibn Ali (instrument maker)
+  reflecting_telescope:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: medium
+    note: Polished steel and bronze mirrors exist, and Greek texts on burning mirrors treat the parabola.
+      Figuring one accurately and adding an eyepiece is beyond any workshop.
+  achromatic_lens:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  spectrum_colour:
+    knowledge: 1
+    use: none
+    producibility: medium
+    acceptance: low
+    note: 'Aristotle''s Meteorology, known through Syriac and early Arabic summaries: the rainbow is reflection
+      in cloud, colours are mixtures of light and dark. A glass flask of water or a rock-crystal prism
+      shows the spectrum.'
+  spectroscopy:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+  wave_nature_light_sound:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: String ratios are known to court musicians and in Greek harmonic texts; al-Kindi will write
+      the first Arabic music theory. Sound as moving air is Aristotelian; light as a wave is unheard of.
+    local:
+    - Ishaq al-Mawsili (court musician, the 'ud)
+    - Ya'qub ibn Ishaq al-Kindi
+  speed_of_light:
+    knowledge: 1
+    use: none
+    producibility: very-hard
+    acceptance: low
+    note: Aristotle says light is instantaneous, and the visual ray reaches the stars at once. No measurement
+      is possible without a telescope and a precise clock.
+  photography:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+    note: Alchemists know vitriols and alum but no strong mineral acids to make silver salts; nobody has
+      noticed silver darken in light.
+  lever_mechanics_statics:
+    knowledge: 3
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Steelyards (qarastun) and balances are in every market and the mint. Archimedes' proof is not
+      yet in Arabic; a treatise on the steelyard comes later with Thabit ibn Qurra. Builders and siege
+      engineers work by rule.
+    local:
+    - market inspectors (muhtasib) checking weights
+    - siege engineers with manjaniq
+  buoyancy_hydrostatics:
+    knowledge: 1
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: The crown story is told, but On Floating Bodies is not in Arabic and specific weights are not
+      measured (al-Biruni and al-Khazini do it later). The mint and the money changers would gain at once.
+    local:
+    - the mint (dar al-darb)
+    - money changers (sarrafun) of Karkh
+  falling_bodies:
+    knowledge: 1
+    use: wrong
+    producibility: easy
+    acceptance: low
+    note: 'Aristotle''s Physics is just entering Arabic: heavier bodies fall faster, nothing moves in
+      a void. Mu''tazilite theologians debate motion as discrete leaps of atoms. Nobody drops two weights
+      to see.'
+    local:
+    - Abu al-Hudhayl al-Allaf (atoms and motion)
+    - al-Nazzam (the 'leap', tafra)
+  laws_of_motion:
+    knowledge: 1
+    use: wrong
+    producibility: medium
+    acceptance: low
+    note: Motion needs a mover; the air pushes a thrown stone on. Philoponus' impetus critique exists
+      in Greek and Syriac and will feed later Arabic ideas of mayl. Kalam theologians say God creates
+      each moment.
+  universal_gravitation:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+    note: Heavy things seek the centre of the world (Aristotle). Brahmagupta's remark that the Earth attracts
+      bodies may sit in the Sindhind material, unremarked. Needs laws of motion and elliptical orbits
+      first.
+  strength_of_materials:
+    knowledge: 1
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Brick vaults, domes and the great arches of the Sasanian tradition are sized by experience.
+      Timber is scarce and imported; there are no rules beyond the master builder's.
+    local:
+    - Taq Kisra at Ctesiphon (Sasanian vault, a day downstream)
+  sundial_water_clock:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Five daily prayers make time-keeping a religious need; sundials and the muezzin set the hours.
+      Water clocks from the Greek and Sasanian tradition exist; Harun sent Charlemagne a striking water
+      clock in 807.
+    local:
+    - muezzins of the great mosques
+    elsewhere:
+    - 'Aachen: the water clock Harun al-Rashid''s envoys gave Charlemagne (807)'
+  mechanical_clock:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: Gear trains exist in astrolabes and in Greek automaton books, but no escapement. Seasonal hours
+      dominate civil life while astronomers already reckon in equal hours.
+    elsewhere:
+    - 'Tang China: Yi Xing''s water-driven armillary with a stop-release linkage (725)'
+  pendulum_clock:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: medium
+    note: Needs a working escapement first. A bare pendulum counting beats would help the astronomers
+      timing eclipses, who now use water clocks and star altitudes.
+  atmospheric_pressure:
+    knowledge: 1
+    use: wrong
+    producibility: medium
+    acceptance: low
+    note: Aristotelians deny a void; kalam atomists accept one, a rare opening. Mercury and blown glass
+      tubes exist; a metre-long sealed tube is a glassblower's challenge, not an impossibility.
+    local:
+    - glassblowers of Baghdad
+    - Abu al-Hudhayl al-Allaf (void between atoms)
+  air_pump_vacuum:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+    note: Hero's and Philo's pneumatic tricks are known in Greek and will be built by the Banu Musa. A
+      tight cylinder, valves and a clear vessel are the obstacles.
+  thermometer_temperature:
+    knowledge: 1
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Philo's and Hero's air expanding with heat is in the Greek pneumatics. Galenic physicians grade
+      drugs in four degrees of hot and cold, a scale with nothing to measure.
+  latent_specific_heat:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+  heat_energy_conservation:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+    note: Heat is a quality or a fiery element. Kalam atomism treats heat as an accident God creates in
+      atoms; no thought of motion as heat.
+  weather_instruments:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Weather lore comes from star risings (anwa'), Aristotle's Meteorology and sailors' monsoon knowledge.
+      Rain is rare and the Tigris flood matters more. A rain gauge or wind vane is easy; a barometer is
+      not.
+    local:
+    - anwa' star calendars of Arab tradition
+    - Basra ship captains (monsoon timing)
+  round_earth_size:
+    knowledge: 3
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Ptolemy's spherical Earth is standard among scholars. Al-Ma'mun's surveyors measured one degree
+      of meridian in the plain of Sinjar (c. 827), about 56 2/3 Arabic miles; the length of the mile, and so the result,
+      is still argued.
+    local:
+    - Khalid ibn Abd al-Malik al-Marwarrudhi
+    - Ali ibn Isa al-Asturlabi
+    - Sanad ibn Ali
+  seasons_axial_tilt:
+    knowledge: 3
+    use: correct
+    producibility: easy
+    acceptance: medium
+    note: The Sun's yearly circle is tilted about 23 1/2 degrees; Shammasiyya observers measure the obliquity
+      afresh as about 23°33', smaller than Ptolemy's 23°51'. A tilted Earth moving around the Sun is the new part.
+    local:
+    - Yahya ibn Abi Mansur (Mumtahan observations)
+  eclipse_prediction:
+    knowledge: 3
+    use: correct
+    producibility: medium
+    acceptance: high
+    note: Court astronomers compute eclipses from the Almagest and Indian tables, and the caliph's men
+      record observed ones to test the tables. For the street an eclipse calls for prayer, not fear of
+      omen alone.
+    local:
+    - Habash al-Hasib
+    - Yahya ibn Abi Mansur
+    - Muhammad ibn Musa al-Khwarizmi (zij al-Sindhind)
+  heliocentrism:
+    knowledge: 1
+    use: none
+    producibility: medium
+    acceptance: low
+    note: The Almagest, just in Arabic, refutes the moving Earth. Aryabhata's rotating Earth is faintly
+      known from Indian material. No stellar parallax can be shown, and theologians would add scripture.
+  keplers_laws:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+    note: Apollonius' Conics is known by name; the Banu Musa will have it translated. Tables are now good
+      enough to show Ptolemy's errors, not to demand ellipses.
+  astronomical_distances:
+    knowledge: 2
+    use: partial
+    producibility: hard
+    acceptance: medium
+    note: Ptolemy's distances (Moon about 60 Earth radii, Sun about 1,200) are being taken over; al-Farghani
+      will popularise them. Stars sit on one sphere just beyond Saturn.
+    local:
+    - Ahmad al-Farghani (young astronomer)
+  comets_orbits:
+    knowledge: 1
+    use: wrong
+    producibility: very-hard
+    acceptance: low
+    note: Aristotle's comets are fires in the upper air; astrologers read them as signs of rulers' deaths.
+      Chinese court records of comets go back a millennium.
+    elsewhere:
+    - 'Tang China: systematic comet records'
+  tides:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Basra lives by the tide in the Shatt al-Arab, twice daily, and sailors tie it to the Moon. Abu
+      Ma'shar will write the Moon theory of tides later; for now it is practical knowledge.
+    local:
+    - Basra boatmen and the tidal canals
+  terrestrial_magnetism:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Lodestone draws iron (Greek and Persian lore); that it points north is unknown here and not
+      yet used in China either. Needs the compass first.
+  deep_time_geology:
+    knowledge: 1
+    use: none
+    producibility: medium
+    acceptance: low
+    note: Inland shells are a Greek remark; Aristotle's world is eternal. The eternity of the world versus
+      creation in time is a hot kalam question, so geology quickly becomes theology.
+  plate_tectonics:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+  stars_galaxies_cosmology:
+    knowledge: 1
+    use: none
+    producibility: very-hard
+    acceptance: low
+    note: One finite cosmos of nested spheres (Ptolemy, Aristotle). The Milky Way as many faint stars
+      is a Greek opinion found in commentaries. Kalam allows God to create anything, but not a universe
+      of suns.
+  xrays:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  radioactivity:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  atomic_structure:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+    note: Kalam atomism (indivisible parts, accidents recreated by God each instant) is lively here, but
+      it is metaphysics, not chemistry.
+    local:
+    - Abu al-Hudhayl al-Allaf
+  quantum_mechanics:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  relativity:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  nuclear_fission:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  # ---- Electricity & electronics
+  static_electricity:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: low
+    note: That rubbed amber (kahruba, 'straw-robber' in Persian) draws chaff is common knowledge. Nobody
+      separates it from the lodestone; a dry climate makes demonstrations easy.
+  lightning_rod:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Lightning is rare over Baghdad; in kalam it is an act of God, in Aristotle an exhalation. Minarets
+      and domes are seldom struck, so there is little demand.
+  electric_battery:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: low
+    note: Copper, iron and silver are at hand; zinc is not isolated but brass and tutty (zinc oxide) are
+      known. Vinegar and alum solutions serve as electrolyte. The 'Baghdad battery' jars are Parthian
+      or Sasanian and their use is unknown.
+  practical_batteries:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+  electromagnetism:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+  ohms_law_circuits:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+  electric_telegraph:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: medium
+    note: The barid relay post is the state's nerve system; the postmaster would see the point at once.
+      Insulated wire over hundreds of miles is the obstacle.
+  submarine_cable:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  dynamo_electric_motor:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+  electric_light:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: medium
+    note: Lamps burn olive oil, sesame oil and naphtha; mosques and palaces are lit by hundreds.
+  alternating_current_grid:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  telephone:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  sound_recording:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: medium
+    note: A court that pays fortunes for singers would love it. The Banu Musa's pinned-cylinder flute
+      player (later, c. 850) stores a tune mechanically, the nearest thing.
+  electromagnetic_waves_radio:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  crystal_detector:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  vacuum_tube:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  television_crt:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  radar:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  semiconductors_transistor:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  semiconductor_purification:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  solar_cell:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  mosfet:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  integrated_circuit:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  laser:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  optical_fibre:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  # ---- Computing, control & information theory
+  algorithm_concept:
+    knowledge: 3
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Al-Khwarizmi's arithmetic and algebra teach fixed procedures in words; his Latinised name will
+      become 'algorithm'. Euclid's procedures and Indian astronomical rules (kuttaka) are known. Inheritance
+      shares under Islamic law are a mass market for exact procedures.
+    local:
+    - Muhammad ibn Musa al-Khwarizmi
+    - qadis and inheritance calculators (fara'id)
+  binary_numbers:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Doubling and halving (tad'if, tansif) are standard steps in Indian and Arabic reckoning, the
+      seed of binary. Pingala's metres and the I Ching are out of sight.
+  boolean_logic:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Aristotle's Categories, On Interpretation and Prior Analytics circulate in Syriac and early
+      Arabic; Christian and Muslim theologians argue with syllogisms in court debates. No algebra of propositions.
+    local:
+    - Nestorian scholars teaching the Organon
+    - court debates (majalis) before al-Ma'mun
+  logic_gates_switching:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+  mechanical_calculator:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: The astrolabe is an analogue computer in brass, and its makers cut fine scales. Geared calculators
+      of the Antikythera kind are unknown; an equatorium is centuries away.
+    local:
+    - Ali ibn Isa al-Asturlabi
+  punched_card_control:
+    knowledge: 1
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Silk drawlooms in the royal tiraz workshops store patterns in cords pulled by a draw-boy. Nobody
+      sees the store as information.
+    local:
+    - tiraz workshops (inscribed textiles for the court)
+    - silk weavers of Tustar and Baghdad
+  programmable_computer:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+    note: The Banu Musa, now young men, will build automata with a pinned drum that can be re-pegged for
+      a new tune (c. 850). That is as close as this world comes.
+    local:
+    - the Banu Musa brothers
+  turing_machine_computability:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+  computer_memory:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  programming_languages_compilers:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  operating_system_time_sharing:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  information_theory:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Grammarians count letter frequencies and the combinations of roots (al-Khalil's dictionary counted
+      possible roots); this is where a statistical view of text could start.
+    local:
+    - al-Khalil's Kitab al-Ayn (combinatorics of Arabic roots)
+  sampling_pcm:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  error_correcting_codes:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Copyists collate manuscripts and hadith scholars check chains of transmitters; both are error-control
+      practices. Check sums on numbers (casting out nines) arrive with Indian arithmetic.
+    local:
+    - hadith transmitters (isnad criticism)
+    - Muhammad ibn Musa al-Khwarizmi (Indian reckoning)
+  packet_switching_networks:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  feedback_control:
+    knowledge: 1
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Float valves of Ctesibius and Hero are in Greek books; the Banu Musa will build float regulators
+      and automatic lamps (c. 850). Water clocks and fountains already use simple levels.
+    local:
+    - the Banu Musa brothers
+  cryptography:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Secretaries and the barid use letter substitutions and code words; grammarians count letters.
+      Al-Kindi will write the first treatise on breaking ciphers by letter frequency, date uncertain,
+      probably later in his life.
+    local:
+    - Ya'qub ibn Ishaq al-Kindi
+    - chancery secretaries (kuttab)
+    - postmasters of the barid
+  public_key_cryptography:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: The arithmetic (powers and remainders) can be done by hand with Indian numerals, but only for
+      toy numbers.
+  # ---- Energy & engines
+  animal_power_gin:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Ox- and donkey-driven saqiya wheels lift water all over the Sawad; animal mills grind grain
+      in town. Camels and mules carry the empire's freight.
+    local:
+    - saqiya wheels on canal banks
+    - donkey mills of Karkh
+  water_wheel:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Current-driven norias lift water on the Euphrates and Orontes; water mills turn on canals. Floating
+      ship mills on the Tigris are described in the 10th century at Mosul and may already exist.
+    local:
+    - norias on the Euphrates (Anbar, Hit)
+    - mills on the Nahr Isa and Sarat canals
+    elsewhere:
+    - 'Hama on the Orontes: great norias'
+  windmill:
+    knowledge: 1
+    use: partial
+    producibility: medium
+    acceptance: high
+    note: The first clear evidence of vertical-axis windmills in Sistan is 9th-century, the first descriptions
+      10th-century (al-Mas'udi); the story of a Persian windmill-builder in 644 is later legend. In 830 they may exist in Sistan, a rumour
+      in Baghdad.
+    elsewhere:
+    - Sistan (eastern Iran), steady summer wind
+  water_turbine:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: high
+    note: Horizontal mill wheels driven by a jet from a drop tower are common in Iran and Syria. Shaping
+      blades for efficiency and enclosing the wheel is the new part.
+  crank_connecting_rod:
+    knowledge: 1
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Hand cranks on querns and rotary grindstones exist. Turning rotation into back-and-forth with
+      a connecting rod is not in use; al-Jazari's crank pump is four centuries off.
+  piston_pump:
+    knowledge: 2
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Ctesibius' force pump is in Greek mechanics (Hero, Philo) and the naphtha syringe is used in
+      war. Water is lifted by noria, saqiya and shaduf, so nobody needs a pump yet.
+    local:
+    - naffatun (naphtha troops) with brass squirts
+  hydraulic_ram:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Many gardens on canals with a small fall would use it; valves and a pressure vessel can be made
+      in copper.
+  charcoal_burning:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Wood is scarce in southern Iraq, so charcoal comes downriver or from the hills; date-palm fronds,
+      reeds and dung fire the kilns and bath furnaces.
+  coal_mining:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: No coal near Baghdad; bitumen and naphtha seep from the ground at Hit and Kirkuk instead and
+      serve as fuel.
+    local:
+    - bitumen springs at Hit
+    - Baba Gurgur burning gas near Kirkuk
+  gas_lighting:
+    knowledge: 1
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: The eternal fires of Baba Gurgur near Kirkuk burn natural gas, as do Zoroastrian fire sites
+      near Baku. Piping it is unheard of here.
+    elsewhere:
+    - 'Sichuan: natural gas piped in bamboo to boil brine'
+  argand_lamp:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: high
+    note: Oil lamps of clay, glass and brass burn smokily; glassmakers could blow a chimney and metalworkers
+      a hollow wick holder. Mosque lamp contractors would buy it.
+    local:
+    - lamp makers and mosque lamp suppliers
+  oil_drilling:
+    knowledge: 2
+    use: partial
+    producibility: hard
+    acceptance: high
+    note: Naphtha and bitumen are collected from seeps and hand-dug pits (Hit, Kirkuk, Baku) and taxed
+      by the state. Percussion drilling is known only in Sichuan.
+    local:
+    - bitumen and naphtha of Hit
+    elsewhere:
+    - 'Baku: naphtha pits'
+    - 'Sichuan: percussion-drilled brine wells'
+  steam_aeolipile:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Hero's Pneumatica is known by reputation and will be studied by the Banu Musa. A sealed copper
+      ball that spins on its own steam is a coppersmith's afternoon.
+  safety_valve_boiler:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: low
+    note: Bath-house boilers are open copper vats. A sealed vessel with a weighted valve is within a coppersmith's
+      skill.
+    local:
+    - coppersmiths of the Suq al-Suffarin
+    - bath-house furnaces (hammams)
+  savery_steam_pump:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: Copper vessels and valves are possible; no mines need draining here, but palace gardens on high
+      ground would.
+  atmospheric_engine:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+    note: Needs a bored cylinder, the idea of air pressure and a reason. Fuel is scarce and labour is
+      cheap.
+  separate_condenser:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+  rotative_steam_engine:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+  high_pressure_steam:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  steam_turbine:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+  hot_air_engine:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+  internal_combustion_engine:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+    note: Naphtha is at hand, the rest is not.
+  gas_turbine_jet:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  refrigeration:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: high
+    note: Snow and ice from the mountains cool the drinks of the rich (well attested for later Abbasid
+      Baghdad); porous jars
+      and windcatchers cool by evaporation. Cooling water by dissolving saltpetre is unknown, as is saltpetre.
+    local:
+    - snow sellers supplying the palaces
+    - porous water jars (hubb) in every house
+  nuclear_reactor:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  # ---- Tools, machines & manufacturing
+  block_and_tackle:
+    knowledge: 3
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Pulleys, windlasses and capstans are ordinary on building sites, wells and ships. Heron's Mechanics
+      on the five simple machines circulates in Greek; the big treadwheel crane is not a feature of Baghdad
+      sites, where brick is carried up on backs and ramps.
+    local:
+    - brick-builders of the palaces at Shammasiyya and Rusafa
+    - boatmen and porters on the Tigris quays
+  wheelbarrow:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Loads go by donkey, camel, mule, porter and basket. Wheeled carts are rare in the caliphate,
+      where pack animals have long since replaced them; a one-wheeled barrow would be new and useful on
+      brick and canal works.
+    local:
+    - canal diggers on the Nahr Isa and Sarat
+    elsewhere:
+    - China (wheelbarrows since Han times)
+  archimedes_screw:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Known from Greek and Egyptian practice; the Egyptian Delta still uses it. In Iraq water is lifted
+      by shaduf, by animal-driven saqiya chains of pots and by current-driven norias.
+    elsewhere:
+    - Egypt (water screws in the Delta)
+  gears_gear_trains:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: The right-angle gear of the saqiya is in every irrigated field. Geared trains survive only in
+      Greek descriptions (Heron, Philo); the Banu Musa will build trick vessels and automata around 850,
+      without gear trains of any precision.
+    local:
+    - saqiya wheelwrights in the Sawad
+    - the Banu Musa (young, collecting Greek mechanical books)
+    elsewhere:
+    - Constantinople (throne automata, usually attributed to Theophilos)
+  cam_camshaft:
+    knowledge: 1
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Pegs on a rotating drum appear in Heron's automata texts. No cam-driven machine is at work in
+      Iraq.
+    elsewhere:
+    - China (water-powered trip hammers since Han times)
+  screw_nut_bolt:
+    knowledge: 1
+    use: partial
+    producibility: hard
+    acceptance: medium
+    note: The wooden screw press for oil and grapes is a Greek and Roman device known in Syria. Metal
+      screws and nuts are unknown; joints are pegged, riveted or lashed.
+    elsewhere:
+    - Syria and Byzantium (wooden screw presses)
+  belt_drive:
+    knowledge: 1
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Bow drills and bow lathes use a cord; the chain of pots on the saqiya is the main endless chain.
+      A driven belt between two wheels for spinning or grinding is not in use.
+    local:
+    - turners and bead drillers in the Karkh suqs
+    elsewhere:
+    - China (belt-driven quilling wheels)
+  ball_bearings:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: Axles turn in wooden or bronze sockets greased with fat or oil. Rollers under heavy stones are
+      known to builders.
+  bellows_piston_blower:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Smiths, glassmakers and crucible-steel makers work goat-skin bellows by hand or foot. A double-acting
+      piston blower is unknown here.
+    local:
+    - smiths of the Suq al-Haddadin
+    elsewhere:
+    - China (piston bellows, water-powered blowers)
+  trip_hammer_water_powered:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Paper pulp is beaten by hand or with foot-worked hammers; water-driven stamps for paper are
+      claimed for the Islamic world only later and their extent is debated. The Tigris and the big canals
+      give power where boat mills already grind grain.
+    local:
+    - paper makers of Baghdad
+    elsewhere:
+    - China (water-powered trip hammers since about AD 20)
+  lost_wax_casting:
+    knowledge: 3
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Bronze and brass ewers, incense burners, lamps and figured spouts are cast by lost wax in Iraq,
+      Iran and Egypt, continuing Sasanian and Byzantine practice.
+    local:
+    - coppersmiths and brass founders of Baghdad and Basra
+  sand_loam_casting:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Nothing large is cast here; churches under Muslim rule
+      call to prayer with the naqus, a wooden clapper or a small bell, struck softly. Coins are struck, not cast. Loam moulds for a big casting would need a founder
+      from Byzantium or Khurasan.
+  wire_drawing:
+    knowledge: 3
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Gold and silver thread for brocade and tiraz bands is drawn and wrapped round silk; mail-makers
+      need iron wire. Draw-plates are a craft secret of a few workshops.
+    local:
+    - tiraz workshops (state textile factories) supplying robes of honour
+    - mail-makers for the Khurasani army
+  rolling_mill:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Sheet metal is hammered; coin blanks are cast and struck by hand at the Baghdad mint.
+    local:
+    - Madinat al-Salam mint (dar al-darb)
+  boring_machine:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+    note: Nothing needs a true cylinder. Copper pipes for fountains are hammered and soldered; the bore
+      of a force pump in Heron's book is the only model.
+  lathe_screw_cutting:
+    knowledge: 1
+    use: partial
+    producibility: hard
+    acceptance: low
+    note: Bow lathes turn wood, ivory and soft stone. A slide rest and lead screw are unknown.
+    local:
+    - ivory and wood turners in the suqs
+  precision_measurement:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Assayers and mint officials weigh to fractions of a grain; astronomers divide large brass rings
+      to minutes of arc. Lengths are cubits that differ by trade (the black cubit, the cubit of the cloth
+      trade).
+    local:
+    - Sanad ibn Ali and Ali ibn Isa al-Asturlabi (instrument makers)
+    - mint assayers
+  machine_tools:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+  interchangeable_parts:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Arrows, nails and coins are made in large numbers but fitted by hand. Coin dies and glass coin
+      weights are the nearest thing to a standard part.
+  assembly_line:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: low
+    note: The state tiraz workshops and the paper mills divide work among many hands, and copyists in
+      the Suq al-Warraqin split a book into quires among several scribes. Nobody organises this as a principle.
+    local:
+    - Suq al-Warraqin (stationers' and copyists' market)
+  sawmill:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Timber is scarce and imported (teak from India for ships, wood from the north by river); sawyers
+      cut by hand. Water saws are reported only later, and thinly, from al-Andalus.
+  spinning_wheel:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Cotton, flax, wool and silk are spun with the hand spindle and distaff, mostly by women at home.
+      The spinning wheel is first securely attested around 1000, and where it was invented is disputed.
+    elsewhere:
+    - China (silk-reeling and quilling wheels)
+    - India (roller gins; wheel origin claimed but unproven)
+  spinning_machines:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+  treadle_loom:
+    knowledge: 3
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Pit treadle looms for cotton and linen and draw looms for patterned silk work in Iraq, Khuzistan
+      and Iran. Textiles are the caliphate's great industry and a court currency (robes of honour).
+    local:
+    - tiraz workshops
+    - weavers of Tustar and Sus in Khuzistan
+  power_loom:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+  cotton_gin:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Cotton is spreading in Iraq and Iran, cleaned by hand or with an Indian-style roller worked
+      on a flat stone. A cranked two-roller gin would double a worker's output with the same carpenters.
+    elsewhere:
+    - India (roller gins since early centuries AD)
+  knitting_frame:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: True knitting is not yet attested; socks are sewn from cloth or made by needle-looping.
+  sewing_machine:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+  # ---- Mathematics & measurement
+  zero_place_value:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Indian decimal place value with a written zero (sifr, 'empty') has just been set out in Arabic
+      by al-Khwarizmi, c. 825. Astronomers use sexagesimal places in tables. The secretaries of the diwans
+      still reckon on their fingers and write sums out in words.
+    local:
+    - Muhammad ibn Musa al-Khwarizmi
+    - astronomers of the Shammasiyya observations
+    elsewhere:
+    - India (place value with zero since the 5th–7th c.)
+  arabic_numerals:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: low
+    note: The Indian figures are worked on a dust board (takht) with sand and erased as you go, which
+      makes them suspect to clerks who need a record that cannot be altered. Pen-and-paper Indian arithmetic
+      is a century away (al-Uqlidisi, c. 952). Paper is already cheap here, so the method can be skipped
+      ahead.
+    local:
+    - Muhammad ibn Musa al-Khwarizmi (book on Indian reckoning)
+    - katibs of the diwan of the kharaj
+  abacus_counting_board:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Clerks reckon by finger positions (hisab al-yad, 'arithmetic of the hand') and in their heads;
+      letters of the abjad stand for numbers in astronomy. The Indian dust board is the scholars' tool.
+      No bead frame.
+    local:
+    - katibs of the diwans
+    elsewhere:
+    - China (counting rods)
+    - Byzantium (pebble boards)
+  fractions_rule_of_three:
+    knowledge: 3
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Clerks express fractions in the Arabic named fractions (a half, a third ... a tenth) and their
+      products, astronomers in sexagesimal minutes and seconds. The rule of three is in the Sindhind and
+      used daily for inheritance shares, which Islamic law makes an arithmetic problem.
+    local:
+    - Muhammad ibn Musa al-Khwarizmi (inheritance problems in al-Jabr)
+    - qadis and faradi (inheritance reckoners)
+  decimal_fractions:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Not yet in use; fractions are named, unit-based or sexagesimal. With decimal place value just
+      arriving, the extension to tenths is one sentence for a player and easy to show on the dust board.
+  negative_numbers:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Brahmagupta's rules for 'fortunes and debts' sit inside the Indian astronomy behind the Sindhind,
+      but nobody here takes them up. Al-Khwarizmi subtracts terms ('what is lacking') without accepting
+      a negative answer.
+    local:
+    - Muhammad ibn Musa al-Khwarizmi
+    elsewhere:
+    - India (Brahmagupta, 628)
+    - China (red and black rods)
+  square_roots_irrationals:
+    knowledge: 3
+    use: correct
+    producibility: easy
+    acceptance: medium
+    note: Root extraction is taught in Indian reckoning and needed in al-Jabr. Euclid book 10 on irrational
+      magnitudes is in al-Hajjaj's translation, read by very few. Roots are approximated and treated as
+      magnitudes, not numbers.
+    local:
+    - al-Hajjaj ibn Yusuf ibn Matar (Euclid)
+    - Muhammad ibn Musa al-Khwarizmi
+  logarithms:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Astronomers multiply large sexagesimal numbers by hand for every table; a table that turns products
+      into sums would be welcomed at once by the observatory staff.
+    local:
+    - Habash al-Hasib and the astronomers of the Mumtahan tables
+  slide_rule:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: low
+  symbolic_algebra:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Al-Jabr is brand new, written entirely in words ('a square and ten roots equal thirty-nine dirhams').
+      Its names, shay' (thing), jidhr (root), mal (wealth, the square), are the beginning of a vocabulary.
+      Short symbols would be new; an Indian abbreviation by syllables exists in Brahmagupta.
+    local:
+    - Muhammad ibn Musa al-Khwarizmi (al-Kitab al-mukhtasar fi hisab al-jabr wa'l-muqabala, c. 820s)
+    elsewhere:
+    - India (Brahmagupta's colour-syllable abbreviations)
+  quadratic_cubic_equations:
+    knowledge: 3
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Al-Khwarizmi's six standard forms with rules and geometric proofs by completing the square are
+      the newest mathematics in the world, dedicated to al-Ma'mun. Only positive roots count. Cubics are
+      unsolved (Omar Khayyam will solve them geometrically c. 1070).
+    local:
+    - Muhammad ibn Musa al-Khwarizmi
+  linear_equations_matrices:
+    knowledge: 1
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Problems with several unknowns are solved one by one with words and the rule of false position.
+      Systematic elimination on a grid is a Chinese method nobody here has seen.
+    elsewhere:
+    - China (Nine Chapters, fangcheng)
+  complex_numbers:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: low
+    note: A negative under a root means the problem 'is impossible'; al-Khwarizmi says so of the equation
+      with no solution.
+  prime_numbers_number_theory:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Euclid's arithmetic books (7–9) with the infinity of primes are in Arabic. Nicomachus' Introduction
+      to Arithmetic is known through Syriac; Thabit ibn Qurra, who will translate it and find the rule
+      for amicable numbers, is a small child in Harran.
+    local:
+    - al-Hajjaj ibn Yusuf ibn Matar
+    elsewhere:
+    - Harran (Thabit ibn Qurra, born 826 or 836)
+  combinatorics_permutations:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Al-Khalil ibn Ahmad (d. c. 786–791) built his dictionary Kitab al-Ayn by permuting every root
+      of two to five letters, a counting of arrangements every philologist knows. Binomial coefficients
+      are not yet tabulated.
+    local:
+    - grammarians of Basra and Kufa
+    - al-Khalil's Kitab al-Ayn
+    elsewhere:
+    - India (Pingala's metres)
+  compound_interest_exponential_growth:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Interest (riba) is forbidden in law, so nobody compounds it openly. Chess (shatranj) is the
+      fashion at court, and the doubling-grains story belongs to it, but in surviving Arabic texts only
+      later.
+  geometry_proof:
+    knowledge: 3
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Euclid has been translated twice by al-Hajjaj ibn Matar (for Harun and again for al-Ma'mun).
+      Proof is admired at court and needed for astronomy; most surveyors and architects still work by
+      rule of thumb.
+    local:
+    - al-Hajjaj ibn Yusuf ibn Matar
+    - al-Abbas ibn Said al-Jawhari (commentary on Euclid, tries to prove the parallel postulate)
+    - the Banu Musa (young)
+  pi_circle_measurement:
+    knowledge: 3
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Archimedes' 3 1/7 is standard; al-Khwarizmi's mensuration chapter also reports Indian rules
+      for the circle. Better digits are of no practical use yet; the Banu Musa will later write on measuring
+      plane and spherical figures.
+    local:
+    - Muhammad ibn Musa al-Khwarizmi
+    elsewhere:
+    - India (Aryabhata, 3.1416)
+    - China (Zu Chongzhi)
+  trigonometry:
+    knowledge: 3
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: The Indian sine (jayb, from Sanskrit jya) has replaced Ptolemy's chords in the new tables. Habash
+      al-Hasib is introducing tables of the 'shadow', our tangent and cotangent, in these years. Spherical
+      trigonometry is still Ptolemy's and Menelaus' theorem.
+    local:
+    - Habash al-Hasib al-Marwazi
+    - Muhammad ibn Musa al-Khwarizmi (sine tables in his zij)
+  coordinate_geometry:
+    knowledge: 1
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Places are fixed by longitude and latitude, in Ptolemy's Geography and in al-Khwarizmi's coordinate
+      list for a map of the world. Graphing a relation between two quantities is unknown.
+    local:
+    - Muhammad ibn Musa al-Khwarizmi (Kitab surat al-ard)
+  non_euclidean_geometry:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Doubt about the parallel postulate is just beginning; al-Jawhari attempts a proof of it in this
+      period.
+    local:
+    - al-Abbas ibn Said al-Jawhari
+  perspective_technical_drawing:
+    knowledge: 1
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Builders draw plans on plaster or paper and work from cubit grids; painting is flat and figurative
+      work is shunned in mosques. Euclid's Optics on visual rays is translated, but no one draws from
+      it.
+  surveying_triangulation:
+    knowledge: 3
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Canal engineers (muhandisun) level with water levels and sighting staffs for the Sawad's irrigation
+      grid, a craft inherited from the Sasanians. Al-Ma'mun's astronomers measure a degree of meridian
+      in the desert by rope and star altitude, about 56 2/3 Arabic miles.
+    local:
+    - muhandisun of the canal administration
+    - Khalid ibn Abd al-Malik al-Marwarrudhi and Ali ibn Isa al-Asturlabi (degree measurement)
+  solar_calendar_leap_years:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: low
+    note: The Hijri year is lunar and cannot be changed. Kharaj is collected by the Persian solar year
+      of 365 days with no leap day, so Nawruz and the tax date drift through the seasons and farmers are
+      taxed before harvest. Syriac Christians keep the Julian year with its leap day.
+    local:
+    - katibs of the diwan of the kharaj
+    - Catholicos of the Church of the East (Julian computus)
+  metric_system_units:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: low
+    note: Weights and measures are many and local; the dirham and mithqal set weights for coin, and the
+      muhtasib in the market checks scales. The caliph could impose a standard, but every province would
+      ignore it.
+    local:
+    - muhtasib (market inspector)
+    - mint at Madinat al-Salam
+  probability_statistics:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Games of chance are forbidden (maysir); nard and chess are played anyway. Al-Kindi will later
+      break ciphers by counting letter frequencies; in 830 nobody reasons about chance.
+    local:
+    - Ya'qub ibn Ishaq al-Kindi
+  bayes_theorem:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: low
+  normal_distribution_errors:
+    knowledge: 1
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Al-Ma'mun's astronomers repeat solstice and equinox observations because single ones disagree,
+      and compare instruments. Choosing between values is by judgement; there is no theory of error.
+    local:
+    - Yahya ibn Abi Mansur and Sanad ibn Ali (Shammasiyya)
+  data_graphs:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Tables (zij) are the form of data. Paper is plentiful, so a chart of Tigris levels or prices
+      could be drawn by any copyist.
+  calculus:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Archimedes' exhaustion methods reach Arabic only partly and later; Euclid book 12 is the furthest
+      anyone goes.
+  infinite_series_e:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+  differential_equations:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+  fourier_series:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+  # ---- Scientific method & philosophical ideas
+  scientific_method:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Al-Ma'mun's program of new observations to check Ptolemy and the Indian tables is a state-funded
+      test of received numbers, rare in the world. The idea that an experiment decides between theories
+      of nature is not yet stated; Ibn al-Haytham is two centuries away.
+    local:
+    - Yahya ibn Abi Mansur and the Mumtahan (verified) tables
+    - al-Ma'mun
+  empiricism_over_authority:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Al-Ma'mun's astronomers call their tables 'verified' because they checked Ptolemy, and the Mu'tazila
+      put reason before tradition in theology. In medicine Galen and Hippocrates still decide; al-Razi's
+      Doubts about Galen is c. 900.
+    local:
+    - Yahya ibn Abi Mansur
+    - Abu al-Hudhayl al-Allaf, al-Nazzam (Mu'tazila)
+  controlled_trial:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Physicians test drugs by tradition and on single patients. The bimaristan gathers many patients
+      with the same complaint, the precondition for a comparison nobody makes yet.
+    local:
+    - Yuhanna ibn Masawayh
+    - bimaristan of Baghdad
+  placebo_blinding:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: low
+  correlation_causation_confounding:
+    knowledge: 1
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Aristotle's Topics and Analytics distinguish essential from accidental connection, read in Syriac
+      by Christian scholars. Astrologers infer causes from coincidences daily.
+  selection_bias_sampling:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: low
+  measurement_quantification:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: The court measures the heavens, the size of the earth and the Nilometer at Fustat; mints assay
+      coin by weight and touchstone. In medicine dosage is measured, but nobody measures heat, pulse or
+      growth.
+    local:
+    - Ali ibn Isa al-Asturlabi
+    - mint assayers
+    elsewhere:
+    - Fustat (Nilometer on Roda Island, rebuilt 861)
+  mathematical_laws_of_nature:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: The heavens are believed to move by geometry; Ptolemy is being re-translated and checked. On
+      earth, motion, weight and heat are explained by Aristotle's qualities, not by number. Al-Kindi will
+      argue for mathematics as the way into philosophy.
+    local:
+    - Ya'qub ibn Ishaq al-Kindi
+    - al-Hajjaj ibn Yusuf ibn Matar (Almagest)
+  falsifiability:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: low
+    note: A failed horoscope is blamed on a wrong birth time. Only the astronomers expose their predictions
+      to a check, by timing eclipses.
+    local:
+    - Habash al-Hasib (eclipse computations)
+  fallibilism_provisional_knowledge:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Kalam debaters argue both sides and switch positions; Greek sceptical arguments are known by
+      report. Revealed knowledge is held certain, and the createdness of the Quran is about to be enforced
+      as certain too.
+  bayesian_reasoning:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: low
+  reproducibility_open_publication:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Paper and the Suq al-Warraqin make copying cheaper here than in Byzantium or Latin Europe. Translations
+      are commissioned, revised and circulated; observations are written into zijes others can recompute.
+      Knowledge still flows through patrons and teaching circles.
+    local:
+    - Suq al-Warraqin
+    - Khizanat al-Hikma (Sahl ibn Harun)
+  cognitive_biases:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Hadith critics know that partisanship, piety and invention distort reports. A general account
+      of how judgement errs does not exist.
+  formal_logic:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Aristotle's Categories, On Interpretation and Prior Analytics are studied by Syriac Christian
+      scholars and partly in Arabic. Kalam debaters use dialectic (jadal) more than syllogism; jurists
+      argue by analogy (qiyas).
+    local:
+    - Catholicos's circle and Syriac schools in Baghdad
+    - Ya'qub ibn Ishaq al-Kindi
+  occams_razor:
+    knowledge: 1
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Aristotle's maxim that nature does nothing in vain is known; Mu'tazila argue from simplicity
+      of explanation as a debating rule.
+  thought_experiment:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Kalam is full of hypothetical cases, and al-Nazzam argues that a body crossing infinitely divisible
+      space must 'leap' (tafra). Mu'tazila and jurists reason freely from imagined cases.
+    local:
+    - Ibrahim al-Nazzam
+    - Abu al-Hudhayl al-Allaf
+  source_criticism:
+    knowledge: 3
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Hadith scholars judge reports by their chains of transmitters (isnad) and collect information
+      on every transmitter's honesty and memory; Yahya ibn Ma'in in Baghdad is the great critic of men.
+      Criticism of the text itself (matn) is rarer. A player can ride this method into other fields.
+    local:
+    - Yahya ibn Ma'in
+    - Ahmad ibn Hanbal
+    - Muhammad ibn Sa'd (biographical dictionary of transmitters)
+  informed_consent_research_ethics:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: low
+    note: The Hippocratic Oath is known to Christian physicians. Al-Ruhawi's Ethics of the Physician comes
+      later in the century. Slaves, prisoners and the poor have no say in what is done to them.
+  natural_causes:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Aristotle's Meteorology explains rain, thunder and comets naturally, and astronomers predict
+      eclipses. For the Mu'tazila God acts through natures; for their opponents God creates each event
+      directly. Popular belief adds jinn, the evil eye and stars.
+    local:
+    - Ya'qub ibn Ishaq al-Kindi
+    - Ibrahim al-Nazzam (natures, kumun)
+  scepticism_superstition:
+    knowledge: 1
+    use: partial
+    producibility: medium
+    acceptance: low
+    note: Astrology is a court profession; al-Ma'mun's astronomers also cast horoscopes and advise on
+      campaigns. Some jurists condemn it as forbidden divination, for religious rather than empirical
+      reasons. Alchemy is a serious craft.
+    local:
+    - Abu Ma'shar al-Balkhi (now a hadith man hostile to the philosophers)
+    - court astrologers
+  atomism:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Abu al-Hudhayl teaches that bodies are made of indivisible parts (al-juz' alladhi la yatajazza')
+      whose properties God creates; al-Nazzam rejects atoms for infinite divisibility. It is theology,
+      not chemistry, but it is the most atomist city in the world.
+    local:
+    - Abu al-Hudhayl al-Allaf
+    - Ibrahim al-Nazzam
+  universal_physical_laws:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Aristotle's heavens are of a fifth element, unchanging and moving in circles; the sublunar world
+      is different in kind. Nobody here questions it.
+  mechanical_philosophy:
+    knowledge: 1
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Greek automata texts entertain courtiers; nobody thinks the world itself works like one. For
+      the kalam atomists the world has no causes of its own at all, only God's habit.
+  idea_of_progress:
+    knowledge: 1
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Al-Ma'mun's men believe they can improve on Ptolemy's numbers, and al-Kindi will say one should
+      take truth from whoever brought it. History is otherwise read as a decline from the Prophet's generation.
+    local:
+    - Ya'qub ibn Ishaq al-Kindi
+  systematic_invention:
+    knowledge: 1
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: The caliph pays a team, instruments and books to produce new astronomical tables, and the palace
+      library employs copyists and translators. Nobody applies this to machines or medicine.
+    local:
+    - al-Ma'mun's observation program (Shammasiyya 828–829, Qasiyun 831–833)
+  golden_rule_universal_ethics:
+    knowledge: 4
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: The hadith that none believes until he wishes for his brother what he wishes for himself is
+      widely quoted; the brother is usually the fellow believer. Christians quote the Gospel version.
+  human_equality_dignity:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Islam proclaims believers equal before God, and Persian converts (the Shu'ubiyya) argue that
+      Arabs have no claim above them. Law ranks free over slave, man over woman and Muslim over dhimmi.
+    local:
+    - Sahl ibn Harun (Shu'ubi sympathies)
+    - al-Jahiz (who argues the other side, and on the Zanj)
+  natural_rights:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: low
+    note: Rights come from God's law, not nature. Jurists protect life and property for Muslims and, by
+      contract, dhimmis.
+  social_contract:
+    knowledge: 1
+    use: partial
+    producibility: medium
+    acceptance: low
+    note: The caliph rules by pledge of allegiance (bay'a), sworn and sometimes broken; the civil war
+      of 811–813 was fought over it. The idea that rule is a contract with the ruled is a jurist's theory
+      of later centuries.
+  freedom_of_speech_thought:
+    knowledge: 2
+    use: partial
+    producibility: hard
+    acceptance: low
+    note: Al-Ma'mun hosts debates between theologians and faiths and enjoys argument. In spring 833 he
+      begins the Mihna, testing qadis and scholars on the createdness of the Quran. Open dissent from
+      the caliph's doctrine is about to become dangerous.
+    local:
+    - al-Ma'mun
+    - Ahmad ibn Abi Du'ad
+    - Ahmad ibn Hanbal
+  religious_tolerance:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Christians, Jews and Zoroastrians are protected dhimmis who pay jizya and stand below Muslims
+      in law; Christians serve as physicians and secretaries at court. Manichaeans (zindiqs) were hunted
+      down under al-Mahdi, and apostasy is death.
+    local:
+    - Catholicos of the Church of the East in Baghdad
+    - Bukhtishu ibn Jibril, Yuhanna ibn Masawayh (Christian physicians)
+  secular_state:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+    note: The caliph is the commander of the faithful. The Mihna is precisely the struggle over who decides
+      doctrine, caliph or scholars; the scholars win when al-Mutawakkil ends it (c. 848–851), which separates religious from political
+      authority in practice.
+  utilitarianism:
+    knowledge: 1
+    use: partial
+    producibility: medium
+    acceptance: low
+    note: Jurists weigh 'the public good' (maslaha) and 'preference' (istihsan) in the Hanafi school;
+      never as a general rule above revelation.
+    local:
+    - Hanafi jurists at court (Yahya ibn Aktham)
+  abolition_of_torture:
+    knowledge: 1
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Jurists hold that a confession under duress is invalid, yet police and caliphs flog and imprison,
+      and rebels are crucified on the bridges as a display. Ibn Hanbal will be flogged under the Mihna.
+    local:
+    - Ishaq ibn Ibrahim al-Mus'abi (police of Baghdad)
+  positive_sum_cooperation:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Merchants and partnership law (mudaraba) assume both sides gain from trade; the Prophet himself
+      was a merchant. Courtiers think of revenue as the caliph's share of a fixed harvest.
+  game_theory:
+    knowledge: 1
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Chess (shatranj) is the court game and a metaphor for strategy; Persian mirrors for princes
+      teach the calculation of alliances. No theory of strategic choice.
+  tragedy_of_the_commons:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Water law is detailed, with rules on shares of canal water, the right to drink and to irrigate,
+      and reserved pastures (hima). Over-irrigation salts the southern Sawad, a commons failure nobody
+      connects to its cause.
+    local:
+    - qadis and canal officials of the Sawad
+  # ---- Agriculture & food
+  three_field_system:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: The Sawad grows winter wheat and barley and, where water lasts, summer rice, millet, sesame
+      and cotton. Much land lies fallow every other year to rest and to let the salt wash out. Water,
+      not rotation, sets the rhythm.
+    local:
+    - estates and tax lands of the Sawad (central and southern Iraq)
+  legumes_green_manure:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Lentils, chickpeas and broad beans are field crops, and fodder crops are
+      grown for the horses of the army and the court.
+      That a bean crop feeds the next grain crop is farmer's lore at best, with no explanation.
+  crop_rotation:
+    knowledge: 1
+    use: partial
+    producibility: medium
+    acceptance: low
+    note: Clover and turnips mean nothing here. Farmers alternate winter and summer crops on irrigated
+      plots; a fixed fodder course that ends fallow would need more water than the canals give.
+  manure_compost_night_soil:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Dung, ashes and town refuse go to the market gardens and orchards around Baghdad; pigeon droppings
+      are prized for melons. Nobody links night soil in gardens to the city's fevers and fluxes.
+    local:
+    - market gardens and palm groves along the Tigris and the Sarat and Isa canals
+  liming_marling:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Iraqi alluvium is alkaline and salty, not sour; lime would do harm. The real enemy is salt brought
+      up by irrigation without drainage, which is slowly ruining the south.
+  mineral_fertiliser:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: No idea of plant nutrients. Nitre and potash are known as substances, not as food for plants.
+  terracing_soil_conservation:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Terraces are old in Yemen and the Iranian mountains. Iraq is flat; its problems are silting
+      canals and salinisation, met by dredging and abandoning spent land rather than by drainage.
+    elsewhere:
+    - Yemen, ancient terraced highlands
+  heavy_plough:
+    knowledge: 1
+    use: none
+    producibility: medium
+    acceptance: low
+    note: The ox-drawn ard with an iron share suits light, stoneless alluvium and is the right tool here.
+      A heavy mouldboard plough would bring salt up and bog down in irrigated fields.
+  horse_collar_harness:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Oxen pull under a yoke; goods move on camels, mules and donkeys, and wheeled carts are rare
+      in the Middle East since the camel replaced them in late antiquity. A collar has few customers.
+    elsewhere:
+    - Tang China, breast-strap and collar harness
+  seed_drill:
+    knowledge: 1
+    use: none
+    producibility: medium
+    acceptance: low
+    note: Grain is broadcast by hand and ploughed in. Seed tubes on the plough are old in India and were
+      used in ancient Mesopotamia, but nobody here uses them now.
+    elsewhere:
+    - India, seed-tube ploughs
+  scythe_cradle:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Grain is cut with the sickle by gangs of labourers; long blades for fodder are known. Labour
+      is cheap, so a faster blade is a modest gain.
+  reaper_thresher:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: low
+    note: Oxen and donkeys tread the sheaves or drag a threshing sledge studded with flints; winnowing
+      is by hand against the wind. No machine.
+  selective_breeding:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Arab horse lines are recorded by descent and prized; camels are bred for riding or load. Date
+      palms are propagated from offshoots of good females and pollinated by hand, so growers already select
+      deliberately.
+    local:
+    - date growers of Basra and the Sawad
+    - horse dealers and the caliph's stables
+  grafting_fruit_trees:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Gardeners graft citrus, apricots, pears and vines routinely, following Persian practice and
+      Greek farming books known through Syriac.
+    local:
+    - palace gardens on the east bank (Shammasiyya, Rusafa)
+  irrigation_water_lifting:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: The Sawad lives on a Sasanian canal grid (Nahrawan, Nahr Isa, Sarat), with sluices, shadufs,
+      animal-driven saqiyas and river-driven norias. Iran waters its towns by qanats. Upkeep is a state
+      task; neglect and salt are the threats.
+    local:
+    - Nahr Isa and Sarat canals, Baghdad
+    - Nahrawan canal east of the Tigris
+    - officials who assess and repair the canals
+    elsewhere:
+    - Khurasan and Fars, qanats
+  wet_rice_cultivation:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Rice is a staple around Wasit, in the southern marshes (the Batiha) and in Khuzistan; the poor
+      of Basra eat rice bread. It is spreading west to Egypt and beyond.
+    local:
+    - Wasit and the Batiha marshes
+    - Khuzistan
+  windmill_drainage_land_reclamation:
+    knowledge: 2
+    use: partial
+    producibility: hard
+    acceptance: medium
+    note: The great marshes south of Wasit (the Batiha) grew, by
+      the Arab geographers' account, when the Tigris broke its dikes in late Sasanian times; Umayyad governors
+      reclaimed some land. Water is lifted by animals. Windmills are a rumour from
+      Sistan.
+    local:
+    - the Batiha marshes (Zutt rebels hold parts until 834/835)
+    elsewhere:
+    - Sistan, windmills (reliably reported only from the 10th c.)
+  aquaculture_fish_ponds:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Fish come from the Tigris, the canals and the marshes. Palaces keep ornamental pools with fish;
+      deliberate fish farming for food is not practised.
+    elsewhere:
+    - Tang China, carp ponds
+  new_world_crops:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: medium
+    note: Nobody in the Old World knows of these plants.
+    elsewhere:
+    - the Americas
+  potato_cultivation:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: medium
+    note: No potatoes exist outside the Andes.
+  maize_beans_squash_milpa:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  nixtamalisation:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  cassava_detoxification:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  potato_blight_monoculture_risk:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+    note: The principle applies to the date palm and to wheat; a single blight or locust year shows it.
+  columbian_exchange:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+    note: The Old World exchange is the one under way here. Rice, sugar, cotton and citrus are moving
+      west through the caliphate (how fast and how far is debated).
+  food_preservation:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Dates are dried and pressed into blocks or boiled to syrup (dibs); fish is salted and sun-dried;
+      vegetables are pickled in vinegar; murri, a fermented barley sauce, is a staple of cookery; sugar
+      and honey preserve fruit.
+    local:
+    - Basra date packers
+    - cooks and confectioners of the court
+  canning:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: medium
+    note: Glazed jars sealed with pitch or fat are used for oil and syrups. Heating a sealed jar to keep
+      its contents is unknown.
+  pasteurisation:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Milk is soured or made into cheese; date wine and nabidh go off quickly in the heat, which matters
+      to jurists who forbid them once fermented.
+  grain_storage_pest_control:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Grain is kept in pits, jars and state granaries; tax grain feeds the army and the capital. Weevils
+      and rats are accepted losses. Ergot is no issue; rye is not grown.
+  sea_fisheries_salt_cod:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Gulf fishermen salt and dry fish and small fry for the inland market. Cod and herring belong
+      to seas nobody here has sailed.
+    elsewhere:
+    - the Gulf coast (Basra, Ubulla, Siraf)
+  sugar_cane_beet:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Cane is grown and boiled in Khuzistan, a crop since Sasanian times, and refined into loaves
+      and rock candy (qand). Sugar is a luxury, a medicine and the base of court confectionery. Beet sugar
+      is unknown.
+    local:
+    - Khuzistan cane fields (Ahvaz, Gondeshapur)
+    - sugar-sellers in the Baghdad markets
+  sericulture:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Silkworms are raised in Khurasan, Gurgan and Syria. Baghdad weaves silk, and state tiraz workshops
+      embroider robes with the caliph's name.
+    local:
+    - tiraz workshops
+    elsewhere:
+    - Merv and Gurgan, silk raising
+  beekeeping_movable_frame:
+    knowledge: 1
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Bees are kept in clay-pipe and basket hives; honey is cut out by destroying the comb. Sugar
+      competes with honey at the rich table.
+  coffee_tea_cacao:
+    knowledge: 1
+    use: none
+    producibility: impossible
+    acceptance: medium
+    note: Coffee grows wild in Ethiopia, unknown here. China merchants may mention that people there drink
+      an infused herb taxed by the emperor; the first Arabic record of it is from c. 851.
+    elsewhere:
+    - Tang China, tea (Lu Yu's Classic of Tea c. 760–780)
+  hybrid_maize:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  semi_dwarf_wheat_rice:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  # ---- Navigation, transport & exploration
+  world_geography:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: high
+    note: The earth is a sphere; al-Ma'mun's astronomers measure a degree. Al-Khwarizmi is recasting Ptolemy's
+      coordinates in his Picture of the Earth, and a world map is drawn for the caliph. Merchants know
+      the sea route to China; the Encircling Sea bounds the west.
+    local:
+    - Muhammad ibn Musa al-Khwarizmi
+    - al-Ma'mun's world map (al-sura al-ma'muniyya)
+    - Basra and Siraf merchants who have been to Khanfu (Guangzhou)
+    elsewhere:
+    - Tang China
+  wind_systems_ocean_currents:
+    knowledge: 3
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Gulf captains time their voyages to India and China by the monsoon and count a round trip to
+      China in a year or more. The global wind belts and the Atlantic are beyond anyone's horizon.
+    local:
+    - ship captains (nakhuda) and pilots of Basra, Ubulla and Siraf
+  magnetic_compass:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: The lodestone (maghnatis) attracting iron is known from Greek books. That a floating needle
+      points north is unknown anywhere; Chinese navigational use comes in the 11th century.
+    local:
+    - lodestone from the druggists
+  magnetic_declination:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: low
+  dead_reckoning_log_line:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Pilots keep courses by star bearings and reckon distance in days' sail, from memory and oral
+      rutters. No log line, no sandglass, no compass.
+  latitude_astrolabe_quadrant:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Court astronomers take latitude with astrolabes and quadrants, and the Mumtahan tables give
+      town latitudes. Pilots judge the Pole Star's height by eye; a finger-scaled sighting board is attested
+      only later.
+    local:
+    - Ali ibn Isa al-Asturlabi
+    - Sanad ibn Ali
+  reflecting_octant_sextant:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+    note: Mirrors are polished metal and astrolabe scales are divided by hand to a degree at best.
+  longitude_lunar_distances:
+    knowledge: 2
+    use: none
+    producibility: very-hard
+    acceptance: low
+    note: Ptolemy's method of timing one lunar eclipse in two places is known, and the caliph's astronomers
+      care about longitudes. Lunar tables and instruments are far too coarse for use at sea.
+    local:
+    - Habash al-Hasib
+  longitude_chronometer:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  map_projection_charts:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Ptolemy's Geography, with grids and projections, is available in translation and reworked by
+      al-Khwarizmi. Sailors carry no charts; route lists and memory serve.
+    local:
+    - Muhammad ibn Musa al-Khwarizmi
+  sounding_lead_pilotage:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: The Shatt al-Arab and the Gulf are full of shoals; pilots sound with lead and line and pass
+      on landmarks orally. Written rutters come centuries later.
+    local:
+    - pilots at Ubulla and Abbadan
+  tides_tide_tables:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Basra's canals fill and empty twice a day with the tide of the Shatt al-Arab, and boatmen and
+      millers time their work by it. The tie to the moon is noticed; a theory and tables are not.
+    local:
+    - Basra's tidal canals
+  polynesian_wayfinding:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    elsewhere:
+    - the Pacific islands
+  ship_design_caravel_carrack:
+    knowledge: 1
+    use: partial
+    producibility: hard
+    acceptance: medium
+    note: Gulf ships are sewn-plank hulls of Indian teak tied with coconut cord, Their steering and
+      rig in this century are uncertain; later pictures show square sails. A sewn ship of this kind sinks off Belitung about now, full
+      of Chinese bowls.
+    local:
+    - shipwrights at Siraf, Sohar and Ubulla
+    elsewhere:
+    - Belitung wreck (Java Sea), a sewn ship lost c. 830 with Tang ceramics, one bowl dated 826
+  chinese_junk_treasure_ships:
+    knowledge: 1
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Merchants back from Khanfu talk of large Chinese ships and iron-nailed hulls. Zheng He's fleets
+      are six centuries away.
+    elsewhere:
+    - Tang China, Guangzhou
+  watertight_bulkheads:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Sewn hulls have one open hold. Chinese boats with compartments exist but are not known here.
+    elsewhere:
+    - Tang China, compartmented hulls
+  copper_sheathing_shipworm:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Shipworm and rot are a constant cost in warm seas; hulls are smeared with
+      oil and lime (described by later writers).
+      Copper is expensive and would need nails a sewn hull does not have.
+  ship_provisioning_long_voyages:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Ships to China stop at Muscat, Quilon and the Malay ports for water and food; dates, rice and
+      dried fish keep. Scurvy is rare on these hops.
+  steamship_screw_propeller:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  lighthouse_buoys:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: The Pharos of Alexandria still stands. Later writers describe wooden beacon platforms (khashabat)
+      in the sea off Abbadan, lit at night for ships entering the Tigris; whether they stand yet is unknown.
+    elsewhere:
+    - Alexandria, the Pharos
+  diving_bell:
+    knowledge: 1
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Pearl divers of the Gulf dive on held breath with nose clips and a weighted line. Alexander's
+      descent in a glass vessel is a story in the Alexander romance.
+    elsewhere:
+    - Bahrain and the Gulf pearl banks
+  canal_locks:
+    knowledge: 1
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Iraq's canals are flat and fed by sluices and weirs; boats are towed. A pound lock is unknown
+      and would mainly help where canals cross a level change.
+  paved_roads_macadam:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: low
+    note: The Khurasan road and the pilgrim road to Mecca (Darb Zubayda, with cisterns and stations) are
+      tracks with wells and inns, not paved. Camel caravans need no pavement.
+    local:
+    - Khurasan road from Baghdad's eastern gate
+    - Darb Zubayda to Mecca
+  spoked_wheel_suspension_carriage:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: low
+    note: Spoked wheels are known, but carts are rare; the camel carries more cheaply on these roads.
+      Women of rank travel in litters on camels or mules.
+  stirrup_saddle:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Iron stirrups have been standard since the late 7th century; saddles are built on wooden trees.
+      Whether horses are shod with nailed shoes is uncertain.
+  arch_bridge_truss:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: high
+    note: Baghdad crosses the Tigris on pontoon bridges of boats chained together. Sasanian masonry bridges
+      and bridge-dams survive in Khuzistan (Shushtar). Truss and suspension bridges are unknown.
+    local:
+    - pontoon bridges between Karkh, Rusafa and Shammasiyya
+    elsewhere:
+    - Shushtar, Sasanian bridge-dam
+  railway:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  steam_locomotive:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  bicycle:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+  automobile:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  hot_air_hydrogen_balloon:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: low
+    note: Paper and silk exist; nobody has tried to make hot air lift anything.
+  parachute:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: low
+  glider_aeroplane:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+    elsewhere:
+    - Córdoba, Abbas ibn Firnas, whose gliding attempt (date unknown) is reported centuries later
+  jet_engine:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  rocket_spaceflight:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  # ---- Communication & information
+  writing_invention:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+  alphabet_writing:
+    knowledge: 4
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Arabic script now carries dots and vowel signs; Syriac, Hebrew and Pahlavi are written alongside.
+      Many town men can read a little; secretaries, scholars and merchants read well. Mass literacy is
+      no one's aim.
+  codex_book:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Books are paper or parchment codices copied by professional stationers (warraqin) in the booksellers'
+      market. Paper makes books cheaper every decade.
+    local:
+    - Suq al-Warraqin (booksellers' market), Baghdad
+    - Baghdad paper makers
+  woodblock_printing:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Paper, soot ink and carved seals all exist; block-printed charms appear in Egypt only in the
+      10th century. Printing the Quran would offend those who see copying it as devotion.
+    elsewhere:
+    - Tang China, printed charms, sutras and calendars
+  printing_press:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Joined Arabic letters change shape by position, so movable type needs hundreds of sorts. No
+      screw press for paper, no type metal.
+  lithography_engraving:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: low
+    note: Seal cutters engrave stones and dies for coins; nobody prints images.
+  postal_system:
+    knowledge: 4
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: The barid runs relay stations with mules and riders along the main roads; its masters in each
+      province report on governors to the caliph. It is a state service, not public mail; private letters
+      go with travellers and merchants.
+    local:
+    - the diwan al-barid
+  newspapers_periodicals:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: low
+    note: News travels by the caliph's letters, read out in the mosques at Friday prayer, and by the barid.
+  scientific_journal:
+    knowledge: 1
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Scholars answer each other in epistles (rasa'il) and dispute in the caliph's assemblies (majalis).
+      Nothing periodic, and nobody reviews before copying.
+    local:
+    - al-Ma'mun's debating sessions
+  encyclopedia_reference_works:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Al-Khalil's Kitab al-Ayn, the first Arabic dictionary (late 8th c.), orders words by sound;
+      Sibawayh's grammar is the standard. Encyclopedias of the sciences come later.
+  library_catalogue:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: The caliph's Khizanat al-Hikma has librarians and copyists; stationers keep lists of what they
+      can copy. No union catalogue; Ibn al-Nadim's Fihrist is 150 years away.
+    local:
+    - Sahl ibn Harun, keeper of the Khizanat al-Hikma
+  pencil_steel_pen:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Writing is done with cut reed pens (qalam), soot ink (midad) and iron-gall ink. Calligraphers
+      argue about how to cut the nib; a pen with its own reservoir is a 10th-century novelty in Egypt.
+  shorthand:
+    knowledge: 1
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Secretaries abbreviate in the diwans, and Byzantine notaries know Greek tachygraphy. Dictation
+      is slowed by the reed pen.
+  typewriter:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+  copying_duplicating:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: medium
+    note: Every copy is written by hand; a large book takes a copyist weeks.
+  braille_tactile_writing:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: medium
+    note: Blind men are respected Quran reciters and scholars who learn by ear and memory.
+  sign_languages:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Jurists accept the intelligible gestures of a mute person for contracts, divorce and oaths;
+      deaf people sign at home. There is no taught sign language.
+  vernacular_translation:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: This is the translation movement at its height. Greek works come into Arabic, often through
+      Syriac, alongside Pahlavi and Sanskrit, paid for by the caliph, officials, physicians and private
+      patrons.
+    local:
+    - al-Hajjaj ibn Yusuf ibn Matar
+    - Hunayn ibn Ishaq (young, learning Greek)
+    - Yuhanna ibn Masawayh
+    - the Khizanat al-Hikma (Bayt al-Hikma)
+  signal_beacons_flag_codes:
+    knowledge: 2
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Fire and smoke signals are used on the frontiers and coasts. Across the border, the Byzantines
+      run a beacon chain from the Cilician frontier to Constantinople.
+    elsewhere:
+    - Byzantine beacon chain (later linked to Leo the Mathematician)
+  optical_telegraph:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: low
+  standard_time_zones:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Time is local and set by the sun; the hours of prayer follow shadow length and sunset. Astronomers
+      know noon differs with longitude.
+  # ---- Institutions, law & governance
+  written_law_code:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: low
+    note: Law is the jurists' reading of Quran and Prophetic precedent, not a code the ruler enacts. Ibn
+      al-Muqaffa' urged al-Mansur (c. 750s) to impose one uniform code; jurists still resist. Al-Shafi'i
+      (d. 820) has just systematised the sources.
+    local:
+    - Yahya ibn Aktham, chief qadi
+    - Ahmad ibn Hanbal
+    - pupils of Abu Yusuf and al-Shaybani (Hanafi school)
+    elsewhere:
+    - Constantinople, the Ecloga (741) and Justinian's Code
+    - Tang China, the Tang Code (653)
+  rule_of_law:
+    knowledge: 2
+    use: partial
+    producibility: hard
+    acceptance: low
+    note: Everyone agrees God's law stands above the caliph; nobody agrees who interprets it. Al-Ma'mun
+      claims that authority for himself, and the Mihna of 833 is the test. Officials answer to him, not
+      to courts.
+    local:
+    - Ahmad ibn Abi Du'ad (the caliph's party)
+    - Ahmad ibn Hanbal (the scholars' party)
+  independent_judiciary_judicial_review:
+    knowledge: 2
+    use: partial
+    producibility: hard
+    acceptance: low
+    note: Qadis judge by a law the caliph did not make, but he appoints and dismisses them, and the Mihna
+      will examine every qadi on the createdness of the Quran. Grievances against officials go to the
+      ruler's own mazalim hearings.
+    local:
+    - Yahya ibn Aktham
+    - the caliph's mazalim (grievance) sessions
+  habeas_corpus_fair_trial:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: low
+    note: Before a qadi the claimant must prove with two upright witnesses and fixed penalties are averted
+      by doubt. The police and the caliph imprison without any qadi, and torture for confession or taxes
+      is routine.
+    local:
+    - Ishaq ibn Ibrahim al-Mus'abi, chief of police
+    - the Matbaq, the caliphs' state prison
+  representative_government:
+    knowledge: 1
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Consultation (shura) is praised and means the ruler hearing his chosen counsellors. Allegiance
+      (bay'a) is sworn by notables to a man already designated. No body is elected, and Aristotle's Politics
+      is not translated.
+  sortition:
+    knowledge: 1
+    use: partial
+    producibility: easy
+    acceptance: low
+    note: Drawing lots (qur'a) is lawful for dividing shares or settling equal claims, after Prophetic
+      precedent. Filling an office by lot would look like gambling with God's trust.
+  citizen_assembly:
+    knowledge: 1
+    use: none
+    producibility: hard
+    acceptance: low
+    note: The Friday mosque is where policy is announced, not decided. Crowds act in riots and in the
+      Baghdad vigilante movement of 817; Athens is a name in Greek books.
+  secret_ballot:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Nothing is voted on. Paper and sealed boxes would make it trivial to run, if any body existed
+      that chose by votes.
+  peaceful_transfer_of_power:
+    knowledge: 2
+    use: wrong
+    producibility: hard
+    acceptance: low
+    note: Harun's succession pact of 802, written and hung in the Kaaba, ended in civil war and al-Amin's
+      death in 813. Al-Ma'mun named the Alid Ali al-Rida heir in 817 (dead 818). In 833 he passes over
+      his son for his brother.
+    local:
+    - Abu Ishaq al-Mu'tasim
+    - al-Abbas ibn al-Ma'mun
+    - Ibrahim ibn al-Mahdi (anti-caliph 817–819, pardoned)
+  written_constitution:
+    knowledge: 1
+    use: partial
+    producibility: hard
+    acceptance: low
+    note: The Medina pact is preserved in the Prophet's biography; Harun's Mecca documents were a written
+      settlement of power, and they failed. A charter that binds the caliph himself is unthought.
+    local:
+    - Ibn Sa'd and the biographers of the Prophet in Baghdad
+  federalism_subsidiarity:
+    knowledge: 1
+    use: partial
+    producibility: hard
+    acceptance: low
+    note: In practice the Tahirids hold Khurasan by inheritance and the Aghlabids rule Ifriqiya for a
+      tribute. Christians, Jews and Zoroastrians run family law and worship under their own heads.
+    local:
+    - Abdallah ibn Tahir, governor of Khurasan
+    - the Catholicos of the Church of the East
+    - the Jewish Exilarch in Baghdad
+  international_law_sovereignty:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Al-Shaybani's Siyar (d. 805) sets out war, truce and safe-conduct (aman). Envoys pass to Constantinople
+      and prisoners are exchanged
+      on the Lamos river in Cilicia (805; the next exchange only in 845). Byzantium is an enemy to be bled,
+      not an equal.
+    elsewhere:
+    - Constantinople, Emperor Theophilos (r. 829–842)
+  property_rights_land_registry:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: The Sawad has been surveyed for land tax since the conquest and the tax bureau keeps registers.
+      Title rests on witnesses and deeds; fallen officials and their families have everything confiscated
+      (the Barmakids in 803).
+    local:
+    - diwan al-kharaj (land-tax bureau)
+    - professional witnesses ('udul) at the qadi's court
+  commercial_law_contract_enforcement:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: The Quran orders debts to be written and witnessed; qadis enforce sale, hire, partnership and
+      agency, and formularies for deeds are circulating. Jurists already sell legal devices (hiyal) around
+      the ban on interest.
+    local:
+    - Karkh markets
+    - Hanafi jurists at the qadi's court
+  patents:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: low
+    note: An inventor's reward is a caliph's gift or a post. Craftsmen guard secrets in the family, and
+      a monopoly would need a caliphal grant.
+  copyright:
+    knowledge: 0
+    use: none
+    producibility: easy
+    acceptance: low
+    note: Any copyist in the stationers' market may copy any book. The scholarly answer is transmission
+      by audition and licence (ijaza), which protects accuracy, not income.
+    local:
+    - Suq al-Warraqin (stationers' market)
+  standard_weights_measures:
+    knowledge: 4
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Coin weights are legal standards (mithqal, dirham); market inspectors test scales, and stamped
+      glass weights are made in Egypt. The ratl and the grain measures differ between Baghdad, Kufa and
+      Basra.
+    local:
+    - the market inspector (sahib al-suq, muhtasib)
+    - money changers of Karkh
+  census_vital_registration:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: low
+    note: The army register lists each soldier by name, father and physical description, and tax registers
+      list the dhimmis who owe jizya. Nobody records births, deaths or causes.
+    local:
+    - diwan al-jund (army bureau)
+  public_accounts_audit:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: A control bureau (diwan al-zimam) checks the other bureaus' accounts; revenue lists by province
+      exist. The usual audit is to arrest a dismissed secretary and squeeze him for what he took.
+    local:
+    - diwan al-zimam
+    - the caliph's secretaries (kuttab)
+  merit_civil_service:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Secretaries are trained in Arabic style, accounts and Persian manners, often in secretary families
+      (many of them Persian or Christian); entry is by patronage. No examinations.
+    elsewhere:
+    - Tang China, the civil-service examinations
+  universal_schooling:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Quran schools (kuttab) teach boys to read and write for a fee, and literacy is unusually common
+      among townsmen. Girls are taught at home if at all; nothing is free or compulsory.
+  university:
+    knowledge: 1
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Teaching happens in study circles in mosques and houses, around one master, with licences to
+      transmit. No chartered body of teachers, no degree; the endowed madrasa is two centuries away.
+  scientific_academy:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: The Bayt al-Hikma is the caliph's library and bureau, not an academy. Al-Ma'mun's court comes
+      close, with funded observers, instruments, recorded results (the 'verified' tables) and debates
+      in his majlis. It all depends on one patron.
+    local:
+    - Khizanat al-Hikma (Sahl ibn Harun, Salm)
+    - Yahya ibn Abi Mansur, Sanad ibn Ali, Habash al-Hasib
+    - the caliph's majlis
+  industrial_research_lab:
+    knowledge: 1
+    use: partial
+    producibility: hard
+    acceptance: low
+    note: The observation programmes at Shammasiyya (828–829) and Mt Qasiyun (831–833) are a staffed,
+      funded long programme, ending when al-Ma'mun dies. Nothing similar exists for crafts.
+    local:
+    - Shammasiyya observatory, Baghdad
+    - Mt Qasiyun, Damascus (Khalid ibn Abd al-Malik al-Marwarrudhi)
+  public_library_museum:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: The caliph's library is open by favour to scholars and copyists; great men keep private libraries.
+      The real public access is the booksellers' market, where books can be read or copied for a fee.
+    local:
+    - Khizanat al-Hikma
+    - Suq al-Warraqin
+    elsewhere:
+    - Constantinople, the patriarchal and imperial libraries
+  free_press:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: No press. Books circulate freely unless they touch religion; al-Mahdi hunted 'zindiqs' in the
+      780s, and from 833 the Mihna makes a doctrine compulsory for officials and scholars.
+  abolition_of_slavery:
+    knowledge: 1
+    use: none
+    producibility: very-hard
+    acceptance: low
+    note: Freeing slaves is a pious act, slaves may buy their freedom by contract, and a concubine who
+      bears her master a child goes free at his death. Al-Ma'mun's own mother was a slave. Abolition is
+      unthinkable.
+    local:
+    - slave market (dar al-raqiq) in Baghdad
+    - Zanj labourers in the Basra salt flats
+  women_rights_suffrage:
+    knowledge: 2
+    use: partial
+    producibility: hard
+    acceptance: low
+    note: A free woman owns and keeps her property and dower, contracts and can sue; she inherits half
+      a brother's share and is secluded if well-born. Zubayda, Harun's widow, funds wells and cisterns
+      along the pilgrim road until her death (831).
+    local:
+    - Zubayda bint Ja'far
+    - Buran, al-Ma'mun's wife (wedding at Fam al-Silh, 825/826)
+    - trained singing slave girls (qiyan)
+  charitable_endowment_waqf:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: high
+    note: Pious foundations fund wells, mosques and the poor. Jurists still dispute whether an endowment
+      is irrevocable (Abu Yusuf yes, Abu Hanifa no); the doctrine is being written now.
+    local:
+    - Zubayda's waterworks on the Mecca road
+  guilds_apprenticeship:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Each craft has its own street or market with a headman ('arif) answerable to the inspector.
+      Crafts pass from father to son; whether self-governing guilds exist is disputed by historians.
+  public_health_board:
+    knowledge: 1
+    use: partial
+    producibility: medium
+    acceptance: low
+    note: The market inspector checks bread, meat and weights, and the bimaristan cares for some of the
+      sick. No one counts deaths or orders isolation; epidemics are God's decree.
+    local:
+    - the market inspector
+    - the bimaristan of Harun's reign
+  fire_brigade_police_building_codes:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: The shurta polices Baghdad and the gates are shut at night; quarters have watchmen. Markets
+      of reed and wood burn; the inspector polices encroachment on streets. The 'ayyarun gangs of the
+      civil war still rule some alleys.
+    local:
+    - Ishaq ibn Ibrahim al-Mus'abi
+    - Karkh markets
+  social_insurance:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Zakat and alms go to the poor, debtors and travellers; registered soldiers draw stipends; the
+      bimaristan treats without fee. Relief is charity or pay, not a fund with contributions.
+  trade_unions_collective_bargaining:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: low
+    note: Workers have no lawful combination. Troops unpaid do mutiny, and that is the only collective
+      bargaining Baghdad knows.
+  # ---- Economy & finance
+  coinage:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Gold dinar (about 4.25 g), silver dirham (about 2.9 g), copper fulus for small change, all purely
+      inscribed. Al-Ma'mun's reform type of the 820s adds a Quran verse in the outer margin. Big sums
+      are weighed; money changers profit on the rate.
+    local:
+    - mint of Madinat al-Salam
+    - money changers (sarrafun) of Karkh
+  double_entry:
+    knowledge: 1
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Bureaus keep day books and monthly and annual summaries in words, with their own clerks' notation.
+      Two-sided accounts that must balance are not used; merchants keep simple lists of debts.
+    local:
+    - diwan al-zimam
+  interest_loans_collateral:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Interest (riba) is forbidden, so credit runs through deferred-price sales, advance purchase
+      (salam), pledges and double-sale tricks. A qadi may jail a debtor who can pay and will not.
+  banking_credit:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Written payment orders (sakk) are old; the suftaja, a loan repaid in another city, is spreading
+      among merchants and officials. Court bankers (jahbadh) handling state funds are better attested
+      a few decades later.
+    local:
+    - money changers of Karkh
+    - Basra merchants
+    elsewhere:
+    - Tang China, 'flying money' remittance certificates
+  paper_money:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: low
+    note: Paper, seals and trusted bureaus exist, so notes could be made. Accepting a slip of paper for
+      silver would need the state to take it back in taxes, and jurists would fear gharar.
+    elsewhere:
+    - Tang China, flying money (not yet currency)
+  quantity_theory_inflation:
+    knowledge: 1
+    use: none
+    producibility: medium
+    acceptance: low
+    note: Abbasid silver is good, so debasement is not the issue. Prices are blamed on hoarders, bad harvests
+      and war, like the famine of the siege of 812–813. Nobody connects prices with the coin the caliph
+      spends.
+  partnership_commenda:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Mudaraba (qirad) is standard, worked out by the Hanafis (al-Shaybani); the investor bears the
+      loss, the agent his labour. Partnerships carry Basra's trade to India and China.
+    local:
+    - Basra and Siraf merchants
+  joint_stock_company:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: The law knows partners, not a legal person that outlives them. A partnership dissolves at a
+      death, and shares cannot be sold to strangers.
+  insurance:
+    knowledge: 1
+    use: partial
+    producibility: medium
+    acceptance: low
+    note: The aqila kin group shares blood money; seafarers share jettisoned cargo by custom. A paid premium
+      against a chance loss looks to jurists like gambling (gharar, maysir).
+  life_tables_annuities:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Inheritance arithmetic fills half of al-Khwarizmi's al-Jabr, but no one records ages at death,
+      and annuities would run into the ban on interest.
+    local:
+    - Muhammad ibn Musa al-Khwarizmi
+  public_debt_bonds:
+    knowledge: 1
+    use: partial
+    producibility: hard
+    acceptance: low
+    note: The caliph borrows from rich officials and merchants when pay runs out, and tax farmers advance
+      revenue. Nothing is standard, transferable or interest-bearing.
+  stock_exchange:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+  central_bank:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: low
+    note: There is the public treasury (bayt al-mal) and the caliph's privy purse, and he spends from
+      both.
+  division_of_labour:
+    knowledge: 3
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Baghdad's markets are divided street by street by trade, from paper to perfume. Plato's point
+      that a city needs many specialists is known. No one has taken a single trade apart into steps.
+    local:
+    - Karkh markets
+    - paper makers and copyists
+  comparative_advantage_free_trade:
+    knowledge: 1
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Egyptian linen, Khurasani cotton, Indian pepper and Chinese silk and stoneware meet in Baghdad.
+      Customs dues are levied at frontiers and ports. Nobody theorises why both sides gain.
+  price_mechanism_supply_demand:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: A hadith has the Prophet refuse to fix prices ('God is the one who sets them'); hoarding food
+      is condemned. Governors still fix grain prices in a crisis.
+  ever_normal_granary:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Everyone knows Joseph storing grain for seven lean years (Quran, sura 12). The state keeps stores
+      for the army and court, not a buffer for prices.
+    elsewhere:
+    - Tang China, ever-normal granaries
+  progressive_income_tax:
+    knowledge: 2
+    use: partial
+    producibility: hard
+    acceptance: low
+    note: Jizya is graded in three classes by wealth (48, 24 or 12 dirhams a year); zakat takes a fixed
+      share above a threshold; land tax is by area or a share of the crop. Income as such is never assessed.
+    local:
+    - diwan al-kharaj
+  cooperatives_savings_banks:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: low
+    note: The poor save in jewellery and keep coin with a trusted neighbour or merchant. Interest on deposits
+      would be riba.
+  economic_growth_productivity:
+    knowledge: 1
+    use: partial
+    producibility: medium
+    acceptance: low
+    note: The Persian idea that a just ruler's revenue depends on cultivated, prospering land ('imara)
+      is common; Tahir ibn al-Husayn's letter to his son (821) says so. Wealth means land, tax and treasure.
+    local:
+    - Tahir's letter to Abdallah ibn Tahir
+  national_accounts_gdp:
+    knowledge: 1
+    use: partial
+    producibility: hard
+    acceptance: low
+    note: Revenue lists by province, in coin and kind, are a rough map of what the empire produces. Output
+      itself is never counted.
+  aggregate_demand_countercyclical_policy:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Caliphs build canals and palaces for glory and hand out gifts in bad years, not on any theory.
+  # ---- Warfare, security & deterrence
+  close_order_infantry:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Infantry fight in ranks behind shields and spears to anchor the horsemen; the Baghdad Abna',
+      the old infantry, were broken in 813. Byzantine manuals of drill are unknown here.
+    elsewhere:
+    - Byzantium, Maurice's Strategikon
+  cavalry_chariot:
+    knowledge: 4
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: Cavalry is the army, mailed lancers and horse archers on stirrups, and Turkish archers are prized.
+      The chariot is ancient history.
+    local:
+    - al-Afshin, general
+    - Abu Ishaq al-Mu'tasim and his Turkish guards
+  crossbow_longbow:
+    knowledge: 3
+    use: correct
+    producibility: medium
+    acceptance: high
+    note: The composite bow of horn, wood and sinew is the main missile weapon, made by specialist bowyers.
+      Hand crossbows are rare here.
+    elsewhere:
+    - Tang China, mass-produced crossbows
+  torsion_artillery_trebuchet:
+    knowledge: 4
+    use: correct
+    producibility: medium
+    acceptance: high
+    note: Traction trebuchets (manjaniq) pulled by crews, and light 'arrada, shelled Baghdad's houses
+      in 812–813. The counterweight trebuchet is unknown; torsion engines survive in Greek books.
+  oared_galley_ram:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Fleets of Syria and Egypt row galleys that fight by boarding, not ramming; in 827 Andalusian
+      exiles take Crete and the Aghlabids invade Sicily. On the Tigris, armed river craft fought in the
+      siege.
+  incendiaries_greek_fire:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: high
+    note: Naphtha from Iraqi seeps is thrown in pots or on arrows by specialist naphtha men (naffatun).
+      The Byzantine siphon that sprays burning oil from ships is a guarded secret.
+    elsewhere:
+    - Constantinople, Greek fire siphons
+  field_fortification:
+    knowledge: 3
+    use: correct
+    producibility: easy
+    acceptance: high
+    note: The trench (khandaq) is part of sacred history (Medina, 627); armies ditch their camps and Baghdad's
+      defenders dug in during the siege. Against Babak's mountain strongholds it will need patience.
+  gunpowder:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: high
+    note: Saltpetre is unknown to Arab chemists until the 13th century, though nitre crusts form on old
+      mud walls and stables. Sulphur and charcoal are at hand. In China alchemists are just finding the
+      mixture dangerous.
+    elsewhere:
+    - Tang China, Daoist alchemists' saltpetre-sulphur mixtures
+  cannon_artillery:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: high
+    note: No powder, and founders cast small bronze pieces, not tubes that can take a charge.
+  ballistics_gunnery:
+    knowledge: 1
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Aristotle's account of projectiles pushed by the air is the known theory. Trebuchet crews aim
+      by trial.
+  handguns_muskets:
+    knowledge: 0
+    use: none
+    producibility: very-hard
+    acceptance: medium
+  pike_and_shot_drill:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Archers already shoot in volleys on command; there are no guns.
+  socket_bayonet:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: low
+  bastion_fortification:
+    knowledge: 0
+    use: none
+    producibility: medium
+    acceptance: low
+    note: The Round City had double walls, a ditch and towers. Without cannon, nobody needs low thick
+      ramparts.
+  siegecraft_mining:
+    knowledge: 4
+    use: correct
+    producibility: medium
+    acceptance: high
+    note: Mining, rams under sheds, towers and trebuchets are routine on the Byzantine frontier; the Byzantine
+      forts of Cappadocia fall to blockade and assault in 830–832.
+    local:
+    - frontier bases at Tarsus and al-Massisa
+  naval_gunnery_line_of_battle:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  war_rockets:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: medium
+  standing_army_logistics:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Soldiers are registered and paid stipends from the army bureau; arrears mean riots. Campaigns
+      move from the frontier towns with depots and pack trains. Al-Mu'tasim is buying Turkish slaves into
+      a guard of his own.
+    local:
+    - diwan al-jund
+    - Tarsus and the Cilician frontier (thughur)
+  mercenaries_citizen_militia:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: The question is who the army is loyal to. The Khurasanis brought al-Ma'mun to power; Baghdad's
+      Abna' fought him; in 817 citizens formed vigilante militias. Al-Mu'tasim's Turkish slave soldiers
+      are the answer that will arrive.
+    local:
+    - Abu Ishaq al-Mu'tasim
+    - al-Afshin
+  conscription_mass_army:
+    knowledge: 1
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Soldiers are professionals and volunteers for holy war go to the frontier. Compelling peasants
+      to serve is not done.
+  military_camp_hygiene:
+    knowledge: 1
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Camps are sited for water, and fevers on campaign are expected. Al-Ma'mun himself dies of a
+      fever in camp on the Cilician frontier in August 833.
+  military_engineering_roads_bridges:
+    knowledge: 3
+    use: correct
+    producibility: medium
+    acceptance: high
+    note: Boat bridges span the Tigris at Baghdad; the old Roman and Sasanian roads carry the post. In
+      833 al-Ma'mun orders Tyana rebuilt as a fortified base.
+  strategy_theory:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Persian books of kingship and advice, translated from Pahlavi, cover war and stratagem; Tahir's
+      letter to his son is read. No Arabic treatise studies war as policy.
+    elsewhere:
+    - Byzantium, the Strategikon
+    - China, Sunzi
+  general_staff_war_college:
+    knowledge: 0
+    use: none
+    producibility: hard
+    acceptance: low
+    note: Commanders are the caliph's kin and clients. Planning lives in his tent.
+  wargaming_operations_research:
+    knowledge: 1
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Chess (shatranj), from India through Persia, is a court passion and is played as a picture of
+      war. Nobody uses a board to test a campaign.
+  military_intelligence_codebreaking:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: The postmasters of the barid report on governors and frontiers, and spies cross into Byzantium.
+      Al-Khalil (d. 786) wrote a lost book on secret writing; al-Kindi's frequency analysis is still ahead.
+    local:
+    - sahib al-barid (postmaster-intelligencer) in each province
+    - Ya'qub ibn Ishaq al-Kindi
+  rifling_minie_breechloader:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  smokeless_powder_high_explosive_shell:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  machine_gun:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  ironclad_warship:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  submarine_torpedo:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  tank_combined_arms:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  military_aviation:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  chemical_weapons:
+    knowledge: 1
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Smoke, burning naphtha and poisoned arrows are known siege tricks. No one weighs whether to
+      forbid them.
+  nuclear_weapons:
+    knowledge: 0
+    use: none
+    producibility: impossible
+    acceptance: low
+  security_dilemma_arms_race:
+    knowledge: 1
+    use: partial
+    producibility: medium
+    acceptance: low
+    note: Each side of the Taurus fortifies against the other's raids and calls it defence; Theophilos'
+      raids into Cilicia bring al-Ma'mun's invasions. Nobody frames it as a trap.
+  deterrence:
+    knowledge: 3
+    use: partial
+    producibility: easy
+    acceptance: medium
+    note: Annual summer raids, punitive campaigns (Harun's against Heraclea in 806) and the threat of
+      a caliph in person keep the frontier in line. Tribute is the price of peace.
+  balance_of_power:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Harun's embassies to Charlemagne aimed at Byzantium and the Umayyads of Spain. The Khazars,
+      Tibet and the Tang are known powers. The caliph claims universal rule, and balance is practice,
+      not doctrine.
+  collective_security_alliances:
+    knowledge: 2
+    use: partial
+    producibility: medium
+    acceptance: low
+    note: Alliances are personal pacts with princes and tribes. Khurramite refugees from Babak's war
+      go over to Byzantium from about 833.
+  arms_control:
+    knowledge: 1
+    use: partial
+    producibility: medium
+    acceptance: low
+    note: Truces fix tribute, prisoner returns and sometimes the razing of a fort; Theophilos offers terms
+      in 832. Limiting weapons as such is unheard of.
+  laws_of_war:
+    knowledge: 3
+    use: partial
+    producibility: medium
+    acceptance: medium
+    note: Jurists forbid killing women, children, monks and the old, and grant safe-conduct; al-Shaybani
+      wrote the rules down. Captives are still enslaved or held for ransom and exchange.
+
+people:
+- name: Abd Allah al-Ma'mun
+  role: Abbasid caliph since 813, in Baghdad since 819; patron of the translations and the observatories
+  knows: Mu'tazilite theology and disputation, astronomy and astrology at a patron's level, the army and
+    the Byzantine frontier
+  note: Born 786, son of Harun al-Rashid and a Persian concubine. Away on campaign each summer from 830
+    (Cilicia, Cappadocia) and in Damascus and Egypt in 831–832. Dies of a fever on campaign near Tarsus
+    on 7 August 833, months after ordering the Mihna.
+- name: Abu Ishaq Muhammad al-Mu'tasim
+  role: the caliph's half-brother, commander, his successor in 833
+  knows: soldiering; builds a private army of Turkish slave-soldiers (ghilman) bought in Samarkand and
+    Baghdad
+  note: Barely literate by the chroniclers' account, practical, respected by the troops. Moves the court
+    to Samarra in 836. His son Ahmad will be al-Kindi's pupil.
+- name: al-Abbas ibn al-Ma'mun
+  role: the caliph's son and frontier commander
+  knows: the Jazira and the Byzantine frontier forts
+  note: Takes Tyana in 831; in May 833 starts building a fortress base there. Passed over for the succession;
+    dies in prison in 838 after a plot against al-Mu'tasim.
+- name: Muhammad ibn Musa al-Khwarizmi
+  role: mathematician, astronomer and geographer in the caliph's service
+  knows: al-Jabr wa'l-muqabala (completion and balancing), solving quadratics in words with geometric
+    proof; reckoning with the nine Indian digits and zero; an astronomical table on the Sindhind model;
+    a geography revising Ptolemy's coordinates
+  note: Born c. 780, origin in Khwarazm (the nisba may only be ancestral). Associated with the House of
+    Wisdom; reported present at the Shammasiyya solstice observations of 828. Dies c. 850. His algebra
+    was dedicated to al-Ma'mun and is new; how far clerks use it is unknown. His Picture of the Earth
+    (geography) is usually dated to these years, finished by about 833.
+- name: Abu Yusuf Ya'qub ibn Ishaq al-Kindi
+  role: young Arab aristocrat and scholar at court, later 'the philosopher of the Arabs'
+  knows: what the translators bring him, Aristotle, Euclid, Ptolemy, Indian numerals; will write on optics,
+    music, medicine dosage, cryptanalysis, perfumes and swords
+  note: Born c. 800 in Kufa or Basra to a family of the Kinda tribe; his father governed Kufa. Under al-Ma'mun
+    he is beginning; his main work falls under al-Mu'tasim and al-Wathiq. Directs translators rather than
+    translating himself.
+- name: Muhammad, Ahmad and al-Hasan ibn Musa ibn Shakir (the Banu Musa)
+  role: three brothers, sons of a former highwayman turned astronomer, raised at court as wards of al-Ma'mun
+  knows: geometry, astronomy, mechanics; later famous for the Book of Ingenious Devices (c. 850) and for
+    hiring translators with their own money
+  note: Young in 830 (Muhammad born before 803), under the guardianship of Ishaq ibn Ibrahim al-Mus'abi.
+    Ahmad is the mechanician, al-Hasan the geometer, Muhammad the astronomer and later the politician.
+    Later sources credit them with a share in the degree measurement; doubtful at their age.
+- name: Yuhanna ibn Masawayh
+  role: Nestorian Christian physician to the caliph, teacher of medicine
+  knows: Galenic medicine, drugs and aromatics, eye disease (writes the first Arabic book on ophthalmology,
+    Daghal al-'ayn); later dissects apes for anatomy
+  note: Born c. 777, son of a pharmacist from Gondeshapur. Sharp-tongued; famously sends away a student
+    who asked too many questions, Hunayn. Dies in Samarra in 857.
+- name: Hunayn ibn Ishaq
+  role: young Christian (Ibadi) scholar from al-Hira, translator in the making
+  knows: Syriac, Arabic, increasingly Greek; Galen
+  note: Born 808 or 809, son of a pharmacist. After his dismissal by Ibn Masawayh he goes abroad (Byzantine
+    lands or Alexandria) to learn Greek; when exactly he returns is uncertain, probably by the late 820s
+    or early 830s. Works first for physicians and for the Banu Musa; his great Galen translations come
+    in the 840s to 870s.
+- name: Bukhtishu ibn Jibril
+  role: court physician, head of the richest Christian medical family
+  knows: Gondeshapur medicine, court politics
+  note: His father Jibril, physician to Harun and al-Ma'mun, died c. 827. Bukhtishu serves the caliphs
+    on and off until his death in 870.
+- name: Salmawayh ibn Bunan
+  role: Nestorian Christian physician to al-Ma'mun, then to al-Mu'tasim
+  knows: Galenic clinical medicine
+  note: Presumably in the caliph's train on campaign. Al-Mu'tasim calls him father and prays over his
+    grave when he dies in 840.
+- name: Sahl ibn Harun
+  role: secretary, writer and head of the caliph's library (Khizanat al-Hikma)
+  knows: Persian court literature and adab; the library's holdings
+  note: Persian by origin; with a colleague, Salm, he runs the palace library that later sources call
+    the Bayt al-Hikma. Famous for an essay praising thrift. Usually said to die in AH 215 (830), so meet
+    him early.
+- name: al-Hajjaj ibn Yusuf ibn Matar
+  role: translator of Greek mathematics
+  knows: Euclid's Elements (he made one version for Harun and an improved one for al-Ma'mun) and the Almagest,
+    translated through Syriac about 827–829
+  note: Reachable in Baghdad; little else is known of his life.
+- name: Yahya ibn Abi Mansur
+  role: Persian astronomer of a Zoroastrian family (the Banu al-Munajjim), Muslim since about 818; head
+    of the observations at Shammasiyya
+  knows: Persian and Indian astronomy, the new observations behind the 'verified' tables (al-Zij al-Mumtahan)
+  note: Leads the Baghdad observations of 828–829. Dies in the caliph's train near Aleppo; the year is
+    given as 830 or 832, so meet him early.
+- name: Sanad ibn Ali
+  role: astronomer and instrument maker; built the observatory near the Shammasiyya gate
+  knows: instruments (armillary, mural quadrant), observing, the arithmetic of tables
+  note: A Jewish convert to Islam. Takes part in the observations at Baghdad and Damascus. Still alive
+    in the 860s.
+- name: Khalid ibn Abd al-Malik al-Marwarrudhi
+  role: astronomer, leads the observations on Mount Qasiyun at Damascus
+  knows: solar and lunar observation
+  note: Observes at Damascus in 831–833 while the caliph is in Syria; later sources name him in the degree
+    measurement.
+- name: Ali ibn Isa al-Asturlabi
+  role: maker of astrolabes and instruments
+  knows: making and using astrolabes; writes a treatise on the astrolabe
+  note: Named with Khalid in the measurement of a degree of the meridian. A craftsman who can build what
+    a player draws in brass.
+- name: Habash al-Hasib al-Marwazi
+  role: astronomer from Merv ('the calculator')
+  knows: astronomical tables, the shadow functions (tangent and cotangent) in their early form, eclipse
+    timing from star altitudes
+  note: Observes for al-Ma'mun and lives on past 869, reportedly to a hundred.
+- name: al-Abbas ibn Said al-Jawhari
+  role: geometer and astronomer
+  knows: commentary on Euclid; attempts a proof of the parallel postulate
+  note: Takes part in the Baghdad observations of 829–830 and the Damascus ones.
+- name: Abu Uthman al-Jahiz
+  role: writer from Basra, Mu'tazilite, pupil of al-Nazzam
+  knows: everything that interests him, animals, people, rhetoric, trades; observes ants, pigeons, and
+    fish in his rich, rambling style
+  note: Born c. 776, comes to Baghdad under al-Ma'mun, who admires his writing. His Book of Animals is
+    written much later (c. 847). Dies 868/869.
+- name: Ibrahim ibn Sayyar al-Nazzam
+  role: Mu'tazilite theologian and poet
+  knows: denies Abu al-Hudhayl's atoms, holds that bodies are infinitely divisible and that motion crosses
+    them by 'leaps'; sceptical of reports he cannot check
+  note: In Baghdad. Dies some time between 836 and 845.
+- name: Abu al-Hudhayl al-Allaf
+  role: elder of the Basra Mu'tazila
+  knows: kalam atomism, indivisible parts and accidents; disputation
+  note: Very old by 830; dies c. 841, reportedly near a hundred years old.
+- name: Bishr al-Marisi
+  role: Hanafi jurist and theologian, the old champion of the created Quran
+  knows: kalam and Hanafi law; was arguing the created Quran under Harun, decades before the caliph adopted
+    it
+  note: Born c. 755, hated by the traditionists. Dies in Baghdad in Rajab AH 218 (August 833), the summer
+    the Mihna begins; some modern summaries give 813 in error.
+- name: Ahmad ibn Hanbal
+  role: traditionist and jurist, the leading opponent of the created Quran
+  knows: tens of thousands of prophetic reports, their chains of transmission
+  note: Born 780, teaching in Baghdad. Refuses the Mihna in 833, is sent in chains toward the caliph,
+    who dies before he arrives; flogged under al-Mu'tasim in 834 or 835 (sources differ) and released.
+- name: Ahmad ibn Abi Du'ad
+  role: Mu'tazilite jurist and courtier
+  knows: kalam, the case for the created Quran, the court
+  note: Al-Ma'mun recommends him to his successor; under al-Mu'tasim he replaces Yahya ibn Aktham as chief
+    judge (833–848) and runs the Mihna.
+- name: Yahya ibn Aktham
+  role: chief judge (qadi al-qudat) and close companion of al-Ma'mun
+  knows: law, the court
+  note: Travels with the caliph. Replaced by Ibn Abi Du'ad on al-Mu'tasim's accession; chief judge again
+    under al-Mutawakkil from 851.
+- name: Ishaq ibn Ibrahim al-Mus'abi
+  role: Tahirid chief of police (sahib al-shurta) and in effect governor of Baghdad, c. 822–850
+  knows: the city, its markets, prisons and quarters
+  note: Executes the Mihna in Baghdad by the caliph's letters of 833. Guardian of the Banu Musa.
+- name: Abdallah ibn Tahir
+  role: governor of Khurasan from 828
+  knows: Khurasan, irrigation law (has jurists compile a book on qanat rights)
+  note: Rules from Nishapur; beyond reach except by letter or a long road.
+- name: Abu Ma'shar al-Balkhi
+  role: young hadith scholar from Balkh in Baghdad
+  knows: traditions; despises the philosophers
+  note: Born 787. Ibn al-Nadim says he turned to astrology at 47 after a quarrel with al-Kindi, which
+    would be about 832–834. Becomes the most read astrologer of the Middle Ages.
+- name: Ishaq al-Mawsili
+  role: court musician and boon companion
+  knows: Arabic music theory and practice, the court's gossip
+  note: Born 767; in favour with al-Ma'mun. Dies 850.
+- name: Ibrahim ibn al-Mahdi
+  role: the caliph's uncle, singer, briefly rival caliph (817–819)
+  knows: music, the Abbasid family
+  note: Pardoned and living in Baghdad.
+- name: Giwargis II and Sabrisho II
+  role: successive Catholicoi of the Church of the East, seated in Baghdad
+  knows: the Nestorian church, its schools, physicians and scribes
+  note: Giwargis holds office from 828 to about 830–831, Sabrisho from 831 to 835. The patriarch is the
+    official head of the caliph's Christian subjects of this church.
+- name: Leo the Mathematician
+  role: Byzantine scholar in Constantinople
+  knows: Euclid and Greek mathematics, astronomy
+  note: Elsewhere. A later Byzantine story has al-Ma'mun write to the emperor Theophilos asking for him;
+    the date is doubtful and it may belong to al-Mu'tasim's reign.
+events:
+- 'Each summer: the army leaves for the Byzantine frontier; Tigris and Euphrates floods in spring, low
+  water and heat (well over 40 °C) from June to September.'
+- '827 (AH 212): al-Ma''mun publicly declares the Quran created and Ali the best of men after the Prophet.'
+- 'c. 827–828: Khalid ibn Abd al-Malik and Ali ibn Isa al-Asturlabi measure a degree of the meridian in
+  the plain of Sinjar, about 56 2/3 Arabic miles (reports give 56 to 57; the date is not fixed).'
+- '828 (AH 213): solstice observations at the Shammasiyya quarter of Baghdad under Yahya ibn Abi Mansur;
+  al-Khwarizmi is reported present. Abdallah ibn Tahir becomes governor of Khurasan.'
+- '829: Theophilos becomes Byzantine emperor. Observations at Shammasiyya continue into 829–830.'
+- '829/831–832 (start disputed): the Bashmurite revolt of Christian Copts in the Nile delta, crushed when
+  the caliph comes to Egypt with al-Afshin.'
+- '830 (AH 215) spring–summer: al-Ma''mun leads his first personal campaign into Byzantine territory,
+  the first by a caliph in twenty years, takes Majida by surrender and storms and razes Qurra (July 830);
+  Sundus also falls. Yahya ibn Abi Mansur dies in his train near Aleppo (830, or 832).'
+- '831: second campaign; Heraclea Cybistra and Tyana surrender. Observations on Mount Qasiyun at Damascus
+  begin.'
+- '831 10 Jul: Zubayda, Harun''s widow and al-Amin''s mother, dies in Baghdad.'
+- '832: the frontier fortress of Loulon falls after a long siege (date disputed); al-Ma''mun in Egypt
+  to end the Bashmurite revolt.'
+- '833 spring (AH 218): from Raqqa and the frontier the caliph writes to Ishaq ibn Ibrahim in Baghdad:
+  judges and traditionists must declare the Quran created or lose office. The Mihna begins. Ahmad ibn
+  Hanbal refuses and is sent in chains to the caliph.'
+- '833 25 May: al-Abbas ibn al-Ma''mun crosses into Byzantine territory and begins building a fortress
+  at Tyana.'
+- '833 7 Aug (some sources 9 Aug): al-Ma''mun dies of a fever on campaign near Tarsus and is buried there.
+  Al-Mu''tasim is proclaimed, abandons the campaign and razes Tyana.'
+- '834 or 835: Ahmad ibn Hanbal is questioned before al-Mu''tasim, flogged and released. The Zutt of the
+  southern marshes are defeated and deported (834/835). Babak''s Khurramite revolt in Azerbaijan, going
+  since 816, goes on until 837.'
+- '836: al-Mu''tasim moves court and Turkish army to the new city of Samarra.'
+- '848–851: al-Mutawakkil abandons the Mihna; Yahya ibn Aktham is chief judge again from 851.'
+quest_hooks:
+- Al-Khwarizmi's new book solves inheritance shares by al-jabr; the clerks of the land-tax office still
+  reckon on their fingers. Race one with the nine digits and zero, on paper, before the diwan.
+- A copyist in the Suq al-Warraqin spends three months on a single Galen; show what carved wooden blocks
+  and paper could do, and find out who would want a hundred identical copies of anything.
+- The astronomers measuring a degree need a better instrument, and Sanad ibn Ali will build in brass what
+  is drawn clearly enough.
+- 'Ibn Masawayh has never tested one remedy against another: the bimaristan has the patients for a fair
+  trial, if someone can explain why to compare.'
+- The perfumers distil rose water in alembics. Push the still further, to strong spirit, and decide what
+  to tell anyone about burning wine.
+- A glassmaker in Karkh grinds a clear lump; can it be made into a lens for an old scribe's failing eyes?
+- The Mihna is coming in 833. A protector who swears the Quran is created may not protect for long; a
+  traditionist who refuses may be flogged. The player knows both outcomes.
+- Al-Ma'mun dies in August 833 of a fever after eating fresh dates and drinking cold water by a river
+  (the chroniclers' story). The player could try to change what he eats and drinks, or not.
+- The salt is rising in the southern fields of the Sawad. Explain drainage before it is too late for a
+  village.
+- A Basra merchant sailing for China wants a way to find his way when the stars are clouded.
+- The Banu Musa are young, rich and bored. Give them a problem worth their money, an automaton, a pump,
+  a clock that runs at night.
+- 'Al-Kindi is collecting Greek books on mirrors: does light go out from the eye or come in to it?'
+- The caliph's brother is buying Turkish slave-soldiers. Military advice given to him decides the next
+  half-century of the caliphate.
+- A Byzantine prisoner from the frontier is a mathematician. Exchange, ransom or keep him?
+- 'Gondeshapur still trains physicians: is there a cleaner way to run a ward? Washed hands, boiled water,
+  separate rooms for fevers.'

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rome 46 BC – The Longest Year — Blueprints from Tomorrow</title>
+  <meta name="description" content="Rome 46 BC – The Longest Year — Late Republic · Caesar&#x27;s 445-Day Calendar Reform. Rome under Caesar, dictator for ten years and just back from Africa. He has held four triumphs, feasted the city, opened his new forum and is now fixing ti">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0F3577">
+  <link rel="canonical" href="https://blueprintsfromtomorrow.com/scenarios/rome-46bc.html">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Rome 46 BC – The Longest Year — Blueprints from Tomorrow">
+  <meta property="og:description" content="Rome 46 BC – The Longest Year — Late Republic · Caesar&#x27;s 445-Day Calendar Reform. Rome under Caesar, dictator for ten years and just back from Africa. He has held four triumphs, feasted the city, opened his new forum and is now fixing ti">
+  <meta property="og:url" content="https://blueprintsfromtomorrow.com/scenarios/rome-46bc.html">
+  <meta property="og:image" content="https://blueprintsfromtomorrow.com/assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <style>
+    @font-face {
+      font-family: "Allo";
+      src: url("../assets/fonts/allo-web.woff2") format("woff2");
+      font-weight: 400 800;
+      font-style: normal;
+      font-display: swap;
+    }
+    :root {
+      --bg-deep: #0b2554;
+      --bg-mid: #133c84;
+      --bg-card: rgba(8, 24, 58, 0.56);
+      --ink: #f3efe4;
+      --ink-soft: rgba(243, 239, 228, 0.78);
+      --ink-faint: rgba(243, 239, 228, 0.54);
+      --line: rgba(243, 239, 228, 0.18);
+      --line-strong: rgba(243, 239, 228, 0.42);
+      --grid: rgba(243, 239, 228, 0.055);
+      --amber: #f5b83d;
+      --gutter: 20px;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Allo", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: 1.0625rem;
+      line-height: 1.58;
+      color: var(--ink);
+      background-color: var(--bg-deep);
+      background-image:
+        linear-gradient(to right, var(--grid) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--grid) 1px, transparent 1px),
+        linear-gradient(155deg, #0a224d 0%, var(--bg-mid) 52%, #0d2b63 100%);
+      background-size: 40px 40px, 40px 40px, 100% 100%;
+      background-attachment: fixed;
+      -webkit-font-smoothing: antialiased;
+      overflow-wrap: break-word;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: var(--ink); text-underline-offset: 0.2em; text-decoration-color: rgba(243,239,228,0.42); }
+    a:hover { color: var(--amber); text-decoration-color: var(--amber); }
+    :focus-visible { outline: 3px solid var(--amber); outline-offset: 3px; border-radius: 6px; }
+    .wrap { width: 100%; max-width: 1020px; margin: 0 auto; padding: 0 var(--gutter); }
+    @media (min-width: 720px) { :root { --gutter: 36px; } }
+
+    header { padding: 28px 0 44px; }
+    @media (min-width: 720px) { header { padding: 40px 0 56px; } }
+    .topbar {
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 14px 20px;
+    }
+    .back-link {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 0.98rem; text-decoration: none; min-height: 44px;
+    }
+    .genre-badge {
+      font-size: 0.9rem; font-weight: 750; letter-spacing: 0.02em; line-height: 1.3;
+      padding: 8px 16px; border-radius: 6px;
+      border: 1.5px solid var(--line-strong); background: var(--bg-card);
+      font-variation-settings: "ROND" 10;
+      max-width: 100%;
+    }
+
+    .hero-grid {
+      margin-top: 32px;
+      display: grid; gap: 28px; align-items: center;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 820px) {
+      .hero-grid { grid-template-columns: 1.1fr 0.9fr; gap: 40px; margin-top: 44px; }
+    }
+    .hero-grid > * { min-width: 0; }
+    .kicker {
+      margin: 0 0 10px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.86rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+      color: var(--amber);
+    }
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(2rem, 5.4vw, 3.35rem);
+      line-height: 1.09; font-weight: 800; letter-spacing: 0.015em;
+      font-variation-settings: "ROND" 8;
+      text-wrap: balance;
+    }
+    .hero-sub { margin: 0; font-size: 1.12rem; color: var(--ink-soft); }
+    .hero-art {
+      border-radius: 14px; overflow: hidden;
+      border: 1.5px solid var(--line-strong);
+      background: #0d2c66;
+    }
+
+    .start-strip {
+      margin-top: 32px;
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 16px 22px;
+      padding: 18px 22px; border-radius: 8px;
+      background: rgba(7, 21, 52, 0.74);
+      border: 1.5px solid var(--line-strong);
+    }
+    .start-left { display: flex; align-items: center; gap: 16px; min-width: 0; flex: 1 1 300px; }
+    .voice-btn {
+      flex: none; width: 52px; height: 52px; border-radius: 50%;
+      background: var(--ink); color: var(--bg-deep);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .voice-btn svg { width: 28px; height: 28px; }
+    .start-label { margin: 0 0 2px; font-size: 0.94rem; font-weight: 600; color: var(--ink-soft); font-variation-settings: "ROND" 10; }
+    .start-prompt {
+      margin: 0; font-size: clamp(1.08rem, 2.4vw, 1.45rem);
+      line-height: 1.24; font-weight: 800; letter-spacing: 0.012em;
+      font-variation-settings: "ROND" 8;
+      overflow-wrap: anywhere;
+    }
+    .start-prompt .domain { color: var(--amber); }
+    .copy-btn {
+      font: inherit; font-size: 0.96rem; font-weight: 750;
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      min-height: 46px; padding: 0 20px; border-radius: 6px;
+      border: 1.5px solid var(--amber); cursor: pointer;
+      background: var(--amber); color: #0a224d;
+      font-variation-settings: "ROND" 10;
+      transition: filter 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+      white-space: nowrap;
+    }
+    .copy-btn:hover { filter: brightness(1.08); }
+    .copy-btn.done { background: transparent; color: var(--amber); border-color: var(--amber); filter: none; }
+    .copy-btn svg { width: 17px; height: 17px; flex: none; }
+    @media (max-width: 639px) { .copy-btn { width: 100%; } }
+
+    section { padding: 44px 0; border-top: 1px solid var(--line); }
+    @media (min-width: 720px) { section { padding: 56px 0; } }
+    h2 {
+      margin: 0 0 18px;
+      font-size: clamp(1.4rem, 3.2vw, 1.85rem);
+      font-weight: 800;
+    }
+    .prose { max-width: 68ch; color: var(--ink-soft); }
+    .prose p { margin: 0 0 14px; }
+    .prose p:last-child { margin-bottom: 0; }
+    .prose strong { color: var(--ink); }
+
+    .two-col {
+      display: grid; gap: 28px 36px; grid-template-columns: 1fr;
+    }
+    @media (min-width: 760px) { .two-col { grid-template-columns: 1fr 1fr; } }
+
+    .col-block { padding-top: 14px; border-top: 1.5px solid var(--line-strong); }
+    .col-block h3 { margin: 0 0 12px; font-size: 1.08rem; font-weight: 750; color: var(--ink); }
+    .col-block .count { color: var(--amber); font-weight: 700; font-size: 0.9rem; margin-left: 6px; }
+
+    ul.clean {
+      margin: 0; padding: 0; list-style: none;
+      display: grid; gap: 10px;
+    }
+    ul.clean li {
+      padding-left: 16px; position: relative;
+      font-size: 0.96rem; color: var(--ink-soft);
+    }
+    ul.clean li::before {
+      content: "·"; position: absolute; left: 0; top: 0;
+      color: var(--amber); font-weight: 800;
+    }
+    ul.clean li strong { color: var(--ink); }
+
+    .people-grid {
+      display: grid; gap: 16px 28px; grid-template-columns: 1fr;
+    }
+    @media (min-width: 680px) { .people-grid { grid-template-columns: repeat(2, 1fr); } }
+    .person {
+      padding-top: 12px; border-top: 1px solid var(--line);
+    }
+    .person-name { margin: 0 0 3px; font-size: 1.02rem; font-weight: 750; color: var(--ink); }
+    .person-role { margin: 0; font-size: 0.92rem; color: var(--ink-soft); line-height: 1.45; }
+
+    .other-scenarios {
+      display: flex; flex-wrap: wrap; gap: 10px 18px;
+      font-weight: 650; font-size: 0.96rem;
+    }
+    .other-scenarios a { display: inline-flex; align-items: center; min-height: 40px; }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 24px 0 40px;
+      font-size: 0.88rem; color: var(--ink-faint);
+    }
+    .foot-inner {
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 10px 24px;
+    }
+    .foot-inner nav { display: flex; flex-wrap: wrap; gap: 0 18px; }
+    .foot-inner nav a {
+      display: inline-flex; align-items: center; min-height: 40px;
+      color: var(--ink-soft); font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.84rem;
+    }
+</style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="topbar">
+        <a class="back-link" href="../index.html">← Blueprints from Tomorrow</a>
+        <span class="genre-badge">Free Single-Player AI Role-Playing Game</span>
+      </div>
+
+      <div class="hero-grid">
+        <div>
+          <p class="kicker">City of Rome, Italy, Roman Republic · Year 46 BC · Start: early October 46 BC by the old calendar</p>
+          <h1>Rome 46 BC – The Longest Year</h1>
+          <p class="hero-sub">Late Republic · Caesar&#x27;s 445-Day Calendar Reform</p>
+        </div>
+        <div class="hero-art">
+          <img src="../assets/eras/rome-46bc.svg" alt="Blueprint illustration of Rome 46 BC – The Longest Year" width="640" height="360">
+        </div>
+      </div>
+
+      <div class="start-strip">
+        <div class="start-left">
+          <div class="voice-btn" aria-hidden="true"><svg viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="14" width="4.5" height="10" rx="2.25" fill="currentColor"/><rect x="10" y="8" width="4.5" height="22" rx="2.25" fill="currentColor"/><rect x="17" y="4" width="4.5" height="30" rx="2.25" fill="currentColor"/><rect x="24" y="10" width="4.5" height="18" rx="2.25" fill="currentColor"/><rect x="31" y="15" width="4.5" height="8" rx="2.25" fill="currentColor"/></svg></div>
+          <div>
+            <p class="start-label">Play this scenario in ChatGPT, Claude or Gemini (best in voice mode):</p>
+            <p class="start-prompt">“Start a game of <span class="domain">blueprintsfromtomorrow.com</span> in Rome 46 BC”</p>
+          </div>
+        </div>
+        <button class="copy-btn" id="copyBtn" type="button" data-prompt="Start a game of blueprintsfromtomorrow.com in Rome 46 BC (read https://blueprintsfromtomorrow.com/llms.txt)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+          <span id="copyLabel">Copy</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="wrap">
+        <h2>Why this era?</h2>
+        <div class="prose">
+          <p>Rome under Caesar, dictator for ten years and just back from Africa. He has held four triumphs, feasted the city, opened his new forum and is now fixing time itself: this year is being stretched to 445 days so that the calendar matches the sun again. Later writers call it the year of confusion. Cleopatra is a guest across the Tiber. The Republic&#x27;s offices still exist, and nobody knows what they are worth.</p>
+          <p>It is the best-engineered city the player could land in before the modern age, with aqueducts, sewers, concrete and cranes, and one of the worst places to sell a labour-saving machine: labour is enslaved and cheap. Everything else is missing. There is no paper, no zero, no stirrup, no compass, no distilled spirit, no idea that an experiment could overrule a philosopher. Most of the player&#x27;s easy wins are here, and most of the game is finding someone with a reason to want them.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>How people think here</h2>
+        <div class="prose">
+          <p>Rome is a city of perhaps 700,000 to a million people and the capital of the Mediterranean, ruled in fact by one man: Caesar, dictator for ten years, back from the civil war in Africa. The Republic&#x27;s forms survive, the Senate, the assemblies, the magistrates, and everyone wonders for how long. The gods are part of the state: augurs and haruspices read birds and entrails before public business, and prodigies are expiated. Educated Romans read Greek and choose among Stoics, Epicureans (who teach atoms and natural causes) and Academic sceptics, without experiment as a method. Medicine is Greek and practised mostly by Greek freedmen and slaves; disease comes from bad air, imbalance or the gods. Engineering is superb and empirical: aqueducts, sewers, roads, concrete, cranes. Labour is cheap because much of it is enslaved, so nobody looks for machines to save it. Numbers are Roman numerals, reckoned on the counting board; books are papyrus rolls copied by hand.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>Technologies in Rome 46 BC</h2>
+        <div class="two-col">
+          <div class="col-block">
+            <h3>Already in use <span class="count">(117 of 510)</span></h3>
+            <ul class="clean">
+              <li><strong>Legumes and green manure</strong></li>
+            <li><strong>Manure, compost and night soil</strong></li>
+            <li><strong>Terracing and soil conservation</strong></li>
+            <li><strong>Scythe and grain cradle</strong></li>
+            <li><strong>Selective breeding of plants and animals</strong></li>
+            <li><strong>Grafting of fruit trees and vines</strong></li>
+            <li><strong>Irrigation and water lifting (canal, qanat, shaduf, noria)</strong></li>
+            <li><strong>Fish ponds and carp polyculture</strong></li>
+            <li><strong>Food preservation (salting, drying, smoking, pickling)</strong></li>
+            <li><strong>Grain storage and protection from pests and ergot</strong></li>
+            </ul>
+          </div>
+          <div class="col-block">
+            <h3>Unknown &amp; buildable locally <span class="count">(61 opportunities)</span></h3>
+            <ul class="clean">
+              <li><strong>Three-field rotation</strong></li>
+            <li><strong>Mineral fertiliser (guano, phosphate, potash, nitrate)</strong></li>
+            <li><strong>Heavy mouldboard plough</strong></li>
+            <li><strong>Horse collar and breast-strap harness</strong></li>
+            <li><strong>Seed drill</strong></li>
+            <li><strong>Canning (heat-preserving in sealed containers)</strong></li>
+            <li><strong>Pasteurisation</strong></li>
+            <li><strong>Movable-frame beehive</strong></li>
+            <li><strong>Life comes only from life (spontaneous generation refuted)</strong></li>
+            <li><strong>Fermentation is the work of living yeast</strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>People you may encounter</h2>
+        <div class="people-grid">
+          <div class="person"><p class="person-name">Marcus Terentius Varro</p><p class="person-role">scholar, former Pompeian officer pardoned by Caesar, charged with organising Rome&#x27;s first public library</p></div>
+          <div class="person"><p class="person-name">Themison of Laodicea</p><p class="person-role">Greek physician, the best-known pupil of Asclepiades, founder of the Methodic school</p></div>
+          <div class="person"><p class="person-name">Antistius</p><p class="person-role">physician in Caesar&#x27;s circle</p></div>
+          <div class="person"><p class="person-name">Alexio</p><p class="person-role">Greek physician and friend of Cicero</p></div>
+          <div class="person"><p class="person-name">Craterus</p><p class="person-role">fashionable Greek physician in Rome</p></div>
+          <div class="person"><p class="person-name">Asclapo of Patrae</p><p class="person-role">Greek physician in Achaea</p></div>
+          <div class="person"><p class="person-name">Pompeius Lenaeus</p><p class="person-role">freedman of Pompey, grammarian and teacher in Rome</p></div>
+          <div class="person"><p class="person-name">Philodemus of Gadara</p><p class="person-role">Epicurean philosopher and poet, client of Calpurnius Piso (Caesar&#x27;s father-in-law)</p></div>
+          <div class="person"><p class="person-name">Diodorus Siculus</p><p class="person-role">Greek historian from Agyrium in Sicily, working in Rome on his universal history</p></div>
+          <div class="person"><p class="person-name">Gaius Hirrius</p><p class="person-role">wealthy owner of sea-water fish ponds</p></div>
+          <div class="person"><p class="person-name">Sosigenes</p><p class="person-role">Astronomer who advised Caesar on the calendar</p></div>
+          <div class="person"><p class="person-name">Marcus Flavius</p><p class="person-role">Scribe (scriba) who assisted Caesar in drawing up the new calendar</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>Significant events around this time</h2>
+        <ul class="clean">
+          <li>Every August to October (by the sun, not the drifting calendar): the fever season in Rome and the Campagna; those who can leave for the hills.</li>
+          <li>46 BC Feb: the regular intercalary month of 23 days is inserted (Caesar as pontifex maximus), bringing the year to 378 days.</li>
+          <li>46 BC Sep: Caesar&#x27;s four triumphs (Gaul, Egypt, Pontus, Africa) on four days, with games and public feasts; awnings over the spectators are said to be silk, and Hirrius lends morays for the banquets. On 26 Sep, the last day, he dedicates the temple of Venus Genetrix and the unfinished Forum Iulium.</li>
+          <li>46 BC autumn: Caesar pardons M. Claudius Marcellus at the Senate&#x27;s plea; Cicero breaks his silence with a speech of thanks (Pro Marcello).</li>
+          <li>46 BC: the free-grain list is recounted street by street through the landlords and cut from 320,000 to 150,000; juries limited to senators and equites; a sumptuary law (litters, purple, pearls, delicacies seized in the market); all but the ancient collegia dissolved; citizenship for physicians and teachers of the liberal arts in Rome.</li>
+          <li>46 BC, between November and December: two extra months totalling 67 days (intercalaris prior and posterior) are inserted; the year has 445 days.</li>
+          <li>46 BC late: Caesar leaves for Spain. Lepidus, consul and master of horse, runs Rome with six or eight prefects; Balbus and Oppius handle Caesar&#x27;s business.</li>
+          <li>46–44 BC: in Syria the Pompeian Q. Caecilius Bassus holds Apamea against Caesar&#x27;s generals and deals with the Parthians.</li>
+          <li>45 BC 1 Jan: the Julian calendar begins: 365 days, an extra day in February every fourth year, ten days spread over seven months. Told that Lyra rises tomorrow, Cicero answers: yes, by edict.</li>
+          <li>45 BC Jan–Feb: Cicero&#x27;s daughter Tullia gives birth to a son and dies about a month later at Tusculum.</li>
+          <li>45 BC: Caesar&#x27;s prefect Gaius Clovius issues coins of brass (orichalcum), a metal new to Roman coinage. Nigidius Figulus dies in exile.</li>
+          <li>45 BC: Cicero writes the Hortensius, Academica, De finibus and Tusculan Disputations, and begins On the Nature of the Gods, with Archimedes&#x27; tomb and the planetary spheres of Archimedes and Posidonius.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>Explore other scenarios</h2>
+        <div class="other-scenarios">
+          <a href="florence-1490.html">Florence 1490</a>
+          <a href="florence-1347.html">Florence 1347 – Before the Plague</a>
+          <a href="vienna-1683.html">Vienna 1683 – The Siege</a>
+          <a href="baghdad-830.html">Baghdad 830 – The House of Wisdom</a>
+          <a href="custom.html">Any place, any year</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot-inner">
+      <span><a href="../index.html">← Back to home</a> · Made by <a href="https://topsrek.top" rel="noopener">@topsrek</a> in Austria</span>
+      <nav aria-label="Raw agent files">
+        <a href="https://github.com/topsrek/blueprints-from-tomorrow" rel="noopener">GitHub</a>
+        <a href="../campaigns/rome-46bc.md">campaigns/rome-46bc.md</a>
+        <a href="../techtree/generated/europe-46bc-rome.md">era guide (.md)</a>
+        <a href="../techtree/generated/europe-46bc-rome/briefing.md">briefing (.md)</a>
+        <a href="../llms.txt">llms.txt</a>
+      </nav>
+    </div>
+  </footer>
+  
+  <script>
+    (function () {
+      var btn = document.getElementById("copyBtn");
+      var label = document.getElementById("copyLabel");
+      var text = btn.getAttribute("data-prompt");
+      var timer;
+      function done(ok) {
+        clearTimeout(timer);
+        if (ok) {
+          btn.classList.add("done");
+          label.textContent = "Copied!";
+          timer = setTimeout(function () { btn.classList.remove("done"); label.textContent = "Copy"; }, 1800);
+        }
+      }
+      btn.addEventListener("click", function () {
+        if (navigator.clipboard && window.isSecureContext) {
+          navigator.clipboard.writeText(text).then(function () { done(true); }, function () { done(false); });
+        } else {
+          var ta = document.createElement("textarea");
+          ta.value = text; ta.style.position = "fixed"; ta.style.opacity = "0";
+          document.body.appendChild(ta); ta.select();
+          var ok = false; try { ok = document.execCommand("copy"); } catch (e) {}
+          document.body.removeChild(ta); done(ok);
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

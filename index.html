@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blueprints from Tomorrow — Free Single-Player Time-Travel AI RPG</title>
+  <meta name="description" content="Time-travel to the past to understand the present. A free, open-source single-player AI RPG — best in voice mode. Play in ChatGPT, Claude, or Gemini with 510 historical technologies and 5 verified campaigns.">
+  <meta name="keywords" content="Blueprints from Tomorrow, time-travel RPG, single-player AI RPG, voice mode RPG, historical tech tree, alternate history game, ChatGPT RPG, Claude skill game, Gemini game, educational game, Florence 1490, Rome 46 BC, Baghdad 830, Vienna 1683">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="theme-color" content="#0F3577">
+  <link rel="canonical" href="https://blueprintsfromtomorrow.com/">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="preload" href="assets/fonts/allo-web.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="alternate" type="text/plain" href="llms.txt" title="LLM &amp; AI Agent Instructions">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Blueprints from Tomorrow">
+  <meta property="og:title" content="Blueprints from Tomorrow — Time-travel to the past to understand the present">
+  <meta property="og:description" content="Free single-player AI RPG — best in voice mode. Tell ChatGPT, Claude or Gemini: &quot;Start a game of blueprintsfromtomorrow.com&quot;. People build literally what you explain, mistakes included.">
+  <meta property="og:url" content="https://blueprintsfromtomorrow.com/">
+  <meta property="og:image" content="https://blueprintsfromtomorrow.com/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Blueprints from Tomorrow — Free Single-Player AI RPG. Time-travel to the past to understand the present. Tell ChatGPT, Claude or Gemini (best in voice mode): Start a game of blueprintsfromtomorrow.com">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="de_DE">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Blueprints from Tomorrow — Free Single-Player AI RPG">
+  <meta name="twitter:description" content="Time-travel to the past to understand the present. Best in voice mode — tell ChatGPT, Claude or Gemini: &quot;Start a game of blueprintsfromtomorrow.com&quot;.">
+  <meta name="twitter:image" content="https://blueprintsfromtomorrow.com/assets/og-image.png">
+  <meta name="twitter:image:alt" content="Blueprints from Tomorrow — Free Single-Player AI RPG. Time-travel to the past to understand the present.">
+
+  <!-- Structured Data (SEO, GEO, AEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://blueprintsfromtomorrow.com/#website",
+        "url": "https://blueprintsfromtomorrow.com/",
+        "name": "Blueprints from Tomorrow",
+        "description": "Free, open-source historical time-travel role-playing game played directly in any AI chatbot or voice agent.",
+        "inLanguage": ["en", "de", "es", "fr", "it", "ja"]
+      },
+      {
+        "@type": "VideoGame",
+        "@id": "https://blueprintsfromtomorrow.com/#game",
+        "name": "Blueprints from Tomorrow",
+        "url": "https://blueprintsfromtomorrow.com/",
+        "image": "https://blueprintsfromtomorrow.com/assets/og-image.png",
+        "description": "A time-travel role-playing game where you travel into the past as yourself with whatever is in your pockets and use your real knowledge of science, technology, hygiene, and institutions to change history. People build literally what you explain, mistakes included.",
+        "applicationCategory": "Game",
+        "genre": ["Role-Playing Game", "Educational", "Alternate History", "Interactive Fiction"],
+        "playMode": "SinglePlayer",
+        "numberOfPlayers": {
+          "@type": "QuantitativeValue",
+          "minValue": 1,
+          "maxValue": 1
+        },
+        "gamePlatform": ["ChatGPT", "Claude", "Gemini", "Voice Agents", "Web Browser"],
+        "isAccessibleForFree": true,
+        "author": {
+          "@type": "Person",
+          "name": "topsrek",
+          "url": "https://topsrek.top"
+        },
+        "sameAs": "https://github.com/topsrek/blueprints-from-tomorrow",
+        "inLanguage": ["en", "de", "es", "fr", "it", "ja"],
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://blueprintsfromtomorrow.com/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is Blueprints from Tomorrow?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Blueprints from Tomorrow is a free, non-profit, open-source historical time-travel role-playing game. You travel into the past as yourself — unprepared, with whatever is in your pockets — and try to explain science, hygiene, engineering, or institutions well enough that historical craftsmen, scholars, and rulers can actually build or adopt them."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I play Blueprints from Tomorrow?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You do not need an app or account. Tell ChatGPT, Claude, Gemini, or any voice agent: \"Start a game of blueprintsfromtomorrow.com\" (or point it to https://blueprintsfromtomorrow.com/llms.txt). The AI loads the rules, asks only where/when and your difficulty, and begins."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need to install software or run Python scripts to play?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Every rule file, campaign, era guide, and all 510 compact per-technology reference files are pre-built and served as plain static Markdown. The Python scripts in the repository are only for contributors updating the tech tree or generating visual progress charts from a finished save file."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which historical campaigns and eras are included?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Five fact-checked campaigns are included: Florence 1490 (High Renaissance), Florence 1347 – Before the Plague (eve of the Black Death), Vienna 1683 – The Siege (Ottoman siege), Rome 46 BC – The Longest Year (Caesar's calendar reform), and Baghdad 830 – The House of Wisdom (Abbasid Caliphate under al-Ma'mun). You can also choose any custom place and year."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What happens if I explain a technology incorrectly?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Historical craftsmen build literally what you explain, mistakes and gaps included. If you omit a safety valve or mix the wrong proportions, the invention fails or backfires realistically. The game master does not correct you during play; mistakes are logged secretly in ROT13 inside your save file and explained with real literature sources in the final evaluation."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I play in German or other languages, or by voice?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Although the game-master rules are written in English, the AI automatically plays in whatever language you use to start the game. An optional Voice Mode module adapts responses to short spoken turns without markdown for hands-free play while walking or driving."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    @font-face {
+      font-family: "Allo";
+      src: url("assets/fonts/allo-web.woff2") format("woff2");
+      font-weight: 400 800;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    :root {
+      --bg-deep: #0b2554;
+      --bg-mid: #133c84;
+      --bg-card: rgba(8, 24, 58, 0.56);
+      --ink: #f3efe4;
+      --ink-soft: rgba(243, 239, 228, 0.78);
+      --ink-faint: rgba(243, 239, 228, 0.54);
+      --line: rgba(243, 239, 228, 0.18);
+      --line-strong: rgba(243, 239, 228, 0.42);
+      --grid: rgba(243, 239, 228, 0.055);
+      --amber: #f5b83d;
+      --radius: 14px;
+      --gutter: 20px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Allo", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: 1.0625rem;
+      line-height: 1.58;
+      color: var(--ink);
+      background-color: var(--bg-deep);
+      background-image:
+        linear-gradient(to right, var(--grid) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--grid) 1px, transparent 1px),
+        linear-gradient(155deg, #0a224d 0%, var(--bg-mid) 52%, #0d2b63 100%);
+      background-size: 40px 40px, 40px 40px, 100% 100%;
+      background-attachment: fixed;
+      -webkit-font-smoothing: antialiased;
+      overflow-wrap: break-word;
+    }
+
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: var(--ink); text-underline-offset: 0.2em; text-decoration-color: rgba(243,239,228,0.42); }
+    a:hover { color: var(--amber); text-decoration-color: var(--amber); }
+    :focus-visible { outline: 3px solid var(--amber); outline-offset: 3px; border-radius: 6px; }
+
+    .wrap { width: 100%; max-width: 1080px; margin: 0 auto; padding: 0 var(--gutter); }
+    @media (min-width: 720px) { :root { --gutter: 36px; } }
+
+    .skip {
+      position: absolute; left: 12px; top: -60px; z-index: 20;
+      padding: 10px 16px; border-radius: 10px;
+      background: var(--ink); color: var(--bg-deep); font-weight: 700; text-decoration: none;
+    }
+    .skip:focus { top: 12px; }
+    .sr-only {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+    }
+
+    /* Header & Top bar */
+    header { padding: 28px 0 44px; }
+    @media (min-width: 720px) { header { padding: 44px 0 64px; } }
+
+    .topbar {
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 16px 20px;
+    }
+    .logo { width: 210px; }
+    @media (min-width: 720px) { .logo { width: 270px; } }
+
+    .top-right {
+      display: flex; flex-wrap: wrap; align-items: center; gap: 12px;
+    }
+    .genre-badge {
+      font-size: 0.92rem; font-weight: 750; letter-spacing: 0.02em; line-height: 1.3;
+      padding: 9px 18px; border-radius: 6px;
+      border: 1.5px solid var(--line-strong);
+      background: var(--bg-card);
+      font-variation-settings: "ROND" 10;
+      max-width: 100%;
+    }
+    @media (min-width: 720px) { .genre-badge { font-size: 1rem; padding: 10px 20px; } }
+
+    /* Hero */
+    .hero-title {
+      margin: 44px 0 0;
+      font-size: clamp(2.25rem, 6.4vw, 4.1rem);
+      line-height: 1.09;
+      font-weight: 800;
+      letter-spacing: 0.015em;
+      font-variation-settings: "ROND" 8;
+      max-width: 20ch;
+      text-wrap: balance;
+    }
+    @media (min-width: 720px) { .hero-title { margin-top: 56px; } }
+    .hero-sub {
+      margin: 18px 0 0;
+      font-size: clamp(1.12rem, 2.2vw, 1.38rem);
+      line-height: 1.35;
+      font-weight: 600;
+      color: var(--ink-soft);
+    }
+
+    /* Single ultra-clean Start strip — crisp blueprint corners */
+    .start-strip {
+      margin-top: 24px;
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 18px 24px;
+      padding: 20px 22px;
+      border-radius: 8px;
+      background: rgba(7, 21, 52, 0.72);
+      border: 1.5px solid var(--line-strong);
+    }
+    @media (min-width: 720px) { .start-strip { padding: 22px 28px; margin-top: 28px; } }
+
+    .start-left {
+      display: flex; align-items: center; gap: 18px; min-width: 0; flex: 1 1 320px;
+    }
+    .voice-btn {
+      flex: none; width: 56px; height: 56px; border-radius: 50%;
+      background: var(--ink); color: var(--bg-deep);
+      display: flex; align-items: center; justify-content: center;
+    }
+    @media (min-width: 720px) { .voice-btn { width: 64px; height: 64px; } }
+    .voice-btn svg { width: 32px; height: 32px; }
+
+    .start-meta { min-width: 0; }
+    .start-label {
+      margin: 0 0 3px; font-size: 0.98rem; font-weight: 600; color: var(--ink-soft);
+      font-variation-settings: "ROND" 10;
+    }
+    @media (min-width: 720px) { .start-label { font-size: 1.08rem; } }
+    .start-prompt {
+      margin: 0;
+      font-size: clamp(1.18rem, 2.7vw, 1.65rem);
+      line-height: 1.22; font-weight: 800; letter-spacing: 0.012em;
+      font-variation-settings: "ROND" 8;
+      color: var(--ink);
+      overflow-wrap: anywhere;
+    }
+    .start-prompt .domain { color: var(--amber); }
+
+    .copy-btn {
+      font: inherit; font-size: 0.98rem; font-weight: 750;
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      min-height: 48px; padding: 0 22px; border-radius: 6px;
+      border: 1.5px solid var(--amber); cursor: pointer;
+      background: var(--amber); color: #0a224d;
+      font-variation-settings: "ROND" 10;
+      transition: transform 0.1s ease, filter 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+      white-space: nowrap;
+    }
+    .copy-btn:hover { filter: brightness(1.08); }
+    .copy-btn:active { transform: translateY(1px); }
+    .copy-btn.done { background: transparent; color: var(--amber); border-color: var(--amber); filter: none; }
+    .copy-btn svg { width: 18px; height: 18px; flex: none; }
+    @media (max-width: 639px) { .copy-btn { width: 100%; } }
+
+    /* Staggered chat/voice speech bubbles — crystal-clear on mobile & desktop */
+    .dialogue-sec {
+      padding: 40px 0 56px;
+      border-top: 1px solid var(--line);
+    }
+    @media (min-width: 720px) { .dialogue-sec { padding: 56px 0 72px; } }
+
+    .dialogue-lines {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: 100%;
+    }
+    @media (min-width: 720px) { .dialogue-lines { gap: 20px; } }
+
+    .dialogue-turn {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      max-width: 88%;
+      padding: 16px 20px;
+      border-radius: 18px;
+      border: 1.5px solid var(--line);
+    }
+    @media (min-width: 720px) {
+      .dialogue-turn { max-width: 66%; padding: 22px 28px; }
+    }
+    .turn-you {
+      align-self: flex-end;
+      background: rgba(243, 239, 228, 0.13);
+      border-color: rgba(243, 239, 228, 0.34);
+      border-bottom-right-radius: 4px;
+    }
+    .turn-npc {
+      align-self: flex-start;
+      background: rgba(7, 21, 52, 0.72);
+      border-color: rgba(243, 239, 228, 0.22);
+      border-bottom-left-radius: 4px;
+    }
+    .turn-speaker {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 4px 8px;
+      font-size: 0.84rem; font-weight: 800;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      color: var(--ink);
+      font-variant-numeric: tabular-nums;
+    }
+    .turn-you .turn-speaker { color: var(--amber); }
+    .turn-speaker .place {
+      font-size: 0.82rem; font-weight: 600;
+      letter-spacing: 0.02em; text-transform: none;
+      color: var(--ink-soft);
+    }
+    .turn-speaker .place::before { content: "· "; }
+    .turn-quote {
+      margin: 0;
+      font-size: clamp(1.12rem, 2.6vw, 1.48rem);
+      line-height: 1.34; font-weight: 650;
+    }
+    .turn-npc .turn-quote {
+      font-style: italic;
+      font-weight: 500;
+      color: rgba(243, 239, 228, 0.92);
+    }
+    .dialogue-punch {
+      margin: 34px 0 0;
+      font-size: clamp(1.06rem, 2vw, 1.2rem);
+      line-height: 1.55;
+      color: var(--ink-soft);
+      max-width: none;
+    }
+    .dialogue-punch strong { color: var(--ink); }
+
+    /* Compact 3-column feature specs (no SaaS boxes) */
+    .specs {
+      margin-top: 36px;
+      display: grid; gap: 18px 28px;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 680px) { .specs { grid-template-columns: repeat(3, 1fr); } }
+    .spec {
+      padding-top: 12px;
+      border-top: 1px solid var(--line-strong);
+    }
+    .spec-title {
+      margin: 0 0 4px; font-size: 0.96rem; font-weight: 750; letter-spacing: 0.01em;
+      color: var(--ink);
+    }
+    .spec-desc {
+      margin: 0; font-size: 0.92rem; line-height: 1.42; color: var(--ink-soft);
+    }
+
+    /* Scenarios gallery with blueprint art */
+    .scenarios-sec {
+      padding: 48px 0 64px;
+      border-top: 1px solid var(--line);
+    }
+    @media (min-width: 720px) { .scenarios-sec { padding: 64px 0 84px; } }
+
+    .sec-head {
+      display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between;
+      gap: 8px 24px; margin-bottom: 28px;
+    }
+    .sec-head h2 {
+      margin: 0; font-size: clamp(1.6rem, 3.6vw, 2.2rem);
+      font-weight: 800;
+    }
+    .sec-head p { margin: 0; color: var(--ink-soft); font-size: 1rem; }
+
+    .era-grid {
+      display: grid; gap: 28px 24px;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 620px) { .era-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 960px) { .era-grid { grid-template-columns: repeat(3, 1fr); } }
+
+    .era {
+      display: flex; flex-direction: column; gap: 10px;
+      min-width: 0;
+      text-decoration: none; color: inherit;
+    }
+    .era:hover { color: inherit; }
+    .era:hover .era-title, .era:hover .era-more { color: var(--amber); }
+    .era-art {
+      aspect-ratio: 16 / 9;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: #0d2c66;
+      transition: border-color 0.2s ease;
+    }
+    .era:hover .era-art { border-color: var(--line-strong); }
+    .era-art img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform 0.35s ease;
+    }
+    .era:hover .era-art img { transform: scale(1.03); }
+    .era-title {
+      margin: 2px 0 0; font-size: 1.18rem; font-weight: 750;
+      transition: color 0.15s ease;
+    }
+    .era-desc {
+      margin: 0; font-size: 0.95rem; color: var(--ink-soft); line-height: 1.45;
+    }
+    .era-more {
+      margin-top: auto; padding-top: 4px;
+      font-size: 0.9rem; font-weight: 700; color: var(--ink-soft);
+      transition: color 0.15s ease;
+    }
+
+    .more-ideas {
+      margin-top: 34px; padding-top: 22px;
+      border-top: 1px solid var(--line);
+      font-size: 0.98rem; color: var(--ink-soft);
+    }
+    .more-ideas strong { color: var(--ink); margin-right: 8px; }
+    .more-ideas .sep { color: var(--amber); margin: 0 8px; font-weight: 800; }
+
+    /* Compact collapsed FAQ */
+    .faq-sec {
+      padding: 44px 0 56px;
+      border-top: 1px solid var(--line);
+    }
+    .faq-sec h2 {
+      margin: 0 0 18px; font-size: clamp(1.35rem, 3vw, 1.7rem);
+      font-weight: 800;
+    }
+    .faq-list { max-width: 780px; border-top: 1px solid var(--line); }
+    details { border-bottom: 1px solid var(--line); }
+    summary {
+      list-style: none; cursor: pointer;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      min-height: 54px; padding: 12px 2px;
+      font-weight: 650; font-size: 1.02rem;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after {
+      content: "+"; flex: none; font-size: 1.35rem; font-weight: 400;
+      color: var(--ink-soft); line-height: 1;
+    }
+    details[open] summary::after { content: "−"; color: var(--amber); }
+    summary:hover { color: var(--amber); }
+    details p {
+      margin: 0; padding: 0 2px 18px;
+      color: var(--ink-soft); font-size: 0.97rem; max-width: 68ch;
+    }
+
+    /* Minimal footer + language selector */
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 28px 0 44px;
+      font-size: 0.9rem; color: var(--ink-faint);
+    }
+    .foot-inner {
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 14px 24px;
+    }
+    .foot-inner nav { display: flex; flex-wrap: wrap; gap: 0 18px; }
+    .foot-inner nav a {
+      display: inline-flex; align-items: center; min-height: 40px;
+      color: var(--ink-soft); font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.86rem;
+    }
+    .foot-inner nav a:hover { color: var(--amber); }
+    .foot-credit {
+      margin-top: 12px;
+      font-size: 0.88rem; color: var(--ink-soft);
+    }
+    .foot-credit a { color: var(--ink); font-weight: 650; }
+    .foot-credit a:hover { color: var(--amber); }
+    .foot-langs {
+      margin-top: 16px; padding-top: 16px;
+      border-top: 1px solid var(--line);
+      display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px;
+    }
+    .foot-langs-label {
+      font-size: 0.82rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.06em; color: var(--ink-faint); margin-right: 4px;
+    }
+    .lang-btn {
+      font: inherit; font-size: 0.86rem; font-weight: 650;
+      min-height: 36px; padding: 0 12px;
+      border: 1px solid var(--line); border-radius: 8px; cursor: pointer;
+      background: transparent; color: var(--ink-soft);
+      transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+    }
+    .lang-btn:hover { color: var(--ink); border-color: var(--line-strong); }
+    .lang-btn[aria-pressed="true"] {
+      background: var(--ink); color: var(--bg-deep); border-color: var(--ink);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; animation: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+
+  <header>
+    <div class="wrap">
+      <div class="topbar">
+        <a href="/" aria-label="Blueprints from Tomorrow — home">
+          <img class="logo" src="assets/logo/logo.svg" alt="Blueprints from Tomorrow" width="370" height="120">
+        </a>
+        <div class="top-right">
+          <span class="genre-badge" data-i18n="genre">Free Single-Player AI Role-Playing Game</span>
+        </div>
+      </div>
+
+      <h1 class="hero-title" data-i18n="h1">Time-travel to the past to understand the present.</h1>
+      <p class="hero-sub" data-i18n="heroSub">Play this single-player historical role-playing game directly with your AI agent:</p>
+
+      <div class="start-strip" id="play">
+        <div class="start-left">
+          <div class="voice-btn" aria-hidden="true">
+            <svg viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="3"  y="14" width="4.5" height="10" rx="2.25" fill="currentColor"/>
+              <rect x="10" y="8"  width="4.5" height="22" rx="2.25" fill="currentColor"/>
+              <rect x="17" y="4"  width="4.5" height="30" rx="2.25" fill="currentColor"/>
+              <rect x="24" y="10" width="4.5" height="18" rx="2.25" fill="currentColor"/>
+              <rect x="31" y="15" width="4.5" height="8"  rx="2.25" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="start-meta">
+            <p class="start-label" data-i18n="startLabel">Tell ChatGPT, Claude or Gemini (best in voice mode):</p>
+            <p class="start-prompt" id="starterPrompt" lang="en">“Start a game of <span class="domain">blueprintsfromtomorrow.com</span>”</p>
+          </div>
+        </div>
+        <button class="copy-btn" id="copyBtn" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+          <span id="copyLabel" data-i18n="copy">Copy</span>
+        </button>
+        <p class="sr-only" id="copyStatus" aria-live="polite"></p>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="dialogue-sec" aria-label="Example turn">
+      <div class="wrap">
+        <div class="dialogue-lines">
+          <div class="dialogue-turn turn-you">
+            <span class="turn-speaker" data-i18n="speakerYou">Player</span>
+            <p class="turn-quote" data-i18n="quoteYou">“The fever isn't bad air — tiny invisible creatures in the water cause it. Boil it first.”</p>
+          </div>
+          <div class="dialogue-turn turn-npc">
+            <span class="turn-speaker"><span data-i18n="speakerNpc">Physician</span><span class="place" data-i18n="placeNpc">Florence, 1490</span></span>
+            <p class="turn-quote" data-i18n="quoteNpc">“Invisible creatures? Show me one. Otherwise you're asking a whole quarter to burn firewood for nothing.”</p>
+          </div>
+        </div>
+        <p class="dialogue-punch" data-i18n="punch">
+          No levels. No XP. Help solve people's problems with knowledge of the future — from science and medicine to agriculture and law.
+        </p>
+
+        <div class="specs" aria-label="Game features">
+          <div class="spec">
+            <h2 class="spec-title" data-i18n="f1Title">Easy · Medium · Hard</h2>
+            <p class="spec-desc" data-i18n="f1Desc">From gentle hints to fierce skepticism and a real language barrier.</p>
+          </div>
+          <div class="spec">
+            <h2 class="spec-title" data-i18n="f2Title">Real knowledge</h2>
+            <p class="spec-desc" data-i18n="f2Desc">Immerse yourself in the past and test how well you know how the world works.</p>
+          </div>
+          <div class="spec">
+            <h2 class="spec-title" data-i18n="f3Title">Voice &amp; any language</h2>
+            <p class="spec-desc" data-i18n="f3Desc">Short spoken turns for walking or driving, in whatever language you start.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="scenarios-sec" id="campaigns" aria-labelledby="camp-h">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2 id="camp-h" data-i18n="campHeading">Where &amp; when</h2>
+          <p data-i18n="campSub">Five fact-checked eras — or anywhere in history.</p>
+        </div>
+
+        <div class="era-grid">
+          <a class="era" href="scenarios/florence-1490.html">
+            <div class="era-art">
+              <img src="assets/eras/florence-1490.svg" alt="Blueprint illustration of Florence 1490" width="640" height="360" loading="lazy">
+            </div>
+            <h3 class="era-title" data-i18n="e1Title">Florence 1490</h3>
+            <p class="era-desc" data-i18n="e1Desc">High Renaissance workshops, Medici court, lenses, and printing.</p>
+            <span class="era-more" data-i18n="moreInfo">More info →</span>
+          </a>
+
+          <a class="era" href="scenarios/florence-1347.html">
+            <div class="era-art">
+              <img src="assets/eras/florence-1347.svg" alt="Blueprint illustration of Florence 1347" width="640" height="360" loading="lazy">
+            </div>
+            <h3 class="era-title" data-i18n="e2Title">Florence 1347</h3>
+            <p class="era-desc" data-i18n="e2Desc">Months before the Black Death, with no printing press.</p>
+            <span class="era-more" data-i18n="moreInfo">More info →</span>
+          </a>
+
+          <a class="era" href="scenarios/vienna-1683.html">
+            <div class="era-art">
+              <img src="assets/eras/vienna-1683.svg" alt="Blueprint illustration of Vienna 1683" width="640" height="360" loading="lazy">
+            </div>
+            <h3 class="era-title" data-i18n="e3Title">Vienna 1683</h3>
+            <p class="era-desc" data-i18n="e3Desc">Three weeks before the Ottoman siege. Dysentery and early science.</p>
+            <span class="era-more" data-i18n="moreInfo">More info →</span>
+          </a>
+
+          <a class="era" href="scenarios/rome-46bc.html">
+            <div class="era-art">
+              <img src="assets/eras/rome-46bc.svg" alt="Blueprint illustration of Rome 46 BC" width="640" height="360" loading="lazy">
+            </div>
+            <h3 class="era-title" data-i18n="e4Title">Rome 46 BC</h3>
+            <p class="era-desc" data-i18n="e4Desc">Caesar's 445-day year. Aqueducts exist; zero and paper do not.</p>
+            <span class="era-more" data-i18n="moreInfo">More info →</span>
+          </a>
+
+          <a class="era" href="scenarios/baghdad-830.html">
+            <div class="era-art">
+              <img src="assets/eras/baghdad-830.svg" alt="Blueprint illustration of Baghdad 830" width="640" height="360" loading="lazy">
+            </div>
+            <h3 class="era-title" data-i18n="e5Title">Baghdad 830</h3>
+            <p class="era-desc" data-i18n="e5Desc">The House of Wisdom — paper, algebra, hospitals, ahead of Europe.</p>
+            <span class="era-more" data-i18n="moreInfo">More info →</span>
+          </a>
+
+          <a class="era" href="scenarios/custom.html">
+            <div class="era-art">
+              <img src="assets/eras/custom-era.svg" alt="Blueprint illustration of a globe, compass, and hourglass" width="640" height="360" loading="lazy">
+            </div>
+            <h3 class="era-title" data-i18n="e6Title">Any place, any year</h3>
+            <p class="era-desc" data-i18n="e6Desc">Name any city and century. 510 technologies across 12 world regions.</p>
+            <span class="era-more" data-i18n="moreInfo">More info →</span>
+          </a>
+        </div>
+
+        <p class="more-ideas">
+          <strong data-i18n="ideasLabel">Other ideas to try:</strong>
+          <span>Berlin 1750</span><span class="sep">·</span>
+          <span>Kyoto 1600</span><span class="sep">·</span>
+          <span>Babylon 590 BC</span><span class="sep">·</span>
+          <span>Tenochtitlan 1450</span><span class="sep">·</span>
+          <span>Alexandria 250 BC</span><span class="sep">·</span>
+          <span>Bell Labs 1947</span>
+        </p>
+      </div>
+    </section>
+
+    <section class="faq-sec" id="faq" aria-labelledby="faq-h">
+      <div class="wrap">
+        <h2 id="faq-h" data-i18n="faqHeading">FAQ</h2>
+        <div class="faq-list">
+          <details>
+            <summary data-i18n="q1">What is Blueprints from Tomorrow?</summary>
+            <p data-i18n="a1">Blueprints from Tomorrow is a free, non-profit, open-source historical time-travel role-playing game. You travel into the past as yourself — unprepared, with whatever is in your pockets — and try to explain science, hygiene, engineering, or institutions well enough that historical craftsmen, scholars, and rulers can actually build or adopt them.</p>
+          </details>
+          <details>
+            <summary data-i18n="q2">How do I play Blueprints from Tomorrow?</summary>
+            <p data-i18n="a2">You do not need an app or account. Tell ChatGPT, Claude, Gemini, or any voice agent: "Start a game of blueprintsfromtomorrow.com" (or point it to https://blueprintsfromtomorrow.com/llms.txt). The AI loads the rules, asks only where/when and your difficulty, and begins.</p>
+          </details>
+          <details>
+            <summary data-i18n="q3">Do I need to install software or run Python scripts to play?</summary>
+            <p data-i18n="a3">No. Every rule file, campaign, era guide, and all 510 compact per-technology reference files are pre-built and served as plain static Markdown. The Python scripts in the repository are only for contributors updating the tech tree or generating visual progress charts from a finished save file.</p>
+          </details>
+          <details>
+            <summary data-i18n="q4">Which historical campaigns and eras are included?</summary>
+            <p data-i18n="a4">Five fact-checked campaigns are included: Florence 1490 (High Renaissance), Florence 1347 – Before the Plague (eve of the Black Death), Vienna 1683 – The Siege (Ottoman siege), Rome 46 BC – The Longest Year (Caesar's calendar reform), and Baghdad 830 – The House of Wisdom (Abbasid Caliphate under al-Ma'mun). You can also choose any custom place and year.</p>
+          </details>
+          <details>
+            <summary data-i18n="q5">What happens if I explain a technology incorrectly?</summary>
+            <p data-i18n="a5">Historical craftsmen build literally what you explain, mistakes and gaps included. If you omit a safety valve or mix the wrong proportions, the invention fails or backfires realistically. The game master does not correct you during play; mistakes are logged secretly in ROT13 inside your save file and explained with real literature sources in the final evaluation.</p>
+          </details>
+          <details>
+            <summary data-i18n="q6">Can I play in German or other languages, or by voice?</summary>
+            <p data-i18n="a6">Yes. Although the game-master rules are written in English, the AI automatically plays in whatever language you use to start the game. An optional Voice Mode module adapts responses to short spoken turns without markdown for hands-free play while walking or driving.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot-inner">
+        <span data-i18n="footerNote">Blueprints from Tomorrow · Free, non-profit, open source — contributions welcome (eras, campaigns, tech tree).</span>
+        <nav aria-label="Resources">
+          <a href="https://github.com/topsrek/blueprints-from-tomorrow" rel="noopener">GitHub</a>
+          <a href="llms.txt">llms.txt</a>
+          <a href="SKILL.md">SKILL.md</a>
+          <a href="README.md">README.md</a>
+          <a href="templates/campaign-file.md">campaign-file.md</a>
+          <a href="sitemap.xml">sitemap.xml</a>
+          <a href="CHANGELOG.md">CHANGELOG.md</a>
+        </nav>
+      </div>
+      <p class="foot-credit" data-i18n-html="madeBy">Made by <a href="https://topsrek.top" rel="noopener">@topsrek</a> in Austria</p>
+      <div class="foot-langs" role="group" aria-label="Language">
+        <span class="foot-langs-label" data-i18n="langLabel">Language</span>
+        <button class="lang-btn" type="button" aria-pressed="true" data-lang="en">English</button>
+        <button class="lang-btn" type="button" aria-pressed="false" data-lang="de">Deutsch</button>
+        <button class="lang-btn" type="button" aria-pressed="false" data-lang="es">Español</button>
+        <button class="lang-btn" type="button" aria-pressed="false" data-lang="fr">Français</button>
+        <button class="lang-btn" type="button" aria-pressed="false" data-lang="it">Italiano</button>
+        <button class="lang-btn" type="button" aria-pressed="false" data-lang="ja">日本語</button>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var COPY = {
+        en: {
+          skip: "Skip to content",
+          genre: "Free Single-Player AI Role-Playing Game",
+          h1: "Time-travel to the past to understand the present.",
+          heroSub: "Play this single-player historical role-playing game directly with your AI agent:",
+          startLabel: "Tell ChatGPT, Claude or Gemini (best in voice mode):",
+          promptHtml: "“Start a game of <span class=\"domain\">blueprintsfromtomorrow.com</span>”",
+          promptCopy: "Start a game of blueprintsfromtomorrow.com (read https://blueprintsfromtomorrow.com/llms.txt)",
+          copy: "Copy",
+          copied: "Copied!",
+          copyFail: "Select & copy",
+          speakerYou: "Player",
+          quoteYou: "“The fever isn't bad air — tiny invisible creatures in the water cause it. Boil it first.”",
+          speakerNpc: "Physician",
+          placeNpc: "Florence, 1490",
+          quoteNpc: "“Invisible creatures? Show me one. Otherwise you're asking a whole quarter to burn firewood for nothing.”",
+          punch: "No levels. No XP. Help solve people's problems with knowledge of the future — from science and medicine to agriculture and law.",
+          f1Title: "Easy · Medium · Hard",
+          f1Desc: "From gentle hints to fierce skepticism and a real language barrier.",
+          f2Title: "Real knowledge",
+          f2Desc: "Immerse yourself in the past and test how well you know how the world works.",
+          f3Title: "Voice & any language",
+          f3Desc: "Short spoken turns for walking or driving, in whatever language you start.",
+          campHeading: "Where & when",
+          campSub: "Five fact-checked eras — or anywhere in history.",
+          e1Title: "Florence 1490",
+          e1Desc: "High Renaissance workshops, Medici court, lenses, and printing.",
+          e2Title: "Florence 1347",
+          e2Desc: "Months before the Black Death, with no printing press.",
+          e3Title: "Vienna 1683",
+          e3Desc: "Three weeks before the Ottoman siege. Dysentery and early science.",
+          e4Title: "Rome 46 BC",
+          e4Desc: "Caesar's 445-day year. Aqueducts exist; zero and paper do not.",
+          e5Title: "Baghdad 830",
+          e5Desc: "The House of Wisdom — paper, algebra, hospitals, ahead of Europe.",
+          e6Title: "Any place, any year",
+          e6Desc: "Name any city and century. 510 technologies across 12 world regions.",
+          moreInfo: "More info →",
+          ideasLabel: "Other ideas to try:",
+          faqHeading: "FAQ",
+          q1: "What is Blueprints from Tomorrow?",
+          a1: "Blueprints from Tomorrow is a free, non-profit, open-source historical time-travel role-playing game. You travel into the past as yourself — unprepared, with whatever is in your pockets — and try to explain science, hygiene, engineering, or institutions well enough that historical craftsmen, scholars, and rulers can actually build or adopt them.",
+          q2: "How do I play Blueprints from Tomorrow?",
+          a2: "You do not need an app or account. Tell ChatGPT, Claude, Gemini, or any voice agent: \"Start a game of blueprintsfromtomorrow.com\" (or point it to https://blueprintsfromtomorrow.com/llms.txt). The AI loads the rules, asks only where/when and your difficulty, and begins.",
+          q3: "Do I need to install software or run Python scripts to play?",
+          a3: "No. Every rule file, campaign, era guide, and all 510 compact per-technology reference files are pre-built and served as plain static Markdown. The Python scripts in the repository are only for contributors updating the tech tree or generating visual progress charts from a finished save file.",
+          q4: "Which historical campaigns and eras are included?",
+          a4: "Five fact-checked campaigns are included: Florence 1490 (High Renaissance), Florence 1347 – Before the Plague (eve of the Black Death), Vienna 1683 – The Siege (Ottoman siege), Rome 46 BC – The Longest Year (Caesar's calendar reform), and Baghdad 830 – The House of Wisdom (Abbasid Caliphate under al-Ma'mun). You can also choose any custom place and year.",
+          q5: "What happens if I explain a technology incorrectly?",
+          a5: "Historical craftsmen build literally what you explain, mistakes and gaps included. If you omit a safety valve or mix the wrong proportions, the invention fails or backfires realistically. The game master does not correct you during play; mistakes are logged secretly in ROT13 inside your save file and explained with real literature sources in the final evaluation.",
+          q6: "Can I play in German or other languages, or by voice?",
+          a6: "Yes. Although the game-master rules are written in English, the AI automatically plays in whatever language you use to start the game. An optional Voice Mode module adapts responses to short spoken turns without markdown for hands-free play while walking or driving.",
+          footerNote: "Blueprints from Tomorrow · Free, non-profit, open source — contributions welcome (eras, campaigns, tech tree).",
+          madeBy: "Made by <a href=\"https://topsrek.top\" rel=\"noopener\">@topsrek</a> in Austria",
+          langLabel: "Language"
+        },
+        de: {
+          skip: "Zum Inhalt springen",
+          genre: "Kostenloses Single-Player KI-Rollenspiel",
+          h1: "Reise in die Vergangenheit, um die Gegenwart zu verstehen.",
+          heroSub: "Spiele dieses historische Single-Player-Rollenspiel direkt mit deinem KI-Agenten:",
+          startLabel: "Sag ChatGPT, Claude oder Gemini (am besten im Voice-Mode):",
+          promptHtml: "„Starte ein Spiel von <span class=\"domain\">blueprintsfromtomorrow.com</span>“",
+          promptCopy: "Starte ein Spiel von blueprintsfromtomorrow.com (lies https://blueprintsfromtomorrow.com/llms.txt)",
+          copy: "Kopieren",
+          copied: "Kopiert!",
+          copyFail: "Markieren & kopieren",
+          speakerYou: "Spieler",
+          quoteYou: "„Das Fieber kommt nicht von schlechter Luft — winzige unsichtbare Wesen im Wasser lösen es aus. Kocht es ab!“",
+          speakerNpc: "Arzt",
+          placeNpc: "Florenz, 1490",
+          quoteNpc: "„Unsichtbare Wesen? Zeig mir eins. Sonst verlangst du von einem ganzen Viertel, umsonst Feuerholz zu verbrennen.“",
+          punch: "Keine Level. Keine XP. Hilf den Menschen mit Wissen aus der Zukunft — aus Wissenschaft, Medizin, Landwirtschaft und Recht.",
+          f1Title: "Leicht · Mittel · Schwer",
+          f1Desc: "Von sanften Hinweisen bis zu harter Skepsis und echter Sprachbarriere.",
+          f2Title: "Echtes Wissen",
+          f2Desc: "Tauche in die Vergangenheit ein und teste, wie gut du verstehst, wie die Welt funktioniert.",
+          f3Title: "Voice & jede Sprache",
+          f3Desc: "Kurze gesprochene Züge für unterwegs, automatisch in deiner Sprache.",
+          campHeading: "Wo & wann",
+          campSub: "Fünf recherchierte Epochen — oder jeder beliebige Ort der Geschichte.",
+          e1Title: "Florenz 1490",
+          e1Desc: "Hochrenaissance, Medici-Hof, Werkstätten, Linsen und Buchdruck.",
+          e2Title: "Florenz 1347",
+          e2Desc: "Monate vor dem Schwarzen Tod — noch ohne Buchdruck.",
+          e3Title: "Wien 1683",
+          e3Desc: "Drei Wochen vor der Belagerung. Ruhr und frühe Wissenschaft.",
+          e4Title: "Rom 46 v. Chr.",
+          e4Desc: "Cäsars 445-Tage-Jahr. Aquädukte gibt es — Null und Papier nicht.",
+          e5Title: "Bagdad 830",
+          e5Desc: "Haus der Weisheit — Papier, Algebra und Spitäler, Europa voraus.",
+          e6Title: "Beliebiger Ort & Jahr",
+          e6Desc: "Nenne Stadt und Jahrhundert. 510 Technologien aus 12 Weltregionen.",
+          moreInfo: "Mehr erfahren →",
+          ideasLabel: "Weitere Ideen:",
+          faqHeading: "Häufige Fragen",
+          q1: "Was ist Blueprints from Tomorrow?",
+          a1: "Blueprints from Tomorrow ist ein kostenloses, gemeinnütziges Open-Source-Zeitreise-Rollenspiel. Du reist als du selbst in die Vergangenheit — unvorbereitet, mit dem was in deinen Taschen ist — und versuchst Wissenschaft, Hygiene, Technik oder Institutionen so zu erklären, dass Menschen der Epoche sie wirklich bauen oder nutzen können.",
+          q2: "Wie spiele ich Blueprints from Tomorrow?",
+          a2: "Du brauchst weder App noch Account. Sag ChatGPT, Claude, Gemini oder einem Voice-Agenten: „Starte ein Spiel von blueprintsfromtomorrow.com“ (oder verweise auf https://blueprintsfromtomorrow.com/llms.txt). Die KI lädt die Regeln, fragt nur nach Ort/Zeit sowie Schwierigkeit und startet sofort.",
+          q3: "Muss ich Software installieren oder Python-Skripte ausführen?",
+          a3: "Nein. Alle Regeln, Kampagnen, Epochen-Guides und alle 510 kompakten Technologie-Dateien liegen fertig als statisches Markdown vor. Die Python-Skripte im Repository sind nur für Mitwirkende oder zur visuellen Auswertung eines Spielstands gedacht.",
+          q4: "Welche historischen Kampagnen sind enthalten?",
+          a4: "Fünf faktencheckte Kampagnen sind enthalten: Florenz 1490 (Hochrenaissance), Florenz 1347 – Vor der Pest, Wien 1683 – Die Belagerung, Rom 46 v. Chr. – Das längste Jahr und Bagdad 830 – Das Haus der Weisheit. Du kannst aber auch jeden eigenen Ort und jedes Jahr wählen.",
+          q5: "Was passiert, wenn ich eine Technologie falsch erkläre?",
+          a5: "Handwerker bauen exakt das, was du erklärst — inklusive Lücken und Fehlern. Vergisst du ein Sicherheitsventil oder nennst falsche Mischungsverhältnisse, scheitert es realistisch. Die Spielleitung korrigiert dich im Spiel nicht; Fehler werden geheim in ROT13 im Spielstand vermerkt und erst in der Endauswertung mit echten Quellen erklärt.",
+          q6: "Kann ich auf Deutsch, in anderen Sprachen oder per Spracheingabe spielen?",
+          a6: "Ja. Die Spielregeln sind auf Englisch verfasst, aber die KI spielt automatisch in der Sprache, in der du startest. Ein optionales Voice-Mode-Modul sorgt für kurze gesprochene Züge ohne Markdown — ideal beim Spazierengehen oder Autofahren.",
+          footerNote: "Blueprints from Tomorrow · Kostenlos, gemeinnützig, Open Source — Beiträge willkommen (Epochen, Kampagnen, Tech-Tree).",
+          madeBy: "Gemacht von <a href=\"https://topsrek.top\" rel=\"noopener\">@topsrek</a> in Österreich",
+          langLabel: "Sprache"
+        },
+        es: {
+          skip: "Ir al contenido",
+          genre: "Juego de rol IA gratuito para un jugador",
+          h1: "Viaja al pasado para entender el presente.",
+          heroSub: "Juega a este juego de rol histórico para un jugador directamente con tu agente de IA:",
+          startLabel: "Dile a ChatGPT, Claude o Gemini (mejor en modo de voz):",
+          promptHtml: "«Empieza una partida de <span class=\"domain\">blueprintsfromtomorrow.com</span>»",
+          promptCopy: "Empieza una partida de blueprintsfromtomorrow.com (lee https://blueprintsfromtomorrow.com/llms.txt)",
+          copy: "Copiar",
+          copied: "¡Copiado!",
+          copyFail: "Seleccionar y copiar",
+          speakerYou: "Jugador",
+          quoteYou: "«La fiebre no viene del mal aire: son criaturas invisibles en el agua. ¡Hervidla primero!»",
+          speakerNpc: "Médico",
+          placeNpc: "Florencia, 1490",
+          quoteNpc: "«¿Criaturas invisibles? Muéstrame una. Si no, pides a todo un barrio que queme leña para nada.»",
+          punch: "Sin niveles. Sin XP. Ayuda a resolver los problemas de la época con conocimiento del futuro: ciencia, medicina, agricultura y leyes.",
+          f1Title: "Fácil · Medio · Difícil",
+          f1Desc: "Desde pistas sutiles hasta escepticismo feroz y barrera del idioma.",
+          f2Title: "Conocimiento real",
+          f2Desc: "Sumérgete en el pasado y pon a prueba cuánto entiendes cómo funciona el mundo.",
+          f3Title: "Voz y cualquier idioma",
+          f3Desc: "Turnos cortos hablados para caminar o conducir, en tu idioma.",
+          campHeading: "Dónde y cuándo",
+          campSub: "Cinco épocas verificadas — o cualquier lugar de la historia.",
+          e1Title: "Florencia 1490",
+          e1Desc: "Alto Renacimiento, los Médici, talleres, lentes e imprenta.",
+          e2Title: "Florencia 1347",
+          e2Desc: "Meses antes de la Peste Negra, sin imprenta.",
+          e3Title: "Viena 1683",
+          e3Desc: "Tres semanas antes del asedio otomano. Disentería y ciencia temprana.",
+          e4Title: "Roma 46 a. C.",
+          e4Desc: "El año de 445 días de César. Hay acueductos; ni cero ni papel.",
+          e5Title: "Bagdad 830",
+          e5Desc: "La Casa de la Sabiduría — papel, álgebra y hospitales, por delante de Europa.",
+          e6Title: "Cualquier lugar y año",
+          e6Desc: "Elige cualquier ciudad y siglo. 510 tecnologías en 12 regiones del mundo.",
+          moreInfo: "Más info →",
+          ideasLabel: "Otras ideas:",
+          faqHeading: "Preguntas frecuentes",
+          q1: "¿Qué es Blueprints from Tomorrow?",
+          a1: "Es un juego de rol histórico gratuito y de código abierto sobre viajes en el tiempo. Viajas al pasado siendo tú mismo — sin preparación, con lo que llevas en los bolsillos — e intentas explicar ciencia, higiene, ingeniería o instituciones lo bastante bien como para que la gente de la época pueda construirlas o usarlas.",
+          q2: "¿Cómo juego a Blueprints from Tomorrow?",
+          a2: "No necesitas aplicación ni cuenta. Dile a ChatGPT, Claude, Gemini o cualquier agente de voz: «Empieza una partida de blueprintsfromtomorrow.com» (o indica https://blueprintsfromtomorrow.com/llms.txt). La IA carga las reglas, solo pregunta lugar/época y dificultad, y comienza.",
+          q3: "¿Necesito instalar software o ejecutar scripts de Python?",
+          a3: "No. Todas las reglas, campañas, guías de época y las 510 fichas de tecnología están listas en Markdown estático. Los scripts de Python son solo para colaboradores o para generar gráficos de progreso al final.",
+          q4: "¿Qué campañas históricas incluye?",
+          a4: "Incluye cinco campañas verificadas: Florencia 1490, Florencia 1347 (antes de la peste), Viena 1683 (el asedio), Roma 46 a. C. y Bagdad 830 (la Casa de la Sabiduría). También puedes elegir cualquier lugar y año.",
+          q5: "¿Qué pasa si explico mal una tecnología?",
+          a5: "Los artesanos construyen exactamente lo que explicas, con errores y lagunas incluidos. Si olvidas una válvula de seguridad o mezclas mal las proporciones, falla de forma realista. Los errores se registran en secreto (ROT13) y se revelan al final con fuentes históricas.",
+          q6: "¿Puedo jugar en español u otros idiomas, o por voz?",
+          a6: "Sí. Aunque las reglas estén en inglés, la IA juega automáticamente en el idioma con el que empieces. El modo de voz opcional adapta las respuestas a turnos hablados breves sin Markdown.",
+          footerNote: "Blueprints from Tomorrow · Gratuito, sin ánimo de lucro, código abierto — contribuciones bienvenidas.",
+          madeBy: "Hecho por <a href=\"https://topsrek.top\" rel=\"noopener\">@topsrek</a> en Austria",
+          langLabel: "Idioma"
+        },
+        fr: {
+          skip: "Aller au contenu",
+          genre: "Jeu de rôle IA solo gratuit",
+          h1: "Voyagez dans le passé pour comprendre le présent.",
+          heroSub: "Jouez à ce jeu de rôle historique solo directement avec votre agent IA :",
+          startLabel: "Dites à ChatGPT, Claude ou Gemini (idéal en mode vocal) :",
+          promptHtml: "« Lance une partie de <span class=\"domain\">blueprintsfromtomorrow.com</span> »",
+          promptCopy: "Lance une partie de blueprintsfromtomorrow.com (lis https://blueprintsfromtomorrow.com/llms.txt)",
+          copy: "Copier",
+          copied: "Copié !",
+          copyFail: "Sélectionner et copier",
+          speakerYou: "Joueur",
+          quoteYou: "« La fièvre ne vient pas du mauvais air — ce sont d'invisibles créatures dans l'eau. Faites-la bouillir ! »",
+          speakerNpc: "Médecin",
+          placeNpc: "Florence, 1490",
+          quoteNpc: "« D'invisibles créatures ? Montrez-m'en une. Sinon vous demandez à tout un quartier de brûler du bois pour rien. »",
+          punch: "Pas de niveaux. Pas d'XP. Aidez à résoudre les problèmes de l'époque grâce aux savoirs du futur — science, médecine, agriculture et droit.",
+          f1Title: "Facile · Moyen · Difficile",
+          f1Desc: "D'indices discrets jusqu'au scepticisme tenace et à la barrière de la langue.",
+          f2Title: "Vraies connaissances",
+          f2Desc: "Plongez dans le passé et testez votre compréhension du fonctionnement du monde.",
+          f3Title: "Voix et toute langue",
+          f3Desc: "Des tours courts à l'oral pour marcher ou conduire, dans votre langue.",
+          campHeading: "Où et quand",
+          campSub: "Cinq époques documentées — ou n'importe où dans l'histoire.",
+          e1Title: "Florence 1490",
+          e1Desc: "Haute Renaissance, Médicis, ateliers, lentilles et imprimerie.",
+          e2Title: "Florence 1347",
+          e2Desc: "Quelques mois avant la Peste noire, sans imprimerie.",
+          e3Title: "Vienne 1683",
+          e3Desc: "Trois semaines avant le siège ottoman. Dysenterie et science naissante.",
+          e4Title: "Rome 46 av. J.-C.",
+          e4Desc: "L'année de 445 jours de César. Aqueducs, mais ni zéro ni papier.",
+          e5Title: "Bagdad 830",
+          e5Desc: "La Maison de la sagesse — papier, algèbre et hôpitaux, en avance sur l'Europe.",
+          e6Title: "N'importe quel lieu et année",
+          e6Desc: "Choisissez une ville et un siècle. 510 technologies sur 12 régions du monde.",
+          moreInfo: "En savoir plus →",
+          ideasLabel: "Autres idées :",
+          faqHeading: "Questions fréquentes",
+          q1: "Qu'est-ce que Blueprints from Tomorrow ?",
+          a1: "C'est un jeu de rôle historique gratuit et open source de voyage dans le temps. Vous arrivez dans le passé tel que vous êtes — sans préparation, avec ce que vous avez dans vos poches — et tentez d'expliquer science, hygiène, ingénierie ou institutions assez clairement pour qu'on puisse les construire ou les adopter.",
+          q2: "Comment jouer à Blueprints from Tomorrow ?",
+          a2: "Aucune application ni compte requis. Dites à ChatGPT, Claude, Gemini ou un agent vocal : « Lance une partie de blueprintsfromtomorrow.com » (ou donnez https://blueprintsfromtomorrow.com/llms.txt). L'IA charge les règles, demande seulement lieu/époque et difficulté, et démarre.",
+          q3: "Faut-il installer un logiciel ou lancer Python ?",
+          a3: "Non. Toutes les règles, campagnes, guides d'époque et 510 fiches technologiques sont prêts en Markdown statique. Les scripts Python servent uniquement aux contributeurs ou à visualiser une sauvegarde finale.",
+          q4: "Quelles campagnes historiques sont incluses ?",
+          a4: "Cinq campagnes vérifiées sont incluses : Florence 1490, Florence 1347 (avant la peste), Vienne 1683 (le siège), Rome 46 av. J.-C. et Bagdad 830 (Maison de la sagesse). Vous pouvez aussi choisir n'importe quel lieu et année.",
+          q5: "Que se passe-t-il si j'explique mal une technologie ?",
+          a5: "Les artisans construisent exactement ce que vous expliquez, lacunes et erreurs comprises. Sans soupape de sécurité ou avec de mauvaises proportions, l'invention échoue de façon réaliste. Les erreurs sont notées en secret (ROT13) et révélées à la fin avec de vraies sources.",
+          q6: "Puis-je jouer en français, dans une autre langue ou à la voix ?",
+          a6: "Oui. Même si les règles sont en anglais, l'IA joue automatiquement dans la langue avec laquelle vous commencez. Un mode vocal optionnel adapte les réponses en tours courts sans Markdown.",
+          footerNote: "Blueprints from Tomorrow · Gratuit, à but non lucratif, open source — contributions bienvenues.",
+          madeBy: "Créé par <a href=\"https://topsrek.top\" rel=\"noopener\">@topsrek</a> en Autriche",
+          langLabel: "Langue"
+        },
+        it: {
+          skip: "Vai al contenuto",
+          genre: "Gioco di ruolo IA gratuito per giocatore singolo",
+          h1: "Viaggia nel passato per capire il presente.",
+          heroSub: "Gioca a questo gioco di ruolo storico in solitaria direttamente con il tuo agente IA:",
+          startLabel: "Di' a ChatGPT, Claude o Gemini (meglio in modalità vocale):",
+          promptHtml: "«Avvia una partita di <span class=\"domain\">blueprintsfromtomorrow.com</span>»",
+          promptCopy: "Avvia una partita di blueprintsfromtomorrow.com (leggi https://blueprintsfromtomorrow.com/llms.txt)",
+          copy: "Copia",
+          copied: "Copiato!",
+          copyFail: "Seleziona e copia",
+          speakerYou: "Giocatore",
+          quoteYou: "«La febbre non viene dall'aria cattiva — sono minuscole creature invisibili nell'acqua. Fatela bollire!»",
+          speakerNpc: "Medico",
+          placeNpc: "Firenze, 1490",
+          quoteNpc: "«Creature invisibili? Mostramene una. Altrimenti chiedi a un intero quartiere di bruciare legna per nulla.»",
+          punch: "Nessun livello. Nessun XP. Aiuta a risolvere i problemi dell'epoca con le conoscenze del futuro — tra scienza, medicina, agricoltura e diritto.",
+          f1Title: "Facile · Medio · Difficile",
+          f1Desc: "Da indizi leggeri fino a forte scetticismo e vera barriera linguistica.",
+          f2Title: "Vera conoscenza",
+          f2Desc: "Immergiti nel passato e metti alla prova quanto conosci davvero come funziona il mondo.",
+          f3Title: "Voce e qualsiasi lingua",
+          f3Desc: "Turni brevi parlati per camminare o guidare, nella tua lingua.",
+          campHeading: "Dove e quando",
+          campSub: "Cinque epoche verificate — o qualsiasi luogo nella storia.",
+          e1Title: "Firenze 1490",
+          e1Desc: "Alto Rinascimento, corte medicea, botteghe, lenti e stampa.",
+          e2Title: "Firenze 1347",
+          e2Desc: "Mesi prima della Peste Nera, senza stampa.",
+          e3Title: "Vienna 1683",
+          e3Desc: "Tre settimane prima dell'assedio ottomano. Dissenteria e prima scienza.",
+          e4Title: "Roma 46 a.C.",
+          e4Desc: "L'anno di 445 giorni di Cesare. Acquedotti sì; zero e carta no.",
+          e5Title: "Baghdad 830",
+          e5Desc: "La Casa della Sapienza — carta, algebra e ospedali, avanti all'Europa.",
+          e6Title: "Qualsiasi luogo e anno",
+          e6Desc: "Scegli una città e un secolo. 510 tecnologie in 12 regioni del mondo.",
+          moreInfo: "Scopri di più →",
+          ideasLabel: "Altre idee:",
+          faqHeading: "Domande frequenti",
+          q1: "Che cos'è Blueprints from Tomorrow?",
+          a1: "È un gioco di ruolo storico gratuito e open source sui viaggi nel tempo. Arrivi nel passato come te stesso — impreparato, con ciò che hai in tasca — e provi a spiegare scienza, igiene, ingegneria o istituzioni abbastanza bene da farle costruire o adottare davvero.",
+          q2: "Come si gioca a Blueprints from Tomorrow?",
+          a2: "Non serve alcuna app né account. Di' a ChatGPT, Claude, Gemini o a un agente vocale: «Avvia una partita di blueprintsfromtomorrow.com» (o indica https://blueprintsfromtomorrow.com/llms.txt). L'IA carica le regole, chiede solo luogo/anno e difficoltà e inizia.",
+          q3: "Devo installare software o eseguire script Python?",
+          a3: "No. Tutte le regole, le campagne, le guide d'epoca e le 510 schede tecnologiche sono file Markdown statici già pronti. Gli script Python servono solo ai collaboratori o per visualizzare i grafici a fine partita.",
+          q4: "Quali campagne storiche sono incluse?",
+          a4: "Sono incluse cinque campagne verificate: Firenze 1490, Firenze 1347 (prima della peste), Vienna 1683 (l'assedio), Roma 46 a.C. e Baghdad 830 (Casa della Sapienza). Puoi anche scegliere qualsiasi altro luogo e anno.",
+          q5: "Cosa succede se spiego male una tecnologia?",
+          a5: "Gli artigiani costruiscono esattamente ciò che spieghi, errori e lacune inclusi. Se dimentichi una valvola di sicurezza o sbagli le proporzioni, l'invenzione fallisce realisticamente. Gli errori vengono annotati in segreto (ROT13) e spiegati alla fine con fonti storiche.",
+          q6: "Posso giocare in italiano, in altre lingue o a voce?",
+          a6: "Sì. Anche se le regole sono in inglese, l'IA gioca automaticamente nella lingua con cui inizi. Una modalità vocale opzionale adatta le risposte a turni parlati brevi senza Markdown.",
+          footerNote: "Blueprints from Tomorrow · Gratuito, no-profit, open source — contributi benvenuti.",
+          madeBy: "Creato da <a href=\"https://topsrek.top\" rel=\"noopener\">@topsrek</a> in Austria",
+          langLabel: "Lingua"
+        },
+        ja: {
+          skip: "本文へスキップ",
+          genre: "無料シングルプレイヤーAIロールプレイングゲーム",
+          h1: "過去へ旅して、現在を理解する。",
+          heroSub: "AIエージェントとそのまま遊べる歴史シングルプレイヤー・ロールプレイングゲーム：",
+          startLabel: "ChatGPT・Claude・Geminiに伝えるだけ（音声モード推奨）：",
+          promptHtml: "「<span class=\"domain\">blueprintsfromtomorrow.com</span> のゲームを始めて」",
+          promptCopy: "blueprintsfromtomorrow.com のゲームを始めて（https://blueprintsfromtomorrow.com/llms.txt を読んでください）",
+          copy: "コピー",
+          copied: "コピー完了！",
+          copyFail: "選択してコピー",
+          speakerYou: "プレイヤー",
+          quoteYou: "「熱病の原因は悪い空気じゃない。水の中にいる目に見えない生き物だ。まず沸騰させて！」",
+          speakerNpc: "医師",
+          placeNpc: "フィレンツェ、1490年",
+          quoteNpc: "「目に見えない生き物だと？一つ見せてみろ。さもなくば街中の薪を無駄に燃やせと言うのか。」",
+          punch: "レベルも経験値もなし。科学・医学・農業・法など、未来の知識で当時の人々の課題を解決しよう。",
+          f1Title: "易しい・普通・難しい",
+          f1Desc: "ヒントありから、激しい懐疑や本格的な言葉の壁まで選択可能。",
+          f2Title: "本当の知識を試す",
+          f2Desc: "過去の世界に没入し、世界の仕組みをどれだけ理解しているか試そう。",
+          f3Title: "音声モード＆多言語対応",
+          f3Desc: "散歩や運転中でも遊びやすい短い音声ターン。話しかけた言語で進行。",
+          campHeading: "舞台と時代",
+          campSub: "考証済みの5つの時代 — または歴史上の好きな場所と年。",
+          e1Title: "フィレンツェ 1490年",
+          e1Desc: "盛期ルネサンス、メディチ家、工房、レンズと活版印刷。",
+          e2Title: "フィレンツェ 1347年",
+          e2Desc: "黒死病上陸の数か月前。まだ印刷機もない時代。",
+          e3Title: "ウィーン 1683年",
+          e3Desc: "オスマン軍包囲の3週間前。疫病と初期の実験科学。",
+          e4Title: "ローマ 紀元前46年",
+          e4Desc: "カエサルの445日ある年。水道はあるが、ゼロも紙もない。",
+          e5Title: "バグダッド 830年",
+          e5Desc: "知恵の館 — 紙、代数学、病院。中世欧州に先駆けた時代。",
+          e6Title: "好きな場所・好きな年",
+          e6Desc: "都市と世紀を自由に指定。世界12地域・510の技術を収録。",
+          moreInfo: "詳しく見る →",
+          ideasLabel: "その他のアイデア：",
+          faqHeading: "よくある質問",
+          q1: "Blueprints from Tomorrow とは？",
+          a1: "無料のオープンソース歴史タイムトラベル・ロールプレイングゲームです。今の自分のまま、ポケットの中身だけで過去へ飛び、科学・衛生・工学・制度を当時の人々が実際に作れるレベルまで説明します。",
+          q2: "どうやって遊びますか？",
+          a2: "アプリもアカウントも不要です。ChatGPT・Claude・Geminiなどに「blueprintsfromtomorrow.com のゲームを始めて」（または https://blueprintsfromtomorrow.com/llms.txt）と伝えるだけ。AIがルールを読み込み、時代と難易度だけ聞いてすぐ始まります。",
+          q3: "ソフトのインストールやPythonの実行は必要ですか？",
+          a3: "いいえ。ルール、キャンペーン、時代ガイド、510件の技術ファイルはすべて静的なMarkdownとして用意されています。Pythonスクリプトは開発者や終了後のグラフ出力専用です。",
+          q4: "どの歴史キャンペーンが含まれていますか？",
+          a4: "フィレンツェ1490年、フィレンツェ1347年（ペスト前夜）、ウィーン1683年（包囲戦）、ローマ紀元前46年、バグダッド830年（知恵の館）の5つを収録。好きな時代と場所も選べます。",
+          q5: "技術の説明を間違えたらどうなりますか？",
+          a5: "職人は間違いや抜けも含めて説明通りに作ります。安全弁を忘れたり比率を誤れば現実的に失敗します。プレイ中は訂正されず、間違いはセーブファイルにROT13で秘匿記録され、終了後の評価で史料とともに明かされます。",
+          q6: "日本語や音声モードでも遊べますか？",
+          a6: "はい。ルール本文は英語ですが、AIはあなたが話しかけた言語で自動的に進行します。音声モードならマークダウンなしの短い会話でハンズフリーに遊べます。",
+          footerNote: "Blueprints from Tomorrow · 無料・非営利・オープンソース — 時代や技術の貢献も歓迎します。",
+          madeBy: "オーストリアの <a href=\"https://topsrek.top\" rel=\"noopener\">@topsrek</a> が制作",
+          langLabel: "言語"
+        }
+      };
+
+      var lang = "en";
+      var promptEl = document.getElementById("starterPrompt");
+      var copyBtn = document.getElementById("copyBtn");
+      var copyLabel = document.getElementById("copyLabel");
+      var copyStatus = document.getElementById("copyStatus");
+      var langBtns = Array.prototype.slice.call(document.querySelectorAll(".lang-btn"));
+      var timer;
+
+      function applyLang(next) {
+        if (!COPY[next]) return;
+        lang = next;
+        var dict = COPY[lang];
+        document.documentElement.lang = lang;
+        langBtns.forEach(function (b) {
+          b.setAttribute("aria-pressed", b.getAttribute("data-lang") === lang ? "true" : "false");
+        });
+        document.querySelectorAll("[data-i18n]").forEach(function (el) {
+          var k = el.getAttribute("data-i18n");
+          if (dict[k] != null) el.textContent = dict[k];
+        });
+        document.querySelectorAll("[data-i18n-html]").forEach(function (el) {
+          var k = el.getAttribute("data-i18n-html");
+          if (dict[k] != null) el.innerHTML = dict[k];
+        });
+        promptEl.innerHTML = dict.promptHtml;
+        promptEl.setAttribute("lang", lang);
+        clearTimeout(timer);
+        copyBtn.classList.remove("done");
+        copyLabel.textContent = dict.copy;
+      }
+
+      langBtns.forEach(function (b) {
+        b.addEventListener("click", function () { applyLang(b.getAttribute("data-lang")); });
+      });
+
+      function finishCopy(ok) {
+        var dict = COPY[lang];
+        clearTimeout(timer);
+        if (ok) {
+          copyBtn.classList.add("done");
+          copyLabel.textContent = dict.copied;
+          copyStatus.textContent = dict.copied;
+          timer = setTimeout(function () {
+            copyBtn.classList.remove("done");
+            copyLabel.textContent = COPY[lang].copy;
+          }, 1800);
+        } else {
+          copyLabel.textContent = dict.copyFail;
+        }
+      }
+
+      copyBtn.addEventListener("click", function () {
+        var text = COPY[lang].promptCopy;
+        if (navigator.clipboard && window.isSecureContext) {
+          navigator.clipboard.writeText(text).then(function () { finishCopy(true); }, function () { finishCopy(false); });
+        } else {
+          var ta = document.createElement("textarea");
+          ta.value = text;
+          ta.style.position = "fixed";
+          ta.style.opacity = "0";
+          document.body.appendChild(ta);
+          ta.select();
+          var ok = false;
+          try { ok = document.execCommand("copy"); } catch (e) {}
+          document.body.removeChild(ta);
+          finishCopy(ok);
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

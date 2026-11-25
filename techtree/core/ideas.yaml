@@ -1,0 +1,1163 @@
+# Blueprints from Tomorrow – tech tree fragment: Scientific method & philosophical ideas.
+# Schema: see header of techtree/core.yaml.
+
+technologies:
+
+  # ------------------------------------------------------- how to find things out
+  - id: scientific_method
+    name: Scientific method (conjecture, test, publish, repeat)
+    category: ideas
+    requires: []
+    helps: [empiricism_over_authority, controlled_trial, measurement_quantification, reproducibility_open_publication, fallibilism_provisional_knowledge]
+    explain: >
+      To test a claim about nature, state it
+      precisely, work out what you should observe if it is true and if it is false, make the
+      observation or design a comparison that distinguishes the predictions. Measure and record
+      everything including failures, then let others repeat and criticise it. It works because
+      it is a social error-correction process, not because any single person is unbiased. The
+      cheapest way to convince is to predict something in advance that the old view does not
+      predict (which of two pendulums swings faster, whether covered meat breeds maggots) and
+      let the audience watch the outcome. It is a family of habits, not a fixed sequence of
+      steps, and observation sciences (astronomy, anatomy) use it without laboratory experiments.
+    pitfalls:
+      - "Presenting it as a fixed five-step recipe; real research moves back and forth between guess, test and revision"
+      - "Saying 'science proves things': it eliminates errors and ranks explanations, the result stays open to revision"
+      - "Claiming nobody tested anything before Bacon or Galileo, or that one person (Ibn al-Haytham, Bacon, Galileo) invented it"
+      - "Staging a public demonstration that has not been rehearsed; one visible failure discredits the method and the player"
+      - "Thinking experiments speak for themselves: without a clear rival hypothesis the audience fits any result into the old theory"
+    history:
+      mesopotamia: "c. 750 BC onwards – astronomical diaries: centuries of dated systematic observations used for prediction, without an explicit method of testing causes"
+      china: "c. 430–300 BC – the Mozi's 'three tests' of a doctrine (precedent, what people's eyes and ears report, practical benefit); c. 80 AD Wang Chong demands evidence and tests for claims"
+      india: "early centuries AD (dating disputed) – Nyaya Sutras classify the valid means of knowledge (perception, inference, comparison, testimony) and rules of debate"
+      greece: "4th c. BC – Aristotle's systematic observation; 3rd c. BC Strato, Archimedes, Alexandrian physicians experiment; 2nd c. AD Ptolemy and Galen report experiments"
+      islamic: "early 11th c. – Ibn al-Haytham’s Book of Optics combines geometrical arguments with experiments using light, apertures and screens"
+      europe: "13th c. Grosseteste and Roger Bacon praise experience (how far they experimented is disputed); 1600 Gilbert; 1620 Francis Bacon, Novum Organum; 1632–1638 Galileo; 1660 Royal Society; the word 'scientist' only 1833–1834 (Whewell)"
+    sources:
+      - "Ibn al-Haytham, The Optics of Ibn al-Haytham, Books I–III: On Direct Vision (tr. A. I. Sabra, 1989)"
+      - "Francis Bacon, Novum Organum (1620)"
+      - "David Wootton, The Invention of Science: A New History of the Scientific Revolution (2015)"
+      - "Peter Godfrey-Smith, Theory and Reality: An Introduction to the Philosophy of Science (2003)"
+
+  - id: empiricism_over_authority
+    name: Test claims instead of trusting authority
+    category: ideas
+    requires: []
+    helps: [printing_press]
+    explain: >
+      The age or fame of an author is no evidence for a claim about nature; what counts is
+      whether anyone can check it. Old books contain checkable errors: Aristotle writes that
+      women have fewer teeth than men (count them), and that a body ten times heavier falls
+      ten times faster (drop a large and a small stone together); Galen relied heavily on animal dissection and inferred unseen passages through the wall
+      between the heart's chambers. The persuasive
+      form inside an older worldview is not 'Aristotle was a fool' but 'Aristotle and Galen
+      themselves observed and told us to trust the senses over arguments; we are doing what
+      they did, with more cases'. Authority remains a sensible shortcut where you cannot
+      check, which is why testimony must be ranked, not ignored.
+    pitfalls:
+      - "Claiming medieval scholars followed Aristotle blindly: scholastics disputed him constantly (Buridan, Oresme, the Paris condemnations of 1277)"
+      - "Dismissing the authorities as stupid: Aristotle and Galen were excellent observers, and their opponents often had good arguments (no stellar parallax was measurable until 1838)"
+      - "Attacking a university's or guild's textbook author in public attacks the livelihood of every local physician or master"
+      - "Extending the argument to Scripture or to the classics of state ideology turns a dispute about nature into heresy or disloyalty"
+      - "Asking people to distrust authority while demanding they trust the player without evidence"
+    history:
+      india: "by c. 8th c. AD – Carvaka materialists challenge scriptural authority and privilege perception; fragments quoted by critics show that some accepted inference grounded in ordinary experience"
+      china: "Warring States period – the Mozi lists what people have seen or heard among the tests of a doctrine; c. 80 AD Wang Chong, Lunheng, checks received stories against experience"
+      greece: "c. 350 BC – Aristotle: credit observation more than theories (Generation of Animals III.10); 2nd c. AD Galen urges readers to dissect for themselves"
+      islamic: "c. 900 – al-Razi, Doubts about Galen; early 11th c. Ibn al-Haytham, Doubts about Ptolemy (criticism of inherited astronomical models); c. 1200 Abd al-Latif al-Baghdadi corrects Galen on the jawbone from skeletons in Egypt"
+      europe: "1543 – Vesalius corrects Galen's anatomy from human dissection; 1660s Royal Society motto 'Nullius in verba' (take nobody's word for it)"
+    sources:
+      - "Andreas Vesalius, De humani corporis fabrica (1543)"
+      - "Ramkrishna Bhattacharya, From Proto-materialism to Materialism: The Indian Scenario (2016)"
+      - "David Wootton, The Invention of Science: A New History of the Scientific Revolution (2015)"
+
+  - id: controlled_trial
+    name: Controlled comparison (experiment with control group)
+    category: ideas
+    requires: []
+    helps: [probability_statistics, measurement_quantification, placebo_blinding]
+    explain: >
+      To learn whether a remedy or method works, take cases that are as alike as possible,
+      keep everything the same (place, food, care), give the treatment to one group and not to
+      the other, decide in advance what you will count, and compare. Without a comparable group
+      receiving usual care or another treatment, improvement may simply reflect natural recovery, which is why every healer
+      honestly remembers cures. Allocation must not be chosen by the healer; cast lots (van
+      Helmont proposed this in 1648), because people unconsciously give the new treatment to
+      the stronger patients. Lind in 1747 took twelve scurvy patients in six pairs with the
+      same diet and six different additions; after six days of citrus one was fit for duty and the other well enough
+      to nurse the sick. More cases are needed the smaller the difference and the more variable
+      the disease.
+    pitfalls:
+      - "Comparing with the past or with another town instead of a control group treated at the same time"
+      - "Letting the physician or patient choose who gets the treatment (selection bias); use lots"
+      - "Drawing conclusions from two or three cases, or stopping the moment the result looks good"
+      - "Believing Lind's trial settled the matter: he himself hedged, his boiled 'rob' of juice lost its potency, and the Royal Navy issued lemon juice only in 1795"
+      - "Withholding a known cure from the control group; the trial becomes a killing in the eyes of the families and the law"
+    history:
+      mesopotamia: "story set c. 600 BC at Nebuchadnezzar's court – Daniel 1: ten-day comparison of two diets (text written c. 2nd c. BC; literary, not a record)"
+      islamic: "c. 900 – al-Razi reports bleeding one group of patients and deliberately not another to compare; 1025 Ibn Sina, Canon, sets conditions for testing a drug (simple disease, many cases, test on humans)"
+      china: "1061 – the Bencao Tujing compiled by Su Song recounts a traditional test of ginseng by having two men run, one with and one without it"
+      europe: "1364 – Petrarch imagines comparing treated and untreated patients; 1648 van Helmont proposes allocation by lot; 1747 Lind's scurvy trial (published 1753)"
+      global: "1920s–1935 – R. A. Fisher, randomisation and design of experiments; 1948 British streptomycin trial uses a concealed random allocation schedule"
+    sources:
+      - "James Lind, A Treatise of the Scurvy (1753)"
+      - "Imogen Evans, Hazel Thornton & Iain Chalmers, Testing Treatments: Better Research for Better Healthcare (2006)"
+      - "Ronald A. Fisher, The Design of Experiments (1935)"
+
+  - id: placebo_blinding
+    name: Placebo effect and blinded trials
+    category: ideas
+    requires: [controlled_trial]
+    helps: [cognitive_biases]
+    explain: >
+      Patients who expect to improve report improvement, and physicians who expect it see it,
+      so a fair test gives the comparison group a sham treatment that looks the same and
+      keeps both patient and assessor ignorant of who received which. If outcomes are similar, the uncertainty around the difference determines how much
+      benefit or harm the comparison can rule out. The classic demonstration is the
+      French royal commission of 1784 on 'animal magnetism': a blindfolded subject had a crisis beside
+      a tree the magnetiser had left untreated. It can be done
+      anywhere with identical flasks numbered by a third person who keeps the key sealed.
+    pitfalls:
+      - "Overstating the placebo effect: it changes how people feel and report (pain, nausea), it does not shrink tumours or cure infections"
+      - "Mistaking natural recovery and regression to the mean for a placebo effect; only a no-treatment group separates them"
+      - "Blinding the patient but not the person who judges the outcome"
+      - "Exposing a respected healer, relic or exorcist by a sham test humiliates powerful people and can be read as impiety"
+      - "Concluding that the patients were lying; their relief is sincere"
+    history:
+      europe: "1599 – royal physicians test the supposedly possessed Marthe Brossier with sham holy water and relics; 1784 Franklin, Lavoisier and colleagues test mesmerism with blindfolds; 1799 Haygarth's wooden 'tractors'; 1835 Nuremberg salt test of homeopathy with shuffled, numbered vials"
+      global: "1940s–1950s – double-blind randomised trials become the standard; 1955 Beecher, 'The Powerful Placebo' (its figures are now considered inflated)"
+    sources:
+      - "Ted J. Kaptchuk, Intentional Ignorance: A History of Blind Assessment and Placebo Controls in Medicine (1998)"
+      - "John Haygarth, Of the Imagination, as a Cause and as a Cure of Disorders of the Body (1800)"
+      - "Ben Goldacre, Bad Science (2008)"
+
+  - id: correlation_causation_confounding
+    name: Correlation, causation and confounding
+    category: ideas
+    requires: []
+    helps: [probability_statistics, controlled_trial, epidemiology_mapping]
+    explain: >
+      That two things occur together, or one after the other, does not show that one causes
+      the other: the cause may run the other way, a third factor may produce both, or it may be
+      chance. Fever follows swamp air, but the hidden third factor is the mosquito that breeds
+      in the swamp; the patients of the most expensive physician die more often because he is
+      called to the worst cases. To get from association to cause, compare groups that differ
+      only in the suspected cause, look for a dose-response (more exposure, more effect), check
+      that the cause comes first, and best of all intervene and see whether the effect follows.
+      Snow's comparison of London households supplied by two water companies in 1854 is the
+      model of a 'natural experiment' when you cannot intervene.
+    pitfalls:
+      - "Reducing it to the slogan 'correlation is not causation' and then dismissing all observational evidence; correlation is a clue that needs explaining"
+      - "Forgetting reverse causation and chance, and naming only confounders"
+      - "Post hoc reasoning in one's own favour: the patient recovered after my remedy, the comet came before the king died"
+      - "Assuming a bigger data set removes confounding; it only makes a biased answer more precise"
+    history:
+      greece: "c. 400 BC – Hippocratic writers warn against judging remedies from single outcomes; 'post hoc' fallacy catalogued by later logicians"
+      islamic: "1025 – Ibn Sina's rules for drug testing require that the effect follow the drug constantly and that accidental causes be excluded"
+      europe: "1620 Bacon's tables of presence, absence and degrees; 1739 Hume on causation as constant conjunction; 1843 Mill's methods of agreement and difference; 1855 Snow's water-company comparison; 1888 Galton defines correlation"
+      global: "1950s–1965 – smoking and lung cancer studies; 1965 Bradford Hill's considerations for inferring causation"
+    sources:
+      - "John Stuart Mill, A System of Logic (1843)"
+      - "Austin Bradford Hill, The Environment and Disease: Association or Causation? (1965)"
+      - "Judea Pearl & Dana Mackenzie, The Book of Why: The New Science of Cause and Effect (2018)"
+
+  - id: selection_bias_sampling
+    name: Selection and survivorship bias, fair sampling
+    category: ideas
+    requires: []
+    helps: [probability_statistics, cognitive_biases]
+    explain: >
+      Conclusions drawn from the cases that happen to reach you are wrong when the way they
+      reach you depends on the outcome. The temple shows the votive tablets of sailors saved
+      after praying; as the ancient sceptic asked, where are the tablets of those who prayed
+      and drowned? The healer hears from the cured, the astrologer is reminded of the hits, old
+      buildings look well built because the bad ones fell down. The remedy is to count all
+      cases, fixed in advance, including failures and those who never came back; and when you
+      can only examine a part, to pick the part by lot so that every case has the same chance,
+      which makes a small sample better than a huge self-selected one.
+    pitfalls:
+      - "Thinking a large sample is automatically a good one (the 1936 Literary Digest poll had 2.4 million replies and was badly wrong)"
+      - "Confusing 'random' with 'haphazard'; choosing 'typical' cases by eye reintroduces the bias"
+      - "Telling the Abraham Wald bomber story with invented details; the core (armour where returning aircraft show no holes) is real, the dialogue is not"
+      - "Counting only patients who completed a treatment and ignoring those who died or left"
+    history:
+      greece: "c. 420 BC – the votive-tablet reply attributed to Diagoras of Melos (also to Diogenes), reported by Cicero, De natura deorum III.89 (45 BC)"
+      india: "Mahabharata (Nala episode, written form c. 400 BC–400 AD) – a king estimates the leaves and fruit on a tree from one branch; a literary hint of sampling, not a method; 1937 onwards Mahalanobis develops large-scale random sample surveys in Bengal"
+      europe: "1620 – Bacon retells the votive-tablet story as the root of superstition (Novum Organum I.46); 1802 Laplace estimates the population of France from sample districts; 1895 Kiaer's 'representative method'; 1934 Neyman's theory of random sampling"
+      americas: "1936 – Literary Digest poll fails, Gallup's much smaller sample succeeds; 1943 Wald's memoranda on aircraft damage"
+    sources:
+      - "Cicero, De natura deorum III.89"
+      - "Abraham Wald, A Method of Estimating Plane Vulnerability Based on Damage of Survivors (1943, reprinted 1980)"
+      - "Darrell Huff, How to Lie with Statistics (1954)"
+
+  - id: measurement_quantification
+    name: Measurement and quantification
+    category: ideas
+    requires: []
+    helps: [standard_weights_measures, arabic_numerals, precision_measurement]
+    explain: >
+      Replace 'hot', 'heavy', 'fast' and 'many' by numbers obtained with an instrument and an
+      agreed unit: weigh, time, count and record in a table with date and place. Numbers let
+      strangers compare results, reveal small regular effects that the senses miss, and expose
+      wishful thinking. Every measurement has an error, so measure several times, report the
+      spread, and never trust more digits than the instrument gives. Convincing examples are
+      cheap: weigh a metal before and after calcining (it gains weight), weigh a patient,
+      food and excreta as Santorio did, or count deaths by parish and week.
+    pitfalls:
+      - "False precision: reporting six digits from a kitchen balance, or converting a rough guess into an exact-looking number"
+      - "Measuring what is easy instead of what matters, then treating the number as the thing itself"
+      - "Using local units without saying which: the foot, pound and bushel differ from town to town"
+      - "Assuming earlier cultures did not measure: Babylonian, Chinese and Islamic astronomers and assayers measured with great care"
+    history:
+      mesopotamia: "3rd millennium BC – standard weights and measures; c. 750 BC onwards dated numerical astronomical diaries"
+      egypt: "c. 3000 BC – royal cubit rods, Nilometers recording flood heights"
+      china: "221 BC – Qin standardises weights, measures and axle widths; 9 AD bronze sliding caliper of Wang Mang's reign"
+      greece: "c. 240 BC – Eratosthenes measures the earth; c. 150 BC Hipparchus's star catalogue"
+      islamic: "c. 1020s – al-Biruni measures specific gravities of metals and gems and the earth's radius; 1121 al-Khazini, Book of the Balance of Wisdom"
+      europe: "1450 – Nicholas of Cusa, De staticis experimentis, proposes weighing as the key to nature; c. 1580 Tycho's observations to about one arcminute; 1614 Santorio, De statica medicina"
+    sources:
+      - "Nicholas of Cusa, Idiota de staticis experimentis (1450)"
+      - "Alfred W. Crosby, The Measure of Reality: Quantification and Western Society, 1250–1600 (1997)"
+
+  - id: mathematical_laws_of_nature
+    name: Nature follows simple mathematical laws
+    category: ideas
+    requires: []
+    helps: [measurement_quantification, geometry_proof, falling_bodies]
+    explain: >
+      Regularities in nature can be written as exact relations between measured quantities,
+      and such relations predict cases never yet observed. Start with ones anyone can check: a
+      string stopped at half its length sounds the octave, at two thirds the fifth; a lever
+      balances when weight times distance is equal on both sides; a pendulum four times as long
+      takes twice as long to swing; a ball rolling down a groove covers distances as 1, 4, 9, 16
+      in equal times. The trick that makes this work is idealisation: strip away friction and
+      air, find the simple law, then add the disturbances back as corrections. The claim is
+      not that qualities and purposes are unreal, only that asking 'how much' gives answers
+      that can be tested and built upon.
+    pitfalls:
+      - "Asserting that the laws are exact for real objects; they hold for idealised cases and must be corrected for friction, air and error"
+      - "Quoting formulas (F = ma, E = mc²) without units, definitions or a way to check them, which is indistinguishable from numerology"
+      - "Forgetting that mathematical astronomy already existed (Babylon, Ptolemy, Kerala, China); the new claim is that earthly physics is mathematical too"
+      - "Numerology and Pythagorean mysticism are the nearest familiar idea; listeners will hear cosmic harmony, not measurement"
+    history:
+      mesopotamia: "c. 450–50 BC – arithmetical schemes predict lunar and planetary positions"
+      greece: "c. 500 BC – Pythagorean string ratios; c. 250 BC Archimedes' laws of the lever and of floating bodies; c. 150 AD Ptolemy"
+      china: "Han period – numerical harmonics of pitch pipes and calendar astronomy; little attempt to mathematise terrestrial motion"
+      india: "499 – Aryabhata's computational astronomy; 14th–16th c. Kerala school"
+      islamic: "c. 1021 – Ibn al-Haytham combines geometry and experiment in optics; c. 1020s al-Biruni; 1121 al-Khazini on hydrostatics"
+      europe: "c. 1335 – Merton 'calculators' prove the mean-speed theorem; c. 1350 Oresme graphs changing quantities; 1623 Galileo: the book of nature is written in mathematics; 1638 law of fall; 1687 Newton's Principia"
+    sources:
+      - "Galileo Galilei, Discorsi e dimostrazioni matematiche intorno a due nuove scienze (1638)"
+      - "E. J. Dijksterhuis, The Mechanization of the World Picture (1961)"
+      - "Eugene P. Wigner, The Unreasonable Effectiveness of Mathematics in the Natural Sciences (1960)"
+
+  - id: falsifiability
+    name: Falsifiability (risky, testable predictions)
+    category: ideas
+    requires: []
+    helps: [scientific_method, formal_logic]
+    explain: >
+      A claim about the world is only informative if it forbids something, so that some
+      possible observation would show it to be wrong. A thousand agreeing cases cannot prove
+      'all swans are white', one black swan refutes it; so look for the test most likely to
+      fail, and say beforehand what result would make you give the idea up. An explanation
+      that fits every outcome (the patient recovered because of the remedy, or died because it
+      was given too late) explains nothing. The convincing move is a risky prediction made in
+      public, like Halley's in 1705 that the comet of 1682 would return about the end of 1758.
+    pitfalls:
+      - "Confusing 'falsifiable' with 'false' or 'falsified'; a good theory is falsifiable and has survived the attempts"
+      - "Claiming one failed prediction kills a theory: the test also depends on instruments and side assumptions (Uranus's deviation led to Neptune, not to the end of Newton)"
+      - "Presenting Popper's criterion as the agreed definition of science; philosophers and working scientists treat it as one useful test among others"
+      - "Calling unfalsifiable statements meaningless or worthless; ethics, mathematics and religion are simply not empirical claims"
+      - "Demanding that a diviner or priest name in advance what would prove him wrong is a public challenge to his office"
+    history:
+      greece: "c. 450 BC onwards – refutation by counterexample and reductio (Zeno, Socrates); applies to arguments, not yet to experiments"
+      china: "c. 80 AD – Wang Chong refutes omen and ghost beliefs by drawing consequences that do not occur"
+      islamic: "c. 1021 – Ibn al-Haytham designs experiments to decide between rival theories of vision"
+      europe: "1620 – Bacon: 'the force of the negative instance is greater' (Novum Organum I.46); 1758 return of Halley's comet; 1919 eclipse test of general relativity; 1934 Popper, Logik der Forschung (English 1959)"
+    sources:
+      - "Karl Popper, The Logic of Scientific Discovery (1959)"
+      - "Karl Popper, Conjectures and Refutations (1963)"
+      - "Peter Godfrey-Smith, Theory and Reality: An Introduction to the Philosophy of Science (2003)"
+
+  - id: fallibilism_provisional_knowledge
+    name: Fallibilism (all knowledge of nature is provisional)
+    category: ideas
+    requires: []
+    helps: [scientific_method, bayesian_reasoning]
+    explain: >
+      Nothing about the natural world is known with final certainty; every claim is held with
+      a degree of confidence that should follow the evidence and be revised when the evidence
+      changes. This does not mean all opinions are equally good: some claims have survived so
+      many attempts to refute them that doubting them is unreasonable, and later theories
+      usually keep earlier ones as close approximations (a flat earth is nearly right for a
+      field, a sphere for a voyage, a slightly flattened sphere for a geodesist). In practice:
+      say how sure you are and why, state what would change your mind, and treat your own
+      remembered schoolbook facts in the same way. For a time traveller this is also honesty,
+      since half-remembered knowledge is exactly where confident errors hide.
+    pitfalls:
+      - "Saying 'science has proved' or 'we now know for certain'"
+      - "Sliding into relativism: 'everything is just a theory, so my guess is as good as yours'"
+      - "Describing superseded theories as simply wrong; Ptolemy predicts planets well and Newton still builds bridges"
+      - "Preaching universal doubt in a religious setting, where it is heard as doubt of revelation; limit the claim to knowledge of nature gained by the senses"
+      - "Never committing: a patron needs a recommendation with honest odds, not a list of doubts"
+    history:
+      greece: "c. 500 BC – Xenophanes: no man knows the clear truth, but by seeking we find better; 2nd c. BC Carneades' degrees of plausibility; c. 200 AD Sextus Empiricus"
+      india: "c. 500 BC onwards – Jain doctrine of conditional assertion (syadvada); c. 200 AD Nagarjuna; c. 800 the sceptic Jayarasi"
+      china: "c. 300 BC – Zhuangzi on the limits of every standpoint"
+      islamic: "early 11th c. – in Doubts about Ptolemy Ibn al-Haytham urges the critic to question his own judgement; c. 1108 al-Ghazali, Deliverance from Error, examines the grounds of certainty"
+      europe: "1562 – Sextus printed in Latin; 1580 Montaigne; 1739–1748 Hume's problem of induction; c. 1897 Peirce coins 'fallibilism'; 1934 Popper"
+    sources:
+      - "Sextus Empiricus, Outlines of Pyrrhonism (c. 200)"
+      - "Richard H. Popkin, The History of Scepticism: From Savonarola to Bayle (2003)"
+      - "Isaac Asimov, The Relativity of Wrong (1988)"
+
+  - id: bayesian_reasoning
+    name: Weighing evidence (base rates and Bayesian updating)
+    category: ideas
+    requires: [probability_statistics]
+    helps: [fallibilism_provisional_knowledge]
+    explain: >
+      How much a piece of evidence should move you depends on how much more likely it is if
+      the claim is true than if it is false, and on how plausible the claim was before. If a
+      disease affects 1 person in 1,000 and a sign appears in 99 % of the sick but also in 5 %
+      of the healthy, then of 1,000 people about 1 sick and 50 healthy show the sign, so a
+      person with the sign has only about a 2 % chance of being sick. Work it out with counted
+      people rather than percentages and listeners follow easily. The same rule explains why a
+      surprising claim needs strong evidence and why testimony for a miracle or a marvellous
+      cure must be weighed against the frequency of error and deceit.
+    pitfalls:
+      - "Confusing the chance of the evidence given the claim with the chance of the claim given the evidence (the prosecutor's fallacy)"
+      - "Ignoring the base rate and treating a 'reliable' sign or test as near-certain proof"
+      - "Assigning probability zero or one to anything, after which no evidence can ever change the belief"
+      - "Dressing up a guess as a calculation by inventing the input numbers"
+    history:
+      greece: "2nd c. BC – Carneades grades impressions by plausibility, without numbers"
+      europe: "1748 – Hume's argument on testimony for miracles; 1763 Bayes's essay published by Richard Price; 1774 Laplace states the general rule and applies it widely"
+      global: "1940–1941 – Turing uses sequential weighing of evidence against Enigma; 1950s onwards Bayesian statistics revived"
+    sources:
+      - "Thomas Bayes, An Essay towards solving a Problem in the Doctrine of Chances (1763)"
+      - "Sharon Bertsch McGrayne, The Theory That Would Not Die (2011)"
+      - "Gerd Gigerenzer, Reckoning with Risk: Learning to Live with Uncertainty (2002)"
+
+  - id: reproducibility_open_publication
+    name: Reproducibility and open publication
+    category: ideas
+    requires: []
+    helps: [printing_press, scientific_journal, scientific_academy, patents]
+    explain: >
+      Describe materials, quantities, apparatus and failures so another investigator can
+      check the reasoning or repeat the procedure. An independent replication strengthens
+      the evidence; a unique historical event can still be checked against other records. Publishing openly trades the short-term advantage of a secret for credit, criticism
+      that finds your errors, and the work of thousands who build on yours; secrets held by a
+      guild or an adept die with their holders and cannot be checked. The institution that
+      makes this rational for the individual is priority: whoever publishes first, dated and
+      witnessed, gets the honour, and patents or prizes can protect the income.
+    pitfalls:
+      - "Telling a craftsman to give away the secret his family lives on without offering priority, patent or patronage in return"
+      - "Assuming everything should be published: fortification, ciphers and weapons are state secrets, and disclosing them is treason"
+      - "Leaving out the 'obvious' practical details, so that nobody can repeat the result and it is dismissed"
+      - "Believing a published result is therefore true; much published work fails replication"
+      - "Calling the alchemists' secrecy mere fraud; it was also the normal way to protect craft property"
+    history:
+      mesopotamia: "2nd–1st millennium BC – technical tablets (glass recipes, omen series) carry secrecy formulas restricting them to the initiated"
+      china: "11th c. – Song government prints standard medical, agricultural and mathematical works; 1088 Shen Kuo's Dream Pool Essays record techniques openly"
+      islamic: "8th–10th c. – translation movement and a commercial paper-book trade circulate science across the caliphate"
+      europe: "1540 Biringuccio and 1556 Agricola print mining and metallurgy in plain terms; 1660 Boyle's fully described air-pump experiments; 1665 Journal des sçavans and Philosophical Transactions"
+      global: "1942 – Merton describes the norms of science (common ownership of results, organised scepticism); 2010s 'replication crisis' in psychology and medicine"
+    sources:
+      - "Pamela O. Long, Openness, Secrecy, Authorship: Technical Arts and the Culture of Knowledge from Antiquity to the Renaissance (2001)"
+      - "Steven Shapin & Simon Schaffer, Leviathan and the Air-Pump (1985)"
+      - "Robert K. Merton, The Sociology of Science: Theoretical and Empirical Investigations (1973)"
+
+  - id: cognitive_biases
+    name: Systematic errors of human judgement (cognitive biases)
+    category: ideas
+    requires: []
+    helps: [controlled_trial]
+    explain: >
+      Human minds err in predictable directions: we notice and remember what confirms our
+      belief (confirmation bias), see patterns and intentions in chance, judge frequency by
+      vivid cases, anchor on the first number heard, and explain away our own failures. Being
+      clever or honest does not protect anyone, which is why methods that do not rely on
+      judgement are needed: write predictions down beforehand, count hits and misses, use
+      controls and blinding, and invite an opponent to check. A quick demonstration is Wason's
+      game: say that 2, 4, 6 follows a secret rule and let people test triples; many people
+      try only cases that fit their guess and overlook rules that also fit those cases.
+    pitfalls:
+      - "Believing that knowing about biases makes one immune; people readily see them in others only"
+      - "Using 'you are biased' as an insult or a way to end an argument"
+      - "Repeating famous findings that later failed replication (several social-priming results popularised in the 2000s)"
+      - "Presenting a tidy catalogue of hundreds of named biases as settled science; the solid core is small"
+    history:
+      greece: "c. 400 BC – Thucydides notes that people accept what they wish and reason away what they dislike"
+      china: "c. 250 BC – Xunzi, 'Dispelling Blindness', on how a partial view obscures the whole"
+      india: "early centuries AD – Nyaya Sutras list fallacious reasons and sophistical moves in debate"
+      islamic: "1377 – Ibn Khaldun lists the causes of error in reports: partisanship, trust in transmitters, flattery of the powerful, ignorance of how things work"
+      europe: "1620 – Bacon's four 'idols' of the mind; 1960 Wason's 2-4-6 task; 1974 Tversky & Kahneman, heuristics and biases"
+    sources:
+      - "Francis Bacon, Novum Organum (1620)"
+      - "Amos Tversky & Daniel Kahneman, Judgment under Uncertainty: Heuristics and Biases (1974)"
+      - "Daniel Kahneman, Thinking, Fast and Slow (2011)"
+
+  - id: formal_logic
+    name: Formal logic (valid deduction and fallacies)
+    category: ideas
+    requires: []
+    helps: [geometry_proof, boolean_logic]
+    explain: >
+      An argument is valid when its form guarantees that the conclusion is true if the
+      premises are, whatever it is about: 'all A are B, all B are C, so all A are C'; 'if P then
+      Q, and P, so Q'. Validity is separate from truth, so a valid argument with a false premise
+      proves nothing, and logic alone gives no new facts about the world, only what is already
+      contained in the premises. The practical use is to spot the common invalid forms: 'if P
+      then Q, and Q, so P' (affirming the consequent, the form of most 'the omen came true'
+      reasoning). Distinguish formal invalidity from defects such as assuming the very claim
+      at issue: a circular argument can be valid but gives no independent reason to believe it.
+      In Greek, Indian, Islamic and scholastic settings the audience already knows this art
+      well, so the player gains by using it correctly rather than by teaching it.
+    pitfalls:
+      - "Confusing valid with true, or thinking logic can settle questions of fact without observation"
+      - "Lecturing a 15th-century university audience on syllogisms they know far better than the player"
+      - "Calling every disliked argument a 'fallacy'; appeal to a qualified authority or to experience is not one"
+      - "Claiming Aristotle's logic was wrong; it was correct but covered only part of what Stoic and modern logic handle"
+    history:
+      greece: "c. 350 BC – Aristotle's syllogistic (Prior Analytics); 3rd c. BC Chrysippus's propositional logic"
+      india: "early centuries AD (dating disputed) – Nyaya five-membered inference; c. 500 AD Dignaga's Buddhist logic; c. 13th–14th c. Gangesa develops Navya-Nyaya"
+      china: "c. 300 BC – Later Mohist Canons on definition, inference and disputation; the school fades from view in the early imperial period"
+      islamic: "10th–11th c. – al-Farabi and Ibn Sina extend Aristotle with conditional and temporal logic; logic enters the madrasa curriculum"
+      europe: "12th–14th c. – scholastic logic (Abelard, Peter of Spain, Ockham, Buridan); 1847–1854 Boole's algebra of logic; 1879 Frege's predicate logic"
+    sources:
+      - "Aristotle, Prior Analytics (c. 350 BC)"
+      - "William Kneale & Martha Kneale, The Development of Logic (1962)"
+      - "A. C. Graham, Later Mohist Logic, Ethics and Science (1978)"
+
+  - id: occams_razor
+    name: Parsimony (Occam's razor)
+    category: ideas
+    requires: []
+    helps: [formal_logic]
+    explain: >
+      Of two explanations that account for the same observations equally well, prefer the one
+      that assumes fewer separate things, and do not add an entity or cause unless the
+      evidence forces it. The reason is practical: every added assumption is another way of
+      being wrong and makes the explanation harder to test, while a story with enough spare
+      parts can fit anything. It is a rule for choosing what to test first, not a proof that
+      the world is simple. Newton's version: admit no more causes than are true and sufficient
+      to explain the appearances.
+    pitfalls:
+      - "Misquoting it as 'the simplest explanation is usually true'; it only compares explanations that fit the facts equally well"
+      - "Attributing 'entities must not be multiplied beyond necessity' to Ockham; that wording is John Punch's of 1639, and the name 'Occam's razor' dates from 1852"
+      - "Claiming Copernicus won because his system was simpler; it still needed about as many circles as Ptolemy's until Kepler's ellipses"
+      - "Using it against God or spirits in front of theologians; Ockham himself used it within theology and exempted revealed truths"
+    history:
+      greece: "c. 350 BC – Aristotle: the demonstration from fewer postulates is superior (Posterior Analytics I.25); c. 150 AD Ptolemy prefers the simplest hypothesis that saves the phenomena"
+      india: "classical period – 'lightness' (laghava) of assumptions as a standard argument in Nyaya and Mimamsa debate"
+      europe: "c. 1320 – William of Ockham: 'plurality is never to be posited without necessity'; 1687 Newton's first rule of reasoning; 1852 the phrase 'Occam's razor' (William Hamilton)"
+    sources:
+      - "William of Ockham, Summa logicae (c. 1323)"
+      - "Elliott Sober, Ockham's Razors: A User's Manual (2015)"
+
+  - id: thought_experiment
+    name: Thought experiment
+    category: ideas
+    requires: []
+    helps: [formal_logic]
+    explain: >
+      Imagine a precisely specified situation and reason out what must happen in order to
+      expose a contradiction in a theory or to isolate what matters. Galileo's case against
+      'heavier falls faster': tie a light stone to a heavy one; the slow one should hold the
+      fast one back, yet the pair is heavier and should fall faster, so the premise defeats
+      itself. Another is his ship: below deck on a smoothly moving ship, drops still fall
+      straight and flies fly alike in all directions, so steady motion cannot be felt and the
+      earth may move. Such arguments cost nothing and work in any language, but they only show
+      what follows from assumptions and should be followed by a real test.
+    pitfalls:
+      - "Treating a thought experiment as proof about the world; in air a heavy ball does land slightly before a light one"
+      - "Telling the Leaning Tower of Pisa drop as fact; it rests on a late account by Viviani, while Stevin and de Groot really dropped lead balls at Delft in 1586"
+      - "Smuggling modern intuitions (frictionless planes, empty space) into the set-up as if they were obvious to the listener"
+      - "Mocking Aristotle: his rule describes bodies sinking through a resisting medium reasonably well"
+    history:
+      greece: "c. 450 BC – Zeno's paradoxes; c. 400 BC Archytas asks what happens when one stretches a hand beyond the edge of the universe"
+      china: "c. 300 BC – paradoxes of Hui Shi and Gongsun Long; Zhuangzi's butterfly dream"
+      india: "c. 100 BC–200 AD – the chariot argument about the self in the Questions of King Milinda"
+      egypt: "c. 530 AD – John Philoponus of Alexandria argues from actual drops that unequal weights fall almost together"
+      islamic: "c. 1020 – Ibn Sina's 'floating man' argument for self-awareness"
+      europe: "c. 1350–1377 – Buridan and Oresme argue about a rotating earth with arrows and ships; 1586 Stevin's chain on a prism; 1632–1638 Galileo; 1867 Maxwell's demon; 1897 Mach popularises the term 'Gedankenexperiment'"
+    sources:
+      - "Galileo Galilei, Dialogo sopra i due massimi sistemi del mondo (1632)"
+      - "James Robert Brown, The Laboratory of the Mind: Thought Experiments in the Natural Sciences (1991)"
+
+  - id: source_criticism
+    name: Source criticism (testing documents and reports)
+    category: ideas
+    requires: []
+    helps: [empiricism_over_authority]
+    explain: >
+      A written or oral report is evidence only to the degree that its origin can be
+      examined: who says it, how close were they to the event, what did they gain by saying
+      it, do independent witnesses agree, and is it physically possible. Ten chronicles that
+      copy one another are one witness. Forgeries betray themselves by anachronism: Lorenzo
+      Valla showed in 1440 that the 'Donation of Constantine' uses Latin words, titles and
+      place names that did not exist in Constantine's time. Ibn Khaldun's test is plausibility
+      against how the world works: he challenges a reported Israelite army of over 600,000 by asking
+      whether the territory could sustain so many fighters or allow them to manoeuvre.
+    pitfalls:
+      - "Applying it aloud to Scripture, hadith, a dynasty's genealogy or a monastery's founding charter; that is heresy, treason or an attack on property titles"
+      - "Arguing from silence: lack of surviving records is weak evidence that something did not happen"
+      - "Assuming older means more reliable, or that a printed or officially sealed text must be true"
+      - "Crediting Valla alone; Nicholas of Cusa (1433) and Reginald Pecock reached the same verdict on the Donation independently"
+    history:
+      greece: "c. 430 BC – Herodotus reports what is said without vouching for it; c. 400 BC Thucydides sets out his rules for testing eyewitnesses (I.20–22)"
+      china: "c. 90 BC – Sima Qian compares sources and marks doubtful traditions; 710 Liu Zhiji, Shitong, the first treatise on critical historiography; late 17th c. Yan Ruoqu proves parts of the Book of Documents forged (evidential scholarship)"
+      islamic: "9th c. – hadith scholars grade reports by examining each chain of transmitters; c. 1030 al-Biruni's India; 1377 Ibn Khaldun, Muqaddimah"
+      europe: "1440 – Valla on the Donation of Constantine (printed 1517); 1681 Mabillon founds the science of dating charters; 1670–1678 Spinoza and Richard Simon apply the method to the Bible; 1820s Ranke"
+    sources:
+      - "Lorenzo Valla, De falso credita et ementita Constantini donatione (1440)"
+      - "Ibn Khaldun, The Muqaddimah: An Introduction to History (tr. Franz Rosenthal, 1958)"
+      - "Anthony Grafton, Forgers and Critics: Creativity and Duplicity in Western Scholarship (1990)"
+
+  - id: informed_consent_research_ethics
+    name: Consent and ethics of experiments on people
+    category: ideas
+    requires: []
+    helps: [controlled_trial]
+    explain: >
+      Before trying an unproven treatment on a person, tell them what is known and what is
+      risked and get their free agreement; do not experiment on those who cannot refuse
+      (prisoners, slaves, orphans, the poor of a hospital) merely because they are available.
+      Require prior evidence to justify the risks, independent review, a plan for monitoring
+      harm and clear stopping rules. Respect withdrawal and record outcomes including
+      deaths. Besides being right, this is what keeps a trial from ending in a riot or a
+      murder charge and makes its results believed. The Hippocratic rule 'help, or at least do
+      no harm' gives the argument a respected ancient footing.
+    pitfalls:
+      - "Treating the consent of a master, parent, abbot or prince as the consent of the subject"
+      - "Quoting 'first, do no harm' as part of the Hippocratic Oath; the wording comes from Epidemics I and the Latin tag is modern"
+      - "Citing Jenner as a model: he inoculated an eight-year-old servant's son and then deliberately exposed him to smallpox"
+      - "Heroic self-experiment as proof: one person is no trial, and a dead player teaches nobody"
+    history:
+      greece: "c. 400 BC – Hippocratic Oath and Epidemics I: act for the benefit of the sick, do no harm"
+      india: "c. 1st–2nd c. AD – oath of the medical student in the Charaka Samhita"
+      china: "c. 652 – Sun Simiao, 'On the Absolute Sincerity of Great Physicians': treat all patients alike, without regard to rank or reward"
+      islamic: "9th c. – al-Ruhawi, Ethics of the Physician"
+      europe: "1721 – smallpox inoculation tried on condemned Newgate prisoners in return for pardon; 1803 Percival, Medical Ethics; 1900 Prussian directive requiring consent; 1947 Nuremberg Code after the Doctors' Trial"
+      americas: "1900 – Walter Reed's yellow fever volunteers sign written consent in Cuba; 1932–1972 Tuskegee syphilis study, the standard example of abuse"
+      global: "1964 – Declaration of Helsinki"
+    sources:
+      - "Nuremberg Military Tribunals, The Nuremberg Code (1947)"
+      - "Albert R. Jonsen, A Short History of Medical Ethics (2000)"
+      - "Susan E. Lederer, Subjected to Science: Human Experimentation in America before the Second World War (1995)"
+
+  # ------------------------------------------------------- pictures of the world
+  - id: natural_causes
+    name: Natural causes (naturalism about disease, weather, comets)
+    category: ideas
+    requires: []
+    helps: [eclipse_prediction, contagion_theory]
+    explain: >
+      Events such as disease, lightning, earthquakes, eclipses and comets follow regular
+      causes that can be studied, predicted and sometimes prevented; they are not messages,
+      punishments or the work of witches aimed at particular people. The strongest evidence is
+      prediction and indifference: an eclipse can be calculated years ahead to the hour,
+      lightning can strike exposed objects whether it is a church tower or a tree, plague kills
+      the pious and the wicked in the same street. The framing that worked historically is
+      'secondary causes': God, Heaven or the gods work through a regular order of nature, and
+      studying that order honours its author. The practical consequence is to stop looking for
+      whom to blame and start looking for how it happens.
+    pitfalls:
+      - "Presenting naturalism as atheism; nearly all its historical champions were believers, and the atheist framing gets the player prosecuted"
+      - "Claiming natural explanations one does not actually have ('comets are just dirty snowballs') without being able to predict anything"
+      - "Denying that an omen means anything to a court whose astrologers and diviners are state officials is an attack on the regime's legitimacy"
+      - "Believing medieval scholars explained everything by miracle; scholastic natural philosophy sought natural causes as a matter of principle"
+    history:
+      mesopotamia: "c. 750 BC onwards – eclipses and planetary events are computed in advance, yet still read as omens for the king"
+      greece: "c. 585 BC – Thales and the Milesians explain earthquakes and lightning without gods; c. 400 BC Hippocratic 'On the Sacred Disease': epilepsy is no more divine than any other illness"
+      china: "c. 250 BC – Xunzi: Heaven's course is constant; rain follows the rain sacrifice just as it would without it; c. 80 AD Wang Chong: thunder is fire, not Heaven's anger"
+      india: "499 – Aryabhata explains a lunar eclipse by the earth’s shadow and a solar eclipse by the moon obscuring the sun; later Carvaka authors reject appeals to supernatural agency"
+      rome: "c. 55 BC – Lucretius, De rerum natura; c. 65 AD Seneca, Natural Questions, treats comets as bodies with regular paths"
+      islamic: "11th c. – Ibn Sina discusses uplift and erosion in mountain formation; al-Biruni infers from alluvial sediments that parts of the Indian plains were once under water"
+      europe: "c. 1120 – Adelard of Bath and William of Conches defend the search for natural causes; 1577 Tycho shows a comet lies beyond the moon; 1705 Halley predicts a comet's return; 1752 Franklin shows lightning is electricity"
+    sources:
+      - "Hippocratic Corpus, On the Sacred Disease (c. 400 BC)"
+      - "G. E. R. Lloyd, Magic, Reason and Experience (1979)"
+      - "Wang Chong, Lun-Hêng (tr. Alfred Forke, 1907)"
+
+  - id: scepticism_superstition
+    name: Scepticism towards astrology, omens, witchcraft and transmutation
+    category: ideas
+    requires: []
+    helps: [natural_causes, selection_bias_sampling, controlled_trial]
+    explain: >
+      Divination, astrology, witchcraft accusations and gold-making share one weakness: their
+      successes are remembered and their failures explained away, and when hits and misses are
+      all written down beforehand and counted they do no better than chance. Old and
+      respectable arguments are available: twins born under the same stars have different
+      fates, and thousands with different horoscopes die in one battle (Cicero, Augustine);
+      confessions of witchcraft obtained by torture prove only that pain makes people say
+      anything (Spee); no alchemist has ever sold gold cheaper than the mint. The fair test is
+      to have the practitioner state specific predictions in writing, seal them, and compare.
+      Be precise about alchemy: its transmutation of lead into gold fails, but its furnaces,
+      acids and distillation are real chemistry.
+    pitfalls:
+      - "Treating astrology as a fringe belief: in 1490 it is taught in medical faculties and practised at every court, and Tycho, Kepler and Galileo cast horoscopes"
+      - "Calling the witch craze medieval; the great hunts fall about 1560–1650, and total executions are estimated at roughly 40,000–60,000, not millions"
+      - "Denying the reality of witches where the Malleus Maleficarum (1486) calls that denial itself heresy; argue about proof and torture instead"
+      - "Dismissing alchemists as frauds; they developed the laboratory methods chemistry inherited, and Boyle and Newton practised it"
+      - "Ruining a court astrologer or diviner without offering the ruler something more useful makes a deadly, well-connected enemy"
+    history:
+      mesopotamia: "2nd–1st millennium BC – omen series (Enuma Anu Enlil) are state science; horoscopes appear c. 410 BC; no known sceptical tradition"
+      greece: "2nd c. BC – Carneades' arguments against astrology; c. 180 AD Lucian exposes the oracle-monger Alexander of Abonoteichus"
+      rome: "44 BC – Cicero, De divinatione; c. 400 AD Augustine's twins argument"
+      china: "c. 250 BC – Xunzi: omens are rare natural events, to be wondered at but not feared; c. 80 AD Wang Chong, Lunheng, criticises claims that the dead harm the living, while accepting personal destiny"
+      india: "early Buddhist texts list divination among livelihoods monks should avoid; later sources preserve materialist criticisms of sacrificial rites attributed to the Carvakas"
+      islamic: "c. 1021 – Ibn Sina denies that alchemists can transmute species of metal; 1194 Maimonides' letter against astrology (written in Egypt); 1377 Ibn Khaldun refutes astrology and alchemy in the Muqaddimah"
+      europe: "c. 906 – Canon Episcopi calls night-flying a delusion; c. 1360s Oresme against divination; 1496 Pico della Mirandola's Disputations against astrology (Florence); 1563 Weyer; 1584 Scot; 1631 Spee, Cautio criminalis"
+      global: "1985 – Carlson's double-blind test of astrologers in Nature finds chance-level results"
+    sources:
+      - "Cicero, De divinatione (44 BC)"
+      - "Keith Thomas, Religion and the Decline of Magic (1971)"
+      - "Carl Sagan, The Demon-Haunted World: Science as a Candle in the Dark (1995)"
+
+  - id: atomism
+    name: Atomism (matter is made of tiny particles in motion)
+    category: ideas
+    requires: []
+    helps: [atomic_theory, gas_laws, air_pump_vacuum]
+    explain: >
+      All matter consists of particles far too small to see, constantly moving, with empty
+      space between them; the variety of substances comes from the kinds of particles and how
+      they are arranged, and nothing is created from nothing or destroyed, only rearranged.
+      Lucretius's everyday arguments still persuade: wet cloth dries and a smell crosses a room
+      though nothing is seen to move, a ring wears thin over years, dust dances in a sunbeam,
+      a drop of dye spreads through still water. A measurable hint of size: a teaspoon of oil
+      calmed waves over roughly half an acre in Franklin’s report (1774). Dividing volume by
+      area gives a film thickness of a few nanometres; using that to estimate molecular
+      length requires assuming a single layer. Dalton’s atomic theory later connected
+      particles to measurable combining ratios (1808).
+    pitfalls:
+      - "Saying the Greeks 'discovered' atoms; they argued for them without evidence, and equally clever opponents argued against"
+      - "Calling atoms indivisible little balls; chemical atoms have parts and are mostly empty space"
+      - "Asserting the void to Aristotelians without a demonstration; 'nature abhors a vacuum' was the well-argued standard view"
+      - "Forgetting the baggage: atomism was tied to Epicurus, denial of providence and the mortal soul, and after 1551 it was suspected of contradicting the doctrine of the Eucharist"
+    history:
+      greece: "c. 430 BC – Leucippus and Democritus; c. 300 BC Epicurus"
+      rome: "c. 55 BC – Lucretius, De rerum natura (rediscovered 1417 by Poggio Bracciolini, printed 1473)"
+      india: "date uncertain, between c. 6th and 2nd c. BC – Kanada's Vaisheshika school teaches eternal atoms (paramanu); Jain and Buddhist authors also develop distinct atomisms; their chronological priority is uncertain"
+      islamic: "9th–11th c. – some kalam theologians analyse bodies into indivisible atoms and hold that God continually recreates their properties"
+      china: "no sustained atomist school; matter is thought of as continuous qi (the Mohist 'end-point' is a geometric notion)"
+      europe: "1649 Gassendi revives Epicurus in Christian form; 1661 Boyle's corpuscles; 1808 Dalton; 1905–1909 Einstein and Perrin settle the reality of atoms through Brownian motion"
+    sources:
+      - "Lucretius, De rerum natura (c. 55 BC)"
+      - "Bernard Pullman, The Atom in the History of Human Thought (1998)"
+
+  - id: universal_physical_laws
+    name: The same physical laws on earth and in the heavens
+    category: ideas
+    requires: []
+    helps: [telescope, universal_gravitation, falling_bodies, mathematical_laws_of_nature]
+    explain: >
+      The stars, planets and moon are made of ordinary matter and obey the same rules as
+      stones and water here; there is no separate perfect, unchanging celestial realm. Evidence
+      in rising order of force: new stars and comets show the heavens change (Tycho found
+      their parallax too small for them to be atmospheric phenomena below the moon); a
+      modest telescope shows mountains and shadows on the moon and spots on the sun; and the
+      moon's orbit fits the same gravity that pulls an apple, weakened by the square of the
+      distance (the moon is 60 earth radii away and falls 1/3600 as far per second as a stone
+      does here). The pay-off is that experiments done on a bench tell us about the whole
+      universe.
+    pitfalls:
+      - "Assuming the earth-heaven divide was a religious dogma; it was Aristotle's physics, with good arguments, and Chinese cosmology never had it"
+      - "Saying the Church forbade the idea that the heavens change; Jesuit astronomers confirmed Galileo's observations within a year"
+      - "Offering the moon-and-apple calculation without the earth's size and the moon's distance, both of which the listener must accept first"
+      - "Suggesting the sun is a burning stone to a society that worships it; Anaxagoras was prosecuted for impiety in Athens for that"
+    history:
+      greece: "c. 450 BC – Anaxagoras: the sun is a glowing stone and the moon is earthy; c. 350 BC Aristotle fixes the opposite view of a fifth, unchanging celestial element"
+      egypt: "c. 530 AD – John Philoponus of Alexandria argues that the heavens are made of ordinary, perishable matter"
+      china: "from 28 BC – court astronomers record sunspots, and 'guest stars' throughout; the heavens were never assumed changeless"
+      islamic: "c. 1000 – al-Biruni questions Aristotle's celestial physics in his correspondence with Ibn Sina"
+      europe: "1572–1577 – Tycho's nova and comet; 1610 Galileo, Sidereus Nuncius; 1687 Newton unites celestial and terrestrial mechanics; 1859–1860 Kirchhoff and Bunsen find terrestrial elements in the sun's spectrum"
+    sources:
+      - "Galileo Galilei, Sidereus Nuncius (1610)"
+      - "Isaac Newton, Philosophiae Naturalis Principia Mathematica (1687)"
+      - "Thomas S. Kuhn, The Copernican Revolution (1957)"
+
+  - id: mechanical_philosophy
+    name: Mechanical philosophy (explain by matter and motion, not hidden purposes)
+    category: ideas
+    requires: []
+    helps: [atomism, mechanical_clock, blood_circulation]
+    explain: >
+      Explain a natural process the way one explains a clock or a mill: by the shapes,
+      arrangement and motions of its parts pushing on each other, and ask 'how does it work'
+      before 'what is it for'. An explanation by a named power (opium causes sleep because it
+      has a 'dormitive virtue') only restates the question. The approach is convincing where a
+      model can be built: the heart as a pump with valves, the eye as a dark chamber with a
+      lens, the limbs as levers. It is a research programme, not the last word: gravity,
+      magnetism and later fields act without pushing parts, and living things need chemistry
+      and evolution as well as mechanics.
+    pitfalls:
+      - "Concluding that animals are unfeeling machines, which historically excused cruel vivisection"
+      - "Equating mechanism with godlessness; Boyle, Descartes and Newton saw the world-machine as evidence of its maker"
+      - "Ridiculing purposes altogether; asking what an organ is for remains fruitful in anatomy (Harvey reasoned from the purpose of the vein valves)"
+      - "Insisting everything works by contact; Newton's gravity was attacked by mechanists as an 'occult quality' and was right anyway"
+    history:
+      greece: "c. 430 BC – atomists explain all change by particles colliding; 3rd c. BC–1st c. AD Alexandrian mechanics and automata (Ctesibius, Hero)"
+      china: "1094 – Su Song's water-driven astronomical clock tower; cosmology stays organic rather than mechanical"
+      islamic: "c. 850 Banu Musa and 1206 al-Jazari build elaborate automata, without a mechanical philosophy of nature"
+      europe: "1377 – Oresme compares the heavens to a clock; 1605 Kepler: the celestial machine is like clockwork; 1628 Harvey's heart as pump; 1644 Descartes, Principia philosophiae; 1660s Boyle names the 'mechanical philosophy'"
+    sources:
+      - "René Descartes, Principia philosophiae (1644)"
+      - "Robert Boyle, The Origine of Formes and Qualities (1666)"
+      - "E. J. Dijksterhuis, The Mechanization of the World Picture (1961)"
+
+  - id: idea_of_progress
+    name: Idea of progress (knowledge accumulates, the future can be better)
+    category: ideas
+    requires: []
+    helps: [reproducibility_open_publication, printing_press, systematic_invention]
+    explain: >
+      Knowledge and technique can grow without limit because each generation starts from what
+      the last one recorded, so we can know more than the ancients without being wiser than
+      they were; and with that knowledge, hunger, disease and toil can be reduced. The argument
+      from visible evidence works best: things the revered ancients did not have (in 1490 the
+      compass, gunpowder, printing, spectacles, mechanical clocks, paper) show that they did
+      not know everything. Progress is neither automatic nor permanent; it depends on
+      recording, teaching, open criticism and reward for improvement, and societies have lost
+      skills before.
+    pitfalls:
+      - "Claiming progress is inevitable or that newer is always better (the 'Whig' view of history)"
+      - "Repeating the 'Dark Ages' myth; medieval Europe added mills, heavy ploughs, clocks, spectacles and universities"
+      - "Confusing growth of knowledge with moral improvement; the 20th century had both antibiotics and industrial genocide"
+      - "Telling a culture that reveres its sages or a golden age that they were ignorant; say instead that we see further by standing on their shoulders"
+      - "Promising results on a timescale the patron will hold the player to"
+    history:
+      greece: "c. 500 BC – Xenophanes: the gods did not reveal everything at first, by seeking men find out better in time"
+      rome: "c. 65 AD – Seneca: a time will come when our descendants wonder that we did not know things so plain (Natural Questions VII)"
+      china: "c. 240 BC – Han Feizi: new times need new measures, do not wait by the stump for another hare; the dominant Confucian view looks back to the sage kings"
+      islamic: "c. 900 – al-Razi: later scholars can surpass Galen because they inherit his work; 1377 Ibn Khaldun sees crafts and sciences accumulate within a civilisation but dynasties rise and fall in cycles"
+      europe: "c. 1120 – Bernard of Chartres, 'dwarfs on the shoulders of giants'; 1620–1627 Bacon, New Atlantis; 1687 onwards Quarrel of the Ancients and Moderns; 1750 Turgot; 1795 Condorcet"
+    sources:
+      - "Condorcet, Esquisse d'un tableau historique des progrès de l'esprit humain (1795)"
+      - "J. B. Bury, The Idea of Progress: An Inquiry into Its Origin and Growth (1920)"
+      - "Joel Mokyr, A Culture of Growth: The Origins of the Modern Economy (2016)"
+
+  - id: systematic_invention
+    name: Invention as a method (organised research and development)
+    category: ideas
+    requires: []
+    helps: [scientific_method, measurement_quantification, patents, industrial_research_lab]
+    explain: >
+      Inventions can be produced on purpose instead of waiting for luck or genius: state the
+      need as a measurable target, collect what is already known, build small cheap models,
+      vary one feature at a time and measure the result, keep a notebook of every trial
+      including failures, and put people with different skills (a mathematician, a smith, a
+      glassmaker) in one workshop with money and time. Smeaton found the best waterwheel in
+      1759 by testing model wheels on a bench; Edison's team tried thousands of filament
+      materials; the Wright brothers tested about 200 wing shapes in a wind tunnel before
+      building. The method needs a patron who accepts that most trials fail and is paid back
+      by the few that work.
+    pitfalls:
+      - "The lone-genius and 'eureka' story; Edison ran a staffed laboratory and did not invent the light bulb from nothing (Swan and others preceded him)"
+      - "Blind trial and error without measurement or theory, which wastes years"
+      - "Testing at full scale first; a failed full-size engine or bridge ends the patronage"
+      - "Assuming an invention that works will be adopted; it must also be cheaper or better than what guilds and users already have"
+    history:
+      egypt: "3rd c. BC – Ptolemaic Alexandria funds engineers who, by systematic trials, find the formula relating a catapult's spring diameter to its shot (reported by Philo of Byzantium, c. 200 BC)"
+      china: "Han to Song – state workshops and arsenals with recorded specifications; improvement is organised but not as open-ended research"
+      islamic: "1259 Maragha and 1420s Samarkand observatories as funded research institutes with staff, instruments and libraries"
+      europe: "1576 – Tycho's Uraniborg; 1627 Bacon's fictional 'Salomon's House'; 1714 Longitude prize; 1759 Smeaton's model experiments; 1826 Liebig's teaching laboratory at Giessen; 1870s–1880s German dye-industry laboratories"
+      americas: "1876 – Edison's Menlo Park laboratory; 1900 General Electric Research Laboratory; 1901 Wright brothers' wind tunnel; 1925 Bell Telephone Laboratories"
+    sources:
+      - "Alfred North Whitehead, Science and the Modern World (1925)"
+      - "Thomas P. Hughes, American Genesis: A Century of Invention and Technological Enthusiasm, 1870–1970 (1989)"
+      - "Jon Gertner, The Idea Factory: Bell Labs and the Great Age of American Innovation (2012)"
+
+  # ------------------------------------------------------- ethics and politics
+  - id: golden_rule_universal_ethics
+    name: Golden rule and universal ethics
+    category: ideas
+    requires: []
+    explain: >
+      Do not do to others what you would not want done to you; more generally, a rule of
+      conduct is acceptable only if you would accept it when the positions are reversed. The
+      rule needs no revelation and no shared religion, which is why it turns up independently
+      in almost every literate culture, and it gives a stranger common moral ground in any
+      era. Its radical step is the scope of 'others': extended beyond kin, city, faith and
+      rank to every human being, it becomes an argument against slavery, persecution and
+      cruelty. The player should quote the local version (Confucius, Hillel, the Gospel, a
+      hadith) rather than import a foreign one.
+    pitfalls:
+      - "Claiming it for one religion or presenting it as a modern discovery; every audience already has its own wording"
+      - "Ignoring that tastes differ: the refined version asks what the other person would want, in their situation"
+      - "Assuming that people who recite it apply it to outsiders, slaves, heretics or enemies; historically most did not"
+      - "Equating it with Kant's categorical imperative, which Kant explicitly distinguished from it"
+    history:
+      egypt: "c. 1850 BC – Tale of the Eloquent Peasant has a reciprocity maxim (reading disputed); Late Period papyrus (c. 4th c. BC): 'that which you hate to be done to you, do not do to another'"
+      china: "c. 500 BC – Confucius: 'what you do not wish for yourself, do not do to others' (Analects 15.24); c. 430 BC Mozi's impartial care for all"
+      india: "c. 400 BC–400 AD – Mahabharata: do not do to another what is disagreeable to yourself; Buddhist and Jain texts likewise"
+      greece: "c. 4th c. BC – versions in Isocrates and attributed to earlier sages"
+      mesopotamia: "c. 20 BC – Hillel, trained in Babylonia: 'what is hateful to you, do not do to your fellow' (recorded in the Babylonian Talmud, Shabbat 31a)"
+      rome: "1st c. AD – Gospel form 'do to others as you would have them do to you' (Matthew 7:12); Seneca applies it to slaves"
+      islamic: "7th c. – hadith: none of you believes until he wishes for his brother what he wishes for himself"
+      europe: "1785 – Kant's universalisation test; the test asks whether a maxim could be a universal law"
+      americas: "1993 – the Parliament of the World’s Religions in Chicago endorses the golden rule in its Declaration Toward a Global Ethic"
+    sources:
+      - "Confucius, Analects 15.24"
+      - "Jeffrey Wattles, The Golden Rule (1996)"
+      - "Harry J. Gensler, Ethics and the Golden Rule (2013)"
+
+  - id: human_equality_dignity
+    name: Human equality and dignity
+    category: ideas
+    requires: []
+    helps: [golden_rule_universal_ethics]
+    explain: >
+      Every human being, whatever their birth, sex, colour, faith or rank, has the same basic
+      worth and the same claim not to be owned, tortured or killed at another's pleasure. It
+      is a moral claim about how people must be treated, not a factual claim that people are
+      alike in strength or talent. Arguments that have worked: the capacities that matter
+      (to suffer, to reason, to learn) are found in every class and people, as anyone can see
+      when a slave's or peasant's child is taught; fortune is reversible, so today's master
+      may be tomorrow's captive (Seneca); and nobody would accept rules of rank if they had to
+      choose them before knowing where they would be born. Most traditions already hold a
+      version before God or Heaven; the step is to draw the legal consequences.
+    pitfalls:
+      - "Confusing equal dignity with equal ability or equal wealth, which listeners can refute at a glance"
+      - "Citing the Cyrus Cylinder as the first human rights charter; it is conventional royal propaganda about restoring temples"
+      - "Forgetting that the authors of 'all men are created equal' held slaves and excluded women; the idea was applied in stages"
+      - "Preaching equality to peasants or slaves is incitement to revolt in every pre-modern state (1381, 1525) and is punished as such"
+      - "Reading Pico's 'dignity of man' (1486) as a statement of equality; it is about human freedom to shape oneself"
+    history:
+      china: "c. 430 BC – Mozi: care for all impartially; c. 300 BC Mencius: anyone can become a sage; social hierarchy remains"
+      india: "c. 5th c. BC – the Buddha rejects worth by birth; a person is noble by conduct; caste persists in society"
+      greece: "c. 370 BC – Alcidamas: 'God has left all men free; nature has made no one a slave'; 3rd c. BC Stoic doctrine of one human community"
+      rome: "c. 65 AD – Seneca, Letter 47, on the humanity of slaves; c. 55 AD Paul: neither slave nor free, male nor female (Galatians 3:28)"
+      islamic: "632 – Farewell Sermon tradition: no superiority of Arab over non-Arab except in piety (wording transmitted in later collections)"
+      africa: "c. 1236 – Manden Charter (Kurukan Fuga) of the Mali Empire, known from oral tradition first written down in the 20th c., dating and content disputed; 1615 Ahmad Baba of Timbuktu argues against enslavement on grounds of colour"
+      americas: "1550–1551 – Las Casas defends the full humanity of the Indians at Valladolid; 1776 Declaration of Independence; 1791–1804 Haitian Revolution applies equality to the enslaved"
+      europe: "1647 Putney Debates ('the poorest he'); 1673 Poullain de la Barre on the equality of the sexes; 1785 Kant: persons have dignity, not price; 1789 Declaration of the Rights of Man; 1792 Wollstonecraft"
+      global: "1948 – Universal Declaration of Human Rights"
+    sources:
+      - "Seneca, Epistulae morales ad Lucilium 47"
+      - "Lynn Hunt, Inventing Human Rights: A History (2007)"
+      - "United Nations, Universal Declaration of Human Rights (1948)"
+
+  - id: natural_rights
+    name: Natural (human) rights
+    category: ideas
+    requires: []
+    helps: [human_equality_dignity, rule_of_law]
+    explain: >
+      Each person has certain claims simply by being human (to life, to liberty of person, to
+      the fruits of their labour, to a hearing before punishment) which no ruler granted and
+      none may take away, and governments exist to protect them. They are not facts of nature
+      like gravity; they are a moral and legal standard against which laws are judged, and
+      their force comes from being written down and enforceable against the ruler in court.
+      The persuasive bridge in older worlds is natural law, which Stoics, jurists and
+      theologians already accept: if a higher law binds the king, then subjects have
+      something they may demand, not merely hope for.
+    pitfalls:
+      - "Treating natural law (duties under a higher order) and natural rights (claims of individuals) as the same thing"
+      - "Calling Magna Carta (1215) a charter of universal rights; it secured privileges for barons and 'free men'"
+      - "Asserting rights as self-evident to people whose moral language is duty, honour and status; translate into what the ruler may not do"
+      - "Declaring that subjects may resist a ruler who violates rights is the theory of rebellion and is treated as treason"
+      - "Listing modern rights (privacy, holidays, internet) as if all were equally basic"
+    history:
+      greece: "c. 441 BC – Sophocles' Antigone appeals to unwritten laws above the king's decree; 3rd c. BC Stoic natural law"
+      rome: "c. 51 BC – Cicero: true law is right reason in agreement with nature; jurists develop the 'law of nations'"
+      china: "c. 300 BC – Mencius: the people matter most, the ruler least, and a tyrant may be removed; a doctrine of rulers' duties, not individual rights"
+      india: "3rd c. BC – Ashoka's edicts urge humane treatment of prisoners and subjects as royal duty (dharma), not as rights"
+      islamic: "c. 1100 – al-Ghazali: the law exists to protect religion, life, intellect, lineage and property"
+      europe: "12th–14th c. canon lawyers and Ockham speak of subjective rights; 1539 Vitoria: the American Indians have true ownership and rule; 1625 Grotius; 1689 Locke; 1789 Declaration of the Rights of Man; c. 1796 Bentham's rejoinder, 'nonsense upon stilts'"
+      americas: "1776 – Virginia Declaration of Rights and Declaration of Independence; 1791 Bill of Rights"
+    sources:
+      - "John Locke, Two Treatises of Government (1689)"
+      - "Brian Tierney, The Idea of Natural Rights: Studies on Natural Rights, Natural Law and Church Law 1150–1625 (1997)"
+      - "Lynn Hunt, Inventing Human Rights: A History (2007)"
+
+  - id: social_contract
+    name: Social contract (government by consent)
+    category: ideas
+    requires: []
+    helps: [natural_rights, representative_government, written_constitution]
+    explain: >
+      Political authority is not owned by a family or handed down from heaven; it is a trust
+      that people set up for their own protection, as if by an agreement: they obey common
+      laws and a common judge, and in return the ruler keeps peace and justice. Locke treats a ruler who attacks the people as betraying that trust. For Hobbes
+      the subjects covenant with one another to authorise a sovereign who is not a party
+      to their agreement. The picture that convinces is the alternative: where
+      everyone is judge in his own cause there is feud and insecurity, so everybody gains by
+      a common authority, but only so long as it is better than what it replaced. It is a
+      thought experiment about legitimacy, not a claim that such a meeting once took place.
+    pitfalls:
+      - "Presenting it as history ('people once signed a contract') and being refuted by any chronicle"
+      - "Forgetting that Hobbes used the same idea to justify near-absolute rule; the contract alone does not give liberty"
+      - "Saying before a king that he rules by the people's consent and may be dismissed; this is exactly what regicides argued"
+      - "Assuming it is purely modern or European; Mozi and Buddhist texts tell of a first ruler chosen to end disorder"
+    history:
+      china: "c. 4th c. BC – the Mozi (‘Identifying Upward’): before rulers each man had his own standard and there was chaos, so the worthiest was made Son of Heaven"
+      india: "c. 4th–3rd c. BC – Buddhist Aggañña Sutta: the people elect the first king (Mahasammata) and pay him in rice; Arthashastra 1.13: people made Manu king for a sixth of the grain"
+      greece: "c. 375 BC – Glaucon's account of justice as a compact (Plato, Republic II); c. 300 BC Epicurus: justice is an agreement not to harm"
+      islamic: "c. 1050 – al-Mawardi describes the caliphate as a contract concluded by pledge of allegiance (bay'a)"
+      europe: "c. 1085 – Manegold of Lautenbach: a king who breaks his pact may be dismissed like a swineherd; 1579 Vindiciae contra tyrannos; 1651 Hobbes; 1689 Locke; 1762 Rousseau"
+      americas: "1620 – Mayflower Compact; 1776 'governments derive their just powers from the consent of the governed'"
+    sources:
+      - "Thomas Hobbes, Leviathan (1651)"
+      - "John Locke, Two Treatises of Government (1689)"
+      - "Jean-Jacques Rousseau, Du contrat social (1762)"
+
+  - id: freedom_of_speech_thought
+    name: Freedom of thought, speech and the press
+    category: ideas
+    requires: []
+    helps: [religious_tolerance, free_press, reproducibility_open_publication]
+    explain: >
+      People should be free to state and print opinions, including wrong and offensive ones,
+      and to criticise those in power, without licence beforehand or punishment afterwards.
+      The reasons (Milton, Mill): no censor is infallible, so suppression sometimes destroys a
+      truth; even a false opinion forces the true one to be understood and defended rather
+      than recited; and a ruler who silences criticism is the last to learn of famine,
+      corruption and military failure. The ancient Chinese image is that stopping the
+      people's mouths is like damming a river: it holds for a while and then breaks and
+      drowns many. The freedom has always had limits at the edges (defamation, incitement to
+      violence, military secrets); the principle is that the opinion itself is not the crime.
+    pitfalls:
+      - "Presenting it as absolute, with no law of libel or incitement, which no society has ever had"
+      - "Attributing 'I disapprove of what you say, but will defend to the death your right to say it' to Voltaire; Evelyn Beatrice Hall wrote it in 1906"
+      - "Idealising Athens, which executed Socrates, or Milton, who excluded Catholics from his tolerance"
+      - "Asking a ruler for free speech as a right rather than as his own interest in honest counsel; and exercising it before it exists (blasphemy, sedition, lèse-majesté)"
+    history:
+      greece: "5th c. BC – Athenian isegoria (equal right to address the assembly) and parrhesia (frank speech); 399 BC trial of Socrates shows the limits"
+      china: "text c. 4th c. BC about the 9th c. BC – Duke of Shao warns King Li that blocking the people's mouths is worse than blocking a river (Guoyu); remonstrance by officials becomes an institution; 213 BC Qin burning of books"
+      india: "c. 256 BC – Ashoka's edicts encourage sects to hear one another's teachings; 1575 Akbar opens a house of debate for Muslim scholars, later inviting participants from other faiths"
+      islamic: "8th–10th c. – formal debates between schools and faiths at Abbasid courts, alongside episodes of enforced doctrine (the mihna, 833–848)"
+      europe: "1644 Milton, Areopagitica; 1670 Spinoza; 1695 English press licensing lapses; 1766 Swedish Freedom of the Press Act, the first such law; 1859 Mill, On Liberty"
+      americas: "1791 – First Amendment to the United States Constitution"
+    sources:
+      - "John Milton, Areopagitica (1644)"
+      - "John Stuart Mill, On Liberty (1859)"
+      - "Jacob Mchangama, Free Speech: A History from Socrates to Social Media (2022)"
+
+  - id: religious_tolerance
+    name: Religious toleration and freedom of conscience
+    category: ideas
+    requires: []
+    helps: [freedom_of_speech_thought, secular_state]
+    explain: >
+      The state should not punish people for their beliefs or worship as long as they keep the
+      peace. The arguments, in the order they usually work on rulers: persecution fails,
+      because belief cannot be commanded and force produces hypocrites and exiles, not
+      converts (Locke); it is costly, because the persecuted are often the most skilled
+      craftsmen and merchants and other states gladly take them; it is dangerous, because every
+      faith is a minority somewhere and the precedent returns; and no magistrate can be certain
+      enough of doctrine to kill for it ('to kill a man is not to defend a doctrine, it is to
+      kill a man', Castellio). Toleration as a grudging permit and freedom of conscience as an
+      equal right are different stages, and most of history offers only the first.
+    pitfalls:
+      - "Painting golden ages: Cyrus, al-Andalus, the Mongols and the Ottomans practised pragmatic, unequal toleration with taxes and restrictions, not equal rights"
+      - "Saying the Edict of Milan (313) made Christianity the state religion; that was Theodosius in 380"
+      - "Forgetting that Locke himself excluded Catholics and atheists"
+      - "Arguing that all religions are equally true (or false); that is heresy everywhere and is not needed for the case"
+      - "Advocating it in Spain or Italy around 1490, where it marks the speaker as a suspected heretic or crypto-Jew"
+    history:
+      mesopotamia: "539 BC – after taking Babylon, Cyrus claims in a royal inscription to have returned cult images and inhabitants to named settlements"
+      india: "c. 256 BC – Ashoka, Rock Edict XII: whoever praises his own sect and disparages others harms his own; 1564–1580s Akbar abolishes the tax on non-Muslims and proclaims 'peace with all'"
+      china: "Han onwards – Confucianism, Daoism and Buddhism mostly coexist under state supervision, with episodes of suppression (845)"
+      rome: "311–313 – Edicts of Galerius and Milan grant freedom of worship"
+      islamic: "7th c. onwards – protected (dhimmi) status for Jews and Christians in return for a tax and legal subordination; Ottoman millet system"
+      east_asia: "13th c. – Mongol khans exempt clergy of all faiths and stage a public debate between religions (1254, reported by William of Rubruck)"
+      europe: "1554 Castellio against the burning of Servetus; 1568 Edict of Torda; 1573 Warsaw Confederation; 1598 Edict of Nantes (revoked 1685); 1689 Locke's Letter and the English Toleration Act; 1781 Joseph II's Patent of Toleration"
+      americas: "1636 – Roger Williams founds Providence on liberty of conscience; 1786 Virginia Statute for Religious Freedom"
+    sources:
+      - "John Locke, A Letter Concerning Toleration (1689)"
+      - "Perez Zagorin, How the Idea of Religious Toleration Came to the West (2003)"
+      - "Romila Thapar, Aśoka and the Decline of the Mauryas (1961)"
+
+  - id: secular_state
+    name: Secular state (separation of religious and civil authority)
+    category: ideas
+    requires: []
+    helps: [religious_tolerance, rule_of_law]
+    explain: >
+      Civil government concerns peace, property and bodily safety and should neither enforce
+      doctrine nor be controlled by clergy; religious bodies govern belief and worship by
+      persuasion only, without the sword. Each side gains: the state is no longer torn by
+      confessional wars or bound to one party's theology, and religion is no longer corrupted
+      by office-seekers and used as a tool of rulers, which was Roger Williams's argument for
+      the 'wall of separation'. A secular state is neutral between faiths, not hostile to
+      faith. In Latin Christendom the starting point already exists in the distinction of the
+      'two powers' and in 'render unto Caesar'.
+    pitfalls:
+      - "Equating secular with atheist or anti-religious"
+      - "Calling medieval Europe a theocracy; popes and kings fought for centuries precisely because the two powers were distinct"
+      - "Assuming one model: American separation, French laïcité and an established church with toleration (England) are different arrangements"
+      - "Projecting 'church and state' onto societies without a church; in imperial China or the caliphates the issue is the ruler's control over ritual and scholars"
+      - "Proposing it where the ruler's legitimacy is sacred (Mandate of Heaven, caliph, anointed king) removes the ground he stands on"
+    history:
+      rome: "494 – Pope Gelasius I distinguishes priestly authority and royal power"
+      china: "from Han times – the state supervises and licenses religion; no independent church contests it"
+      islamic: "9th c. onwards – in practice scholars (ulama) hold religious authority and sultans political power, without a doctrine of separation; 1924–1937 Turkish Republic adopts secularism"
+      india: "1950 – Constitution of India establishes equal standing of religions (the word 'secular' added 1976)"
+      europe: "1075–1122 Investiture Controversy; 1324 Marsilius of Padua, Defensor pacis: clergy have no coercive power; 1689 Locke; 1905 French law on the separation of the churches and the state"
+      americas: "1644 Roger Williams; 1786 Virginia Statute; 1791 First Amendment; 1802 Jefferson's 'wall of separation' letter"
+    sources:
+      - "Marsilius of Padua, Defensor pacis (1324)"
+      - "Roger Williams, The Bloudy Tenent of Persecution (1644)"
+      - "Mark Lilla, The Stillborn God: Religion, Politics, and the Modern West (2007)"
+
+  - id: utilitarianism
+    name: Utilitarianism (judge rules by their consequences for everyone)
+    category: ideas
+    requires: []
+    helps: [human_equality_dignity]
+    explain: >
+      Judge a law, custom or action by its effects on the well-being of everyone it touches,
+      counting each person's happiness and suffering equally, and prefer what gives the
+      greatest total good. Its power is as a tool of reform: it asks of every punishment, tax,
+      privilege or ritual 'whom does this help, whom does it hurt, and by how much', and
+      refuses the answer 'it has always been so'. Used as cost-benefit reasoning it speaks to
+      rulers in terms of their own realm's prosperity, as Mozi did when he condemned
+      aggressive war and lavish funerals as waste that feeds nobody.
+    pitfalls:
+      - "Reducing it to 'the end justifies the means' or to personal pleasure-seeking"
+      - "Ignoring the standard objection that a pure sum can justify sacrificing an innocent or a minority; most users combine it with rights"
+      - "Pretending that happiness can be measured and added with precision"
+      - "Forgetting to count everyone: applying the calculation to the listener's own class or nation only"
+    history:
+      china: "Warring States period – Mohist writers judge doctrines and policies by their benefit to all the people (wealth, population, order); an early consequentialist standard distinct from maximising pleasure"
+      greece: "c. 300 BC – Epicurus makes pleasure and freedom from pain the goal, but for the individual"
+      india: "c. 700 AD – Shantideva: the suffering of others is to be removed just like one's own"
+      europe: "1725 Hutcheson: 'the greatest happiness for the greatest numbers'; 1764 Beccaria applies it to punishment; 1789 Bentham; 1863 Mill, Utilitarianism; 1874 Sidgwick"
+    sources:
+      - "Jeremy Bentham, An Introduction to the Principles of Morals and Legislation (1789)"
+      - "John Stuart Mill, Utilitarianism (1863)"
+      - "Ian Johnston (tr.), The Mozi: A Complete Translation (2010)"
+
+  - id: abolition_of_torture
+    name: Abolition of judicial torture; proportionate, certain punishment
+    category: ideas
+    requires: []
+    helps: [habeas_corpus_fair_trial, utilitarianism]
+    explain: >
+      Torture to obtain confessions tests endurance, not guilt: the weak innocent confess and
+      name others, the tough guilty go free, so every conviction it produces is worthless as
+      evidence. Crime is deterred by the certainty and promptness of a moderate punishment far
+      more than by the cruelty of a rare one, and public cruelty hardens the public. The
+      argument must also offer a replacement: continental courts tortured because their law
+      demanded a confession or two eyewitnesses for conviction, so abolition requires
+      allowing judges to convict on a careful weighing of circumstantial evidence. Witch
+      trials supply the proof, since tortured suspects everywhere confessed to impossible
+      things.
+    pitfalls:
+      - "Thinking torture was lawless sadism; in Roman-canon procedure it was a regulated step that needed prior partial proof, so the law of proof must change too"
+      - "Citing museum horrors such as the iron maiden, most of which are 19th-century fabrications"
+      - "Calling it medieval; judicial torture peaked in the 16th–17th centuries and English common law largely did without it"
+      - "Arguing only from mercy; magistrates respond to the argument that torture convicts the innocent and lets the guilty escape"
+    history:
+      china: "167 BC – Emperor Wen of Han abolishes mutilating punishments; 7th c. Tang Code limits the amount and occasions of judicial beating"
+      india: "c. 250 BC – Ashoka’s Pillar Edict IV grants condemned prisoners three days before execution for appeals or religious observance"
+      rome: "c. 215 AD – Ulpian: evidence from torture is 'fragile and dangerous' (Digest 48.18.1.23), yet its use spreads"
+      islamic: "classical law – most jurists hold a confession under duress invalid; rulers' courts tortured nonetheless"
+      europe: "866 Pope Nicholas I condemns confession by torture; c. 1250 torture enters continental procedure; 1631 Spee, Cautio criminalis; 1754 Prussia abolishes it; 1764 Beccaria; 1786 Tuscany abolishes torture and the death penalty"
+    sources:
+      - "Cesare Beccaria, Dei delitti e delle pene (1764)"
+      - "John H. Langbein, Torture and the Law of Proof: Europe and England in the Ancien Régime (1977)"
+      - "Friedrich Spee, Cautio criminalis (1631)"
+
+  # ------------------------------------------------------- cooperation and strategy
+  - id: positive_sum_cooperation
+    name: Positive-sum cooperation (trade is not zero-sum)
+    category: ideas
+    requires: []
+    helps: [division_of_labour, comparative_advantage_free_trade]
+    explain: >
+      A voluntary exchange can benefit both sides: each expects to gain when agreeing to trade;
+      wealth is therefore created by specialisation and trade, not merely moved from a loser
+      to a winner. A worked example convinces: if a smith makes a knife in one day and a
+      loaf's worth of grain in three, and a farmer the reverse, each gains two days by
+      trading. The consequence for policy is that a neighbour's prosperity is an advantage
+      (richer customers, more to buy), that plunder and monopoly destroy more than they
+      capture, and that the ruler's revenue grows with the volume of trade he protects. Some
+      contests really are zero-sum (a fixed piece of land, rank, a battle), and telling the
+      two kinds apart is the skill.
+    pitfalls:
+      - "Claiming everybody gains from every change; the gains are real in total but particular guilds, towns and workers lose"
+      - "Asserting that trade makes war impossible; Angell argued in 1910 only that war had become unprofitable, and war came anyway"
+      - "Confusing absolute with comparative advantage"
+      - "Ignoring fraud, force and unequal bargaining, under which an exchange is not voluntary and the argument does not apply"
+    history:
+      china: "c. 90 BC – Sima Qian, 'Biographies of the Money-Makers': exchange arises of itself and enriches the state when left alone"
+      greece: "c. 360 BC – Xenophon and Plato note that specialisation and exchange supply the city's needs"
+      rome: "4th c. AD – Libanius: God spread his gifts over different lands so that men would need and trade with one another"
+      islamic: "1377 – Ibn Khaldun: cooperation and division of labour produce a surplus beyond the workers' needs; he argues that mounting tax demands can discourage productive activity and eventually reduce revenue"
+      europe: "1748 Montesquieu on commerce softening manners; 1758 Hume, 'Of the Jealousy of Trade'; 1776 Adam Smith; 1817 Ricardo's comparative advantage"
+      global: "1944 – von Neumann and Morgenstern distinguish zero-sum from non-zero-sum games"
+    sources:
+      - "Adam Smith, An Inquiry into the Nature and Causes of the Wealth of Nations (1776)"
+      - "David Hume, Of the Jealousy of Trade (1758)"
+      - "Robert Wright, Nonzero: The Logic of Human Destiny (2000)"
+
+  - id: game_theory
+    name: Game theory (prisoner's dilemma, credible commitment)
+    category: ideas
+    requires: []
+    helps: [probability_statistics, positive_sum_cooperation, deterrence]
+    explain: >
+      When the result of your choice depends on what others choose, reason about their
+      incentives as well as your own. The central case is the prisoner's dilemma: two parties
+      each do better by cheating whatever the other does, so both cheat and both end worse off
+      than if they had cooperated (two farmers who will not help with each other's harvest,
+      two states arming). Cooperation can pay when future encounters are sufficiently likely and cheating
+      jeopardises their rewards, when a third party enforces agreements, or when a side can bind
+      itself visibly so that its promise or threat is believed (hostages, bonds, burning one's
+      own bridges). Play it with coins for ten rounds and the audience discovers the logic
+      themselves.
+    pitfalls:
+      - "Concluding that people are selfish and cooperation is irrational; the lesson is which rules make cooperation stable"
+      - "Applying one-shot reasoning to repeated dealings, or the reverse"
+      - "Treating 'tit for tat' as the best strategy in all conditions; with mistakes and noise, more forgiving rules do better"
+      - "Taking a Nash equilibrium for the best outcome; it is only a situation where nobody gains by changing alone"
+      - "Repeating that Cortés burned his ships; he had them run aground and dismantled in 1519"
+    history:
+      china: "207 BC – Xiang Yu sinks his boats and breaks the cooking pots before the battle of Julu, the classic commitment device (Shiji); c. 5th–4th c. BC Sunzi on shaping the enemy's choices"
+      india: "c. 3rd c. BC–3rd c. AD – Arthashastra's 'circle of kings' reasons about neighbours' and allies' incentives"
+      mesopotamia: "c. 3rd–5th c. AD – a Babylonian Talmud ruling on dividing an estate among creditors matches a modern game-theoretic solution (Aumann & Maschler, 1985)"
+      europe: "1651 Hobbes; 1713 Waldegrave's mixed strategy for a card game; 1740 Hume's two farmers; 1755 Rousseau's stag hunt; 1838 Cournot"
+      americas: "1928–1944 – von Neumann, then von Neumann & Morgenstern; 1950 Nash equilibrium and the prisoner's dilemma (Flood, Dresher, Tucker); 1960 Schelling; 1980–1984 Axelrod's tournaments"
+    sources:
+      - "John von Neumann & Oskar Morgenstern, Theory of Games and Economic Behavior (1944)"
+      - "Thomas C. Schelling, The Strategy of Conflict (1960)"
+      - "Robert Axelrod, The Evolution of Cooperation (1984)"
+
+  - id: tragedy_of_the_commons
+    name: Commons problem and how communities solve it
+    category: ideas
+    requires: []
+    helps: [game_theory, property_rights_land_registry]
+    explain: >
+      A resource open to all (pasture, forest, fishery, well, clean river) is overused,
+      because each user gets the whole benefit of taking more while the damage is shared by
+      everyone. It is nobody's wickedness, only the incentives, and it ends in ruin unless
+      use is limited. Three kinds of remedy exist: private ownership, regulation by the
+      state, and, often best, rules made and enforced by the users themselves: a defined
+      membership, quotas matched to what the resource can bear (so many beasts per household,
+      closed seasons, mesh sizes), mutual monitoring, graded fines and a cheap way to settle
+      disputes. Mencius gave the conservation argument to a king around 300 BC: keep fine nets
+      out of the ponds and axes out of the hills except in season, and there will be more fish
+      and timber than can be used.
+    pitfalls:
+      - "Repeating Hardin's claim that commons are always ruined; real village commons were regulated and many lasted for centuries (Ostrom)"
+      - "Confusing a commons with rules and members with an unowned open-access resource"
+      - "Offering only privatisation or state control; enclosure dispossesses the poor and provokes revolt"
+      - "Adopting Hardin's own conclusions on coercive population control along with his metaphor"
+    history:
+      greece: "c. 330 BC – Aristotle: what is common to the most people gets the least care (Politics II.3)"
+      china: "c. 300 BC – Mencius on closed seasons and net sizes (1A3) and the stripped Ox Mountain (6A8)"
+      islamic: "7th c. onwards – hima (reserved pastures) and detailed customary water-sharing rules"
+      europe: "medieval – village by-laws 'stint' the number of animals on the common; Swiss alpine commons documented from the 13th c.; Valencia's water tribunal; 1833 William Forster Lloyd's lectures"
+      east_asia: "Edo-period Japan – village common lands (iriai) with strict access rules"
+      americas: "1968 – Hardin, 'The Tragedy of the Commons'; 1990 Ostrom, Governing the Commons"
+    sources:
+      - "Garrett Hardin, The Tragedy of the Commons (1968)"
+      - "Elinor Ostrom, Governing the Commons: The Evolution of Institutions for Collective Action (1990)"
+      - "William Forster Lloyd, Two Lectures on the Checks to Population (1833)"

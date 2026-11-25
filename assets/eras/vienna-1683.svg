@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360" role="img" aria-label="Vienna 1683 architectural blueprint">
+  <defs>
+    <pattern id="g" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0V24" fill="none" stroke="#F3EFE4" stroke-opacity="0.08" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="640" height="360" fill="#0E2E69"/>
+  <rect width="640" height="360" fill="url(#g)"/>
+  <!-- Star-fortress bastion plan (right side) -->
+  <g stroke="#F3EFE4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <polygon points="462,62 490,126 558,118 514,172 564,224 494,224 462,286 430,224 360,224 410,172 366,118 434,126" stroke-width="2.2"/>
+    <polygon points="462,92 482,138 530,132 498,172 534,208 484,208 462,254 440,208 390,208 426,172 394,132 442,138" stroke-opacity="0.45" stroke-width="1.3"/>
+    <circle cx="462" cy="174" r="16" stroke="#F5B83D" stroke-width="2.2"/>
+    <!-- Sightline rays -->
+    <line x1="462" y1="174" x2="584" y2="96" stroke="#F5B83D" stroke-dasharray="5 5" stroke-width="1.6"/>
+    <line x1="462" y1="174" x2="584" y2="252" stroke="#F5B83D" stroke-dasharray="5 5" stroke-width="1.6"/>
+  </g>
+  <!-- St. Stephen's Gothic spire & city wall (left side) -->
+  <g stroke="#F3EFE4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="56" y1="296" x2="366" y2="296" stroke-width="2.2"/>
+    <!-- Bastion wall -->
+    <path d="M72 296 L92 252 H296 L316 296" stroke-width="2.4"/>
+    <line x1="92" y1="264" x2="296" y2="264" stroke-opacity="0.5" stroke-width="1.3"/>
+    <!-- Gothic south tower -->
+    <path d="M168 252 V164 L182 114 L194 44 L206 114 L220 164 V252" stroke-width="2.4"/>
+    <line x1="194" y1="44" x2="194" y2="252" stroke-opacity="0.45" stroke-width="1.3"/>
+    <line x1="174" y1="164" x2="214" y2="164" stroke-width="1.8"/>
+    <line x1="180" y1="126" x2="208" y2="126" stroke-width="1.5"/>
+    <!-- Nave roof -->
+    <path d="M108 252 V210 L142 178 L168 202" stroke-width="2"/>
+    <path d="M220 202 L252 178 L280 210 V252" stroke-width="2"/>
+    <!-- Spire finial -->
+    <circle cx="194" cy="36" r="4" fill="#F5B83D" stroke="none"/>
+  </g>
+</svg>

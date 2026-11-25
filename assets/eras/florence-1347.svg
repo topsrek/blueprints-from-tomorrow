@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360" role="img" aria-label="Florence 1347 architectural blueprint">
+  <defs>
+    <pattern id="g" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0V24" fill="none" stroke="#F3EFE4" stroke-opacity="0.08" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="640" height="360" fill="#0E2E69"/>
+  <rect width="640" height="360" fill="url(#g)"/>
+  <!-- Construction guides -->
+  <g stroke="#F3EFE4" stroke-opacity="0.2" fill="none" stroke-dasharray="5 5" stroke-width="1.2">
+    <line x1="44" y1="266" x2="596" y2="266"/>
+    <line x1="492" y1="42" x2="492" y2="318"/>
+  </g>
+  <!-- Medieval Tuscan towers & Ponte Vecchio arches -->
+  <g stroke="#F3EFE4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Palazzo / medieval tower skyline -->
+    <path d="M96 206 V86 H142 V206" stroke-width="2.2"/>
+    <path d="M92 86 H146 M96 76 V86 M108 76 V86 M120 76 V86 M132 76 V86 M142 76 V86" stroke-width="1.8"/>
+    <rect x="112" y="114" width="14" height="22" rx="7" stroke-width="1.5"/>
+    <path d="M168 206 V120 H226 V206" stroke-width="2"/>
+    <path d="M244 206 V136 H338 V206" stroke-width="2"/>
+    <!-- Bridge deck -->
+    <line x1="60" y1="206" x2="424" y2="206" stroke-width="2.6"/>
+    <line x1="60" y1="216" x2="424" y2="216" stroke-width="1.5"/>
+    <!-- Three segmental arches -->
+    <path d="M74 266 A54 44 0 0 1 182 266" stroke-width="2.5"/>
+    <path d="M188 266 A54 44 0 0 1 296 266" stroke-width="2.5"/>
+    <path d="M302 266 A54 44 0 0 1 410 266" stroke-width="2.5"/>
+    <!-- Arno ripples -->
+    <path d="M72 284 Q112 276 152 284 T232 284 T312 284 T392 284" stroke-opacity="0.55" stroke-width="1.5"/>
+    <path d="M104 302 Q144 295 184 302 T264 302 T344 302" stroke-opacity="0.35" stroke-width="1.3"/>
+  </g>
+  <!-- Apothecary quarantine lantern on right -->
+  <g stroke="#F3EFE4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M492 78 V104" stroke-width="2.2"/>
+    <path d="M466 124 L492 104 L518 124 Z" stroke-width="2.2"/>
+    <path d="M468 124 L474 214 H510 L516 124" stroke-width="2.2"/>
+    <line x1="492" y1="124" x2="492" y2="214" stroke-opacity="0.5" stroke-width="1.4"/>
+    <path d="M464 214 H520 L514 228 H470 Z" stroke-width="2.2"/>
+    <!-- Warm amber flame + subtle glow rings -->
+    <path d="M492 152 C502 168 500 184 492 188 C484 184 482 168 492 152 Z" fill="#F5B83D" stroke="#F5B83D" stroke-width="1.5"/>
+    <circle cx="492" cy="172" r="38" stroke="#F5B83D" stroke-opacity="0.32" stroke-dasharray="4 6" stroke-width="1.5"/>
+    <circle cx="492" cy="172" r="60" stroke="#F5B83D" stroke-opacity="0.16" stroke-dasharray="3 7" stroke-width="1.2"/>
+  </g>
+</svg>

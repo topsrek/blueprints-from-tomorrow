@@ -1,0 +1,719 @@
+# Blueprints from Tomorrow – technology tree fragment: Electricity & electronics.
+# Schema: see the header of techtree/core.yaml.
+
+technologies:
+
+  # ------------------------------------------------ foundations (buildable before 1800)
+  - id: static_electricity
+    name: Static electricity, conductors and insulators, Leyden jar
+    category: electricity
+    requires: []
+    helps: [glassmaking]
+    explain: >
+      Rubbing glass with silk, or amber, sulphur or resin with wool or fur, charges
+      them so that they attract chaff and give small sparks. There are two kinds of
+      charge: like repels like, unlike attract. Metals, water and the human body
+      conduct charge away; glass, silk, wax, resin and dry air do not, so a conductor
+      keeps its charge only if it hangs on silk or stands on glass or wax. A glass
+      globe or cylinder turned on an axle against a leather pad is a continuous
+      source, and a glass jar lined inside and outside with metal foil (Leyden jar)
+      stores enough charge for a strong spark and shock. Lightning is the same thing
+      on a large scale.
+    pitfalls:
+      - "Trying it in damp weather: a film of moisture on the glass leaks the charge away and nothing works"
+      - "Treating the Leyden jar as a toy; a large jar or a battery of jars gives shocks that can injure or kill"
+      - "Saying that static and current electricity are different things; it is the same charge, at high tension and tiny quantity"
+      - "Believing a static machine can drive a telegraph, lamp or motor; it delivers almost no continuous current"
+      - "Claiming that the ancients understood electricity; they knew only that rubbed amber attracts light things"
+    history:
+      greece: "c. 600 BC – attraction by rubbed amber (elektron) is attributed to Thales by later writers; c. 300 BC Theophrastus mentions it for another stone"
+      china: "1st c. AD – Wang Chong, Lunheng, compares dunmou picking up mustard seeds with a lodestone drawing needles. The passage does not describe rubbing"
+      europe: "1600 – Gilbert separates electric from magnetic attraction; c. 1660 Guericke's sulphur globe; 1706 Hauksbee's glass globe machine; 1729 Gray, conduction; 1733 Du Fay, two kinds of electricity; 1745–1746 Leyden jar (Kleist, Musschenbroek)"
+      americas: "1747–1750 – Franklin in Philadelphia: one fluid, plus and minus, conservation of charge, power of points"
+    sources:
+      - "Wang Chong, Lunheng, Luan long and Zao hu (1st c. AD)"
+      - "William Gilbert, De Magnete (1600)"
+      - "J. L. Heilbron, Electricity in the 17th and 18th Centuries (1979)"
+
+  - id: lightning_rod
+    name: Lightning rod
+    category: electricity
+    requires: []
+    helps: [static_electricity, wire_drawing]
+    explain: >
+      Lightning is a giant electric spark and takes the easiest path to earth. A metal rod
+      standing a metre or two above the highest point of the building, joined without gaps
+      to a thick conductor (a copper or iron rod or strap about as thick as a finger) that
+      runs down the outside by the shortest way into permanently moist ground, carries the
+      stroke past the building. The conductor and its earth termination must both carry
+      the stroke: a long buried rod or plate in wet soil, well away from the foundations.
+      Gutters, bell frames and other large metal parts should be joined to the conductor.
+    pitfalls:
+      - "Poor earthing or a broken or corroded joint increases the risk of a side flash into the building"
+      - "Expecting a rod to discharge an entire cloud. A rod can intercept a nearby strike and conduct its current to earth"
+      - "Repeating the kite or insulated-rod experiment in a thunderstorm; Richmann was killed doing this in St Petersburg in 1753"
+      - "Thin wire, sharp bends or a conductor led through the inside of the house"
+      - "Ringing church bells against storms; it kept killing bell-ringers and should stop"
+    history:
+      americas: "1750 – Franklin proposes pointed rods; 1752 earthed protective rods on the Philadelphia Academy and Pennsylvania State House. Franklin published instructions late that year in Poor Richard's Almanack for 1753"
+      europe: "May 1752 – At Marly a demonstrator acting for Dalibard draws sparks from a storm cloud with Franklin's insulated rod; 1754 Prokop Diviš erects an earthed 'weather machine' in Moravia (independence from Franklin disputed); rods spread from the 1760s against religious and learned resistance"
+    sources:
+      - "Benjamin Franklin, Experiments and Observations on Electricity (1751)"
+      - "E. Philip Krider, Benjamin Franklin and the First Lightning Conductors (2004)"
+      - "J. L. Heilbron, Electricity in the 17th and 18th Centuries (1979)"
+
+  - id: electric_battery
+    name: Electric battery (voltaic pile)
+    category: electricity
+    requires: []
+    helps: [zinc_brass, copper_bronze, wire_drawing, sulphuric_acid]
+    explain: >
+      Two different metals in contact with salt water or dilute acid drive a
+      continuous electric current. Stack pairs in a fixed order: copper (or silver)
+      disc, zinc disc, cloth or pasteboard soaked in brine, then again copper, zinc,
+      wet cloth, and so on. Each pair gives a little under one volt and the pairs add
+      up, so 20 to 50 pairs give sparks, a tingling shock, twitching frog legs and enough
+      voltage to split water with a separate electrolysis cell. A row of cups of brine or
+      dilute
+      acid, each holding a zinc and a copper strip linked cup to cup (crown of cups),
+      does the same and is easier to keep working.
+    pitfalls:
+      - "The same metal on both sides, or the order of the metals reversed part of the way up the pile: the pairs cancel"
+      - "Cloth that is dry, or so wet that brine runs down the side and short-circuits the pile"
+      - "Expecting it to last: the pile weakens within minutes to hours as gas collects on the copper and the cloth dries, and the zinc is eaten away"
+      - "Assuming zinc is at hand: before about 1600 metallic zinc is hardly known in Europe (it is made in India and China); iron with copper, or tin with silver, works but much more weakly"
+      - "Citing the 'Baghdad battery': there is no evidence those Parthian or Sasanian jars were electric cells"
+    history:
+      europe: "1780–1791 – Galvani, frog-leg experiments (he took it for animal electricity); 1800 – Volta in Pavia and Como, pile and crown of cups, announced to the Royal Society; within weeks Nicholson and Carlisle decompose water with it"
+    sources:
+      - "Alessandro Volta, On the Electricity Excited by the Mere Contact of Conducting Substances of Different Kinds, Philosophical Transactions 90 (1800)"
+      - "Giuliano Pancaldi, Volta: Science and Culture in the Age of Enlightenment (2003)"
+
+  - id: practical_batteries
+    name: Constant and rechargeable cells (Daniell, lead-acid, dry cell)
+    category: electricity
+    requires: [electric_battery]
+    helps: [sulphuric_acid, zinc_brass, electrolysis]
+    explain: >
+      Volta's pile fades because hydrogen collects on the copper. The Daniell cell
+      avoids this: zinc in dilute sulphuric acid or zinc sulphate, copper in a
+      saturated solution of copper sulphate (blue vitriol), the two liquids kept apart
+      by a porous unglazed pot. It gives a steady 1.1 volts for days and made
+      telegraphy possible. Two lead plates in dilute sulphuric acid form a cell that
+      can be charged from another source and gives the current back at about 2 volts
+      (lead-acid accumulator). Zinc and a carbon rod packed in manganese dioxide,
+      with sal ammoniac solution, give 1.5 volts and, made as a paste, the dry cell.
+    pitfalls:
+      - "Letting the two solutions of a Daniell cell mix: copper plates out on the zinc and the cell dies"
+      - "Charging a lead cell in a closed room or near a flame: it gives off hydrogen, which explodes"
+      - "Confusing voltage with capacity: more cells in series raise the voltage, larger plates give more current for longer"
+      - "Impurities in zinc cause corrosion even on open circuit. Historical cells used mercury amalgamation, which introduces a toxic metal. High-purity zinc reduces local corrosion"
+    history:
+      europe: "1836 – Daniell cell (London); 1839 Grove cell; 1859 Planté lead-acid accumulator, 1881 Faure pasted plates; 1866 Leclanché cell; 1886 Gassner dry cell"
+    sources:
+      - "J. Frederic Daniell, On Voltaic Combinations, Philosophical Transactions 126 (1836)"
+      - "Richard H. Schallenberg, Bottled Energy: Electrical Engineering and the Evolution of Chemical Energy Storage (1982)"
+
+  - id: electromagnetism
+    name: Electromagnetism and induction
+    category: electricity
+    requires: [electric_battery]
+    helps: [magnetic_compass, wire_drawing]
+    explain: >
+      A wire carrying current deflects a compass needle held near it: the current is
+      surrounded by a circular magnetic force. Wind insulated wire (wrapped in silk or
+      cotton thread, or varnished) in many turns round a bar of soft iron and it
+      becomes a strong magnet while the current flows and loses its force when the
+      current stops; this is the electromagnet, the basis of telegraph, relay, bell
+      and motor. The reverse also holds: moving a magnet into or out of a coil, or
+      switching the current in a neighbouring coil on or off, drives a current in the
+      coil, but only while something is changing (induction). This is the basis of
+      dynamo and transformer.
+    pitfalls:
+      - "Bare wire wound on iron: the turns short-circuit and nothing happens; every turn must be insulated from its neighbours and from the core"
+      - "Expecting a steady magnet at rest in a coil to produce current; only change induces"
+      - "Using hard steel for an electromagnet core: it stays magnetised; use soft annealed iron"
+      - "Holding the compass at right angles to the wire instead of laying the wire along the needle, so the effect is missed, as it was for twenty years"
+    history:
+      europe: "1802 – Romagnosi reports a needle disturbed by a voltaic pile (ignored, and its meaning is disputed); 1820 Ørsted in Copenhagen, then Ampère, forces between currents, and Schweigger's multiplier coil; c. 1824–1825 Sturgeon's electromagnet; 1831 Faraday, induction"
+      americas: "1829–1831 – Joseph Henry at Albany builds strong electromagnets with many turns of silk-insulated wire and finds self-induction; his work on induction is independent of Faraday but published later"
+    sources:
+      - "Hans Christian Ørsted, Experimenta circa effectum conflictus electrici in acum magneticam (1820)"
+      - "Michael Faraday, Experimental Researches in Electricity, vol. 1 (1839)"
+      - "Nancy Forbes & Basil Mahon, Faraday, Maxwell, and the Electromagnetic Field (2014)"
+
+  - id: ohms_law_circuits
+    name: Circuits, voltage, current and resistance (Ohm's law)
+    category: electricity
+    requires: [electric_battery]
+    helps: [electromagnetism, symbolic_algebra]
+    explain: >
+      Current flows only round a closed loop of conductor. Three quantities must be
+      kept apart: the push of the source (voltage), the flow (current) and the
+      hindrance of the wire (resistance); current equals voltage divided by
+      resistance. Resistance grows in proportion to the length of a wire and falls
+      in proportion to its cross-section, and copper conducts about six times better
+      than iron. Cells in series add their voltages; resistances in series add; in
+      parallel branches the current divides. The power dissipated as heat is current
+      squared times resistance. Multiply by elapsed time to find the energy delivered at
+      steady current. A coil round a compass needle (galvanometer) measures
+      current by the angle of deflection.
+    pitfalls:
+      - "Thinking that current is used up on its way round the circuit; the same current returns to the source, what is spent is energy"
+      - "Using one word for voltage, current and power, as everyday speech does"
+      - "Forgetting the internal resistance of the battery, which limits the current however thick the wire"
+      - "Believing that it is the voltage alone that kills or heats; what matters is the current that the voltage can drive through the body or wire"
+    history:
+      europe: "1781 – Cavendish finds the proportionality but does not publish; 1827 Ohm, Die galvanische Kette (rejected in Germany at first, honoured by the Royal Society in 1841); 1841 Joule, heating law; 1845 Kirchhoff, circuit laws"
+    sources:
+      - "Georg Simon Ohm, Die galvanische Kette, mathematisch bearbeitet (1827)"
+      - "Bruce J. Hunt, Pursuing Power and Light: Technology and Physics from James Watt to Albert Einstein (2010)"
+
+  # ------------------------------------------------ nineteenth-century applications
+  - id: electric_telegraph
+    name: Electric telegraph
+    category: electricity
+    requires: [electric_battery]
+    helps: [electromagnetism, practical_batteries, ohms_law_circuits, wire_drawing, optical_telegraph]
+    explain: >
+      A key at one end closes a battery circuit; at the far end the current works an
+      electromagnet that clicks, or deflects a needle. Letters are sent as patterns
+      of short and long currents (Morse code, with the shortest signs for the most
+      frequent letters). One iron or copper wire on poles is enough if it is carried
+      on glass or glazed ceramic insulators and the circuit is completed through
+      plates buried in the earth at both ends. For long lines a relay, a sensitive
+      electromagnet that switches a fresh local battery, repeats the signal every
+      few hundred kilometres.
+    pitfalls:
+      - "Wire fixed to wet wooden poles without insulators: in rain the current leaks to earth and nothing arrives"
+      - "Believing two wires are always needed; the earth return (Steinheil, 1838) halves the cost"
+      - "Too few cells for the line: resistance grows with length, so use thicker wire, more cells in series, or relays"
+      - "No agreed code, operating rules and message accounting; the system is as much organisation as apparatus"
+      - "Crediting Morse alone: needle telegraphs ran earlier in Germany, Russia and England, and the relay and much of the code came from Henry and Vail"
+    history:
+      europe: "1809 – Sömmerring's electrochemical telegraph (Munich); 1832 Schilling's needle telegraph (St Petersburg); 1833 Gauss and Weber link observatory and laboratory in Göttingen; 1837 Cooke and Wheatstone patent, in commercial railway use from 1839"
+      americas: "1837–1838 – Morse and Vail demonstrate their recording telegraph; 1844 Washington–Baltimore line"
+      india: "1839 – O'Shaughnessy's experimental line near Calcutta; 1851–1854 first trunk lines"
+      global: "1866 – lasting transatlantic cable; by the 1870s Europe, India, China, Australia and the Americas are linked"
+    sources:
+      - "Tom Standage, The Victorian Internet (1998)"
+      - "Ken Beauchamp, History of Telegraphy (2001)"
+
+  - id: submarine_cable
+    name: Insulated cable and long-line signalling
+    category: electricity
+    requires: [electric_telegraph, wire_drawing]
+    helps: [ohms_law_circuits, rubber_vulcanisation, differential_equations]
+    explain: >
+      A wire under water or underground needs a continuous waterproof insulating
+      coat. Gutta-percha, the latex of a Malayan tree, softens in hot water, can be
+      pressed seamlessly round a stranded copper core and stays tight in cold sea
+      water; outside goes tarred hemp and an armour of iron wires. A long cable
+      behaves like a long Leyden jar: it has to be charged before the signal appears
+      at the far end, so signals smear out and the usable speed falls with the
+      square of the length. The cure is a thick, pure copper core, thick insulation,
+      low voltage and a very sensitive receiver (mirror galvanometer), never more
+      voltage.
+    pitfalls:
+      - "Forcing signals through with high voltage: 2,000 volts from induction coils destroyed the insulation of the already defective 1858 Atlantic cable within weeks"
+      - "Leaving gutta-percha exposed to sunlight and air during storage, or allowing joints or damaged insulation to admit seawater"
+      - "Not testing the copper and every length of insulation before laying; one pinhole ruins the whole cable"
+      - "Assuming a submarine cable can be worked as fast as a land line of the same length"
+    history:
+      europe: "1843 – gutta-percha brought to London from Singapore (Montgomerie), where Malay craftsmen already used it; 1847 Siemens' press for seamless coating; 1851 lasting Dover–Calais cable; 1854–1855 William Thomson's theory of signal retardation"
+      global: "1858 – first Atlantic cable works for a few weeks; 1866 lasting Atlantic cable laid by the Great Eastern; 1870 Britain–India, 1871 extended to China and Australia"
+    sources:
+      - "John Steele Gordon, A Thread Across the Ocean (2002)"
+      - "Bern Dibner, The Atlantic Cable (1959)"
+
+  - id: dynamo_electric_motor
+    name: Dynamo and electric motor
+    category: electricity
+    requires: [electromagnetism]
+    helps: [ohms_law_circuits, wire_drawing, water_wheel, steam_turbine, water_turbine]
+    explain: >
+      A coil of insulated wire turned between the poles of a magnet has a current
+      induced in it that reverses every half turn. A commutator, a split copper
+      ring on the shaft touched by two fixed brushes, switches the connections at the
+      right moment so that direct current comes out. The same machine fed with
+      current turns as a motor. Large output needs electromagnets instead of
+      permanent magnets, fed by part of the machine's own current: the weak
+      magnetism left in the iron starts the process (self-excitation). The rotating
+      iron must be built up from thin insulated sheets or wires, or it heats and
+      wastes the power, and the air gap between rotor and poles must be small.
+    pitfalls:
+      - "Forgetting the commutator and wondering why no steady direct current appears"
+      - "A solid iron rotor: eddy currents heat it and eat most of the power"
+      - "Building an electric motor first and running it from batteries; zinc burnt in cells cost many times as much as coal burnt under a boiler, which is why motors waited for the dynamo"
+      - "Believing a motor driving a dynamo that feeds the motor could run for ever"
+      - "Short-circuiting a running dynamo, or opening the field circuit of a large machine, which gives a dangerous high-voltage arc"
+    history:
+      europe: "1821 – Faraday's rotation experiment; 1831 Faraday's disc; 1832 Pixii's hand-cranked magneto with commutator; 1834–1838 Jacobi's motor drives a boat in St Petersburg; c. 1861 Jedlik notes self-excitation but does not publish; 1866–1867 self-excited dynamo (Werner Siemens, Wheatstone, Varley, independently); 1871 Gramme's ring dynamo; 1873 Vienna exhibition shows the dynamo running as a motor"
+      americas: "1837 – Davenport's patent for a battery motor; 1880s Edison and Sprague develop efficient dynamos and traction motors"
+    sources:
+      - "Michael Faraday, Experimental Researches in Electricity, vol. 1 (1839)"
+      - "Brian Bowers, A History of Electric Light and Power (1982)"
+
+  - id: electric_light
+    name: Electric light (arc lamp and incandescent lamp)
+    category: electricity
+    requires: []
+    helps: [dynamo_electric_motor, air_pump_vacuum, glassmaking, ohms_law_circuits, practical_batteries, alternating_current_grid]
+    explain: >
+      Two carbon rods touched and drawn a few millimetres apart carry a dazzling arc;
+      this needs about 50 volts and a mechanism that feeds the rods as they burn, and
+      suits streets and halls. For rooms, a thin filament is heated white-hot by the
+      current inside a glass bulb from which the air has been pumped out very
+      thoroughly, otherwise it burns through in seconds. Carbonised cotton thread or
+      bamboo fibre lasts hundreds of hours; drawn tungsten wire in a bulb filled
+      with a little inert gas is far better. The filament must be thin and of high
+      resistance so that many lamps can be fed in parallel at about 100 volts
+      through thin copper mains, each with its own switch and a fuse.
+    pitfalls:
+      - "Thinking the lamp is the invention; it is useless without dynamos, mains, fuses, switches and meters, and Edison's achievement was the whole system"
+      - "A poor vacuum: an ordinary piston air pump is not enough, it needs a mercury pump (Sprengel, 1865) and heating of the bulb while pumping"
+      - "A thick low-resistance filament, which needs huge currents and impossibly thick copper mains"
+      - "Crediting Edison alone: Swan in England showed a working carbon lamp at the same time and many earlier lamps failed only for lack of vacuum"
+    history:
+      europe: "1802–1809 – Davy (London) and Petrov (St Petersburg) show the arc between carbon points; 1876 Yablochkov's arc candle lights Paris streets; 1878–1880 Swan's carbon filament lamp (Newcastle); 1904 tungsten filament (Just and Hanaman, Budapest)"
+      americas: "1879 – Edison's carbon filament lamp at Menlo Park; 1882 Pearl Street central station, New York; 1910 Coolidge's ductile tungsten; 1913 Langmuir's gas-filled lamp"
+    sources:
+      - "Robert Friedel & Paul Israel with Bernard S. Finn, Edison's Electric Light: Biography of an Invention (1986)"
+      - "Brian Bowers, A History of Electric Light and Power (1982)"
+
+  - id: alternating_current_grid
+    name: Alternating current, transformer and power grid
+    category: electricity
+    requires: [dynamo_electric_motor, ohms_law_circuits]
+    helps: [water_turbine, steam_turbine, trigonometry]
+    explain: >
+      At a given transmitted power, the power lost in a line is current squared times
+      resistance, so power should travel at high voltage and small current: ten times the
+      voltage means one hundredth of the loss. A transformer makes this possible with
+      alternating current: two coils on a closed core of thin iron sheets, where the
+      voltages are approximately in the ratio of the numbers of turns. A generator without
+      commutator gives alternating current at about 50 or 60 complete cycles per second;
+      it is stepped up to thousands of volts for the line and down to about 100 to 240
+      volts for use. Three windings set 120 degrees apart give three-phase current on
+      three wires, which produces a rotating magnetic field that drives simple motors
+      without brushes (induction motor).
+    pitfalls:
+      - "Trying to transform direct current; a transformer works only with changing current and burns out on direct current"
+      - "A solid iron transformer core, or a core that is not closed, which wastes most of the power as heat"
+      - "Underrating the danger: high-voltage alternating current kills, so lines need earthing, fuses, insulation and distance"
+      - "Connecting two generators without matching frequency and phase"
+      - "Telling the story as Tesla alone against Edison; the transformer and three-phase system were mainly worked out in Hungary, Italy and Germany"
+    history:
+      europe: "1831 – Faraday's induction ring; 1882–1884 Gaulard and Gibbs' series transformer system; 1885 closed-core transformer and parallel distribution (Zipernowsky, Bláthy and Déri, Ganz works, Budapest); 1885–1888 Ferraris, rotating field; 1889–1891 Dolivo-Dobrovolsky's three-phase motor and the Lauffen–Frankfurt line, 175 km at about 15,000 volts"
+      americas: "1886 – Stanley's transformer system at Great Barrington for Westinghouse; 1887–1888 Tesla's polyphase motor patents; 1895–1896 Niagara Falls power station supplies Buffalo"
+    sources:
+      - "Thomas P. Hughes, Networks of Power: Electrification in Western Society, 1880–1930 (1983)"
+      - "Jill Jonnes, Empires of Light: Edison, Tesla, Westinghouse, and the Race to Electrify the World (2003)"
+
+  - id: telephone
+    name: Telephone
+    category: electricity
+    requires: [electromagnetism]
+    helps: [electric_battery, electric_telegraph, wave_nature_light_sound, ohms_law_circuits]
+    explain: >
+      Sound is a rapid to-and-fro of air pressure. In the transmitter a thin
+      diaphragm presses on loosely packed carbon grains through which a battery
+      current flows; pressure changes the resistance of the carbon, so the current
+      copies the sound wave. In the receiver this varying current passes through a
+      coil on a small permanent magnet and pulls a thin iron diaphragm to and fro,
+      which reproduces the sound. Two wires twisted together for each line keep out
+      noise from neighbouring lines, and an exchange with a switchboard connects any
+      two subscribers. The band from about 300 to 3,400 vibrations per second is
+      enough for clear speech.
+    pitfalls:
+      - "Sending speech as on/off currents like a telegraph; the current must vary smoothly in step with the sound"
+      - "Leaving the permanent magnet out of the receiver: the diaphragm then moves at twice the frequency and the speech is garbled"
+      - "Using Bell's first magneto transmitter for long lines; it is far too weak, the carbon transmitter with a battery is what made the telephone practical"
+      - "Using single wires with earth return side by side; subscribers hear each other and every telegraph nearby"
+      - "Presenting the priority as simple: Reis, Meucci, Gray and Bell all have claims and the patent history is still argued over"
+    history:
+      europe: "1861 – Philipp Reis's 'Telephon' transmits tones and some speech (Frankfurt); 1878 Hughes's carbon microphone"
+      americas: "1871 – Meucci's caveat in New York (its content is disputed); February–March 1876 – Bell's patent, filed the same day as Gray's caveat, and first transmitted sentence; 1877–1878 carbon transmitters (Edison, Berliner); 1878 first commercial exchange, New Haven; 1891 Strowger's automatic exchange; 1915 New York–San Francisco line with vacuum-tube repeaters"
+    sources:
+      - "Robert V. Bruce, Bell: Alexander Graham Bell and the Conquest of Solitude (1973)"
+      - "Claude S. Fischer, America Calling: A Social History of the Telephone to 1940 (1992)"
+
+  - id: sound_recording
+    name: Sound recording (phonograph, gramophone, magnetic tape)
+    category: electricity
+    requires: []
+    helps: [wave_nature_light_sound, lathe_screw_cutting, mechanical_clock, electromagnetism, vacuum_tube]
+    explain: >
+      Sound makes a thin membrane vibrate. Fix a needle to the centre of a membrane
+      at the narrow end of a horn and let it press on tinfoil or hard wax wrapped
+      round a cylinder that is turned evenly on a screw thread, so that the needle
+      traces a spiral: the vibrations are embossed as a wavy groove. Run the needle
+      through the groove again at the same speed and the membrane repeats the sound.
+      This is purely mechanical and needs no electricity. Flat discs can be pressed
+      in thousands from one master. Later methods use a microphone and amplifier to
+      drive the cutter, or magnetise a moving steel wire or iron-oxide coated tape
+      with an electromagnet.
+    pitfalls:
+      - "Uneven turning by hand: the pitch wavers and speech becomes unintelligible; use a flywheel or governed clockwork"
+      - "A heavy or stiff needle and membrane, which record almost nothing; they must be very light"
+      - "Expecting high fidelity or loudness from an acoustic machine; one has to shout into the horn"
+      - "Assuming that electricity is needed; Edison's phonograph could have been built by a good clockmaker centuries earlier"
+    history:
+      europe: "1857 – Scott de Martinville's phonautograph in Paris writes sound traces on sooted paper but cannot play them back; April 1877 Charles Cros deposits a description of a reproducing machine; 1898 Poulsen's magnetic wire recorder (Copenhagen); 1935 AEG and BASF Magnetophon tape recorder (Berlin), with high-frequency bias from 1940"
+      americas: "December 1877 – Edison's tinfoil phonograph; 1886 Bell and Tainter's wax cylinder graphophone; 1887 Berliner's disc gramophone; 1925 electrical recording with microphone and amplifier (Western Electric)"
+    sources:
+      - "Oliver Read & Walter L. Welch, From Tin Foil to Stereo: Evolution of the Phonograph (1959)"
+      - "David L. Morton, Sound Recording: The Life Story of a Technology (2004)"
+
+  # ------------------------------------------------ radio and electronics
+  - id: electromagnetic_waves_radio
+    name: Electromagnetic waves and radio
+    category: electricity
+    requires: [electromagnetism]
+    helps: [calculus, speed_of_light, wave_nature_light_sound, crystal_detector, vacuum_tube, static_electricity]
+    explain: >
+      A changing electric current sends out waves of electric and magnetic force
+      that travel through empty space at the speed of light; light is such a wave of
+      very short wavelength. A spark jumping across a gap between two metal rods,
+      fed by an induction coil, radiates waves whose length is about twice the
+      length of the rods, and they produce a tiny spark in a similar gapped loop or
+      rod some metres away. For signalling, connect one side of the spark gap to a
+      long elevated wire and the other to earth, and at the receiver join aerial and
+      earth through a coil and condenser tuned to the same frequency and a detector
+      with an earphone. Wavelength equals the speed of light divided by frequency,
+      and a coil and condenser resonate at one frequency fixed by their sizes.
+    pitfalls:
+      - "Thinking radio waves are sound waves or need air; they are of the same nature as light and cross a vacuum"
+      - "No tuning: an untuned spark transmitter fills the whole spectrum and every station disturbs every other"
+      - "Expecting short waves to follow the curve of the earth; long distances depend on long waves hugging the ground or on reflection from the upper atmosphere, which nobody predicted"
+      - "Sending speech with sparks; speech needs a continuous wave (arc, alternator or valve oscillator) whose strength is varied"
+      - "Calling Marconi the inventor of radio; Maxwell, Hertz, Lodge, Bose, Popov, Braun and Tesla all contributed, and Marconi made it a working long-distance system"
+    history:
+      europe: "1864–1865 – Maxwell predicts the waves and identifies light with them; 1887–1888 Hertz produces and measures them (Karlsruhe); 1894 Lodge signals with a coherer; 1895 Popov's receiver (St Petersburg); 1895–1896 Marconi signals over kilometres (Bologna, then England)"
+      india: "1894–1895 – J. C. Bose in Calcutta generates and detects millimetre waves and rings a bell through walls at a public demonstration"
+      americas: "1901 – Marconi reports receiving a signal across the Atlantic in Newfoundland (doubted by some physicists then and now); 1906 Fessenden transmits speech with an alternator; 1920 regular broadcasting (KDKA, Pittsburgh)"
+    sources:
+      - "James Clerk Maxwell, A Dynamical Theory of the Electromagnetic Field, Philosophical Transactions 155 (1865)"
+      - "Heinrich Hertz, Electric Waves (1893)"
+      - "Sungook Hong, Wireless: From Marconi's Black-Box to the Audion (2001)"
+
+  - id: crystal_detector
+    name: Crystal detector and crystal radio
+    category: electricity
+    requires: []
+    helps: [electromagnetic_waves_radio, telephone, ohms_law_circuits]
+    explain: >
+      Certain crystals pass current much more easily in one direction than in the
+      other when touched by a fine metal point: galena (natural lead sulphide) with a
+      springy bronze or steel wire, the cat's whisker, or silicon or carborundum with
+      a steel point. Such a contact turns the rapid alternating current from a tuned
+      aerial circuit into pulses in one direction that a sensitive earphone can
+      follow. A long wire aerial, an earth connection, a coil of some 50 to 100 turns
+      with a variable condenser, the crystal and a high-resistance earphone make a
+      complete receiver that needs no battery, since all the power comes from the
+      transmitter. The same one-way contact is the ancestor of the semiconductor
+      diode and of the radar detectors of the Second World War.
+    pitfalls:
+      - "Expecting every spot on the crystal to work; the point must be moved until a sensitive spot is found, and a knock loses it"
+      - "Using a low-resistance telephone receiver or a loudspeaker; only a sensitive receiver with thousands of turns of fine wire will sound"
+      - "A short aerial or poor earth; with no amplification every microwatt counts"
+      - "Thinking a crystal set can amplify; it only rectifies"
+    history:
+      europe: "1874 – Ferdinand Braun finds one-way conduction at metal points on sulphide crystals (Leipzig)"
+      india: "1901 – J. C. Bose files a patent for a galena point-contact detector (granted in the United States in 1904)"
+      americas: "1906 – Pickard's silicon detector and Dunwoody's carborundum detector; crystal sets remain the common receiver into the 1920s"
+    sources:
+      - "Ferdinand Braun, Ueber die Stromleitung durch Schwefelmetalle, Annalen der Physik 229 (1875), 556–563"
+      - "Sungook Hong, Wireless: From Marconi's Black-Box to the Audion (2001)"
+
+  - id: vacuum_tube
+    name: Vacuum tube (diode, triode, amplifier)
+    category: electricity
+    requires: [electric_light, air_pump_vacuum]
+    helps: [electromagnetic_waves_radio, atomic_structure, ohms_law_circuits]
+    explain: >
+      A glowing filament in a highly evacuated glass bulb gives off electrons. A
+      metal plate in the bulb collects them when it is positive and repels them when
+      negative, so current passes one way only (diode, rectifier). A wire mesh or
+      spiral between filament and plate, the grid, controls the stream: a small
+      change of voltage on the grid, taking almost no current, causes a large change
+      in the plate current, so the tube amplifies. With part of the output fed back
+      to the input through a tuned circuit it oscillates and generates continuous
+      waves. The vacuum must be far better than in early lamps, with the metal parts
+      baked during pumping and a getter of barium or magnesium flashed inside to bind
+      the remaining gas.
+    pitfalls:
+      - "A soft vacuum: leftover gas ionises, the tube behaves erratically and the filament is destroyed; De Forest's first audions suffered from this and he misunderstood how they worked"
+      - "Forgetting that the grid must stay negative with respect to the filament, or it draws current and distorts"
+      - "Underrating heat, power use and limited life; thousands of tubes mean daily failures, which is the main reason to look for a solid-state replacement"
+      - "Believing that the triode was understood from the start; its use as amplifier and oscillator came only in 1912–1913"
+    history:
+      americas: "1880–1883 – Edison notes current crossing the vacuum in a lamp (Edison effect); 1906 De Forest's audion, a gassy triode; 1912–1913 Arnold at AT&T and Langmuir at General Electric make high-vacuum tubes; 1912 Armstrong's regenerative circuit"
+      europe: "1897 – J. J. Thomson identifies the electron; 1904 Fleming's diode valve (London); 1906 von Lieben's amplifying valve (Vienna); 1913 Meissner's valve oscillator"
+    sources:
+      - "Gerald F. J. Tyne, Saga of the Vacuum Tube (1977)"
+      - "Sungook Hong, Wireless: From Marconi's Black-Box to the Audion (2001)"
+
+  - id: television_crt
+    name: Cathode-ray tube and television
+    category: electricity
+    requires: [vacuum_tube]
+    helps: [electromagnetic_waves_radio, photography, atomic_structure]
+    explain: >
+      In an evacuated glass tube a beam of electrons from a hot cathode is focused on
+      a screen coated with a phosphor, which glows where it is struck; electric
+      plates or magnetic coils steer the beam. Driven by a steadily rising voltage
+      it draws the changing voltage of a signal as a curve (oscilloscope), the basic
+      measuring instrument of electronics. For television the picture is cut into
+      several hundred horizontal lines scanned 25 or 30 times a second; the
+      brightness along each line is sent as a varying signal, and in the receiver a
+      beam sweeping in exact step paints it on the screen while its strength follows
+      the signal. The eye fuses the lines and frames into a moving picture.
+    pitfalls:
+      - "Trying to send the whole picture at once over many wires; the key is scanning point by point over one channel, faster than the eye can follow"
+      - "Losing synchronisation between camera and receiver; synchronising pulses must be sent with every line and frame"
+      - "Underrating the bandwidth: a picture needs hundreds of times the frequency band of speech, hence very short waves"
+      - "High voltage on the tube: thousands of volts, a risk of implosion and, at higher voltages, X-rays"
+    history:
+      europe: "1884 – Nipkow's scanning disc patent (Berlin); 1897 Braun's cathode-ray tube (Strasbourg); 1907–1911 Rosing (St Petersburg) and Campbell Swinton propose cathode-ray television; 1925–1926 Baird shows mechanical television (London); 1935–1936 regular services in Berlin and London"
+      east_asia: "December 1926 – Takayanagi (Hamamatsu) shows a character scanned by a Nipkow disc on a cathode-ray tube receiver"
+      americas: "1923 – Zworykin applies for a patent on a camera tube, working iconoscope by 1931–1933; 1927 Farnsworth transmits the first all-electronic image (San Francisco)"
+    sources:
+      - "Albert Abramson, The History of Television, 1880 to 1941 (1987)"
+
+  - id: radar
+    name: Radar
+    category: electricity
+    requires: [electromagnetic_waves_radio, vacuum_tube]
+    helps: [television_crt, crystal_detector, speed_of_light]
+    explain: >
+      Radio waves are reflected by metal objects, ships, aircraft and coastlines.
+      Send a very short, powerful pulse, about a millionth of a second, and time the
+      echo on a cathode-ray tube: the waves cover 300 m in a microsecond, so each
+      microsecond of delay means 150 m of range. A narrow beam, turned to find the
+      strongest echo, gives the direction, and the beam is narrow only if the aerial
+      is many wavelengths wide, which is why wavelengths of centimetres are wanted.
+      The cavity magnetron, a copper block with resonant holes round a hot cathode
+      in a strong magnetic field, produces such waves at kilowatt power; a silicon
+      point-contact crystal detects the weak echo.
+    pitfalls:
+      - "Explaining it as a single brilliant invention; it was developed in secret in at least eight countries in the 1930s, and Britain's lead lay in the reporting and fighter-control system built round it"
+      - "Using a continuous wave and wondering how to measure distance; the pulse and its timing are the essential idea"
+      - "Forgetting that the received echo falls with the fourth power of the distance, so doubling the range needs sixteen times the power"
+      - "Standing in front of a powerful microwave aerial; the beam heats tissue, especially the eyes"
+    history:
+      europe: "1904 – Hülsmeyer's Telemobiloskop detects ships by reflected waves (Cologne, no buyers); February 1935 Watson-Watt and Wilkins' Daventry experiment; 1937–1939 Chain Home stations; 1934–1939 German Freya and Würzburg sets; February 1940 Randall and Boot's cavity magnetron (Birmingham)"
+      americas: "1922, 1930 – US Naval Research Laboratory notes reflections from ships and aircraft; 1934–1936 Page's pulse radar; 1940 the Tizard mission brings the magnetron to the United States, MIT Radiation Laboratory and Bell Labs mass-produce microwave radar"
+      east_asia: "1927 – Okabe's split-anode magnetron (Tohoku University); Japanese military radar from 1941"
+    sources:
+      - "Robert Buderi, The Invention That Changed the World (1996)"
+      - "Louis Brown, A Radar History of World War II: Technical and Military Imperatives (1999)"
+
+  # ------------------------------------------------ solid-state electronics (what Bell Labs 1947 is about to learn)
+  - id: semiconductors_transistor
+    name: Semiconductors, p-n junction and transistor
+    category: electricity
+    requires: []
+    helps: [crystal_detector, quantum_mechanics, vacuum_tube, semiconductor_purification, atomic_structure]
+    explain: >
+      Very pure germanium or silicon conducts poorly. A trace of an element with
+      five outer electrons (phosphorus, arsenic, antimony), about one atom in ten
+      million, adds free electrons (n-type); one with three (boron, gallium, indium)
+      leaves holes that move like positive charges (p-type). Where p and n meet
+      inside one crystal, current flows in one direction only (p-n junction). A bipolar
+      junction transistor has two junctions back to back with a very thin middle layer,
+      the
+      base: a small current into the base lets a much larger current flow from
+      emitter to collector, because carriers injected into a uniformly doped base diffuse across it
+      before they recombine. It therefore amplifies and switches like a triode, with
+      no heated filament, at a few volts, and can be made very small.
+    pitfalls:
+      - "Working with impure or polycrystalline material; grain boundaries and stray impurities kill the injected carriers, so single crystals of extreme purity are the precondition"
+      - "A base that is too thick, so that the carriers recombine before they reach the collector"
+      - "Staying with the 1947 point-contact form (two gold contacts 0.05 mm apart on germanium); it is noisy and erratic, and the junction transistor is the practical device"
+      - "Staying with germanium: it fails above about 75 °C and has no stable oxide; silicon is harder to purify but is the material of the future"
+      - "Telling it as a sudden flash; Lilienfeld patented a field-effect amplifier in 1926, and Bardeen and Brattain found the point-contact effect while studying why Shockley's field-effect design failed"
+    history:
+      europe: "1874 – Braun's rectifying contacts; 1931 A. H. Wilson's band theory of semiconductors; 1938–1939 Schottky and Mott explain the rectifying barrier; 1948 Mataré and Welker build a point-contact 'transistron' independently in Paris"
+      americas: "1926 – Lilienfeld files a patent for a field-effect device (never shown to work); 1940 Ohl at Bell Labs finds the p-n junction in a silicon ingot; December 1947 point-contact transistor (Bardeen and Brattain, Bell Labs), announced June 1948; January 1948 Shockley's junction transistor theory, working grown-junction device 1950–1951; 1954 silicon transistors (Tanenbaum at Bell Labs, Teal at Texas Instruments)"
+    sources:
+      - "John Bardeen & Walter H. Brattain, The Transistor, A Semi-Conductor Triode, Physical Review 74 (1948)"
+      - "William Shockley, Electrons and Holes in Semiconductors (1950)"
+      - "Michael Riordan & Lillian Hoddeson, Crystal Fire: The Birth of the Information Age (1997)"
+
+  - id: semiconductor_purification
+    name: Semiconductor crystal growing, zone refining and doping
+    category: electricity
+    requires: []
+    helps: [crystal_detector, periodic_table]
+    explain: >
+      A device needs control over the concentration of electrically active impurities. The
+      starting crystal must be pure enough for the intended dopant to determine its
+      behaviour. Zone
+      refining: move a narrow molten zone slowly along a bar of germanium or silicon,
+      for instance with a ring-shaped induction heater; many impurities prefer the melt
+      and are swept to one end, and repeated passes multiply the effect. Crystal
+      pulling: dip a small seed crystal into the melt and withdraw it slowly while
+      turning it, so that the melt freezes on as one continuous crystal, with the
+      dopant added to the melt. Junctions are then made by letting dopant vapour
+      diffuse a few thousandths of a millimetre into the hot solid surface. Germanium
+      melts at 938 °C, silicon at 1,414 °C, and molten silicon attacks most
+      crucibles, so it is refined as a rod held without a crucible (float zone).
+    pitfalls:
+      - "Relying on a single bulk purity figure. Different contaminants affect carrier concentration and lifetime by different amounts"
+      - "Accepting polycrystalline ingots because they are easier; this was the majority view at Bell Labs in 1948 and Teal had to grow crystals almost against orders"
+      - "Contaminating the crystal again in handling: copper, gold and sodium from tools, water and fingers are poison"
+      - "Silicon tetrachloride, silane, arsenic and phosphorus compounds used in the process are toxic, corrosive or self-igniting"
+    history:
+      europe: "1916–1918 – Czochralski's crystal-pulling method for metals (Berlin); 1954 Emeis independently develops crucible-free float zoning at Siemens"
+      americas: "1948 – Teal and Little pull single crystals of germanium at Bell Labs; 1951 Pfann's zone refining; 1951 measurements on silicon single crystals by McSkimin, Bond, Buehler and Teal. In 1952 Teal and Buehler report grown silicon junctions and Theuerer files his float-zone patent. Keck and Golay publish independent float-zone work in 1953; 1954–1956 Fuller's diffusion of dopants"
+    sources:
+      - "H. J. McSkimin, W. L. Bond, E. Buehler & G. K. Teal, Measurement of the Elastic Constants of Silicon Single Crystals and Their Thermal Coefficients, Physical Review 83 (1951)"
+      - "William G. Pfann, Zone Melting (1958)"
+      - "P. H. Keck & M. J. E. Golay, Crystallization of Silicon from a Floating Liquid Zone, Physical Review 89 (1953)"
+      - "Michael Riordan & Lillian Hoddeson, Crystal Fire: The Birth of the Information Age (1997)"
+
+  - id: solar_cell
+    name: Solar cell (photovoltaic cell)
+    category: electricity
+    requires: []
+    helps: [semiconductors_transistor, semiconductor_purification, quantum_mechanics, practical_batteries]
+    explain: >
+      Light absorbed in a semiconductor frees electrons and holes; the built-in field
+      of a p-n junction lying just under the surface pulls them apart before they
+      recombine, so the lit cell drives a current through an outside circuit. Make it
+      from a thin slice of single-crystal silicon with a very shallow diffused layer
+      of the opposite type on the sunny side (the first cells were n-type silicon
+      with boron diffused in), a metal grid on the front and full metal on the back.
+      Each cell gives about 0.5 volt whatever its size, the current grows with area
+      and light, and cells are joined in series. The first such cells turned 6 per
+      cent of sunlight into electricity, against under 1 per cent for selenium; full
+      sunlight delivers about 1 kW per square metre.
+    pitfalls:
+      - "Confusing it with the photoelectric cell in a vacuum tube or with a solar boiler; no heat engine and no emission into vacuum is involved"
+      - "A junction too deep below the surface: the light is absorbed before it reaches the junction and the carriers recombine"
+      - "Promising cheap power soon; in the 1950s a watt of cells cost hundreds of dollars and the first real market was satellites"
+      - "Forgetting that a shiny silicon surface reflects about a third of the light unless it is given an anti-reflection coating"
+    history:
+      europe: "1839 – Edmond Becquerel finds a light-driven current in an electrolytic cell (Paris); 1873 Willoughby Smith, selenium conducts better in light; 1876 Adams and Day, a current from lit selenium"
+      americas: "1883 – Fritts's selenium cells with gold film, about 1 per cent efficient (New York); 1940 Ohl's light-sensitive silicon junction; April 1954 silicon solar cell of Chapin, Fuller and Pearson (Bell Labs), 6 per cent; 1958 Vanguard 1 satellite powered by solar cells"
+    sources:
+      - "D. M. Chapin, C. S. Fuller & G. L. Pearson, A New Silicon p-n Junction Photocell for Converting Solar Radiation into Electrical Power, Journal of Applied Physics 25 (1954)"
+      - "John Perlin, From Space to Earth: The Story of Solar Electricity (1999)"
+
+  - id: mosfet
+    name: Field-effect transistor on oxidised silicon (MOSFET)
+    category: electricity
+    requires: [semiconductors_transistor, semiconductor_purification]
+    helps: [integrated_circuit]
+    explain: >
+      The simplest amplifier idea is a capacitor: a metal plate (gate) separated by a
+      thin insulator from a semiconductor, where a voltage on the gate attracts
+      carriers into a thin channel under it and so switches a current between two
+      contacts (source and drain) with almost no input current. It failed for decades
+      because charges trapped at the crystal surface screen the field. The cure is to
+      heat clean silicon to about 1,000 °C in oxygen or steam: it grows a tight glassy
+      layer of its own oxide that ties up the surface states and serves as the gate
+      insulator. Pairing an n-channel with a p-channel device (CMOS) gives logic that
+      draws most of its dynamic power while switching and also has leakage current at
+      rest. This device, not the junction transistor, is
+      the one made by the thousand million on every chip.
+    pitfalls:
+      - "Trying it on germanium, whose oxide dissolves in water; the stable oxide is the reason silicon won"
+      - "Sodium contamination from glassware, sweat and chemicals: mobile ions in the oxide make the devices drift, which held MOS back until the mid-1960s"
+      - "Static charge from a hand punctures the thin gate oxide"
+      - "Dismissing it because it is slower than a junction transistor, as Bell Labs did in 1960; its simplicity and small size matter more"
+    history:
+      europe: "1934 – Oskar Heil's British patent for a field-effect device"
+      americas: "1926 – Lilienfeld's field-effect patent application; 1945–1947 Shockley's field-effect experiments fail, Bardeen explains it by surface states; 1955–1958 Frosch and Derick, then Atalla, study oxide on silicon at Bell Labs; 1959–1960 Atalla and Kahng's MOS transistor; 1963 Wanlass and Sah's CMOS (Fairchild)"
+    sources:
+      - "Ross Knox Bassett, To the Digital Age: Research Labs, Start-up Companies, and the Rise of MOS Technology (2002)"
+      - "Michael Riordan & Lillian Hoddeson, Crystal Fire: The Birth of the Information Age (1997)"
+
+  - id: integrated_circuit
+    name: Integrated circuit and planar process
+    category: electricity
+    requires: [semiconductors_transistor, semiconductor_purification]
+    helps: [photography, mosfet, boolean_logic]
+    explain: >
+      Instead of making transistors singly and wiring them by hand, make the whole
+      circuit, transistors, resistors and connections, side by side in the surface
+      of one slice of silicon. The planar process does it in repeated steps: grow an
+      oxide layer on the slice, coat it with a light-sensitive lacquer, expose it
+      through a photographic mask, etch windows in the oxide, diffuse dopants through
+      the windows, re-oxidise, and finally evaporate aluminium and etch it into
+      connecting tracks that run over the oxide. The oxide protects the junctions,
+      and hundreds of identical circuits are made at once on one slice. Because
+      everything is defined by photography, the patterns can be shrunk generation
+      after generation, which is why the number of components per chip has doubled
+      about every two years.
+    pitfalls:
+      - "Dust: one speck ruins a circuit, so the work needs filtered air and extreme cleanliness"
+      - "Believing that many components on one chip must give a hopeless yield; this was the standard objection around 1960 and it proved wrong"
+      - "Hydrofluoric acid, used to etch the oxide, causes deep burns and poisoning through the skin"
+      - "Crediting a single inventor: Kilby's chip used wire bonds, Noyce's used Hoerni's planar process, and Dummer and Lehovec contributed essential ideas"
+    history:
+      europe: "1952 – Dummer (Royal Radar Establishment) proposes a solid block circuit with no connecting wires"
+      americas: "1955–1957 – Frosch and Derick show that an oxide layer masks selected dopants. At Bell Labs Jules Andrus and Walter Bond pattern openings in this layer with photoresist. Jay Lathrop and James Nall independently apply photoengraving to semiconductor fabrication. In September 1958 Kilby demonstrated his germanium circuit at Texas Instruments; 1959 Hoerni's planar process and Noyce's planar integrated circuit at Fairchild; 1965 Moore's observation on doubling; 1971 Intel 4004 microprocessor"
+    sources:
+      - "Jules Andrus, Fabrication of Semiconductor Devices, US patent 3,122,817 (filed 1957, granted 1964)"
+      - "T. R. Reid, The Chip: How Two Americans Invented the Microchip and Launched a Revolution (1984)"
+      - "Leslie Berlin, The Man Behind the Microchip: Robert Noyce and the Invention of Silicon Valley (2005)"
+
+  - id: laser
+    name: Maser and laser
+    category: electricity
+    requires: [quantum_mechanics, electromagnetic_waves_radio]
+    helps: [radar, glass_mirrors, semiconductors_transistor]
+    explain: >
+      An atom in an excited state, struck by light of exactly the frequency it would
+      emit, emits a second wave in step with the first and in the same direction
+      (stimulated emission). If more atoms are in the upper state than in the lower,
+      which never happens in heat equilibrium and must be forced by pumping with a
+      flash lamp, an electric discharge or a current, light passing through is
+      amplified instead of absorbed. Put the material between two parallel mirrors,
+      one of them slightly transparent, and the light that runs along the axis builds
+      up into a narrow beam of a single colour, with all waves in step. First done
+      with microwaves in ammonia gas (maser), then with a ruby rod and a flash lamp,
+      and with a helium-neon discharge tube.
+    pitfalls:
+      - "Trying to get the inversion by heating; heat always leaves more atoms in the lower state, so a separate pump and at least three energy levels are needed"
+      - "Mirrors that are not parallel to a few seconds of arc, so that no beam builds up"
+      - "Eye damage: even a weak beam is focused by the eye onto a point of the retina, and the harm is instant and permanent"
+      - "Imagining a death ray; the early uses are measurement, alignment, surgery on the retina, and later communication through glass fibre"
+    history:
+      europe: "1916–1917 – Einstein derives stimulated emission; 1939 Fabrikant (Moscow) proposes amplification by an inverted medium; 1954–1955 Basov and Prokhorov's maser theory (Moscow)"
+      americas: "1954 – ammonia maser of Gordon, Zeiger and Townes (Columbia); 1957–1958 Schawlow and Townes's paper on optical masers and Gould's notebook, which coins the word laser (the patent fight lasted thirty years); May 1960 Maiman's ruby laser (Hughes); December 1960 helium-neon laser of Javan, Bennett and Herriott (Bell Labs); 1962 semiconductor laser (Hall, General Electric)"
+    sources:
+      - "A. L. Schawlow & C. H. Townes, Infrared and Optical Masers, Physical Review 112 (1958)"
+      - "Jeff Hecht, Beam: The Race to Make the Laser (2005)"
+      - "Charles H. Townes, How the Laser Happened: Adventures of a Scientist (1999)"
+
+  - id: optical_fibre
+    name: Optical fibre communication
+    category: electricity
+    requires: [clear_glass, refraction_optics]
+    helps: [laser, information_theory]
+    explain: >
+      Light inside glass that meets the surface at a shallow angle is totally
+      reflected, so a thin glass thread guides light round bends. It works over
+      distance only if the thread has a core of slightly higher refractive index
+      inside a cladding of lower index, so that the light never touches the outer
+      surface. Ordinary glass loses the light within metres, but the loss is caused
+      by impurities, mainly iron and other metals and traces of water, not by glass
+      itself. Fused silica made from purified vapour, with the impurities at parts
+      per thousand million, carries infrared light for many kilometres. A core only a
+      few thousandths of a millimetre wide and a semiconductor laser switched on and
+      off very rapidly then carry far more telephone calls than any copper cable or
+      microwave link.
+    pitfalls:
+      - "A bare glass thread without cladding: light leaks wherever it is touched or dirty"
+      - "Assuming glass is too absorbing in principle; that was the general opinion until Kao showed in 1966 that the loss comes from removable impurities"
+      - "Purifying by melting in crucibles, which adds impurities; the working method deposits silica from vapour"
+      - "Looking into the end of a live fibre; the infrared beam is invisible and can damage the eye"
+    history:
+      europe: "1841–1842 – Colladon (Geneva) and Babinet guide light in a water jet, popularised by Tyndall in 1854; 1954 van Heel (Delft) and Hopkins and Kapany (London) publish on clad fibres and image bundles; 1966 Kao and Hockham (Standard Telecommunication Laboratories, Harlow) show that low-loss fibre is possible"
+      americas: "1970 – Maurer, Keck and Schultz at Corning make fibre with a loss below 20 decibels per kilometre; 1977 first telephone traffic over fibre (Chicago, Long Beach); 1988 TAT-8 transatlantic fibre cable"
+    sources:
+      - "K. C. Kao & G. A. Hockham, Dielectric-fibre surface waveguides for optical frequencies, Proceedings of the IEE 113 (1966)"
+      - "Jeff Hecht, City of Light: The Story of Fiber Optics (1999)"

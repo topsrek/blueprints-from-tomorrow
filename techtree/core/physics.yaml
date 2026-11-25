@@ -1,0 +1,1302 @@
+# Blueprints from Tomorrow – tech tree fragment: Physics, optics & astronomy.
+# Schema: see header of techtree/core.yaml.
+
+technologies:
+
+  # ------------------------------------------------------------ optics
+  - id: lenses
+    name: Ground lenses
+    category: physics
+    requires: []
+    helps: [glassmaking, clear_glass, refraction_optics]
+    explain: >
+      A piece of clear glass with spherically curved faces bends light. A convex lens
+      (thicker in the middle) gathers sunlight to a point at its focal length, magnifies
+      near objects and throws an inverted image on a wall; a concave lens (thinner in
+      the middle) spreads light and makes things look smaller. A lens is made by
+      grinding a glass blank against a curved metal dish or ball with wet abrasive
+      (sand, then finer emery) and polishing it with tripoli or rouge on pitch or felt.
+      The flatter the curve, the longer the focal length; for ordinary glass a lens
+      with two equal faces has a focal length about equal to the radius of the curve.
+    pitfalls:
+      - "Bubbles and streaks scatter or distort light, while a tint mainly reduces transmission; the glass matters as much as the grinding"
+      - "Thinking lenses were unknown before spectacles: burning glasses and rock-crystal magnifiers are ancient"
+      - "Skipping the polishing stages: a ground but unpolished surface is matt"
+      - "Not being able to say what curve is needed (measure the focal length with the sun instead)"
+    history:
+      mesopotamia: "c. 750 BC – Nimrud rock-crystal 'lens' (Assyria); use as a lens is disputed"
+      greece: "c. 424 BC – burning glass mentioned in Aristophanes, Clouds"
+      rome: "1st c. AD – Seneca and Pliny describe magnification by water-filled glass globes and burning glasses"
+      islamic: "c. 1011–1021 – Ibn al-Haytham, Book of Optics, treats magnification by curved glass"
+      europe: "11th–12th c. rock-crystal Visby lenses; 13th c. reading stones; c. 1286 convex spectacle lenses in Italy; c. 1450 concave lenses"
+      china: "rock-crystal burning lenses known by the Han; spectacle lenses arrive from the west in the 15th c."
+    sources:
+      - "Vincent Ilardi, Renaissance Vision from Spectacles to Telescopes (2007)"
+      - "Henry C. King, The History of the Telescope (1955)"
+
+  - id: spectacles
+    name: Spectacles
+    category: physics
+    requires: [lenses]
+    explain: >
+      Two lenses in a frame in front of the eyes correct sight. Weak convex lenses help
+      older people who can no longer read close up (almost everyone after about 45);
+      concave lenses help the short-sighted see far. Strength is chosen by trying
+      lenses of graded focal length until small writing is sharp. Reading lenses let
+      scribes and fine craftsmen continue close work as their eyes lose focusing power.
+    pitfalls:
+      - "Giving convex lenses to a short-sighted person (they make it worse)"
+      - "Assuming one strength suits everybody or both eyes"
+      - "Believing spectacles weaken or ruin the eyes (an old and persistent objection)"
+    history:
+      europe: "c. 1286 – convex spectacles made in Pisa or Florence (inventor unknown; Giordano da Pisa's sermon of 1306 dates them); c. 1450 concave lenses for the short-sighted, Florence a main producer"
+      islamic: "14th–15th c. – spectacles known through Italian trade"
+      china: "early 15th c. – imported spectacles recorded under the Ming; the claim of a Chinese invention is not supported"
+    sources:
+      - "Vincent Ilardi, Renaissance Vision from Spectacles to Telescopes (2007)"
+      - "Edward Rosen, The Invention of Eyeglasses, Journal of the History of Medicine 11 (1956)"
+
+  - id: refraction_optics
+    name: Law of refraction, image formation and vision
+    category: physics
+    requires: []
+    helps: [geometry_proof, trigonometry, lenses, camera_obscura]
+    explain: >
+      We see because light from the sun or a lamp bounces off things and enters the
+      eye; the eye sends out nothing. Light travels in straight lines, reflects at
+      equal angles, and bends when it passes between air and water or glass: the sine of
+      the angle from the surface normal in air divided by the sine of the angle in the
+      denser medium is a
+      fixed number (about 1.33 for water, about 1.5 for glass). An ideal lens brings
+      rays from one object point to one image point; the eye is such a
+      lens with the retina as the screen, and the image on it is upside down.
+      Cheap demonstrations: a coin at the bottom of a cup comes into view when water is
+      poured in; a stick looks broken at the water surface.
+    pitfalls:
+      - "Saying the bending angle is simply proportional to the incoming angle (only roughly true for small angles)"
+      - "Repeating the ancient view that sight goes out from the eye, or accepting it out of politeness"
+      - "Claiming an upside-down retinal image means we should see the world upside down"
+      - "Confusing reflection with refraction"
+    history:
+      greece: "c. 300 BC – Euclid, Optics (visual rays leave the eye); c. 160 AD Ptolemy measures refraction in tables, without the sine law"
+      china: "c. 4th–3rd c. BC – Mohist Canon on shadows, pinhole images and mirrors; no law of refraction"
+      islamic: "c. 984 – Ibn Sahl states a rule equivalent to the sine law; c. 1011–1021 Ibn al-Haytham shows that vision is light entering the eye"
+      europe: "1602 – Harriot finds the sine law (unpublished); 1604 Kepler explains the retinal image; 1621 Snell; 1637 Descartes publishes the law"
+    sources:
+      - "Ibn al-Haytham, Kitab al-Manazir (c. 1011–1021; tr. A. I. Sabra, The Optics of Ibn al-Haytham, 1989)"
+      - "David C. Lindberg, Theories of Vision from al-Kindi to Kepler (1976)"
+      - "A. Mark Smith, From Sight to Light: The Passage from Ancient to Modern Optics (2015)"
+
+  - id: camera_obscura
+    name: Camera obscura
+    category: physics
+    requires: []
+    helps: [lenses]
+    explain: >
+      In a darkened room with one small hole in the shutter, the sunlit scene outside
+      appears on the opposite wall, upside down and reversed, in colour and in motion.
+      It works because light travels in straight lines. A smaller hole gives a sharper
+      but dimmer picture; a convex lens in a larger hole gives a bright, sharp picture
+      at its focal distance. It shows how the eye works, lets one watch a solar eclipse
+      or sunspots safely, and lets a draughtsman trace a view in true perspective.
+    pitfalls:
+      - "Hole too large (blur) or room not fully dark"
+      - "Forgetting that the image is inverted and promising an upright picture"
+      - "Looking at the sun through the hole instead of at the projected image"
+    history:
+      china: "c. 4th c. BC – Mohist Canon describes the inverted pinhole image; 1088 Shen Kuo, Dream Pool Essays"
+      greece: "4th c. BC – Aristotelian Problems note crescent sun images under trees during an eclipse"
+      islamic: "c. 1011–1021 – Ibn al-Haytham experiments with the dark chamber and writes On the Shape of the Eclipse"
+      europe: "13th c. used for solar eclipses; c. 1500 Leonardo's notes; 1550 Cardano and 1568 Barbaro add a lens and diaphragm; 1558 and 1589 della Porta popularises it"
+    sources:
+      - "John H. Hammond, The Camera Obscura: A Chronicle (1981)"
+      - "Joseph Needham, Science and Civilisation in China, vol. 4 part 1: Physics (1962)"
+
+  - id: microscope
+    name: Microscope
+    category: physics
+    requires: [lenses]
+    helps: [clear_glass]
+    explain: >
+      The simple microscope is one tiny, strongly curved lens: a glass bead 1–2 mm
+      across, made by melting the end of a drawn glass thread or ground from a chip,
+      set in a hole in a metal plate. Held almost touching the eye, with the object on
+      a pin about a millimetre behind it and strong light from behind, it magnifies 100
+      to over 250 times, enough to see the living creatures in pond water, in vinegar
+      and in the scrapings from teeth. The compound microscope uses two lenses in a
+      tube (a small objective near the specimen and an eyepiece); until better lenses
+      came in the 19th century it was more convenient but showed less.
+    pitfalls:
+      - "Using spectacle lenses (far too weak) or expecting the compound form to be better from the start"
+      - "Poor lighting and thick specimens: the object must be thin and lit from behind"
+      - "Promising that plague or smallpox agents will be visible (viruses are not; most bacteria need 200 times or more and practice)"
+      - "Wrong focus distance: the bead lens must be about a millimetre from the object"
+    history:
+      europe: "c. 1590–1620 – compound microscope in the Netherlands (Janssen's claim is doubtful; Drebbel shows one by 1620); 1625 the name 'microscopio' (Accademia dei Lincei); 1665 Hooke, Micrographia; 1674–1683 Leeuwenhoek sees protozoa and bacteria with single lenses; 1830 Lister's achromatic objectives"
+      china: "17th c. – brought by Jesuits"
+    sources:
+      - "Robert Hooke, Micrographia (1665)"
+      - "Brian J. Ford, Single Lens: The Story of the Simple Microscope (1985)"
+      - "Laura J. Snyder, Eye of the Beholder (2015)"
+
+  - id: telescope
+    name: Telescope (refractor)
+    category: physics
+    requires: [lenses]
+    helps: [clear_glass, refraction_optics]
+    explain: >
+      A weak convex lens of long focal length at the front (objective) and a strong
+      lens of short focal length at the eye, held in a tube that can slide to focus.
+      With a concave eyepiece (Dutch or Galilean form) the image is upright and the
+      tube length is the difference of the two focal lengths; with a convex eyepiece
+      (Kepler's form) it is inverted, the field is wider and the length is the sum. The
+      magnification is the objective's focal length divided by the eyepiece's: a
+      spectacle lens focusing at 1 m with an eyepiece of 5 cm gives 20 times.
+      Covering the outer part of the objective with a ring of card sharpens the image.
+      Twenty times shows Jupiter's four moons, the mountains of the Moon, the phases of
+      Venus and ships hours before the naked eye.
+    pitfalls:
+      - "Two lenses of similar strength give no magnification"
+      - "Ordinary spectacle glass is too poor at more than a few times; Galileo ground his own and rejected most lenses"
+      - "Colour fringes and blur grow with lens diameter; not stopping down the objective"
+      - "Looking at the Sun through it (blinds); project the image on paper instead"
+      - "Crediting Galileo with the invention"
+    history:
+      europe: "1608 – Lipperhey applies for a patent in The Hague (Metius and Janssen also claim it); 1609 Harriot and Galileo turn it to the sky; 1611 Kepler describes the two-convex-lens form"
+      china: "1626 – Schall von Bell's treatise on the telescope"
+      india: "c. 1616 – a telescope among Thomas Roe's gifts at Jahangir's court; 1618 Jesuits observe comets by telescope from Goa"
+      east_asia: "1613 – a telescope presented to Tokugawa Ieyasu by the English East India Company"
+    sources:
+      - "Galileo Galilei, Sidereus Nuncius (1610)"
+      - "Albert Van Helden, The Invention of the Telescope (1977)"
+
+  - id: reflecting_telescope
+    name: Reflecting telescope
+    category: physics
+    requires: [telescope]
+    helps: [glass_mirrors, copper_bronze]
+    explain: >
+      A concave mirror gathers the light instead of a lens, so there are no colour
+      fringes and the instrument can be short and wide. Newton's form: a slightly
+      hollow mirror at the bottom of the tube, a small flat mirror at 45 degrees near
+      the top that throws the image to an eyepiece in the side. The mirror was cast
+      from speculum metal, a white, brittle bronze of roughly two parts copper to one
+      part tin, ground hollow against a convex tool and polished on pitch; it needs
+      repolishing as it tarnishes. For high power the sphere must be deepened to a
+      parabola. From the 1850s a thin layer of silver on glass replaced the metal.
+    pitfalls:
+      - "Ordinary bronze or a looking-glass mirror will not do (double reflection from glass with a backing)"
+      - "A mirror surface must be about four times as accurate as a lens surface"
+      - "Thinking Newton's first instrument outperformed the refractors of its day (it was a proof of principle)"
+    history:
+      europe: "1616 Zucchi tries; 1663 James Gregory's design; 1668 Newton builds the first working one; 1721 Hadley's parabolic mirror makes it practical; 1789 William Herschel's 1.2 m; 1856–1857 Steinheil and Foucault, silver on glass"
+    sources:
+      - "Isaac Newton, An Accompt of a New Catadioptrical Telescope, Philosophical Transactions 7 (1672)"
+      - "Henry C. King, The History of the Telescope (1955)"
+
+  - id: achromatic_lens
+    name: Achromatic lens
+    category: physics
+    requires: [lenses, clear_glass, spectrum_colour]
+    explain: >
+      A single lens focuses blue light nearer than red, so images have coloured edges.
+      Two lenses of different glass cemented or mounted together cancel most of this: a
+      convex lens of ordinary (crown) glass with a weaker concave lens of heavy lead
+      (flint) glass, which spreads colours about twice as strongly for the same
+      bending. The pair still focuses, but red and blue now meet. This makes short,
+      sharp telescopes and, later, good microscopes and camera lenses.
+    pitfalls:
+      - "Using two lenses of the same glass (cannot cancel colour)"
+      - "Citing Newton, who wrongly concluded it was impossible"
+      - "Underestimating the glass problem: streak-free flint glass was the bottleneck until Guinand and Fraunhofer"
+    history:
+      europe: "c. 1729–1733 – Chester Moor Hall has the first doublets made; 1758 John Dollond's patent and commercial production; c. 1805–1814 Guinand and Fraunhofer make large homogeneous flint glass; 1830 J. J. Lister's achromatic microscope"
+    sources:
+      - "John Dollond, An Account of Some Experiments Concerning the Different Refrangibility of Light, Philosophical Transactions 50 (1758)"
+      - "Henry C. King, The History of the Telescope (1955)"
+
+  - id: spectrum_colour
+    name: Spectrum and the nature of colour
+    category: physics
+    requires: []
+    helps: [refraction_optics, clear_glass]
+    explain: >
+      White sunlight is a mixture of all colours. A narrow beam from a hole in the
+      shutter of a dark room, passed through a triangular glass prism, spreads into a
+      band from red to violet because each colour is bent by a different amount. The
+      decisive test: let one colour from the band pass through a second prism; it is
+      bent again but not split or changed. A lens or a reversed prism brings the
+      colours back together to white. The rainbow is the same effect in raindrops:
+      light is refracted, reflected once inside the drop and refracted again, and
+      comes back at about 42 degrees from the point opposite the Sun.
+    pitfalls:
+      - "Saying the prism adds or creates the colours (the view Newton refuted)"
+      - "Insisting on exactly seven colours; the band is continuous and Newton's seven follow a musical analogy"
+      - "Confusing mixing of lights (all give white) with mixing of pigments (give dark brown)"
+      - "Screen too close to the prism: the band needs several metres to spread"
+    history:
+      islamic: "c. 1300–1309 – Kamal al-Din al-Farisi explains the rainbow with a water-filled glass sphere"
+      europe: "c. 1304–1310 – Theodoric of Freiberg, same explanation independently; 1637 Descartes computes the rainbow angle; 1666–1672 Newton's prism experiments; 1704 Opticks"
+      china: "11th c. – Shen Kuo and Sun Sikong ascribe the rainbow to sunlight in raindrops"
+    sources:
+      - "Isaac Newton, Opticks (1704)"
+      - "Carl B. Boyer, The Rainbow: From Myth to Mathematics (1959)"
+
+  - id: spectroscopy
+    name: Spectral analysis
+    category: physics
+    requires: [spectrum_colour]
+    helps: [telescope, achromatic_lens]
+    explain: >
+      Each chemical element, heated in a flame or a spark, gives light of its own fixed
+      colours, which a prism behind a narrow slit shows as sharp bright lines: sodium
+      (common salt) a close yellow doublet, potassium violet, lithium red, copper green.
+      A trace too small to weigh can be identified this way. The Sun's spectrum is
+      crossed by hundreds of dark lines at the same places, because the cooler gas
+      above its surface absorbs those colours; so we can tell what the Sun and stars
+      are made of, and new elements have been found by unknown lines.
+    pitfalls:
+      - "Without a narrow slit the lines smear into a band"
+      - "Sodium contamination makes almost every flame yellow"
+      - "Judging by flame colour alone without the prism"
+    history:
+      europe: "1752 Melvill notes the yellow line of salt in flames; 1802 Wollaston and 1814 Fraunhofer map dark lines in sunlight; 1859–1861 Kirchhoff and Bunsen establish spectral analysis, discovering caesium in 1860 and rubidium in 1861; 1868 helium seen in the Sun before it is found on Earth (1895)"
+    sources:
+      - "Gustav Kirchhoff & Robert Bunsen, Chemische Analyse durch Spectralbeobachtungen, Annalen der Physik 110 (1860)"
+      - "John B. Hearnshaw, The Analysis of Starlight (1986)"
+
+  - id: wave_nature_light_sound
+    name: Waves - sound and light
+    category: physics
+    requires: []
+    helps: [air_pump_vacuum, refraction_optics, spectrum_colour]
+    explain: >
+      Sound is a back-and-forth vibration passed on through air (or water, wood,
+      metal) as a wave; nothing travels but the disturbance. It moves about 340 m per
+      second in air, so three seconds between lightning and thunder mean one
+      kilometre. Pitch is the number of vibrations per second; halving a string
+      doubles it and gives the octave. A bell in a jar pumped empty of air falls
+      silent. Light also behaves as a wave, with an extremely short wavelength (about
+      half a thousandth of a millimetre): light from one source passing through two
+      very close slits makes bright and dark stripes, because waves from the two slits
+      add in some places and cancel in others. Colour is wavelength, red longest.
+    pitfalls:
+      - "Saying sound and light are the same kind of wave: sound needs a medium, light crosses a vacuum"
+      - "Insisting on a light-carrying ether (assumed until 1905, never detected)"
+      - "Double-slit demonstration fails with a wide source or slits more than a fraction of a millimetre apart"
+      - "Claiming light is 'only' a wave; since 1905 it is known to come in quanta as well"
+    history:
+      greece: "6th c. BC – Pythagorean string ratios (the hammer story is legend); 4th c. BC Aristotle, later Vitruvius, compare sound to ripples"
+      china: "c. 3rd c. BC – tuned bells and pitch pipes with numerical rules; 1584 Zhu Zaiyu computes equal temperament"
+      islamic: "10th–11th c. – al-Farabi and Ibn Sina on sound as air in motion"
+      europe: "1636 Mersenne's laws of strings and a measured speed of sound; 1660 Boyle's bell in vacuum; 1665 Grimaldi describes diffraction; 1678–1690 Huygens' wave theory; 1801–1803 Young's interference experiments; 1815–1821 Fresnel; 1865 Maxwell: light is an electromagnetic wave"
+    sources:
+      - "Christiaan Huygens, Traité de la lumière (1690)"
+      - "Thomas Young, Experiments and Calculations Relative to Physical Optics, Philosophical Transactions 94 (1804)"
+      - "Jed Z. Buchwald, The Rise of the Wave Theory of Light (1989)"
+
+  - id: speed_of_light
+    name: Finite speed of light
+    category: physics
+    requires: []
+    helps: [telescope, pendulum_clock, astronomical_distances, heliocentrism]
+    explain: >
+      Light is not instantaneous; it travels about 300,000 km per second, so it takes
+      a little over a second from the Moon and about eight minutes from the Sun.
+      First evidence: the eclipses of Jupiter's innermost moon come later than the
+      timetable when the Earth is moving away from Jupiter and earlier when it
+      approaches, in total by about 17 minutes across the Earth's orbit, the time light
+      needs to cross it. On Earth it can be measured with a rapidly spinning toothed
+      wheel or mirror and a mirror several kilometres away.
+    pitfalls:
+      - "Trying Galileo's lantern test between hills (human reaction time is millions of times too slow)"
+      - "Saying Rømer measured the speed: he showed it is finite; a value needs the size of the Earth's orbit"
+      - "Quoting 300,000 km per hour or per minute"
+    history:
+      greece: "5th c. BC – Empedocles holds that light takes time; Aristotle denies it"
+      islamic: "11th c. – Ibn al-Haytham and al-Biruni argue for a finite speed"
+      europe: "1638 Galileo proposes a lantern test; 1676 Rømer's delay of Io's eclipses (Huygens derives about 220,000 km/s); 1728 Bradley's aberration of starlight; 1849 Fizeau's toothed wheel, 1862 Foucault's rotating mirror (298,000 km/s)"
+      americas: "1879–1926 – Michelson's precision measurements"
+    sources:
+      - "Ole Rømer, Démonstration touchant le mouvement de la lumière, Journal des Sçavans (1676)"
+      - "John C. H. Spence, Lightspeed: The Ghostly Aether and the Race to Measure the Speed of Light (2019)"
+
+  - id: photography
+    name: Photography
+    category: physics
+    requires: []
+    helps: [camera_obscura, nitric_acid, lenses, achromatic_lens, glassmaking]
+    explain: >
+      Some silver salts darken in light. Silver dissolved in nitric acid gives silver
+      nitrate; paper soaked first in weak salt water and then in silver nitrate
+      solution (worked by candlelight) carries silver chloride and turns dark where
+      light falls. Put it in a camera obscura with a lens, or lay a leaf or drawing on
+      it in the sun. The picture must then be fixed, or it blackens all over: wash it
+      in a solution of 'hypo' (sodium thiosulphate), which dissolves the unused silver
+      salt; strong salt water works poorly. Exposure falls from hours to seconds if
+      the invisible latent image is developed chemically (gallic acid on paper,
+      mercury vapour on Daguerre's iodised silver plate). Talbot’s paper negative yields
+      positive contact prints. Each daguerreotype is a unique image on its plate.
+    pitfalls:
+      - "No fixing step: the image disappears on the first viewing in daylight (Wedgwood's problem in 1802)"
+      - "Not knowing how to make thiosulphate (boil sulphite solution with sulphur)"
+      - "Mercury fumes of the daguerreotype process are poisonous; silver nitrate stains and burns skin"
+      - "Expecting portraits at once: early exposures took minutes to hours"
+    history:
+      europe: "c. 1717–1727 Schulze shows silver salts darken by light, not heat; 1802 Wedgwood and Davy, unfixed images; 1826 or 1827 Niépce's first surviving camera picture (bitumen); 1839 Daguerre and Talbot announce their processes, Herschel introduces hypo; 1841 calotype; 1851 Archer's wet collodion; 1871 Maddox's gelatine dry plate"
+      americas: "1888 – Eastman's roll-film Kodak"
+    sources:
+      - "William Henry Fox Talbot, The Pencil of Nature (1844)"
+      - "Helmut Gernsheim with Alison Gernsheim, The History of Photography from the Earliest Use of the Camera Obscura in the Eleventh Century up to 1914 (1955)"
+
+  # ------------------------------------------------------------ mechanics
+  - id: lever_mechanics_statics
+    name: Lever, pulley, inclined plane (statics)
+    category: physics
+    requires: []
+    helps: [geometry_proof]
+    explain: >
+      A lever balances when weight times distance from the pivot is equal on both
+      sides; an effort arm ten times the load arm can lift the load with a tenth of its
+      weight in applied force. The same rule governs every simple machine: what is gained in force is
+      lost in distance moved. A tackle with four rope strands holding the lower block
+      lifts with a quarter of the force but four times the rope; a ramp four times as
+      long as it is high needs a quarter of the weight to push a load up it (friction
+      apart); a screw is a ramp wound round a cylinder. With this rule a builder can
+      calculate cranes, presses and steelyards before making them.
+    pitfalls:
+      - "Promising a machine that multiplies both force and distance (perpetual motion)"
+      - "Ignoring friction and rope stiffness, which eat a third or more in real tackles"
+      - "Measuring lever arms along the beam rather than at right angles to the force"
+      - "Assuming Archimedes invented the lever; he proved its law"
+    history:
+      mesopotamia: "c. 2300–2000 BC – shaduf (counterweighted lever) shown on Akkadian seals"
+      egypt: "c. 2600 BC – levers, ramps and sledges in pyramid building; equal-arm balance earlier still"
+      china: "c. 4th–3rd c. BC – Mohist Canon discusses lever and balance; steelyard in use"
+      greece: "c. 4th–3rd c. BC Aristotelian Mechanical Problems; c. 250 BC Archimedes proves the law of the lever; compound pulley attributed to him; 1st c. AD Hero lists the five simple machines"
+      islamic: "9th c. – Thabit ibn Qurra on the steelyard; 1121 al-Khazini, Balance of Wisdom"
+      europe: "13th c. Jordanus; 1586 Stevin solves the inclined plane; c. 1600 Galileo, On Mechanics"
+    sources:
+      - "Archimedes, On the Equilibrium of Planes (c. 250 BC)"
+      - "E. J. Dijksterhuis, Archimedes (1956)"
+
+  - id: buoyancy_hydrostatics
+    name: Buoyancy and hydrostatics
+    category: physics
+    requires: []
+    helps: [lever_mechanics_statics]
+    explain: >
+      A body in water is pushed up by a force equal to the weight of the water it
+      displaces. So it floats if it is lighter than the same volume of water, and an
+      iron ship floats if its hull encloses enough air. Weighing an object in air and
+      again hanging in water gives its density and so detects alloyed gold: gold is
+      19.3 times as heavy as water, silver 10.5, lead 11.3, copper 8.9. Pressure in a
+      liquid depends only on depth, not on the shape or width of the vessel (about one
+      atmosphere per 10 m of water), and pressure applied to an enclosed liquid acts
+      equally everywhere, which is the principle of the hydraulic press.
+    pitfalls:
+      - "Telling the crown story with the overflowing bath; the overflow is too small to measure, the practical method is the balance in water"
+      - "Believing heavy things sink because they are heavy rather than dense"
+      - "Thinking a wider water column presses harder at the bottom"
+      - "Confusing displaced mass with volume: at the same load, a floating ship displaces the same mass but a smaller volume in salt water"
+    history:
+      greece: "c. 250 BC – Archimedes, On Floating Bodies"
+      china: "c. 200 AD – story of Cao Chong weighing an elephant by the sinking of a boat (Sanguozhi)"
+      islamic: "11th c. al-Biruni and 1121 al-Khazini measure specific gravities of metals and gems to about 1 per cent"
+      europe: "1586 Galileo's little balance; 1586 Stevin's hydrostatic paradox; 1653 Pascal's treatise (published 1663); 1795 Bramah's hydraulic press"
+    sources:
+      - "Archimedes, On Floating Bodies (c. 250 BC)"
+      - "Vitruvius, De architectura IX, preface"
+      - "E. J. Dijksterhuis, Archimedes (1956)"
+
+  - id: falling_bodies
+    name: Falling bodies and projectiles
+    category: physics
+    requires: []
+    helps: [mechanical_clock, symbolic_algebra]
+    explain: >
+      Apart from air resistance, all bodies fall at the same rate whatever their
+      weight: a heavy and a light ball dropped together from a tower land together.
+      The speed grows steadily (about 10 m/s more every second) and the distance grows
+      with the square of the time: about 5 m in the first second, 20 m after two, 45 m
+      after three. It can be shown slowly by rolling a ball down a grooved ramp and
+      marking positions at equal beats: the gaps go as 1, 3, 5, 7. A thrown or fired
+      body keeps its forward motion while it falls, so its path is a parabola, and the
+      longest range on level ground is near 45 degrees, less for fast shot in air.
+    pitfalls:
+      - "Dropping a feather or paper to 'prove' it and being refuted by air resistance; use two dense balls"
+      - "Citing the Leaning Tower experiment as fact (it rests only on Viviani's late account)"
+      - "Saying speed is proportional to distance fallen (Galileo's own first error); it is proportional to time"
+      - "Applying the vacuum parabola to cannon shot, which falls far short"
+    history:
+      greece: "4th c. BC – Aristotle: heavier bodies fall faster in proportion to weight"
+      egypt: "c. 530 AD – John Philoponus (Byzantine Alexandria) reports that unequal weights fall in nearly equal times"
+      islamic: "12th c. – Abu'l-Barakat al-Baghdadi describes acceleration of fall as accumulating impetus"
+      europe: "14th c. Merton scholars and Oresme, mean-speed theorem; 1537 Tartaglia on gunnery; 1551 de Soto calls fall uniformly accelerated; 1586 Stevin's drop test at Delft; c. 1604–1609 Galileo's ramp experiments, published 1638"
+    sources:
+      - "Galileo Galilei, Discorsi e dimostrazioni matematiche intorno a due nuove scienze (1638)"
+      - "Stillman Drake, Galileo at Work: His Scientific Biography (1978)"
+
+  - id: laws_of_motion
+    name: Laws of motion
+    category: physics
+    requires: []
+    helps: [falling_bodies, symbolic_algebra, calculus]
+    explain: >
+      First: a body left alone keeps moving in a straight line at constant speed; it
+      does not need a push to keep going, and things on Earth stop only because of
+      friction and air. Second: a force changes the motion, and the change of velocity
+      per second equals the force divided by the mass (F = m a). Third: forces come in
+      pairs; whatever pushes is pushed back equally (a gun recoils, a rower pushes
+      water backwards). Uniform motion in a straight line cannot be felt, which is why we do not
+      notice the moving Earth: a stone dropped from the mast of a smoothly sailing ship
+      lands at the foot of the mast.
+    pitfalls:
+      - "Accepting the common-sense Aristotelian view that motion needs a continuing force"
+      - "Confusing mass with weight, or force with energy or momentum"
+      - "Stating inertia as circular motion (Galileo's own version)"
+      - "Inventing a 'centrifugal force' that throws things outward; they simply go straight on"
+    history:
+      china: "c. 4th–3rd c. BC – a Mohist Canon passage says motion stops only through an opposing force (reading disputed)"
+      egypt: "c. 530 AD – Philoponus (Byzantine Alexandria) proposes an impressed force against Aristotle"
+      islamic: "11th c. Ibn Sina: impressed 'mayl' would persist in a void; 12th c. Ibn Bajja and al-Baghdadi"
+      europe: "c. 1350 Buridan's impetus; 1632–1638 Galileo; 1644 Descartes states straight-line inertia; 1687 Newton's three laws"
+    sources:
+      - "Isaac Newton, Philosophiae Naturalis Principia Mathematica (1687)"
+      - "I. Bernard Cohen, The Birth of a New Physics (1960)"
+
+  - id: universal_gravitation
+    name: Universal gravitation
+    category: physics
+    requires: [laws_of_motion, keplers_laws]
+    helps: [calculus, falling_bodies, astronomical_distances]
+    explain: >
+      Every body attracts every other with a force proportional to both masses and
+      falling off with the square of the distance. The force that makes an apple fall
+      is the same that holds the Moon: the Moon is 60 Earth radii away, so it should
+      fall towards the Earth 3600 times more slowly than the apple, about 1.4 mm in a
+      second instead of 4.9 m, and that is exactly how much its path curves away from
+      a straight line. The same law gives Kepler's three laws, the tides, the
+      flattening of the Earth at the poles and the return of comets. A planet is a
+      projectile that keeps falling round the Sun without reaching it.
+    pitfalls:
+      - "Saying Newton 'discovered gravity' or that the apple hit his head; his step was that the force reaches the Moon and follows one law"
+      - "Thinking there is no gravity in orbit; orbiting is continuous falling"
+      - "Leaving out the inverse square, without which nothing can be calculated"
+      - "Being unable to answer 'what is the cause of the attraction?' (Newton declined to say; that is acceptable)"
+    history:
+      india: "628 – Brahmagupta writes that the Earth attracts bodies as water flows; a qualitative remark, not a law"
+      europe: "1609 Kepler suggests a solar force; 1645 Boulliau mentions an inverse square; 1679–1680 Hooke proposes it to Newton; 1687 Newton, Principia; 1736–1737 Lapland expedition confirms the flattened Earth; 1759 return of Halley's comet; 1798 Cavendish weighs the Earth; 1846 Neptune found by calculation"
+    sources:
+      - "Isaac Newton, Philosophiae Naturalis Principia Mathematica (1687)"
+      - "Richard S. Westfall, Never at Rest: A Biography of Isaac Newton (1980)"
+
+  - id: strength_of_materials
+    name: Strength of materials and scaling
+    category: physics
+    requires: []
+    helps: [lever_mechanics_statics, symbolic_algebra]
+    explain: >
+      Within the proportional range, a material stretches in proportion to the load (Hooke's
+      law), and each has a breaking stress, a load per unit of cross-section, that can
+      be measured by hanging weights on a wire or rod. A rope or tie twice as thick
+      carries four times the load. A beam's stiffness and strength grow far more with
+      depth than with width, so a plank on edge carries much more than flat. A slender
+      column fails by buckling sideways long before it is crushed, and doubling its
+      length quarters the load it bears. Because weight grows with the cube of size
+      and strength only with the square, a model that stands does not prove the
+      full-size structure will.
+    pitfalls:
+      - "Scaling up a working model in all dimensions and expecting it to hold"
+      - "Trusting stone, brick or cast iron in tension or bending (strong only in compression)"
+      - "No safety factor for flaws, knots and shock loads"
+      - "Confusing stiffness with strength"
+    history:
+      europe: "c. 1490s Leonardo's notes on testing wires and beams; 1638 Galileo on beams and the square-cube law; 1678 Hooke's law; 1744–1757 Euler's buckling formula; 1773 Coulomb; 1826 Navier's theory of bending"
+      china: "1103 – Yingzao fashi fixes proportional sizes for timber members (rules of practice, not theory)"
+    sources:
+      - "Galileo Galilei, Discorsi e dimostrazioni matematiche intorno a due nuove scienze (1638)"
+      - "Stephen P. Timoshenko, History of Strength of Materials (1953)"
+      - "J. E. Gordon, Structures: Or Why Things Don't Fall Down (1978)"
+
+  # ------------------------------------------------------------ timekeeping
+  - id: sundial_water_clock
+    name: Sundial and water clock
+    category: physics
+    requires: []
+    helps: [round_earth_size, geometry_proof]
+    explain: >
+      A sundial tells the time from the direction of a shadow. On a simple dial for equal
+      hours the shadow-casting edge points at the celestial pole, that is, slopes towards
+      the visible pole at an angle equal to the absolute latitude. Each dial is correct
+      only for the latitude it was made for, and it shows local solar time, which varies
+      from local mean solar time by up to about 16 minutes. A water clock measures time by
+      water running through a small hole. Flow slows as the level falls. Calibrate unequal
+      level marks on an outflow clock, or supply an inflow clock from a constant-level
+      tank. The smallest readable interval depends on the scale and the steadiness of the
+      flow or shadow.
+    pitfalls:
+      - "Vertical gnomon with equally spaced hour marks"
+      - "Carrying a dial to another latitude (Rome used a looted Sicilian dial wrongly for about 99 years, according to Pliny)"
+      - "Treating Greek or Roman seasonal hours as fixed lengths: daylight and darkness were each divided into twelve"
+      - "Marking equal intervals on a straight-sided outflow vessel as if the flow stayed constant, or ignoring changes of flow in the cold"
+    history:
+      egypt: "c. 1500 BC shadow clocks; c. 1400 BC outflow water clock (Karnak, reign of Amenhotep III)"
+      mesopotamia: "2nd millennium BC – water clocks measured by weight of water; gnomon in use by c. 700 BC"
+      china: "gnomon observations from the 2nd millennium BC; inflow water clocks with compensating tanks by the Han"
+      greece: "6th c. BC gnomon from Babylon (Herodotus); c. 270 BC Ctesibius' regulated water clock; c. 50 BC Tower of the Winds, Athens"
+      rome: "Pliny reports a tradition of a sundial dedicated by Papirius Cursor in 293 BC. Varro dates the first public dial near the Rostra to 263 BC, brought from Catina in Sicily. Scipio Nasica installed a public water clock during his censorship in 159 BC."
+      islamic: "1371 – Ibn al-Shatir's dial in Damascus with pole-pointing gnomon and equal hours"
+      europe: "15th c. – pole-pointing dials become standard"
+    sources:
+      - "Pliny the Elder, Natural History VII.213–215"
+      - "Vitruvius, De architectura IX.7–8"
+      - "Gerhard Dohrn-van Rossum, History of the Hour: Clocks and Modern Temporal Orders (1996)"
+
+  - id: mechanical_clock
+    name: Mechanical clock (escapement, spring drive)
+    category: physics
+    requires: [gears_gear_trains]
+    helps: [wire_drawing, lathe_screw_cutting]
+    explain: >
+      A falling weight on a cord turns a train of gears; an escapement lets the train
+      advance only one tooth at a time, so the weight runs down in steps instead of
+      crashing. In the verge escapement a crown wheel with saw teeth pushes two small
+      plates (pallets) on an upright rod alternately; the rod carries a crossbar with
+      movable weights (foliot) or a wheel (balance) that swings to and fro and sets the
+      rate. Such clocks err by a quarter of an hour a day or more and are set by a
+      sundial. A coiled steel spring instead of the weight makes the clock portable; a
+      cone-shaped fusee evens out the spring's weakening pull. Real accuracy comes
+      only with the pendulum (1656) and the balance spring (1675).
+    pitfalls:
+      - "Describing gears and hands but no escapement; that is the whole invention"
+      - "Jumping straight to a pendulum or a watch without the metalworking (hardened steel springs, cut pinions)"
+      - "Promising minute accuracy from a verge and foliot"
+      - "Calling Henlein the inventor of the watch (small spring clocks existed before him)"
+    history:
+      china: "725 Yi Xing and Liang Lingzan's water-driven armillary with a stop-release linkage; 1088–1094 Su Song's astronomical clock tower, Kaifeng"
+      islamic: "11th c. al-Muradi's geared water clocks; 1206 al-Jazari's automata clocks; c. 1560 Taqi al-Din describes weight and spring clocks"
+      europe: "c. 1270–1300 weight-driven verge clock (Dunstable 1283 is the first likely record); 1364 de Dondi's Astrarium; c. 1430 spring drive and fusee; c. 1500–1510 portable watches in Nuremberg and Italy; 1675 balance spring (Huygens; Hooke claims priority)"
+    sources:
+      - "David S. Landes, Revolution in Time (1983)"
+      - "Joseph Needham, Wang Ling & Derek J. de Solla Price, Heavenly Clockwork (1960)"
+      - "Carlo M. Cipolla, Clocks and Culture 1300–1700 (1967)"
+
+  - id: pendulum_clock
+    name: Pendulum clock
+    category: physics
+    requires: [mechanical_clock]
+    helps: [falling_bodies]
+    explain: >
+      A weight swinging on a rod or thread takes the same time for every swing as long
+      as the swings are small; the time depends only on the length, not on the weight,
+      and goes with the square root of the length. A pendulum about 99.4 cm long beats
+      seconds (one second each way); a quarter of that length beats half seconds. Let
+      the pendulum, not a foliot, control the escapement, which in turn gives it a
+      small push each swing: the error falls from a quarter of an hour a day to under
+      a minute, with a long pendulum and anchor escapement to a few seconds. A bare
+      pendulum counted by hand already times experiments and pulses.
+    pitfalls:
+      - "Wide swings (period then depends on the arc); keep them to a few degrees"
+      - "Thinking a heavier bob swings faster"
+      - "Ignoring heat: a metal rod lengthens in summer and the clock loses"
+      - "Expecting it to work at sea; a rolling ship ruins it"
+      - "Repeating the myth that Ibn Yunus used a pendulum for timekeeping around 1000"
+    history:
+      europe: "1602 Galileo's first letter on the pendulum's equal swings (the cathedral-lamp story of 1583 comes from Viviani); 1637–1641 Galileo's clock design; 1656 Huygens' design, built 1657 by Salomon Coster; c. 1657–1671 anchor escapement (Clement or Hooke); 1721 Graham's mercury compensation, 1726 Harrison's gridiron"
+      china: "17th c. – brought by Jesuits to the Qing court"
+    sources:
+      - "Christiaan Huygens, Horologium Oscillatorium (1673)"
+      - "David S. Landes, Revolution in Time (1983)"
+
+  # ------------------------------------------------------------ air, heat
+  - id: atmospheric_pressure
+    name: Air pressure and the barometer
+    category: physics
+    requires: []
+    helps: [glassmaking, mercury_amalgam, buoyancy_hydrostatics]
+    explain: >
+      Air has weight, and we live at the bottom of an ocean of it that presses on
+      everything with about 1 kg on every square centimetre. That, not 'nature's
+      horror of a vacuum', is why a suction pump lifts water: the air pushes it up,
+      and only to about 10 m. Fill a glass tube a metre long, closed at one end, with
+      mercury, and upend it in a bowl of mercury: the column sinks to about 76 cm and
+      leaves empty space above. Carried up a mountain the column falls (about 1 cm per
+      100 m), and it changes with the weather.
+    pitfalls:
+      - "Saying a vacuum sucks; nothing pulls, the outside air pushes"
+      - "Confusing air pressure with steam pressure"
+      - "Air bubbles or damp left in the tube spoil the column"
+      - "Mercury vapour is poisonous; do not heat or spill it indoors"
+      - "Trying the experiment with water without a 10.5 m tube"
+    history:
+      greece: "3rd c. BC – Strato argues for empty spaces between particles and Ctesibius uses compressed air. Hero discusses air and void in his Pneumatica in the 1st c. AD"
+      islamic: "1121 – al-Khazini treats air as having weight and buoyancy and as thinning with height"
+      europe: "c. 1630 Baliani and Beeckman ascribe the pump limit to the weight of air; c. 1641 Berti's water column in Rome; 1643–1644 Torricelli and Viviani's mercury tube; 1648 Périer's ascent of the Puy de Dôme for Pascal; 1654–1657 Guericke's hemispheres"
+    sources:
+      - "Blaise Pascal, Traités de l'équilibre des liqueurs et de la pesanteur de la masse de l'air (1663)"
+      - "W. E. Knowles Middleton, The History of the Barometer (1964)"
+
+  - id: air_pump_vacuum
+    name: Air pump and vacuum experiments
+    category: physics
+    requires: [piston_pump]
+    helps: [atmospheric_pressure, boring_machine, glassmaking]
+    explain: >
+      A piston pump with two valves, turned round so that it draws air out of a closed
+      vessel instead of water out of a well. Each stroke removes a fraction of what is
+      left. Everything depends on tightness: a truly round barrel, a leather piston
+      soaked in oil, joints sealed with wax or kept under water, a tap between pump and
+      vessel. In the emptied glass a candle goes out, a bell can
+      hardly be heard, warm water boils, and a feather falls as fast as a coin. Two
+      close-fitting copper bowls emptied of air cannot be pulled apart by teams of
+      horses. Much later the same art gives light bulbs and electron tubes.
+    pitfalls:
+      - "Expecting a perfect vacuum; early pumps reached perhaps a tenth to a hundredth of an atmosphere"
+      - "Thin or flat-sided glass vessels implode; use thick round ones"
+      - "Leaks at every joint; without constant sealing nothing works, as Boyle's critics found"
+    history:
+      europe: "c. 1647–1650 Guericke's first pump; 1654 Regensburg and 1657 Magdeburg hemisphere shows; 1659 Boyle and Hooke's pump with glass receiver; 1705 Hauksbee's double-barrel pump; 1855 Geissler and 1865 Sprengel mercury pumps"
+      china: "double-acting piston bellows long in use, but no evacuation pump before European contact"
+    sources:
+      - "Robert Boyle, New Experiments Physico-Mechanicall, Touching the Spring of the Air (1660)"
+      - "Steven Shapin & Simon Schaffer, Leviathan and the Air-Pump (1985)"
+
+  - id: thermometer_temperature
+    name: Thermometer and temperature scale
+    category: physics
+    requires: [glassmaking]
+    helps: [distillation, mercury_amalgam, atmospheric_pressure]
+    explain: >
+      In a sealed liquid thermometer, expansion of the liquid in a bulb moves a column
+      along a narrow tube of uniform bore. For a mercury Celsius thermometer, mark melting
+      ice and steam above boiling water at standard atmospheric pressure, then divide the
+      interval into 100 equal parts. Compare a spirit thermometer with a calibrated
+      instrument over its working range. Readings can now be compared in medicine, brewing
+      and weather records. A cup and a tub can have the same temperature although warming
+      the tub by one degree takes more energy.
+    pitfalls:
+      - "An open tube standing in water (the early thermoscope) also responds to air pressure"
+      - "Boiling point falls with altitude and with a low barometer (about 1 degree per 300 m)"
+      - "Ethanol boils near 78 °C at atmospheric pressure. A boiling-water calibration is unsuitable for an ordinary spirit thermometer"
+      - "Uneven bore gives unequal degrees"
+      - "Scale by guesswork ('hottest summer day') instead of reproducible fixed points"
+    history:
+      greece: "3rd c. BC Philo of Byzantium and 1st c. AD Hero show air expanding with heat"
+      europe: "c. 1593–1603 Galileo's circle, air thermoscope; 1612 Santorio adds a scale and uses it on patients; c. 1654 sealed spirit thermometers of Grand Duke Ferdinando II, Florence; 1714 Fahrenheit's mercury thermometer; 1742 Celsius' centigrade scale (first with 100 at freezing; reversed within a few years); 1848 Kelvin's absolute scale"
+    sources:
+      - "W. E. Knowles Middleton, A History of the Thermometer and Its Use in Meteorology (1966)"
+      - "Hasok Chang, Inventing Temperature: Measurement and Scientific Progress (2004)"
+
+  - id: latent_specific_heat
+    name: Specific and latent heat
+    category: physics
+    requires: [thermometer_temperature]
+    explain: >
+      Different substances need different amounts of heat for the same rise in
+      temperature; water has a high specific heat (about ten times as much as iron, weight for
+      weight). Melting and boiling swallow large amounts of heat with no rise in
+      temperature at all: melting ice takes as much heat as warming the same water
+      from 0 to 80 degrees, and turning boiling water into steam takes more than five
+      times what was needed to bring it from freezing to the boil. That is why ice
+      lasts, why steam scalds worse than boiling water, and why an engine that cools
+      and reheats its cylinder at every stroke wastes most of its fuel.
+    pitfalls:
+      - "Assuming ice at 0 degrees turns to water as soon as it reaches 0"
+      - "Treating heat and temperature as the same thing"
+      - "Expecting water to get hotter the harder it is boiled"
+    history:
+      europe: "c. 1757–1762 Joseph Black (Glasgow) establishes latent and specific heat in lectures; 1764–1765 Watt applies it to the steam engine; 1772 Wilcke publishes independently; 1780s Lavoisier and Laplace's ice calorimeter"
+    sources:
+      - "Joseph Black, Lectures on the Elements of Chemistry (1803)"
+      - "D. S. L. Cardwell, From Watt to Clausius (1971)"
+
+  - id: heat_energy_conservation
+    name: Heat as motion, conservation of energy, limits of engines
+    category: physics
+    requires: [thermometer_temperature]
+    helps: [latent_specific_heat, laws_of_motion, atomic_theory, gas_laws]
+    explain: >
+      Heat is energy transferred because of a temperature difference. Internal energy
+      includes the microscopic motion and interactions of the particles of matter. Work
+      can be turned into heat without limit (boring a cannon with a
+      blunt tool boils water for as long as the horses turn), and always at the same
+      rate: the work of letting 1 kg fall about 427 m warms 1 kg of water by one
+      degree. Energy in all its forms (motion, height, heat, chemical, electrical) is
+      never created or destroyed, only converted, so no machine can give out more work
+      than it takes in. The other way is limited: an engine turns heat into work only
+      while heat flows from hot to cold, and the largest possible share is the
+      temperature drop divided by the hot temperature counted from absolute zero
+      (-273 degrees C). Hotter steam and a colder condenser mean less fuel.
+    pitfalls:
+      - "Proposing or funding perpetual motion machines"
+      - "Describing heat as a substance (caloric) that flows out of bodies"
+      - "Saying energy is 'used up'; it is degraded to lukewarm heat"
+      - "Expecting an engine to convert all the heat of its fuel into work"
+    history:
+      europe: "1620 Bacon and 1738 Daniel Bernoulli: heat is motion; 1798 Rumford's cannon-boring experiment; 1824 Carnot on the motive power of fire; 1842 Mayer; 1843–1850 Joule measures the mechanical equivalent; 1847 Helmholtz states conservation generally; 1850–1865 Clausius and Kelvin, second law and entropy; 1860s–1870s Maxwell and Boltzmann, kinetic theory"
+    sources:
+      - "Sadi Carnot, Réflexions sur la puissance motrice du feu (1824)"
+      - "James Prescott Joule, On the Mechanical Equivalent of Heat, Philosophical Transactions 140 (1850)"
+      - "D. S. L. Cardwell, From Watt to Clausius (1971)"
+
+  - id: weather_instruments
+    name: Weather instruments and forecasting
+    category: physics
+    requires: []
+    helps: [atmospheric_pressure, thermometer_temperature, electric_telegraph, data_graphs]
+    explain: >
+      Weather can be measured and, a day or so ahead, foretold. A falling barometer
+      warns of wind and rain, a fast fall of a storm; a rising one of fair weather.
+      Storms are huge whirling systems hundreds of kilometres across that travel,
+      in the middle latitudes mostly from west to east, so that yesterday's weather
+      upwind is tomorrow's here. In the northern hemisphere, with the wind at your
+      back, the low pressure lies to your left. Useful instruments: barometer,
+      thermometer, a rain gauge (a straight-sided vessel, depth read with a ruler), a
+      wind vane, and a hygrometer (a degreased hair or gut string that lengthens in
+      damp air). Daily readings at fixed hours at many places, collected on one map,
+      show the systems moving.
+    pitfalls:
+      - "Reading the barometer's level instead of its change"
+      - "Promising forecasts weeks ahead or for an exact place and hour"
+      - "Readings in the sun or at irregular times cannot be compared"
+      - "Explaining weather by the Moon's phases or the planets"
+    history:
+      india: "c. 3rd c. BC–2nd c. AD – Arthashastra prescribes rain measurement in a standard bowl"
+      china: "c. 120 BC Huainanzi: charcoal on a balance shows humidity; wind vanes in use under the Han; 1247 Qin Jiushao on rain and snow gauges"
+      east_asia: "1441–1442 – Korea: standard rain gauge (cheugugi) under Sejong, credited to the crown prince, issued to all provinces"
+      greece: "c. 340 BC Aristotle, Meteorologica; c. 50 BC wind vane on the Tower of the Winds"
+      europe: "c. 1450 Cusanus and Alberti describe hygrometer and anemometer; 1654 Medici network of observers; 1660 Guericke foretells a storm from the barometer; 1783 Saussure's hair hygrometer; 1820 Brandes' first weather maps; 1857 Buys Ballot's law; 1861 FitzRoy's telegraph-based storm warnings and forecasts; 1919 Bergen school, fronts"
+      americas: "1743 – Franklin notes that storms travel against their own surface wind"
+    sources:
+      - "W. E. Knowles Middleton, Invention of the Meteorological Instruments (1969)"
+      - "Peter Moore, The Weather Experiment (2015)"
+
+  # ------------------------------------------------------------ earth and sky
+  - id: round_earth_size
+    name: Spherical Earth and its size
+    category: physics
+    requires: []
+    helps: [geometry_proof, sundial_water_clock]
+    explain: >
+      The Earth is a ball about 40,000 km round (a degree of latitude is about
+      111 km). Evidence anyone can check: a ship's hull disappears below the horizon
+      before its mast; the Earth's shadow on the Moon in a lunar eclipse is always
+      round; travelling south, new stars rise and the Pole Star sinks; the same
+      eclipse is seen at a later hour of the night further east. Its size: at noon on
+      midsummer day the Sun stood overhead at Syene but 7.2 degrees (a fiftieth of a
+      circle) from overhead at Alexandria, 5000 stadia north, so the whole circle is
+      50 times that distance. People on the other side do not fall off because 'down'
+      everywhere means towards the centre.
+    pitfalls:
+      - "Telling educated people of ancient Greece, Rome, the Islamic world or medieval Europe that they believe in a flat Earth; they do not"
+      - "Saying Columbus proved the Earth round; the dispute was its size, and he was wrong (he made it a quarter too small and Asia too wide)"
+      - "Claiming Eratosthenes was exact to 1 per cent; the length of his stadion is uncertain"
+      - "Forgetting that the method assumes the Sun's rays are parallel and the two places lie north-south"
+    history:
+      greece: "5th c. BC Pythagoreans and Parmenides; c. 350 BC Aristotle's proofs; c. 240 BC Eratosthenes measures 250,000–252,000 stadia"
+      india: "499 – Aryabhata: a rotating sphere, with a circumference close to the true one"
+      islamic: "c. 830 al-Ma'mun's surveyors measure a degree in the Sinjar plain; c. 1020s al-Biruni's mountain-and-horizon method near Nandana"
+      china: "a flat Earth under a round heaven remained usual until Jesuit teaching in the 17th c., despite Zhang Heng's 'egg yolk' image (c. 120 AD)"
+      mesopotamia: "flat disc surrounded by ocean (Babylonian world map, c. 6th c. BC)"
+      europe: "known throughout the Middle Ages (Bede 725; Sacrobosco, De sphaera, c. 1230); 1519–1522 Magellan and Elcano's circumnavigation; 1669–1670 Picard's accurate degree"
+    sources:
+      - "Aristotle, On the Heavens II.14"
+      - "Cleomedes, On the Circular Motions of the Celestial Bodies (account of Eratosthenes' measurement)"
+      - "Jeffrey Burton Russell, Inventing the Flat Earth: Columbus and Modern Historians (1991)"
+
+  - id: seasons_axial_tilt
+    name: Cause of the seasons (tilted axis)
+    category: physics
+    requires: [round_earth_size]
+    helps: [heliocentrism, sundial_water_clock]
+    explain: >
+      The seasons come from the tilt of the Earth's axis, about 23.5 degrees from the
+      perpendicular to its orbital plane (in the older picture: the Sun's yearly path is
+      inclined by that much to the celestial equator). In summer the Sun stands higher,
+      its rays strike more steeply and the day is longer; in winter the reverse. Therefore
+      the seasons are opposite in the two hemispheres, the Sun passes overhead only
+      between the tropics, and beyond about 66.5 degrees latitude there are days when it
+      does not set. The tilt is measured from the noon shadow of a vertical pole at the
+      two solstices: outside the tropics, where the Sun is above the horizon at both
+      noons, half the difference between the two Sun heights.
+    pitfalls:
+      - "Saying summer comes because the Earth is nearer the Sun; it is nearest in early January"
+      - "Forgetting that the southern hemisphere has the opposite season"
+      - "Saying the axis wobbles to and fro during the year; it keeps its direction"
+    history:
+      mesopotamia: "c. 1000 BC – MUL.APIN lists solstices, equinoxes and changing day length"
+      china: "gnomon shadow measurements of the solstices from the 1st millennium BC (Zhoubi suanjing)"
+      greece: "5th c. BC Oenopides credited with the obliquity; c. 240 BC Eratosthenes measures it as about 23 degrees 51 minutes"
+      india: "499 – Aryabhata gives 24 degrees"
+      islamic: "9th–10th c. – repeated measurements show the obliquity slowly decreasing"
+      americas: "solstice and zenith-passage alignments in Mesoamerican and Andean sites"
+    sources:
+      - "James Evans, The History and Practice of Ancient Astronomy (1998)"
+      - "Otto Neugebauer, The Exact Sciences in Antiquity (1957)"
+
+  - id: eclipse_prediction
+    name: Cause and prediction of eclipses
+    category: physics
+    requires: []
+    helps: [round_earth_size, arabic_numerals, solar_calendar_leap_years]
+    explain: >
+      The Moon shines by reflected sunlight. A lunar eclipse happens at full moon when
+      the Moon passes through the Earth's shadow; a solar eclipse at new moon when the
+      Moon covers the Sun. They do not happen every month because the Moon's path is
+      tilted about 5 degrees to the Sun's, so the three line up only near the two
+      crossing points. Eclipses repeat in a cycle of 223 lunar months, which is 18
+      years and 11 days plus about 8 hours (the saros): from a list of past eclipses,
+      the next ones can be foretold. A lunar eclipse is seen from the whole night side
+      of the Earth, a total solar eclipse only along a narrow track, so lunar ones are
+      the safe prediction.
+    pitfalls:
+      - "Ignoring the extra 8 hours: the next eclipse of a series falls a third of the globe further west, so it may not be visible locally"
+      - "Predicting a solar eclipse for a given town from the cycle alone"
+      - "Looking at a partial solar eclipse with bare eyes (blinds)"
+      - "Citing Thales' prediction of 585 BC as certain; it is doubted"
+      - "A stranded traveller rarely remembers actual dates; without an almanac or records the 'Columbus trick' cannot be done"
+    history:
+      mesopotamia: "eclipse records from c. 750 BC; saros-based prediction of lunar eclipses by c. 600 BC, later arithmetic theories"
+      china: "oracle-bone eclipse records c. 1200 BC; 1st c. BC–2nd c. AD Jing Fang and Zhang Heng give the shadow explanation; 3rd c. AD calendars predict lunar eclipses; solar predictions stay unreliable until the 17th c."
+      greece: "c. 450 BC Anaxagoras explains both kinds; c. 140 BC Hipparchus; c. 100 BC Antikythera mechanism with saros dial; c. 150 AD Ptolemy, Almagest"
+      india: "499 – Aryabhata computes eclipses from shadows, against the Rahu myth"
+      islamic: "9th–10th c. – al-Khwarizmi's and al-Battani's tables"
+      americas: "Maya eclipse-warning table in the Dresden Codex (copy of c. 1200, older sources)"
+      europe: "1474 Regiomontanus' printed Ephemerides (used by Columbus in Jamaica, 1504); 1715 Halley's map of a solar eclipse track"
+    sources:
+      - "Otto Neugebauer, The Exact Sciences in Antiquity (1957)"
+      - "John M. Steele, Observations and Predictions of Eclipse Times by Early Astronomers (2000)"
+      - "F. Richard Stephenson, Historical Eclipses and Earth's Rotation (1997)"
+
+  - id: heliocentrism
+    name: Heliocentric model
+    category: physics
+    requires: [round_earth_size]
+    helps: [telescope, laws_of_motion, keplers_laws]
+    explain: >
+      The Earth turns on its axis once a day and travels round the Sun once a year, as
+      the third of the planets; only the Moon goes round the Earth. This explains at
+      one stroke why the planets sometimes move backwards (the Earth overtakes them),
+      why Mercury and Venus never stray far from the Sun, and the order and relative
+      distances of the planets. Evidence with a small telescope: Venus shows a full
+      set of phases like the Moon and changes size, so it circles the Sun; Jupiter has
+      four moons, so not everything circles the Earth. We do not feel the motion
+      because everything on Earth shares it.
+    pitfalls:
+      - "Claiming Copernicus's system predicted better or was simpler; with circles it still needed epicycles and was no more accurate than Ptolemy"
+      - "Having no answer to the serious objections: no visible shift of the stars through the year (they are immensely far) and no wind or falling behind (inertia)"
+      - "Presenting the phases of Venus as proof; they refute Ptolemy but also fit Tycho's system, in which the planets circle a Sun that circles the Earth"
+      - "Saying the Sun is the fixed centre of the universe"
+      - "Underestimating the religious and legal risk after 1616, or inventing it before"
+    history:
+      greece: "c. 270 BC Aristarchus of Samos; c. 150 BC Seleucus of Seleucia defends it; rejected by Hipparchus and Ptolemy"
+      india: "499 – Aryabhata teaches the daily rotation of the Earth (his planetary model stays geocentric)"
+      islamic: "13th–14th c. al-Tusi and Ibn al-Shatir devise the geometrical tools Copernicus later uses, in geocentric models; Earth's rotation debated by al-Biruni and at Maragha"
+      europe: "1543 Copernicus, De revolutionibus; 1609–1619 Kepler; 1610 Galileo's telescope observations; 1616 Copernicus's book suspended, 1633 Galileo's trial; 1728 Bradley's aberration, first direct proof of the Earth's motion; 1838 Bessel's stellar parallax; 1851 Foucault's pendulum shows the rotation"
+    sources:
+      - "Nicolaus Copernicus, De revolutionibus orbium coelestium (1543)"
+      - "Galileo Galilei, Dialogo sopra i due massimi sistemi del mondo (1632)"
+      - "Thomas S. Kuhn, The Copernican Revolution (1957)"
+
+  - id: keplers_laws
+    name: Kepler's laws of planetary motion
+    category: physics
+    requires: [heliocentrism]
+    helps: [geometry_proof, logarithms, coordinate_geometry]
+    explain: >
+      First, each planet moves in an ellipse (a slightly flattened circle, drawn with a
+      loop of thread round two pins) with the Sun at one of the two pin points, not at
+      the centre. Second, it moves faster when nearer the Sun, such that the line from
+      Sun to planet sweeps equal areas in equal times. Third, the square of the time of
+      revolution is proportional to the cube of the semi-major axis: with years and the
+      Earth's distance as units, Jupiter at 5.2 takes 11.86 years. Kepler used these laws
+      and Tycho’s observations to predict the date of the 1631 Mercury transit. Gassendi
+      observed it about five hours earlier than predicted.
+    pitfalls:
+      - "Drawing strongly elongated orbits; planetary ellipses are almost circles, the Sun being off-centre is the noticeable part"
+      - "Putting the Sun at the centre of the ellipse"
+      - "Explaining the seasons by the changing distance"
+      - "Offering the laws without data; they were won from Tycho Brahe's observations of Mars and convince only by better predictions"
+    history:
+      europe: "1609 Astronomia nova (first two laws, from Tycho's Mars data); 1619 Harmonices mundi (third law); 1627 Rudolphine Tables; 1631 Gassendi sees the predicted transit of Mercury; 1687 Newton derives the laws from gravitation"
+      islamic: "11th c. – al-Zarqali uses an oval deferent for Mercury (a geometrical device, not an orbit law)"
+    sources:
+      - "Johannes Kepler, Astronomia nova (1609) and Tabulae Rudolphinae (1627)"
+      - "James R. Voelkel, Johannes Kepler and the New Astronomy (1999)"
+
+  - id: astronomical_distances
+    name: Distances of Moon, Sun and stars (parallax)
+    category: physics
+    requires: [round_earth_size, trigonometry]
+    helps: [telescope, keplers_laws, pendulum_clock]
+    explain: >
+      Distances in the sky are found like a surveyor's: observe the same body from two
+      places a known distance apart and measure how far it shifts against the
+      background (parallax). The Moon is about 60 Earth radii away (384,000 km), found
+      already in antiquity. The Sun is about 150 million km away, some 400 times
+      further than the Moon and 109 Earth diameters wide; this needed telescopes and
+      observers on different continents (Mars in 1672, Venus crossing the Sun in 1761
+      and 1769). Kepler's third law then gives all other planets. The nearest stars
+      are a few hundred thousand times further than the Sun; their yearly shift as
+      the Earth moves is under one second of arc and was first measured in 1838.
+    pitfalls:
+      - "Quoting the modern figures without any method; the numbers alone convince nobody"
+      - "Using Aristarchus' half-moon method, which is sound geometry but gave a Sun 20 times too near"
+      - "Expecting to see stellar parallax with early instruments; its absence was the main argument against Copernicus"
+    history:
+      greece: "c. 270 BC Aristarchus: Sun about 19 times further than the Moon; c. 140 BC Hipparchus: Moon at about 60 Earth radii; Ptolemy's solar distance of about 1200 Earth radii stays standard for 1500 years"
+      islamic: "9th–11th c. – al-Farghani and al-Battani refine the Ptolemaic distances"
+      europe: "1672 Cassini and Richer, parallax of Mars: Sun about 140 million km; 1761 and 1769 transits of Venus observed worldwide; 1838 Bessel, parallax of 61 Cygni"
+      americas: "1912 – Henrietta Leavitt's period-luminosity law for variable stars opens distances beyond parallax"
+    sources:
+      - "Albert Van Helden, Measuring the Universe: Cosmic Dimensions from Aristarchus to Halley (1985)"
+      - "Alan W. Hirshfeld, Parallax: The Race to Measure the Cosmos (2001)"
+
+  - id: comets_orbits
+    name: Comets as orbiting bodies
+    category: physics
+    requires: []
+    helps: [universal_gravitation, keplers_laws, telescope]
+    explain: >
+      Comets are not vapours in the air or omens but bodies far beyond the Moon that
+      travel round the Sun on paths that are often very elongated. Bound comets can return. Proof of the
+      distance: observers hundreds of kilometres apart see a comet at the same place
+      among the stars, whereas the Moon shifts noticeably. The solar wind drives the ion
+      tail away from the Sun. Dust pushed by sunlight also retains orbital motion and
+      forms a curved tail. The bright comet seen in
+      1531, 1607 and 1682 is one body with a period of about 76 years.
+    pitfalls:
+      - "Predicting a return from memory with a wrong year, or assuming every comet is periodic on human timescales"
+      - "Saying the tail trails behind the motion"
+      - "Dismissing the fear of comets without offering the parallax argument"
+    history:
+      china: "systematic comet records from 613 BC; Halley's comet recorded in 240 BC; the Book of Jin (compiled c. AD 648, astronomical treatise, ch. 12) describes tails pointing east in the evening and west in the morning"
+      mesopotamia: "164 BC – Babylonian diaries record Halley's comet"
+      rome: "c. 65 AD – Seneca argues that comets are lasting bodies on orbits (Natural Questions VII)"
+      europe: "1531–1540 Apian and Fracastoro: tails point away from the Sun; 1577 Tycho Brahe shows a comet is beyond the Moon; 1705 Halley predicts a return, confirmed in 1758–1759"
+    sources:
+      - "Book of Jin (Jin shu), ch. 12, astronomical treatise (7th c. AD)"
+      - "Edmond Halley, A Synopsis of the Astronomy of Comets (1705)"
+      - "Donald K. Yeomans, Comets: A Chronological History of Observation, Science, Myth, and Folklore (1991)"
+
+  - id: tides
+    name: Tides caused by Moon and Sun
+    category: physics
+    requires: []
+    helps: [universal_gravitation, eclipse_prediction]
+    explain: >
+      The tides follow the Moon. At many ports high water comes twice in about 24 hours 50 minutes,
+      so each day roughly 50 minutes later, like the Moon's rising. The range is
+      greatest just after new and full moon (spring tides), when Sun and Moon pull
+      along the same line, and smallest at the half moons (neap tides). At a given
+      harbour, high water follows the Moon's passage across the meridian by a
+      characteristic average interval, which can be found by a month of observation and
+      then used for a tide
+      table. The cause is the Moon's attraction being stronger on the near side of the
+      Earth and weaker on the far side than at the centre, which makes two bulges.
+    pitfalls:
+      - "Explaining only one bulge and so one tide a day"
+      - "Expecting high water exactly when the Moon is overhead; coasts and basins delay it by hours"
+      - "Assuming every coast has two large tides a day. Some ports have one, and many Mediterranean and Baltic tidal ranges are small"
+      - "Galileo's error: explaining tides by the sloshing of the seas on a moving Earth"
+    history:
+      greece: "c. 325 BC Pytheas links tides and Moon in the Atlantic; c. 150 BC Seleucus of Seleucia; c. 90 BC Posidonius at Cádiz describes the monthly cycle"
+      china: "1st c. AD Wang Chong ties tides to the Moon; 1056 tide table for the Qiantang bore"
+      india: "tidal dock at Lothal (c. 2300 BC) is claimed, its function disputed"
+      islamic: "9th c. – Abu Ma'shar's detailed description of lunar tides, influential in Latin translation"
+      europe: "725 Bede notes the fixed delay at each port; 13th c. tide table for London Bridge; 1687 Newton's explanation; 1775 Laplace's dynamic theory; 1872 Kelvin's tide-predicting machine"
+    sources:
+      - "Bede, De temporum ratione (725), ch. 29"
+      - "David Edgar Cartwright, Tides: A Scientific History (1999)"
+
+  - id: terrestrial_magnetism
+    name: The Earth as a magnet
+    category: physics
+    requires: [magnetic_compass]
+    explain: >
+      The compass needle points north because the whole Earth is a great magnet, not
+      because of the Pole Star or magnetic mountains. Every magnet has two poles that
+      cannot be separated: break it and each piece has both; like poles repel, unlike
+      attract. A freely pivoted needle lies nearly horizontal at the magnetic equator. Its
+      north-seeking end dips down in the magnetic north and up in the magnetic south. The
+      needle does not point to true north: the deviation (declination)
+      differs from place to place and slowly changes over decades, so charts must
+      record it and navigators check it against the Sun or Pole Star. Iron heated red
+      and cooled or hammered while lying north-south becomes weakly magnetic; heating
+      a magnet red destroys its force.
+    pitfalls:
+      - "Treating compass north as true north"
+      - "Claiming garlic or diamonds weaken a magnet (old lore Gilbert tested and refuted)"
+      - "Hoping to find longitude from declination; it was tried for two centuries and failed"
+      - "Iron near the compass (guns, nails in the binnacle) falsifies it"
+    history:
+      china: "1088 – Shen Kuo records that the needle points slightly east of south (declination); thermoremanent 'iron fish' described 1044"
+      europe: "1269 Petrus Peregrinus, letter on the magnet (poles, experiments); c. 1450 declination marked on German sundials; 1581 Norman publishes the dip; 1600 Gilbert, De magnete; 1635 Gellibrand finds declination changes with time; 1701 Halley's chart of declination; 1832–1838 Gauss measures and analyses the field"
+    sources:
+      - "William Gilbert, De magnete (1600)"
+      - "Stephen Pumfrey, Latitude and the Magnetic Earth (2002)"
+
+  - id: deep_time_geology
+    name: Deep time - age of the Earth, strata and fossils
+    category: physics
+    requires: []
+    helps: [radioactivity, natural_causes]
+    explain: >
+      The Earth is immensely old (about 4.5 thousand million years) and its surface
+      records processes still at work: rain and rivers wear the land down, the debris
+      settles in layers on sea floors, hardens to rock and is later raised and folded into
+      mountains. In an undisturbed sequence of sedimentary layers the lower ones are
+      older. Fossils are the remains of real creatures; sea shells on mountains show that
+      the rock was once sea floor. Each group of layers has its own fossils, in the same
+      order everywhere, so rocks can be matched across countries and coal or ore seams
+      followed. Many kinds of animals have died out. Since 1907 the decay of uranium to
+      lead in minerals has given ages in years.
+    pitfalls:
+      - "Giving the age with no way to show it; before radioactivity only rates of deposition and erosion could be argued, and they gave anything from thousands to hundreds of millions of years"
+      - "Saying all strata were laid down by one flood"
+      - "Putting people together with dinosaurs, or mixing up millions and thousands of millions"
+      - "Ignoring that the claim contradicts the accepted chronology of about 6000 years in Christian and Islamic lands (but not Indian cosmology)"
+    history:
+      greece: "c. 500 BC – Xenophanes takes inland shells and fish imprints as proof of a former sea"
+      islamic: "c. 1027 – Ibn Sina, Book of Healing: mountains formed by uplift and erosion over long ages"
+      china: "1088 – Shen Kuo infers shifted coastlines and climate change from fossil shells and petrified bamboo"
+      india: "Hindu and Jain cosmology reckons with cycles of thousands of millions of years (not based on rocks)"
+      europe: "c. 1508 Leonardo's notes on fossils; 1669 Steno's principles of strata; 1788 Hutton; 1796 Cuvier establishes extinction; 1815 William Smith's geological map; 1830–1833 Lyell; 1862 Kelvin's too-short 20–400 million years; 1913 Holmes's radiometric timescale"
+      americas: "1907 Boltwood's first uranium-lead ages; 1956 Patterson: 4.55 thousand million years"
+    sources:
+      - "James Hutton, Theory of the Earth, Transactions of the Royal Society of Edinburgh 1 (1788)"
+      - "Martin J. S. Rudwick, Earth's Deep History: How It Was Discovered and Why It Matters (2014)"
+
+  - id: plate_tectonics
+    name: Continental drift and plate tectonics
+    category: physics
+    requires: [deep_time_geology]
+    helps: [world_geography, terrestrial_magnetism]
+    explain: >
+      The Earth's outer shell is broken into a dozen rigid plates that move a few
+      centimetres a year, about as fast as fingernails grow, carried by slow flow in
+      the hot rock beneath. Where plates part, new sea floor forms along mid-ocean
+      ridges; where plates converge, one may sink beneath another, forming trenches and
+      volcanic arcs, or two continents may collide and build mountains. Plates also slide
+      past one another along faults. Evidence available
+      early: the coasts of South America and Africa fit, and the same rock formations,
+      fossils and traces of ancient ice continue across the join. Earthquakes and
+      volcanoes lie in narrow belts along plate edges, which tells where they must be
+      expected.
+    pitfalls:
+      - "Saying continents plough through the ocean floor (Wegener's weak point); the sea floor moves with them"
+      - "Expecting acceptance on the coastline fit alone; geologists rejected drift until sea-floor evidence in the 1960s"
+      - "Claiming earthquakes can be predicted to the day"
+      - "Giving speeds of metres per year"
+    history:
+      europe: "1596 Ortelius notes the fit of the Atlantic coasts; 1912–1915 Wegener, continental drift; 1929–1931 Holmes proposes mantle convection; 1963 Vine and Matthews, magnetic stripes"
+      americas: "1962 Hess, sea-floor spreading; 1965–1968 Wilson, Morgan and others formulate plate tectonics"
+      africa: "1937 – du Toit (South Africa) assembles the southern-continent evidence"
+    sources:
+      - "Alfred Wegener, Die Entstehung der Kontinente und Ozeane (1915)"
+      - "Naomi Oreskes, The Rejection of Continental Drift (1999)"
+
+  - id: stars_galaxies_cosmology
+    name: Stars as suns, galaxies and the expanding universe
+    category: physics
+    requires: [heliocentrism]
+    helps: [astronomical_distances, spectroscopy, telescope, relativity]
+    explain: >
+      The stars are suns, so far away that their light takes years to thousands of
+      years to arrive. The Milky Way is the disc of our own system of some hundred
+      thousand million stars seen from inside; the faint spiral 'nebulae' are other
+      such systems, millions of light years off. Their light is shifted towards the
+      red in proportion to their distance: the universe is expanding and had a hot,
+      dense beginning, now put at about 13.8 thousand million years ago. Stars shine
+      by fusing hydrogen into helium in their cores, which is why the Sun can last
+      thousands of millions of years; elements heavier than helium were made in stars.
+    pitfalls:
+      - "Describing the Big Bang as an explosion into empty space from one point"
+      - "Stating modern numbers as settled in an era where they were not (Hubble's 1929 scale made the universe younger than the Earth; the term 'Big Bang' dates from 1949, the decisive evidence from 1965)"
+      - "Saying the Sun burns like a fire"
+      - "Confusing the solar system, the galaxy and the universe"
+    history:
+      greece: "5th c. BC – Democritus and Anaxagoras: the Milky Way is the light of many stars; Anaxagoras calls the Sun a glowing stone"
+      islamic: "10th–11th c. – al-Sufi records the Andromeda nebula (964); Ibn al-Haytham and al-Biruni place the Milky Way among the stars"
+      europe: "1584 Bruno: the stars are suns with worlds; 1610 Galileo resolves the Milky Way into stars; 1750–1785 Wright, Kant and Herschel on the Milky Way as a disc; 1927 Lemaître's expanding universe"
+      americas: "1924 Hubble shows Andromeda is a separate galaxy; 1929 distance-redshift law; 1939 Bethe explains stellar fusion; 1965 Penzias and Wilson (Bell Labs) find the cosmic background radiation"
+    sources:
+      - "Edwin Hubble, The Realm of the Nebulae (1936)"
+      - "Simon Singh, Big Bang (2004)"
+
+  # ------------------------------------------------------------ modern physics
+  - id: xrays
+    name: X-rays (produced in an evacuated tube)
+    category: physics
+    requires: [air_pump_vacuum, electromagnetism]
+    helps: [photography]
+    explain: >
+      When a high voltage from an induction coil is put across a well-evacuated glass
+      tube, the spot where the stream from the negative plate strikes gives off invisible
+      rays that pass through flesh, wood and paper but less through bone and metal. They
+      blacken a wrapped photographic plate and make certain salts glow, so the bones of a
+      living hand or a bullet can be seen. Exposure can cause burns at high doses and
+      increases cancer risk. Limit exposure time, increase distance and use shielding
+      suited to the radiation.
+    pitfalls:
+      - "No warning about the delayed harm: early workers lost fingers and lives"
+      - "Tube not evacuated enough or voltage too low: a glow but no X-rays"
+      - "Confusing X-rays (made by a machine) with radioactivity (from the atom's nucleus)"
+    history:
+      europe: "1895 Röntgen discovers X-rays (Würzburg), medical use within weeks; 1912 von Laue, X-ray diffraction by crystals"
+      americas: "1913 – Coolidge's hot-cathode X-ray tube"
+    sources:
+      - "Wilhelm Conrad Röntgen, Über eine neue Art von Strahlen (1895)"
+      - "Abraham Pais, Inward Bound: Of Matter and Forces in the Physical World (1986)"
+
+  - id: radioactivity
+    name: Radioactivity (spontaneous nuclear decay)
+    category: physics
+    requires: []
+    helps: [photography, atomic_theory]
+    explain: >
+      Uranium and thorium ores give off penetrating rays all the time with no supply
+      of energy, because their atoms break up into atoms of other elements, each
+      isotope having a characteristic half-life: after one half-life, half the original
+      nuclei remain on average. Exposure can cause burns at high doses and increases
+      cancer risk. Limit exposure time, increase distance and use shielding suited to
+      the radiation.
+    pitfalls:
+      - "No warning about the delayed harm: early workers lost fingers and lives, radium was sold as a tonic and painted on watch dials"
+      - "Saying radioactivity can be switched off, heated away or is caused by sunlight (Becquerel's first guess)"
+      - "Confusing X-rays (made by a machine) with radioactivity (from the atom's nucleus)"
+    history:
+      europe: "1896 Becquerel, rays from uranium; 1898 Marie and Pierre Curie, polonium and radium; 1899–1903 Rutherford and Soddy: alpha and beta rays, transmutation, half-life"
+      americas: "1920s – radium dial painters' poisoning leads to safety rules"
+    sources:
+      - "Marie Curie, Recherches sur les substances radioactives (1903)"
+      - "Abraham Pais, Inward Bound: Of Matter and Forces in the Physical World (1986)"
+
+  - id: atomic_structure
+    name: Structure of the atom (electron, nucleus)
+    category: physics
+    requires: [atomic_theory]
+    helps: [air_pump_vacuum, electromagnetism, radioactivity, periodic_table, spectroscopy]
+    explain: >
+      Atoms are not indivisible. Each has a tiny, heavy, positively charged nucleus,
+      about a hundred-thousandth of the atom's width but holding nearly all its mass,
+      surrounded by very light negative electrons; the rest is empty. The number of
+      positive charges (protons) in the nucleus fixes which element it is and its
+      place in the periodic table; neutrons add weight without charge, giving
+      varieties (isotopes) of the same element. Chemistry and electric current are the
+      business of the outer electrons alone. Evidence: the cathode stream in an
+      evacuated tube is bent by magnets and consists of particles about 1800 times
+      lighter than a hydrogen atom, the same from every metal; and when alpha rays are
+      shot at thin gold foil, most pass straight through but about one in several
+      thousand bounces back.
+    pitfalls:
+      - "Teaching the little solar system as literal truth; orbiting electrons would radiate and fall in, which is what quantum theory had to resolve"
+      - "Saying the nucleus contains electrons (the accepted view until the neutron was found in 1932)"
+      - "Mixing up atom, molecule and nucleus, or atomic weight and atomic number"
+      - "Offering it to an era with no means to test it and no use for it"
+    history:
+      europe: "1897 J. J. Thomson identifies the electron; 1909 Geiger and Marsden's gold-foil scattering; 1911 Rutherford's nucleus; 1913 Bohr's model, Moseley's atomic numbers, Soddy's isotopes; 1919 Aston's mass spectrograph; 1932 Chadwick's neutron"
+      americas: "1909–1913 – Millikan measures the electron's charge"
+      east_asia: "1904 – Nagaoka (Japan) proposes a 'Saturnian' atom with a massive centre"
+    sources:
+      - "Ernest Rutherford, The Scattering of α and β Particles by Matter and the Structure of the Atom, Philosophical Magazine 21 (1911)"
+      - "Abraham Pais, Inward Bound: Of Matter and Forces in the Physical World (1986)"
+
+  - id: quantum_mechanics
+    name: Quantum mechanics
+    category: physics
+    requires: [atomic_structure, wave_nature_light_sound]
+    helps: [spectroscopy, periodic_table, heat_energy_conservation]
+    explain: >
+      On the scale of atoms, energy comes in fixed packets. Light of frequency f is
+      taken up and given out only in quanta of energy h times f (h is Planck's
+      constant), and electrons in an atom can have only certain energies, which is why
+      each element shows sharp spectral lines and why atoms are stable. Electrons and
+      all particles also behave as waves, with wavelength h divided by momentum, and
+      the theory predicts only probabilities; position and momentum cannot both be
+      sharp. No two electrons can occupy the same state, which builds up the shells
+      behind the periodic table and explains metals, insulators and semiconductors.
+      What convinces: for a surface whose threshold lies between red and violet, faint
+      violet light can release electrons while brighter red light cannot in the
+      single-photon regime; the hydrogen spectrum is calculated
+      to many digits; electrons bounced off a nickel crystal make a diffraction
+      pattern like X-rays (Davisson and Germer, Bell Labs, 1927).
+    pitfalls:
+      - "Slogans without content ('everything is uncertain', 'the observer's mind creates reality')"
+      - "Using it to justify mysticism, telepathy or free will"
+      - "Presenting Schrödinger's cat as a real effect rather than his objection"
+      - "Being unable to give one number or one experiment; a layperson can honestly convey E = h f, discrete levels and electron diffraction, but not the mathematics"
+      - "Describing electrons as small balls on definite orbits"
+    history:
+      europe: "1900 Planck's quantum for heat radiation; 1905 Einstein's light quanta; 1913 Bohr's atom; 1924 de Broglie's matter waves; 1925–1927 Heisenberg, Schrödinger, Born, Dirac: the full theory, uncertainty relation; 1925 Pauli's exclusion principle"
+      india: "1924 – Bose's statistics of light quanta"
+      americas: "1916 Millikan confirms the photoelectric law; 1923 Compton effect; 1927 Davisson and Germer, electron diffraction; 1947 the transistor as an application of the quantum theory of solids"
+    sources:
+      - "George Gamow, Thirty Years that Shook Physics (1966)"
+      - "Richard P. Feynman, QED: The Strange Theory of Light and Matter (1985)"
+      - "Manjit Kumar, Quantum: Einstein, Bohr and the Great Debate about the Nature of Reality (2008)"
+
+  - id: relativity
+    name: Relativity (special and general)
+    category: physics
+    requires: [laws_of_motion, speed_of_light]
+    helps: [electromagnetism, universal_gravitation, wave_nature_light_sound]
+    explain: >
+      The speed of light in empty space is the same for every observer, however the
+      source or observer moves, and nothing can go faster. It follows that time and
+      length are not absolute: a clock moving past at speed v runs slow by the factor
+      square root of (1 - v²/c²), unnoticeable at everyday speeds (at a tenth of light
+      speed half a per cent), and events simultaneous for one observer are not for
+      another. Mass and energy are equivalent, E = m c²: a gram of matter corresponds
+      to the heat of burning some 3000 tonnes of coal. General relativity treats
+      gravity as the curvature of space and time by mass: clocks run slower lower
+      down, and light passing the Sun is bent. What convinced by the 1940s: the failure
+      to detect the Earth's motion through an ether (Michelson and Morley, 1887); the
+      unexplained 43 seconds of arc per century in Mercury's orbit; starlight bent by
+      1.75 seconds of arc at the 1919 eclipse; fast electrons growing harder to
+      deflect; cosmic-ray particles living longer in flight (1941); and the energy
+      balance of nuclear reactions (1932).
+    pitfalls:
+      - "Summing it up as 'everything is relative'; the theory is about what stays the same"
+      - "Saying E = m c² is the recipe for the bomb; it is the bookkeeping, fission is the mechanism"
+      - "Saying Einstein received the Nobel Prize for relativity (it was for the photoelectric effect)"
+      - "Muddling the twin story, or claiming speeds simply add up beyond that of light"
+      - "Offering it before Maxwell's electromagnetism and precise optics exist, when it solves no known problem"
+    history:
+      europe: "1889–1904 FitzGerald, Lorentz, Poincaré: contraction and transformation formulas; 1905 Einstein, special relativity and E = m c²; 1908 Minkowski's space-time; 1915 general relativity; 1919 Eddington's eclipse expeditions (Príncipe and Sobral); 1932 Cockcroft and Walton verify the mass-energy balance"
+      americas: "1887 Michelson and Morley’s null result in Cleveland. 1938 Ives and Stilwell measure time dilation; 1941 Rossi and Hall, lifetime of fast mesotrons (muons)"
+    sources:
+      - "Albert Einstein, Zur Elektrodynamik bewegter Körper, Annalen der Physik 17 (1905)"
+      - "Albert Einstein, Über die spezielle und die allgemeine Relativitätstheorie (1917)"
+      - "Abraham Pais, Subtle is the Lord: The Science and the Life of Albert Einstein (1982)"
+
+  - id: nuclear_fission
+    name: Nuclear fission and the chain reaction
+    category: physics
+    requires: [atomic_structure, radioactivity]
+    helps: [relativity, periodic_table]
+    explain: >
+      A uranium nucleus can split after absorbing a neutron, producing two lighter
+      nuclei, heat and further neutrons. The discovery hinged on chemistry: Hahn and
+      Strassmann found barium among the products of irradiated uranium. Meitner and
+      Frisch explained how splitting a heavy nucleus could release so much energy.
+      If one fission leads on average to one further fission, the reaction continues
+      at a steady rate. Reactor operators can adjust neutron absorption to regulate
+      the rate. Radioactive fission products continue to release heat even after the
+      chain reaction has stopped. The first human-made reactor sustained a controlled
+      chain reaction in Chicago in December 1942.
+    pitfalls:
+      - "Assuming every neutron that enters uranium causes fission. Some scatter or are absorbed without splitting a nucleus"
+      - "Confusing fission, the splitting of a heavy nucleus, with fusion, the joining of light nuclei"
+      - "Assuming that stopping a chain reaction immediately stops heat production or makes irradiated material safe"
+      - "Explaining the release of energy as an ordinary chemical reaction. The change is in nuclear binding energy"
+    history:
+      europe: "1932 Chadwick's neutron; 1933–1934 Szilard conceives and patents a neutron chain reaction; 1934 Fermi's neutron bombardment of uranium (Rome), Ida Noddack's ignored suggestion of splitting; December 1938 Hahn and Strassmann find barium (Berlin); January 1939 Meitner and Frisch explain and name fission; 1939 Joliot's group shows surplus neutrons; 1940 Frisch–Peierls memorandum on a fast-neutron bomb"
+      americas: "1939 Bohr and Wheeler's theory; 2 December 1942 first human-made self-sustaining reactor (Chicago Pile-1); 16 July 1945 Trinity test; August 1945 Smyth Report makes the outline public"
+      east_asia: "August 1945 – Hiroshima and Nagasaki"
+      africa: "1972 – isotope measurements identify evidence of natural fission reactors at Oklo in Gabon, active about two thousand million years ago"
+    sources:
+      - "Lise Meitner & Otto R. Frisch, Disintegration of Uranium by Neutrons: a New Type of Nuclear Reaction, Nature 143 (1939)"
+      - "Henry DeWolf Smyth, Atomic Energy for Military Purposes (1945)"
+      - "Richard Rhodes, The Making of the Atomic Bomb (1986)"

@@ -1,0 +1,740 @@
+# Blueprints from Tomorrow – technology tree fragment: energy (Energy & engines).
+# Schema: see the header of techtree/core.yaml.
+
+technologies:
+
+  # ------------------------------------------------------------ muscle, water, wind
+  - id: animal_power_gin
+    name: Animal-powered machines (horse gin, treadwheel)
+    category: energy
+    requires: []
+    helps: [gears_gear_trains, horse_collar_harness]
+    explain: >
+      An animal walking in a circle pulls a beam that turns a vertical shaft; a gear or
+      a rope drum takes the power off to a mill, pump or mine hoist. A horse sustains
+      roughly 500 to 700 watts over a working shift, a man on a treadwheel or crank
+      about 75 to 100 watts, so one horse does the work of six to eight men. This is
+      the yardstick every engine is measured against: Watt's "horsepower" (33,000
+      foot-pounds per minute, 746 W) was set deliberately above what an average horse
+      delivers, and the first Newcomen engine of about 5 horsepower replaced a team of
+      some twenty horses worked in shifts.
+    pitfalls:
+      - "Assuming a horse delivers one horsepower all day; sustained output is nearer two thirds of that"
+      - "Too small a walking circle: under about 8 m diameter the animal pulls badly and goes lame"
+      - "Forgetting the fodder: a working horse eats the produce of about two hectares"
+    history:
+      greece: "c. 3rd–2nd c. BC – animal-driven rotary mills spread in the Mediterranean; geared water-lifting wheel (saqiya) in Hellenistic Egypt"
+      rome: "1st c. AD – donkey mills at Pompeii; treadwheel cranes"
+      china: "Han dynasty (206 BC–220 AD) – animal-driven mills; ox-driven hoists at the Sichuan brine wells"
+      islamic: "8th–13th c. – saqiya standard for irrigation from Spain to India; al-Jazari describes animal-driven pumps (1206)"
+      europe: "15th–16th c. – horse whims drain and wind mines (Agricola 1556); in use at collieries into the 19th c."
+    sources:
+      - "Georgius Agricola, De re metallica (1556; tr. H. C. Hoover & L. H. Hoover, 1912), Book VI"
+      - "Vaclav Smil, Energy and Civilization: A History (2017)"
+
+  - id: water_wheel
+    name: Water wheel
+    category: energy
+    requires: []
+    helps: [gears_gear_trains, lever_mechanics_statics]
+    explain: >
+      Falling or flowing water turns a wheel; the power is the weight of water per
+      second times the height it falls (1 cubic metre per second falling 1 m is about
+      10 kW). An undershot wheel, pushed by the current against flat paddles, catches
+      only 20 to 30 % of that. An overshot wheel, where water is led in a trough over
+      the top and fills buckets so that its weight turns the wheel, catches 60 to 70 %
+      and works on a small stream if there is a fall of 3 m or more; a dam and a mill
+      race provide the fall and store water. Right-angle gearing (a pegged face wheel
+      and a lantern pinion) turns the horizontal shaft's slow rotation into the fast
+      rotation of a millstone; cams on the shaft work hammers and bellows instead.
+    pitfalls:
+      - "Building an undershot wheel where a fall is available; it wastes most of the power (Smeaton measured about 22 % against 63 % for overshot)"
+      - "Thinking speed matters most: the wheel gives most power turning slowly, at roughly half the speed of the water"
+      - "Tailwater backing up and drowning the bottom of the wheel"
+      - "Ignoring ice, drought and floods; and that mill dams cause lawsuits with neighbours upstream and downstream"
+    history:
+      greece: "c. 240 BC–1st c. BC – first water-driven wheels in the Hellenistic world (Philo of Byzantium, passage disputed); a water mill at Cabeira in Pontus by c. 65 BC (Strabo)"
+      rome: "c. 25 BC – Vitruvius describes the geared vertical mill; 2nd c. AD – Barbegal near Arles, 16 overshot wheels in two rows"
+      china: "c. 20 AD – water-powered trip hammers (Huan Tan); 31 AD – Du Shi's water-powered blowing engine for iron furnaces"
+      india: "norias claimed from the 4th c. BC on textual grounds, disputed; horizontal mills (gharat) common in the Himalaya later"
+      islamic: "8th–10th c. – water mills throughout, with ship mills on the Tigris and tide mills at Basra (10th c.)"
+      europe: "1086 – Domesday Book records about 6,000 mills in England; 12th–13th c. applied to fulling, forging, sawing, paper"
+    sources:
+      - "Vitruvius, De architectura X.5"
+      - "John Smeaton, An Experimental Enquiry concerning the Natural Powers of Water and Wind to Turn Mills, Phil. Trans. 51 (1759)"
+      - "Terry S. Reynolds, Stronger than a Hundred Men: A History of the Vertical Water Wheel (1983)"
+
+  - id: windmill
+    name: Windmill
+    category: energy
+    requires: []
+    helps: [gears_gear_trains, water_wheel]
+    explain: >
+      In the European design, sails on a nearly horizontal shaft (tilted up about 10 degrees) face
+      the wind; each sail is a lattice covered with cloth, set at an angle to the plane
+      of rotation and best twisted, steep near the shaft and almost flat at the tip.
+      Sistan mills use a different arrangement: a wall channels the prevailing wind
+      onto one side of a vertical-shaft rotor that can drive a millstone directly.
+      In the European mill, gearing changes the drive direction. To face changing winds the European mill body must turn on a central post (post mill), or only a cap on top
+      of a fixed tower (tower mill). Power rises with the cube of the wind speed and
+      with the sail area, so a mill needs a way to shorten sail and a strong brake. A
+      large mill gives 5 to 10 horsepower in a good wind.
+    pitfalls:
+      - "Sails set flat-on or at 45 degrees along the whole length; the angle must be small and twisted along the sail"
+      - "No means of turning into the wind; a mill caught tail to wind loses its sails"
+      - "Running away in a gale: the brake overheats and sets the mill on fire, or the stones run dry and spark"
+      - "Assuming windmills are ancient; Greece and Rome did not have them"
+    history:
+      greece: "1st c. AD – Hero of Alexandria describes a wind wheel working an organ; isolated and its interpretation is disputed"
+      islamic: "9th–10th c. – vertical-shaft mills with walled wind channels in Sistan (al-Mas'udi, al-Istakhri); a story placing them in 644 is a later tradition"
+      europe: "c. 1180s – horizontal-shaft post mill, an independent invention (Weedley, Yorkshire 1185; Normandy); tower mills c. 1300; 1745 fantail (Edmund Lee); 1772 spring sails (Meikle)"
+      china: "1219 – Yelü Chucai notes windmills in Samarkand; Chinese vertical-shaft mills with sails that feather like a junk's follow, mainly for salt pans and irrigation"
+    sources:
+      - "Richard L. Hills, Power from Wind: A History of Windmill Technology (1994)"
+      - "Lynn White Jr., Medieval Technology and Social Change (1962)"
+      - "John Smeaton, An Experimental Enquiry concerning the Natural Powers of Water and Wind to Turn Mills, Phil. Trans. 51 (1759)"
+
+  - id: water_turbine
+    name: Water turbine
+    category: energy
+    requires: [water_wheel]
+    helps: [calculus, machine_tools, dynamo_electric_motor]
+    explain: >
+      A water turbine extracts energy as water changes speed or direction in its runner.
+      In a reaction turbine the runner passages stay full. Fixed guide vanes swirl
+      the water into curved runner blades all round the wheel at once; the blades are
+      shaped so that the water enters without shock and leaves with almost no speed
+      left, which gives 80 to 90 % efficiency. A reaction runner works under water,
+      is not limited to falls the size of its own diameter, and uses any head from 1 m
+      to hundreds of metres fed through a pressure pipe. For very high heads a jet
+      from a nozzle hits split cup-shaped buckets that turn the water back through
+      nearly 180 degrees (Pelton wheel). These buckets run in air.
+    pitfalls:
+      - "Flat paddles in a casing; without curved blades and guide vanes it is only a bad water wheel"
+      - "Closing the valve of a long pressure pipe quickly; the water hammer bursts the pipe"
+      - "Running a reaction turbine partly empty or sucking air"
+      - "Bucket speed equal to jet speed on a Pelton wheel; it should be about half"
+    history:
+      islamic: "9th–12th c. – horizontal wheels fed by a jet from a tall drop tower (aruba penstock) common in the Near East and Iran"
+      europe: "1750 – Segner's reaction wheel, analysed by Euler 1750–54; 1767 Borda's theory; 1822 Burdin coins the word turbine; 1827 Fourneyron's first working outward-flow turbine (about 6 hp, 80 % efficient); 1913 Kaplan's adjustable propeller turbine"
+      americas: "1849 – Francis inward-flow turbine at Lowell, Massachusetts; 1880 Pelton's patent for the split-bucket wheel in California"
+    sources:
+      - "Terry S. Reynolds, Stronger than a Hundred Men: A History of the Vertical Water Wheel (1983)"
+      - "Edwin T. Layton Jr., Scientific Technology, 1845–1900: The Hydraulic Turbine and the Origins of American Industrial Research, Technology and Culture 20 (1979)"
+
+  # ------------------------------------------------------------ mechanisms and pumps
+  - id: crank_connecting_rod
+    name: Crank, connecting rod and flywheel
+    category: energy
+    requires: []
+    helps: [lathe_screw_cutting]
+    explain: >
+      A crank is an arm on a shaft with a pin set off-centre. A connecting rod, hinged
+      at both ends, joins the pin to something that moves to and fro, so rotation
+      becomes reciprocation (a water wheel working a saw or pump) or the reverse (a
+      treadle or piston turning a wheel). The stroke is twice the crank radius. Twice
+      per turn the rod lines up with the crank and cannot turn it (dead centres); a
+      heavy flywheel carries the shaft through these points and evens out the motion.
+      A straight-moving end needs a guide (crosshead) or the rod bends it sideways.
+    pitfalls:
+      - "No flywheel, so the machine sticks at dead centre or runs in jerks"
+      - "A rigid rod without a joint at the sliding end"
+      - "Assuming the crank is obvious and ancient everywhere; the crank with connecting rod was rare before the 15th c."
+    history:
+      china: "c. 1st c. BC–2nd c. AD – hand crank on rotary winnowing fans (Han tomb models); 1313 Wang Zhen shows a water wheel driving furnace bellows through crank, connecting rod and piston rod"
+      rome: "3rd c. AD – relief of a water-powered stone saw with crank and connecting rod at Hierapolis; sawmills of the 6th c. at Gerasa and Ephesus"
+      islamic: "9th c. – Banu Musa use a crank-like element in automata; 1206 al-Jazari's twin-cylinder pump driven by crank and connecting rod"
+      europe: "c. 830 – crank-turned grindstone in the Utrecht Psalter; c. 1420–1430 carpenter's brace and the compound crank with connecting rod (anonymous engineer of the Hussite Wars); flywheels on cranks by the 15th c."
+    sources:
+      - "Lynn White Jr., Medieval Technology and Social Change (1962)"
+      - "T. Ritti, K. Grewe & P. Kessener, A relief of a water-powered stone saw mill on a sarcophagus at Hierapolis and its implications, Journal of Roman Archaeology 20 (2007)"
+      - "Joseph Needham, Science and Civilisation in China, Vol. 4 Part 2: Mechanical Engineering (1965)"
+
+  - id: piston_pump
+    name: Piston pumps (suction and force pump)
+    category: energy
+    requires: []
+    helps: [atmospheric_pressure, lathe_screw_cutting, boring_machine]
+    explain: >
+      A piston slides in a smooth barrel; two one-way flap valves do the rest. In the
+      suction (lift) pump a foot valve sits at the bottom of the barrel and a second
+      valve in the piston itself: raising the piston lets the air's pressure push
+      water up the pipe, lowering it passes the water through the piston, and the next
+      stroke lifts it out. The pump can stand no more than about 7 to 8 m above the
+      water (10.3 m is the ideal head at sea level; altitude, warm water and flow losses reduce it). In the force pump a
+      solid piston draws water through an inlet check valve on one stroke. On the return
+      stroke that valve shuts and a delivery check opens into the rising main. Delivery
+      head depends on the force available and the pressure the barrel and joints can bear. The piston is sealed with a leather
+      cup or greased hemp; the barrel is bored elm, cast bronze or iron. Deep mines use
+      several lifts in series, each within suction height of a cistern.
+    pitfalls:
+      - "Believing suction can raise water from any depth; above about 10 m the column breaks (and in practice well before)"
+      - "Air leaks on the suction side, a dry leather or no priming: the pump moves air, not water"
+      - "A rough or tapering barrel; the piston seal must fit along the whole stroke"
+      - "Lead barrels and pipes for drinking water"
+    history:
+      greece: "c. 270 BC – Ctesibius of Alexandria, two-cylinder bronze force pump (in Vitruvius and Hero)"
+      rome: "1st–4th c. AD – bronze and wooden force pumps for fire fighting, wells and bilges (finds at Silchester and Bolsena)"
+      china: "piston bellows and syringes old, and the square-pallet chain pump from the 1st c. AD (Wang Chong, c. 80); the piston water pump only arrives with the Jesuits (Taixi shuifa, 1612)"
+      islamic: "1206 – al-Jazari's water-driven twin-cylinder pump with true suction pipes; 1551 Taqi al-Din's six-cylinder pump"
+      europe: "c. 1433–1450 – Taccola draws the suction lift pump with a valved piston; 1556 Agricola shows mine pumps in series; 1640s the 10 m limit explained by air pressure"
+    sources:
+      - "Vitruvius, De architectura X.7"
+      - "Sheldon Shapiro, The Origin of the Suction Pump, Technology and Culture 5 (1964)"
+      - "John Peter Oleson, Greek and Roman Mechanical Water-Lifting Devices: The History of a Technology (1984)"
+
+  - id: hydraulic_ram
+    name: Hydraulic ram
+    category: energy
+    requires: []
+    helps: [piston_pump, blast_furnace_cast_iron]
+    explain: >
+      A pump with no engine and two moving parts. Water runs from a stream down a long,
+      rigid iron drive pipe and spills out through a weighted waste valve at the
+      bottom. As the flow speeds up it slams the waste valve shut; the moving column of
+      water cannot stop at once, and the pressure shock forces a little water through a
+      second one-way valve into an air vessel and up a delivery pipe to many times the
+      height of the fall. The pressure then drops, the waste valve falls open and the
+      cycle repeats about once a second. With a fall of 1 m it lifts roughly one
+      fifteenth of the water to 10 m; the rest is the price paid.
+    pitfalls:
+      - "Calling it perpetual motion; it wastes nine tenths of the water to lift one tenth"
+      - "A short, soft or leaky drive pipe (wood, lead, hose) that swallows the shock"
+      - "No air vessel, or one that has filled with water: the pipe hammers itself apart"
+      - "Expecting it to work without a fall of at least half a metre and a steady flow"
+    history:
+      europe: "1772 – John Whitehurst's hand-operated pulsation engine at Oulton, Cheshire; 1796 Joseph-Michel Montgolfier makes it self-acting (French patent 1797)"
+      americas: "1809 – first United States patent (Cerneau and Hallet); common on farms from the 1840s"
+      global: "20th c. – widely used for village water supply in hilly country"
+    sources:
+      - "John Whitehurst, Account of a Machine for Raising Water, Executed at Oulton, in Cheshire, in 1772, Phil. Trans. 65 (1775)"
+      - "Joseph-Michel Montgolfier, Note sur le bélier hydraulique, et sur la manière d’en calculer les effets, Journal des mines 13, no. 73 (1802), 42–51"
+
+  # ------------------------------------------------------------ fuel and light
+  - id: charcoal_burning
+    name: Charcoal burning
+    category: energy
+    requires: []
+    explain: >
+      Wood heated with almost no air does not burn but chars: the water and tarry
+      vapours are driven off and a carbon-rich solid containing ash and residual
+      volatile material is left. Stack dry billets tightly around a central flue,
+      cover the heap with turf and earth, light it down the flue and control the
+      draught through a few holes at the base for several days, closing every hole
+      where flame shows, until the smoke turns from white to thin blue; then seal it
+      completely and let it cool. Five to seven tonnes of wood give one tonne of
+      charcoal; a well-managed mound can yield about 20–25 % of the dry wood mass.
+      Charcoal burns hotter and cleaner than wood, with little sulphur. It supplied
+      both heat and a reducing atmosphere in many furnaces before the adoption of
+      coke. Coppiced woodland cut on a 15 to 20 year cycle supplies it for ever;
+      clear felling does not.
+    pitfalls:
+      - "Letting in too much air, so the heap burns to ash; or opening it while hot, when it catches fire; a mound can also collapse"
+      - "Walking on the heap: burners fell through the crust into the fire"
+      - "Burning charcoal in a closed room; the fumes (carbon monoxide) kill without smell"
+      - "Thinking raw coal can simply replace charcoal in ironmaking; its sulphur ruins the iron"
+      - "Underestimating the wood needed: a tonne of iron took the charcoal from several tonnes of wood, so forests set the limit"
+      - "Wet or freshly quenched charcoal; stored damp or in big warm heaps it can also ignite by itself"
+    history:
+      mesopotamia: "5th–4th millennium BC – charcoal fuels the first copper smelting in the Near East and Iran"
+      egypt: "3rd millennium BC – charcoal for metalworking shown in tomb scenes"
+      china: "2nd millennium BC – charcoal for bronze casting; from the Han, coal partly replaces it, in iron by the 11th c. AD"
+      africa: "1st millennium BC – charcoal iron smelting in West, Central and East Africa"
+      americas: "1st millennium BC – charcoal for Andean copper and gold working"
+      europe: "antiquity onward; mound burning described by Theophrastus (c. 300 BC) and in detail by Biringuccio (1540); wood shortage drives the 18th c. shift to coke in Britain"
+      global: "charcoal accompanies early copper smelting from c. 5000 BC; older still as a pigment and fuel"
+    sources:
+      - "Theophrastus, Enquiry into Plants V.9"
+      - "Vannoccio Biringuccio, De la pirotechnia (1540; tr. C. S. Smith & M. T. Gnudi, 1942)"
+      - "Vaclav Smil, Energy and Civilization: A History (2017)"
+      - "Lewis Dartnell, The Knowledge: How to Rebuild Our World from Scratch (2014)"
+
+  - id: coal_mining
+    name: Deep coal mining (drainage, ventilation, safety lamp)
+    category: energy
+    requires: []
+    helps: [piston_pump, atmospheric_engine, animal_power_gin, railway]
+    explain: >
+      Coal lies in seams; below the outcrop it is reached by shafts and worked by
+      leaving pillars of coal to hold the roof (pillar and stall) or by taking it all
+      along a face and letting the roof settle behind (longwall), with timber props.
+      Three things limit depth. Water: drained by an adit to a valley, else pumped.
+      Air: sink two shafts and keep a fire at the foot of one, so its hot air rises and
+      pulls fresh air down the other, and steer that current past every working place
+      with doors and partitions. Gas: firedamp (methane) is lighter than air, gathers
+      under the roof and explodes when it makes up 5 to 15 % of the air; chokedamp
+      (carbon dioxide and nitrogen) is heavy, lies on the floor and puts out a candle
+      and a man; after an explosion carbon monoxide kills the survivors. A safety lamp
+      encloses the flame in fine wire gauze (about 28 wires to the inch), which cools
+      the flame so that it cannot pass outward.
+    pitfalls:
+      - "A single shaft: no air circuit and no second way out"
+      - "Believing the Davy lamp made mines safe; it let owners work gassier seams, and its gauze passes flame in a fast draught or when red hot"
+      - "Thinning or removing pillars to get more coal"
+      - "Rushing in after an explosion; afterdamp (carbon monoxide) kills rescuers. A caged bird gives warning"
+      - "Ignoring coal dust, which explodes on its own once stirred up"
+    history:
+      china: "coal burnt from Han times (2nd c. BC or earlier); main fuel of the Northern Song iron industry in the 11th c.; described to Europe by Marco Polo c. 1298"
+      rome: "2nd–4th c. AD – outcrop coal used in Roman Britain for forges and heating"
+      europe: "c. 1195 – coal dug at Liège; 13th c. sea coal shipped from Newcastle to London; 1712 Newcomen engine drains pits; 1760s Spedding at Whitehaven courses the air; 1815 safety lamps of Davy, George Stephenson and Clanny; 1906 Courrières disaster shows the danger of coal dust"
+      americas: "pre-Columbian – Hopi dig coal for pottery firing in Arizona (c. 13th c.); commercial mining in Virginia from the 1740s"
+    sources:
+      - "Georgius Agricola, De re metallica (1556; tr. H. C. Hoover & L. H. Hoover, 1912)"
+      - "Humphry Davy, On the Fire-Damp of Coal Mines, and on Methods of Lighting the Mines So as to Prevent Its Explosion, Phil. Trans. 106 (1816)"
+      - "Michael W. Flinn, The History of the British Coal Industry, Vol. 2: 1700–1830, The Industrial Revolution (1984)"
+
+  - id: gas_lighting
+    name: Coal gas lighting
+    category: energy
+    requires: []
+    helps: [coal_mining, coke_iron, lime_burning, oxygen_combustion]
+    explain: >
+      Coal heated to red heat in a closed iron retort, with no air, gives off a
+      flammable gas and leaves coke. The gas is led through water-cooled pipes to drop
+      its tar and ammonia liquor, then through slaked lime to take out the stinking,
+      poisonous sulphur compounds, and stored in a gasholder: an iron bell floating
+      mouth down in a tank of water, whose weight gives a steady gentle pressure. Pipes
+      carry it to burners with small holes or slits. One tonne of coal gives about 300
+      cubic metres of gas, enough for a street's lamps for a night, and the coke and
+      tar can be sold.
+    pitfalls:
+      - "Letting air mix with gas in retort, holder or pipes; the mixture explodes"
+      - "Forgetting that coal gas contains carbon monoxide: an unlit leak in a closed room kills"
+      - "No purification, so the gas stinks, blackens paint and silver and makes people ill"
+      - "Crediting one inventor; Murdoch, Lebon, Minckelers and Winsor all have a claim, and the lasting step was the central gasworks with mains"
+    history:
+      china: "from the Han period – natural gas from Sichuan brine wells piped in bamboo to boil brine, and locally for light (described in the 4th c. Huayang guozhi)"
+      europe: "c. 1684 – John Clayton collects 'spirit of coal' in bladders; 1785 Minckelers lights a lecture room in Leuven; 1792 (date traditional) Murdoch lights his house in Redruth; 1799 Lebon's thermolampe patent (wood gas); 1807 Winsor lights Pall Mall; 1812 Gas Light and Coke Company, London; 1885 Welsbach's incandescent mantle"
+      americas: "1816–1817 – Baltimore, first gas company in the United States"
+    sources:
+      - "Leslie Tomory, Progressive Enlightenment: The Origins of the Gaslight Industry, 1780–1820 (2012)"
+      - "Wolfgang Schivelbusch, Disenchanted Night: The Industrialization of Light in the Nineteenth Century (1988)"
+
+  - id: argand_lamp
+    name: Argand lamp (hollow wick and glass chimney)
+    category: energy
+    requires: []
+    helps: [glassmaking, oxygen_combustion, petroleum_refining]
+    explain: >
+      An ordinary wick flame is starved of air in the middle, so it smokes and gives
+      little light. Make the wick a hollow tube held between two metal tubes, so that
+      air rises both inside and outside the ring of flame, and stand a glass chimney
+      over it to strengthen the draught and steady the flame. The oil burns completely
+      and one lamp gives the light of six to ten candles without smoke. A screw or
+      rack raises the wick. Thick vegetable oil must stand above the burner or be
+      pumped to it; thin lamp oil distilled from petroleum climbs the wick by itself.
+    pitfalls:
+      - "A hollow wick without the chimney, or a chimney without the central air passage; it needs both"
+      - "A chimney of poor glass that cracks in the heat; early ones did"
+      - "Volatile spirits (naphtha, strong alcohol mixtures) in a lamp made for oil: explosions and burns"
+    history:
+      global: "prehistory onward – open lamps with solid wicks burning fat or oil, in every culture"
+      europe: "1780 – Ami Argand of Geneva builds the hollow-wick lamp (English patent 1784; made by Boulton, copied in Paris by Quinquet and Lange); 1800 Carcel's clockwork oil pump; 1853 Łukasiewicz's kerosene lamp at Lwów"
+    sources:
+      - "John J. Wolfe, Brandy, Balloons, & Lamps: Ami Argand, 1750–1803 (1999)"
+      - "Wolfgang Schivelbusch, Disenchanted Night: The Industrialization of Light in the Nineteenth Century (1988)"
+
+  - id: oil_drilling
+    name: Drilling for brine, gas and oil
+    category: energy
+    requires: []
+    helps: [petroleum_refining, high_pressure_steam, bloomery_iron]
+    explain: >
+      Deep narrow wells are not dug but punched. A heavy iron chisel bit hangs on a
+      rope or string of rods from a derrick and is lifted and dropped again and again
+      (by men jumping on a lever, a spring pole or an engine) while it is turned a
+      little each stroke; the crushed rock is lifted out with a bailer, a tube with a
+      flap valve at the bottom. The hole is lined with pipe (casing) to keep out water
+      and loose ground; driving iron pipe down to bedrock before drilling is what made
+      Drake's well succeed. Oil is found where it seeps at the surface and under the
+      crests of folded strata. Crude oil is of little use until it is distilled.
+    pitfalls:
+      - "Saying Drake drilled the first oil well in 1859; Chinese brine and gas wells were centuries older and oil wells were drilled at Baku in the 1840s"
+      - "No casing, so the hole caves in or floods"
+      - "Open flames and boilers near the well: gas and gushers catch fire (the Chinese drillers already knew this)"
+      - "Picturing underground lakes of oil; it sits in the pores of rock"
+    history:
+      mesopotamia: "from the 4th millennium BC – bitumen from seeps at Hit used as mortar, caulking and glue; no drilling"
+      china: "c. 1st c. BC – percussion-drilled brine wells in Sichuan with bamboo cable and casing; c. 1041 small-bore deep wells; natural gas burnt to boil the brine; 1835 Shenhai well reaches about 1,000 m"
+      islamic: "9th–13th c. – hand-dug oil pits at Baku (al-Mas'udi, 10th c.; Marco Polo); naphtha distilled for lamps and incendiaries"
+      europe: "1846–1848 – first drilled oil well at Bibi-Heybat, Baku; 1854 Łukasiewicz's oil pits at Bóbrka, Galicia"
+      americas: "1858 – Williams's well at Oil Springs, Ontario; 1859 Drake's well at Titusville, Pennsylvania (21 m); 1901 rotary drilling brings in Spindletop, Texas"
+    sources:
+      - "Hans Ulrich Vogel, The Great Well of China, Scientific American 268 (June 1993)"
+      - "Daniel Yergin, The Prize: The Epic Quest for Oil, Money, and Power (1991)"
+
+  # ------------------------------------------------------------ steam
+  - id: steam_aeolipile
+    name: Steam reaction toy (aeolipile)
+    category: energy
+    requires: []
+    explain: >
+      A closed hollow ball on a hollow axle, with two bent nozzles pointing opposite
+      ways, spins when steam from a boiling cauldron below is fed into it. It shows
+      that steam can make motion. It is a simple reaction turbine. The ball can spin rapidly under a light load,
+      but torque is small, steam leaks at the pivots and the exhaust carries energy away.
+      Hero describes no practical machine driven by it. The road
+      to a useful engine does not start here but with the piston and the vacuum left
+      by condensing steam.
+    pitfalls:
+      - "Claiming the ancients nearly had the steam engine; nothing connects the aeolipile to the piston engine"
+      - "Trying to scale it up to drive machinery; a jet engine only pays at speeds and pressures out of reach before the 1880s"
+      - "A sealed vessel on a fire with nozzles that can block; it becomes a bomb"
+    history:
+      rome: "c. 25 BC – Vitruvius (I.6) mentions aeolipilae, bronze vessels that blow steam, as a model for the winds"
+      greece: "1st c. AD – Hero of Alexandria describes the spinning ball in the Pneumatica"
+      islamic: "1551 – Taqi al-Din in Damascus describes a steam jet turning a roasting spit"
+      europe: "1629 – Giovanni Branca pictures a steam jet driving a paddle wheel and stamps; never built to useful size"
+    sources:
+      - "Hero of Alexandria, Pneumatica (tr. Bennet Woodcroft, 1851)"
+      - "J. G. Landels, Engineering in the Ancient World (1978)"
+
+  - id: safety_valve_boiler
+    name: Boilers and the safety valve
+    category: energy
+    requires: []
+    helps: [atmospheric_pressure, rolling_mill, puddling_wrought_iron, copper_bronze]
+    explain: >
+      When a boiler makes steam faster than it can escape, pressure can exceed the
+      strength of the shell. A relief valve must both open at its set pressure and
+      discharge steam at least as fast as the fire can produce it. Papin used a weighted lever to hold a valve on its seat; its load determined
+      when steam pressure lifted the valve. A working boiler also needs a way to see the water level (two try cocks, later a glass gauge) and
+      a feed pump, because fire on a plate not covered by water makes it red hot and
+      weak. The force trying to burst a cylindrical shell grows with pressure times
+      diameter, so strong boilers are small in diameter, round, of riveted wrought-iron
+      or copper plate, with flat surfaces stayed. Newcomen's copper and lead boilers
+      held 1 to 2 pounds per square inch above the air, Watt's about 5, Trevithick's
+      Cornish boiler 40 to 50. The danger is the hot water more than the steam: when a
+      shell tears, some of the pressurised hot water flashes into a much larger volume of steam.
+    pitfalls:
+      - "Tying down or overloading the safety valve to get more power; the classic cause of explosions"
+      - "Letting the water fall below the fire line, then pumping cold water onto the overheated plate"
+      - "Cast iron, soldered seams or flat unstayed plates for anything above a few pounds of pressure"
+      - "Relying on a relief valve to protect an exposed firebox crown. Low water can weaken the metal even at normal pressure; a fusible plug is a separate historical safeguard"
+      - "Ignoring scale from hard water, which insulates the plate until it overheats"
+    history:
+      greece: "1st c. AD – Hero's small closed boilers for temple tricks; no safety device"
+      europe: "1679 – Denis Papin's digester (pressure cooker) with weighted lever safety valve, published 1681; 1712 Newcomen's low-pressure haystack boiler; 1803 Trevithick adds the fusible plug after the Greenwich explosion; 1812 Cornish boiler with internal flue; 1827–1829 multi-tube boilers of Séguin and of Booth and Stephenson; 1844 Lancashire boiler"
+      americas: "1830s – Franklin Institute investigates steamboat boiler explosions; 1838 and 1852 federal steamboat acts introduce and strengthen federal inspection"
+    sources:
+      - "Denis Papin, A New Digester or Engine for Softning Bones (1681)"
+      - "Richard L. Hills, Power from Steam: A History of the Stationary Steam Engine (1989)"
+      - "John G. Burke, Bursting Boilers and the Federal Power, Technology and Culture 7 (1966)"
+
+  - id: savery_steam_pump
+    name: Pistonless steam pump (Savery)
+    category: energy
+    requires: [safety_valve_boiler]
+    helps: [atmospheric_pressure, piston_pump]
+    explain: >
+      The simplest way to raise water by fire, with no piston and no moving parts but
+      valves. Fill a closed vessel with steam, shut the steam cock and pour cold water
+      over the vessel: the steam condenses, and air pressure pushes water up a suction
+      pipe through a one-way valve into the vessel (at most 6 to 7 m in practice). Then
+      admit steam again; its pressure drives the water out through a second valve and
+      up the delivery pipe. Every 10 m of delivery height needs one atmosphere of steam
+      pressure. That is its weakness: it must sit deep in the mine within suction
+      height of the water, it needs strong steam that the soldered copper vessels of
+      1700 could not hold, and it heats and cools the whole vessel at every stroke.
+    pitfalls:
+      - "Expecting it to drain a deep mine; it suits lifts of 10 to 15 m (fountains, water supply)"
+      - "Soldered joints and no safety valve; Savery's own engines blew their seams"
+      - "Confusing it with Newcomen's engine, which uses a piston and only atmospheric pressure"
+    history:
+      europe: "1601 – della Porta and 1615 de Caus show steam driving water out of a vessel; 1606 Jerónimo de Ayanz receives a Spanish privilege for steam-driven mine drainage; 1663 Marquis of Worcester's 'water-commanding engine'; 1698 Thomas Savery's patent, described in The Miner's Friend (1702); 1870s the pulsometer revives the principle"
+    sources:
+      - "Thomas Savery, The Miner's Friend; or, An Engine to Raise Water by Fire (1702)"
+      - "H. W. Dickinson, A Short History of the Steam Engine (1939)"
+
+  - id: atmospheric_engine
+    name: Atmospheric steam engine (Newcomen type)
+    category: energy
+    requires: [atmospheric_pressure, piston_pump, safety_valve_boiler]
+    helps: [boring_machine, sand_loam_casting, savery_steam_pump, coal_mining]
+    explain: >
+      Atmospheric pressure drives the working stroke. Condensing steam lowers the
+      pressure beneath the piston, and the boiler supplies the energy for the cycle. A vertical cylinder, open at
+      the top, stands on a low-pressure boiler. Its piston hangs by a chain from one
+      end of a rocking beam; the heavy pump rods hang from the other end and pull the
+      piston up, drawing in steam at barely more than atmospheric pressure. Then the
+      steam valve shuts and a jet of cold water is sprayed inside the cylinder: the
+      steam condenses, leaving a partial vacuum, and the air pressing on top of the
+      piston (at most 101 kPa at sea level, or about 22 kN on a 53 cm piston;
+      residual vapour, air and friction reduce the useful force) drives it down and lifts the pump rods. Parts: boiler
+      with safety valve, cylinder (cast brass, later iron), piston packed with leather
+      or hemp and sealed by a layer of water on top, steam valve, injection cock fed
+      from a cistern above, a drain pipe with one-way valve for the condensate, a
+      snifting valve to blow out air, and a plug rod on the beam that works the valves.
+      The mine pump also needs its own barrel and check valves. A note on an early
+      drawing reports twelve strokes per minute, each lifting ten gallons through 51 yards.
+    pitfalls:
+      - "Thinking steam pushes the piston; raising the pressure adds nothing here and endangers the boiler"
+      - "Cooling the cylinder only from outside; it is far too slow. Injecting water inside was the decisive step"
+      - "No snifting valve: air from the feed and injection water collects and destroys the vacuum within a few strokes"
+      - "Relying on a tight piston fit; the cylinder could not be made truly round, so the water seal on top is essential"
+      - "Expecting economy; it turns under 1 % of the coal's heat into work and pays only where coal is nearly free"
+    history:
+      europe: "1654 – Guericke shows the force of air on a piston; 1673 Huygens's gunpowder cylinder; 1690 Papin's model: steam condensed under a piston; 1712 Thomas Newcomen and John Calley's engine near Dudley Castle, built under Savery's patent; iron cylinders from Coalbrookdale in the 1720s; 1770s Smeaton doubles the efficiency. Whether Newcomen knew Papin's work is not known"
+      americas: "1753–1755 – first engine in North America, Schuyler copper mine, New Jersey"
+    sources:
+      - "Mårten Triewald, Short Description of the Atmospheric Engine (1734; English tr. Newcomen Society, 1928)"
+      - "L. T. C. Rolt & J. S. Allen, The Steam Engine of Thomas Newcomen (1977)"
+      - "H. W. Dickinson, A Short History of the Steam Engine (1939)"
+
+  - id: separate_condenser
+    name: Separate condenser (Watt)
+    category: energy
+    requires: [atmospheric_engine]
+    helps: [boring_machine, heat_energy_conservation, air_pump_vacuum, thermometer_temperature]
+    explain: >
+      Newcomen's engine wastes most of its steam reheating a cylinder that the
+      injection water has just chilled. Keep the cylinder always hot and condense the
+      steam elsewhere: connect the cylinder by a pipe and valve to a separate vessel
+      kept cold in a tank of water. When the valve opens the steam rushes into that
+      vessel and condenses there. Watt's full-size pumping engine also used an air pump to draw
+      the condensate and leaked air out of the condenser, a steam jacket and lagging
+      round the cylinder, and a closed cylinder top with a stuffing box for the piston
+      rod, so that steam instead of cold air presses the piston down. On the return stroke an equalising valve connects the two sides of the piston,
+      allowing the pump rods to draw it back up. Fuel use could fall by about three quarters. Because a water seal can no longer lie on the piston,
+      the cylinder must be bored truly round.
+    pitfalls:
+      - "Saying Watt invented the steam engine, or was inspired by a kettle; he improved Newcomen's engine after repairing a model of one"
+      - "A condenser without an air pump fills with air and warm water and stops working"
+      - "Confusing a working model with a full-size cylinder: Watt demonstrated separate condensation in 1765, but leakage around large pistons wasted steam until machining improved"
+      - "Assuming it makes the engine stronger; it makes it cheaper to run"
+    history:
+      europe: "1763–1764 – Watt repairs Glasgow University's model Newcomen engine; 1765 idea of the separate condenser; 1769 patent; 1776 first engines at work (Bloomfield colliery and Wilkinson's ironworks) in partnership with Matthew Boulton; patent extended to 1800"
+    sources:
+      - "H. W. Dickinson & Rhys Jenkins, James Watt and the Steam Engine (1927)"
+      - "Richard L. Hills, Power from Steam: A History of the Stationary Steam Engine (1989)"
+      - "Ben Marsden, Watt's Perfect Engine: Steam and the Age of Invention (2002)"
+
+  - id: rotative_steam_engine
+    name: Double-acting rotative steam engine
+    category: energy
+    requires: [crank_connecting_rod, safety_valve_boiler]
+    helps: [separate_condenser, feedback_control, gears_gear_trains, machine_tools]
+    explain: >
+      Newcomen's pumping engine has one working stroke per cycle. A crank and flywheel
+      can take rotary power from a single-acting engine. Watt's double-acting design
+      delivers work on both strokes: valves admit steam to one side of the piston
+      while connecting the other side to the condenser. The beam drives the flywheel.
+      Since the piston now pushes as well as pulls, the chain must give way to a rigid
+      rod guided in a straight line (Watt's parallel-motion linkage, or a crosshead in
+      slides). Cutting off the steam early in the stroke and letting it expand saves
+      more fuel. A centrifugal governor, two balls that fly outward as speed rises and
+      partly close the throttle, reduces steam admission when the load falls. This is the engine that could
+      drive a mill anywhere, independent of streams.
+    pitfalls:
+      - "Keeping the chain and arch head of the pumping engine; a chain cannot push"
+      - "A light flywheel gives uneven speed. A single crank stopped at dead centre needs an external turn to start, however heavy its flywheel"
+      - "Thinking Watt invented the crank; it was old, but James Pickard held a patent on its use with steam engines, hence Watt's sun-and-planet gear"
+    history:
+      europe: "1779–1780 – Wasbrough and Pickard fit a crank and flywheel to a Newcomen engine; 1781 sun-and-planet gear (Murdoch, for Boulton and Watt); 1782 double-acting engine and expansive working patented; 1784 parallel motion; 1786 Albion Mills, London; 1788 centrifugal governor, adapted from windmills"
+    sources:
+      - "H. W. Dickinson & Rhys Jenkins, James Watt and the Steam Engine (1927)"
+      - "Richard L. Hills, Power from Steam: A History of the Stationary Steam Engine (1989)"
+
+  - id: high_pressure_steam
+    name: High-pressure steam engine
+    category: energy
+    requires: [safety_valve_boiler]
+    helps: [boring_machine, atmospheric_engine, crank_connecting_rod, rolling_mill, puddling_wrought_iron, lathe_screw_cutting]
+    explain: >
+      Let the steam itself push the piston, at several atmospheres above ambient pressure. In a simple non-condensing
+      engine the exhaust goes to the open air; other high-pressure engines use condensers. Atmospheric exhaust saves the weight of a condenser, its air pump and its cooling-water supply.
+      A greater pressure difference gives more piston force for the same bore, making
+      compact mobile engines practical. Everything now depends on the boiler: a
+      cylindrical shell of small diameter, in riveted wrought-iron plate, with the
+      fire in a flue through the water, two safety valves and a fusible plug. Letting
+      the steam expand after an early cut-off, or passing it through a second larger
+      cylinder (compounding), takes more work from each charge before exhaust. A condenser improves economy
+      in a different way by reducing exhaust back-pressure. Turning
+      the exhaust up the chimney draws the fire.
+    pitfalls:
+      - "Raising the pressure on a boiler built for a low-pressure engine"
+      - "Cast-iron boilers and fastened-down safety valves: the Greenwich explosion of 1803 killed four men"
+      - "Believing Watt's separate-condenser patent covered every use of high-pressure steam; a non-condensing engine could operate without his patented condenser"
+      - "Joints, glands and piston packing made as for low pressure; they blow out"
+    history:
+      europe: "1720s – Leupold publishes a design for a high-pressure, non-condensing engine; 1769 Cugnot's steam gun carriage in Paris; 1799–1802 Richard Trevithick's 'puffer' engines in Cornwall, road carriage (Camborne, 1801) and patent; 1804 his locomotive at Penydarren; 1804 Woolf's compound engine; 1812 Cornish engine and boiler"
+      americas: "1801–1804 – Oliver Evans in Philadelphia builds high-pressure engines independently and publishes the principles in 1805"
+    sources:
+      - "Oliver Evans, The Abortion of the Young Steam Engineer's Guide (1805)"
+      - "Anthony Burton, Richard Trevithick: Giant of Steam (2000)"
+      - "Richard L. Hills, Power from Steam: A History of the Stationary Steam Engine (1989)"
+
+  - id: steam_turbine
+    name: Steam turbine
+    category: energy
+    requires: [safety_valve_boiler, machine_tools]
+    helps: [high_pressure_steam, separate_condenser, bessemer_steel, dynamo_electric_motor, water_turbine]
+    explain: >
+      Steam expanding through a nozzle leaves at around 1,000 m per second, and a
+      wheel takes the most from a jet when its blades move at about half the jet's
+      speed, which would tear any single wheel apart. Two ways out: one small wheel of
+      the best steel at 30,000 turns a minute with reduction gearing (de Laval), or
+      let the pressure fall in many small steps through alternating rings of fixed and
+      moving blades along a drum, each step giving only a modest steam speed
+      (Parsons). There is no reciprocating mass, so one machine can deliver tens of
+      thousands of horsepower smoothly; exhausting into a good condenser vacuum
+      roughly doubles the output. It needs balanced rotors, close clearances and
+      steady oil-fed bearings.
+    pitfalls:
+      - "Treating it as a big aeolipile or Branca's wheel; a single slow wheel wastes nearly all the energy"
+      - "An unbalanced rotor at high speed shakes itself to pieces"
+      - "Wet steam and carried-over water, which erode the blades"
+      - "Coupling a ship's propeller directly; it spins too fast and cavitates (Turbinia needed nine propellers on three shafts)"
+    history:
+      greece: "1st c. AD – Hero's aeolipile, a reaction turbine in principle only"
+      islamic: "1551 – Taqi al-Din's steam-jet spit"
+      europe: "1629 – Branca's impulse wheel on paper; 1883–1889 Gustaf de Laval's high-speed wheel and convergent-divergent nozzle; 1884 Charles Parsons's multi-stage turbine (about 7.5 kW at 18,000 rpm) driving a dynamo; 1897 Turbinia at the Spithead review, 34 knots"
+      americas: "1896 – Curtis velocity-compounded turbine; 1903 5,000 kW units in Chicago power stations"
+    sources:
+      - "Charles A. Parsons, The Steam Turbine (Rede Lecture, 1911)"
+      - "W. Garrett Scaife, From Galaxies to Turbines: Science, Technology and the Parsons Family (2000)"
+
+  # ------------------------------------------------------------ other heat engines
+  - id: hot_air_engine
+    name: Hot-air engine (Stirling)
+    category: energy
+    requires: [boring_machine, crank_connecting_rod]
+    helps: [gas_laws, heat_energy_conservation]
+    explain: >
+      A fixed quantity of air is sealed in a cylinder, one end kept hot by a fire, the
+      other cooled by water. A loose-fitting displacer piston shuttles the air between
+      the hot and the cold end; when most of the air is at the hot end the pressure
+      rises and pushes a second, tight working piston, when it is at the cold end the
+      pressure falls and the piston returns. The two pistons work on cranks a quarter
+      turn apart. On its way the air passes through a mass of wire or thin plates (the
+      regenerator), which stores the heat of the air going to the cold end and gives
+      it back on the return; that is what makes the engine economical. There is no
+      boiler to burst and any fuel will do, but it gives little power for its size.
+    pitfalls:
+      - "Expecting steam-engine power; working pressures are low unless the air is pressurised"
+      - "The hot end burns out: an iron heater at dull red heat under pressure does not last"
+      - "Leaving out the regenerator, or the quarter-turn phase between the two pistons"
+      - "Leaks; the engine works on a sealed charge of air"
+    history:
+      europe: "1807 – George Cayley's open-cycle hot-air engine; 1816 Robert Stirling's patent with the regenerator ('economiser'); 1818 first engine pumping water at an Ayrshire quarry; 1843 engine at a Dundee foundry, abandoned when its heaters failed; 1938 revived by Philips"
+      americas: "1833–1858 – John Ericsson's caloric engines; thousands of small pumping engines sold from the 1870s"
+    sources:
+      - "Theodor Finkelstein & Allan J. Organ, Air Engines: The History, Science, and Reality of the Perfect Engine (2001)"
+
+  - id: internal_combustion_engine
+    name: Internal combustion engine
+    category: energy
+    requires: [boring_machine, crank_connecting_rod]
+    helps: [cam_camshaft, lathe_screw_cutting, gas_lighting, petroleum_refining, electromagnetism, machine_tools, gas_laws]
+    explain: >
+      Burn the fuel inside the cylinder instead of under a boiler. The four-stroke
+      cycle takes two turns of the crank: the piston draws in a mixture of air and
+      fuel gas or vapour (about 15 parts air to 1 of petrol by weight); it compresses
+      the mixture to a fraction of its volume; a spark or hot tube fires it near the
+      top of the stroke and the hot gases drive the piston down; the piston pushes the
+      burnt gas out. Valves opened by a camshaft turning at half crank speed time the
+      strokes, a flywheel carries the engine through the three idle ones, and the
+      cylinder must be cooled and oiled. Compression before ignition greatly improves fuel economy over early commercial engines such as Lenoir’s. In Diesel's engine air alone
+      is compressed so far (to 30 atmospheres and more) that it becomes hot enough to
+      ignite oil sprayed into it.
+    pitfalls:
+      - "No compression: Lenoir's engine of 1860 worked that way and wasted 95 % of its gas"
+      - "Using gunpowder as fuel; Huygens and Papin tried, and it cannot be fed or exhausted cleanly"
+      - "Mixture too rich or too lean, or ignition at the wrong moment: no firing, or knocking that breaks the engine"
+      - "Running it in a closed space; the exhaust contains carbon monoxide"
+      - "Forgetting that it needs a refined, uniform fuel and cannot start itself under load"
+    history:
+      europe: "1673–1680 – Huygens and Papin, gunpowder piston engine; 1807 de Rivaz's hydrogen engine and the Niépce brothers' pyréolophore; 1853–1854 Barsanti and Matteucci in Florence; 1860 Lenoir's gas engine sold in hundreds; 1862 Beau de Rochas states the four-stroke cycle; 1876 Nikolaus Otto's four-stroke engine; 1885–1886 Daimler, Maybach and Benz, light petrol engines; 1893–1897 Rudolf Diesel"
+      americas: "1826 – Samuel Morey's patent for a turpentine vapour engine; 1872 Brayton's constant-pressure oil engine"
+    sources:
+      - "C. Lyle Cummins, Internal Fire (1976)"
+      - "Rudolf Diesel, Theorie und Konstruktion eines rationellen Wärmemotors (1893)"
+
+  - id: gas_turbine_jet
+    name: Gas turbine and jet engine
+    category: energy
+    requires: []
+    helps: [steam_turbine, internal_combustion_engine, petroleum_refining, glider_aeroplane, heat_energy_conservation]
+    explain: >
+      A rotary compressor forces air continuously into a chamber where fuel burns at
+      constant pressure; the hot gas drives a turbine on the same shaft as the
+      compressor. What is left over is the output: shaft power, or in the jet engine
+      a fast exhaust stream whose reaction pushes the aircraft. Useful output requires the turbine to supply more work than the compressor
+      consumes. The balance depends on pressure ratio, inlet temperature and losses.
+      Better compressors and heat-resistant alloys made compact aircraft engines practical.
+    pitfalls:
+      - "Overlooking the power needed by the compressor. Elling obtained a small net output in 1903, decades before useful turbojets"
+      - "Thinking a jet pushes against the air behind it; thrust is the reaction to the gas thrown backward"
+      - "Crediting only Whittle or only von Ohain; both worked independently"
+      - "Ordinary steel in the turbine, which creeps and fails at red heat"
+    history:
+      china: "c. 12th c. – hot-air zoetrope lanterns turned by rising gas, a toy turbine"
+      europe: "1791 – John Barber's gas turbine patent; 1903 Ægidius Elling's turbine gives the first net power (Norway); 1930 Frank Whittle's turbojet patent, engine run April 1937, flight 15 May 1941; 1937 Hans von Ohain's engine runs, first jet flight in the Heinkel He 178 on 27 August 1939; 1939 Brown Boveri gas-turbine power station at Neuchâtel"
+    sources:
+      - "Edward W. Constant II, The Origins of the Turbojet Revolution (1980)"
+      - "John Golley, Whittle: The True Story (1987)"
+
+  # ------------------------------------------------------------ cold and the atom
+  - id: refrigeration
+    name: Refrigeration and ice making
+    category: energy
+    requires: []
+    helps: [piston_pump, air_pump_vacuum, heat_energy_conservation, gas_laws, lathe_screw_cutting]
+    explain: >
+      A liquid takes up a great deal of heat when it evaporates; that is why sweat and
+      a wet porous jar cool. A refrigerating machine makes a volatile liquid (ether,
+      ammonia) evaporate at low pressure in a coil inside the cold box, where it draws
+      heat from the contents. A pump sucks the vapour away, compresses it so that it
+      becomes hot, and pushes it through a second coil outside, where it gives its
+      heat to air or water and turns liquid again; it then returns to the cold coil
+      through a narrow valve. Heat is thus pumped from inside to outside at the cost
+      of work on the pump. Without a machine: store winter ice under thick straw or
+      sawdust in a drained pit, cool drinks by dissolving saltpetre in water, or
+      freeze them in a mixture of crushed ice and salt (down to about minus 20 °C).
+    pitfalls:
+      - "Treating cold as a substance to be added; cooling always means carrying heat away somewhere else"
+      - "Thinking an open refrigerator cools the room; it warms it"
+      - "Leaks: ether vapour explodes, ammonia and sulphur dioxide are poisonous"
+      - "An ice house without drainage; standing meltwater melts the ice quickly"
+    history:
+      mesopotamia: "c. 1780 BC – ice house built for Zimri-Lim of Mari at Terqa"
+      china: "c. 1st millennium BC – winter ice harvested and stored (Shijing); iced drinks at court"
+      islamic: "domed Persian ice houses (yakhchal) and shallow ponds freezing by night radiation, well attested from the medieval period and probably much older"
+      india: "16th c. – saltpetre dissolved in water to cool drinks at the Mughal court (Ain-i-Akbari); 18th c. ice made in shallow pans near Allahabad and Calcutta"
+      europe: "1550 – Blas Villafranca in Rome publishes cooling with saltpetre; 1589 della Porta freezes with ice and salt; 1756 William Cullen makes ice by evaporating ether under a vacuum pump; 1834 Jacob Perkins's vapour-compression patent (London); 1859 Carré's ammonia absorption machine; 1870s Linde's ammonia compressors"
+      americas: "1806 – Frederic Tudor starts the natural ice trade from Boston; 1851 John Gorrie's air-cycle ice machine patent; 1928–1930 Freon refrigerants (Midgley)"
+    sources:
+      - "Oscar Edward Anderson Jr., Refrigeration in America: A History of a New Technology and Its Impact (1953)"
+      - "Tom Shachtman, Absolute Zero and the Conquest of Cold (1999)"
+
+  - id: nuclear_reactor
+    name: Nuclear reactor (controlled chain reaction)
+    category: energy
+    requires: [nuclear_fission]
+    helps: [feedback_control, steam_turbine, radioactivity]
+    explain: >
+      When a uranium-235 nucleus splits it releases two or three fast neutrons. In
+      natural uranium (0.7 % U-235) these are mostly lost unless they are slowed down,
+      because slow neutrons are far more likely to split another U-235 nucleus. So
+      lumps of uranium are spaced out in a moderator that slows neutrons without
+      absorbing them: very pure graphite or heavy water (ordinary water only with
+      enriched uranium). At criticality each generation of neutrons produces, on average, an equal next
+      generation and power stays steady. Above criticality power rises. Control rods absorb neutrons and allow operators
+      to return the reactor to criticality. Delayed neutrons make changes in power
+      slow enough to regulate in normal operation. The heat is carried off by a coolant to raise
+      steam. Thick shielding is needed, and cooling must continue after shutdown.
+      Fermi's first pile used about 350 tonnes of graphite, 37 tonnes of uranium oxide
+      and 6 of uranium metal.
+    pitfalls:
+      - "Impure graphite: traces of boron stop the reaction (a wrong measurement turned the German project away from graphite)"
+      - "Natural uranium in ordinary water does not work"
+      - "Thinking a reactor can explode like a bomb; the real dangers are radiation, steam or hydrogen explosions and meltdown from decay heat after shutdown"
+      - "Confusing low power with safe exposure: Chicago Pile-1 lacked biological shielding and its first run was deliberately kept at very low power"
+      - "Pulling out control rods quickly near criticality"
+    history:
+      africa: "c. 1.7–2 billion years ago – natural chain reactions in uranium ore at Oklo, Gabon (discovered 1972)"
+      americas: "2 December 1942 – Chicago Pile-1 under Enrico Fermi, first controlled, human-made self-sustaining nuclear chain reaction; 1944 Hanford B Reactor starts up; 1948 Oak Ridge uses reactor heat to light a torch bulb; 1951 EBR-I in Idaho powers four light bulbs with electricity from reactor heat"
+      europe: "1939 – Joliot's group in Paris shows that fission releases surplus neutrons; 1954 Obninsk (USSR) feeds a grid; 1956 Calder Hall (Britain), first industrial-scale station"
+    sources:
+      - "Enrico Fermi, Experimental Production of a Divergent Chain Reaction, American Journal of Physics 20 (1952)"
+      - "Richard Rhodes, The Making of the Atomic Bomb (1986)"
