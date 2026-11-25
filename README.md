@@ -128,4 +128,8 @@ and commit the generated files.
 
 ## License
 
-Planned: content (Markdown, YAML) under CC BY-SA 4.0, scripts under MIT. Not yet final.
+- **Content** (rules, campaigns, tech tree, documentation, artwork): [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+- **Scripts & code** (`scripts/`, inline JS): [MIT](LICENSE)
+- **Allo typeface** (`assets/fonts/`): [SIL OFL 1.1](assets/fonts/OFL.txt)
+
+See [LICENSE](LICENSE) for full details.

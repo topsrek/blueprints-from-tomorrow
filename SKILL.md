@@ -7,7 +7,7 @@ description: >
   technology, hygiene and institutions to change history. Load when the user says
   "Load Blueprints from Tomorrow" / "Lade Blueprints from Tomorrow" or wants to
   start or continue a campaign.
-license: see README (planned: CC BY-SA 4.0 for content, MIT for scripts)
+license: CC-BY-SA-4.0 (content) and MIT (scripts) — see LICENSE
 ---
 
 # Blueprints from Tomorrow — Game Master Rules

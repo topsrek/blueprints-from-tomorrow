@@ -363,8 +363,10 @@ def render_scenario(core: dict, sc: dict) -> str:
     missing_sample = missing_buildable[:10]
 
     prompt_text = f"Start a game of blueprintsfromtomorrow.com in {sc['prompt_place']} (read https://blueprintsfromtomorrow.com/llms.txt)"
-    canonical = f"{SITE_URL}/scenarios/{sc['slug']}.html"
-    desc = f"{sc['title']} — {sc['subtitle']}. {premise_paras[0][:155] if premise_paras else ''}"
+    canonical = f"{SITE_URL}/scenarios/{sc['slug']}"  # Cloudflare serves pages without .html
+    page_title = f"{sc['prompt_place']} — Blueprints from Tomorrow"
+    desc = f"{sc['prompt_place']}: {sc['subtitle']}. Play this free time-travel AI RPG in ChatGPT, Claude, or Gemini."
+    og_desc = f"{sc['prompt_place']} — {sc['subtitle']}. Free single-player time-travel AI RPG."
 
     premise_html = "\n          ".join(f"<p>{md_inline(p)}</p>" for p in premise_paras)
     people_html = "\n          ".join(
@@ -386,7 +388,7 @@ def render_scenario(core: dict, sc: dict) -> str:
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{esc(sc['title'])} — Blueprints from Tomorrow</title>
+  <title>{esc(page_title)}</title>
   <meta name="description" content="{esc(desc)}">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#0F3577">
@@ -394,8 +396,8 @@ def render_scenario(core: dict, sc: dict) -> str:
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="icon" href="../favicon.ico" sizes="any">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="{esc(sc['title'])} — Blueprints from Tomorrow">
-  <meta property="og:description" content="{esc(desc)}">
+  <meta property="og:title" content="{esc(page_title)}">
+  <meta property="og:description" content="{esc(og_desc)}">
   <meta property="og:url" content="{canonical}">
   <meta property="og:image" content="{SITE_URL}/assets/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -522,7 +524,7 @@ def render_scenario(core: dict, sc: dict) -> str:
 
 
 def render_custom(core: dict) -> str:
-    canonical = f"{SITE_URL}/scenarios/custom.html"
+    canonical = f"{SITE_URL}/scenarios/custom"
     prompt_text = "Start a game of blueprintsfromtomorrow.com in Kyoto 1600 (read https://blueprintsfromtomorrow.com/llms.txt)"
     region_labels = [
         (v if isinstance(v, str) else str(v)).replace("_", " ").title()
@@ -544,7 +546,7 @@ def render_custom(core: dict) -> str:
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Any Place, Any Year — Blueprints from Tomorrow</title>
-  <meta name="description" content="Play Blueprints from Tomorrow in any city, culture, and century. 510 historical technologies across 12 world regions keep every custom era grounded and anachronism-free.">
+  <meta name="description" content="Play Blueprints from Tomorrow in any city and century. 510 historical technologies across 12 world regions keep custom eras grounded.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#0F3577">
   <link rel="canonical" href="{canonical}">
