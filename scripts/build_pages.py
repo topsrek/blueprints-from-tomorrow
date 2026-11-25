@@ -507,7 +507,7 @@ def render_scenario(core: dict, sc: dict) -> str:
 
   <footer>
     <div class="wrap foot-inner">
-      <span><a href="../index.html">← Back to home</a> · Made by <a href="https://topsrek.top" rel="noopener">@topsrek</a> in Austria</span>
+      <span><a href="../index.html">← Back to home</a> · Made by <a href="https://topsrek.top" rel="noopener">@topsrek</a> in Austria · <a href="mailto:hello@blueprintsfromtomorrow.com">hello@blueprintsfromtomorrow.com</a></span>
       <nav aria-label="Raw agent files">
         <a href="https://github.com/topsrek/blueprints-from-tomorrow" rel="noopener">GitHub</a>
         <a href="../campaigns/{sc['campaign']}.md">campaigns/{sc['campaign']}.md</a>
@@ -640,7 +640,7 @@ def render_custom(core: dict) -> str:
 
   <footer>
     <div class="wrap foot-inner">
-      <span><a href="../index.html">← Back to home</a> · Made by <a href="https://topsrek.top" rel="noopener">@topsrek</a> in Austria</span>
+      <span><a href="../index.html">← Back to home</a> · Made by <a href="https://topsrek.top" rel="noopener">@topsrek</a> in Austria · <a href="mailto:hello@blueprintsfromtomorrow.com">hello@blueprintsfromtomorrow.com</a></span>
       <nav aria-label="Raw agent files">
         <a href="https://github.com/topsrek/blueprints-from-tomorrow" rel="noopener">GitHub</a>
         <a href="../techtree/generated/all-techs.md">all-techs.md</a>

@@ -68,6 +68,10 @@ All generated Markdown files are pre-built and served statically — no API serv
 - [Economy & finance (`economy`)](https://blueprintsfromtomorrow.com/techtree/generated/catalog/economy.md)
 - [Warfare, security & deterrence (`military`)](https://blueprintsfromtomorrow.com/techtree/generated/catalog/military.md)
 
+## Contact
+
+- Feedback, bug reports, new eras or campaigns: hello@blueprintsfromtomorrow.com
+
 ## Optional
 
 - [README](https://blueprintsfromtomorrow.com/README.md): Human quick start, repository layout, and contributor scripts.
